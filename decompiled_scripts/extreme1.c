@@ -993,10 +993,10 @@ void main() // Position - 0x0
 	uLocal_345 = { 123.647f, 1245.045f, 252.8f };
 	iLocal_353 = 3;
 	uLocal_632 = { 153.45726f, 1272.4115f, 250f };
-	fLocal_635 = { 445f, 4710f, 2400f };
+	fLocal_635 = Vector3( 445f, 4710f, 2400f );
 	uLocal_639 = { 497.01923f, 5590f, 793.8237f };
 	uLocal_642 = { 493.4354f, 5585.762f, 794.5f };
-	uLocal_645 = { -90f, 0f, 0f };
+	uLocal_645 = Vector3( -90f, 0f, 0f );
 	uLocal_648 = { -189.9982f, 1297.7646f, 302.9516f };
 	uLocal_651 = { 123.518105f, 1248.5125f, 253.76698f };
 	uLocal_654 = { 124.6139f, 1248.053f, 253.7414f };
@@ -1843,7 +1843,7 @@ void func_26() // Position - 0x1080
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -30827,7 +30827,7 @@ void func_183(int iParam0) // Position - 0x204D7
 
 void func_184() // Position - 0x20500
 {
-	Global_78799 = { 0f, 0f, 0f };
+	Global_78799 = Vector3( 0f, 0f, 0f );
 	Global_78802 = 0f;
 	Global_100681.f_21 = 145;
 	return;
@@ -31058,8 +31058,8 @@ void func_193(var uParam0) // Position - 0x20BC5
 void func_194(var uParam0) // Position - 0x20BE0
 {
 	func_195(&(uParam0->f_12));
-	*uParam0 = { 0f, 0f, 0f };
-	uParam0->f_3 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
+	uParam0->f_3 = Vector3( 0f, 0f, 0f );
 	uParam0->f_6 = 0f;
 	uParam0->f_8 = 0;
 	uParam0->f_9 = 0;
@@ -31108,7 +31108,7 @@ void func_195(var uParam0) // Position - 0x20C0F
 
 void func_196(var uParam0) // Position - 0x20CC0
 {
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0f;
 	uParam0->f_4 = 0;
 	uParam0->f_5 = -1;
@@ -33211,21 +33211,21 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 		uParam0->f_91[i] = 0;
 	}
 
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0;
 	uParam0->f_33 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_34), "", 32);
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "", 32);
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_50), "", 32);
-	uParam0->f_58 = { 0f, 0f, 0f };
-	uParam0->f_61 = { 0f, 0f, 0f };
-	uParam0->f_68 = { 0f, 0f, 0f };
-	uParam0->f_71 = { 0f, 0f, 0f };
+	uParam0->f_58 = Vector3( 0f, 0f, 0f );
+	uParam0->f_61 = Vector3( 0f, 0f, 0f );
+	uParam0->f_68 = Vector3( 0f, 0f, 0f );
+	uParam0->f_71 = Vector3( 0f, 0f, 0f );
 	uParam0->f_74 = 0f;
-	uParam0->f_79 = { 0f, 0f, 0f };
-	uParam0->f_82 = { 0f, 0f, 0f };
-	uParam0->f_85 = { 0f, 0f, 0f };
-	uParam0->f_88 = { 0f, 0f, 0f };
+	uParam0->f_79 = Vector3( 0f, 0f, 0f );
+	uParam0->f_82 = Vector3( 0f, 0f, 0f );
+	uParam0->f_85 = Vector3( 0f, 0f, 0f );
+	uParam0->f_88 = Vector3( 0f, 0f, 0f );
 
 	switch (iParam1)
 	{
@@ -33397,8 +33397,8 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "REMOVE_ALL_STATES", 32);
 			uParam0->f_33 = 1;
 			*uParam0 = { 787.3967f, -1808.8584f, 29.8532f };
-			uParam0->f_58 = { 814f, -1750f, 20f };
-			uParam0->f_61 = { 790f, -1899f, 35f };
+			uParam0->f_58 = Vector3( 814f, -1750f, 20f );
+			uParam0->f_61 = Vector3( 790f, -1899f, 35f );
 			uParam0->f_64[0] = 1;
 			uParam0->f_64[1] = 0;
 			uParam0->f_64[2] = 0;
@@ -33888,7 +33888,7 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[0], "TrevorsTrailer", 32);
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[1], "TrevorsTrailerTrash", 32);
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "TrevorsTrailerTidy", 32);
-			*uParam0 = { 1973f, 3815f, 34f };
+			*uParam0 = Vector3( 1973f, 3815f, 34f );
 			uParam0->f_33 = 0;
 			break;
 	
@@ -34284,7 +34284,7 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 			TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "v_carshowroom", 32);
 			*uParam0 = { -49.28f, -1092.66f, 25.42f };
 			uParam0->f_68 = { -49.28f, -1092.66f, 25.42f };
-			uParam0->f_71 = { 3f, 1f, 3f };
+			uParam0->f_71 = Vector3( 3f, 1f, 3f );
 			uParam0->f_74 = 0f;
 			uParam0->f_75[0] = 0;
 			uParam0->f_75[1] = 1;
@@ -34299,7 +34299,7 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 			TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "v_carshowroom", 32);
 			*uParam0 = { -53.07f, -1096.73f, 25.5f };
 			uParam0->f_68 = { -53.07f, -1096.73f, 25.5f };
-			uParam0->f_71 = { 1f, 3f, 2f };
+			uParam0->f_71 = Vector3( 1f, 3f, 2f );
 			uParam0->f_74 = -45f;
 			uParam0->f_75[0] = 0;
 			uParam0->f_75[1] = 1;
@@ -34670,8 +34670,8 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 		case 191:
 			uParam0->f_3 = 1;
 			*uParam0 = { -1096.3812f, -836.17f, 36.6755f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -34679,8 +34679,8 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 		case 192:
 			uParam0->f_3 = 1;
 			*uParam0 = { 449.6558f, -980.1375f, 42.6918f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -34688,8 +34688,8 @@ int func_239(var uParam0, int iParam1) // Position - 0x2437A
 		case 193:
 			uParam0->f_3 = 1;
 			*uParam0 = { 363.0175f, -1598.0793f, 35.9502f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -38906,7 +38906,7 @@ BOOL func_318(Vector3 vParam0, var uParam1, var uParam2, char* sParam3, float fP
 
 BOOL func_319(int iParam0, var uParam1, var uParam2) // Position - 0x2D7BD
 {
-	*uParam1 = { 0f, 0f, 0f };
+	*uParam1 = Vector3( 0f, 0f, 0f );
 	*uParam2 = 0f;
 
 	switch (iParam0)
@@ -39137,67 +39137,67 @@ BOOL func_319(int iParam0, var uParam1, var uParam2) // Position - 0x2D7BD
 			break;
 	
 		case 45:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 46:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 47:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 48:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 49:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 52:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 50:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 51:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 53:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 54:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 55:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 56:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 57:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	}
@@ -39818,7 +39818,7 @@ Vector3 func_331(int iParam0, int iParam1) // Position - 0x2EF2F
 	var unk;
 	var unk2;
 
-	unk7 = { 1000000f, 1000000f, 1000000f };
+	unk7 = Vector3( 1000000f, 1000000f, 1000000f );
 
 	if (Global_1853747 != _INVALID_PLAYER_INDEX())
 		if (iParam1 == 3)
@@ -39943,32 +39943,32 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	{
 		case 0:
 			unk = { 1105.22f, -3013.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 1:
 			unk = { 1104.105f, -3013.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 19:
 			unk = { 1105.22f, -3005.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 20:
 			unk = { 1104.105f, -3005.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 2:
 			unk = { 1102f, -3011.925f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 3:
 			unk = { 1103f, -3010f, -38.125f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 4:
@@ -39977,12 +39977,12 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 			break;
 	
 		case 5:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1101.4084f, -3012.3198f, -38.45339f };
 			break;
 	
 		case 6:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1103.0374f, -3012.3184f, -39.998745f };
 			break;
 	
@@ -39992,13 +39992,13 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 			break;
 	
 		case 8:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1104.0634f, -3012.3677f, -39.998753f };
 			break;
 	
 		case 9:
 			unk = { 1105.6648f, -3012.3345f, -38.50835f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 10:
@@ -40008,22 +40008,22 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 11:
 			unk = { 1102.9282f, -3012.6934f, -39.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 12:
 			unk = { 1102.9421f, -3011.315f, -37.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 61:
 			unk = { 1101.9943f, -3012.8777f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 62:
 			unk = { 1103.1519f, -3013.0325f, -38.24946f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 13:
@@ -40033,22 +40033,22 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 14:
 			unk = { 1102.9167f, -3009.525f, -39.99945f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 15:
 			unk = { 1102.9218f, -3010.8872f, -37.99945f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 63:
 			unk = { 1101.6818f, -3009.227f, -39.949997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 64:
 			unk = { 1102.4534f, -3008.5105f, -38.199997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 16:
@@ -40058,37 +40058,37 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 17:
 			unk = { 1104.3401f, -3008.6982f, -39.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 18:
 			unk = { 1104.3442f, -3009.618f, -37.981716f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 65:
 			unk = { 1105.4595f, -3009.7935f, -39.949997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 66:
 			unk = { 1104.7828f, -3010.433f, -38.199997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 44:
 			unk = { 1104.0251f, -3007.3157f, -39.9987f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 21:
 			unk = { 1103.562f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 22:
 			unk = { 1103.562f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 23:
@@ -40108,22 +40108,22 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 26:
 			unk = { 1102.05f, -3011.717f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 27:
 			unk = { 1102.05f, -3012.653f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 28:
 			unk = { 1105.05f, -3012.653f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 29:
 			unk = { 1105.05f, -3011.717f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 30:
@@ -40143,22 +40143,22 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 33:
 			unk = { 1102.05f, -3003.592f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 34:
 			unk = { 1102.05f, -3004.541f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 35:
 			unk = { 1105.05f, -3004.541f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 36:
 			unk = { 1105.05f, -3003.592f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 37:
@@ -40178,52 +40178,52 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 40:
 			unk = { 1102.05f, -2995.582f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 41:
 			unk = { 1102.05f, -2996.501f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 42:
 			unk = { 1105.05f, -2996.501f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 43:
 			unk = { 1105.05f, -2995.582f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 45:
 			unk = { 1101f, -3011.9f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 46:
 			unk = { 1102f, -3010f, -38.115f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 47:
 			unk = { 1105.174f, -3004.1602f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 48:
 			unk = { 1105.1749f, -3005.818f, -37.919476f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 49:
 			unk = { 1106.5996f, -3000.8472f, -39.89988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 50:
 			unk = { 1106.6013f, -3002.171f, -37.89988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 51:
@@ -40243,47 +40243,47 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 	
 		case 54:
 			unk = { 1102.4756f, -3008.5076f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 55:
 			unk = { 1099f, -3008.5076f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 56:
 			unk = { 1103.5928f, -3008.2698f, -39.9987f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 57:
 			unk = { 1103.565f, -3014f, -39.988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 58:
 			unk = { 1103.565f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 59:
 			unk = { 1103.565f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 60:
 			unk = { 1103.55f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 67:
 			unk = { 1103.55f, -3013.762f, -40f };
-			unk.f_3 = { 0f, 0f, 180f };
+			unk.f_3 = Vector3( 0f, 0f, 180f );
 			break;
 	
 		case 68:
 			unk = { 1103.55f, -3006.186f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 71:
@@ -40293,7 +40293,7 @@ struct<6> func_336(int iParam0) // Position - 0x2F244
 		case 72:
 		case 74:
 			unk = { 1103.6f, -3013.933f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	}
 
@@ -40306,17 +40306,17 @@ BOOL func_337(int iParam0, var uParam1) // Position - 0x2FD0B
 	{
 		case 0:
 			*uParam1 = { 1103.562f, -3014f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		case 1:
 			*uParam1 = { 1103.562f, -3006f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		case 2:
 			*uParam1 = { 1103.562f, -2998f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		default:
@@ -41643,9 +41643,9 @@ void func_385(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 			if (!PED::IS_PED_IN_ANY_VEHICLE(pedIndexFromEntityIndex, false))
 				if (PED::IS_PED_A_PLAYER(pedIndexFromEntityIndex))
 					if (!func_386())
-						vParam2 = { 0f, 0f, 1f };
+						vParam2 = Vector3( 0f, 0f, 1f );
 				else if (PED::IS_PED_MALE(pedIndexFromEntityIndex))
-					vParam2 = { 0f, 0f, 1f };
+					vParam2 = Vector3( 0f, 0f, 1f );
 		}
 	}
 
@@ -42936,20 +42936,20 @@ void func_426() // Position - 0x33862
 	uLocal_776[11] = "EXT1_WARN12";
 	uLocal_776[12] = "EXT1_WARN13";
 	uLocal_776[13] = "EXT1_WARN14";
-	uLocal_791[0] = { 408f, 5504f, 733f };
-	uLocal_791[1] = { 362f, 5466f, 692f };
-	uLocal_791[2] = { 228f, 5268f, 612f };
-	uLocal_791[3] = { 135f, 5218f, 546f };
-	uLocal_791[4] = { 119f, 5201f, 536f };
-	uLocal_791[5] = { 95f, 5083f, 501f };
-	uLocal_791[6] = { 7f, 5010f, 447f };
-	uLocal_791[7] = { -119f, 4924f, 365f };
-	uLocal_791[8] = { -297f, 4940f, 272f };
-	uLocal_791[9] = { -326f, 4992f, 230f };
-	uLocal_791[10] = { -399f, 4893f, 192f };
-	uLocal_791[11] = { -523f, 4879f, 171f };
-	uLocal_791[12] = { -579f, 4945f, 164f };
-	uLocal_791[13] = { -792f, 5263f, 90f };
+	uLocal_791[0] = Vector3( 408f, 5504f, 733f );
+	uLocal_791[1] = Vector3( 362f, 5466f, 692f );
+	uLocal_791[2] = Vector3( 228f, 5268f, 612f );
+	uLocal_791[3] = Vector3( 135f, 5218f, 546f );
+	uLocal_791[4] = Vector3( 119f, 5201f, 536f );
+	uLocal_791[5] = Vector3( 95f, 5083f, 501f );
+	uLocal_791[6] = Vector3( 7f, 5010f, 447f );
+	uLocal_791[7] = Vector3( -119f, 4924f, 365f );
+	uLocal_791[8] = Vector3( -297f, 4940f, 272f );
+	uLocal_791[9] = Vector3( -326f, 4992f, 230f );
+	uLocal_791[10] = Vector3( -399f, 4893f, 192f );
+	uLocal_791[11] = Vector3( -523f, 4879f, 171f );
+	uLocal_791[12] = Vector3( -579f, 4945f, 164f );
+	uLocal_791[13] = Vector3( -792f, 5263f, 90f );
 	return;
 }
 
@@ -44278,7 +44278,7 @@ void func_461() // Position - 0x35EF0
 			if (PAD::IS_LOOK_INVERTED())
 				num.f_1 = num.f_1 * -1f;
 		
-			value3 = { 0f, 0f, 0f };
+			value3 = Vector3( 0f, 0f, 0f );
 			value3.f_2 = value3.f_2 - (num * MISC::GET_FRAME_TIME() * 1000f);
 			value3 = value3 + (num.f_1 * MISC::GET_FRAME_TIME() * 1000f);
 		
@@ -44475,13 +44475,13 @@ void func_468(int iParam0) // Position - 0x36409
 {
 	if (iParam0 == 1)
 	{
-		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(uLocal_642 - { 50f, 50f, 50f }, uLocal_642 + { 50f, 50f, 50f }, false, true);
-		VEHICLE::REMOVE_VEHICLES_FROM_GENERATORS_IN_AREA(uLocal_642 - { 50f, 50f, 50f }, uLocal_642 + { 50f, 50f, 50f }, 0);
+		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(uLocal_642 - Vector3( 50f, 50f, 50f ), uLocal_642 + Vector3( 50f, 50f, 50f ), false, true);
+		VEHICLE::REMOVE_VEHICLES_FROM_GENERATORS_IN_AREA(uLocal_642 - Vector3( 50f, 50f, 50f ), uLocal_642 + Vector3( 50f, 50f, 50f ), 0);
 		MISC::CLEAR_AREA(uLocal_642, 50f, true, false, false, false);
 	}
 	else
 	{
-		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(uLocal_642 - { 50f, 50f, 50f }, uLocal_642 + { 50f, 50f, 50f }, true, true);
+		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(uLocal_642 - Vector3( 50f, 50f, 50f ), uLocal_642 + Vector3( 50f, 50f, 50f ), true, true);
 	}
 
 	return;
@@ -44593,8 +44593,8 @@ void func_473() // Position - 0x3670D
 			fLocal_877 = 270f;
 			uLocal_881 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_352, 1.12046f, -0.317773f, 0.9385f) };
 			fLocal_887 = -38f;
-			uLocal_878 = { { 1f, 1f, 1f } * { 0f, -SYSTEM::COS(-97.4239f + fLocal_877), SYSTEM::SIN(-97.4239f + fLocal_877) } };
-			fLocal_855 = { 20f, 0f, -5f };
+			uLocal_878 = { Vector3( 1f, 1f, 1f ) * { 0f, -SYSTEM::COS(-97.4239f + fLocal_877), SYSTEM::SIN(-97.4239f + fLocal_877) } };
+			fLocal_855 = Vector3( 20f, 0f, -5f );
 		}
 		else
 		{
@@ -44603,8 +44603,8 @@ void func_473() // Position - 0x3670D
 			fLocal_877 = 270f - 180f;
 			uLocal_881 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_352, -1.12046f, -0.317773f, 0.9385f) };
 			fLocal_887 = -38f;
-			uLocal_878 = { { -1f, -1f, -1f } * { 0f, -SYSTEM::COS(-97.4239f + fLocal_877), SYSTEM::SIN(-97.4239f + fLocal_877) } };
-			fLocal_855 = { 20f, 0f, 12f };
+			uLocal_878 = { Vector3( -1f, -1f, -1f ) * { 0f, -SYSTEM::COS(-97.4239f + fLocal_877), SYSTEM::SIN(-97.4239f + fLocal_877) } };
+			fLocal_855 = Vector3( 20f, 0f, 12f );
 		}
 	
 		caLocal_858 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
@@ -45111,7 +45111,7 @@ void func_490() // Position - 0x37404
 	{
 		PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_LEAVE_CAMERA_CONTROL_ON);
 		PED::SET_PED_HELMET(PLAYER::PLAYER_PED_ID(), false);
-		vector = { 0f, 0f, 0f };
+		vector = Vector3( 0f, 0f, 0f );
 	
 		if (Global_100681.f_12[1] == 1)
 		{
@@ -45490,7 +45490,7 @@ void func_500(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 				{
 					if (VEHICLE::GET_PED_IN_VEHICLE_SEAT(playersLastVehicle, -1, false) != PLAYER::PLAYER_PED_ID() && VEHICLE::GET_PED_IN_VEHICLE_SEAT(playersLastVehicle, -1, false) != 0)
 					{
-						if (MISC::GET_DISTANCE_BETWEEN_COORDS((vParam0 + vParam3) / { 2f, 2f, 2f }, ENTITY::GET_ENTITY_COORDS(playersLastVehicle, true), true) < 20f)
+						if (MISC::GET_DISTANCE_BETWEEN_COORDS((vParam0 + vParam3) / Vector3( 2f, 2f, 2f ), ENTITY::GET_ENTITY_COORDS(playersLastVehicle, true), true) < 20f)
 						{
 							flag = true;
 							flag2 = false;
@@ -46809,7 +46809,7 @@ BOOL func_544(var uParam0, int iParam1) // Position - 0x39BF9
 	BOOL num;
 	int num2;
 
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0f;
 	uParam0->f_4 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_5), "", 16);
@@ -46819,8 +46819,8 @@ BOOL func_544(var uParam0, int iParam1) // Position - 0x39BF9
 	uParam0->f_12 = 145;
 	uParam0->f_13 = -1;
 	uParam0->f_14 = 0;
-	uParam0->f_15 = { 0f, 0f, 0f };
-	uParam0->f_18 = { 0f, 0f, 0f };
+	uParam0->f_15 = Vector3( 0f, 0f, 0f );
+	uParam0->f_18 = Vector3( 0f, 0f, 0f );
 
 	switch (iParam1)
 	{
@@ -47200,7 +47200,7 @@ BOOL func_544(var uParam0, int iParam1) // Position - 0x39BF9
 	
 		case 24:
 			uParam0->f_14 = 21;
-			*uParam0 = { 0f, 0f, 0f };
+			*uParam0 = Vector3( 0f, 0f, 0f );
 			uParam0->f_3 = 0f;
 			uParam0->f_4 = 0;
 			MISC::SET_BIT(&(uParam0->f_9), 10);
@@ -47628,7 +47628,7 @@ void func_546(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, f
 			}
 			else
 			{
-				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = { 0f, 0f, 0f };
+				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = Vector3( 0f, 0f, 0f );
 				Global_113648.f_32751.f_1934[Global_77348.f_555[0].f_14] = -1f;
 			}
 		
@@ -55720,7 +55720,7 @@ void func_721() // Position - 0x48420
 		Global_100681.f_12[2] = 0;
 	}
 
-	iLocal_865 = PED::ADD_SCENARIO_BLOCKING_AREA({ 302.9516f, 1297.7646f, -189.9982f } - { 40f, 40f, 40f }, { 302.9516f, 1297.7646f, -189.9982f } + { 40f, 40f, 40f }, false, true, true, true);
+	iLocal_865 = PED::ADD_SCENARIO_BLOCKING_AREA({ 302.9516f, 1297.7646f, -189.9982f } - Vector3( 40f, 40f, 40f ), { 302.9516f, 1297.7646f, -189.9982f } + Vector3( 40f, 40f, 40f ), false, true, true, true);
 	TASK::SET_SCENARIO_TYPE_ENABLED("WORLD_VEHICLE_SALTON_DIRT_BIKE", false);
 
 	if (TASK::DOES_SCENARIO_GROUP_EXIST("Observatory_Bikers") && TASK::IS_SCENARIO_GROUP_ENABLED("Observatory_Bikers"))

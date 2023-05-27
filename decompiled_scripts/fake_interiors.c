@@ -55,7 +55,7 @@ void main() // Position - 0x0
 	fLocal_24 = 140f;
 	fLocal_25 = 180f;
 	iLocal_29 = -1;
-	uLocal_30 = { 0f, 0f, 0f };
+	uLocal_30 = Vector3( 0f, 0f, 0f );
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 		SCRIPT::TERMINATE_THIS_THREAD();

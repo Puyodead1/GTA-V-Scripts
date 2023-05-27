@@ -425,7 +425,7 @@ void func_10() // Position - 0x2D9
 			str2.f_1 = "F_GetOut_r_bighouse";
 			str2.f_2 = "F_GetOut_r_bighouse_CAM";
 			str2.f_5 = { -1.049f, 524.283f, 170.064f };
-			str2.f_8 = { 0f, 0f, 24f };
+			str2.f_8 = Vector3( 0f, 0f, 24f );
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -987,7 +987,7 @@ void func_13(var uParam0) // Position - 0x11F9
 {
 	func_14(uParam0);
 	*uParam0 = 0;
-	uParam0->f_9 = { 0f, 0f, 0f };
+	uParam0->f_9 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -1582,7 +1582,7 @@ void func_35() // Position - 0x1CD3
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -4003,8 +4003,8 @@ void func_139() // Position - 0x48FC
 		return;
 
 	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	vector = { entityCoords - { 3f, 30f, 30f } };
-	vector2 = { entityCoords + { 3f, 30f, 30f } };
+	vector = { entityCoords - Vector3( 3f, 30f, 30f ) };
+	vector2 = { entityCoords + Vector3( 3f, 30f, 30f ) };
 
 	if (!VEHICLE::IS_COP_VEHICLE_IN_AREA_3D(vector, vector2) && !PED::IS_COP_PED_IN_AREA_3D(vector, vector2))
 		return;

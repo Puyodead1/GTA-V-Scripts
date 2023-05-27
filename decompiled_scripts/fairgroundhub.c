@@ -1781,21 +1781,21 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 		uParam0->f_91[i] = 0;
 	}
 
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0;
 	uParam0->f_33 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_34), "", 32);
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "", 32);
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_50), "", 32);
-	uParam0->f_58 = { 0f, 0f, 0f };
-	uParam0->f_61 = { 0f, 0f, 0f };
-	uParam0->f_68 = { 0f, 0f, 0f };
-	uParam0->f_71 = { 0f, 0f, 0f };
+	uParam0->f_58 = Vector3( 0f, 0f, 0f );
+	uParam0->f_61 = Vector3( 0f, 0f, 0f );
+	uParam0->f_68 = Vector3( 0f, 0f, 0f );
+	uParam0->f_71 = Vector3( 0f, 0f, 0f );
 	uParam0->f_74 = 0f;
-	uParam0->f_79 = { 0f, 0f, 0f };
-	uParam0->f_82 = { 0f, 0f, 0f };
-	uParam0->f_85 = { 0f, 0f, 0f };
-	uParam0->f_88 = { 0f, 0f, 0f };
+	uParam0->f_79 = Vector3( 0f, 0f, 0f );
+	uParam0->f_82 = Vector3( 0f, 0f, 0f );
+	uParam0->f_85 = Vector3( 0f, 0f, 0f );
+	uParam0->f_88 = Vector3( 0f, 0f, 0f );
 
 	switch (iParam1)
 	{
@@ -1967,8 +1967,8 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "REMOVE_ALL_STATES", 32);
 			uParam0->f_33 = 1;
 			*uParam0 = { 787.3967f, -1808.8584f, 29.8532f };
-			uParam0->f_58 = { 814f, -1750f, 20f };
-			uParam0->f_61 = { 790f, -1899f, 35f };
+			uParam0->f_58 = Vector3( 814f, -1750f, 20f );
+			uParam0->f_61 = Vector3( 790f, -1899f, 35f );
 			uParam0->f_64[0] = 1;
 			uParam0->f_64[1] = 0;
 			uParam0->f_64[2] = 0;
@@ -2458,7 +2458,7 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[0], "TrevorsTrailer", 32);
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[1], "TrevorsTrailerTrash", 32);
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "TrevorsTrailerTidy", 32);
-			*uParam0 = { 1973f, 3815f, 34f };
+			*uParam0 = Vector3( 1973f, 3815f, 34f );
 			uParam0->f_33 = 0;
 			break;
 	
@@ -2854,7 +2854,7 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 			TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "v_carshowroom", 32);
 			*uParam0 = { -49.28f, -1092.66f, 25.42f };
 			uParam0->f_68 = { -49.28f, -1092.66f, 25.42f };
-			uParam0->f_71 = { 3f, 1f, 3f };
+			uParam0->f_71 = Vector3( 3f, 1f, 3f );
 			uParam0->f_74 = 0f;
 			uParam0->f_75[0] = 0;
 			uParam0->f_75[1] = 1;
@@ -2869,7 +2869,7 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 			TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42), "v_carshowroom", 32);
 			*uParam0 = { -53.07f, -1096.73f, 25.5f };
 			uParam0->f_68 = { -53.07f, -1096.73f, 25.5f };
-			uParam0->f_71 = { 1f, 3f, 2f };
+			uParam0->f_71 = Vector3( 1f, 3f, 2f );
 			uParam0->f_74 = -45f;
 			uParam0->f_75[0] = 0;
 			uParam0->f_75[1] = 1;
@@ -3240,8 +3240,8 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 		case 191:
 			uParam0->f_3 = 1;
 			*uParam0 = { -1096.3812f, -836.17f, 36.6755f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -3249,8 +3249,8 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 		case 192:
 			uParam0->f_3 = 1;
 			*uParam0 = { 449.6558f, -980.1375f, 42.6918f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -3258,8 +3258,8 @@ int func_61(var uParam0, int iParam1) // Position - 0x24F8
 		case 193:
 			uParam0->f_3 = 1;
 			*uParam0 = { 363.0175f, -1598.0793f, 35.9502f };
-			uParam0->f_85 = { *uParam0 - { 25f, 25f, 15f } };
-			uParam0->f_88 = { *uParam0 + { 25f, 25f, 15f } };
+			uParam0->f_85 = { *uParam0 - Vector3( 25f, 25f, 15f ) };
+			uParam0->f_88 = { *uParam0 + Vector3( 25f, 25f, 15f ) };
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -3483,7 +3483,7 @@ void func_68(var uParam0, int iParam1, char* sParam2, float fParam3, float fPara
 	uParam0->f_11 = 1;
 	uParam0->f_10 = 0f;
 	*uParam0 = 1;
-	uParam0->f_12 = { 0f, 0f, 0f };
+	uParam0->f_12 = Vector3( 0f, 0f, 0f );
 	uParam0->f_15 = 360f;
 	func_72(&(uParam0->f_16), fParam3, fParam6, fParam9);
 	uParam0->f_1 = { func_69(uParam0->f_16) };
@@ -3531,7 +3531,7 @@ void func_73(var uParam0, int iParam1, char* sParam2, var uParam3, var uParam4, 
 	uParam0->f_6 = iParam1;
 	uParam0->f_11 = 0;
 	*uParam0 = 1;
-	uParam0->f_12 = { 0f, 0f, 0f };
+	uParam0->f_12 = Vector3( 0f, 0f, 0f );
 	uParam0->f_15 = 360f;
 
 	if (iParam1 == 0)

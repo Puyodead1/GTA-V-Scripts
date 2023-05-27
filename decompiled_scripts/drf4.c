@@ -1510,32 +1510,32 @@ void func_3(var uParam0, int iParam1) // Position - 0x46B
 		}
 		else
 		{
-			unk = { 0f, 0f, 0f };
+			unk = Vector3( 0f, 0f, 0f );
 			num2 = 0f;
 		
 			if (!func_5(Global_113648.f_18535[i], &unk, &num2))
 			{
 				Global_113648.f_18535[i] = 318;
 				func_4(&uParam0->f_2296[i]);
-				uParam0->f_2300[i] = { 0f, 0f, 0f };
+				uParam0->f_2300[i] = Vector3( 0f, 0f, 0f );
 				uParam0->f_2310[i] = 0f;
 				uParam0->f_2314[i] = 0;
-				uParam0->f_2318[i] = { 0f, 0f, 0f };
+				uParam0->f_2318[i] = Vector3( 0f, 0f, 0f );
 				uParam0->f_2328[i] = 0;
-				Global_98071[i] = { 0f, 0f, 0f };
+				Global_98071[i] = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_9 = 0f;
 				Global_98071[i].f_12 = 0f;
-				Global_98071[i].f_3 = { 0f, 0f, 0f };
+				Global_98071[i].f_3 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_10 = 0f;
 				Global_98071[i].f_13 = 0f;
-				Global_98071[i].f_6 = { 0f, 0f, 0f };
+				Global_98071[i].f_6 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_11 = 0f;
 				Global_98071[i].f_14 = 0f;
-				Global_98071[i].f_17 = { 0f, 0f, 0f };
+				Global_98071[i].f_17 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_26 = 0f;
-				Global_98071[i].f_20 = { 0f, 0f, 0f };
+				Global_98071[i].f_20 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_27 = 0f;
-				Global_98071[i].f_23 = { 0f, 0f, 0f };
+				Global_98071[i].f_23 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_28 = 0f;
 			}
 		}
@@ -1616,7 +1616,7 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 21:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -1666,47 +1666,47 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 29:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 30:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 31:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 32:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 33:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 34:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 35:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 36:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 37:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -1746,7 +1746,7 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 42:
-			*uParam1 = { { 4.0205f, -2975.3408f, 798.4536f } + { 1f, 0f, 0f } };
+			*uParam1 = { { 4.0205f, -2975.3408f, 798.4536f } + Vector3( 1f, 0f, 0f ) };
 			*uParam2 = 90f;
 			return true;
 	
@@ -1766,7 +1766,7 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 46:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -1806,7 +1806,7 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 53:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -1841,7 +1841,7 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 68:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -1866,22 +1866,22 @@ BOOL func_5(int iParam0, var uParam1, var uParam2) // Position - 0x63F
 			return true;
 	
 		case 70:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 71:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 72:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 73:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -3794,7 +3794,7 @@ void func_81() // Position - 0x30EC
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 

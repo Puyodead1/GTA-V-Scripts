@@ -72,7 +72,7 @@ void main() // Position - 0x0
 	{
 		SYSTEM::WAIT(500);
 		num2 = 0;
-		entityCoords = { 0f, 0f, 0f };
+		entityCoords = Vector3( 0f, 0f, 0f );
 	
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };

@@ -4280,19 +4280,19 @@ void func_66(var uParam0, var uParam1) // Position - 0x1B8A
 	*uParam1 = 4;
 	uParam1->f_1[0] = 0;
 	uParam1->f_16[0] = { 0.005f, -0.2f, 0.985f };
-	uParam1->f_59[0] = { 0f, 180f, 0f };
+	uParam1->f_59[0] = Vector3( 0f, 180f, 0f );
 	uParam1->f_102[0] = joaat("sum_prop_arcade_strength_ham_01a");
 	uParam1->f_1[1] = 0;
-	uParam1->f_16[1] = { 0f, 0f, 0f };
-	uParam1->f_59[1] = { 0f, 0f, 0f };
+	uParam1->f_16[1] = Vector3( 0f, 0f, 0f );
+	uParam1->f_59[1] = Vector3( 0f, 0f, 0f );
 	uParam1->f_102[1] = joaat("sum_prop_arcade_str_lighton");
 	uParam1->f_1[2] = 0;
-	uParam1->f_16[2] = { 0f, 0f, 0f };
-	uParam1->f_59[2] = { 0f, 0f, 0f };
+	uParam1->f_16[2] = Vector3( 0f, 0f, 0f );
+	uParam1->f_59[2] = Vector3( 0f, 0f, 0f );
 	uParam1->f_102[2] = joaat("sum_prop_arcade_str_lightoff");
 	uParam1->f_1[3] = 0;
-	uParam1->f_16[3] = { 0f, 0f, 0f };
-	uParam1->f_59[3] = { 0f, 0f, 0f };
+	uParam1->f_16[3] = Vector3( 0f, 0f, 0f );
+	uParam1->f_59[3] = Vector3( 0f, 0f, 0f );
 	uParam1->f_102[3] = joaat("sum_prop_arcade_str_bar_01a");
 	return;
 }
@@ -5991,14 +5991,14 @@ void func_143(int iParam0, var uParam1) // Position - 0x39EE
 			*uParam1 = 3;
 			uParam1->f_1[0] = 0;
 			uParam1->f_16[0] = { -0.498f, 0.13f, 0.786f };
-			uParam1->f_59[0] = { -75f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( -75f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_arcade_wpngun_01a");
 			uParam1->f_1[1] = 1;
 			uParam1->f_16[1] = { 0.498f, 0.13f, 0.786f };
-			uParam1->f_59[1] = { -75f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( -75f, 0f, 0f );
 			uParam1->f_102[1] = joaat("ch_prop_arcade_wpngun_01a");
-			uParam1->f_16[2] = { 0f, 0f, 0f };
-			uParam1->f_59[2] = { 0f, 0f, 0f };
+			uParam1->f_16[2] = Vector3( 0f, 0f, 0f );
+			uParam1->f_59[2] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[2] = joaat("ch_prop_arcade_gun_bird_01a");
 			break;
 	
@@ -6006,11 +6006,11 @@ void func_143(int iParam0, var uParam1) // Position - 0x39EE
 			*uParam1 = 2;
 			uParam1->f_1[0] = 0;
 			uParam1->f_16[0] = { -0.498f, 0.13f, 0.786f };
-			uParam1->f_59[0] = { -75f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( -75f, 0f, 0f );
 			uParam1->f_102[0] = joaat("tr_prop_tr_wpncamhedz_01a");
 			uParam1->f_1[1] = 1;
 			uParam1->f_16[1] = { 0.498f, 0.13f, 0.786f };
-			uParam1->f_59[1] = { -75f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( -75f, 0f, 0f );
 			uParam1->f_102[1] = joaat("tr_prop_tr_wpncamhedz_01a");
 			break;
 	
@@ -6018,48 +6018,48 @@ void func_143(int iParam0, var uParam1) // Position - 0x39EE
 			*uParam1 = 2;
 			uParam1->f_1[0] = 0;
 			uParam1->f_16[0] = { -0.621f, -0.064f, 0.168f };
-			uParam1->f_59[0] = { 0f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_arcade_race_bike_02a");
 			uParam1->f_1[1] = 1;
 			uParam1->f_16[1] = { 0.621f, -0.064f, 0.168f };
-			uParam1->f_59[1] = { 0f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[1] = joaat("ch_prop_arcade_race_bike_02a");
 			break;
 	
 		case 3:
 			*uParam1 = 2;
 			uParam1->f_16[0] = { -0.667f, -0.179f, 0.266f };
-			uParam1->f_59[0] = { 0f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_arcade_race_car_01a");
 			uParam1->f_16[1] = { 0.667f, -0.179f, 0.266f };
-			uParam1->f_59[1] = { 0f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[1] = joaat("ch_prop_arcade_race_car_01b");
 			break;
 	
 		case 4:
 			*uParam1 = 2;
 			uParam1->f_16[0] = { -0.667f, -0.179f, 0.266f };
-			uParam1->f_59[0] = { 0f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_arcade_race_truck_01a");
 			uParam1->f_16[1] = { 0.667f, -0.179f, 0.266f };
-			uParam1->f_59[1] = { 0f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[1] = joaat("ch_prop_arcade_race_truck_01b");
 			break;
 	
 		case 17:
 			*uParam1 = 2;
 			uParam1->f_16[0] = { 0f, 0.2f, 0.1f };
-			uParam1->f_59[0] = { 0f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_ch_usb_drive01x");
 			uParam1->f_16[1] = { 0f, 0.2f, 0.2f };
-			uParam1->f_59[1] = { 0f, 0f, 0f };
+			uParam1->f_59[1] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[1] = joaat("prop_phone_ing");
 			break;
 	
 		case 18:
 			*uParam1 = 1;
 			uParam1->f_16[0] = { 1.7f, -0.18f, 0f };
-			uParam1->f_59[0] = { 0f, 0f, 0f };
+			uParam1->f_59[0] = Vector3( 0f, 0f, 0f );
 			uParam1->f_102[0] = joaat("ch_prop_fingerprint_scanner_01a");
 			break;
 	
@@ -6432,7 +6432,7 @@ void func_150(int* piParam0, var uParam1, var uParam2, Entity eParam3, int iPara
 			break;
 	
 		case 1:
-			if (func_444(piParam0, uParam1, ped, flag, true) && func_443(piParam0, uParam1, ped, flag, true, bParam7, hParam8) && func_441(piParam0, uParam1, eParam3, ped, flag, ENTITY::GET_ENTITY_COORDS(eParam3, true), ENTITY::GET_ENTITY_ROTATION(eParam3, 2) + { 0f, 0f, 0f }))
+			if (func_444(piParam0, uParam1, ped, flag, true) && func_443(piParam0, uParam1, ped, flag, true, bParam7, hParam8) && func_441(piParam0, uParam1, eParam3, ped, flag, ENTITY::GET_ENTITY_COORDS(eParam3, true), ENTITY::GET_ENTITY_ROTATION(eParam3, 2) + Vector3( 0f, 0f, 0f )))
 				piParam0->f_2 = 2;
 			break;
 	

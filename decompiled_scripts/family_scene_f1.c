@@ -442,7 +442,7 @@ int func_1(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, floa
 		return 0;
 
 	if (func_14(fParam5, 0f, 0f, 0f, false))
-		fParam5 = { 50f, 50f, 50f };
+		fParam5 = Vector3( 50f, 50f, 50f );
 
 	unk = { uParam2 - fParam5 };
 	unk4 = { uParam2 + fParam5 };
@@ -2359,7 +2359,7 @@ int func_78() // Position - 0x2623
 	Object unk4;
 
 	modelHash = 0;
-	vector = { 0f, 0f, 0f };
+	vector = Vector3( 0f, 0f, 0f );
 	num = 226;
 	doorHash = 825812850;
 	num2 = 0;
@@ -2489,7 +2489,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 8:
 			*uParam1 = joaat("v_ilev_mm_doorm_l");
-			*uParam2 = { -817f, 179f, 73f };
+			*uParam2 = Vector3( -817f, 179f, 73f );
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Front", 64);
 			*uParam3 = 38;
 			*uParam4 = -2097039789;
@@ -2498,7 +2498,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 9:
 			*uParam1 = joaat("v_ilev_mm_doorm_r");
-			*uParam2 = { -816f, 178f, 73f };
+			*uParam2 = Vector3( -816f, 178f, 73f );
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Front", 64);
 			*uParam3 = 39;
 			*uParam4 = -2127416656;
@@ -2516,7 +2516,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		default:
 			*uParam1 = 0;
-			*uParam2 = { 0f, 0f, 0f };
+			*uParam2 = Vector3( 0f, 0f, 0f );
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "NULL", 64);
 			*uParam3 = 226;
 			*uParam4 = 825812850;

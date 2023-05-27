@@ -11754,7 +11754,7 @@ BOOL func_233() // Position - 0xA1C3
 
 	if (func_234())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3( 0f, -500f, 0f );
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)
@@ -14897,7 +14897,7 @@ Vector3 func_287() // Position - 0xF33D
 	var unk2;
 	BOOL num;
 
-	vector = { 0f, 0f, 0f };
+	vector = Vector3( 0f, 0f, 0f );
 	num = Global_2765639;
 	unk3 = Global_2765563;
 	flag = func_296(unk3);
@@ -15240,7 +15240,7 @@ Vector3 func_293(int iParam0, int iParam1) // Position - 0xF8F2
 {
 	var unk;
 
-	unk = { 0f, 0f, 0f };
+	unk = Vector3( 0f, 0f, 0f );
 
 	switch (iParam0)
 	{
@@ -15463,7 +15463,7 @@ Vector3 func_293(int iParam0, int iParam1) // Position - 0xF8F2
 
 	if (!func_295(unk, 0f, 0f, 0f, false))
 	{
-		unk = { unk + { 1f, 0f, 0f } };
+		unk = { unk + Vector3( 1f, 0f, 0f ) };
 	
 		if (func_294(iParam1) && iParam1 != 38)
 			unk = { unk + { 0.0191f, 0f, 0f } };

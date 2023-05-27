@@ -513,7 +513,7 @@ BOOL func_18(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, float fPar
 	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(vParam1))
 		return false;
 
-	shapeTestHandle7 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) + { 1f, 0f, 0f }, vParam1, 87, PLAYER::PLAYER_PED_ID(), 0);
+	shapeTestHandle7 = SHAPETEST::START_EXPENSIVE_SYNCHRONOUS_SHAPE_TEST_LOS_PROBE(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) + Vector3( 1f, 0f, 0f ), vParam1, 87, PLAYER::PLAYER_PED_ID(), 0);
 	SHAPETEST::GET_SHAPE_TEST_RESULT(shapeTestHandle7, &hit, &endCoords, &surfaceNormal, &entityHit);
 
 	if (hit != 0)

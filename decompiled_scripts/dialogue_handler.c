@@ -407,7 +407,7 @@ void func_2() // Position - 0x26D
 	Global_21738 = false;
 	Global_21739 = false;
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	Global_21729 = 0;
 	Global_21730 = 0;
 	Global_21772 = false;
@@ -2215,7 +2215,7 @@ void func_37() // Position - 0x277B
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 

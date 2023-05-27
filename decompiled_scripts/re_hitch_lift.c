@@ -413,11 +413,11 @@ void main() // Position - 0x0
 	fLocal_47 = -1f;
 	iLocal_55 = HUD::GET_STANDARD_BLIP_ENUM_ID();
 	iLocal_56 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
-	uLocal_70 = { -3092.82f, 749.8f, 21.48f };
-	uLocal_73 = { 181.8977f, 4415.1523f, 73.463f };
-	uLocal_76 = { 2743.4612f, 4385.5103f, 47.7521f };
-	uLocal_79 = { -382.1346f, 2817.9712f, 44.0671f };
-	uLocal_97 = { -1034.6f, 4918.6f, 205.9f };
+	uLocal_70 = Vector3( -3092.82f, 749.8f, 21.48f );
+	uLocal_73 = Vector3( 181.8977f, 4415.1523f, 73.463f );
+	uLocal_76 = Vector3( 2743.4612f, 4385.5103f, 47.7521f );
+	uLocal_79 = Vector3( -382.1346f, 2817.9712f, 44.0671f );
+	uLocal_97 = Vector3( -1034.6f, 4918.6f, 205.9f );
 	TEXT_LABEL_ASSIGN_STRING(&uLocal_128, "", 24);
 	uLocal_63 = { uScriptParam_360.f_1[0] };
 	func_277();
@@ -1140,7 +1140,7 @@ void func_20() // Position - 0xD35
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -8249,7 +8249,7 @@ void func_190() // Position - 0xAD2C
 		PED::SET_PED_COMPONENT_VARIATION(pedLocal_85, PV_COMP_ACCS, 1, 0, 0);
 		PED::SET_PED_COMPONENT_VARIATION(pedLocal_85, PV_COMP_DECL, 0, 0, 0);
 		TASK::TASK_PLAY_ANIM(pedLocal_85, "random@hitch_lift", "idle_f", 2f, -2f, -1, 49, 0, false, false, false);
-		PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_93 - { 20f, 50f, 50f }, uLocal_93 + { 20f, 50f, 50f }, false, true, true, true);
+		PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_93 - Vector3( 20f, 50f, 50f ), uLocal_93 + Vector3( 20f, 50f, 50f ), false, true, true, true);
 		func_191(true);
 	}
 	else if (iLocal_60 == 3)
@@ -8260,7 +8260,7 @@ void func_190() // Position - 0xAD2C
 		PED::SET_PED_COMPONENT_VARIATION(pedLocal_85, PV_COMP_LOWR, 1, 0, 0);
 		PED::SET_PED_COMPONENT_VARIATION(pedLocal_85, PV_COMP_ACCS, 0, 0, 0);
 		TASK::TASK_PLAY_ANIM(pedLocal_85, "random@hitch_lift", "idle_f", 2f, -2f, -1, 49, 0, false, false, false);
-		PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_93 - { 20f, 50f, 50f }, uLocal_93 + { 20f, 50f, 50f }, false, true, true, true);
+		PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_93 - Vector3( 20f, 50f, 50f ), uLocal_93 + Vector3( 20f, 50f, 50f ), false, true, true, true);
 	}
 	else
 	{
@@ -8916,7 +8916,7 @@ BOOL func_206() // Position - 0xBA10
 	
 		if (!bLocal_114)
 		{
-			if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true), 10f, true) || MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) - { 10f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) + { 10f, 10f, 10f }, false))
+			if (MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true), 10f, true) || MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) - Vector3( 10f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) + Vector3( 10f, 10f, 10f ), false))
 				return true;
 		}
 		else if (PED::IS_PED_INJURED(pedLocal_86) && ENTITY::DOES_ENTITY_EXIST(pedLocal_86))
@@ -8985,9 +8985,9 @@ void func_208() // Position - 0xBC40
 {
 	if (iLocal_60 == 1)
 	{
-		uLocal_90 = { -3086.0525f, 735.5091f, 20.4883f };
+		uLocal_90 = Vector3( -3086.0525f, 735.5091f, 20.4883f );
 		fLocal_96 = 17.9234f;
-		uLocal_93 = { -1053.3442f, -2539.3267f, 19.0394f };
+		uLocal_93 = Vector3( -1053.3442f, -2539.3267f, 19.0394f );
 		hLocal_100 = joaat("A_M_M_Business_01");
 		sLocal_178 = "REHH1AU";
 		sLocal_179 = "BUSINESSMAN";
@@ -8996,9 +8996,9 @@ void func_208() // Position - 0xBC40
 	}
 	else if (iLocal_60 == 2)
 	{
-		uLocal_90 = { 196.7701f, 4427.7573f, 72.2673f };
+		uLocal_90 = Vector3( 196.7701f, 4427.7573f, 72.2673f );
 		fLocal_96 = 75.9173f;
-		uLocal_93 = { 3328.8276f, 5154.456f, 17.2894f };
+		uLocal_93 = Vector3( 3328.8276f, 5154.456f, 17.2894f );
 		hLocal_100 = joaat("A_F_Y_Hiker_01");
 		sLocal_178 = "REHH2AU";
 		sLocal_179 = "REHH2Hiker";
@@ -9006,10 +9006,10 @@ void func_208() // Position - 0xBC40
 	}
 	else if (iLocal_60 == 3)
 	{
-		uLocal_90 = { 2745.0264f, 4386.8267f, 47.8636f };
+		uLocal_90 = Vector3( 2745.0264f, 4386.8267f, 47.8636f );
 		fLocal_96 = 19.4143f;
-		uLocal_93 = { 814.455f, 1274.7966f, 359.5112f };
-		uLocal_104 = { 804.2382f, 1269.5895f, 359.3557f };
+		uLocal_93 = Vector3( 814.455f, 1274.7966f, 359.5112f );
+		uLocal_104 = Vector3( 804.2382f, 1269.5895f, 359.3557f );
 		fLocal_107 = 340.7372f;
 		hLocal_100 = joaat("A_F_Y_Hipster_03");
 		hLocal_101 = joaat("S_M_M_Security_01");
@@ -9020,9 +9020,9 @@ void func_208() // Position - 0xBC40
 	}
 	else if (iLocal_60 == 5)
 	{
-		uLocal_90 = { -324.0379f, 2818.034f, 58.4498f };
+		uLocal_90 = Vector3( -324.0379f, 2818.034f, 58.4498f );
 		fLocal_96 = 56.5422f;
-		uLocal_93 = { -344.0339f, 634.4108f, 171.2902f };
+		uLocal_93 = Vector3( -344.0339f, 634.4108f, 171.2902f );
 		hLocal_100 = joaat("IG_Bride");
 		hLocal_101 = joaat("A_M_Y_Business_01");
 		sLocal_178 = "REHH5AU";

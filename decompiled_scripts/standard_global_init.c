@@ -90,8 +90,8 @@ void main() // Position - 0x0
 	uLocal_50 = { 1694.7395f, 3276.5024f, 41.2796f };
 	uLocal_53 = { 8.79494f, 0.59893f, 154.8464f };
 	Global_0 = 0f;
-	Global_19 = { 6f, 6f, 2f };
-	Global_22 = { 4f, 4f, 2f };
+	Global_19 = Vector3( 6f, 6f, 2f );
+	Global_22 = Vector3( 4f, 4f, 2f );
 	Global_8259 = 255;
 	Global_8862 = 300;
 	Global_20303 = 0.1f;
@@ -102,10 +102,10 @@ void main() // Position - 0x0
 	Global_20308 = 0.325f;
 	Global_20309 = 0.19f;
 	Global_20310 = 0.06f;
-	Global_20311 = { -30f, 3f, -90f };
-	Global_20314 = { 0f, 0f, 0f };
+	Global_20311 = Vector3( -30f, 3f, -90f );
+	Global_20314 = Vector3( 0f, 0f, 0f );
 	Global_20317 = { -89.8f, -14.7f, 0f };
-	Global_20343 = { -90f, 0f, 0f };
+	Global_20343 = Vector3( -90f, 0f, 0f );
 	Global_20346 = { -90f, -100.4f, 0f };
 	Global_20350 = 27;
 	Global_20351 = 177;
@@ -329,8 +329,8 @@ void func_1() // Position - 0x5D2
 
 	for (i = 0; i <= 10 - 1; i = i + 1)
 	{
-		Global_95719[i] = { 0f, 0f, 0f };
-		Global_95719[i].f_3 = { 0f, 0f, 0f };
+		Global_95719[i] = Vector3( 0f, 0f, 0f );
+		Global_95719[i].f_3 = Vector3( 0f, 0f, 0f );
 		Global_95719[i].f_6 = 0f;
 		Global_95719[i].f_7 = 263;
 		Global_95719[i].f_8 = 0;
@@ -624,8 +624,8 @@ void func_13() // Position - 0xCE1
 
 	for (i = 0; i <= 5 - 1; i = i + 1)
 	{
-		Global_95884[i] = { 0f, 0f, 0f };
-		Global_95884[i].f_3 = { 0f, 0f, 0f };
+		Global_95884[i] = Vector3( 0f, 0f, 0f );
+		Global_95884[i].f_3 = Vector3( 0f, 0f, 0f );
 		Global_95884[i].f_6 = 0f;
 		Global_95884[i].f_7 = 263;
 		Global_95884[i].f_8 = 0;
@@ -688,8 +688,8 @@ void func_17() // Position - 0xF71
 
 	for (i = 0; i <= 7 - 1; i = i + 1)
 	{
-		Global_95820[i] = { 0f, 0f, 0f };
-		Global_95820[i].f_3 = { 0f, 0f, 0f };
+		Global_95820[i] = Vector3( 0f, 0f, 0f );
+		Global_95820[i].f_3 = Vector3( 0f, 0f, 0f );
 		Global_95820[i].f_6 = 0f;
 		Global_95820[i].f_7 = 263;
 		Global_95820[i].f_8 = 0;
@@ -1188,7 +1188,7 @@ void func_38(int iParam0) // Position - 0x21FA
 
 void func_39() // Position - 0x2223
 {
-	Global_78799 = { 0f, 0f, 0f };
+	Global_78799 = Vector3( 0f, 0f, 0f );
 	Global_78802 = 0f;
 	Global_100681.f_21 = 145;
 	return;
@@ -1419,8 +1419,8 @@ void func_48(var uParam0) // Position - 0x28E6
 void func_49(var uParam0) // Position - 0x2901
 {
 	func_50(&(uParam0->f_12));
-	*uParam0 = { 0f, 0f, 0f };
-	uParam0->f_3 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
+	uParam0->f_3 = Vector3( 0f, 0f, 0f );
 	uParam0->f_6 = 0f;
 	uParam0->f_8 = 0;
 	uParam0->f_9 = 0;
@@ -1469,7 +1469,7 @@ void func_50(var uParam0) // Position - 0x2930
 
 void func_51(var uParam0) // Position - 0x29E0
 {
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0f;
 	uParam0->f_4 = 0;
 	uParam0->f_5 = -1;

@@ -320,7 +320,7 @@ void func_1() // Position - 0xD6
 				if (SYSTEM::VDIST(uLocal_221, ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false)) >= 10f)
 				{
 					func_165();
-					uLocal_221 = { 0f, 0f, 0f };
+					uLocal_221 = Vector3( 0f, 0f, 0f );
 					func_164();
 					HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("EPSDES_WIPE" /*Epsilonism pilgrimage now 0 miles.*/);
 					HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
@@ -29580,7 +29580,7 @@ void func_155() // Position - 0x1FA5B
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 

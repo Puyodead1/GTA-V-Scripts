@@ -327,7 +327,7 @@ void main() // Position - 0x0
 	iLocal_54 = 64;
 	iLocal_77 = HUD::GET_STANDARD_BLIP_ENUM_ID();
 	iLocal_78 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
-	uLocal_83 = { 500f, 500f, 500f };
+	uLocal_83 = Vector3( 500f, 500f, 500f );
 	iLocal_108 = -1;
 	fLocal_111 = 0f;
 	iLocal_117 = 1;
@@ -2124,7 +2124,7 @@ void func_53() // Position - 0x2312
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 

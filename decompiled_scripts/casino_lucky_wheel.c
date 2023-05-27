@@ -31705,7 +31705,7 @@ BOOL func_443() // Position - 0x25810
 
 	if (func_444())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3( 0f, -500f, 0f );
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)

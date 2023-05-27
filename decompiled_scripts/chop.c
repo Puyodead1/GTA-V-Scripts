@@ -2291,8 +2291,8 @@ void func_34() // Position - 0x29F0
 BOOL func_35() // Position - 0x29FC
 {
 	iLocal_385 = -1;
-	uLocal_386 = { 0f, 0f, 0f };
-	uLocal_389 = { 0f, 0f, 0f };
+	uLocal_386 = Vector3( 0f, 0f, 0f );
+	uLocal_389 = Vector3( 0f, 0f, 0f );
 	func_36(0);
 
 	if (iLocal_385 == -1)
@@ -6101,8 +6101,8 @@ void func_97() // Position - 0x8ADF
 	{
 		uLocal_341[i] = -1;
 		uLocal_347[i] = 999999f;
-		uLocal_353[i] = { 0f, 0f, 0f };
-		uLocal_369[i] = { 0f, 0f, 0f };
+		uLocal_353[i] = Vector3( 0f, 0f, 0f );
+		uLocal_369[i] = Vector3( 0f, 0f, 0f );
 	}
 
 	return;
@@ -6628,8 +6628,8 @@ void func_121(int iParam0, int iParam1) // Position - 0x94EA
 	iLocal_53 = 0;
 	iLocal_52 = 0;
 	iLocal_385 = -1;
-	uLocal_386 = { 0f, 0f, 0f };
-	uLocal_389 = { 0f, 0f, 0f };
+	uLocal_386 = Vector3( 0f, 0f, 0f );
+	uLocal_389 = Vector3( 0f, 0f, 0f );
 	iLocal_339 = 5;
 	func_34();
 	iLocal_465 = 0;
@@ -7833,7 +7833,7 @@ void func_161(var uParam0) // Position - 0xB506
 {
 	uParam0->f_51;
 	uParam0->f_46 = 0;
-	uParam0->f_47 = { 0f, 0f, 0f };
+	uParam0->f_47 = Vector3( 0f, 0f, 0f );
 	uParam0->f_50 = 0f;
 	uParam0->f_51 = 1;
 	return;

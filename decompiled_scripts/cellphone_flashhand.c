@@ -1642,7 +1642,7 @@ void func_9() // Position - 0x211D
 	unk = { Global_20343 };
 
 	if (Global_20368 == 1)
-		unk = { -45f, 45f, 25f };
+		unk = Vector3( -45f, 45f, 25f );
 
 	if (IS_BIT_SET(Global_8254, 26) || IS_BIT_SET(Global_8253, 30) || IS_BIT_SET(Global_8255, 2))
 		uLocal_119 = { Global_20329[Global_20328] };
@@ -5889,7 +5889,7 @@ void func_111() // Position - 0x7263
 		}
 	}
 
-	Global_20346 = { -90f, -130f, 0f };
+	Global_20346 = Vector3( -90f, -130f, 0f );
 
 	if (GRAPHICS::GET_IS_HIDEF())
 	{

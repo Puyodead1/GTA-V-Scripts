@@ -1461,8 +1461,8 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_61 = { 0f, 0f, 0f };
-	uLocal_64 = { 0f, 0f, 0f };
+	uLocal_61 = Vector3( 0f, 0f, 0f );
+	uLocal_64 = Vector3( 0f, 0f, 0f );
 	iLocal_67 = -1;
 	iLocal_72 = HUD::GET_STANDARD_BLIP_ENUM_ID();
 	iLocal_73 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
@@ -27219,7 +27219,7 @@ void func_104() // Position - 0x1A3CC
 
 	if (!PED::IS_PED_INJURED(pedLocal_109))
 	{
-		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(pedLocal_109, true), 20f) || MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_109, true), 20f, true) || MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_109, true) + { 20f, 20f, 20f }, ENTITY::GET_ENTITY_COORDS(pedLocal_109, true) - { 20f, 20f, 20f }, false) || PED::IS_PED_FLEEING(pedLocal_109) || iLocal_74 == 2 && PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0 && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_230, 40f, 40f, 20f, false, true, 0))
+		if (FIRE::IS_EXPLOSION_IN_SPHERE(-1, ENTITY::GET_ENTITY_COORDS(pedLocal_109, true), 20f) || MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_109, true), 20f, true) || MISC::IS_PROJECTILE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_109, true) + Vector3( 20f, 20f, 20f ), ENTITY::GET_ENTITY_COORDS(pedLocal_109, true) - Vector3( 20f, 20f, 20f ), false) || PED::IS_PED_FLEEING(pedLocal_109) || iLocal_74 == 2 && PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::PLAYER_ID()) > 0 && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_230, 40f, 40f, 20f, false, true, 0))
 			flag4 = true;
 	
 		if (SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(pedLocal_109, true)) < 100f)
@@ -29607,32 +29607,32 @@ void func_135(var uParam0, int iParam1) // Position - 0x1F340
 		}
 		else
 		{
-			unk = { 0f, 0f, 0f };
+			unk = Vector3( 0f, 0f, 0f );
 			num2 = 0f;
 		
 			if (!func_137(Global_113648.f_18535[i], &unk, &num2))
 			{
 				Global_113648.f_18535[i] = 318;
 				func_136(&uParam0->f_2296[i]);
-				uParam0->f_2300[i] = { 0f, 0f, 0f };
+				uParam0->f_2300[i] = Vector3( 0f, 0f, 0f );
 				uParam0->f_2310[i] = 0f;
 				uParam0->f_2314[i] = 0;
-				uParam0->f_2318[i] = { 0f, 0f, 0f };
+				uParam0->f_2318[i] = Vector3( 0f, 0f, 0f );
 				uParam0->f_2328[i] = 0;
-				Global_98071[i] = { 0f, 0f, 0f };
+				Global_98071[i] = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_9 = 0f;
 				Global_98071[i].f_12 = 0f;
-				Global_98071[i].f_3 = { 0f, 0f, 0f };
+				Global_98071[i].f_3 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_10 = 0f;
 				Global_98071[i].f_13 = 0f;
-				Global_98071[i].f_6 = { 0f, 0f, 0f };
+				Global_98071[i].f_6 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_11 = 0f;
 				Global_98071[i].f_14 = 0f;
-				Global_98071[i].f_17 = { 0f, 0f, 0f };
+				Global_98071[i].f_17 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_26 = 0f;
-				Global_98071[i].f_20 = { 0f, 0f, 0f };
+				Global_98071[i].f_20 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_27 = 0f;
-				Global_98071[i].f_23 = { 0f, 0f, 0f };
+				Global_98071[i].f_23 = Vector3( 0f, 0f, 0f );
 				Global_98071[i].f_28 = 0f;
 			}
 		}
@@ -29713,7 +29713,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 21:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -29763,47 +29763,47 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 29:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 30:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 31:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 32:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 33:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 34:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 35:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 36:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 37:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -29843,7 +29843,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 42:
-			*uParam1 = { { 4.0205f, -2975.3408f, 798.4536f } + { 1f, 0f, 0f } };
+			*uParam1 = { { 4.0205f, -2975.3408f, 798.4536f } + Vector3( 1f, 0f, 0f ) };
 			*uParam2 = 90f;
 			return true;
 	
@@ -29863,7 +29863,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 46:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -29903,7 +29903,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 53:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -29938,7 +29938,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 68:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -29963,22 +29963,22 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 70:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 71:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 72:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
 		case 73:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			return true;
 	
@@ -30981,7 +30981,7 @@ void func_173() // Position - 0x213B9
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -35880,7 +35880,7 @@ void func_263(var uParam0) // Position - 0x28F40
 {
 	func_185(uParam0);
 	*uParam0 = 0;
-	uParam0->f_9 = { 0f, 0f, 0f };
+	uParam0->f_9 = Vector3( 0f, 0f, 0f );
 	return;
 }
 
@@ -35921,7 +35921,7 @@ void func_264() // Position - 0x28F5B
 	}
 
 	if (flag)
-		if (MISC::IS_BULLET_IN_AREA(-2033.821f, -1031.864f, 4.89f, 5f, true) || FIRE::IS_EXPLOSION_IN_SPHERE(4, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(0, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(1, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(20, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(19, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(3, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(15, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(2, -2033.821f, -1031.864f, 4.89f, 10f) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_SMOKEGRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_RPG"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADELAUNCHER"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADELAUNCHER_SMOKE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_SMOKEGRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_BZGAS"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_MOLOTOV"), 5f, true) || PED::IS_PED_SHOOTING_IN_AREA(PLAYER::PLAYER_PED_ID(), { 4.89f, -1031.864f, -2033.821f } - { 30f, 30f, 30f }, { 4.89f, -1031.864f, -2033.821f } + { 30f, 30f, 30f }, false, true) && !WEAPON::IS_PED_CURRENT_WEAPON_SILENCED(PLAYER::PLAYER_PED_ID()))
+		if (MISC::IS_BULLET_IN_AREA(-2033.821f, -1031.864f, 4.89f, 5f, true) || FIRE::IS_EXPLOSION_IN_SPHERE(4, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(0, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(1, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(20, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(19, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(3, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(15, -2033.821f, -1031.864f, 4.89f, 10f) || FIRE::IS_EXPLOSION_IN_SPHERE(2, -2033.821f, -1031.864f, 4.89f, 10f) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_SMOKEGRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_RPG"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADELAUNCHER"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_GRENADELAUNCHER_SMOKE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_SMOKEGRENADE"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_BZGAS"), 5f, true) || MISC::IS_PROJECTILE_TYPE_WITHIN_DISTANCE(-2033.821f, -1031.864f, 4.89f, joaat("WEAPON_MOLOTOV"), 5f, true) || PED::IS_PED_SHOOTING_IN_AREA(PLAYER::PLAYER_PED_ID(), { 4.89f, -1031.864f, -2033.821f } - Vector3( 30f, 30f, 30f ), { 4.89f, -1031.864f, -2033.821f } + Vector3( 30f, 30f, 30f ), false, true) && !WEAPON::IS_PED_CURRENT_WEAPON_SILENCED(PLAYER::PLAYER_PED_ID()))
 			func_105("FM2_TSPOOK");
 
 	if (!HUD::DOES_BLIP_EXIST(blLocal_136))
@@ -36277,7 +36277,7 @@ BOOL func_265(var uParam0, var uParam1, var uParam2) // Position - 0x29B6F
 			iLocal_284 = MISC::GET_GAME_TIMER();
 		}
 	
-		if (*uParam1 > 5 || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_GRENADE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_GRENADELAUNCHER"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_GRENADELAUNCHER_SMOKE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_RPG"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_MOLOTOV"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 5f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 5f, 10f, 10f }, joaat("WEAPON_BZGAS"), false) || FIRE::IS_EXPLOSION_IN_AREA(2, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 2f, 10f, 10f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 2f, 10f, 10f }) || WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 4) && WEAPON::HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(veLocal_117, weaponHash, 0))
+		if (*uParam1 > 5 || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_GRENADE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_GRENADELAUNCHER"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_GRENADELAUNCHER_SMOKE"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_RPG"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_MOLOTOV"), false) || MISC::IS_PROJECTILE_TYPE_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 5f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 5f, 10f, 10f ), joaat("WEAPON_BZGAS"), false) || FIRE::IS_EXPLOSION_IN_AREA(2, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 2f, 10f, 10f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 2f, 10f, 10f )) || WEAPON::IS_PED_ARMED(PLAYER::PLAYER_PED_ID(), 4) && WEAPON::HAS_ENTITY_BEEN_DAMAGED_BY_WEAPON(veLocal_117, weaponHash, 0))
 			return true;
 	}
 
@@ -36713,7 +36713,7 @@ void func_277() // Position - 0x2A673
 		{
 			if (SYSTEM::VDIST2(uLocal_226, ENTITY::GET_ENTITY_COORDS(veLocal_118, true)) < 625f)
 			{
-				func_457(veLocal_118, uLocal_226 + { 1f, 0f, 0f }, fLocal_229, 24, false);
+				func_457(veLocal_118, uLocal_226 + Vector3( 1f, 0f, 0f ), fLocal_229, 24, false);
 				func_456(24);
 			}
 		
@@ -36862,7 +36862,7 @@ void func_277() // Position - 0x2A673
 					}
 				}
 			
-				if (FIRE::IS_EXPLOSION_IN_AREA(2, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(0, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(1, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(4, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(7, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(10, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }) || FIRE::IS_EXPLOSION_IN_AREA(25, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 3f, 3f, 3f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 3f, 3f, 3f }))
+				if (FIRE::IS_EXPLOSION_IN_AREA(2, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(0, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(1, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(4, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(7, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(10, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )) || FIRE::IS_EXPLOSION_IN_AREA(25, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 3f, 3f, 3f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 3f, 3f, 3f )))
 					PED::SET_PED_CAN_BE_KNOCKED_OFF_VEHICLE(pedLocal_108, KNOCKOFFVEHICLE_EASY);
 			
 				if (bLocal_295)
@@ -48288,7 +48288,7 @@ BOOL func_460(var uParam0, int iParam1) // Position - 0x3C8D6
 	BOOL num;
 	int num2;
 
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3( 0f, 0f, 0f );
 	uParam0->f_3 = 0f;
 	uParam0->f_4 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_5), "", 16);
@@ -48298,8 +48298,8 @@ BOOL func_460(var uParam0, int iParam1) // Position - 0x3C8D6
 	uParam0->f_12 = 145;
 	uParam0->f_13 = -1;
 	uParam0->f_14 = 0;
-	uParam0->f_15 = { 0f, 0f, 0f };
-	uParam0->f_18 = { 0f, 0f, 0f };
+	uParam0->f_15 = Vector3( 0f, 0f, 0f );
+	uParam0->f_18 = Vector3( 0f, 0f, 0f );
 
 	switch (iParam1)
 	{
@@ -48679,7 +48679,7 @@ BOOL func_460(var uParam0, int iParam1) // Position - 0x3C8D6
 	
 		case 24:
 			uParam0->f_14 = 21;
-			*uParam0 = { 0f, 0f, 0f };
+			*uParam0 = Vector3( 0f, 0f, 0f );
 			uParam0->f_3 = 0f;
 			uParam0->f_4 = 0;
 			MISC::SET_BIT(&(uParam0->f_9), 10);
@@ -49064,7 +49064,7 @@ void func_461(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, f
 			}
 			else
 			{
-				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = { 0f, 0f, 0f };
+				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = Vector3( 0f, 0f, 0f );
 				Global_113648.f_32751.f_1934[Global_77348.f_555[0].f_14] = -1f;
 			}
 		
@@ -50224,7 +50224,7 @@ void func_487() // Position - 0x3EDC2
 					STREAMING::NEW_LOAD_SCENE_STOP();
 				}
 			
-				func_204(&pedLocal_107, 15, uLocal_197 + { 0f, 1f, 0f }, 0f);
+				func_204(&pedLocal_107, 15, uLocal_197 + Vector3( 0f, 1f, 0f ), 0f);
 				func_204(&pedLocal_108, 14, uLocal_197, fLocal_263);
 				func_493(3, uLocal_219, fLocal_264);
 			}
@@ -52653,7 +52653,7 @@ BOOL func_516(Vector3 vParam0, var uParam1, var uParam2, char* sParam3, float fP
 
 BOOL func_517(int iParam0, var uParam1, var uParam2) // Position - 0x43139
 {
-	*uParam1 = { 0f, 0f, 0f };
+	*uParam1 = Vector3( 0f, 0f, 0f );
 	*uParam2 = 0f;
 
 	switch (iParam0)
@@ -52884,67 +52884,67 @@ BOOL func_517(int iParam0, var uParam1, var uParam2) // Position - 0x43139
 			break;
 	
 		case 45:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 46:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 47:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 48:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 49:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 52:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 50:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 51:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 53:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 54:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 55:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 56:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	
 		case 57:
-			*uParam1 = { 0f, 0f, 0f };
+			*uParam1 = Vector3( 0f, 0f, 0f );
 			*uParam2 = 0f;
 			break;
 	}
@@ -53562,7 +53562,7 @@ Vector3 func_529(int iParam0, int iParam1) // Position - 0x4488D
 	var unk;
 	var unk2;
 
-	unk7 = { 1000000f, 1000000f, 1000000f };
+	unk7 = Vector3( 1000000f, 1000000f, 1000000f );
 
 	if (Global_1853747 != _INVALID_PLAYER_INDEX())
 		if (iParam1 == 3)
@@ -53687,32 +53687,32 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	{
 		case 0:
 			unk = { 1105.22f, -3013.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 1:
 			unk = { 1104.105f, -3013.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 19:
 			unk = { 1105.22f, -3005.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 20:
 			unk = { 1104.105f, -3005.985f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 2:
 			unk = { 1102f, -3011.925f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 3:
 			unk = { 1103f, -3010f, -38.125f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 4:
@@ -53721,12 +53721,12 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 			break;
 	
 		case 5:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1101.4084f, -3012.3198f, -38.45339f };
 			break;
 	
 		case 6:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1103.0374f, -3012.3184f, -39.998745f };
 			break;
 	
@@ -53736,13 +53736,13 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 			break;
 	
 		case 8:
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			unk = { 1104.0634f, -3012.3677f, -39.998753f };
 			break;
 	
 		case 9:
 			unk = { 1105.6648f, -3012.3345f, -38.50835f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 10:
@@ -53752,22 +53752,22 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 11:
 			unk = { 1102.9282f, -3012.6934f, -39.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 12:
 			unk = { 1102.9421f, -3011.315f, -37.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 61:
 			unk = { 1101.9943f, -3012.8777f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 62:
 			unk = { 1103.1519f, -3013.0325f, -38.24946f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 13:
@@ -53777,22 +53777,22 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 14:
 			unk = { 1102.9167f, -3009.525f, -39.99945f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 15:
 			unk = { 1102.9218f, -3010.8872f, -37.99945f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 63:
 			unk = { 1101.6818f, -3009.227f, -39.949997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 64:
 			unk = { 1102.4534f, -3008.5105f, -38.199997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 16:
@@ -53802,37 +53802,37 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 17:
 			unk = { 1104.3401f, -3008.6982f, -39.999454f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 18:
 			unk = { 1104.3442f, -3009.618f, -37.981716f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 65:
 			unk = { 1105.4595f, -3009.7935f, -39.949997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 66:
 			unk = { 1104.7828f, -3010.433f, -38.199997f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 44:
 			unk = { 1104.0251f, -3007.3157f, -39.9987f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 21:
 			unk = { 1103.562f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 22:
 			unk = { 1103.562f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 23:
@@ -53852,22 +53852,22 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 26:
 			unk = { 1102.05f, -3011.717f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 27:
 			unk = { 1102.05f, -3012.653f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 28:
 			unk = { 1105.05f, -3012.653f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 29:
 			unk = { 1105.05f, -3011.717f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 30:
@@ -53887,22 +53887,22 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 33:
 			unk = { 1102.05f, -3003.592f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 34:
 			unk = { 1102.05f, -3004.541f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 35:
 			unk = { 1105.05f, -3004.541f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 36:
 			unk = { 1105.05f, -3003.592f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 37:
@@ -53922,52 +53922,52 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 40:
 			unk = { 1102.05f, -2995.582f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 41:
 			unk = { 1102.05f, -2996.501f, -39.35f };
-			unk.f_3 = { 0f, 0f, 90f };
+			unk.f_3 = Vector3( 0f, 0f, 90f );
 			break;
 	
 		case 42:
 			unk = { 1105.05f, -2996.501f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 43:
 			unk = { 1105.05f, -2995.582f, -39.35f };
-			unk.f_3 = { 0f, 0f, -90f };
+			unk.f_3 = Vector3( 0f, 0f, -90f );
 			break;
 	
 		case 45:
 			unk = { 1101f, -3011.9f, -39.95f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 46:
 			unk = { 1102f, -3010f, -38.115f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 47:
 			unk = { 1105.174f, -3004.1602f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 48:
 			unk = { 1105.1749f, -3005.818f, -37.919476f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 49:
 			unk = { 1106.5996f, -3000.8472f, -39.89988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 50:
 			unk = { 1106.6013f, -3002.171f, -37.89988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 51:
@@ -53987,47 +53987,47 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 	
 		case 54:
 			unk = { 1102.4756f, -3008.5076f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 55:
 			unk = { 1099f, -3008.5076f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 56:
 			unk = { 1103.5928f, -3008.2698f, -39.9987f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 57:
 			unk = { 1103.565f, -3014f, -39.988f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 58:
 			unk = { 1103.565f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 59:
 			unk = { 1103.565f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 60:
 			unk = { 1103.55f, -3014f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 67:
 			unk = { 1103.55f, -3013.762f, -40f };
-			unk.f_3 = { 0f, 0f, 180f };
+			unk.f_3 = Vector3( 0f, 0f, 180f );
 			break;
 	
 		case 68:
 			unk = { 1103.55f, -3006.186f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	
 		case 71:
@@ -54037,7 +54037,7 @@ struct<6> func_534(int iParam0) // Position - 0x44BA2
 		case 72:
 		case 74:
 			unk = { 1103.6f, -3013.933f, -40f };
-			unk.f_3 = { 0f, 0f, 0f };
+			unk.f_3 = Vector3( 0f, 0f, 0f );
 			break;
 	}
 
@@ -54050,17 +54050,17 @@ BOOL func_535(int iParam0, var uParam1) // Position - 0x45669
 	{
 		case 0:
 			*uParam1 = { 1103.562f, -3014f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		case 1:
 			*uParam1 = { 1103.562f, -3006f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		case 2:
 			*uParam1 = { 1103.562f, -2998f, -40f };
-			uParam1->f_3 = { 0f, 0f, 0f };
+			uParam1->f_3 = Vector3( 0f, 0f, 0f );
 			return true;
 	
 		default:
@@ -55343,7 +55343,7 @@ void func_557() // Position - 0x479E7
 			func_105("FM2_TRAAB");
 
 	if (!PED::IS_PED_INJURED(pedLocal_108))
-		if (FIRE::IS_EXPLOSION_IN_AREA(-1, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 25f, 25f, 25f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 25f, 25f, 25f }) && !FIRE::IS_EXPLOSION_IN_AREA(13, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + { 25f, 25f, 25f }, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - { 25f, 25f, 25f }) || MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true), 25f, true))
+		if (FIRE::IS_EXPLOSION_IN_AREA(-1, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 25f, 25f, 25f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 25f, 25f, 25f )) && !FIRE::IS_EXPLOSION_IN_AREA(13, ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) + Vector3( 25f, 25f, 25f ), ENTITY::GET_ENTITY_COORDS(pedLocal_108, true) - Vector3( 25f, 25f, 25f )) || MISC::IS_BULLET_IN_AREA(ENTITY::GET_ENTITY_COORDS(pedLocal_108, true), 25f, true))
 			func_105("FM2_JSPOOK");
 
 	return;
@@ -55508,7 +55508,7 @@ void func_561() // Position - 0x47CEC
 					case 1:
 						bLocal_270 = true;
 						func_567(&veLocal_118, uLocal_226, fLocal_229, 0, 0, 0, 0, 1, joaat("asterope"), 0, _CHAR_NULL, 1);
-						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), uLocal_230 + { 0f, 1f, 1f }, true, false, false, true);
+						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), uLocal_230 + Vector3( 0f, 1f, 1f ), true, false, false, true);
 						MISC::CLEAR_AREA(uLocal_230, 100f, true, false, false, false);
 					
 						while (!func_145(false))
@@ -55640,7 +55640,7 @@ void func_561() // Position - 0x47CEC
 	TASK::ASSISTED_MOVEMENT_REQUEST_ROUTE("Family5d");
 	func_562(0);
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(0.6f);
-	PATHFIND::SET_ROADS_IN_AREA({ 5.785122f, -1682.9386f, -1057.899f } + { 4f, 30f, 29f }, { 5.785122f, -1682.9386f, -1057.899f } - { 4f, 30f, 29f }, false, true);
+	PATHFIND::SET_ROADS_IN_AREA({ 5.785122f, -1682.9386f, -1057.899f } + Vector3( 4f, 30f, 29f ), { 5.785122f, -1682.9386f, -1057.899f } - Vector3( 4f, 30f, 29f ), false, true);
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA({ 6.373647f, -1688.035f, -1112.913f } + { 3.5f, 24.75f, 22.75f }, { 6.373647f, -1688.035f, -1112.913f } - { 3.5f, 24.75f, 22.75f }, false, true);
 	PED::ADD_RELATIONSHIP_GROUP("chasing_peds", &hLocal_94);
 	PED::ADD_RELATIONSHIP_GROUP("buddies", &hLocal_148);
@@ -56801,7 +56801,7 @@ void func_606() // Position - 0x49C5B
 	PLAYER::SET_WANTED_LEVEL_MULTIPLIER(1f);
 	TASK::ASSISTED_MOVEMENT_REMOVE_ROUTE("Family5d");
 	func_562(1);
-	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL({ 5.785122f, -1682.9386f, -1057.899f } + { 4f, 30f, 29f }, { 5.785122f, -1682.9386f, -1057.899f } - { 4f, 30f, 29f }, 1);
+	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL({ 5.785122f, -1682.9386f, -1057.899f } + Vector3( 4f, 30f, 29f ), { 5.785122f, -1682.9386f, -1057.899f } - Vector3( 4f, 30f, 29f ), 1);
 	PATHFIND::SET_PED_PATHS_BACK_TO_ORIGINAL({ 5.75302f, -1325.827f, -1329.113f } + { 2.5f, 44f, 13.25f }, { 5.75302f, -1325.827f, -1329.113f } - { 2.5f, 44f, 13.25f }, 0);
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA({ 6.373647f, -1688.035f, -1112.913f } + { 3.5f, 24.75f, 22.75f }, { 6.373647f, -1688.035f, -1112.913f } - { 3.5f, 24.75f, 22.75f }, true, true);
 	TASK::SET_SCENARIO_TYPE_ENABLED("WORLD_VEHICLE_DRIVE_SOLO", true);
