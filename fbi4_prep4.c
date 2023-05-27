@@ -1874,12 +1874,12 @@ int func_51(int iParam0, int iParam1, eCharacter echParam2, eCharacter echParam3
 	if (echParam2 != _CHAR_VIRTUAL_MP && echParam2 != CHAR_MICHAEL && echParam2 != CHAR_FRANKLIN && echParam2 != CHAR_TREVOR)
 		return 0;
 
-	if (Global_113648.f_7690.f_136 < 9)
+	if (G_SomeGlobalState.MessageCallStates.f_136 < 9)
 	{
 		num = iParam0;
 	
-		if (Global_113648.f_7690.f_911 == num)
-			Global_113648.f_7690.f_911 = -1;
+		if (G_SomeGlobalState.MessageCallStates.f_911 == num)
+			G_SomeGlobalState.MessageCallStates.f_911 = -1;
 	
 		num.f_3 = func_53(iParam1);
 		num.f_5 = iParam6;
@@ -1901,8 +1901,8 @@ int func_51(int iParam0, int iParam1, eCharacter echParam2, eCharacter echParam3
 		if (iParam1 == 0)
 			MISC::SET_BIT(&(num.f_1), 10);
 	
-		Global_113648.f_7690[Global_113648.f_7690.f_136] = { num };
-		Global_113648.f_7690.f_136 = Global_113648.f_7690.f_136 + 1;
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = { num };
+		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 		func_52(echParam2);
 		return 1;
 	}
@@ -1921,21 +1921,21 @@ void func_52(eCharacter echParam0) // Position - 0x1EFD
 	if (!func_14(echParam0))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690[i].f_2, echParam0))
-			if (Global_113648.f_7690[i].f_3 > num)
-				num = Global_113648.f_7690[i].f_3;
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, echParam0))
+			if (G_SomeGlobalState.MessageCallStates[i].f_3 > num)
+				num = G_SomeGlobalState.MessageCallStates[i].f_3;
 	}
 
-	for (j = 0; j < Global_113648.f_7690.f_764; j = j + 1)
+	for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_764; j = j + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690.f_651[j].f_2, echParam0))
-			if (Global_113648.f_7690.f_651[j].f_3 == 5)
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[j].f_2, echParam0))
+			if (G_SomeGlobalState.MessageCallStates.f_651[j].f_3 == 5)
 				num = 5;
 	}
 
-	Global_113648.f_7690.f_919[echParam0] = num;
+	G_SomeGlobalState.MessageCallStates.f_919[echParam0] = num;
 	return;
 }
 

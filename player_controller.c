@@ -36663,24 +36663,24 @@ void func_241() // Position - 0x30D1A
 			}
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 		{
-			if (IS_BIT_SET(Global_113648.f_7690[i].f_1, 2) || IS_BIT_SET(Global_113648.f_7690[i].f_1, 3))
-				if (IS_BIT_SET(Global_113648.f_7690[i].f_2, iLocal_72))
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 2) || IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 3))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, iLocal_72))
 					Global_98002[iLocal_72] = Global_98002[iLocal_72] + 1;
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 		{
-			if (IS_BIT_SET(Global_113648.f_7690.f_651[i].f_1, 2) || IS_BIT_SET(Global_113648.f_7690.f_651[i].f_1, 3))
-				if (IS_BIT_SET(Global_113648.f_7690.f_651[i].f_2, iLocal_72))
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_1, 2) || IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_1, 3))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_2, iLocal_72))
 					Global_98006[iLocal_72] = Global_98006[iLocal_72] + 1;
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 		{
-			if (IS_BIT_SET(Global_113648.f_7690.f_765[i].f_1, 2) || IS_BIT_SET(Global_113648.f_7690.f_765[i].f_1, 3))
-				if (IS_BIT_SET(Global_113648.f_7690.f_765[i].f_2, iLocal_72))
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_1, 2) || IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_1, 3))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_2, iLocal_72))
 					Global_98006[iLocal_72] = Global_98006[iLocal_72] + 1;
 		}
 	

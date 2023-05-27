@@ -29416,8 +29416,8 @@ BOOL func_163() // Position - 0x1F8AE
 	if (func_164())
 		return false;
 
-	if (Global_43804 != -1)
-		if (Global_113648.f_7690[Global_43804].f_3 >= 2)
+	if (LastDispatchedMessageOrCall != -1)
+		if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_3 >= 2)
 			return false;
 
 	return true;

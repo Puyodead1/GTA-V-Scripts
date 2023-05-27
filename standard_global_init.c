@@ -146,7 +146,7 @@ void main() // Position - 0x0
 	TEXT_LABEL_ASSIGN_STRING(&Global_39552, "", 32);
 	Global_43219 = -2;
 	Global_43257 = 15;
-	Global_43804 = -1;
+	LastDispatchedMessageOrCall = -1;
 	Global_43805 = -1;
 	Global_44201 = 1;
 	Global_44202 = -1;

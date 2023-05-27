@@ -343,10 +343,10 @@ void main() // Position - 0x0
 					{
 						if (func_145())
 						{
-							if (Global_113648.f_7690[Global_43804].f_3 == 5)
+							if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_3 == 5)
 								func_144(0);
 						
-							if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 3))
+							if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 3))
 								if (func_140())
 									iLocal_58 = 2;
 							else
@@ -379,9 +379,9 @@ void main() // Position - 0x0
 					bLocal_48 = false;
 					Global_43808 = gameTimer + 20000;
 					iLocal_58 = 0;
-					Global_43804 = -1;
+					LastDispatchedMessageOrCall = -1;
 				}
-				else if (Global_43804 != -1)
+				else if (LastDispatchedMessageOrCall != -1)
 				{
 					func_85();
 					func_76();
@@ -390,9 +390,9 @@ void main() // Position - 0x0
 				break;
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_910; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_910; i = i + 1)
 		{
-			func_55(&gameTimer, &Global_113648.f_7690.f_867[i]);
+			func_55(&gameTimer, &G_SomeGlobalState.MessageCallStates.f_867[i]);
 		}
 	
 		func_42();
@@ -437,7 +437,7 @@ void func_1() // Position - 0x31A
 		func_5(-589035286);
 		func_5(-1842374536);
 		func_5(-418954710);
-		Global_113648.f_7690.f_911 = -1;
+		G_SomeGlobalState.MessageCallStates.f_911 = -1;
 	
 		if (func_20(Global_113648.f_10051.f_116))
 		{
@@ -456,7 +456,7 @@ void func_1() // Position - 0x31A
 
 int func_2() // Position - 0x455
 {
-	return Global_113648.f_7690.f_911;
+	return G_SomeGlobalState.MessageCallStates.f_911;
 }
 
 int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x467
@@ -476,12 +476,12 @@ int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 	if (iParam4 <= 0)
 		return 0;
 
-	if (Global_113648.f_7690.f_650 < CHAR_DAVE)
+	if (G_SomeGlobalState.MessageCallStates.f_650 < CHAR_DAVE)
 	{
 		num = iParam0;
 	
-		if (Global_113648.f_7690.f_911 == num)
-			Global_113648.f_7690.f_911 = -1;
+		if (G_SomeGlobalState.MessageCallStates.f_911 == num)
+			G_SomeGlobalState.MessageCallStates.f_911 = -1;
 	
 		num.f_1 = 0;
 		num.f_6 = iParam2;
@@ -497,8 +497,8 @@ int func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int 
 		num.f_11 = -1;
 		MISC::SET_BIT(&(num.f_1), 0);
 		MISC::SET_BIT(&(num.f_1), 6);
-		Global_113648.f_7690.f_199[Global_113648.f_7690.f_650] = { num };
-		Global_113648.f_7690.f_650 = Global_113648.f_7690.f_650 + 1;
+		G_SomeGlobalState.MessageCallStates.f_199[G_SomeGlobalState.MessageCallStates.f_650] = { num };
+		G_SomeGlobalState.MessageCallStates.f_650 = G_SomeGlobalState.MessageCallStates.f_650 + 1;
 		return 1;
 	}
 
@@ -520,11 +520,11 @@ int func_5(int iParam0) // Position - 0x592
 
 	num = 0;
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates[i] == iParam0)
 		{
-			if (Global_43804 != i)
+			if (LastDispatchedMessageOrCall != i)
 			{
 				func_19(i);
 				func_11(iParam0);
@@ -533,36 +533,36 @@ int func_5(int iParam0) // Position - 0x592
 		}
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_137[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_137[i] == iParam0)
 		{
 			func_11(iParam0);
 			num = 1;
 		}
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_199[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_199[i] == iParam0)
 		{
 			func_10(iParam0);
 			num = 1;
 		}
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_764; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_651[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_651[i] == iParam0)
 		{
 			func_7(i);
 			num = 1;
 		}
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_765[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_765[i] == iParam0)
 		{
 			func_6(i);
 			num = 1;
@@ -577,21 +577,21 @@ void func_6(eCharacter echParam0) // Position - 0x6B9
 	int i;
 	var unk;
 
-	if (echParam0 < 0 || echParam0 >= Global_113648.f_7690.f_866)
+	if (echParam0 < 0 || echParam0 >= G_SomeGlobalState.MessageCallStates.f_866)
 		return;
 
-	if (Global_113648.f_7690.f_866 > 1)
+	if (G_SomeGlobalState.MessageCallStates.f_866 > 1)
 	{
-		for (i = echParam0; i <= Global_113648.f_7690.f_866 - 2; i = i + 1)
+		for (i = echParam0; i <= G_SomeGlobalState.MessageCallStates.f_866 - 2; i = i + 1)
 		{
-			Global_113648.f_7690.f_765[i] = { Global_113648.f_7690.f_765[i + 1] };
+			G_SomeGlobalState.MessageCallStates.f_765[i] = { G_SomeGlobalState.MessageCallStates.f_765[i + 1] };
 		}
 	}
 
-	if (Global_113648.f_7690.f_866 > 0)
+	if (G_SomeGlobalState.MessageCallStates.f_866 > 0)
 	{
-		Global_113648.f_7690.f_765[Global_113648.f_7690.f_866 - 1] = { unk };
-		Global_113648.f_7690.f_866 = Global_113648.f_7690.f_866 - 1;
+		G_SomeGlobalState.MessageCallStates.f_765[G_SomeGlobalState.MessageCallStates.f_866 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_866 = G_SomeGlobalState.MessageCallStates.f_866 - 1;
 	}
 
 	return;
@@ -602,21 +602,21 @@ void func_7(eCharacter echParam0) // Position - 0x772
 	int i;
 	var unk;
 
-	if (echParam0 < 0 || echParam0 >= Global_113648.f_7690.f_764)
+	if (echParam0 < 0 || echParam0 >= G_SomeGlobalState.MessageCallStates.f_764)
 		return;
 
-	if (Global_113648.f_7690.f_764 > 1)
+	if (G_SomeGlobalState.MessageCallStates.f_764 > 1)
 	{
-		for (i = echParam0; i <= Global_113648.f_7690.f_764 - 2; i = i + 1)
+		for (i = echParam0; i <= G_SomeGlobalState.MessageCallStates.f_764 - 2; i = i + 1)
 		{
-			Global_113648.f_7690.f_651[i] = { Global_113648.f_7690.f_651[i + 1] };
+			G_SomeGlobalState.MessageCallStates.f_651[i] = { G_SomeGlobalState.MessageCallStates.f_651[i + 1] };
 		}
 	}
 
-	if (Global_113648.f_7690.f_764 > 0)
+	if (G_SomeGlobalState.MessageCallStates.f_764 > 0)
 	{
-		Global_113648.f_7690.f_651[Global_113648.f_7690.f_764 - 1] = { unk };
-		Global_113648.f_7690.f_764 = Global_113648.f_7690.f_764 - 1;
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 - 1;
 	}
 
 	func_8(CHAR_MICHAEL);
@@ -636,21 +636,21 @@ void func_8(eCharacter echParam0) // Position - 0x83A
 	if (!func_9(echParam0))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690[i].f_2, echParam0))
-			if (Global_113648.f_7690[i].f_3 > num)
-				num = Global_113648.f_7690[i].f_3;
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, echParam0))
+			if (G_SomeGlobalState.MessageCallStates[i].f_3 > num)
+				num = G_SomeGlobalState.MessageCallStates[i].f_3;
 	}
 
-	for (j = 0; j < Global_113648.f_7690.f_764; j = j + 1)
+	for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_764; j = j + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690.f_651[j].f_2, echParam0))
-			if (Global_113648.f_7690.f_651[j].f_3 == 5)
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[j].f_2, echParam0))
+			if (G_SomeGlobalState.MessageCallStates.f_651[j].f_3 == 5)
 				num = 5;
 	}
 
-	Global_113648.f_7690.f_919[echParam0] = num;
+	G_SomeGlobalState.MessageCallStates.f_919[echParam0] = num;
 	return;
 }
 
@@ -665,17 +665,17 @@ void func_10(int iParam0) // Position - 0x904
 	int unk2;
 	int unk3;
 
-	for (i = 0; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_199[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_199[i] == iParam0)
 		{
-			for (j = i; j <= Global_113648.f_7690.f_650 - 2; j = j + 1)
+			for (j = i; j <= G_SomeGlobalState.MessageCallStates.f_650 - 2; j = j + 1)
 			{
-				Global_113648.f_7690.f_199[j] = { Global_113648.f_7690.f_199[j + 1] };
+				G_SomeGlobalState.MessageCallStates.f_199[j] = { G_SomeGlobalState.MessageCallStates.f_199[j + 1] };
 			}
 		
-			Global_113648.f_7690.f_199[Global_113648.f_7690.f_650 - 1] = { unk };
-			Global_113648.f_7690.f_650 = Global_113648.f_7690.f_650 - 1;
+			G_SomeGlobalState.MessageCallStates.f_199[G_SomeGlobalState.MessageCallStates.f_650 - 1] = { unk };
+			G_SomeGlobalState.MessageCallStates.f_650 = G_SomeGlobalState.MessageCallStates.f_650 - 1;
 			return;
 		}
 	}
@@ -689,19 +689,19 @@ void func_11(int iParam0) // Position - 0x9B1
 	int unk2;
 	int unk3;
 
-	for (i = 0; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_137[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_137[i] == iParam0)
 		{
-			func_12(Global_113648.f_7690.f_137[i].f_6);
+			func_12(G_SomeGlobalState.MessageCallStates.f_137[i].f_6);
 		
-			for (j = i; j <= Global_113648.f_7690.f_198 - 2; j = j + 1)
+			for (j = i; j <= G_SomeGlobalState.MessageCallStates.f_198 - 2; j = j + 1)
 			{
-				Global_113648.f_7690.f_137[j] = { Global_113648.f_7690.f_137[j + 1] };
+				G_SomeGlobalState.MessageCallStates.f_137[j] = { G_SomeGlobalState.MessageCallStates.f_137[j + 1] };
 			}
 		
-			Global_113648.f_7690.f_137[Global_113648.f_7690.f_198 - 1] = { unk };
-			Global_113648.f_7690.f_198 = Global_113648.f_7690.f_198 - 1;
+			G_SomeGlobalState.MessageCallStates.f_137[G_SomeGlobalState.MessageCallStates.f_198 - 1] = { unk };
+			G_SomeGlobalState.MessageCallStates.f_198 = G_SomeGlobalState.MessageCallStates.f_198 - 1;
 			return;
 		}
 	}
@@ -814,23 +814,23 @@ void func_19(eCharacter echParam0) // Position - 0xC07
 	int num;
 	var unk;
 
-	if (echParam0 < CHAR_MICHAEL || echParam0 >= Global_113648.f_7690.f_136)
+	if (echParam0 < CHAR_MICHAEL || echParam0 >= G_SomeGlobalState.MessageCallStates.f_136)
 		return;
 
-	num = Global_113648.f_7690[echParam0].f_2;
+	num = G_SomeGlobalState.MessageCallStates[echParam0].f_2;
 
-	if (Global_113648.f_7690.f_136 > CHAR_FRANKLIN)
+	if (G_SomeGlobalState.MessageCallStates.f_136 > CHAR_FRANKLIN)
 	{
-		for (i = echParam0; i <= Global_113648.f_7690.f_136 - 2; i = i + 1)
+		for (i = echParam0; i <= G_SomeGlobalState.MessageCallStates.f_136 - 2; i = i + 1)
 		{
-			Global_113648.f_7690[i] = { Global_113648.f_7690[i + 1] };
+			G_SomeGlobalState.MessageCallStates[i] = { G_SomeGlobalState.MessageCallStates[i + 1] };
 		}
 	}
 
-	if (Global_113648.f_7690.f_136 > CHAR_MICHAEL)
+	if (G_SomeGlobalState.MessageCallStates.f_136 > CHAR_MICHAEL)
 	{
-		Global_113648.f_7690[Global_113648.f_7690.f_136 - 1] = { unk };
-		Global_113648.f_7690.f_136 = Global_113648.f_7690.f_136 - 1;
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 - 1;
 	}
 
 	for (i = CHAR_MICHAEL; i < CHAR_MULTIPLAYER; i = i + 1)
@@ -1119,33 +1119,33 @@ int func_38(int iParam0) // Position - 0x120D
 {
 	eCharacter i;
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates[i] == iParam0)
 			return 1;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_199[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_199[i] == iParam0)
 			return 1;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_137[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_137[i] == iParam0)
 			return 1;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_764; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_651[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_651[i] == iParam0)
 			return 1;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_765[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_765[i] == iParam0)
 			return 1;
 	}
 
@@ -1175,24 +1175,24 @@ void func_40() // Position - 0x1353
 	num = SYSTEM::CEIL(MISC::GET_FRAME_TIME() * 1000f);
 	Global_43808 = Global_43808 + num;
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		Global_113648.f_7690[i].f_4 = Global_113648.f_7690[i].f_4 + num;
+		G_SomeGlobalState.MessageCallStates[i].f_4 = G_SomeGlobalState.MessageCallStates[i].f_4 + num;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_764; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 	{
-		Global_113648.f_7690.f_651[i].f_4 = Global_113648.f_7690.f_651[i].f_4 + num;
+		G_SomeGlobalState.MessageCallStates.f_651[i].f_4 = G_SomeGlobalState.MessageCallStates.f_651[i].f_4 + num;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		Global_113648.f_7690.f_765[i].f_4 = Global_113648.f_7690.f_765[i].f_4 + num;
+		G_SomeGlobalState.MessageCallStates.f_765[i].f_4 = G_SomeGlobalState.MessageCallStates.f_765[i].f_4 + num;
 	}
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
-		Global_113648.f_7690.f_199[i].f_4 = Global_113648.f_7690.f_199[i].f_4 + num;
+		G_SomeGlobalState.MessageCallStates.f_199[i].f_4 = G_SomeGlobalState.MessageCallStates.f_199[i].f_4 + num;
 	}
 
 	character = func_41();
@@ -1223,9 +1223,9 @@ void func_42() // Position - 0x14AF
 			{
 				if (func_146(1))
 				{
-					if (Global_43804 != -1)
+					if (LastDispatchedMessageOrCall != -1)
 					{
-						if (Global_113648.f_7690[Global_43804] == 1611093726 || Global_113648.f_7690[Global_43804] == 742578279)
+						if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall] == 1611093726 || G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall] == 742578279)
 						{
 							switch (func_52("AM_H_FCAL1" /*Press ~INPUT_CELLPHONE_SELECT~ to answer Simeon's call.~n~Press ~INPUT_CELLPHONE_CANCEL~ to hang up.*/))
 							{
@@ -1254,9 +1254,9 @@ void func_42() // Position - 0x14AF
 				{
 					if (func_146(1))
 					{
-						if (Global_43804 != -1)
+						if (LastDispatchedMessageOrCall != -1)
 						{
-							if (Global_113648.f_7690[Global_43804] == 1611093726 || Global_113648.f_7690[Global_43804] == 742578279)
+							if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall] == 1611093726 || G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall] == 742578279)
 							{
 								if (func_145())
 								{
@@ -1294,7 +1294,7 @@ void func_42() // Position - 0x14AF
 			}
 		}
 	
-		if (Global_113648.f_7690.f_911 == 1611093726 || Global_113648.f_7690.f_911 == 742578279)
+		if (G_SomeGlobalState.MessageCallStates.f_911 == 1611093726 || G_SomeGlobalState.MessageCallStates.f_911 == 742578279)
 		{
 			func_49(3);
 			func_49(2);
@@ -1545,19 +1545,19 @@ void func_55(var uParam0, var uParam1) // Position - 0x1D1C
 	switch (func_71(&unk))
 	{
 		case 0:
-			Global_113648.f_7690.f_916 = 0;
+			G_SomeGlobalState.MessageCallStates.f_916 = 0;
 			func_56(uParam0, uParam1);
 			break;
 	
 		case 3:
-			Global_113648.f_7690.f_916 = 1;
-			Global_113648.f_7690.f_917 = 1;
+			G_SomeGlobalState.MessageCallStates.f_916 = 1;
+			G_SomeGlobalState.MessageCallStates.f_917 = 1;
 			func_56(uParam0, uParam1);
 			break;
 	
 		case 4:
-			Global_113648.f_7690.f_916 = 1;
-			Global_113648.f_7690.f_917 = 0;
+			G_SomeGlobalState.MessageCallStates.f_916 = 1;
+			G_SomeGlobalState.MessageCallStates.f_917 = 0;
 			break;
 	}
 
@@ -1567,7 +1567,7 @@ void func_55(var uParam0, var uParam1) // Position - 0x1D1C
 void func_56(var uParam0, var uParam1) // Position - 0x1D9A
 {
 	func_59(uParam1);
-	Global_113648.f_7690.f_915 = *uParam1;
+	G_SomeGlobalState.MessageCallStates.f_915 = *uParam1;
 	Global_43808 = *uParam0 + 20000;
 	Global_43809[uParam1->f_6] = *uParam0 + 20000;
 	func_57(*uParam1);
@@ -1585,13 +1585,13 @@ void func_57(var uParam0) // Position - 0x1DD4
 	if (num == -1)
 		return;
 
-	for (i = num; i <= Global_113648.f_7690.f_910 - 2; i = i + 1)
+	for (i = num; i <= G_SomeGlobalState.MessageCallStates.f_910 - 2; i = i + 1)
 	{
-		Global_113648.f_7690.f_867[i] = { Global_113648.f_7690.f_867[i + 1] };
+		G_SomeGlobalState.MessageCallStates.f_867[i] = { G_SomeGlobalState.MessageCallStates.f_867[i + 1] };
 	}
 
-	Global_113648.f_7690.f_867[Global_113648.f_7690.f_910 - 1] = { unk };
-	Global_113648.f_7690.f_910 = Global_113648.f_7690.f_910 - 1;
+	G_SomeGlobalState.MessageCallStates.f_867[G_SomeGlobalState.MessageCallStates.f_910 - 1] = { unk };
+	G_SomeGlobalState.MessageCallStates.f_910 = G_SomeGlobalState.MessageCallStates.f_910 - 1;
 	func_8(CHAR_MICHAEL);
 	func_8(CHAR_FRANKLIN);
 	func_8(CHAR_TREVOR);
@@ -1602,9 +1602,9 @@ int func_58(var uParam0) // Position - 0x1E74
 {
 	int i;
 
-	for (i = 0; i < Global_113648.f_7690.f_910; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_910; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_867[i] == uParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_867[i] == uParam0)
 			return i;
 	}
 
@@ -2852,9 +2852,9 @@ void func_74(int iParam0) // Position - 0x3687
 {
 	int num;
 
-	if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 3))
+	if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 3))
 	{
-		num = Global_113648.f_7690[Global_43804].f_7;
+		num = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_7;
 	
 		if (num != -1)
 		{
@@ -2897,13 +2897,13 @@ void func_76() // Position - 0x3751
 {
 	int i;
 
-	if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 1))
+	if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 1))
 	{
 		if (!func_54(26))
 		{
 			if (func_84())
 			{
-				switch (Global_113648.f_7690[Global_43804])
+				switch (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall])
 				{
 					case 1635046052:
 					case -464957327:
@@ -2915,7 +2915,7 @@ void func_76() // Position - 0x3751
 			}
 		}
 	
-		if (!Global_113648.f_7690.f_913)
+		if (!G_SomeGlobalState.MessageCallStates.f_913)
 		{
 			if (func_82() != 0)
 			{
@@ -2924,8 +2924,8 @@ void func_76() // Position - 0x3751
 			
 				if (func_82() == 1)
 				{
-					Global_113648.f_7690.f_914 = 1;
-					Global_113648.f_7690.f_913 = 1;
+					G_SomeGlobalState.MessageCallStates.f_914 = 1;
+					G_SomeGlobalState.MessageCallStates.f_913 = 1;
 				}
 				else
 				{
@@ -2941,8 +2941,8 @@ void func_76() // Position - 0x3751
 						}
 					}
 				
-					Global_113648.f_7690.f_914 = 0;
-					Global_113648.f_7690.f_913 = 1;
+					G_SomeGlobalState.MessageCallStates.f_914 = 0;
+					G_SomeGlobalState.MessageCallStates.f_913 = 1;
 				}
 			}
 		}
@@ -3063,14 +3063,14 @@ void func_85() // Position - 0x3A2D
 
 	if (bLocal_48)
 	{
-		num = Global_113648.f_7690[Global_43804].f_9;
+		num = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_9;
 	
 		if (num != -1)
 		{
-			if (func_88(Global_113648.f_7690[Global_43804].f_9))
-				num2 = Global_113648.f_7690[Global_43804].f_10;
+			if (func_88(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_9))
+				num2 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_10;
 			else
-				num2 = Global_113648.f_7690[Global_43804].f_11;
+				num2 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_11;
 		
 			if (num2 != -1)
 			{
@@ -4698,9 +4698,9 @@ int func_104() // Position - 0x5948
 {
 	eCharacter i;
 
-	for (i = CHAR_MICHAEL; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = CHAR_MICHAEL; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i] == 2033185762)
+		if (G_SomeGlobalState.MessageCallStates[i] == 2033185762)
 			return 0;
 	}
 
@@ -5008,26 +5008,26 @@ void func_128(var uParam0) // Position - 0x5E65
 {
 	int num;
 
-	if (Global_43804 != -1)
+	if (LastDispatchedMessageOrCall != -1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 1) && !Global_113648.f_7690.f_913)
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 1) && !G_SomeGlobalState.MessageCallStates.f_913)
 		{
 			func_150(uParam0, false);
 		}
 		else
 		{
-			Global_113648.f_7690.f_912 = 1;
-			func_130(Global_113648.f_7690[Global_43804].f_6, _GET_CURRENT_PLAYER_CHARACTER());
+			G_SomeGlobalState.MessageCallStates.f_912 = 1;
+			func_130(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6, _GET_CURRENT_PLAYER_CHARACTER());
 			func_129();
-			func_59(&Global_113648.f_7690[Global_43804]);
-			Global_113648.f_7690.f_911 = Global_113648.f_7690[Global_43804];
+			func_59(&G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+			G_SomeGlobalState.MessageCallStates.f_911 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall];
 			Global_43808 = *uParam0 + 20000;
-			Global_43809[Global_113648.f_7690[Global_43804].f_6] = *uParam0 + 20000;
-			func_11(Global_113648.f_7690[Global_43804]);
-			func_10(Global_113648.f_7690[Global_43804]);
-			func_19(Global_43804);
+			Global_43809[G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6] = *uParam0 + 20000;
+			func_11(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+			func_10(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+			func_19(LastDispatchedMessageOrCall);
 		
-			if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 15))
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 15))
 			{
 				switch (_GET_CURRENT_PLAYER_CHARACTER())
 				{
@@ -5044,8 +5044,8 @@ void func_128(var uParam0) // Position - 0x5E65
 						break;
 				}
 			
-				func_13(Global_113648.f_7690[Global_43804].f_6, num);
-				MISC::CLEAR_BIT(&(Global_113648.f_7690[Global_43804].f_1), 15);
+				func_13(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6, num);
+				MISC::CLEAR_BIT(&(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1), 15);
 			}
 		
 			if (func_54(3))
@@ -5403,7 +5403,7 @@ void func_150(var uParam0, BOOL bParam1) // Position - 0x64B5
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("AM_H_FCAL1" /*Press ~INPUT_CELLPHONE_SELECT~ to answer Simeon's call.~n~Press ~INPUT_CELLPHONE_CANCEL~ to hang up.*/))
 		HUD::CLEAR_HELP(false);
 
-	if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 15))
+	if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 15))
 	{
 		switch (_GET_CURRENT_PLAYER_CHARACTER())
 		{
@@ -5420,22 +5420,22 @@ void func_150(var uParam0, BOOL bParam1) // Position - 0x64B5
 				break;
 		}
 	
-		func_13(Global_113648.f_7690[Global_43804].f_6, num);
-		MISC::CLEAR_BIT(&(Global_113648.f_7690[Global_43804].f_1), 15);
+		func_13(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6, num);
+		MISC::CLEAR_BIT(&(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1), 15);
 	}
 
-	if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 1))
+	if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 1))
 	{
-		if (!Global_113648.f_7690.f_913)
+		if (!G_SomeGlobalState.MessageCallStates.f_913)
 		{
-			MISC::SET_BIT(&(Global_113648.f_7690[Global_43804].f_1), 10);
-			func_154(&Global_113648.f_7690[Global_43804]);
+			MISC::SET_BIT(&(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1), 10);
+			func_154(&G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
 		
-			if (Global_113648.f_7690[Global_43804].f_6 == CHAR_AMANDA)
+			if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6 == CHAR_AMANDA)
 				func_60(125, 0);
-			else if (Global_113648.f_7690[Global_43804].f_6 == CHAR_JIMMY)
+			else if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6 == CHAR_JIMMY)
 				func_60(126, 0);
-			else if (Global_113648.f_7690[Global_43804].f_6 == CHAR_TRACEY)
+			else if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6 == CHAR_TRACEY)
 				func_60(127, 0);
 		}
 	}
@@ -5452,37 +5452,37 @@ void func_150(var uParam0, BOOL bParam1) // Position - 0x64B5
 		}
 	}
 
-	if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 10) || bParam1)
+	if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 10) || bParam1)
 	{
-		func_153(*uParam0, &Global_113648.f_7690[Global_43804], false);
+		func_153(*uParam0, &G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall], false);
 	
-		if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 3))
-			if (Global_113648.f_7690[Global_43804].f_5 < 300000)
-				Global_113648.f_7690[Global_43804].f_5 = Global_113648.f_7690[Global_43804].f_5 + 60000;
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 3))
+			if (G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_5 < 300000)
+				G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_5 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_5 + 60000;
 	
-		if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 8))
-			func_154(&Global_113648.f_7690[Global_43804]);
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 8))
+			func_154(&G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
 	}
-	else if (IS_BIT_SET(Global_113648.f_7690[Global_43804].f_1, 11))
+	else if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 11))
 	{
-		func_151(Global_113648.f_7690[Global_43804].f_10, 1, Global_113648.f_7690[Global_43804].f_2, Global_113648.f_7690[Global_43804].f_6, Global_113648.f_7690[Global_43804].f_5, Global_113648.f_7690[Global_43804].f_5, Global_113648.f_7690[Global_43804].f_7, Global_113648.f_7690[Global_43804].f_8, Global_113648.f_7690[Global_43804].f_9, Global_113648.f_7690[Global_43804].f_1, 1);
-		Global_113648.f_7690.f_911 = Global_113648.f_7690[Global_43804];
-		Global_113648.f_7690.f_912 = 0;
-		func_11(Global_113648.f_7690[Global_43804]);
-		func_10(Global_113648.f_7690[Global_43804]);
-		func_19(Global_43804);
+		func_151(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_10, 1, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_2, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_6, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_5, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_5, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_7, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_8, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_9, G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall].f_1, 1);
+		G_SomeGlobalState.MessageCallStates.f_911 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall];
+		G_SomeGlobalState.MessageCallStates.f_912 = 0;
+		func_11(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+		func_10(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+		func_19(LastDispatchedMessageOrCall);
 	}
 	else
 	{
-		Global_113648.f_7690.f_911 = Global_113648.f_7690[Global_43804];
-		Global_113648.f_7690.f_912 = 0;
-		func_11(Global_113648.f_7690[Global_43804]);
-		func_10(Global_113648.f_7690[Global_43804]);
-		func_19(Global_43804);
+		G_SomeGlobalState.MessageCallStates.f_911 = G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall];
+		G_SomeGlobalState.MessageCallStates.f_912 = 0;
+		func_11(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+		func_10(G_SomeGlobalState.MessageCallStates[LastDispatchedMessageOrCall]);
+		func_19(LastDispatchedMessageOrCall);
 	}
 
 	func_129();
-	Global_43804 = -1;
+	LastDispatchedMessageOrCall = -1;
 	return;
 }
 
@@ -5512,7 +5512,7 @@ int func_151(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	if (iParam2 < 1 || iParam2 > 7)
 		return 0;
 
-	if (Global_113648.f_7690.f_764 < 8)
+	if (G_SomeGlobalState.MessageCallStates.f_764 < 8)
 	{
 		unk = uParam0;
 		unk.f_3 = func_152(iParam1);
@@ -5528,8 +5528,8 @@ int func_151(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 		unk.f_11 = -1;
 		unk.f_13 = iParam10;
 		MISC::CLEAR_BIT(&(unk.f_1), 0);
-		Global_113648.f_7690.f_651[Global_113648.f_7690.f_764] = { unk };
-		Global_113648.f_7690.f_764 = Global_113648.f_7690.f_764 + 1;
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 + 1;
 		func_8(CHAR_MICHAEL);
 		func_8(CHAR_FRANKLIN);
 		func_8(CHAR_TREVOR);
@@ -5583,10 +5583,10 @@ void func_154(int iParam0) // Position - 0x69B0
 {
 	if (!func_157(*iParam0))
 	{
-		if (Global_113648.f_7690.f_198 < 4)
+		if (G_SomeGlobalState.MessageCallStates.f_198 < 4)
 		{
-			Global_113648.f_7690.f_137[Global_113648.f_7690.f_198] = { *iParam0 };
-			Global_113648.f_7690.f_198 = Global_113648.f_7690.f_198 + 1;
+			G_SomeGlobalState.MessageCallStates.f_137[G_SomeGlobalState.MessageCallStates.f_198] = { *iParam0 };
+			G_SomeGlobalState.MessageCallStates.f_198 = G_SomeGlobalState.MessageCallStates.f_198 + 1;
 			func_155(iParam0->f_6);
 		}
 	}
@@ -5648,9 +5648,9 @@ BOOL func_157(int iParam0) // Position - 0x6AD8
 {
 	int i;
 
-	for (i = 0; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_137[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_137[i] == iParam0)
 			return true;
 	}
 
@@ -6600,30 +6600,30 @@ void func_186(var uParam0) // Position - 0x7A3A
 	if (!func_9(_GET_CURRENT_PLAYER_CHARACTER()))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_866 && !bLocal_46; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866 && !bLocal_46; i = i + 1)
 	{
-		func_220(&Global_113648.f_7690.f_765[i]);
+		func_220(&G_SomeGlobalState.MessageCallStates.f_765[i]);
 		flag = false;
 	
-		if (Global_113648.f_7690.f_765[i].f_3 >= 5)
+		if (G_SomeGlobalState.MessageCallStates.f_765[i].f_3 >= 5)
 			flag = true;
 	
-		if (*uParam0 >= Global_43808 || IS_BIT_SET(Global_113648.f_7690.f_765[i].f_1, 21) || flag)
+		if (*uParam0 >= Global_43808 || IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_1, 21) || flag)
 		{
-			if (*uParam0 >= Global_43809[Global_113648.f_7690.f_765[i].f_6] || flag)
+			if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates.f_765[i].f_6] || flag)
 			{
-				if (*uParam0 >= Global_113648.f_7690.f_765[i].f_4)
+				if (*uParam0 >= G_SomeGlobalState.MessageCallStates.f_765[i].f_4)
 				{
-					if (func_188(&Global_113648.f_7690.f_765[i]))
+					if (func_188(&G_SomeGlobalState.MessageCallStates.f_765[i]))
 					{
 						iLocal_50 = -1;
-						func_187(uParam0, &Global_113648.f_7690.f_765[i]);
+						func_187(uParam0, &G_SomeGlobalState.MessageCallStates.f_765[i]);
 						func_6(i);
 						bLocal_46 = true;
 					}
 					else
 					{
-						func_153(*uParam0, &Global_113648.f_7690.f_765[i], false);
+						func_153(*uParam0, &G_SomeGlobalState.MessageCallStates.f_765[i], false);
 					}
 				}
 			}
@@ -6636,7 +6636,7 @@ void func_186(var uParam0) // Position - 0x7A3A
 void func_187(var uParam0, int iParam1) // Position - 0x7B54
 {
 	func_59(iParam1);
-	Global_113648.f_7690.f_918 = *iParam1;
+	G_SomeGlobalState.MessageCallStates.f_918 = *iParam1;
 	Global_43808 = *uParam0 + 20000;
 
 	if (iParam1->f_6 != 144)
@@ -10589,38 +10589,38 @@ void func_246(var uParam0) // Position - 0xD890
 	eCharacter j;
 	eCharacter k;
 
-	for (i = 0; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
 		character = _GET_CURRENT_PLAYER_CHARACTER();
 	
 		if (func_9(character))
 		{
-			if (IS_BIT_SET(Global_113648.f_7690.f_199[i].f_2, character))
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_199[i].f_2, character))
 			{
-				if (func_245(Global_113648.f_7690.f_199[i].f_6))
+				if (func_245(G_SomeGlobalState.MessageCallStates.f_199[i].f_6))
 				{
-					if (*uParam0 >= Global_43809[Global_113648.f_7690.f_199[i].f_6])
+					if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates.f_199[i].f_6])
 					{
 						flag = false;
 					
-						for (j = 0; j < Global_113648.f_7690.f_136 && !flag; j = j + 1)
+						for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_136 && !flag; j = j + 1)
 						{
-							if (Global_113648.f_7690[j] == Global_113648.f_7690.f_199[i])
+							if (G_SomeGlobalState.MessageCallStates[j] == G_SomeGlobalState.MessageCallStates.f_199[i])
 								flag = true;
 						}
 					
 						if (!flag)
 						{
-							j = Global_113648.f_7690.f_136;
+							j = G_SomeGlobalState.MessageCallStates.f_136;
 						
 							if (j < 9)
 							{
-								Global_113648.f_7690[j] = { Global_113648.f_7690.f_199[i] };
-								Global_113648.f_7690.f_136 = Global_113648.f_7690.f_136 + 1;
+								G_SomeGlobalState.MessageCallStates[j] = { G_SomeGlobalState.MessageCallStates.f_199[i] };
+								G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 							
 								for (k = CHAR_MICHAEL; k < CHAR_MULTIPLAYER; k = k + 1)
 								{
-									if (IS_BIT_SET(Global_113648.f_7690[j].f_2, k))
+									if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[j].f_2, k))
 										func_8(k);
 								}
 							}
@@ -10630,12 +10630,12 @@ void func_246(var uParam0) // Position - 0xD890
 							}
 						}
 					
-						if (func_247(&Global_113648.f_7690[j]))
+						if (func_247(&G_SomeGlobalState.MessageCallStates[j]))
 						{
-							Global_43804 = j;
+							LastDispatchedMessageOrCall = j;
 							iLocal_50 = -1;
 							iLocal_58 = 1;
-							Global_113648.f_7690.f_913 = 0;
+							G_SomeGlobalState.MessageCallStates.f_913 = 0;
 							bLocal_46 = true;
 						
 							if (func_149())
@@ -11009,33 +11009,33 @@ void func_255(var uParam0) // Position - 0xE11A
 	int num;
 	eCharacter j;
 
-	for (i = 0; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		if (func_245(Global_113648.f_7690.f_137[i].f_6))
+		if (func_245(G_SomeGlobalState.MessageCallStates.f_137[i].f_6))
 		{
-			if (*uParam0 >= Global_43809[Global_113648.f_7690.f_137[i].f_6])
+			if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates.f_137[i].f_6])
 			{
-				num = func_260(Global_113648.f_7690.f_137[i]);
+				num = func_260(G_SomeGlobalState.MessageCallStates.f_137[i]);
 			
 				if (num == -1)
 				{
-					num = Global_113648.f_7690.f_136;
-					Global_113648.f_7690[num] = { Global_113648.f_7690.f_137[i] };
-					Global_113648.f_7690.f_136 = Global_113648.f_7690.f_136 + 1;
+					num = G_SomeGlobalState.MessageCallStates.f_136;
+					G_SomeGlobalState.MessageCallStates[num] = { G_SomeGlobalState.MessageCallStates.f_137[i] };
+					G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 				
 					for (j = CHAR_MICHAEL; j < CHAR_MULTIPLAYER; j = j + 1)
 					{
-						if (IS_BIT_SET(Global_113648.f_7690.f_137[i].f_2, j))
+						if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_137[i].f_2, j))
 							func_8(j);
 					}
 				}
 			
-				if (func_256(&Global_113648.f_7690[num], &bLocal_48))
+				if (func_256(&G_SomeGlobalState.MessageCallStates[num], &bLocal_48))
 				{
-					Global_43804 = i;
+					LastDispatchedMessageOrCall = i;
 					iLocal_50 = -1;
 					iLocal_58 = 1;
-					Global_113648.f_7690.f_913 = 0;
+					G_SomeGlobalState.MessageCallStates.f_913 = 0;
 					bLocal_46 = true;
 				
 					if (func_149())
@@ -11043,7 +11043,7 @@ void func_255(var uParam0) // Position - 0xE11A
 				}
 				else
 				{
-					func_153(*uParam0, &Global_113648.f_7690[num], false);
+					func_153(*uParam0, &G_SomeGlobalState.MessageCallStates[num], false);
 				}
 			}
 		}
@@ -11345,9 +11345,9 @@ int func_260(int iParam0) // Position - 0xE75E
 {
 	int i;
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i] == iParam0)
+		if (G_SomeGlobalState.MessageCallStates[i] == iParam0)
 			return i;
 	}
 
@@ -11358,20 +11358,20 @@ void func_261(var uParam0) // Position - 0xE796
 {
 	eCharacter i;
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690[i].f_1, 7))
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 7))
 		{
-			if (func_245(Global_113648.f_7690[i].f_6))
+			if (func_245(G_SomeGlobalState.MessageCallStates[i].f_6))
 			{
-				if (*uParam0 >= Global_43809[Global_113648.f_7690[i].f_6])
+				if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates[i].f_6])
 				{
-					if (func_256(&Global_113648.f_7690[i], &bLocal_48))
+					if (func_256(&G_SomeGlobalState.MessageCallStates[i], &bLocal_48))
 					{
-						Global_43804 = i;
+						LastDispatchedMessageOrCall = i;
 						iLocal_50 = -1;
 						iLocal_58 = 1;
-						Global_113648.f_7690.f_913 = 0;
+						G_SomeGlobalState.MessageCallStates.f_913 = 0;
 						bLocal_46 = true;
 					
 						if (func_149())
@@ -11379,7 +11379,7 @@ void func_261(var uParam0) // Position - 0xE796
 					}
 					else
 					{
-						func_153(*uParam0, &Global_113648.f_7690[i], false);
+						func_153(*uParam0, &G_SomeGlobalState.MessageCallStates[i], false);
 					}
 				}
 			}
@@ -11397,30 +11397,30 @@ void func_262(var uParam0) // Position - 0xE843
 	if (!func_9(_GET_CURRENT_PLAYER_CHARACTER()))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_764 && !bLocal_46; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764 && !bLocal_46; i = i + 1)
 	{
-		func_284(&Global_113648.f_7690.f_651[i]);
+		func_284(&G_SomeGlobalState.MessageCallStates.f_651[i]);
 		flag = false;
 	
-		if (Global_113648.f_7690.f_651[i].f_3 >= 5)
+		if (G_SomeGlobalState.MessageCallStates.f_651[i].f_3 >= 5)
 			flag = true;
 	
-		if (*uParam0 >= Global_43808 || IS_BIT_SET(Global_113648.f_7690.f_651[i].f_1, 21) || flag)
+		if (*uParam0 >= Global_43808 || IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_1, 21) || flag)
 		{
-			if (*uParam0 >= Global_43809[Global_113648.f_7690.f_651[i].f_6] || flag)
+			if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates.f_651[i].f_6] || flag)
 			{
-				if (*uParam0 >= Global_113648.f_7690.f_651[i].f_4)
+				if (*uParam0 >= G_SomeGlobalState.MessageCallStates.f_651[i].f_4)
 				{
-					if (func_265(&Global_113648.f_7690.f_651[i]))
+					if (func_265(&G_SomeGlobalState.MessageCallStates.f_651[i]))
 					{
-						func_263(&Global_113648.f_7690.f_651[i]);
-						Global_113648.f_7690.f_916 = 0;
+						func_263(&G_SomeGlobalState.MessageCallStates.f_651[i]);
+						G_SomeGlobalState.MessageCallStates.f_916 = 0;
 						func_7(i);
 						bLocal_46 = true;
 					}
 					else
 					{
-						func_153(*uParam0, &Global_113648.f_7690.f_651[i], true);
+						func_153(*uParam0, &G_SomeGlobalState.MessageCallStates.f_651[i], true);
 					}
 				}
 			}
@@ -11434,10 +11434,10 @@ void func_263(int iParam0) // Position - 0xE963
 {
 	if (!func_264(*iParam0))
 	{
-		if (Global_113648.f_7690.f_910 < 3)
+		if (G_SomeGlobalState.MessageCallStates.f_910 < 3)
 		{
-			Global_113648.f_7690.f_867[Global_113648.f_7690.f_910] = { *iParam0 };
-			Global_113648.f_7690.f_910 = Global_113648.f_7690.f_910 + 1;
+			G_SomeGlobalState.MessageCallStates.f_867[G_SomeGlobalState.MessageCallStates.f_910] = { *iParam0 };
+			G_SomeGlobalState.MessageCallStates.f_910 = G_SomeGlobalState.MessageCallStates.f_910 + 1;
 		}
 	}
 
@@ -11448,9 +11448,9 @@ BOOL func_264(var uParam0) // Position - 0xE9BE
 {
 	int i;
 
-	for (i = 0; i < Global_113648.f_7690.f_910; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_910; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_867[i] == uParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_867[i] == uParam0)
 			return true;
 	}
 
@@ -12820,29 +12820,29 @@ void func_285(var uParam0) // Position - 0x10487
 	if (!func_9(_GET_CURRENT_PLAYER_CHARACTER()))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_136 && !bLocal_46; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136 && !bLocal_46; i = i + 1)
 	{
-		func_291(&Global_113648.f_7690[i]);
+		func_291(&G_SomeGlobalState.MessageCallStates[i]);
 	
-		if (IS_BIT_SET(Global_113648.f_7690[i].f_1, 0))
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 0))
 		{
 			flag = false;
 		
-			if (Global_113648.f_7690[i].f_3 >= 5)
+			if (G_SomeGlobalState.MessageCallStates[i].f_3 >= 5)
 				flag = true;
 		
-			if (*uParam0 >= Global_43808 || IS_BIT_SET(Global_113648.f_7690[i].f_1, 21) || flag)
+			if (*uParam0 >= Global_43808 || IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 21) || flag)
 			{
-				if (Global_113648.f_7690[i].f_3 == Global_113648.f_7690.f_919[_GET_CURRENT_PLAYER_CHARACTER()] || !IS_BIT_SET(Global_113648.f_7690[i].f_2, _GET_CURRENT_PLAYER_CHARACTER_0()))
+				if (G_SomeGlobalState.MessageCallStates[i].f_3 == G_SomeGlobalState.MessageCallStates.f_919[_GET_CURRENT_PLAYER_CHARACTER()] || !IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, _GET_CURRENT_PLAYER_CHARACTER_0()))
 				{
-					if (*uParam0 >= Global_113648.f_7690[i].f_4)
+					if (*uParam0 >= G_SomeGlobalState.MessageCallStates[i].f_4)
 					{
-						if (func_286(&Global_113648.f_7690[i], &bLocal_48))
+						if (func_286(&G_SomeGlobalState.MessageCallStates[i], &bLocal_48))
 						{
-							Global_43804 = i;
+							LastDispatchedMessageOrCall = i;
 							iLocal_50 = -1;
 							iLocal_58 = 1;
-							Global_113648.f_7690.f_913 = 0;
+							G_SomeGlobalState.MessageCallStates.f_913 = 0;
 							bLocal_46 = true;
 						
 							if (func_149())
@@ -12850,7 +12850,7 @@ void func_285(var uParam0) // Position - 0x10487
 						}
 						else
 						{
-							func_153(*uParam0, &Global_113648.f_7690[i], false);
+							func_153(*uParam0, &G_SomeGlobalState.MessageCallStates[i], false);
 						}
 					}
 				}
@@ -13114,31 +13114,31 @@ void func_292(var uParam0) // Position - 0x10A44
 	if (!func_9(_GET_CURRENT_PLAYER_CHARACTER()))
 		return;
 
-	for (i = 0; i < Global_113648.f_7690.f_136 && !bLocal_46; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136 && !bLocal_46; i = i + 1)
 	{
-		func_291(&Global_113648.f_7690[i]);
+		func_291(&G_SomeGlobalState.MessageCallStates[i]);
 	
-		if (!IS_BIT_SET(Global_113648.f_7690[i].f_1, 0))
+		if (!IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 0))
 		{
 			flag = false;
 		
-			if (Global_113648.f_7690[i].f_3 >= 5)
+			if (G_SomeGlobalState.MessageCallStates[i].f_3 >= 5)
 				flag = true;
 		
-			if (*uParam0 >= Global_43808 || flag || IS_BIT_SET(Global_113648.f_7690[i].f_1, 21))
+			if (*uParam0 >= Global_43808 || flag || IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 21))
 			{
-				if (Global_113648.f_7690[i].f_3 == Global_113648.f_7690.f_919[_GET_CURRENT_PLAYER_CHARACTER()] || !IS_BIT_SET(Global_113648.f_7690[i].f_2, _GET_CURRENT_PLAYER_CHARACTER_0()))
+				if (G_SomeGlobalState.MessageCallStates[i].f_3 == G_SomeGlobalState.MessageCallStates.f_919[_GET_CURRENT_PLAYER_CHARACTER()] || !IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, _GET_CURRENT_PLAYER_CHARACTER_0()))
 				{
-					if (*uParam0 >= Global_43809[Global_113648.f_7690[i].f_6] || flag)
+					if (*uParam0 >= Global_43809[G_SomeGlobalState.MessageCallStates[i].f_6] || flag)
 					{
-						if (*uParam0 >= Global_113648.f_7690[i].f_4)
+						if (*uParam0 >= G_SomeGlobalState.MessageCallStates[i].f_4)
 						{
-							if (func_286(&Global_113648.f_7690[i], &bLocal_48))
+							if (func_286(&G_SomeGlobalState.MessageCallStates[i], &bLocal_48))
 							{
-								Global_43804 = i;
+								LastDispatchedMessageOrCall = i;
 								iLocal_50 = -1;
 								iLocal_58 = 1;
-								Global_113648.f_7690.f_913 = 0;
+								G_SomeGlobalState.MessageCallStates.f_913 = 0;
 								bLocal_46 = true;
 							
 								if (func_149())
@@ -13146,7 +13146,7 @@ void func_292(var uParam0) // Position - 0x10A44
 							}
 							else
 							{
-								func_153(*uParam0, &Global_113648.f_7690[i], false);
+								func_153(*uParam0, &G_SomeGlobalState.MessageCallStates[i], false);
 							}
 						}
 					}
@@ -13177,19 +13177,19 @@ void func_295() // Position - 0x10BBD
 	int unk2;
 	int unk3;
 
-	Global_43804 = -1;
+	LastDispatchedMessageOrCall = -1;
 
-	for (i = 0; i < Global_113648.f_7690.f_198; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_198; i = i + 1)
 	{
-		func_12(Global_113648.f_7690.f_137[i].f_6);
+		func_12(G_SomeGlobalState.MessageCallStates.f_137[i].f_6);
 	
-		for (j = i; j <= Global_113648.f_7690.f_198 - 2; j = j + 1)
+		for (j = i; j <= G_SomeGlobalState.MessageCallStates.f_198 - 2; j = j + 1)
 		{
-			Global_113648.f_7690.f_137[j] = { Global_113648.f_7690.f_137[j + 1] };
+			G_SomeGlobalState.MessageCallStates.f_137[j] = { G_SomeGlobalState.MessageCallStates.f_137[j + 1] };
 		}
 	
-		Global_113648.f_7690.f_137[Global_113648.f_7690.f_198 - 1] = { unk };
-		Global_113648.f_7690.f_198 = Global_113648.f_7690.f_198 - 1;
+		G_SomeGlobalState.MessageCallStates.f_137[G_SomeGlobalState.MessageCallStates.f_198 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_198 = G_SomeGlobalState.MessageCallStates.f_198 - 1;
 	}
 
 	SCRIPT::TERMINATE_THIS_THREAD();

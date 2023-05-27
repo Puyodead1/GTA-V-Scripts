@@ -10206,16 +10206,16 @@ BOOL func_114(eCharacter echParam0) // Position - 0xA213
 	if (func_115(echParam0))
 		return false;
 
-	for (i = 0; i < Global_113648.f_7690.f_650; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_650; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_199[i].f_6 == echParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_199[i].f_6 == echParam0)
 			return true;
 	}
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i].f_6 == echParam0)
-			if (IS_BIT_SET(Global_113648.f_7690[i].f_1, 7))
+		if (G_SomeGlobalState.MessageCallStates[i].f_6 == echParam0)
+			if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_1, 7))
 				return true;
 	}
 

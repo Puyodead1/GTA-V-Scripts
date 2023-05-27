@@ -115085,21 +115085,21 @@ BOOL func_690(eCharacter echParam0) // Position - 0x994D0
 {
 	int i;
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (Global_113648.f_7690[i].f_6 == echParam0)
+		if (G_SomeGlobalState.MessageCallStates[i].f_6 == echParam0)
 			return true;
 	}
 
-	for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_651[i].f_6 == echParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_651[i].f_6 == echParam0)
 			return true;
 	}
 
-	for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		if (Global_113648.f_7690.f_765[i].f_6 == echParam0)
+		if (G_SomeGlobalState.MessageCallStates.f_765[i].f_6 == echParam0)
 			return true;
 	}
 
@@ -115116,21 +115116,21 @@ BOOL func_691(eCharacter echParam0) // Position - 0x99587
 
 	!func_777(echParam0);
 
-	for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690[i].f_2, echParam0))
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, echParam0))
 			return true;
 	}
 
-	for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690.f_651[i].f_2, echParam0))
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_2, echParam0))
 			return true;
 	}
 
-	for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113648.f_7690.f_765[i].f_2, echParam0))
+		if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_2, echParam0))
 			return true;
 	}
 
@@ -115155,7 +115155,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 
 	if (func_668(iParam0, &unk, &unk4, &unk5))
 	{
-		for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 		{
 			num = func_696(i);
 		
@@ -115163,7 +115163,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 			{
 				if (num != -1 && num != 51 && num != 62 && num != 52 && num != 62 && num != 53 && num != 62 && num != 54 && num != 62 && num != 55 && num != 62 && num != 56 && num != 62 && num != 57 && num != 62 && num != 58 && num != 62 && num != 59 && num != 62 && num != 60 && num != 62 && num != 61 && num != 62 && num != 62 && num != 63)
 				{
-					num2 = Global_113648.f_7690[i].f_4 - gameTimer;
+					num2 = G_SomeGlobalState.MessageCallStates[i].f_4 - gameTimer;
 				
 					if (num2 < 180000)
 						if (func_695(unk, num))
@@ -115172,7 +115172,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 			}
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 		{
 			num3 = func_694(i);
 		
@@ -115180,7 +115180,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 			{
 				if (num3 != -1 && num3 != 51 && num3 != 62 && num3 != 52 && num3 != 62 && num3 != 53 && num3 != 62 && num3 != 54 && num3 != 62 && num3 != 55 && num3 != 62 && num3 != 56 && num3 != 62 && num3 != 57 && num3 != 62 && num3 != 58 && num3 != 62 && num3 != 59 && num3 != 62 && num3 != 60 && num3 != 62 && num3 != 61 && num3 != 62 && num3 != 62 && num3 != 63)
 				{
-					num4 = Global_113648.f_7690.f_651[i].f_4 - gameTimer;
+					num4 = G_SomeGlobalState.MessageCallStates.f_651[i].f_4 - gameTimer;
 				
 					if (num4 < 180000)
 						if (func_695(unk, num3))
@@ -115189,7 +115189,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 			}
 		}
 	
-		for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+		for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 		{
 			num5 = func_693(i);
 		
@@ -115197,7 +115197,7 @@ BOOL func_692(int iParam0) // Position - 0x99635
 			{
 				if (num5 != -1 && num5 != 51 && num5 != 62 && num5 != 52 && num5 != 62 && num5 != 53 && num5 != 62 && num5 != 54 && num5 != 62 && num5 != 55 && num5 != 62 && num5 != 56 && num5 != 62 && num5 != 57 && num5 != 62 && num5 != 58 && num5 != 62 && num5 != 59 && num5 != 62 && num5 != 60 && num5 != 62 && num5 != 61 && num5 != 62 && num5 != 62 && num5 != 63)
 				{
-					num6 = Global_113648.f_7690.f_765[i].f_4 - gameTimer;
+					num6 = G_SomeGlobalState.MessageCallStates.f_765[i].f_4 - gameTimer;
 				
 					if (num6 < 180000)
 						if (func_695(unk, num5))
@@ -115212,12 +115212,12 @@ BOOL func_692(int iParam0) // Position - 0x99635
 
 int func_693(int iParam0) // Position - 0x99A3C
 {
-	return Global_113648.f_7690.f_765[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_765[iParam0].f_7;
 }
 
 int func_694(int iParam0) // Position - 0x99A54
 {
-	return Global_113648.f_7690.f_651[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_651[iParam0].f_7;
 }
 
 BOOL func_695(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position - 0x99A6C
@@ -115238,7 +115238,7 @@ BOOL func_695(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Positio
 
 int func_696(int iParam0) // Position - 0x99AD7
 {
-	return Global_113648.f_7690[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates[iParam0].f_7;
 }
 
 BOOL func_697(int iParam0) // Position - 0x99AEC

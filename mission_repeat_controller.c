@@ -113177,7 +113177,7 @@ void func_803() // Position - 0x92DDF
 	func_874();
 	func_873();
 	Global_43806 = 1;
-	Global_43804 = -1;
+	LastDispatchedMessageOrCall = -1;
 	func_867();
 	func_866();
 	func_865();
@@ -120189,59 +120189,59 @@ void func_873() // Position - 0xA2095
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		Global_113648.f_7690.f_919[i] = 0;
+		G_SomeGlobalState.MessageCallStates.f_919[i] = 0;
 	}
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_113648.f_7690[i] = { unk };
+		G_SomeGlobalState.MessageCallStates[i] = { unk };
 	}
 
-	Global_113648.f_7690.f_136 = 0;
+	G_SomeGlobalState.MessageCallStates.f_136 = 0;
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		Global_113648.f_7690.f_137[i] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_137[i] = { unk };
 	}
 
-	Global_113648.f_7690.f_198 = 0;
+	G_SomeGlobalState.MessageCallStates.f_198 = 0;
 
 	for (i = 0; i < 30; i = i + 1)
 	{
-		Global_113648.f_7690.f_199[i] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_199[i] = { unk };
 	}
 
-	Global_113648.f_7690.f_650 = 0;
+	G_SomeGlobalState.MessageCallStates.f_650 = 0;
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		Global_113648.f_7690.f_651[i] = { unk16 };
+		G_SomeGlobalState.MessageCallStates.f_651[i] = { unk16 };
 	}
 
-	Global_113648.f_7690.f_764 = 0;
+	G_SomeGlobalState.MessageCallStates.f_764 = 0;
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		Global_113648.f_7690.f_867[i] = { unk16 };
+		G_SomeGlobalState.MessageCallStates.f_867[i] = { unk16 };
 	}
 
-	Global_113648.f_7690.f_910 = 0;
+	G_SomeGlobalState.MessageCallStates.f_910 = 0;
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		Global_113648.f_7690.f_765[i] = { unk30 };
+		G_SomeGlobalState.MessageCallStates.f_765[i] = { unk30 };
 	}
 
-	Global_113648.f_7690.f_866 = 0;
-	Global_113648.f_7690.f_911 = -1;
-	Global_113648.f_7690.f_912 = 0;
-	Global_113648.f_7690.f_913 = 0;
-	Global_113648.f_7690.f_914 = 0;
-	Global_113648.f_7690.f_915 = -1;
-	Global_113648.f_7690.f_916 = 0;
-	Global_113648.f_7690.f_917 = 0;
-	Global_113648.f_7690.f_918 = -1;
-	Global_113648.f_7690.f_923 = 0;
+	G_SomeGlobalState.MessageCallStates.f_866 = 0;
+	G_SomeGlobalState.MessageCallStates.f_911 = -1;
+	G_SomeGlobalState.MessageCallStates.f_912 = 0;
+	G_SomeGlobalState.MessageCallStates.f_913 = 0;
+	G_SomeGlobalState.MessageCallStates.f_914 = 0;
+	G_SomeGlobalState.MessageCallStates.f_915 = -1;
+	G_SomeGlobalState.MessageCallStates.f_916 = 0;
+	G_SomeGlobalState.MessageCallStates.f_917 = 0;
+	G_SomeGlobalState.MessageCallStates.f_918 = -1;
+	G_SomeGlobalState.MessageCallStates.f_923 = 0;
 	Global_43806 = 0;
 	return;
 }
@@ -120850,7 +120850,7 @@ void func_900(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA2C58
 	else
 		MISC::CLEAR_BIT(&(Global_113648.f_10018.f_25), 4);
 
-	Global_113648.f_7690.f_924 = MISC::GET_GAME_TIMER();
+	G_SomeGlobalState.MessageCallStates.f_924 = MISC::GET_GAME_TIMER();
 
 	if (Global_78821 == 62 || Global_78822 == 62)
 		func_797(2, true);

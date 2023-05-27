@@ -5995,23 +5995,23 @@ int func_134() // Position - 0x892C
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 		
-			for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, character))
 					if (func_137(entityCoords, func_138(i)))
 						return 1;
 			}
 		
-			for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690.f_651[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_2, character))
 					if (func_137(entityCoords, func_136(i)))
 						return 1;
 			}
 		
-			for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690.f_765[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_2, character))
 					if (func_137(entityCoords, func_135(i)))
 						return 1;
 			}
@@ -6023,12 +6023,12 @@ int func_134() // Position - 0x892C
 
 int func_135(int iParam0) // Position - 0x8A2C
 {
-	return Global_113648.f_7690.f_765[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_765[iParam0].f_7;
 }
 
 int func_136(int iParam0) // Position - 0x8A44
 {
-	return Global_113648.f_7690.f_651[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_651[iParam0].f_7;
 }
 
 BOOL func_137(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position - 0x8A5C
@@ -6049,7 +6049,7 @@ BOOL func_137(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Positio
 
 int func_138(int iParam0) // Position - 0x8AC7
 {
-	return Global_113648.f_7690[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates[iParam0].f_7;
 }
 
 void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, char* sParam3, int iParam4, int iParam5) // Position - 0x8ADC

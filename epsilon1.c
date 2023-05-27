@@ -650,7 +650,7 @@ BOOL func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 	if (iParam2 < 1 || iParam2 > 7)
 		return false;
 
-	if (Global_113648.f_7690.f_866 < 10)
+	if (G_SomeGlobalState.MessageCallStates.f_866 < 10)
 	{
 		num = iParam0;
 		num.f_3 = func_15(iParam1);
@@ -663,8 +663,8 @@ BOOL func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		num.f_8 = iParam7;
 		num.f_9 = iParam8;
 		MISC::CLEAR_BIT(&(num.f_1), 0);
-		Global_113648.f_7690.f_765[Global_113648.f_7690.f_866] = { num };
-		Global_113648.f_7690.f_866 = Global_113648.f_7690.f_866 + 1;
+		G_SomeGlobalState.MessageCallStates.f_765[G_SomeGlobalState.MessageCallStates.f_866] = { num };
+		G_SomeGlobalState.MessageCallStates.f_866 = G_SomeGlobalState.MessageCallStates.f_866 + 1;
 		return true;
 	}
 	else
@@ -672,12 +672,12 @@ BOOL func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		unk10 = { func_14(iParam0, iParam1, iParam2, iParam3, iParam4, iParam5, iParam6, iParam7, iParam8, iParam9) };
 		num2 = 0;
 		func_13(&num2);
-		num3 = func_12(unk10, Global_113648.f_7690.f_765[num2]);
+		num3 = func_12(unk10, G_SomeGlobalState.MessageCallStates.f_765[num2]);
 	
 		if (num3 == 2)
 		{
-			func_10(Global_113648.f_7690.f_765[num2]);
-			Global_113648.f_7690.f_765[num2] = { unk10 };
+			func_10(G_SomeGlobalState.MessageCallStates.f_765[num2]);
+			G_SomeGlobalState.MessageCallStates.f_765[num2] = { unk10 };
 			func_9(&unk10);
 			return true;
 		}
@@ -685,16 +685,16 @@ BOOL func_7(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		{
 			if (func_8(unk10))
 			{
-				func_10(Global_113648.f_7690.f_765[num2]);
-				Global_113648.f_7690.f_765[num2] = { unk10 };
+				func_10(G_SomeGlobalState.MessageCallStates.f_765[num2]);
+				G_SomeGlobalState.MessageCallStates.f_765[num2] = { unk10 };
 				func_9(&unk10);
 				return true;
 			}
 			else
 			{
-				if (!func_8(Global_113648.f_7690.f_765[num2]))
+				if (!func_8(G_SomeGlobalState.MessageCallStates.f_765[num2]))
 				{
-					Global_113648.f_7690.f_765[num2] = { unk10 };
+					G_SomeGlobalState.MessageCallStates.f_765[num2] = { unk10 };
 					func_9(&unk10);
 					return true;
 				}
@@ -771,9 +771,9 @@ void func_13(var uParam0) // Position - 0x698
 
 	*uParam0 = 0;
 
-	for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+	for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 	{
-		if (func_12(Global_113648.f_7690.f_765[i], Global_113648.f_7690.f_765[*uParam0]) == 0)
+		if (func_12(G_SomeGlobalState.MessageCallStates.f_765[i], G_SomeGlobalState.MessageCallStates.f_765[*uParam0]) == 0)
 			*uParam0 = i;
 	}
 

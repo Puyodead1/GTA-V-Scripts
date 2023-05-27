@@ -43519,11 +43519,11 @@ BOOL func_333(int iParam0) // Position - 0x38757
 	
 		gameTimer = MISC::GET_GAME_TIMER();
 	
-		for (j = 0; j < Global_113648.f_7690.f_136; j = j + 1)
+		for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_136; j = j + 1)
 		{
-			if (Global_113648.f_7690[j].f_6 == character)
+			if (G_SomeGlobalState.MessageCallStates[j].f_6 == character)
 			{
-				num5 = Global_113648.f_7690[j].f_4 - gameTimer;
+				num5 = G_SomeGlobalState.MessageCallStates[j].f_4 - gameTimer;
 			
 				if (num5 < 150000)
 					return true;
@@ -128316,12 +128316,12 @@ int func_821(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 	if (iParam4 <= 0)
 		return 0;
 
-	if (Global_113648.f_7690.f_650 < 30)
+	if (G_SomeGlobalState.MessageCallStates.f_650 < 30)
 	{
 		num = iParam0;
 	
-		if (Global_113648.f_7690.f_911 == num)
-			Global_113648.f_7690.f_911 = -1;
+		if (G_SomeGlobalState.MessageCallStates.f_911 == num)
+			G_SomeGlobalState.MessageCallStates.f_911 = -1;
 	
 		num.f_1 = 0;
 		num.f_6 = iParam2;
@@ -128337,8 +128337,8 @@ int func_821(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 		num.f_11 = -1;
 		MISC::SET_BIT(&(num.f_1), 0);
 		MISC::SET_BIT(&(num.f_1), 6);
-		Global_113648.f_7690.f_199[Global_113648.f_7690.f_650] = { num };
-		Global_113648.f_7690.f_650 = Global_113648.f_7690.f_650 + 1;
+		G_SomeGlobalState.MessageCallStates.f_199[G_SomeGlobalState.MessageCallStates.f_650] = { num };
+		G_SomeGlobalState.MessageCallStates.f_650 = G_SomeGlobalState.MessageCallStates.f_650 + 1;
 		return 1;
 	}
 

@@ -1442,7 +1442,7 @@ int func_17(eCharacter echParam0) // Position - 0xF52
 	if (!func_18(echParam0))
 		return 7;
 
-	return Global_113648.f_7690.f_919[echParam0];
+	return G_SomeGlobalState.MessageCallStates.f_919[echParam0];
 }
 
 BOOL func_18(eCharacter echParam0) // Position - 0xF76

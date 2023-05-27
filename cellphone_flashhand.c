@@ -5418,23 +5418,23 @@ BOOL func_93() // Position - 0x6A7B
 		{
 			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 		
-			for (i = 0; i < Global_113648.f_7690.f_136; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_136; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates[i].f_2, character))
 					if (func_96(entityCoords, func_97(i)))
 						return true;
 			}
 		
-			for (i = 0; i < Global_113648.f_7690.f_764; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_764; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690.f_651[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_651[i].f_2, character))
 					if (func_96(entityCoords, func_95(i)))
 						return true;
 			}
 		
-			for (i = 0; i < Global_113648.f_7690.f_866; i = i + 1)
+			for (i = 0; i < G_SomeGlobalState.MessageCallStates.f_866; i = i + 1)
 			{
-				if (IS_BIT_SET(Global_113648.f_7690.f_765[i].f_2, character))
+				if (IS_BIT_SET(G_SomeGlobalState.MessageCallStates.f_765[i].f_2, character))
 					if (func_96(entityCoords, func_94(i)))
 						return true;
 			}
@@ -5446,12 +5446,12 @@ BOOL func_93() // Position - 0x6A7B
 
 int func_94(int iParam0) // Position - 0x6B7B
 {
-	return Global_113648.f_7690.f_765[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_765[iParam0].f_7;
 }
 
 int func_95(int iParam0) // Position - 0x6B93
 {
-	return Global_113648.f_7690.f_651[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates.f_651[iParam0].f_7;
 }
 
 BOOL func_96(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position - 0x6BAB
@@ -5472,7 +5472,7 @@ BOOL func_96(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position
 
 int func_97(int iParam0) // Position - 0x6C16
 {
-	return Global_113648.f_7690[iParam0].f_7;
+	return G_SomeGlobalState.MessageCallStates[iParam0].f_7;
 }
 
 BOOL func_98(eCharacter echParam0) // Position - 0x6C2B

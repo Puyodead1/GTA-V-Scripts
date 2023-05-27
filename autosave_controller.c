@@ -487,7 +487,7 @@ void func_12(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x8BA
 	else
 		MISC::CLEAR_BIT(&(Global_113648.f_10018.f_25), 4);
 
-	Global_113648.f_7690.f_924 = MISC::GET_GAME_TIMER();
+	G_SomeGlobalState.MessageCallStates.f_924 = MISC::GET_GAME_TIMER();
 
 	if (Global_78821 == 62 || Global_78822 == 62)
 		func_13(2, true);
@@ -86661,15 +86661,15 @@ BOOL func_383() // Position - 0x6A5F1
 	
 		gameTimer = MISC::GET_GAME_TIMER();
 	
-		for (j = 0; j < Global_113648.f_7690.f_136; j = j + 1)
+		for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_136; j = j + 1)
 		{
-			num6 = Global_113648.f_7690[j].f_7;
+			num6 = G_SomeGlobalState.MessageCallStates[j].f_7;
 		
 			if (num6 != -1)
 			{
 				if (num6 != -1 && num6 != 51 && num6 != 62 && num6 != 52 && num6 != 62 && num6 != 53 && num6 != 62 && num6 != 54 && num6 != 62 && num6 != 55 && num6 != 62 && num6 != 56 && num6 != 62 && num6 != 57 && num6 != 62 && num6 != 58 && num6 != 62 && num6 != 59 && num6 != 62 && num6 != 60 && num6 != 62 && num6 != 61 && num6 != 62 && num6 != 62 && num6 != 63)
 				{
-					num7 = Global_113648.f_7690[j].f_4 - gameTimer;
+					num7 = G_SomeGlobalState.MessageCallStates[j].f_4 - gameTimer;
 				
 					if (num7 < 180000)
 						if (func_384(vector, num6))
@@ -86678,15 +86678,15 @@ BOOL func_383() // Position - 0x6A5F1
 			}
 		}
 	
-		for (j = 0; j < Global_113648.f_7690.f_764; j = j + 1)
+		for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_764; j = j + 1)
 		{
-			num8 = Global_113648.f_7690.f_651[j].f_7;
+			num8 = G_SomeGlobalState.MessageCallStates.f_651[j].f_7;
 		
 			if (num8 != -1)
 			{
 				if (num8 != -1 && num8 != 51 && num8 != 62 && num8 != 52 && num8 != 62 && num8 != 53 && num8 != 62 && num8 != 54 && num8 != 62 && num8 != 55 && num8 != 62 && num8 != 56 && num8 != 62 && num8 != 57 && num8 != 62 && num8 != 58 && num8 != 62 && num8 != 59 && num8 != 62 && num8 != 60 && num8 != 62 && num8 != 61 && num8 != 62 && num8 != 62 && num8 != 63)
 				{
-					num9 = Global_113648.f_7690.f_651[j].f_4 - gameTimer;
+					num9 = G_SomeGlobalState.MessageCallStates.f_651[j].f_4 - gameTimer;
 				
 					if (num9 < 180000)
 						if (func_384(vector, num8))
@@ -86695,15 +86695,15 @@ BOOL func_383() // Position - 0x6A5F1
 			}
 		}
 	
-		for (j = 0; j < Global_113648.f_7690.f_866; j = j + 1)
+		for (j = 0; j < G_SomeGlobalState.MessageCallStates.f_866; j = j + 1)
 		{
-			num10 = Global_113648.f_7690.f_765[j].f_7;
+			num10 = G_SomeGlobalState.MessageCallStates.f_765[j].f_7;
 		
 			if (num10 != -1)
 			{
 				if (num10 != -1 && num10 != 51 && num10 != 62 && num10 != 52 && num10 != 62 && num10 != 53 && num10 != 62 && num10 != 54 && num10 != 62 && num10 != 55 && num10 != 62 && num10 != 56 && num10 != 62 && num10 != 57 && num10 != 62 && num10 != 58 && num10 != 62 && num10 != 59 && num10 != 62 && num10 != 60 && num10 != 62 && num10 != 61 && num10 != 62 && num10 != 62 && num10 != 63)
 				{
-					num11 = Global_113648.f_7690.f_765[j].f_4 - gameTimer;
+					num11 = G_SomeGlobalState.MessageCallStates.f_765[j].f_4 - gameTimer;
 				
 					if (num11 < 180000)
 						if (func_384(vector, num10))

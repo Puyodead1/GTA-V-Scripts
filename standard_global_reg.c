@@ -91300,9 +91300,9 @@ void func_416(BOOL bParam0) // Position - 0x74097
 			}
 		}
 	
-		Global_113648.f_7690.f_911 = -1;
-		Global_113648.f_7690.f_912 = 0;
-		Global_113648.f_7690.f_913 = 0;
+		G_SomeGlobalState.MessageCallStates.f_911 = -1;
+		G_SomeGlobalState.MessageCallStates.f_912 = 0;
+		G_SomeGlobalState.MessageCallStates.f_913 = 0;
 	}
 
 	return;
@@ -94651,30 +94651,30 @@ void func_528(Any* panParam0, char* sParam1) // Position - 0x7959D
 
 void func_529() // Position - 0x795E1
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113648.f_7690), 925, "COMM_CONTROL_DATA_STRUCT");
-	func_540(&(Global_113648.f_7690), "COMM_CONTROL_QUEUED_CALLS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_136), "No_Queued_Calls");
-	func_539(&(Global_113648.f_7690.f_137), "COMM_CONTROL_MISSED_CALLS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_198), "No_Missed_Calls");
-	func_537(&(Global_113648.f_7690.f_199), "COMM_CONTROL_CHAT_CALLS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_650), "No_Chat_Calls");
-	func_536(&(Global_113648.f_7690.f_651), "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_764), "No_Queued_Texts");
-	func_534(&(Global_113648.f_7690.f_867), "COMM_CONTROL_SENT_TEXTS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_910), "No_Sent_Texts");
-	func_531(&(Global_113648.f_7690.f_765), "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_866), "No_Queued_Emails");
-	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113648.f_7690.f_911), "Last_Completed_Call");
-	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113648.f_7690.f_912), "Last_Call_Answered");
-	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113648.f_7690.f_913), "Last_Call_Had_Response");
-	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113648.f_7690.f_914), "Last_Call_Response");
-	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113648.f_7690.f_915), "Last_Completed_Text");
-	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113648.f_7690.f_916), "Last_Text_Had_Response");
-	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113648.f_7690.f_917), "Last_Text_Response");
-	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113648.f_7690.f_918), "Last_Completed_Email");
-	func_530(&(Global_113648.f_7690.f_919), "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_923), "Exile_Warning_Bitset");
-	MISC::REGISTER_INT_TO_SAVE(&(Global_113648.f_7690.f_924), "Comms_Game_time");
+	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_SomeGlobalState.MessageCallStates), 925, "COMM_CONTROL_DATA_STRUCT");
+	func_540(&(G_SomeGlobalState.MessageCallStates), "COMM_CONTROL_QUEUED_CALLS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_136), "No_Queued_Calls");
+	func_539(&(G_SomeGlobalState.MessageCallStates.f_137), "COMM_CONTROL_MISSED_CALLS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_198), "No_Missed_Calls");
+	func_537(&(G_SomeGlobalState.MessageCallStates.f_199), "COMM_CONTROL_CHAT_CALLS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_650), "No_Chat_Calls");
+	func_536(&(G_SomeGlobalState.MessageCallStates.f_651), "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_764), "No_Queued_Texts");
+	func_534(&(G_SomeGlobalState.MessageCallStates.f_867), "COMM_CONTROL_SENT_TEXTS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_910), "No_Sent_Texts");
+	func_531(&(G_SomeGlobalState.MessageCallStates.f_765), "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_866), "No_Queued_Emails");
+	MISC::REGISTER_ENUM_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_911), "Last_Completed_Call");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_912), "Last_Call_Answered");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_913), "Last_Call_Had_Response");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_914), "Last_Call_Response");
+	MISC::REGISTER_ENUM_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_915), "Last_Completed_Text");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_916), "Last_Text_Had_Response");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_917), "Last_Text_Response");
+	MISC::REGISTER_ENUM_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_918), "Last_Completed_Email");
+	func_530(&(G_SomeGlobalState.MessageCallStates.f_919), "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_923), "Exile_Warning_Bitset");
+	MISC::REGISTER_INT_TO_SAVE(&(G_SomeGlobalState.MessageCallStates.f_924), "Comms_Game_time");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }

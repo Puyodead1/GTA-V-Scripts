@@ -235,7 +235,7 @@ void func_10(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x315
 	else
 		MISC::CLEAR_BIT(&(Global_113648.f_10018.f_25), 4);
 
-	Global_113648.f_7690.f_924 = MISC::GET_GAME_TIMER();
+	G_SomeGlobalState.MessageCallStates.f_924 = MISC::GET_GAME_TIMER();
 
 	if (Global_78821 == 62 || Global_78822 == 62)
 		func_11(2, true);
