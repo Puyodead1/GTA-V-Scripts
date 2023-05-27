@@ -33154,7 +33154,7 @@ void func_1035(var uParam0, int iParam1) // Position - 0x2F3BA
 
 	if (!Global_78827)
 		if (!PLAYER::IS_PLAYER_DEAD(PLAYER::GET_PLAYER_INDEX()))
-			if (!Global_78828)
+			if (!G_TextMessageConfig)
 				if (CAM::IS_SCREEN_FADED_OUT() && !_IS_MISSION_REPEAT_ACTIVE(false))
 					CAM::DO_SCREEN_FADE_IN(800);
 

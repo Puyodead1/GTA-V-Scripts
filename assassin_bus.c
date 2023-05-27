@@ -4248,7 +4248,7 @@ void func_49(BOOL bParam0, BOOL bParam1) // Position - 0x1E37
 	{
 		num = func_50();
 		num2 = Global_91433[num];
-		num3 = Global_78828.f_109[num2];
+		num3 = G_TextMessageConfig.f_109[num2];
 	
 		if (num == -1)
 		{
@@ -4341,7 +4341,7 @@ void func_53(var uParam0, int iParam1) // Position - 0x1F8F
 
 	if (!Global_78827)
 		if (!PLAYER::IS_PLAYER_DEAD(PLAYER::GET_PLAYER_INDEX()))
-			if (!Global_78828)
+			if (!G_TextMessageConfig)
 				if (CAM::IS_SCREEN_FADED_OUT() && !_IS_MISSION_REPEAT_ACTIVE(false))
 					CAM::DO_SCREEN_FADE_IN(800);
 
@@ -16516,7 +16516,7 @@ BOOL func_357(int iParam0) // Position - 0x14C9A
 		PLAYER::START_FIRING_AMNESTY(5000);
 
 	num = Global_91433[iParam0];
-	num2 = Global_78828.f_109[num];
+	num2 = G_TextMessageConfig.f_109[num];
 	func_361(num2, true);
 	PLAYER::SPECIAL_ABILITY_CHARGE_ON_MISSION_FAILED(PLAYER::PLAYER_ID(), 0);
 	PLAYER::SPECIAL_ABILITY_DEACTIVATE(PLAYER::PLAYER_ID(), 0);

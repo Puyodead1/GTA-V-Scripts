@@ -34666,7 +34666,7 @@ void func_207(int iParam0, BOOL bParam1) // Position - 0x2A209
 	if (unk.f_22 != 0)
 		func_231(unk.f_22, 0);
 
-	func_222(iParam0, Global_78828);
+	func_222(iParam0, G_TextMessageConfig);
 
 	if (!bParam1)
 	{
@@ -44357,7 +44357,7 @@ BOOL func_297(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -117626,7 +117626,7 @@ struct<2> func_734(int iParam0) // Position - 0x9C792
 
 BOOL func_735(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x9C7FF
 {
-	if (!func_334(0) || Global_78828 || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_334(0) || G_TextMessageConfig || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
 	switch (Global_78813)

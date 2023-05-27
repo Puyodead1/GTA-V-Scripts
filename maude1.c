@@ -31160,7 +31160,7 @@ void func_201(int iParam0, BOOL bParam1) // Position - 0x2223E
 	if (unk.f_22 != 0)
 		func_225(unk.f_22, 0);
 
-	func_219(iParam0, Global_78828);
+	func_219(iParam0, G_TextMessageConfig);
 
 	if (!bParam1)
 	{

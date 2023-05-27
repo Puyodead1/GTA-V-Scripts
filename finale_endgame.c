@@ -930,7 +930,7 @@ BOOL func_18(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -113025,7 +113025,7 @@ void func_656(int iParam0, Hash hParam1, int iParam2) // Position - 0x9579D
 			{
 				STATS::STAT_SET_INT(hParam1, Global_113648.f_10018.f_21, true);
 			
-				if (!Global_78828)
+				if (!G_TextMessageConfig)
 					STATS::PRESENCE_EVENT_UPDATESTAT_INT(hParam1, Global_113648.f_9087.f_330[iParam0].f_4, 0);
 			}
 		}

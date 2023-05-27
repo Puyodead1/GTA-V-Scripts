@@ -89285,7 +89285,7 @@ Hash func_482(int iParam0) // Position - 0x6D232
 
 	if (iParam0 != -1)
 	{
-		switch (Global_78828.f_6825[iParam0].f_1)
+		switch (G_TextMessageConfig.f_6825[iParam0].f_1)
 		{
 			case 12:
 				func_491(iParam0, &unk);
@@ -89328,25 +89328,25 @@ void func_483(int iParam0, char* sParam1) // Position - 0x6D2E6
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_1, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_3, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_9, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_11, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_12, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_13, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_12, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_13, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -89357,7 +89357,7 @@ int func_484(int iParam0) // Position - 0x6D4B5
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		if (iParam0 >= Global_78828.f_12526[i] && iParam0 <= Global_78828.f_12526[i].f_1)
+		if (iParam0 >= G_TextMessageConfig.f_12526[i] && iParam0 <= G_TextMessageConfig.f_12526[i].f_1)
 			return i;
 	}
 
@@ -89368,20 +89368,20 @@ void func_485(int iParam0, char* sParam1) // Position - 0x6D4FC
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -89390,33 +89390,33 @@ void func_486(int iParam0, char* sParam1) // Position - 0x6D63F
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_COPY(&unk, { Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2] }, 16);
+	TEXT_LABEL_COPY(&unk, { G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2] }, 16);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_8, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_487(int iParam0, char* sParam1) // Position - 0x6D70D
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_APPEND_STRING(sParam1, &Global_78828.f_4151[Global_78828.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_STRING(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
 	return;
 }
 
 void func_488(int iParam0, char* sParam1) // Position - 0x6D748
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	return;
 }
 
@@ -89424,28 +89424,28 @@ void func_489(int iParam0, char* sParam1) // Position - 0x6D79F
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_490(int iParam0, char* sParam1) // Position - 0x6D83E
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_6825[iParam0].f_2, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_6825[iParam0].f_2, 64);
 	return;
 }
 
 void func_491(int iParam0, char* sParam1) // Position - 0x6D870
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_484(iParam0), 64);
 	return;
 }
@@ -95089,7 +95089,7 @@ BOOL func_557(int iParam0) // Position - 0x77802
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 

@@ -32144,7 +32144,7 @@ void func_205(int iParam0, BOOL bParam1) // Position - 0x22A54
 	if (unk.f_22 != 0)
 		func_232(unk.f_22, 0);
 
-	func_223(iParam0, Global_78828);
+	func_223(iParam0, G_TextMessageConfig);
 
 	if (!bParam1)
 	{
@@ -46812,7 +46812,7 @@ struct<2> func_498(int iParam0) // Position - 0x389B6
 
 BOOL func_499(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x38A23
 {
-	if (!func_501(0) || Global_78828 || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_501(0) || G_TextMessageConfig || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
 	switch (Global_78813)

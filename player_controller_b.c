@@ -866,7 +866,7 @@ BOOL func_8(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position - 
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -113115,7 +113115,7 @@ BOOL func_645(int iParam0) // Position - 0x951FE
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 
@@ -113161,7 +113161,7 @@ BOOL func_646(int iParam0, var uParam1, var uParam2) // Position - 0x95266
 			{
 				if (Global_91433[i] != -1)
 				{
-					num2 = Global_78828.f_109[Global_91433[i]];
+					num2 = G_TextMessageConfig.f_109[Global_91433[i]];
 					num3 = num2;
 				
 					if (func_647(Global_91469[num3].f_12, num))
@@ -117568,10 +117568,10 @@ void func_707() // Position - 0x9BDB3
 				
 					if (num != -1)
 					{
-						if (Global_78828.f_6825[num] == -868169264)
+						if (G_TextMessageConfig.f_6825[num] == -868169264)
 						{
 							flag = true;
-							num2 = Global_78828.f_109[Global_78828.f_6825[num].f_2];
+							num2 = G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[num].f_2];
 						
 							if (IS_BIT_SET(Global_91469[num2].f_11, 0))
 								character = CHAR_MICHAEL;

@@ -399,7 +399,7 @@ void func_7(int iParam0) // Position - 0x2A2
 	AUDIO::TRIGGER_MUSIC_EVENT("GLOBAL_KILL_MUSIC");
 	func_8();
 	Global_32542 = 0;
-	Global_78828.f_9 = -1;
+	G_TextMessageConfig.f_9 = -1;
 	Global_78821 = -1;
 	return;
 }
@@ -1618,7 +1618,7 @@ int func_67(int iParam0, int iParam1) // Position - 0x1BCB
 		return -2;
 
 	num = func_607(iParam0);
-	num2 = Global_78828.f_109[iParam0];
+	num2 = G_TextMessageConfig.f_109[iParam0];
 	scriptHash = Global_91469[num2].f_6;
 
 	if (!IS_BIT_SET(Global_91469[num2].f_15, 4))
@@ -1636,7 +1636,7 @@ int func_67(int iParam0, int iParam1) // Position - 0x1BCB
 		{
 			func_7(num2);
 			func_587(iParam0, num, false);
-			return Global_78828.f_109[iParam0].f_2;
+			return G_TextMessageConfig.f_109[iParam0].f_2;
 		}
 	}
 
@@ -1694,7 +1694,7 @@ int func_67(int iParam0, int iParam1) // Position - 0x1BCB
 				if (num5 == 2)
 					return -1;
 				else if (num5 == 0)
-					return Global_78828.f_109[iParam0].f_2;
+					return G_TextMessageConfig.f_109[iParam0].f_2;
 			}
 		
 			MISC::SET_BIT(&(Global_91433[num].f_1), 1);
@@ -1814,7 +1814,7 @@ int func_68(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 0
 	Global_100717 = 0;
 	func_587(iParam0, iParam1, bParam3);
 	func_69(false, iParam2);
-	return Global_78828.f_109[iParam0].f_2;
+	return G_TextMessageConfig.f_109[iParam0].f_2;
 }
 
 void func_69(BOOL bParam0, int iParam1) // Position - 0x204D
@@ -1894,7 +1894,7 @@ void func_71(int iParam0) // Position - 0x2142
 
 	if (Global_100681 != 12)
 	{
-		num = Global_78828.f_109[iParam0];
+		num = G_TextMessageConfig.f_109[iParam0];
 		string1 = { Global_91469[num] };
 	
 		if (IS_BIT_SET(Global_91469[num].f_15, 1))
@@ -3263,10 +3263,10 @@ int func_104(int iParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam4) 
 		else if (iParam2 == 84 || iParam2 == 85)
 			func_105(4);
 
-	Global_78828.f_7 = 1;
-	Global_78828.f_6 = 1;
+	G_TextMessageConfig.f_7 = 1;
+	G_TextMessageConfig.f_6 = 1;
 	func_58(iParam2, false);
-	return Global_78828.f_109[iParam0].f_1;
+	return G_TextMessageConfig.f_109[iParam0].f_1;
 }
 
 void func_105(int iParam0) // Position - 0x46FF
@@ -36446,7 +36446,7 @@ void func_265(int iParam0, Hash hParam1, int iParam2) // Position - 0x2C448
 			{
 				STATS::STAT_SET_INT(hParam1, Global_113648.f_10018.f_21, true);
 			
-				if (!Global_78828)
+				if (!G_TextMessageConfig)
 					STATS::PRESENCE_EVENT_UPDATESTAT_INT(hParam1, Global_113648.f_9087.f_330[iParam0].f_4, 0);
 			}
 		}
@@ -37752,7 +37752,7 @@ void func_298(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) 
 	var unk2;
 
 	if (iParam3 != -1)
-		Global_78828.f_9 = iParam3;
+		G_TextMessageConfig.f_9 = iParam3;
 
 	if (Global_97601)
 	{
@@ -39387,7 +39387,7 @@ void func_314(int iParam0) // Position - 0x30188
 	int num3;
 	int num4;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 	MISC::CLEAR_BIT(&(Global_100681.f_20), 17);
 	func_317(&Global_91469[num], 1, 0);
 
@@ -97115,7 +97115,7 @@ void func_587(int iParam0, int iParam1, BOOL bParam2) // Position - 0x7BDFA
 		func_6(&(Global_91433[iParam1].f_3));
 
 	func_590();
-	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(Global_91469[Global_78828.f_109[iParam0]].f_6);
+	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(Global_91469[G_TextMessageConfig.f_109[iParam0]].f_6);
 	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("mission_stat_watcher"));
 	func_588(iParam0);
 	GRAPHICS::ANIMPOSTFX_STOP_ALL();
@@ -97802,7 +97802,7 @@ void func_611(int iParam0, BOOL bParam1) // Position - 0x7CEBA
 	if (unk.f_22 != 0)
 		func_627(unk.f_22, 0);
 
-	func_626(iParam0, Global_78828);
+	func_626(iParam0, G_TextMessageConfig);
 
 	if (!bParam1)
 	{
@@ -101598,7 +101598,7 @@ int func_646(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -113173,7 +113173,7 @@ BOOL func_802(int iParam0, char* sParam1) // Position - 0x92CF3
 
 void func_803() // Position - 0x92DDF
 {
-	Global_78828 = true;
+	G_TextMessageConfig = true;
 	func_874();
 	func_873();
 	Global_43806 = 1;
@@ -113197,7 +113197,7 @@ void func_803() // Position - 0x92DDF
 	func_807();
 	func_805();
 	func_804();
-	Global_78828 = false;
+	G_TextMessageConfig = false;
 	return;
 }
 
@@ -120258,15 +120258,15 @@ void func_874() // Position - 0xA2294
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_78828.f_10[i] = 0;
+		G_TextMessageConfig.f_10[i] = 0;
 	}
 
 	Global_113648.f_9087.f_1 = 0;
 	Global_113648.f_10018.f_25 = 0;
-	Global_78828.f_9 = -1;
-	Global_78828.f_7 = 0;
-	Global_78828.f_6 = 0;
-	Global_78828.f_2 = 1;
+	G_TextMessageConfig.f_9 = -1;
+	G_TextMessageConfig.f_7 = 0;
+	G_TextMessageConfig.f_6 = 0;
+	G_TextMessageConfig.f_2 = 1;
 	Global_78821 = -1;
 	Global_100719 = -1;
 	return;
@@ -120280,7 +120280,7 @@ void func_875() // Position - 0xA2320
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_113648.f_9087.f_2[i].f_1 = Global_78828.f_12526[i];
+		Global_113648.f_9087.f_2[i].f_1 = G_TextMessageConfig.f_12526[i];
 	}
 
 	return;
@@ -120983,7 +120983,7 @@ Hash func_904(int iParam0) // Position - 0xA3018
 
 	if (iParam0 != -1)
 	{
-		switch (Global_78828.f_6825[iParam0].f_1)
+		switch (G_TextMessageConfig.f_6825[iParam0].f_1)
 		{
 			case 12:
 				func_913(iParam0, &unk);
@@ -121026,25 +121026,25 @@ void func_905(int iParam0, char* sParam1) // Position - 0xA30CC
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_1, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_3, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_9, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_11, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_12, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_13, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_12, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_13, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -121055,7 +121055,7 @@ int func_906(int iParam0) // Position - 0xA329B
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		if (iParam0 >= Global_78828.f_12526[i] && iParam0 <= Global_78828.f_12526[i].f_1)
+		if (iParam0 >= G_TextMessageConfig.f_12526[i] && iParam0 <= G_TextMessageConfig.f_12526[i].f_1)
 			return i;
 	}
 
@@ -121066,20 +121066,20 @@ void func_907(int iParam0, char* sParam1) // Position - 0xA32E2
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -121088,33 +121088,33 @@ void func_908(int iParam0, char* sParam1) // Position - 0xA3425
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_COPY(&unk, { Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2] }, 16);
+	TEXT_LABEL_COPY(&unk, { G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2] }, 16);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_8, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_909(int iParam0, char* sParam1) // Position - 0xA34F3
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_APPEND_STRING(sParam1, &Global_78828.f_4151[Global_78828.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_STRING(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
 	return;
 }
 
 void func_910(int iParam0, char* sParam1) // Position - 0xA352E
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	return;
 }
 
@@ -121122,28 +121122,28 @@ void func_911(int iParam0, char* sParam1) // Position - 0xA3585
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_912(int iParam0, char* sParam1) // Position - 0xA3624
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_6825[iParam0].f_2, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_6825[iParam0].f_2, 64);
 	return;
 }
 
 void func_913(int iParam0, char* sParam1) // Position - 0xA3656
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_906(iParam0), 64);
 	return;
 }

@@ -8368,7 +8368,7 @@ BOOL func_185(int iParam0) // Position - 0xC388
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 

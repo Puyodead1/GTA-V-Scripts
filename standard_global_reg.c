@@ -91356,7 +91356,7 @@ void func_418(int iParam0, Hash hParam1, int iParam2) // Position - 0x7423D
 			{
 				STATS::STAT_SET_INT(hParam1, Global_113648.f_10018.f_21, true);
 			
-				if (!Global_78828)
+				if (!G_TextMessageConfig)
 					STATS::PRESENCE_EVENT_UPDATESTAT_INT(hParam1, Global_113648.f_9087.f_330[iParam0].f_4, 0);
 			}
 		}

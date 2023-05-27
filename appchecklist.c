@@ -844,7 +844,7 @@ void func_20() // Position - 0xCE1
 		{
 			if (Global_95682 < 52)
 			{
-				num = Global_78828.f_109[Global_91433[i]];
+				num = G_TextMessageConfig.f_109[Global_91433[i]];
 				TEXT_LABEL_COPY(&Global_95473[Global_95682], { func_24(num) }, 4);
 				Global_95682 = Global_95682 + 1;
 			}

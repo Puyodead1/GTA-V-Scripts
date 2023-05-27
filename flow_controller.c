@@ -107,19 +107,19 @@ void main() // Position - 0x0
 	}
 
 	bLocal_57 = false;
-	Global_78828.f_1 = 0;
-	Global_78828.f_2 = 1;
+	G_TextMessageConfig.f_1 = 0;
+	G_TextMessageConfig.f_2 = 1;
 
 	while (true)
 	{
-		if (Global_78828.f_2)
+		if (G_TextMessageConfig.f_2)
 		{
 			num = 0;
 		
-			while (Global_78828.f_2 && num < 32)
+			while (G_TextMessageConfig.f_2 && num < 32)
 			{
 				if (IS_BIT_SET(Global_113648.f_9087.f_2[num], 1))
-					Global_78828.f_2 = 0;
+					G_TextMessageConfig.f_2 = 0;
 				else
 					num = num + 1;
 			
@@ -130,7 +130,7 @@ void main() // Position - 0x0
 		{
 			if (!Global_113648.f_9087.f_1)
 				if (Global_113648.f_9087)
-					if (!Global_78828)
+					if (!G_TextMessageConfig)
 						if (!MISC::IS_AUTO_SAVE_IN_PROGRESS())
 							func_1();
 		
@@ -167,18 +167,18 @@ void func_1() // Position - 0x18C
 	func_1079();
 	num2 = 0;
 
-	if (Global_78828.f_9 != -1)
+	if (G_TextMessageConfig.f_9 != -1)
 	{
 		num3 = 1;
 		iLocal_56 = 0;
-		iLocal_55 = Global_78828.f_9;
+		iLocal_55 = G_TextMessageConfig.f_9;
 	}
-	else if (Global_78828.f_7)
+	else if (G_TextMessageConfig.f_7)
 	{
 		iLocal_55 = 0;
 		iLocal_56 = 0;
 		num3 = 32;
-		Global_78828.f_7 = 0;
+		G_TextMessageConfig.f_7 = 0;
 	}
 	else
 	{
@@ -194,10 +194,10 @@ void func_1() // Position - 0x18C
 				num = iLocal_55;
 				func_2(num, false);
 			
-				if (Global_78828.f_6)
+				if (G_TextMessageConfig.f_6)
 				{
 					func_2(num, true);
-					Global_78828.f_6 = 0;
+					G_TextMessageConfig.f_6 = 0;
 				}
 			
 				num2 = num2 + 1;
@@ -210,7 +210,7 @@ void func_1() // Position - 0x18C
 			if (iLocal_56 == 32)
 			{
 				Global_113648.f_9087.f_1 = 1;
-				Global_78828.f_1 = 0;
+				G_TextMessageConfig.f_1 = 0;
 				return;
 			}
 		}
@@ -220,7 +220,7 @@ void func_1() // Position - 0x18C
 		if (iLocal_55 == 32)
 		{
 			if (!bLocal_57)
-				Global_78828.f_1 = 0;
+				G_TextMessageConfig.f_1 = 0;
 		
 			iLocal_56 = iLocal_56 + 1;
 			bLocal_57 = false;
@@ -241,8 +241,8 @@ void func_2(int iParam0, BOOL bParam1) // Position - 0x27D
 
 	num = Global_113648.f_9087.f_2[iParam0].f_1;
 	num2 = num;
-	num3 = Global_78828.f_12526[iParam0];
-	num4 = Global_78828.f_12526[iParam0].f_1;
+	num3 = G_TextMessageConfig.f_12526[iParam0];
+	num4 = G_TextMessageConfig.f_12526[iParam0].f_1;
 
 	if (num < num3)
 		return;
@@ -262,7 +262,7 @@ void func_2(int iParam0, BOOL bParam1) // Position - 0x27D
 	func_3(iParam0, num);
 	num = Global_113648.f_9087.f_2[iParam0].f_1;
 
-	if (Global_78828.f_6825[num] == 531432813)
+	if (G_TextMessageConfig.f_6825[num] == 531432813)
 		func_3(iParam0, num);
 
 	if (bParam1)
@@ -284,8 +284,8 @@ void func_3(int iParam0, int iParam1) // Position - 0x371
 	int num3;
 
 	num = -1;
-	num2 = Global_78828.f_6825[iParam1];
-	num3 = Global_78828.f_6825[iParam1].f_2;
+	num2 = G_TextMessageConfig.f_6825[iParam1];
+	num3 = G_TextMessageConfig.f_6825[iParam1].f_2;
 
 	switch (num2)
 	{
@@ -444,7 +444,7 @@ void func_3(int iParam0, int iParam1) // Position - 0x371
 	{
 		if (num != -1)
 		{
-			Global_78828.f_1 = 1;
+			G_TextMessageConfig.f_1 = 1;
 			bLocal_57 = true;
 		}
 	
@@ -489,8 +489,8 @@ void func_4(int iParam0, eCharacter echParam1) // Position - 0x656
 	}
 
 	num = Global_113648.f_9087.f_2[iParam0].f_1;
-	num2 = Global_78828.f_12526[iParam0];
-	num3 = Global_78828.f_12526[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_12526[iParam0];
+	num3 = G_TextMessageConfig.f_12526[iParam0].f_1;
 
 	if (num < num2)
 		return;
@@ -503,10 +503,10 @@ void func_4(int iParam0, eCharacter echParam1) // Position - 0x656
 
 	while (num4 <= num3)
 	{
-		if (Global_78828.f_6825[num4] == 531432813)
+		if (G_TextMessageConfig.f_6825[num4] == 531432813)
 		{
-			num5 = Global_78828.f_6825[num4].f_2;
-			character = Global_78828.f_109[num5];
+			num5 = G_TextMessageConfig.f_6825[num4].f_2;
+			character = G_TextMessageConfig.f_109[num5];
 		
 			if (character == echParam1)
 			{
@@ -702,7 +702,7 @@ BOOL func_5(int iParam0, int iParam1, int iParam2, var uParam3) // Position - 0x
 			break;
 	
 		case 2014563601:
-			Global_78828.f_6 = 1;
+			G_TextMessageConfig.f_6 = 1;
 			*uParam3 = -2;
 			break;
 	
@@ -792,10 +792,10 @@ int func_8(int iParam0, int iParam1) // Position - 0xCBD
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 	num = 0;
 
-	if (Global_78828.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
 		num = 1;
 
 	func_9(iParam1, character, num);
@@ -842,7 +842,7 @@ Hash func_10(int iParam0) // Position - 0xE48
 
 	if (iParam0 != -1)
 	{
-		switch (Global_78828.f_6825[iParam0].f_1)
+		switch (G_TextMessageConfig.f_6825[iParam0].f_1)
 		{
 			case 12:
 				func_19(iParam0, &unk);
@@ -885,25 +885,25 @@ void func_11(int iParam0, char* sParam1) // Position - 0xEFC
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_1, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_3, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_9, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_11, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_12, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_6684[Global_78828.f_6825[iParam0].f_2].f_13, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_12, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_6684[G_TextMessageConfig.f_6825[iParam0].f_2].f_13, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -914,7 +914,7 @@ int func_12(int iParam0) // Position - 0x10CB
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		if (iParam0 >= Global_78828.f_12526[i] && iParam0 <= Global_78828.f_12526[i].f_1)
+		if (iParam0 >= G_TextMessageConfig.f_12526[i] && iParam0 <= G_TextMessageConfig.f_12526[i].f_1)
 			return i;
 	}
 
@@ -925,20 +925,20 @@ void func_13(int iParam0, char* sParam1) // Position - 0x1112
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_4, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_5, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_4, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_5, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_6, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_7, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4824[Global_78828.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_6, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_7, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4824[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
@@ -947,33 +947,33 @@ void func_14(int iParam0, char* sParam1) // Position - 0x1255
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_COPY(&unk, { Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2] }, 16);
+	TEXT_LABEL_COPY(&unk, { G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2] }, 16);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_8, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_9, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_8, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_9, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_10, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_4160[Global_78828.f_6825[iParam0].f_2].f_11, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_10, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_4160[G_TextMessageConfig.f_6825[iParam0].f_2].f_11, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_15(int iParam0, char* sParam1) // Position - 0x1323
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_APPEND_STRING(sParam1, &Global_78828.f_4151[Global_78828.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_STRING(sParam1, &G_TextMessageConfig.f_4151[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
 	return;
 }
 
 void func_16(int iParam0, char* sParam1) // Position - 0x135E
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_3590[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_3590[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	return;
 }
 
@@ -981,28 +981,28 @@ void func_17(int iParam0, char* sParam1) // Position - 0x13B5
 {
 	var unk;
 
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2], 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_1, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2], 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_1, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
-	TEXT_LABEL_ASSIGN_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_2, 64);
-	TEXT_LABEL_APPEND_INT(&unk, Global_78828.f_109[Global_78828.f_6825[iParam0].f_2].f_3, 64);
+	TEXT_LABEL_ASSIGN_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_2, 64);
+	TEXT_LABEL_APPEND_INT(&unk, G_TextMessageConfig.f_109[G_TextMessageConfig.f_6825[iParam0].f_2].f_3, 64);
 	TEXT_LABEL_APPEND_INT(sParam1, MISC::GET_HASH_KEY(&unk), 64);
 	return;
 }
 
 void func_18(int iParam0, char* sParam1) // Position - 0x1454
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
-	TEXT_LABEL_APPEND_INT(sParam1, Global_78828.f_6825[iParam0].f_2, 64);
+	TEXT_LABEL_APPEND_INT(sParam1, G_TextMessageConfig.f_6825[iParam0].f_2, 64);
 	return;
 }
 
 void func_19(int iParam0, char* sParam1) // Position - 0x1486
 {
-	TEXT_LABEL_ASSIGN_INT(sParam1, Global_78828.f_6825[iParam0], 64);
+	TEXT_LABEL_ASSIGN_INT(sParam1, G_TextMessageConfig.f_6825[iParam0], 64);
 	TEXT_LABEL_APPEND_INT(sParam1, func_12(iParam0), 64);
 	return;
 }
@@ -1149,13 +1149,13 @@ int func_30(int iParam0) // Position - 0x1717
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (!func_22(character))
 		return -2;
 
-	character2 = Global_78828.f_109[iParam0].f_1;
-	character3 = Global_78828.f_109[iParam0].f_2;
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	character3 = G_TextMessageConfig.f_109[iParam0].f_2;
 	func_113(_GET_CHARACTER_MODEL(character), character3, character2, true);
 	func_31(_GET_CHARACTER_MODEL(character), character3, character2, true, 1);
 	return -2;
@@ -26688,10 +26688,10 @@ int func_114(int iParam0) // Position - 0x1B996
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
 
-	if (Global_78828.f_109[iParam0].f_2 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == CHAR_FRANKLIN)
 	{
 		unk.f_9 = 49;
 		unk.f_59 = 2;
@@ -39859,9 +39859,9 @@ eCharacter func_264(int iParam0) // Position - 0x2B3AD
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
-	character3 = Global_78828.f_109[iParam0].f_2;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	character3 = G_TextMessageConfig.f_109[iParam0].f_2;
 	func_265(character, &func);
 	func();
 
@@ -40426,7 +40426,7 @@ BOOL func_294(eCharacter echParam0) // Position - 0x2BC9B
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == echParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == echParam0)
 				return true;
 	}
 
@@ -41623,7 +41623,7 @@ eCharacter func_329(int iParam0, int iParam1) // Position - 0x2DA30
 		return -2;
 
 	num = func_778(iParam1);
-	character = Global_78828.f_109[iParam1];
+	character = G_TextMessageConfig.f_109[iParam1];
 	scriptHash = Global_91469[character].f_6;
 
 	if (func_777())
@@ -41636,7 +41636,7 @@ eCharacter func_329(int iParam0, int iParam1) // Position - 0x2DA30
 		{
 			func_1115(character);
 			func_756(iParam1, num, true);
-			return Global_78828.f_109[iParam1].f_2;
+			return G_TextMessageConfig.f_109[iParam1].f_2;
 		}
 	}
 
@@ -41837,7 +41837,7 @@ eCharacter func_330(int iParam0, int iParam1, eCharacter echParam2, BOOL bParam3
 	Global_100717 = 0;
 	func_756(iParam0, iParam1, bParam3);
 	func_331(false, echParam2);
-	return Global_78828.f_109[iParam0].f_2;
+	return G_TextMessageConfig.f_109[iParam0].f_2;
 }
 
 void func_331(BOOL bParam0, int iParam1) // Position - 0x2DEF1
@@ -41917,7 +41917,7 @@ void func_333(int iParam0) // Position - 0x2DFE6
 
 	if (Global_100681 != 12)
 	{
-		num = Global_78828.f_109[iParam0];
+		num = G_TextMessageConfig.f_109[iParam0];
 		string1 = { Global_91469[num] };
 	
 		if (IS_BIT_SET(Global_91469[num].f_15, 1))
@@ -43624,10 +43624,10 @@ eCharacter func_378(int iParam0, int iParam1, eCharacter echParam2, BOOL bParam3
 		else if (echParam2 == 84 || echParam2 == 85)
 			func_380(4);
 
-	Global_78828.f_7 = 1;
-	Global_78828.f_6 = 1;
+	G_TextMessageConfig.f_7 = 1;
+	G_TextMessageConfig.f_6 = 1;
 	func_379(echParam2, false);
-	return Global_78828.f_109[iParam0].f_1;
+	return G_TextMessageConfig.f_109[iParam0].f_1;
 }
 
 void func_379(int iParam0, BOOL bParam1) // Position - 0x30C2F
@@ -50327,7 +50327,7 @@ void func_434(eCharacter echParam0, Hash hParam1, int iParam2) // Position - 0x3
 			{
 				STATS::STAT_SET_INT(hParam1, Global_113648.f_10018.f_21, true);
 			
-				if (!Global_78828)
+				if (!G_TextMessageConfig)
 					STATS::PRESENCE_EVENT_UPDATESTAT_INT(hParam1, Global_113648.f_9087.f_330[echParam0].f_4, 0);
 			}
 		}
@@ -51422,7 +51422,7 @@ void func_465(int iParam0, int iParam1, eCharacter echParam2, int iParam3, BOOL 
 	var unk2;
 
 	if (iParam3 != -1)
-		Global_78828.f_9 = iParam3;
+		G_TextMessageConfig.f_9 = iParam3;
 
 	if (Global_97601)
 	{
@@ -53057,7 +53057,7 @@ void func_481(int iParam0) // Position - 0x4021D
 	int num3;
 	int num4;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 	MISC::CLEAR_BIT(&(Global_100681.f_20), 17);
 	func_483(&Global_91469[num], 1, 0);
 
@@ -110893,7 +110893,7 @@ void func_756(int iParam0, int iParam1, BOOL bParam2) // Position - 0x8C39A
 		func_771(&(Global_91433[iParam1].f_3));
 
 	func_759();
-	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(Global_91469[Global_78828.f_109[iParam0]].f_6);
+	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(Global_91469[G_TextMessageConfig.f_109[iParam0]].f_6);
 	SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(joaat("mission_stat_watcher"));
 	func_757(iParam0);
 	GRAPHICS::ANIMPOSTFX_STOP_ALL();
@@ -111664,14 +111664,14 @@ int func_788(int iParam0) // Position - 0x8D620
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (!func_22(character))
 		return -2;
 
-	character2 = Global_78828.f_109[iParam0].f_1;
-	character3 = Global_78828.f_109[iParam0].f_2;
-	num = Global_78828.f_109[iParam0].f_3;
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	character3 = G_TextMessageConfig.f_109[iParam0].f_2;
+	num = G_TextMessageConfig.f_109[iParam0].f_3;
 
 	if (num <= 0)
 		return -2;
@@ -112697,8 +112697,8 @@ int func_815(int iParam0) // Position - 0x8E926
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
-	character2 = Global_78828.f_3590[iParam0].f_1;
+	character = G_TextMessageConfig.f_3590[iParam0];
+	character2 = G_TextMessageConfig.f_3590[iParam0].f_1;
 	flag = func_307(PLAYER::PLAYER_PED_ID(), character, 0);
 
 	if (character2 == CHAR_FRANKLIN)
@@ -112723,18 +112723,18 @@ int func_816(int iParam0) // Position - 0x8E97A
 		if (AUDIO::IS_SCRIPTED_CONVERSATION_ONGOING())
 			return -1;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (character < CHAR_MICHAEL || character >= CHAR_FRANK_TREV_CONF)
 		return -2;
 
-	character2 = Global_78828.f_109[iParam0].f_1;
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
 
 	if (character2 != -1)
 		if (!func_818(character2))
 			func_817(character2, true);
 
-	character3 = Global_78828.f_109[iParam0].f_2;
+	character3 = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (IS_BIT_SET(character3, 2))
 		if (!CUTSCENE::IS_CUTSCENE_PLAYING())
@@ -112742,7 +112742,7 @@ int func_816(int iParam0) // Position - 0x8E97A
 
 	func_326(1, character, IS_BIT_SET(character3, 0));
 	func_326(2, character, true);
-	Global_78828.f_7 = 1;
+	G_TextMessageConfig.f_7 = 1;
 	return -2;
 }
 
@@ -112801,9 +112801,9 @@ int func_821(int iParam0) // Position - 0x8EB12
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 
-	if (Global_78828.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
 	{
 		PLAYER::SPECIAL_ABILITY_UNLOCK(_GET_CHARACTER_MODEL(character), 0);
 		Global_113648.f_2365.f_539.f_2383[character] = 1;
@@ -112825,10 +112825,10 @@ int func_822(int iParam0) // Position - 0x8EB84
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
 		flag = true;
 
 	func_136(character, flag);
@@ -112844,11 +112844,11 @@ int func_823(int iParam0) // Position - 0x8EBC7
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	flag = false;
 
-	if (Global_78828.f_109[iParam0].f_2 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == CHAR_FRANKLIN)
 		flag = true;
 
 	func_824(CHAR_MICHAEL, character, character2, !flag);
@@ -115225,10 +115225,10 @@ int func_831(int iParam0) // Position - 0x9166D
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == CHAR_FRANKLIN)
 		flag = true;
 
 	func_833(character, flag, false);
@@ -115308,8 +115308,8 @@ int func_835(int iParam0) // Position - 0x917B7
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
-	character2 = Global_78828.f_3590[iParam0].f_1;
+	character = G_TextMessageConfig.f_3590[iParam0];
+	character2 = G_TextMessageConfig.f_3590[iParam0].f_1;
 	flag = IS_BIT_SET(character2, 0);
 	flag2 = IS_BIT_SET(character2, 1);
 	func_837(character, flag);
@@ -118116,7 +118116,7 @@ int func_860(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -120274,10 +120274,10 @@ int func_914(int iParam0) // Position - 0x99291
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 	num = 0;
 
-	if (Global_78828.f_3590[iParam0].f_1 % 1000000 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 % 1000000 == 1)
 		num = 1;
 
 	if (character == _CHAR_VIRTUAL_MP)
@@ -120306,8 +120306,8 @@ int func_916(int iParam0) // Position - 0x9930A
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
-	character2 = Global_78828.f_3590[iParam0].f_1;
+	character = G_TextMessageConfig.f_3590[iParam0];
+	character2 = G_TextMessageConfig.f_3590[iParam0].f_1;
 	character3 = Global_113648.f_18535[character2];
 
 	if (character3 != 318)
@@ -120343,9 +120343,9 @@ int func_918(int iParam0) // Position - 0x993E5
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0];
 
-	if (Global_78828.f_3590[iParam0].f_1 % 1000000 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 % 1000000 == 1)
 		num = 0;
 	else
 		num = 1;
@@ -120363,17 +120363,17 @@ int func_919(int iParam0) // Position - 0x99430
 	if (iParam0 == -1)
 		return -2;
 
-	offset = Global_78828.f_109[iParam0];
+	offset = G_TextMessageConfig.f_109[iParam0];
 
 	if (offset < CHAR_MICHAEL || offset >= CHAR_FRANK_TREV_CONF)
 		return -2;
 
-	offset2 = Global_78828.f_109[iParam0].f_1;
+	offset2 = G_TextMessageConfig.f_109[iParam0].f_1;
 
 	if (offset2 < CHAR_MICHAEL || offset2 >= CHAR_LESTER)
 		return -2;
 
-	character = Global_78828.f_109[iParam0].f_2;
+	character = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (IS_BIT_SET(character, 3))
 		MISC::SET_BIT(&Global_113648.f_1.f_120[offset], offset2);
@@ -120404,18 +120404,18 @@ eCharacter func_922(int iParam0) // Position - 0x994FA
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (!func_22(character))
 		return -2;
 
 	if (func_23())
 		if (Global_98159.f_45 == character)
-			return Global_78828.f_109[iParam0].f_1;
+			return G_TextMessageConfig.f_109[iParam0].f_1;
 		else
-			return Global_78828.f_109[iParam0].f_2;
+			return G_TextMessageConfig.f_109[iParam0].f_2;
 
-	return Global_78828.f_109[iParam0].f_2;
+	return G_TextMessageConfig.f_109[iParam0].f_2;
 }
 
 eCharacter func_923(int iParam0) // Position - 0x9956C
@@ -120425,15 +120425,15 @@ eCharacter func_923(int iParam0) // Position - 0x9956C
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (!func_22(character))
 		return -2;
 
 	if (func_24(character))
-		return Global_78828.f_109[iParam0].f_1;
+		return G_TextMessageConfig.f_109[iParam0].f_1;
 
-	return Global_78828.f_109[iParam0].f_2;
+	return G_TextMessageConfig.f_109[iParam0].f_2;
 }
 
 eCharacter func_924(int iParam0) // Position - 0x995C3
@@ -120445,13 +120445,13 @@ eCharacter func_924(int iParam0) // Position - 0x995C3
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
+	character = G_TextMessageConfig.f_109[iParam0];
 
 	if (character == -1 || character == CHAR_BROKEN_DOWN_GIRL)
 		return -2;
 
-	character2 = Global_78828.f_109[iParam0].f_1;
-	character3 = Global_78828.f_109[iParam0].f_2;
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	character3 = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (Global_113648.f_9087.f_330[character])
 		return character2;
@@ -120484,20 +120484,20 @@ int func_925(int iParam0) // Position - 0x99632
 	if (func_818(0))
 	{
 		func_817(0, false);
-		return Global_78828.f_4824[iParam0].f_4;
+		return G_TextMessageConfig.f_4824[iParam0].f_4;
 	}
 
-	offset = Global_78828.f_4824[iParam0];
+	offset = G_TextMessageConfig.f_4824[iParam0];
 
 	if (offset < 0 || offset >= 5)
 		return -2;
 
-	character = Global_78828.f_4824[iParam0].f_1;
+	character = G_TextMessageConfig.f_4824[iParam0].f_1;
 
 	if (character == CHAR_MULTIPLAYER || character == CHAR_ALL_PLAYERS_CONF)
 		return -2;
 
-	offset2 = Global_78828.f_4824[iParam0].f_2;
+	offset2 = G_TextMessageConfig.f_4824[iParam0].f_2;
 
 	if (offset2 == 12)
 		return -2;
@@ -120509,7 +120509,7 @@ int func_925(int iParam0) // Position - 0x99632
 		return -2;
 
 	num3 = num2;
-	num4 = Global_78828.f_4824[iParam0].f_5;
+	num4 = G_TextMessageConfig.f_4824[iParam0].f_5;
 	flag = IS_BIT_SET(num4, 0);
 	flag2 = IS_BIT_SET(num4, 1);
 
@@ -120535,7 +120535,7 @@ int func_925(int iParam0) // Position - 0x99632
 					MISC::SET_BIT(&Global_96689, offset);
 				}
 			
-				return Global_78828.f_4824[iParam0].f_3;
+				return G_TextMessageConfig.f_4824[iParam0].f_3;
 			}
 			break;
 	
@@ -120599,7 +120599,7 @@ int func_925(int iParam0) // Position - 0x99632
 						STATS::STAT_SET_INT(statName, Global_113648.f_1.f_12[num6][i], true);
 				}
 			
-				return Global_78828.f_4824[iParam0].f_3;
+				return G_TextMessageConfig.f_4824[iParam0].f_3;
 			}
 			break;
 	
@@ -120660,7 +120660,7 @@ int func_925(int iParam0) // Position - 0x99632
 				if (statName2 != joaat("CITIES_PASSED"))
 					STATS::STAT_SET_INT(statName2, value, true);
 			
-				return Global_78828.f_4824[iParam0].f_3;
+				return G_TextMessageConfig.f_4824[iParam0].f_3;
 			}
 			break;
 	}
@@ -120820,12 +120820,12 @@ int func_932(int iParam0) // Position - 0x99C67
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
-	num = Global_78828.f_109[iParam0].f_2;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num = G_TextMessageConfig.f_109[iParam0].f_2;
 	clockDayOfWeek = CLOCK::GET_CLOCK_DAY_OF_WEEK();
 
-	if (Global_78828.f_109[iParam0].f_3 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_3 == 1)
 	{
 		num2 = clockDayOfWeek;
 		num2 = num2 + 1;
@@ -121198,10 +121198,10 @@ int func_941(int iParam0) // Position - 0x9A204
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
-	num = Global_78828.f_109[iParam0].f_2;
-	unk = Global_78828.f_109[iParam0].f_3;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num = G_TextMessageConfig.f_109[iParam0].f_2;
+	unk = G_TextMessageConfig.f_109[iParam0].f_3;
 	func_942(character, character2, num, 3, 3600000, unk, 4);
 	return -2;
 }
@@ -121602,20 +121602,20 @@ int func_959(int iParam0) // Position - 0x9AACC
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_4824[iParam0];
+	character = G_TextMessageConfig.f_4824[iParam0];
 
 	if (func_969() == character)
 		return -2;
 
-	num = Global_78828.f_4824[iParam0].f_6;
+	num = G_TextMessageConfig.f_4824[iParam0].f_6;
 
 	if (!func_785(character))
 	{
-		character2 = Global_78828.f_4824[iParam0].f_1;
-		num2 = Global_78828.f_4824[iParam0].f_2;
-		num3 = Global_78828.f_4824[iParam0].f_3;
-		num4 = Global_78828.f_4824[iParam0].f_4;
-		num5 = Global_78828.f_4824[iParam0].f_5;
+		character2 = G_TextMessageConfig.f_4824[iParam0].f_1;
+		num2 = G_TextMessageConfig.f_4824[iParam0].f_2;
+		num3 = G_TextMessageConfig.f_4824[iParam0].f_3;
+		num4 = G_TextMessageConfig.f_4824[iParam0].f_4;
+		num5 = G_TextMessageConfig.f_4824[iParam0].f_5;
 		address = 0;
 	
 		if (IS_BIT_SET(num, 13))
@@ -121626,7 +121626,7 @@ int func_959(int iParam0) // Position - 0x9AACC
 		else if (IS_BIT_SET(num, 4))
 			MISC::SET_BIT(&address, 3);
 	
-		func_960(character, num3, character2, num2, num4, num5, Global_78828.f_4824[iParam0].f_8, Global_78828.f_4824[iParam0].f_9, Global_78828.f_4824[iParam0].f_10, address);
+		func_960(character, num3, character2, num2, num4, num5, G_TextMessageConfig.f_4824[iParam0].f_8, G_TextMessageConfig.f_4824[iParam0].f_9, G_TextMessageConfig.f_4824[iParam0].f_10, address);
 	}
 
 	if (IS_BIT_SET(num, 5))
@@ -121860,20 +121860,20 @@ int func_970(int iParam0) // Position - 0x9AFD9
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_4824[iParam0];
+	character = G_TextMessageConfig.f_4824[iParam0];
 
 	if (func_972() == character)
 		return -2;
 
-	num = Global_78828.f_4824[iParam0].f_6;
+	num = G_TextMessageConfig.f_4824[iParam0].f_6;
 
 	if (!func_785(character))
 	{
-		character2 = Global_78828.f_4824[iParam0].f_1;
-		num2 = Global_78828.f_4824[iParam0].f_2;
-		num3 = Global_78828.f_4824[iParam0].f_3;
-		num4 = Global_78828.f_4824[iParam0].f_4;
-		num5 = Global_78828.f_4824[iParam0].f_5;
+		character2 = G_TextMessageConfig.f_4824[iParam0].f_1;
+		num2 = G_TextMessageConfig.f_4824[iParam0].f_2;
+		num3 = G_TextMessageConfig.f_4824[iParam0].f_3;
+		num4 = G_TextMessageConfig.f_4824[iParam0].f_4;
+		num5 = G_TextMessageConfig.f_4824[iParam0].f_5;
 		address = 0;
 	
 		if (IS_BIT_SET(num, 13))
@@ -121904,7 +121904,7 @@ int func_970(int iParam0) // Position - 0x9AFD9
 		else
 			num6 = 1;
 	
-		func_971(character, num3, character2, num2, num4, num5, Global_78828.f_4824[iParam0].f_8, Global_78828.f_4824[iParam0].f_9, Global_78828.f_4824[iParam0].f_10, address, num6);
+		func_971(character, num3, character2, num2, num4, num5, G_TextMessageConfig.f_4824[iParam0].f_8, G_TextMessageConfig.f_4824[iParam0].f_9, G_TextMessageConfig.f_4824[iParam0].f_10, address, num6);
 	}
 
 	if (IS_BIT_SET(num, 5))
@@ -121988,8 +121988,8 @@ int func_973(int iParam0) // Position - 0x9B272
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_6684[iParam0];
-	num = Global_78828.f_6684[iParam0].f_8;
+	character = G_TextMessageConfig.f_6684[iParam0];
+	num = G_TextMessageConfig.f_6684[iParam0].f_8;
 	num2 = func_980(num);
 
 	if (IS_BIT_SET(num, 5))
@@ -122005,12 +122005,12 @@ int func_973(int iParam0) // Position - 0x9B272
 					if (func_976())
 					{
 						func_975();
-						return Global_78828.f_6684[iParam0].f_9;
+						return G_TextMessageConfig.f_6684[iParam0].f_9;
 					}
 					else
 					{
 						func_975();
-						return Global_78828.f_6684[iParam0].f_10;
+						return G_TextMessageConfig.f_6684[iParam0].f_10;
 					}
 				}
 				else
@@ -122026,21 +122026,21 @@ int func_973(int iParam0) // Position - 0x9B272
 			if (flag && !IS_BIT_SET(num2, 10))
 			{
 				func_975();
-				return Global_78828.f_6684[iParam0].f_10;
+				return G_TextMessageConfig.f_6684[iParam0].f_10;
 			}
 		}
 	}
 
 	if (!func_785(character))
 	{
-		num3 = Global_78828.f_6684[iParam0].f_1;
-		num4 = Global_78828.f_6684[iParam0].f_2;
-		character2 = Global_78828.f_6684[iParam0].f_3;
-		num5 = Global_78828.f_6684[iParam0].f_4;
-		num6 = Global_78828.f_6684[iParam0].f_5;
-		num7 = Global_78828.f_6684[iParam0].f_6;
-		num8 = Global_78828.f_6684[iParam0].f_7;
-		func_974(character, num3, num4, num6, character2, num5, 3, num7, num8, -1, Global_78828.f_6684[iParam0].f_11, Global_78828.f_6684[iParam0].f_12, Global_78828.f_6684[iParam0].f_13, num2);
+		num3 = G_TextMessageConfig.f_6684[iParam0].f_1;
+		num4 = G_TextMessageConfig.f_6684[iParam0].f_2;
+		character2 = G_TextMessageConfig.f_6684[iParam0].f_3;
+		num5 = G_TextMessageConfig.f_6684[iParam0].f_4;
+		num6 = G_TextMessageConfig.f_6684[iParam0].f_5;
+		num7 = G_TextMessageConfig.f_6684[iParam0].f_6;
+		num8 = G_TextMessageConfig.f_6684[iParam0].f_7;
+		func_974(character, num3, num4, num6, character2, num5, 3, num7, num8, -1, G_TextMessageConfig.f_6684[iParam0].f_11, G_TextMessageConfig.f_6684[iParam0].f_12, G_TextMessageConfig.f_6684[iParam0].f_13, num2);
 	}
 
 	return -1;
@@ -122199,32 +122199,32 @@ int func_981(int iParam0) // Position - 0x9B67B
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_6684[iParam0];
+	character = G_TextMessageConfig.f_6684[iParam0];
 
 	if (func_979() == character)
 	{
 		if (func_976())
 		{
 			func_975();
-			return Global_78828.f_6684[iParam0].f_9;
+			return G_TextMessageConfig.f_6684[iParam0].f_9;
 		}
 		else
 		{
 			func_975();
-			return Global_78828.f_6684[iParam0].f_10;
+			return G_TextMessageConfig.f_6684[iParam0].f_10;
 		}
 	}
 
 	if (!func_785(character))
 	{
-		num = Global_78828.f_6684[iParam0].f_1;
-		num2 = Global_78828.f_6684[iParam0].f_2;
-		character2 = Global_78828.f_6684[iParam0].f_3;
-		num3 = Global_78828.f_6684[iParam0].f_4;
-		num4 = Global_78828.f_6684[iParam0].f_5;
-		num5 = Global_78828.f_6684[iParam0].f_6;
+		num = G_TextMessageConfig.f_6684[iParam0].f_1;
+		num2 = G_TextMessageConfig.f_6684[iParam0].f_2;
+		character2 = G_TextMessageConfig.f_6684[iParam0].f_3;
+		num3 = G_TextMessageConfig.f_6684[iParam0].f_4;
+		num4 = G_TextMessageConfig.f_6684[iParam0].f_5;
+		num5 = G_TextMessageConfig.f_6684[iParam0].f_6;
 		num6 = func_980(num5);
-		func_982(character, character2, num, num2, 3, num3, num4, -1, Global_78828.f_6684[iParam0].f_11, Global_78828.f_6684[iParam0].f_12, Global_78828.f_6684[iParam0].f_13, num6);
+		func_982(character, character2, num, num2, 3, num3, num4, -1, G_TextMessageConfig.f_6684[iParam0].f_11, G_TextMessageConfig.f_6684[iParam0].f_12, G_TextMessageConfig.f_6684[iParam0].f_13, num6);
 	}
 
 	return -1;
@@ -122320,8 +122320,8 @@ int func_983(int iParam0) // Position - 0x9B8FA
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_6684[iParam0];
-	num = Global_78828.f_6684[iParam0].f_8;
+	character = G_TextMessageConfig.f_6684[iParam0];
+	num = G_TextMessageConfig.f_6684[iParam0].f_8;
 	num2 = func_980(num);
 
 	if (IS_BIT_SET(num, 5))
@@ -122335,15 +122335,15 @@ int func_983(int iParam0) // Position - 0x9B8FA
 
 	if (!func_785(character))
 	{
-		unk = Global_78828.f_6684[iParam0].f_1;
-		unk2 = Global_78828.f_6684[iParam0].f_2;
-		unk3 = Global_78828.f_6684[iParam0].f_13;
-		character2 = Global_78828.f_6684[iParam0].f_3;
-		num3 = Global_78828.f_6684[iParam0].f_4;
-		num4 = Global_78828.f_6684[iParam0].f_5;
-		num5 = Global_78828.f_6684[iParam0].f_6;
-		num6 = Global_78828.f_6684[iParam0].f_7;
-		func_984(character, unk, unk2, unk3, num4, character2, num3, 3, num5, num6, Global_78828.f_6684[iParam0].f_11, Global_78828.f_6684[iParam0].f_12, num2);
+		unk = G_TextMessageConfig.f_6684[iParam0].f_1;
+		unk2 = G_TextMessageConfig.f_6684[iParam0].f_2;
+		unk3 = G_TextMessageConfig.f_6684[iParam0].f_13;
+		character2 = G_TextMessageConfig.f_6684[iParam0].f_3;
+		num3 = G_TextMessageConfig.f_6684[iParam0].f_4;
+		num4 = G_TextMessageConfig.f_6684[iParam0].f_5;
+		num5 = G_TextMessageConfig.f_6684[iParam0].f_6;
+		num6 = G_TextMessageConfig.f_6684[iParam0].f_7;
+		func_984(character, unk, unk2, unk3, num4, character2, num3, 3, num5, num6, G_TextMessageConfig.f_6684[iParam0].f_11, G_TextMessageConfig.f_6684[iParam0].f_12, num2);
 	}
 
 	if (IS_BIT_SET(num, 5))
@@ -122438,9 +122438,9 @@ int func_985(int iParam0) // Position - 0x9BB79
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_4824[iParam0];
-	character2 = Global_78828.f_4824[iParam0].f_1;
-	num = Global_78828.f_4824[iParam0].f_7;
+	character = G_TextMessageConfig.f_4824[iParam0];
+	character2 = G_TextMessageConfig.f_4824[iParam0].f_1;
+	num = G_TextMessageConfig.f_4824[iParam0].f_7;
 	num2 = func_980(num);
 
 	if (IS_BIT_SET(num, 5))
@@ -122471,12 +122471,12 @@ int func_985(int iParam0) // Position - 0x9BB79
 
 	if (!func_785(character))
 	{
-		num3 = Global_78828.f_4824[iParam0].f_2;
-		num4 = Global_78828.f_4824[iParam0].f_3;
-		num5 = Global_78828.f_4824[iParam0].f_4;
-		num6 = Global_78828.f_4824[iParam0].f_5;
-		num7 = Global_78828.f_4824[iParam0].f_6;
-		func_982(character, num5, num3, num4, 3, num6, num7, character2, Global_78828.f_4824[iParam0].f_8, Global_78828.f_4824[iParam0].f_9, Global_78828.f_4824[iParam0].f_10, num2);
+		num3 = G_TextMessageConfig.f_4824[iParam0].f_2;
+		num4 = G_TextMessageConfig.f_4824[iParam0].f_3;
+		num5 = G_TextMessageConfig.f_4824[iParam0].f_4;
+		num6 = G_TextMessageConfig.f_4824[iParam0].f_5;
+		num7 = G_TextMessageConfig.f_4824[iParam0].f_6;
+		func_982(character, num5, num3, num4, 3, num6, num7, character2, G_TextMessageConfig.f_4824[iParam0].f_8, G_TextMessageConfig.f_4824[iParam0].f_9, G_TextMessageConfig.f_4824[iParam0].f_10, num2);
 	}
 
 	if (IS_BIT_SET(num, 5))
@@ -122510,8 +122510,8 @@ int func_987(int iParam0) // Position - 0x9BCDB
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_6684[iParam0];
-	num2 = Global_78828.f_6684[iParam0].f_8;
+	num = G_TextMessageConfig.f_6684[iParam0];
+	num2 = G_TextMessageConfig.f_6684[iParam0].f_8;
 
 	if (IS_BIT_SET(num2, 5))
 	{
@@ -122524,16 +122524,16 @@ int func_987(int iParam0) // Position - 0x9BCDB
 
 	if (!func_785(num))
 	{
-		unk = Global_78828.f_6684[iParam0].f_1;
-		unk2 = Global_78828.f_6684[iParam0].f_2;
-		unk3 = Global_78828.f_6684[iParam0].f_13;
-		character = Global_78828.f_6684[iParam0].f_3;
-		unk4 = Global_78828.f_6684[iParam0].f_4;
-		num3 = Global_78828.f_6684[iParam0].f_5;
-		num4 = Global_78828.f_6684[iParam0].f_6;
-		num5 = Global_78828.f_6684[iParam0].f_7;
+		unk = G_TextMessageConfig.f_6684[iParam0].f_1;
+		unk2 = G_TextMessageConfig.f_6684[iParam0].f_2;
+		unk3 = G_TextMessageConfig.f_6684[iParam0].f_13;
+		character = G_TextMessageConfig.f_6684[iParam0].f_3;
+		unk4 = G_TextMessageConfig.f_6684[iParam0].f_4;
+		num3 = G_TextMessageConfig.f_6684[iParam0].f_5;
+		num4 = G_TextMessageConfig.f_6684[iParam0].f_6;
+		num5 = G_TextMessageConfig.f_6684[iParam0].f_7;
 		num6 = func_980(num2);
-		func_988(num, unk, unk2, unk3, num3, unk4, character, 3, num4, num5, Global_78828.f_6684[iParam0].f_11, Global_78828.f_6684[iParam0].f_12, num6);
+		func_988(num, unk, unk2, unk3, num3, unk4, character, 3, num4, num5, G_TextMessageConfig.f_6684[iParam0].f_11, G_TextMessageConfig.f_6684[iParam0].f_12, num6);
 	}
 
 	if (IS_BIT_SET(num2, 5))
@@ -122619,8 +122619,8 @@ int func_989(int iParam0) // Position - 0x9BF4E
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_4824[iParam0];
-	num2 = Global_78828.f_4824[iParam0].f_6;
+	num = G_TextMessageConfig.f_4824[iParam0];
+	num2 = G_TextMessageConfig.f_4824[iParam0].f_6;
 
 	if (IS_BIT_SET(num2, 5))
 	{
@@ -122633,13 +122633,13 @@ int func_989(int iParam0) // Position - 0x9BF4E
 
 	if (!func_785(num))
 	{
-		character = Global_78828.f_4824[iParam0].f_1;
-		num3 = Global_78828.f_4824[iParam0].f_2;
-		num4 = Global_78828.f_4824[iParam0].f_3;
-		num5 = Global_78828.f_4824[iParam0].f_4;
-		num6 = Global_78828.f_4824[iParam0].f_5;
+		character = G_TextMessageConfig.f_4824[iParam0].f_1;
+		num3 = G_TextMessageConfig.f_4824[iParam0].f_2;
+		num4 = G_TextMessageConfig.f_4824[iParam0].f_3;
+		num5 = G_TextMessageConfig.f_4824[iParam0].f_4;
+		num6 = G_TextMessageConfig.f_4824[iParam0].f_5;
 		num7 = func_980(num2);
-		func_990(num, num4, num3, character, 3, num5, num6, Global_78828.f_4824[iParam0].f_8, Global_78828.f_4824[iParam0].f_9, Global_78828.f_4824[iParam0].f_10, num7);
+		func_990(num, num4, num3, character, 3, num5, num6, G_TextMessageConfig.f_4824[iParam0].f_8, G_TextMessageConfig.f_4824[iParam0].f_9, G_TextMessageConfig.f_4824[iParam0].f_10, num7);
 	}
 
 	if (IS_BIT_SET(num2, 5))
@@ -122718,23 +122718,23 @@ int func_991(int iParam0) // Position - 0x9C190
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_4824[iParam0];
+	num = G_TextMessageConfig.f_4824[iParam0];
 
 	if (func_22(_GET_CURRENT_PLAYER_CHARACTER()))
 	{
 		if (IS_BIT_SET(num, _GET_CURRENT_PLAYER_CHARACTER_0()))
 		{
-			character = Global_78828.f_4824[iParam0].f_1;
+			character = G_TextMessageConfig.f_4824[iParam0].f_1;
 		
 			if (character == _GET_CURRENT_PLAYER_CHARACTER())
 				return -2;
 		
 			if (func_992(character))
-				return Global_78828.f_4824[iParam0].f_2;
+				return G_TextMessageConfig.f_4824[iParam0].f_2;
 		}
 	}
 
-	return Global_78828.f_4824[iParam0].f_3;
+	return G_TextMessageConfig.f_4824[iParam0].f_3;
 }
 
 BOOL func_992(eCharacter echParam0) // Position - 0x9C20A
@@ -122767,7 +122767,7 @@ int func_993(int iParam0) // Position - 0x9C26E
 	if (iParam0 == -1)
 		return -2;
 
-	func_742(Global_78828.f_109[iParam0], Global_78828.f_109[iParam0].f_1, 0, Global_78828.f_109[iParam0].f_2);
+	func_742(G_TextMessageConfig.f_109[iParam0], G_TextMessageConfig.f_109[iParam0].f_1, 0, G_TextMessageConfig.f_109[iParam0].f_2);
 	return -2;
 }
 
@@ -122780,11 +122780,11 @@ int func_994(int iParam0) // Position - 0x9C2AD
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	flag = false;
 
-	if (Global_78828.f_109[iParam0].f_2 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == 1)
 		flag = true;
 
 	if (flag)
@@ -122857,11 +122857,11 @@ int func_997(int iParam0) // Position - 0x9C3F5
 	if (iParam0 == -1)
 		return -2;
 
-	character = Global_78828.f_109[iParam0];
-	character2 = Global_78828.f_109[iParam0].f_1;
+	character = G_TextMessageConfig.f_109[iParam0];
+	character2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	flag = false;
 
-	if (Global_78828.f_109[iParam0].f_2 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == 1)
 		flag = true;
 
 	if (flag)
@@ -122887,7 +122887,7 @@ int func_998(int iParam0) // Position - 0x9C47E
 	if (iParam0 == -1)
 		return -2;
 
-	func_999(Global_78828.f_3590[iParam0], Global_78828.f_3590[iParam0].f_1, false);
+	func_999(G_TextMessageConfig.f_3590[iParam0], G_TextMessageConfig.f_3590[iParam0].f_1, false);
 	return -2;
 }
 
@@ -123031,8 +123031,8 @@ int func_1007(int iParam0) // Position - 0x9C6FC
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
-	character = Global_78828.f_3590[iParam0].f_1;
+	num = G_TextMessageConfig.f_3590[iParam0];
+	character = G_TextMessageConfig.f_3590[iParam0].f_1;
 
 	switch (num)
 	{
@@ -123066,11 +123066,11 @@ int func_1008(int iParam0) // Position - 0x9C765
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
-	num2 = Global_78828.f_109[iParam0].f_1;
+	num = G_TextMessageConfig.f_109[iParam0];
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	flag = false;
 
-	if (Global_78828.f_109[iParam0].f_2 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == 1)
 		flag = true;
 
 	switch (num)
@@ -123252,14 +123252,14 @@ int func_1014(int iParam0) // Position - 0x9CABA
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
+	num = G_TextMessageConfig.f_3590[iParam0];
 
 	if (num == 263)
 		return -2;
 
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == 1)
 		flag = true;
 
 	func_775(num, flag, false);
@@ -123274,10 +123274,10 @@ int func_1015(int iParam0) // Position - 0x9CB0C
 	if (iParam0 == -1)
 		return -2;
 
-	hash = func_1022(Global_78828.f_3590[iParam0], false);
+	hash = func_1022(G_TextMessageConfig.f_3590[iParam0], false);
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == 1)
 		flag = true;
 
 	func_1016(CHAR_MICHAEL, hash, flag, true);
@@ -124143,11 +124143,11 @@ int func_1023(int iParam0) // Position - 0x9DAFF
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
-	num2 = Global_78828.f_109[iParam0].f_1;
+	num = G_TextMessageConfig.f_109[iParam0];
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	flag = false;
 
-	if (Global_78828.f_109[iParam0].f_2 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == 1)
 		flag = true;
 
 	func_1024(num, num2, flag, true, 0);
@@ -126166,14 +126166,14 @@ int func_1029(int iParam0) // Position - 0xA1FB1
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
+	num = G_TextMessageConfig.f_3590[iParam0];
 
 	if (num == 263)
 		return -2;
 
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == 1)
 		flag = true;
 
 	func_547(num, false, flag);
@@ -126188,14 +126188,14 @@ int func_1030(int iParam0) // Position - 0xA2003
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
+	num = G_TextMessageConfig.f_3590[iParam0];
 
 	if (num == 263)
 		return -2;
 
 	flag = false;
 
-	if (Global_78828.f_3590[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_3590[iParam0].f_1 == 1)
 		flag = true;
 
 	func_547(num, true, flag);
@@ -126210,12 +126210,12 @@ int func_1031(int iParam0) // Position - 0xA2055
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
+	num = G_TextMessageConfig.f_3590[iParam0];
 
 	if (num == 0 || num == 235)
 		return -2;
 
-	num2 = Global_78828.f_3590[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_3590[iParam0].f_1;
 
 	if (num2 < 0)
 		return -2;
@@ -126232,8 +126232,8 @@ int func_1032(int iParam0) // Position - 0xA20B4
 	if (iParam0 == -1)
 		return -2;
 
-	scriptName = { Global_78828.f_4160[iParam0] };
-	stackSize = Global_78828.f_4160[iParam0].f_8;
+	scriptName = { G_TextMessageConfig.f_4160[iParam0] };
+	stackSize = G_TextMessageConfig.f_4160[iParam0].f_8;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY(&scriptName)) > 0)
 		return -2;
@@ -126264,7 +126264,7 @@ int func_1033(int iParam0, int iParam1) // Position - 0xA2124
 		return -2;
 
 	num = func_778(iParam0);
-	num2 = Global_78828.f_109[iParam0];
+	num2 = G_TextMessageConfig.f_109[iParam0];
 	scriptHash = Global_91469[num2].f_6;
 
 	if (!IS_BIT_SET(Global_91469[num2].f_15, 4))
@@ -126282,7 +126282,7 @@ int func_1033(int iParam0, int iParam1) // Position - 0xA2124
 		{
 			func_1115(num2);
 			func_756(iParam0, num, false);
-			return Global_78828.f_109[iParam0].f_2;
+			return G_TextMessageConfig.f_109[iParam0].f_2;
 		}
 	}
 
@@ -126340,7 +126340,7 @@ int func_1033(int iParam0, int iParam1) // Position - 0xA2124
 				if (num5 == 2)
 					return -1;
 				else if (num5 == 0)
-					return Global_78828.f_109[iParam0].f_2;
+					return G_TextMessageConfig.f_109[iParam0].f_2;
 			}
 		
 			MISC::SET_BIT(&(Global_91433[num].f_1), 1);
@@ -126553,7 +126553,7 @@ int func_1036(int iParam0, int iParam1) // Position - 0xA2665
 		return -2;
 
 	num = func_778(iParam1);
-	num2 = Global_78828.f_109[iParam1];
+	num2 = G_TextMessageConfig.f_109[iParam1];
 	scriptHash = Global_91469[num2].f_6;
 
 	if (Global_97601)
@@ -126579,7 +126579,7 @@ int func_1036(int iParam0, int iParam1) // Position - 0xA2665
 			func_756(iParam1, num, true);
 			Global_63364 = 0;
 			Global_63383 = false;
-			return Global_78828.f_109[iParam1].f_2;
+			return G_TextMessageConfig.f_109[iParam1].f_2;
 		}
 	}
 
@@ -126646,7 +126646,7 @@ int func_1036(int iParam0, int iParam1) // Position - 0xA2665
 							func_772(num3);
 							func_1038(num2);
 							func_757(iParam1);
-							return Global_78828.f_109[iParam1].f_2;
+							return G_TextMessageConfig.f_109[iParam1].f_2;
 						}
 					}
 				
@@ -127106,7 +127106,7 @@ int func_1047(int iParam0) // Position - 0xA3186
 	if (iParam0 == -1)
 		return -2;
 
-	func_1048(&Global_78828.f_4160[iParam0], 1);
+	func_1048(&G_TextMessageConfig.f_4160[iParam0], 1);
 	return -2;
 }
 
@@ -127179,8 +127179,8 @@ int func_1052(int iParam0) // Position - 0xA3419
 	if (iParam0 == -1)
 		return -2;
 
-	if (!MISC::ARE_STRINGS_EQUAL(&Global_78828.f_4160[iParam0], ""))
-		func_448(&Global_78828.f_4160[iParam0], Global_78828.f_4160[iParam0].f_8 % 1000000, 0, -1, Global_78828.f_4160[iParam0].f_9, Global_78828.f_4160[iParam0].f_10, Global_78828.f_4160[iParam0].f_11, 0, 0);
+	if (!MISC::ARE_STRINGS_EQUAL(&G_TextMessageConfig.f_4160[iParam0], ""))
+		func_448(&G_TextMessageConfig.f_4160[iParam0], G_TextMessageConfig.f_4160[iParam0].f_8 % 1000000, 0, -1, G_TextMessageConfig.f_4160[iParam0].f_9, G_TextMessageConfig.f_4160[iParam0].f_10, G_TextMessageConfig.f_4160[iParam0].f_11, 0, 0);
 	else
 		return -2;
 
@@ -127203,10 +127203,10 @@ int func_1054(int iParam0) // Position - 0xA34BB
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 	MISC::SET_BIT(&Global_113648.f_18576[num], 1);
 
-	if (Global_78828.f_109[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_1 == 1)
 		func_1055(num);
 
 	return -2;
@@ -127250,13 +127250,13 @@ int func_1057(int iParam0) // Position - 0xA356C
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num < 0 || num >= 24)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
-	num3 = Global_78828.f_109[iParam0].f_2;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num3 = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (CLOCK::GET_CLOCK_HOURS() >= num)
 		return num2;
@@ -127268,15 +127268,15 @@ int func_1058(int iParam0, int iParam1) // Position - 0xA35D3
 {
 	int num;
 
-	if (!Global_78828.f_10[iParam0])
+	if (!G_TextMessageConfig.f_10[iParam0])
 	{
 		num = iParam1;
-		Global_78828.f_76[iParam0] = num;
-		Global_78828.f_10[iParam0] = true;
+		G_TextMessageConfig.f_76[iParam0] = num;
+		G_TextMessageConfig.f_10[iParam0] = true;
 	}
-	else if (func_1059(Global_78828.f_76[iParam0]))
+	else if (func_1059(G_TextMessageConfig.f_76[iParam0]))
 	{
-		Global_78828.f_10[iParam0] = false;
+		G_TextMessageConfig.f_10[iParam0] = false;
 		return -2;
 	}
 
@@ -127395,7 +127395,7 @@ int func_1062(int iParam0, int iParam1) // Position - 0xA3824
 	int num;
 	int num2;
 
-	if (!Global_78828.f_10[iParam0])
+	if (!G_TextMessageConfig.f_10[iParam0])
 	{
 		if (iParam1 < 0 || iParam1 > 23)
 			return -2;
@@ -127413,12 +127413,12 @@ int func_1062(int iParam0, int iParam1) // Position - 0xA3824
 			func_123(&num2, num);
 		}
 	
-		Global_78828.f_76[iParam0] = num2;
-		Global_78828.f_10[iParam0] = true;
+		G_TextMessageConfig.f_76[iParam0] = num2;
+		G_TextMessageConfig.f_10[iParam0] = true;
 	}
-	else if (func_1059(Global_78828.f_76[iParam0]))
+	else if (func_1059(G_TextMessageConfig.f_76[iParam0]))
 	{
-		Global_78828.f_10[iParam0] = false;
+		G_TextMessageConfig.f_10[iParam0] = false;
 		return -2;
 	}
 
@@ -127427,17 +127427,17 @@ int func_1062(int iParam0, int iParam1) // Position - 0xA3824
 
 int func_1063(int iParam0, int iParam1) // Position - 0xA38D1
 {
-	if (!Global_78828.f_10[iParam0])
+	if (!G_TextMessageConfig.f_10[iParam0])
 	{
 		if (iParam1 < 0)
 			return -2;
 	
-		Global_78828.f_43[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
-		Global_78828.f_10[iParam0] = true;
+		G_TextMessageConfig.f_43[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
+		G_TextMessageConfig.f_10[iParam0] = true;
 	}
-	else if (MISC::GET_GAME_TIMER() > Global_78828.f_43[iParam0])
+	else if (MISC::GET_GAME_TIMER() > G_TextMessageConfig.f_43[iParam0])
 	{
-		Global_78828.f_10[iParam0] = false;
+		G_TextMessageConfig.f_10[iParam0] = false;
 		return -2;
 	}
 
@@ -127453,18 +127453,18 @@ int func_1064(int iParam0, int iParam1) // Position - 0xA3935
 	if (iParam1 == -1)
 		return -2;
 
-	if (!Global_78828.f_10[iParam0])
+	if (!G_TextMessageConfig.f_10[iParam0])
 	{
-		Global_78828.f_76[iParam0] = func_134();
-		num = Global_78828.f_109[iParam1].f_2;
-		num2 = Global_78828.f_109[iParam1].f_1;
-		num3 = Global_78828.f_109[iParam1];
-		func_118(&Global_78828.f_76[iParam0], num, num2, num3, 0, 0, 0);
-		Global_78828.f_10[iParam0] = true;
+		G_TextMessageConfig.f_76[iParam0] = func_134();
+		num = G_TextMessageConfig.f_109[iParam1].f_2;
+		num2 = G_TextMessageConfig.f_109[iParam1].f_1;
+		num3 = G_TextMessageConfig.f_109[iParam1];
+		func_118(&G_TextMessageConfig.f_76[iParam0], num, num2, num3, 0, 0, 0);
+		G_TextMessageConfig.f_10[iParam0] = true;
 	}
-	else if (func_1060(func_134(), Global_78828.f_76[iParam0]))
+	else if (func_1060(func_134(), G_TextMessageConfig.f_76[iParam0]))
 	{
-		Global_78828.f_10[iParam0] = false;
+		G_TextMessageConfig.f_10[iParam0] = false;
 		return -2;
 	}
 
@@ -127479,8 +127479,8 @@ int func_1065(int iParam0) // Position - 0xA39D9
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0].f_1;
-	num2 = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_109[iParam0];
 
 	if (IS_BIT_SET(num, 0))
 		CLOCK::SET_CLOCK_TIME(func_129(num2), CLOCK::GET_CLOCK_MINUTES(), CLOCK::GET_CLOCK_SECONDS());
@@ -127540,13 +127540,13 @@ int func_1068(int iParam0) // Position - 0xA3B1B
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 32)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
-	num3 = Global_78828.f_109[iParam0].f_2;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num3 = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (IS_BIT_SET(Global_113648.f_9087.f_2[num], 2))
 		return num2;
@@ -127564,18 +127564,18 @@ int func_1069(int iParam0) // Position - 0xA3B88
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 11)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
 
 	if (num2 < 0 || num2 >= 32)
 		return -2;
 
-	num3 = Global_78828.f_109[iParam0].f_2;
-	num4 = Global_78828.f_109[iParam0].f_3;
+	num3 = G_TextMessageConfig.f_109[iParam0].f_2;
+	num4 = G_TextMessageConfig.f_109[iParam0].f_3;
 
 	if (func_928(num, num2))
 		return num3;
@@ -127593,14 +127593,14 @@ int func_1070(int iParam0) // Position - 0xA3C14
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 13)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
-	num3 = Global_78828.f_109[iParam0].f_2;
-	num4 = Global_78828.f_109[iParam0].f_3;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num3 = G_TextMessageConfig.f_109[iParam0].f_2;
+	num4 = G_TextMessageConfig.f_109[iParam0].f_3;
 
 	if (func_930(num) == num2)
 		return num3;
@@ -127617,13 +127617,13 @@ int func_1071(int iParam0) // Position - 0xA3C88
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0] % 1000000;
+	num = G_TextMessageConfig.f_109[iParam0] % 1000000;
 
 	if (num == -1 || num == 146)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
-	num3 = Global_78828.f_109[iParam0].f_2;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
+	num3 = G_TextMessageConfig.f_109[iParam0].f_2;
 
 	if (func_818(num))
 		return num2;
@@ -127640,19 +127640,19 @@ int func_1072(int iParam0) // Position - 0xA3CF1
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 11)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
 
 	if (num2 < 0 || num2 >= 32)
 		return -2;
 
 	num3 = 0;
 
-	if (Global_78828.f_109[iParam0].f_2 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_2 == 1)
 		num3 = 1;
 
 	func_326(num, num2, num3);
@@ -127667,12 +127667,12 @@ int func_1073(int iParam0) // Position - 0xA3D72
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 13)
 		return -2;
 
-	num2 = Global_78828.f_109[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_109[iParam0].f_1;
 	func_929(num, num2);
 	return -2;
 }
@@ -127685,14 +127685,14 @@ int func_1074(int iParam0) // Position - 0xA3DC3
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_109[iParam0];
+	num = G_TextMessageConfig.f_109[iParam0];
 
 	if (num == -1 || num == 146)
 		return -2;
 
 	num2 = 0;
 
-	if (Global_78828.f_109[iParam0].f_1 == 1)
+	if (G_TextMessageConfig.f_109[iParam0].f_1 == 1)
 		num2 = 1;
 
 	func_817(num, num2);
@@ -127713,7 +127713,7 @@ int func_1075(int iParam0) // Position - 0xA3E1C
 	if (iParam0 == -1)
 		return -2;
 
-	num = Global_78828.f_3590[iParam0];
+	num = G_TextMessageConfig.f_3590[iParam0];
 
 	if (num == -1 || num == 32)
 		return -2;
@@ -127724,10 +127724,10 @@ int func_1075(int iParam0) // Position - 0xA3E1C
 	if (IS_BIT_SET(Global_113648.f_9087.f_2[num], 2))
 		return -2;
 
-	num2 = Global_78828.f_3590[iParam0].f_1;
+	num2 = G_TextMessageConfig.f_3590[iParam0].f_1;
 	unk = Global_113648.f_9087.f_2[num].f_1;
-	num3 = Global_78828.f_12526[num];
-	num4 = Global_78828.f_12526[num].f_1;
+	num3 = G_TextMessageConfig.f_12526[num];
+	num4 = G_TextMessageConfig.f_12526[num].f_1;
 
 	if (unk < num3)
 		return -2;
@@ -127740,10 +127740,10 @@ int func_1075(int iParam0) // Position - 0xA3E1C
 
 	while (num5 <= num4)
 	{
-		if (Global_78828.f_6825[num5] == 531432813)
+		if (G_TextMessageConfig.f_6825[num5] == 531432813)
 		{
-			num6 = Global_78828.f_6825[num5].f_2;
-			num7 = Global_78828.f_109[num6];
+			num6 = G_TextMessageConfig.f_6825[num5].f_2;
+			num7 = G_TextMessageConfig.f_109[num6];
 		
 			if (num7 == num2)
 			{
@@ -128607,7 +128607,7 @@ struct<2> func_1099(int iParam0) // Position - 0xA4D73
 
 BOOL func_1100(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0xA4DA8
 {
-	if (!func_722(0) || Global_78828 || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_722(0) || G_TextMessageConfig || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
 	switch (Global_78813)
@@ -129131,7 +129131,7 @@ void func_1108() // Position - 0xA5945
 	{
 		if (Global_91433[i] != -1)
 		{
-			num = Global_78828.f_109[Global_91433[i]];
+			num = G_TextMessageConfig.f_109[Global_91433[i]];
 		
 			if (num != -1)
 			{
@@ -129512,7 +129512,7 @@ void func_1115(eCharacter echParam0) // Position - 0xA5F44
 	AUDIO::TRIGGER_MUSIC_EVENT("GLOBAL_KILL_MUSIC");
 	func_1116();
 	Global_32542 = 0;
-	Global_78828.f_9 = -1;
+	G_TextMessageConfig.f_9 = -1;
 	Global_78821 = -1;
 	return;
 }

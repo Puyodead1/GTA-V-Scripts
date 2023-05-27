@@ -1060,7 +1060,7 @@ void main() // Position - 0x0
 					if (ENTITY::GET_ENTITY_HEALTH(PLAYER::GET_PLAYER_PED(PLAYER::GET_PLAYER_INDEX())) < 1)
 						Global_63364 = true;
 				
-					if (func_105() || func_9() || Global_63363 || Global_78828 || Global_63364 || !bLocal_639)
+					if (func_105() || func_9() || Global_63363 || G_TextMessageConfig || Global_63364 || !bLocal_639)
 					{
 						Global_63352 = false;
 						Global_63356 = false;
@@ -1117,7 +1117,7 @@ void func_1(var uParam0, int iParam1) // Position - 0x8BE
 
 	if (!Global_78827)
 		if (!PLAYER::IS_PLAYER_DEAD(PLAYER::GET_PLAYER_INDEX()))
-			if (!Global_78828)
+			if (!G_TextMessageConfig)
 				if (CAM::IS_SCREEN_FADED_OUT() && !_IS_MISSION_REPEAT_ACTIVE(false))
 					CAM::DO_SCREEN_FADE_IN(800);
 

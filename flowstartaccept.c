@@ -97,7 +97,7 @@ void main() // Position - 0x0
 		func_1();
 	}
 
-	Global_78828.f_1 = 0;
+	G_TextMessageConfig.f_1 = 0;
 	MISC::SET_BIT(&(Global_113648.f_10018.f_25), 0);
 	func_6();
 	return;

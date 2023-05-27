@@ -623,7 +623,7 @@ void func_21(BOOL bParam0, BOOL bParam1) // Position - 0xCF5
 	{
 		num = func_22();
 		num2 = Global_91433[num];
-		unk = Global_78828.f_109[num2];
+		unk = G_TextMessageConfig.f_109[num2];
 	
 		if (num == -1)
 		{

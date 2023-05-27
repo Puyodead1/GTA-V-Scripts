@@ -905,7 +905,7 @@ void main() // Position - 0x0
 
 	while (!func_298(5))
 	{
-		if (!Global_78828 && !func_297(14))
+		if (!G_TextMessageConfig && !func_297(14))
 		{
 			func_289();
 			func_275(&uLocal_176, 32f, 35f);
@@ -10581,7 +10581,7 @@ int func_198(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}

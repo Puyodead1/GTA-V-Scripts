@@ -6593,7 +6593,7 @@ BOOL func_128(int iParam0, var uParam1) // Position - 0x63C8
 						MISC::SET_BIT(&(Global_97614[iParam0].f_10.f_1), 8);
 						PED::REMOVE_RELATIONSHIP_GROUP(Global_97178.f_42);
 						func_124(num, 4, Global_97614[iParam0].f_10.f_6);
-						Global_78828.f_7 = 1;
+						G_TextMessageConfig.f_7 = 1;
 						uParam1->f_111 = -1;
 					
 						if (!IS_BIT_SET(Global_91469[num].f_15, 11))
@@ -7815,7 +7815,7 @@ BOOL func_176(int iParam0) // Position - 0x84FD
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 

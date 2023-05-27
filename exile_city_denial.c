@@ -142,7 +142,7 @@ void main() // Position - 0x0
 		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
 		bLocal_29 = func_24(entityCoords, &bLocal_32);
 	
-		if (Global_78828 || Global_78828.f_1)
+		if (G_TextMessageConfig || G_TextMessageConfig.f_1)
 			bLocal_29 = 0;
 	
 		flag = false;

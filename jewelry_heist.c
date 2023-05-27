@@ -32093,7 +32093,7 @@ void func_135(BOOL bParam0, BOOL bParam1) // Position - 0x1C566
 	{
 		num = func_136();
 		num2 = Global_91433[num];
-		num3 = Global_78828.f_109[num2];
+		num3 = G_TextMessageConfig.f_109[num2];
 	
 		if (num == -1)
 		{
@@ -33132,7 +33132,7 @@ int func_176(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -129690,7 +129690,7 @@ BOOL func_1084(int iParam0) // Position - 0xAA696
 		PLAYER::START_FIRING_AMNESTY(5000);
 
 	num = Global_91433[iParam0];
-	num2 = Global_78828.f_109[num];
+	num2 = G_TextMessageConfig.f_109[num];
 	func_1088(num2, true);
 	PLAYER::SPECIAL_ABILITY_CHARGE_ON_MISSION_FAILED(PLAYER::PLAYER_ID(), 0);
 	PLAYER::SPECIAL_ABILITY_DEACTIVATE(PLAYER::PLAYER_ID(), 0);

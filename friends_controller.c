@@ -412,7 +412,7 @@ void main() // Position - 0x0
 		{
 			bLocal_96 = true;
 		
-			if (Global_78828.f_1)
+			if (G_TextMessageConfig.f_1)
 			{
 			}
 			else if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
@@ -34078,7 +34078,7 @@ BOOL func_280(var uParam0, var uParam1) // Position - 0x25944
 									return false;
 						
 							if (ENTITY::IS_ENTITY_ON_SCREEN(uParam1->f_2) && !ENTITY::IS_ENTITY_OCCLUDED(uParam1->f_2))
-								if (func_95() && Global_78828.f_1 == false)
+								if (func_95() && G_TextMessageConfig.f_1 == false)
 									return true;
 						}
 					}

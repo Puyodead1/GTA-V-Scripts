@@ -32022,18 +32022,18 @@ void func_235() // Position - 0x23D4C
 	if (func_246(43))
 	{
 		Global_113648.f_9087.f_99.f_58[81] = true;
-		num = Global_78828.f_12526[22];
-		num2 = Global_78828.f_12526[22].f_1;
+		num = G_TextMessageConfig.f_12526[22];
+		num2 = G_TextMessageConfig.f_12526[22].f_1;
 		num3 = num;
 		num4 = -1;
 		flag = false;
 	
 		while (num3 <= num2 && !flag)
 		{
-			if (Global_78828.f_6825[num3] == 531432813)
+			if (G_TextMessageConfig.f_6825[num3] == 531432813)
 			{
-				num4 = Global_78828.f_6825[num3].f_2;
-				num5 = Global_78828.f_109[num4];
+				num4 = G_TextMessageConfig.f_6825[num3].f_2;
+				num5 = G_TextMessageConfig.f_109[num4];
 			
 				if (num5 == 128)
 				{
@@ -32246,7 +32246,7 @@ int func_244(int iParam0) // Position - 0x24258
 	for (i = 0; i < 7; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return i;
 	}
 
@@ -32279,7 +32279,7 @@ BOOL func_246(int iParam0) // Position - 0x242C9
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 

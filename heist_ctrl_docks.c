@@ -789,7 +789,7 @@ void main() // Position - 0x0
 
 	while (!func_565(1))
 	{
-		if (!Global_78828)
+		if (!G_TextMessageConfig)
 		{
 			if (!func_564(71) && !func_563(14))
 				func_552(&uLocal_54, 24f, 30f);
@@ -95574,7 +95574,7 @@ BOOL func_564(int iParam0) // Position - 0x7A85C
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 

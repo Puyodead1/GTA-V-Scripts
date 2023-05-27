@@ -3304,7 +3304,7 @@ int func_108(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}
@@ -90896,7 +90896,7 @@ void func_505() // Position - 0x6F6C0
 
 void func_506() // Position - 0x6F6F8
 {
-	Global_78828 = true;
+	G_TextMessageConfig = true;
 	func_692();
 	func_679();
 	func_678();
@@ -90929,7 +90929,7 @@ void func_506() // Position - 0x6F6F8
 	func_509();
 	func_508();
 	func_507();
-	Global_78828 = false;
+	G_TextMessageConfig = false;
 	return;
 }
 
@@ -103324,15 +103324,15 @@ void func_679() // Position - 0x880B5
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_78828.f_10[i] = 0;
+		G_TextMessageConfig.f_10[i] = 0;
 	}
 
 	Global_113648.f_9087.f_1 = 0;
 	Global_113648.f_10018.f_25 = 0;
-	Global_78828.f_9 = -1;
-	Global_78828.f_7 = 0;
-	Global_78828.f_6 = 0;
-	Global_78828.f_2 = 1;
+	G_TextMessageConfig.f_9 = -1;
+	G_TextMessageConfig.f_7 = 0;
+	G_TextMessageConfig.f_6 = 0;
+	G_TextMessageConfig.f_2 = 1;
 	Global_78821 = -1;
 	Global_100719 = -1;
 	return;
@@ -103346,7 +103346,7 @@ void func_680() // Position - 0x88141
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_113648.f_9087.f_2[i].f_1 = Global_78828.f_12526[i];
+		Global_113648.f_9087.f_2[i].f_1 = G_TextMessageConfig.f_12526[i];
 	}
 
 	return;
@@ -141370,7 +141370,7 @@ BOOL func_1785(int iParam0) // Position - 0xB9534
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 
@@ -141692,7 +141692,7 @@ void func_1799(var uParam0) // Position - 0xB9A52
 		
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 			{
-				if (!Global_78828.f_1)
+				if (!G_TextMessageConfig.f_1)
 				{
 					switch (uParam0->f_1)
 					{
@@ -143834,7 +143834,7 @@ void func_1862() // Position - 0xBD576
 {
 	if (Global_113648.f_10051.f_135[1] != -1)
 		if (!Global_78558)
-			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("photographymonkey")) == 0 && !Global_78828)
+			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("photographymonkey")) == 0 && !G_TextMessageConfig)
 				func_1827(joaat("photographymonkey"), FRIEND);
 
 	return;
@@ -143845,7 +143845,7 @@ void func_1863() // Position - 0xBD5BB
 	if (_IS_EXCLUSIVE_CONTENT_UNLOCKED() && !_IS_MISSION_REPEAT_ACTIVE(false) && !func_1864(false))
 		if (func_97(83))
 			if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_FRANKLIN)
-				if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("photographywildlife")) == 0 && !IS_BIT_SET(Global_113648.f_10051.f_99, 0) && !Global_78828)
+				if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("photographywildlife")) == 0 && !IS_BIT_SET(Global_113648.f_10051.f_99, 0) && !G_TextMessageConfig)
 					func_1827(joaat("photographywildlife"), DEFAULT);
 
 	return;
@@ -144297,7 +144297,7 @@ void func_1888() // Position - 0xBDFA8
 	{
 		if (!Global_113648.f_9087.f_1)
 		{
-			if (!Global_78828.f_1)
+			if (!G_TextMessageConfig.f_1)
 			{
 				if (_CAN_ENTER_FREEROAM_STATE(0) && !_IS_MISSION_REPEAT_ACTIVE(false))
 				{

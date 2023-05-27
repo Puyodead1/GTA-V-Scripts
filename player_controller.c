@@ -36627,7 +36627,7 @@ void func_241() // Position - 0x30D1A
 				{
 					if (!Global_97614[num2].f_2)
 					{
-						num4 = Global_78828.f_109[num];
+						num4 = G_TextMessageConfig.f_109[num];
 					
 						if (!IS_BIT_SET(Global_91469[num4].f_15, 12))
 						{

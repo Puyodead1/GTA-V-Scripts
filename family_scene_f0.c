@@ -96947,7 +96947,7 @@ BOOL func_545(int iParam0) // Position - 0x75C8B
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 
@@ -99407,7 +99407,7 @@ BOOL func_588(int iParam0) // Position - 0x78840
 			{
 				if (Global_91433[i] != -1)
 				{
-					num2 = Global_78828.f_109[Global_91433[i]];
+					num2 = G_TextMessageConfig.f_109[Global_91433[i]];
 					num3 = num2;
 				
 					if (func_471(Global_91469[num3].f_12, num))
@@ -105311,9 +105311,9 @@ int func_639(int iParam0) // Position - 0x807A6
 {
 	var unk;
 
-	if (Global_78828.f_1)
+	if (G_TextMessageConfig.f_1)
 	{
-		while (Global_78828.f_1)
+		while (G_TextMessageConfig.f_1)
 		{
 			SYSTEM::WAIT(0);
 		}

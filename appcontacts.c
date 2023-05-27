@@ -7746,7 +7746,7 @@ BOOL func_55(int iParam0) // Position - 0x6BE8
 	for (i = 0; i < Global_91433; i = i + 1)
 	{
 		if (Global_91433[i] != -1)
-			if (Global_78828.f_109[Global_91433[i]] == iParam0)
+			if (G_TextMessageConfig.f_109[Global_91433[i]] == iParam0)
 				return true;
 	}
 
@@ -10235,7 +10235,7 @@ BOOL func_115(eCharacter echParam0) // Position - 0xA29E
 		if (num != -1)
 		{
 			num2 = -1;
-			num2 = Global_78828.f_109[Global_91433[i]];
+			num2 = G_TextMessageConfig.f_109[Global_91433[i]];
 		
 			if (num2 != -1)
 				if (func_116(Global_91469[num2].f_12, echParam0))

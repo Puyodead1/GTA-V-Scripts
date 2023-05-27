@@ -1823,7 +1823,7 @@ void func_42(BOOL bParam0, BOOL bParam1) // Position - 0x149C
 	{
 		num = func_43();
 		num2 = Global_91433[num];
-		num3 = Global_78828.f_109[num2];
+		num3 = G_TextMessageConfig.f_109[num2];
 	
 		if (num == -1)
 		{
@@ -44874,7 +44874,7 @@ BOOL func_449(int iParam0) // Position - 0x36EFD
 		PLAYER::START_FIRING_AMNESTY(5000);
 
 	num = Global_91433[iParam0];
-	num2 = Global_78828.f_109[num];
+	num2 = G_TextMessageConfig.f_109[num];
 	func_453(num2, true);
 	PLAYER::SPECIAL_ABILITY_CHARGE_ON_MISSION_FAILED(PLAYER::PLAYER_ID(), 0);
 	PLAYER::SPECIAL_ABILITY_DEACTIVATE(PLAYER::PLAYER_ID(), 0);

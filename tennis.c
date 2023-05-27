@@ -55549,7 +55549,7 @@ struct<2> func_853(int iParam0) // Position - 0x4945F
 
 BOOL func_854(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x494CC
 {
-	if (!func_856(0) || Global_78828 || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_856(0) || G_TextMessageConfig || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
 	switch (Global_78813)
@@ -115363,7 +115363,7 @@ BOOL func_1173(int iParam0) // Position - 0x9A777
 		PLAYER::START_FIRING_AMNESTY(5000);
 
 	num = Global_91433[iParam0];
-	num2 = Global_78828.f_109[num];
+	num2 = G_TextMessageConfig.f_109[num];
 	func_1174(num2, true);
 	PLAYER::SPECIAL_ABILITY_CHARGE_ON_MISSION_FAILED(PLAYER::PLAYER_ID(), 0);
 	PLAYER::SPECIAL_ABILITY_DEACTIVATE(PLAYER::PLAYER_ID(), 0);

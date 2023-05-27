@@ -4128,7 +4128,7 @@ int func_117(BOOL bParam0) // Position - 0x577A
 		return 0;
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-		if (PLAYER::IS_PLAYER_BEING_ARRESTED(PLAYER::PLAYER_ID(), true) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && bParam0 && !func_127(PLAYER::PLAYER_PED_ID()) || func_126() || func_125(PLAYER::PLAYER_PED_ID()) || !STREAMING::IS_SAFE_TO_START_PLAYER_SWITCH() || Global_78828.f_1 && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !func_68(0) && !func_68(3) && !func_122(2) && !func_68(9) && !func_68(10) || Global_78819 || PED::IS_PED_IN_ANY_TRAIN(PLAYER::PLAYER_PED_ID()) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("franklin0")) == 0)
+		if (PLAYER::IS_PLAYER_BEING_ARRESTED(PLAYER::PLAYER_ID(), true) || PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && bParam0 && !func_127(PLAYER::PLAYER_PED_ID()) || func_126() || func_125(PLAYER::PLAYER_PED_ID()) || !STREAMING::IS_SAFE_TO_START_PLAYER_SWITCH() || G_TextMessageConfig.f_1 && !NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !func_68(0) && !func_68(3) && !func_122(2) && !func_68(9) && !func_68(10) || Global_78819 || PED::IS_PED_IN_ANY_TRAIN(PLAYER::PLAYER_PED_ID()) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("franklin0")) == 0)
 			return 0;
 
 	if (Global_78558)
@@ -5722,7 +5722,7 @@ int func_140(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position -
 					{
 						num2 = Global_91433[i];
 						TEXT_LABEL_ASSIGN_STRING(&unk, "MISS_SWITCH_", 64);
-						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[Global_78828.f_109[num2]], 64);
+						TEXT_LABEL_APPEND_STRING(&unk, &Global_91469[G_TextMessageConfig.f_109[num2]], 64);
 						STATS::STAT_INCREMENT(MISC::GET_HASH_KEY(&unk), 1f);
 					}
 				}

@@ -13455,7 +13455,7 @@ void func_241(var uParam0, int iParam1) // Position - 0x116D2
 
 	if (!Global_78827)
 		if (!PLAYER::IS_PLAYER_DEAD(PLAYER::GET_PLAYER_INDEX()))
-			if (!Global_78828)
+			if (!G_TextMessageConfig)
 				if (CAM::IS_SCREEN_FADED_OUT() && !_IS_MISSION_REPEAT_ACTIVE(false))
 					CAM::DO_SCREEN_FADE_IN(800);
 
@@ -30629,7 +30629,7 @@ struct<2> func_570(int iParam0) // Position - 0x2C05F
 
 BOOL func_571(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6) // Position - 0x2C0C8
 {
-	if (!func_573(0) || Global_78828 || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
+	if (!func_573(0) || G_TextMessageConfig || Global_78817 == 1 || !CAM::IS_SCREEN_FADED_IN())
 		return false;
 
 	switch (Global_78813)
