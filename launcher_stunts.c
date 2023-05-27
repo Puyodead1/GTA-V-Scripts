@@ -2243,7 +2243,7 @@ BOOL func_69(Vehicle veParam0) // Position - 0x287D
 
 BOOL func_70() // Position - 0x288A
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_71(int iParam0) // Position - 0x2896

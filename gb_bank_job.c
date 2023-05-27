@@ -57456,7 +57456,7 @@ BOOL func_580(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3AFD3
 	if (NETWORK::NETWORK_TEXT_CHAT_IS_TYPING())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) > 0)
@@ -102829,7 +102829,7 @@ BOOL func_914() // Position - 0x821AF
 
 BOOL func_915() // Position - 0x821C5
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_916() // Position - 0x821D1
@@ -107553,7 +107553,7 @@ BOOL func_1111(int iParam0) // Position - 0x877EB
 
 BOOL func_1112() // Position - 0x8781D
 {
-	if (func_537() || func_584(0) || Global_75693 || func_1113())
+	if (func_537() || func_584(0) || G_DisableMessagesAndCalls2 || func_1113())
 		return 1;
 
 	return 0;

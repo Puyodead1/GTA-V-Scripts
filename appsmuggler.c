@@ -14644,7 +14644,7 @@ void func_380() // Position - 0xD3AF
 
 BOOL func_381() // Position - 0xD3EA
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_382() // Position - 0xD3F6
@@ -14787,8 +14787,8 @@ void func_387(BOOL bParam0) // Position - 0xD60D
 
 void func_388(int iParam0) // Position - 0xD627
 {
-	if (Global_75693 != iParam0)
-		Global_75693 = iParam0;
+	if (G_DisableMessagesAndCalls2 != iParam0)
+		G_DisableMessagesAndCalls2 = iParam0;
 
 	return;
 }

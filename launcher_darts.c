@@ -4461,7 +4461,7 @@ BOOL func_80(var uParam0, Vector3 vParam1, var uParam2, var uParam3, Vector3 vPa
 
 BOOL func_81() // Position - 0x6215
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_82(int iParam0) // Position - 0x6221

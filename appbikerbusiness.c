@@ -19257,7 +19257,7 @@ float func_467(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bP
 
 BOOL func_468() // Position - 0x1295B
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_469(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x12967
@@ -20473,8 +20473,8 @@ BOOL func_512(Player plParam0) // Position - 0x13E1B
 
 void func_513(int iParam0) // Position - 0x13E70
 {
-	if (Global_75693 != iParam0)
-		Global_75693 = iParam0;
+	if (G_DisableMessagesAndCalls2 != iParam0)
+		G_DisableMessagesAndCalls2 = iParam0;
 
 	return;
 }

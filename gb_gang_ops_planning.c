@@ -4890,7 +4890,7 @@ BOOL func_180(Player plParam0, BOOL bParam1) // Position - 0x607E
 
 BOOL func_181() // Position - 0x60B9
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_182(int iParam0) // Position - 0x60C5

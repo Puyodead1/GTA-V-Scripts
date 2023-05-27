@@ -6280,7 +6280,7 @@ void func_118(var uParam0) // Position - 0x85A9
 
 BOOL func_119() // Position - 0x86DE
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_120() // Position - 0x86EA

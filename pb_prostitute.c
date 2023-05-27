@@ -14848,7 +14848,7 @@ BOOL func_401(Vehicle veParam0, Vector3* pvParam1) // Position - 0x12FA2
 
 BOOL func_402() // Position - 0x13069
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_403() // Position - 0x13075

@@ -110566,7 +110566,7 @@ void func_793() // Position - 0x82F10
 {
 	if (IS_BIT_SET(Global_2793046.f_4687, 0))
 	{
-		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !Global_75693 && !Global_60543 && !CAM::IS_SCREEN_FADED_OUT())
+		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !G_DisableMessagesAndCalls2 && !Global_60543 && !CAM::IS_SCREEN_FADED_OUT())
 		{
 			MISC::SET_BIT(&(Global_2793046.f_4687), 1);
 			_DISPLAY_HELP_TEXT_NO_SOUND("AMEV_LBD_HELP" /*Press ~INPUT_MULTIPLAYER_INFO~ to show the Freemode Event leaderboard.*/, -1);
@@ -166144,7 +166144,7 @@ void func_1954() // Position - 0xD4C51
 
 	if (!IS_BIT_SET(Global_1836858.f_1, 23))
 	{
-		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !Global_75693 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
+		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !G_DisableMessagesAndCalls2 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		{
 			if (func_1971())
 			{

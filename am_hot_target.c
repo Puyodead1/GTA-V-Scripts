@@ -125860,7 +125860,7 @@ void func_1606() // Position - 0xAC693
 
 	if (!IS_BIT_SET(Global_1836858.f_1, 23))
 	{
-		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !Global_75693 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
+		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !G_DisableMessagesAndCalls2 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		{
 			if (func_1628())
 			{

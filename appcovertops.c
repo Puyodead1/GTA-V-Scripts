@@ -5867,7 +5867,7 @@ BOOL func_214() // Position - 0x6E4C
 
 BOOL func_215() // Position - 0x6E5A
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_216() // Position - 0x6E66
@@ -7105,8 +7105,8 @@ eMPStat func_259(int iParam0) // Position - 0x839C
 
 void func_260(int iParam0) // Position - 0x8402
 {
-	if (Global_75693 != iParam0)
-		Global_75693 = iParam0;
+	if (G_DisableMessagesAndCalls2 != iParam0)
+		G_DisableMessagesAndCalls2 = iParam0;
 
 	return;
 }

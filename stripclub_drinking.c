@@ -71745,7 +71745,7 @@ void func_431(char* sParam0, char* sParam1, int iParam2, int iParam3, int iParam
 
 BOOL func_432() // Position - 0x5B726
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_433() // Position - 0x5B732

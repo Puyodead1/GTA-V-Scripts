@@ -110993,7 +110993,7 @@ BOOL func_1204() // Position - 0x99E6A
 
 BOOL func_1205() // Position - 0x99EE5
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_1206(var uParam0, var uParam1, var uParam2, var uParam3, eBlipSprite ebsParam4, const char* sParam5, int iParam6, BOOL bParam7, int iParam8) // Position - 0x99EF1

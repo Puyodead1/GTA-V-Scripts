@@ -9064,7 +9064,7 @@ BOOL func_301(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xAC1D
 	if (NETWORK::NETWORK_TEXT_CHAT_IS_TYPING())
 		return 0;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return 0;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) > 0)

@@ -815,7 +815,7 @@ void main() // Position - 0x0
 	
 		if (!HUD::IS_PAUSE_MENU_ACTIVE())
 		{
-			if (!Global_75693)
+			if (!G_DisableMessagesAndCalls2)
 			{
 				if (!func_75())
 				{

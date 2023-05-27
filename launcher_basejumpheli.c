@@ -4075,9 +4075,9 @@ void func_53() // Position - 0x57F3
 			if (!bLocal_459 || iLocal_121 == 3 && !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PLAY_BASEJUMP_B" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/) || iLocal_121 != 3 && !_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PLAY_BASEJUMP_S" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/))
 			{
 				if (iLocal_121 == 3)
-					if (!Global_75693)
+					if (!G_DisableMessagesAndCalls2)
 						func_54("PLAY_BASEJUMP_B" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/);
-				else if (!Global_75693)
+				else if (!G_DisableMessagesAndCalls2)
 					func_54("PLAY_BASEJUMP_S" /*Approach the helicopter and press ~INPUT_ENTER~ to start parachuting.*/);
 			
 				bLocal_459 = true;
@@ -5549,7 +5549,7 @@ BOOL func_118(Vehicle veParam0) // Position - 0x7AD3
 
 BOOL func_119() // Position - 0x7AE0
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_120(int iParam0) // Position - 0x7AEC

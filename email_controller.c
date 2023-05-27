@@ -1764,7 +1764,7 @@ BOOL func_34(int iParam0, eCharacter echParam1, int iParam2, int iParam3, int iP
 	if (CUTSCENE::IS_CUTSCENE_PLAYING())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_96688)

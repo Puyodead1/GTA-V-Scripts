@@ -13222,7 +13222,7 @@ BOOL func_223(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA350
 	if (NETWORK::NETWORK_TEXT_CHAT_IS_TYPING())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) > 0)

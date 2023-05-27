@@ -17671,7 +17671,7 @@ BOOL func_89(int iParam0) // Position - 0xB18E
 
 BOOL func_90() // Position - 0xB1E5
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(int iParam0) // Position - 0xB1F1

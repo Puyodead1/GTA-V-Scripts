@@ -37533,7 +37533,7 @@ BOOL func_331(var uParam0, var uParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 				return false;
 			}
 		
-			if (Global_75693)
+			if (G_DisableMessagesAndCalls2)
 				return false;
 		
 			if (uParam0->[uParam1->f_12].f_6 == 1)

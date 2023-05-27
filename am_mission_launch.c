@@ -5696,7 +5696,7 @@ int func_186(Player plParam0, BOOL bParam1) // Position - 0x66C6
 
 BOOL func_187() // Position - 0x66D9
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_188(char* sParam0, BOOL bParam1) // Position - 0x66E5
@@ -9775,7 +9775,7 @@ BOOL func_343(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)

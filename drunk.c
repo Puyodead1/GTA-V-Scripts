@@ -3188,7 +3188,7 @@ BOOL func_110(Ped pedParam0) // Position - 0x3923
 	if (PED::IS_PED_CLIMBING(pedParam0))
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (func_112())
@@ -3559,7 +3559,7 @@ void func_121() // Position - 0x3C43
 			return;
 		}
 	
-		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && uLocal_43.f_1 == PLAYER::PLAYER_PED_ID() && Global_75693 && !Global_44205)
+		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && uLocal_43.f_1 == PLAYER::PLAYER_PED_ID() && G_DisableMessagesAndCalls2 && !Global_44205)
 		{
 			if (Global_44232[iLocal_64].f_3 >= 10)
 				Global_44232[iLocal_64].f_3 = 9;

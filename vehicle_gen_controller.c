@@ -5157,7 +5157,7 @@ void func_70() // Position - 0x768B
 	switch (iLocal_654)
 	{
 		case 0:
-			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) && !Global_75693 && !bLocal_854 && !CAM::IS_SCREEN_FADED_OUT())
+			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()) && !G_DisableMessagesAndCalls2 && !bLocal_854 && !CAM::IS_SCREEN_FADED_OUT())
 			{
 				if (iLocal_402.f_29.f_80 && iLocal_402.f_2 == 0 && Global_77348.f_592[0] != -1 || func_264() != 0 && iLocal_402 != -1 && !bLocal_1016 && !func_27(0) && !func_27(3) && !func_27(2) && !func_27(4) && !func_27(14) && !func_265(-1082130432))
 				{
@@ -21514,7 +21514,7 @@ void func_267() // Position - 0x1C251
 	sizeAndPeds = 10;
 	flag = false;
 
-	if (iLocal_402.f_29.f_80 && iLocal_402.f_29.f_69 && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && iLocal_402.f_2 == 0 && iLocal_402 != -1 && func_69(iLocal_402, 0) && func_69(iLocal_402, 5) && !func_27(0) && !func_27(3) && !func_27(2) && !func_27(4) && !func_27(5) && !func_27(14) && !Global_75693 && !_IS_MISSION_REPEAT_ACTIVE(true) && !func_355() || iLocal_402.f_3 > 1 && !_IS_MISSION_REPEAT_ACTIVE(false) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_355())
+	if (iLocal_402.f_29.f_80 && iLocal_402.f_29.f_69 && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && iLocal_402.f_2 == 0 && iLocal_402 != -1 && func_69(iLocal_402, 0) && func_69(iLocal_402, 5) && !func_27(0) && !func_27(3) && !func_27(2) && !func_27(4) && !func_27(5) && !func_27(14) && !G_DisableMessagesAndCalls2 && !_IS_MISSION_REPEAT_ACTIVE(true) && !func_355() || iLocal_402.f_3 > 1 && !_IS_MISSION_REPEAT_ACTIVE(false) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_355())
 	{
 		func_354(iLocal_402, &uLocal_546);
 		num = 0f;
@@ -27529,7 +27529,7 @@ void func_356() // Position - 0x26511
 	if (PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) || func_27(0) || func_27(3) || func_27(2) || func_27(4) || func_27(14) || !func_25(echLocal_672))
 		return;
 
-	if (!Global_75693)
+	if (!G_DisableMessagesAndCalls2)
 	{
 		if (Global_113648.f_32751.f_1982[echLocal_672].f_626[iLocal_855] != -15)
 		{

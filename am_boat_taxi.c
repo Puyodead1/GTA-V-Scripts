@@ -4156,7 +4156,7 @@ BOOL func_90(int iParam0, int iParam1) // Position - 0x3FCB
 	if (Global_60543)
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (HUD::IS_WARNING_MESSAGE_ACTIVE())

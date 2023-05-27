@@ -70957,7 +70957,7 @@ BOOL func_378(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)

@@ -69025,7 +69025,7 @@ BOOL func_313(var uParam0) // Position - 0x58020
 
 BOOL func_314() // Position - 0x58075
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_315(Player plParam0, int iParam1) // Position - 0x58081

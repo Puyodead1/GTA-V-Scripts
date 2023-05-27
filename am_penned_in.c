@@ -60655,7 +60655,7 @@ BOOL func_700(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)
@@ -86076,7 +86076,7 @@ void func_1267() // Position - 0x5F37E
 
 	if (!IS_BIT_SET(Global_1836858.f_1, 23))
 	{
-		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !Global_75693 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
+		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !G_DisableMessagesAndCalls2 && !Global_60543 && !HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		{
 			if (func_1285())
 			{

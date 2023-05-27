@@ -4261,7 +4261,7 @@ void _DISPLAY_HELP_TEXT(char* text, int iParam1) // Position - 0x686D
 
 BOOL func_82() // Position - 0x6884
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_83(int iParam0) // Position - 0x6890

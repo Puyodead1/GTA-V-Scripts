@@ -10376,7 +10376,7 @@ Player _INVALID_PLAYER_INDEX() // Position - 0xAEB
 
 BOOL func_19() // Position - 0xAF4
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_20(Player plParam0) // Position - 0xB00

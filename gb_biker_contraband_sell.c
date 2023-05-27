@@ -98834,7 +98834,7 @@ void func_875(BOOL bParam0) // Position - 0x7E1B3
 {
 	if (IS_BIT_SET(Global_2793046.f_4687, 0))
 	{
-		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !Global_75693 && !Global_60543 && !CAM::IS_SCREEN_FADED_OUT() && !func_775(PLAYER::PLAYER_ID(), 22) && func_886(PLAYER::PLAYER_ID()) != 0 && !func_881(func_882()) && !func_873(PLAYER::PLAYER_ID()) && !func_880(func_606(PLAYER::PLAYER_ID())) && !func_879(func_606(PLAYER::PLAYER_ID())))
+		if (!HUD::IS_RADAR_HIDDEN() && !IS_BIT_SET(Global_2793046.f_848, 2) && _NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !G_DisableMessagesAndCalls2 && !Global_60543 && !CAM::IS_SCREEN_FADED_OUT() && !func_775(PLAYER::PLAYER_ID(), 22) && func_886(PLAYER::PLAYER_ID()) != 0 && !func_881(func_882()) && !func_873(PLAYER::PLAYER_ID()) && !func_880(func_606(PLAYER::PLAYER_ID())) && !func_879(func_606(PLAYER::PLAYER_ID())))
 		{
 			MISC::SET_BIT(&(Global_2793046.f_4687), 1);
 			_DISPLAY_HELP_TEXT_NO_SOUND(func_865(bParam0), -1);
@@ -130314,7 +130314,7 @@ BOOL func_1621(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positi
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)

@@ -786,7 +786,7 @@ void func_24(char* sParam0) // Position - 0xE78
 
 BOOL func_25() // Position - 0xE8E
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_26() // Position - 0xE9A

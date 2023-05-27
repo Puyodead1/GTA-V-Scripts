@@ -30754,7 +30754,7 @@ BOOL func_777() // Position - 0x2C30B
 
 BOOL func_778() // Position - 0x2C321
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_779() // Position - 0x2C32D
@@ -142044,7 +142044,7 @@ BOOL func_2144() // Position - 0xBD05D
 
 BOOL func_2145() // Position - 0xBD0F2
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_2146() // Position - 0xBD0FE

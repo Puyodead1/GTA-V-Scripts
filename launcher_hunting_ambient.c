@@ -1713,7 +1713,7 @@ Hash func_53(eCharacter echParam0) // Position - 0x1A9D
 
 BOOL func_54() // Position - 0x1AAC
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_55(int iParam0) // Position - 0x1AB8

@@ -1373,7 +1373,7 @@ void func_57(int* piParam0, int iParam1, BOOL bParam2) // Position - 0x1632
 
 BOOL func_58() // Position - 0x1656
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_59() // Position - 0x1662

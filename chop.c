@@ -7187,7 +7187,7 @@ BOOL func_140(int iParam0, int iParam1) // Position - 0xA3EE
 
 BOOL func_141() // Position - 0xA404
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_142() // Position - 0xA410

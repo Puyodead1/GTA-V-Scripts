@@ -2608,7 +2608,7 @@ int _STOPWATCH_GET_TIME_PASSED(var pStopwatch, BOOL useLocalTimer, BOOL useAccur
 
 BOOL func_95() // Position - 0x2F29
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_96(int iParam0) // Position - 0x2F35

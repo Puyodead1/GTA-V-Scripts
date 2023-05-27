@@ -711,7 +711,7 @@ BOOL func_18(int iParam0) // Position - 0x8A1
 
 BOOL func_19() // Position - 0x90F
 {
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return true;
 
 	if (!PLAYER::IS_PLAYER_PLAYING(PLAYER::GET_PLAYER_INDEX()))
@@ -1035,7 +1035,7 @@ BOOL func_31(BOOL bParam0) // Position - 0xDAE
 
 BOOL func_32() // Position - 0xDEA
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_33() // Position - 0xDF6

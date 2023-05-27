@@ -9811,7 +9811,7 @@ int func_320(var uParam0, int iParam1) // Position - 0xB51A
 		if (IS_BIT_SET(Global_2621446, 7))
 			return 10;
 	
-		if (Global_75693 == 1)
+		if (G_DisableMessagesAndCalls2 == 1)
 			return 11;
 	
 		if (Global_1836843 && HUD::IS_HOVERING_OVER_MISSION_CREATOR_BLIP() && HUD::IS_PAUSE_MENU_ACTIVE())

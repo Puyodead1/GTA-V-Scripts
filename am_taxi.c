@@ -4609,7 +4609,7 @@ BOOL func_52(int iParam0) // Position - 0x2A41
 
 BOOL func_53() // Position - 0x2A98
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_54() // Position - 0x2AA4
@@ -5123,7 +5123,7 @@ BOOL func_76(int iParam0, int iParam1) // Position - 0x33A9
 	if (Global_60543)
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (HUD::IS_WARNING_MESSAGE_ACTIVE())

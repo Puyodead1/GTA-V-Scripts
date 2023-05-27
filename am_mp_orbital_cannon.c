@@ -4506,7 +4506,7 @@ int func_123(var uParam0) // Position - 0x4236
 
 BOOL func_124() // Position - 0x4242
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_125(var uParam0) // Position - 0x424E

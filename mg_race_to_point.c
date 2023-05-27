@@ -402,7 +402,7 @@ void main() // Position - 0x0
 			if (func_571())
 				func_572();
 	
-		if (Global_60543 || Global_75693)
+		if (Global_60543 || G_DisableMessagesAndCalls2)
 			func_572();
 	}
 
@@ -1376,7 +1376,7 @@ BOOL func_27() // Position - 0x13A3
 		if (Global_60543)
 			return true;
 	
-		if (Global_75693)
+		if (G_DisableMessagesAndCalls2)
 			return true;
 	
 		if (HUD::IS_WARNING_MESSAGE_ACTIVE())

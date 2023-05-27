@@ -33009,7 +33009,7 @@ BOOL func_950() // Position - 0x307D9
 
 BOOL func_951() // Position - 0x307EF
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_952() // Position - 0x307FB

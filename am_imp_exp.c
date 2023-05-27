@@ -9431,7 +9431,7 @@ BOOL func_261(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)
@@ -18026,7 +18026,7 @@ BOOL func_526() // Position - 0x16B32
 
 BOOL func_527() // Position - 0x16C1D
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_528() // Position - 0x16C29

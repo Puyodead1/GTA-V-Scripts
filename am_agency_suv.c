@@ -53997,7 +53997,7 @@ BOOL func_624() // Position - 0x42543
 
 BOOL func_625() // Position - 0x42558
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_626() // Position - 0x42564

@@ -86471,7 +86471,7 @@ BOOL func_705() // Position - 0x7423B
 
 BOOL func_706() // Position - 0x74250
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_707(int* piParam0, int iParam1) // Position - 0x7425C

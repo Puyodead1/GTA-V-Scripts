@@ -116183,7 +116183,7 @@ BOOL func_1166(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positi
 	if (_IS_FMMC_ACTIVE())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (Global_2803648)

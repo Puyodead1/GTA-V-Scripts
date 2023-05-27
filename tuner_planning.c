@@ -2696,7 +2696,7 @@ BOOL func_101(Player plParam0, BOOL bParam1) // Position - 0x20D5
 
 BOOL func_102() // Position - 0x2110
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_103() // Position - 0x211C

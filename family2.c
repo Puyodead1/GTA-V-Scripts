@@ -37136,7 +37136,7 @@ void func_278() // Position - 0x2B345
 
 BOOL func_279() // Position - 0x2B566
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_280(var uParam0, var uParam1) // Position - 0x2B572

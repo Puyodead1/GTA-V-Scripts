@@ -29868,7 +29868,7 @@ int func_392() // Position - 0x24ED7
 
 BOOL func_393() // Position - 0x24F1A
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_394() // Position - 0x24F26

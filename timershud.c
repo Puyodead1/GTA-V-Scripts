@@ -8803,7 +8803,7 @@ BOOL func_241() // Position - 0xFE50
 	if (Global_1574529)
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (HUD::IS_MP_TEXT_CHAT_TYPING())

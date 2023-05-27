@@ -1455,7 +1455,7 @@ BOOL func_14(char* sParam0) // Position - 0xCC4
 
 BOOL func_15() // Position - 0xCFF
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_16() // Position - 0xD0B

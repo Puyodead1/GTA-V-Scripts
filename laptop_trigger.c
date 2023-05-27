@@ -958,7 +958,7 @@ BOOL func_19() // Position - 0x1141
 
 BOOL func_20() // Position - 0x1150
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x115C

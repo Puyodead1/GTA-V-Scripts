@@ -102245,7 +102245,7 @@ void func_745(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4,
 
 BOOL func_746() // Position - 0x7D81A
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_747() // Position - 0x7D826

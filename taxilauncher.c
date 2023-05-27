@@ -1667,7 +1667,7 @@ BOOL func_46() // Position - 0x19BB
 
 BOOL func_47() // Position - 0x19CC
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_48(int iParam0) // Position - 0x19D8

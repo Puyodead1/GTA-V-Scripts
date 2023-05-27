@@ -1811,28 +1811,28 @@ void func_72() // Position - 0x1D79
 	{
 		if (!func_80() && _IS_FMMC_ACTIVE() || func_79() || func_78() || func_77() || func_76())
 		{
-			if (Global_75693)
+			if (G_DisableMessagesAndCalls2)
 			{
 				_STOPWATCH_RESET(&uLocal_159, true, false);
 			}
 			else
 			{
-				Global_75693 = true;
+				G_DisableMessagesAndCalls2 = true;
 				bLocal_158 = true;
 				_STOPWATCH_INITIALIZE(&uLocal_159, true, false);
 			}
 		}
-		else if (bLocal_158 && Global_75693 && func_80() || func_75(uLocal_159, 1500, true) || func_73(Global_2672505.f_4.f_16))
+		else if (bLocal_158 && G_DisableMessagesAndCalls2 && func_80() || func_75(uLocal_159, 1500, true) || func_73(Global_2672505.f_4.f_16))
 		{
-			Global_75693 = false;
+			G_DisableMessagesAndCalls2 = false;
 			bLocal_158 = false;
 			_STOPWATCH_DESTROY(&uLocal_159);
 		}
 	}
 
-	if (bLocal_158 && Global_75693 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) < 1 && !func_36(PLAYER::PLAYER_ID()))
+	if (bLocal_158 && G_DisableMessagesAndCalls2 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) < 1 && !func_36(PLAYER::PLAYER_ID()))
 	{
-		Global_75693 = false;
+		G_DisableMessagesAndCalls2 = false;
 		bLocal_158 = false;
 		_STOPWATCH_DESTROY(&uLocal_159);
 	}
@@ -7182,7 +7182,7 @@ void func_307() // Position - 0x847D
 			_STOPWATCH_DESTROY(&uLocal_132);
 		}
 	
-		if (Global_75693 || func_427() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
+		if (G_DisableMessagesAndCalls2 || func_427() || !PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 			return;
 	
 		if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && func_426())
@@ -18891,7 +18891,7 @@ BOOL func_444(BOOL bParam0) // Position - 0x17827
 
 BOOL func_445() // Position - 0x17850
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_446() // Position - 0x1785C

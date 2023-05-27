@@ -51740,7 +51740,7 @@ BOOL func_1578() // Position - 0x49048
 
 BOOL func_1579() // Position - 0x4905E
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_1580() // Position - 0x4906A
@@ -158213,7 +158213,7 @@ BOOL func_2696(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xD40E4
 	if (NETWORK::NETWORK_TEXT_CHAT_IS_TYPING())
 		return false;
 
-	if (Global_75693)
+	if (G_DisableMessagesAndCalls2)
 		return false;
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) > 0)

@@ -27081,7 +27081,7 @@ Vector3 func_142(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4
 
 BOOL func_143() // Position - 0x1BB33
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_144(int iParam0) // Position - 0x1BB3F

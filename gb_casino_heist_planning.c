@@ -19491,7 +19491,7 @@ BOOL func_511(var uParam0) // Position - 0x14B2D
 
 BOOL func_512() // Position - 0x14B62
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_513() // Position - 0x14B6E

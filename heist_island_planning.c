@@ -2960,7 +2960,7 @@ void func_52() // Position - 0x1549
 
 BOOL func_53() // Position - 0x1556
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_54(int iParam0) // Position - 0x1562

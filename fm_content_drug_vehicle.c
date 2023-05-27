@@ -33693,7 +33693,7 @@ BOOL func_874() // Position - 0x30FE0
 
 BOOL func_875() // Position - 0x30FF6
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 BOOL func_876() // Position - 0x31002

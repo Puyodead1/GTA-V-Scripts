@@ -11393,7 +11393,7 @@ BOOL func_220() // Position - 0xF766
 
 BOOL func_221() // Position - 0xF77B
 {
-	return Global_75693;
+	return G_DisableMessagesAndCalls2;
 }
 
 void func_222() // Position - 0xF787
