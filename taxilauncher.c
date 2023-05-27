@@ -5555,7 +5555,7 @@ BOOL func_119(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 		if (Global_21731)
 		{
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
-			MISC::CLEAR_BIT(&Global_8254, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
 			if (bParam3)
@@ -5712,7 +5712,7 @@ void func_121() // Position - 0x83EC
 	Global_22741 = 0;
 	Global_21774 = 0;
 	Global_21775 = 0;
-	MISC::CLEAR_BIT(&Global_8254, 16);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 16);
 	return;
 }
 

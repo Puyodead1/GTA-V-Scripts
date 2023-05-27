@@ -1571,7 +1571,7 @@ void func_39(int iParam0) // Position - 0x1866
 		if (func_44(0))
 			func_40(iParam0);
 	
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	}
 
 	return;
@@ -1589,7 +1589,7 @@ void func_40(int iParam0) // Position - 0x1899
 			func_42(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -1676,7 +1676,7 @@ BOOL func_45() // Position - 0x1A23
 
 void func_46() // Position - 0x1A32
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 

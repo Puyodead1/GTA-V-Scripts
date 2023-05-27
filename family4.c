@@ -101969,7 +101969,7 @@ BOOL func_593(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x7D96F
 		if (Global_21731)
 		{
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
-			MISC::CLEAR_BIT(&Global_8254, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
 			if (bParam2)
@@ -102164,7 +102164,7 @@ void func_598() // Position - 0x7DD19
 	Global_22741 = 0;
 	Global_21774 = 0;
 	Global_21775 = 0;
-	MISC::CLEAR_BIT(&Global_8254, 16);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 16);
 	return;
 }
 
@@ -112877,7 +112877,7 @@ BOOL func_804(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 
 void func_805() // Position - 0x90E11
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 

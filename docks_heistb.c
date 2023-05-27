@@ -24790,7 +24790,7 @@ BOOL func_288(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x19DA4
 		if (Global_21731)
 		{
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
-			MISC::CLEAR_BIT(&Global_8254, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
 			if (bParam2)
@@ -24990,7 +24990,7 @@ void func_294() // Position - 0x1A166
 	Global_22741 = 0;
 	Global_21774 = 0;
 	Global_21775 = 0;
-	MISC::CLEAR_BIT(&Global_8254, 16);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 16);
 	return;
 }
 
@@ -115341,7 +115341,7 @@ void func_733(BOOL bParam0) // Position - 0x8C7E2
 		func_739();
 	
 		if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-			MISC::SET_BIT(&Global_8254, 16);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 	
 		Global_20383.f_1 = 1;
 	
@@ -115369,7 +115369,7 @@ void func_734(int iParam0) // Position - 0x8C845
 			func_735(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -122648,7 +122648,7 @@ void func_854(int iParam0) // Position - 0x999B6
 		if (func_738(0))
 			func_734(iParam0);
 	
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	}
 
 	return;
@@ -122659,9 +122659,9 @@ int func_855(int iParam0) // Position - 0x999E9
 	if (func_856(17, 0, 1, false))
 	{
 		if (iParam0 == 1)
-			MISC::SET_BIT(&Global_8254, 22);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 22);
 		else
-			MISC::CLEAR_BIT(&Global_8254, 22);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 22);
 	
 		return 1;
 	}
@@ -122984,12 +122984,12 @@ int func_862(int iParam0, eCharacter echParam1) // Position - 0x9A411
 void func_863(float fParam0, float fParam1, float fParam2, BOOL bParam3, BOOL bParam4) // Position - 0x9A43B
 {
 	Global_22831 = { fParam0 };
-	MISC::CLEAR_BIT(&Global_8254, 30);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 30);
 
 	if (bParam3)
-		MISC::SET_BIT(&Global_8254, 29);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 29);
 	else
-		MISC::CLEAR_BIT(&Global_8254, 29);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 29);
 
 	if (bParam4)
 		MISC::SET_BIT(&Global_8255, 1);
@@ -129508,7 +129508,7 @@ BOOL func_958(Ped pedParam0) // Position - 0xA5CD4
 
 void func_959() // Position - 0xA5D2F
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 

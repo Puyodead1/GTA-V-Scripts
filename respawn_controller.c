@@ -5878,7 +5878,7 @@ BOOL func_111(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x7F0F
 		if (Global_21731)
 		{
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
-			MISC::CLEAR_BIT(&Global_8254, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
 			if (bParam2)
@@ -6083,7 +6083,7 @@ void func_118() // Position - 0x82DB
 	Global_22741 = 0;
 	Global_21774 = 0;
 	Global_21775 = 0;
-	MISC::CLEAR_BIT(&Global_8254, 16);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 16);
 	return;
 }
 
@@ -6256,7 +6256,7 @@ void func_127(int iParam0) // Position - 0x861F
 		if (func_131(0))
 			func_128(iParam0);
 	
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	}
 
 	return;
@@ -6274,7 +6274,7 @@ void func_128(int iParam0) // Position - 0x8652
 			func_129(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -9532,7 +9532,7 @@ void func_196() // Position - 0xC215
 	WEAPON::SET_PED_INFINITE_AMMO_CLIP(ped, false);
 	PED::SET_PED_CAN_PLAY_AMBIENT_ANIMS(ped, true);
 	AUDIO::SET_PED_IS_DRUNK(ped, false);
-	MISC::CLEAR_BIT(&Global_8254, 2);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 2);
 	func_129(false, false);
 	func_203(false);
 	func_201(false);
@@ -10012,7 +10012,7 @@ void func_201(BOOL bParam0) // Position - 0xD234
 		func_202();
 	
 		if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-			MISC::SET_BIT(&Global_8254, 16);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 	
 		Global_20383.f_1 = 1;
 	

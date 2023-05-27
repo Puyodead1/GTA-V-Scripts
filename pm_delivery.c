@@ -3739,7 +3739,7 @@ BOOL func_97(Vehicle veParam0) // Position - 0x4C4F
 
 void func_98() // Position - 0x4CAA
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 

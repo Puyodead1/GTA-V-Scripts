@@ -140860,7 +140860,7 @@ BOOL func_2097(int iParam0, int iParam1) // Position - 0xBB99D
 void func_2098() // Position - 0xBB9B3
 {
 	MISC::CLEAR_BIT(&Global_4542297, 28);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 
@@ -140900,7 +140900,7 @@ void func_2099(BOOL bParam0, int iParam1, BOOL bParam2) // Position - 0xBB9CE
 void func_2100() // Position - 0xBBAD7
 {
 	MISC::SET_BIT(&Global_4542297, 28);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 

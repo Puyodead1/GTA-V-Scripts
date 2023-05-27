@@ -263,7 +263,7 @@ void main() // Position - 0x0
 						
 							if (Global_20383.f_1 > 3)
 							{
-								IS_BIT_SET(Global_8254, 15);
+								IS_BIT_SET(G_SleepModeOffOn11, 15);
 								func_13();
 							}
 						}
@@ -549,7 +549,7 @@ void func_9() // Position - 0x536
 		MOBILE::SET_MOBILE_PHONE_ROTATION(fLocal_207, 0);
 	}
 
-	if (IS_BIT_SET(Global_8254, 15))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 15))
 	{
 		bLocal_210 = false;
 		bLocal_211 = false;
@@ -745,7 +745,7 @@ void func_22() // Position - 0x9A5
 	{
 		if (func_15(FRONTEND_CONTROL, Global_20352, 0))
 		{
-			MISC::CLEAR_BIT(&Global_8254, 15);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 15);
 			func_24();
 			Global_20361 = 1;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "GET_CURRENT_SELECTION");

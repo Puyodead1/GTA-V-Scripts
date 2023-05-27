@@ -171,18 +171,18 @@ void main() // Position - 0x0
 	fLocal_70 = 0f;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	Global_20581 = 145;
-	MISC::CLEAR_BIT(&Global_8254, 8);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 8);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 14);
 	MISC::CLEAR_BIT(&Global_4542297, 3);
-	MISC::CLEAR_BIT(&Global_8254, 10);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 10);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 26);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 23);
-	MISC::CLEAR_BIT(&Global_8254, 24);
-	MISC::CLEAR_BIT(&Global_8254, 25);
-	MISC::CLEAR_BIT(&Global_8254, 27);
-	MISC::CLEAR_BIT(&Global_8254, 26);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 24);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 25);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 27);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 	Global_2803654 = 0;
 	iLocal_122 = 0;
@@ -267,8 +267,8 @@ void main() // Position - 0x0
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 27);
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
-			MISC::CLEAR_BIT(&Global_8254, 5);
-			MISC::CLEAR_BIT(&Global_8254, 21);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 5);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 21);
 			MISC::CLEAR_BIT(&Global_8255, 2);
 		
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
@@ -741,7 +741,7 @@ void main() // Position - 0x0
 	
 		if (Global_20588 == 0)
 		{
-			if (IS_BIT_SET(Global_8254, 3))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 			{
 				if (!Global_20585)
 				{
@@ -758,7 +758,7 @@ void main() // Position - 0x0
 				Global_20588 = 1;
 			}
 		}
-		else if (!IS_BIT_SET(Global_8254, 3))
+		else if (!IS_BIT_SET(G_SleepModeOffOn11, 3))
 		{
 			if (!Global_20585)
 			{
@@ -784,7 +784,7 @@ void main() // Position - 0x0
 					if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("apptrackify")) == 0)
 						if (Global_78558)
 							if (Global_20383.f_1 == 9)
-								if (Global_21778 == 1 || IS_BIT_SET(Global_8254, 23))
+								if (Global_21778 == 1 || IS_BIT_SET(G_SleepModeOffOn11, 23))
 									PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20352);
 							else
 								PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20352);
@@ -910,19 +910,19 @@ void main() // Position - 0x0
 				if (Global_4542576 == 1)
 					func_50();
 			
-				if (IS_BIT_SET(Global_8254, 25))
+				if (IS_BIT_SET(G_SleepModeOffOn11, 25))
 				{
 					if (Global_78558 == true)
 						func_49();
 				}
-				else if (!IS_BIT_SET(Global_8254, 24))
+				else if (!IS_BIT_SET(G_SleepModeOffOn11, 24))
 				{
-					if (IS_BIT_SET(Global_8254, 26))
+					if (IS_BIT_SET(G_SleepModeOffOn11, 26))
 					{
 						if (func_62(FRONTEND_CONTROL, Global_20350, 0))
 						{
-							MISC::SET_BIT(&Global_8254, 25);
-							MISC::CLEAR_BIT(&Global_8254, 26);
+							MISC::SET_BIT(&G_SleepModeOffOn11, 25);
+							MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
 							MISC::CLEAR_BIT(&Global_8255, 2);
 						}
 					}
@@ -1077,9 +1077,9 @@ void main() // Position - 0x0
 				{
 					if (Global_78558)
 					{
-						if (!IS_BIT_SET(Global_8254, 31))
+						if (!IS_BIT_SET(G_SleepModeOffOn11, 31))
 						{
-							if (!IS_BIT_SET(Global_8254, 27))
+							if (!IS_BIT_SET(G_SleepModeOffOn11, 27))
 							{
 								if (func_8())
 								{
@@ -1093,10 +1093,10 @@ void main() // Position - 0x0
 												{
 													if (Global_20383.f_1 > 6)
 													{
-														MISC::SET_BIT(&Global_8254, 24);
-														MISC::SET_BIT(&Global_8254, 27);
-														MISC::CLEAR_BIT(&Global_8254, 26);
-														MISC::CLEAR_BIT(&Global_8254, 25);
+														MISC::SET_BIT(&G_SleepModeOffOn11, 24);
+														MISC::SET_BIT(&G_SleepModeOffOn11, 27);
+														MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
+														MISC::CLEAR_BIT(&G_SleepModeOffOn11, 25);
 														MISC::SET_BIT(&(Global_2793046.f_1825), 17);
 													}
 												}
@@ -1145,7 +1145,7 @@ void main() // Position - 0x0
 				if (ENTITY::IS_ENTITY_IN_WATER(PLAYER::PLAYER_PED_ID()))
 				{
 					if (ENTITY::GET_ENTITY_SUBMERGED_LEVEL(PLAYER::PLAYER_PED_ID()) > 0.3f)
-						MISC::SET_BIT(&Global_8254, 4);
+						MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 				
 					if (ENTITY::GET_ENTITY_SUBMERGED_LEVEL(PLAYER::PLAYER_PED_ID()) == 1f)
 					{
@@ -1171,7 +1171,7 @@ void main() // Position - 0x0
 			
 				if (PED::IS_PED_IN_ANY_TRAIN(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_RIDING_TRAIN(PLAYER::PLAYER_ID()) || PED::IS_PED_ON_MOUNT(PLAYER::PLAYER_PED_ID()) || MISC::IS_STUNT_JUMP_IN_PROGRESS() || PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()) || PED::IS_PED_JACKING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false) || PED::IS_PED_HANGING_ON_TO_VEHICLE(PLAYER::PLAYER_PED_ID()) || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael1")) > 0 || Global_78820 == 1 || func_3(PLAYER::PLAYER_PED_ID()) || VEHICLE::IS_VEHICLE_DRIVEABLE(PED::GET_VEHICLE_PED_IS_ENTERING(PLAYER::PLAYER_PED_ID()), false) || PED::IS_PED_IN_MELEE_COMBAT(PLAYER::PLAYER_PED_ID()) || GRAPHICS::GET_USINGNIGHTVISION() || bLocal_123)
 					if (!Global_20326)
-						MISC::SET_BIT(&Global_8254, 4);
+						MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 			
 				if (MISC::IS_PC_VERSION())
 				{
@@ -1194,7 +1194,7 @@ void main() // Position - 0x0
 							iLocal_107 = iLocal_104 - iLocal_103;
 						
 							if (iLocal_107 < 4000)
-								MISC::SET_BIT(&Global_8254, 4);
+								MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							else
 								iLocal_105 = 0;
 						}
@@ -1208,7 +1208,7 @@ void main() // Position - 0x0
 						WEAPON::GET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), &iLocal_113, true);
 					
 						if (iLocal_113 != joaat("WEAPON_UNARMED") && Global_20383.f_1 < 7)
-							MISC::SET_BIT(&Global_8254, 4);
+							MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 					}
 				}
 			
@@ -1222,7 +1222,7 @@ void main() // Position - 0x0
 						bLocal_117 = false;
 				
 					if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("rhino") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("cutter") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("chernobog") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("khanjali") || bLocal_117 || VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_114, false) == false)
-						MISC::SET_BIT(&Global_8254, 4);
+						MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 				
 					if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("valkyrie") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("insurgent") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("technical") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trash") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trash2") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("limo2") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("insurgent3") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("halftrack") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("dune3") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trailersmall2") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("technical2") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("boxville5") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("mogul") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("bombushka") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("tula") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("chernobog"))
 					{
@@ -1234,38 +1234,38 @@ void main() // Position - 0x0
 							{
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("insurgent") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("limo2"))
 									if (seatIndex == 3)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trash") || ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trash2"))
 									if (seatIndex == 2 || seatIndex == 1)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("technical2"))
 									if (seatIndex == 1)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("boxville5"))
 									if (seatIndex == 3)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("insurgent3"))
 									if (seatIndex == 3)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("halftrack"))
 									if (seatIndex == 1)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("dune3"))
 									if (seatIndex == 0)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (ENTITY::GET_ENTITY_MODEL(veLocal_114) == joaat("trailersmall2"))
 									if (seatIndex == -1)
-										MISC::SET_BIT(&Global_8254, 4);
+										MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							
 								if (VEHICLE::IS_TURRET_SEAT(veLocal_114, seatIndex))
-									MISC::SET_BIT(&Global_8254, 4);
+									MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 							}
 						}
 					}
@@ -1414,12 +1414,12 @@ void main() // Position - 0x0
 				{
 					num5 = 1;
 				
-					if (!IS_BIT_SET(Global_8254, 24))
+					if (!IS_BIT_SET(G_SleepModeOffOn11, 24))
 					{
-						if (IS_BIT_SET(Global_8254, 26))
+						if (IS_BIT_SET(G_SleepModeOffOn11, 26))
 						{
-							MISC::SET_BIT(&Global_8254, 25);
-							MISC::CLEAR_BIT(&Global_8254, 26);
+							MISC::SET_BIT(&G_SleepModeOffOn11, 25);
+							MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
 							MISC::CLEAR_BIT(&Global_8255, 2);
 						}
 					}
@@ -1644,7 +1644,7 @@ void func_9() // Position - 0x211D
 	if (Global_20368 == 1)
 		unk = Vector3( -45f, 45f, 25f );
 
-	if (IS_BIT_SET(Global_8254, 26) || IS_BIT_SET(G_SleepModeOnOn25, 30) || IS_BIT_SET(Global_8255, 2))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 26) || IS_BIT_SET(G_SleepModeOnOn25, 30) || IS_BIT_SET(Global_8255, 2))
 		uLocal_119 = { Global_20329[Global_20328] };
 	else
 		uLocal_119 = { Global_20336[Global_20328] };
@@ -1685,18 +1685,18 @@ void func_9() // Position - 0x211D
 		if (func_12(0))
 			func_11();
 	
-		MISC::CLEAR_BIT(&Global_8254, 8);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 8);
 		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 14);
 		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
 		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 27);
 		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
-		MISC::CLEAR_BIT(&Global_8254, 5);
-		MISC::CLEAR_BIT(&Global_8254, 19);
-		MISC::CLEAR_BIT(&Global_8254, 21);
-		MISC::CLEAR_BIT(&Global_8254, 24);
-		MISC::CLEAR_BIT(&Global_8254, 25);
-		MISC::CLEAR_BIT(&Global_8254, 27);
-		MISC::CLEAR_BIT(&Global_8254, 26);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 5);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 19);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 21);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 24);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 25);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 27);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
 		MISC::CLEAR_BIT(&Global_8255, 2);
 		Global_2803654 = 0;
 		iLocal_122 = 0;
@@ -1786,7 +1786,7 @@ void func_11() // Position - 0x24ED
 		Global_9058[2][0].f_259 = 0;
 
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 
@@ -2068,7 +2068,7 @@ void func_19() // Position - 0x29A7
 
 void func_20() // Position - 0x2A80
 {
-	if (IS_BIT_SET(Global_8254, 10) || iLocal_122 == 1)
+	if (IS_BIT_SET(G_SleepModeOffOn11, 10) || iLocal_122 == 1)
 	{
 		Global_8860 = MISC::GET_GAME_TIMER();
 		Global_8859 = 0;
@@ -2106,7 +2106,7 @@ void func_21() // Position - 0x2AFF
 			{
 				if (Global_113648.f_14053[Global_20383].f_17 == 0)
 				{
-					if (!IS_BIT_SET(Global_8254, 3))
+					if (!IS_BIT_SET(G_SleepModeOffOn11, 3))
 					{
 						if (!Global_20326)
 						{
@@ -3528,10 +3528,10 @@ void func_44() // Position - 0x3F49
 	
 		Global_20386 = Global_8786[iLocal_72];
 	
-		if (IS_BIT_SET(Global_8254, 10))
+		if (IS_BIT_SET(G_SleepModeOffOn11, 10))
 		{
 			Global_20386 = 2;
-			MISC::CLEAR_BIT(&Global_8254, 10);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 10);
 		}
 	
 		if (iLocal_122 == 1)
@@ -3552,7 +3552,7 @@ void func_44() // Position - 0x3F49
 	
 		if (Global_20386 == 3)
 		{
-			if (IS_BIT_SET(Global_8254, 3))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 			{
 				num = 1;
 			}
@@ -3589,11 +3589,11 @@ void func_44() // Position - 0x3F49
 		}
 	
 		if (Global_20386 == 2)
-			if (IS_BIT_SET(Global_8254, 6))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 				num = 1;
 	
 		if (Global_20386 == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[Global_20386], "CELL_BENWEB" /*Benny's*/))
-			if (IS_BIT_SET(Global_8254, 6))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 				num = 1;
 	
 		if (Global_78558)
@@ -3788,8 +3788,8 @@ void func_48() // Position - 0x4478
 		if (func_15(Global_20336[Global_20328], Global_20329[Global_20328], Global_20343, Global_20343, 350f, false) >= 1f)
 		{
 			iLocal_18 = 0;
-			MISC::CLEAR_BIT(&Global_8254, 24);
-			MISC::SET_BIT(&Global_8254, 26);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 24);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 26);
 		}
 	}
 
@@ -3803,10 +3803,10 @@ void func_49() // Position - 0x44C9
 		if (func_15(Global_20329[Global_20328], Global_20336[Global_20328], Global_20343, Global_20343, 350f, true) >= 1f)
 		{
 			iLocal_18 = 0;
-			MISC::CLEAR_BIT(&Global_8254, 25);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 25);
 		
 			if (Global_21738)
-				MISC::CLEAR_BIT(&Global_8254, 27);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 27);
 		}
 	}
 
@@ -3834,7 +3834,7 @@ void func_51() // Position - 0x456F
 
 	if (IS_BIT_SET(Global_8255, 2))
 	{
-		MISC::SET_BIT(&Global_8254, 8);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 8);
 		MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 		Global_20323 = 0;
 		iLocal_18 = 0;
@@ -3846,7 +3846,7 @@ void func_51() // Position - 0x456F
 	
 		if (num >= 1f)
 		{
-			MISC::SET_BIT(&Global_8254, 8);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 8);
 			MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 			Global_20323 = 0;
 			iLocal_18 = 0;
@@ -3855,7 +3855,7 @@ void func_51() // Position - 0x456F
 		}
 		else if (num >= 0.75f)
 		{
-			MISC::SET_BIT(&Global_8254, 8);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 8);
 		}
 	}
 	else
@@ -3872,7 +3872,7 @@ void func_51() // Position - 0x456F
 	
 		if (num2 >= 1f)
 		{
-			MISC::SET_BIT(&Global_8254, 8);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 8);
 			MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 			Global_20323 = 0;
 			iLocal_18 = 0;
@@ -3881,7 +3881,7 @@ void func_51() // Position - 0x456F
 		}
 		else if (num2 >= 0.75f)
 		{
-			MISC::SET_BIT(&Global_8254, 8);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 8);
 		}
 	}
 
@@ -3924,7 +3924,7 @@ void func_53() // Position - 0x4718
 		{
 			if (func_62(FRONTEND_CONTROL, Global_20353, 0))
 			{
-				if (IS_BIT_SET(Global_8254, 8))
+				if (IS_BIT_SET(G_SleepModeOffOn11, 8))
 				{
 					if (Global_21772 == false)
 					{
@@ -3944,7 +3944,7 @@ void func_53() // Position - 0x4718
 		{
 			if (func_62(FRONTEND_CONTROL, Global_20352, 0))
 			{
-				if (IS_BIT_SET(Global_8254, 8))
+				if (IS_BIT_SET(G_SleepModeOffOn11, 8))
 				{
 					func_38();
 					Global_20361 = 1;
@@ -3999,7 +3999,7 @@ void func_53() // Position - 0x4718
 					{
 						if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 						{
-							if (IS_BIT_SET(Global_8254, 8))
+							if (IS_BIT_SET(G_SleepModeOffOn11, 8))
 							{
 								switch (Global_20383.f_1)
 								{
@@ -4042,7 +4042,7 @@ void func_53() // Position - 0x4718
 									
 										if (Global_8861 - Global_8860 > Global_8862 && IS_BIT_SET(G_SleepModeOnOn25, 23) == false)
 										{
-											if (IS_BIT_SET(Global_8254, 0))
+											if (IS_BIT_SET(G_SleepModeOffOn11, 0))
 											{
 											}
 											else
@@ -4068,7 +4068,7 @@ void func_53() // Position - 0x4718
 									case 10:
 										if (Global_7568 == 132)
 										{
-											if (Global_2800025.f_1 || IS_BIT_SET(Global_8254, 20))
+											if (Global_2800025.f_1 || IS_BIT_SET(G_SleepModeOffOn11, 20))
 											{
 												func_45();
 												func_76();
@@ -4508,7 +4508,7 @@ void func_65(int iParam0) // Position - 0x54ED
 			func_5(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -4651,12 +4651,12 @@ void func_72() // Position - 0x5769
 	{
 		if (bLocal_76 == false)
 		{
-			if (IS_BIT_SET(Global_8254, 26))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 26))
 			{
-				MISC::CLEAR_BIT(&Global_8254, 24);
-				MISC::CLEAR_BIT(&Global_8254, 25);
-				MISC::CLEAR_BIT(&Global_8254, 27);
-				MISC::CLEAR_BIT(&Global_8254, 26);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 24);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 25);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 27);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 26);
 			
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 					if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
@@ -4928,7 +4928,7 @@ void func_83(int iParam0) // Position - 0x5C7F
 						
 							if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value = 42;
 									Global_20588 = 1;
@@ -5042,7 +5042,7 @@ void func_83(int iParam0) // Position - 0x5C7F
 							}
 							else if (num == 2)
 							{
-								if (IS_BIT_SET(Global_8254, 6))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 									value4 = 42;
 								else
 									value4 = 255;
@@ -5058,7 +5058,7 @@ void func_83(int iParam0) // Position - 0x5C7F
 							}
 							else if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value5 = 42;
 									Global_20588 = 1;
@@ -5089,7 +5089,7 @@ void func_83(int iParam0) // Position - 0x5C7F
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8254, 6))
+							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(G_SleepModeOffOn11, 6))
 							{
 								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);

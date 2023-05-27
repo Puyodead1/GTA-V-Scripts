@@ -511,7 +511,7 @@ void func_11() // Position - 0x5C0
 	
 		if (Global_20383.f_1 == 10 && Global_7568 == 188)
 		{
-			MISC::SET_BIT(&Global_8254, 16);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 		
 			if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -896,7 +896,7 @@ void func_29(int iParam0) // Position - 0xDF8
 		if (func_30(0))
 			func_32(iParam0);
 	
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	}
 
 	return;
@@ -939,7 +939,7 @@ void func_32(int iParam0) // Position - 0xE91
 			func_34(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -1979,7 +1979,7 @@ void func_87() // Position - 0x2439
 
 	if (_STOPWATCH_IS_INITIALIZED(&uLocal_17))
 	{
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	
 		if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_17, 60000, false))
 		{
@@ -2015,7 +2015,7 @@ void func_87() // Position - 0x2439
 		return;
 
 	bLocal_9 = true;
-	MISC::SET_BIT(&Global_8254, 2);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 
 	if (!ENTITY::DOES_ENTITY_EXIST(obLocal_8))
 	{

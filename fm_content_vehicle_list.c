@@ -140745,7 +140745,7 @@ BOOL func_2002(int iParam0, int iParam1) // Position - 0xBCC3C
 void func_2003() // Position - 0xBCC52
 {
 	MISC::CLEAR_BIT(&Global_4542297, 28);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 
@@ -140785,7 +140785,7 @@ void func_2004(BOOL bParam0, int iParam1, BOOL bParam2) // Position - 0xBCC6D
 void func_2005() // Position - 0xBCD76
 {
 	MISC::SET_BIT(&Global_4542297, 28);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 

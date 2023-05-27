@@ -283,7 +283,7 @@ void func_3() // Position - 0x4F4
 		Global_9058[2][0].f_259 = 0;
 
 	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
-	MISC::SET_BIT(&Global_8254, 11);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 	return;
 }
 
@@ -723,7 +723,7 @@ void func_12() // Position - 0x895
 							{
 								func_46(Global_20364, "SET_SLEEP_MODE", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
 								MISC::SET_BIT(&G_SleepModeOnOn25, 25);
-								MISC::SET_BIT(&Global_8254, 11);
+								MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 							
 								if (Global_113648.f_14053.f_83 == 0)
 								{
@@ -738,7 +738,7 @@ void func_12() // Position - 0x895
 					{
 						func_46(Global_20364, "SET_SLEEP_MODE", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 						MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
-						MISC::SET_BIT(&Global_8254, 11);
+						MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 					}
 				}
 			}

@@ -541,7 +541,7 @@ void main() // Position - 0x0
 				{
 					num = 0f;
 					iLocal_48 = func_103(&num);
-					bLocal_461 = IS_BIT_SET(Global_8254, 28);
+					bLocal_461 = IS_BIT_SET(G_SleepModeOffOn11, 28);
 				
 					if (iLocal_48 != -1)
 					{
@@ -709,9 +709,9 @@ BOOL _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0x412
 void func_4(BOOL bParam0) // Position - 0x4CA
 {
 	if (bParam0 == 1)
-		MISC::SET_BIT(&Global_8254, 28);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 28);
 	else
-		MISC::CLEAR_BIT(&Global_8254, 28);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 28);
 
 	return;
 }

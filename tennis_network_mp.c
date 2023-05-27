@@ -13137,7 +13137,7 @@ void func_228(int iParam0) // Position - 0xCA86
 			func_229(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -48739,7 +48739,7 @@ int _GET_VEHICLE_SEAT_PED_IS_IN(Ped ped, BOOL includeLastVehicle) // Position - 
 
 void func_367() // Position - 0x3322F
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 
@@ -48753,7 +48753,7 @@ void func_368(int iParam0) // Position - 0x3323F
 		if (func_230(0))
 			func_228(iParam0);
 	
-		MISC::SET_BIT(&Global_8254, 2);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 2);
 	}
 
 	return;
@@ -48761,7 +48761,7 @@ void func_368(int iParam0) // Position - 0x3323F
 
 void func_369() // Position - 0x33272
 {
-	MISC::SET_BIT(&Global_8254, 7);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 7);
 	return;
 }
 
@@ -128798,7 +128798,7 @@ void func_1457(BOOL bParam0) // Position - 0xA0270
 		func_1458();
 	
 		if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-			MISC::SET_BIT(&Global_8254, 16);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 	
 		Global_20383.f_1 = 1;
 	

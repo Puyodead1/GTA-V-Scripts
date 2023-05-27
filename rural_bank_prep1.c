@@ -2008,7 +2008,7 @@ BOOL func_13(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x89E
 		if (Global_21731)
 		{
 			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
-			MISC::CLEAR_BIT(&Global_8254, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOffOn11, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
 			if (bParam2)
@@ -2213,7 +2213,7 @@ void func_20() // Position - 0xC68
 	Global_22741 = 0;
 	Global_21774 = 0;
 	Global_21775 = 0;
-	MISC::CLEAR_BIT(&Global_8254, 16);
+	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 16);
 	return;
 }
 
@@ -13858,7 +13858,7 @@ BOOL func_268(Ped pedParam0) // Position - 0x13DD3
 
 void func_269() // Position - 0x13E2E
 {
-	MISC::SET_BIT(&Global_8254, 4);
+	MISC::SET_BIT(&G_SleepModeOffOn11, 4);
 	return;
 }
 

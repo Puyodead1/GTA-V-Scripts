@@ -366,7 +366,7 @@ void main() // Position - 0x0
 				if (Global_20383.f_1 != 10 && Global_20383.f_1 != 9 || func_85() == false)
 				{
 					MISC::CLEAR_BIT(&Global_4542297, 11);
-					MISC::SET_BIT(&Global_8254, 11);
+					MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 				}
 			}
 			else if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
@@ -374,14 +374,14 @@ void main() // Position - 0x0
 				if (func_85())
 				{
 					MISC::SET_BIT(&Global_4542297, 11);
-					MISC::SET_BIT(&Global_8254, 11);
+					MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 				}
 			}
 		
 			if (IS_BIT_SET(Global_4542297, 12))
 			{
 				MISC::CLEAR_BIT(&Global_4542297, 12);
-				MISC::SET_BIT(&Global_8254, 11);
+				MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 			}
 		}
 		else if (IS_BIT_SET(Global_4542297, 12))
@@ -389,13 +389,13 @@ void main() // Position - 0x0
 			if (Global_22788 == 0 || Global_22789 == false && !Global_22790)
 			{
 				MISC::CLEAR_BIT(&Global_4542297, 12);
-				MISC::SET_BIT(&Global_8254, 11);
+				MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 			}
 		}
 		else if (Global_22790 || Global_22788 > 0 && Global_22789 == true)
 		{
 			MISC::SET_BIT(&Global_4542297, 12);
-			MISC::SET_BIT(&Global_8254, 11);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 		}
 	
 		if (MISC::IS_PC_VERSION())
@@ -405,13 +405,13 @@ void main() // Position - 0x0
 				if (!IS_BIT_SET(Global_4542297, 19))
 				{
 					MISC::SET_BIT(&Global_4542297, 19);
-					MISC::SET_BIT(&Global_8254, 11);
+					MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 				}
 			}
 			else if (IS_BIT_SET(Global_4542297, 19))
 			{
 				MISC::CLEAR_BIT(&Global_4542297, 19);
-				MISC::SET_BIT(&Global_8254, 11);
+				MISC::SET_BIT(&G_SleepModeOffOn11, 11);
 			}
 		}
 	
@@ -440,9 +440,9 @@ void main() // Position - 0x0
 		func_61();
 		func_60();
 	
-		if (IS_BIT_SET(Global_8254, 21))
+		if (IS_BIT_SET(G_SleepModeOffOn11, 21))
 			if (!AUDIO::IS_MOBILE_INTERFERENCE_ACTIVE())
-				MISC::CLEAR_BIT(&Global_8254, 21);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 21);
 	
 		if (IS_BIT_SET(G_SleepModeOnOn25, 7))
 		{
@@ -456,7 +456,7 @@ void main() // Position - 0x0
 		if (IS_BIT_SET(Global_4542297, 0))
 			func_53();
 	
-		if (IS_BIT_SET(Global_8254, 11))
+		if (IS_BIT_SET(G_SleepModeOffOn11, 11))
 		{
 			Global_8957 = 0;
 		
@@ -480,7 +480,7 @@ void main() // Position - 0x0
 		
 			if (Global_8957 == 0)
 			{
-				MISC::CLEAR_BIT(&Global_8254, 11);
+				MISC::CLEAR_BIT(&G_SleepModeOffOn11, 11);
 				bLocal_41 = false;
 			}
 			else
@@ -502,7 +502,7 @@ void main() // Position - 0x0
 									func_37();
 		
 			if (Global_20383.f_1 == 4)
-				if (IS_BIT_SET(Global_8254, 21))
+				if (IS_BIT_SET(G_SleepModeOffOn11, 21))
 					func_37();
 		
 			func_23();
@@ -599,7 +599,7 @@ void func_1() // Position - 0x851
 			break;
 	
 		case 2:
-			MISC::SET_BIT(&Global_8254, 15);
+			MISC::SET_BIT(&G_SleepModeOffOn11, 15);
 			func_14();
 			break;
 	}
@@ -742,7 +742,7 @@ void func_9() // Position - 0xA1F
 		case 2:
 			if (iLocal_71 == 3)
 			{
-				MISC::SET_BIT(&Global_8254, 14);
+				MISC::SET_BIT(&G_SleepModeOffOn11, 14);
 				GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
 				GRAPHICS::FREE_MEMORY_FOR_HIGH_QUALITY_PHOTO();
 				GRAPHICS::FREE_MEMORY_FOR_LOW_QUALITY_PHOTO();
@@ -795,7 +795,7 @@ void func_10() // Position - 0xAD3
 	}
 	else
 	{
-		MISC::SET_BIT(&Global_8254, 15);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 15);
 		func_14();
 	}
 
@@ -859,7 +859,7 @@ void func_15() // Position - 0xB8A
 	if (Global_22761)
 	{
 		Global_22760 = 1;
-		MISC::CLEAR_BIT(&Global_8254, 14);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 14);
 		SYSTEM::SETTIMERB(0);
 	}
 
@@ -1155,7 +1155,7 @@ void func_23() // Position - 0x10FC
 	switch (Global_20383.f_1)
 	{
 		case 4:
-			if (IS_BIT_SET(Global_8254, 21))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 21))
 			{
 			}
 			else
@@ -1810,7 +1810,7 @@ void func_33(int iParam0) // Position - 0x1ED4
 						
 							if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value = 42;
 									Global_20588 = 1;
@@ -1924,7 +1924,7 @@ void func_33(int iParam0) // Position - 0x1ED4
 							}
 							else if (num == 2)
 							{
-								if (IS_BIT_SET(Global_8254, 6))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 									value4 = 42;
 								else
 									value4 = 255;
@@ -1940,7 +1940,7 @@ void func_33(int iParam0) // Position - 0x1ED4
 							}
 							else if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value5 = 42;
 									Global_20588 = 1;
@@ -1971,7 +1971,7 @@ void func_33(int iParam0) // Position - 0x1ED4
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8254, 6))
+							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(G_SleepModeOffOn11, 6))
 							{
 								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -2059,8 +2059,8 @@ void func_37() // Position - 0x2501
 				}
 				else if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
 				{
-					if (IS_BIT_SET(Global_8254, 21))
-						MISC::CLEAR_BIT(&Global_8254, 21);
+					if (IS_BIT_SET(G_SleepModeOffOn11, 21))
+						MISC::CLEAR_BIT(&G_SleepModeOffOn11, 21);
 				
 					if (Global_20592 == 1)
 						Global_20592 = 0;
@@ -3678,7 +3678,7 @@ void func_80() // Position - 0x487D
 	{
 		if (Global_8957 > 0)
 		{
-			if (IS_BIT_SET(Global_8254, 11))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 11))
 			{
 				if (bLocal_41)
 				{
@@ -3737,7 +3737,7 @@ void func_80() // Position - 0x487D
 						GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 					}
 				
-					MISC::CLEAR_BIT(&Global_8254, 11);
+					MISC::CLEAR_BIT(&G_SleepModeOffOn11, 11);
 					bLocal_41 = false;
 				}
 			}
@@ -3778,16 +3778,16 @@ void func_81(int iParam0, char* sParam1) // Position - 0x4A32
 
 void func_82() // Position - 0x4A47
 {
-	if (IS_BIT_SET(Global_8254, 7))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 7))
 	{
-		MISC::SET_BIT(&Global_8254, 6);
-		MISC::CLEAR_BIT(&Global_8254, 7);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 6);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 7);
 		return;
 	}
 
-	if (!IS_BIT_SET(Global_8254, 7))
+	if (!IS_BIT_SET(G_SleepModeOffOn11, 7))
 	{
-		MISC::CLEAR_BIT(&Global_8254, 6);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 6);
 		return;
 	}
 
@@ -3796,16 +3796,16 @@ void func_82() // Position - 0x4A47
 
 void func_83() // Position - 0x4A7E
 {
-	if (IS_BIT_SET(Global_8254, 4))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 4))
 	{
-		MISC::SET_BIT(&Global_8254, 3);
-		MISC::CLEAR_BIT(&Global_8254, 4);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 3);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 4);
 		return;
 	}
 
-	if (!IS_BIT_SET(Global_8254, 4))
+	if (!IS_BIT_SET(G_SleepModeOffOn11, 4))
 	{
-		MISC::CLEAR_BIT(&Global_8254, 3);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 3);
 		return;
 	}
 
@@ -3814,16 +3814,16 @@ void func_83() // Position - 0x4A7E
 
 void func_84() // Position - 0x4AB5
 {
-	if (IS_BIT_SET(Global_8254, 2))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 2))
 	{
 		if (!(Global_20383.f_1 == 1))
 			Global_20383.f_1 = 0;
 	
-		MISC::CLEAR_BIT(&Global_8254, 2);
+		MISC::CLEAR_BIT(&G_SleepModeOffOn11, 2);
 		return;
 	}
 
-	if (!IS_BIT_SET(Global_8254, 2))
+	if (!IS_BIT_SET(G_SleepModeOffOn11, 2))
 	{
 		if (!(Global_20383.f_1 == 1))
 			if (Global_20383.f_1 < 4)
@@ -4003,7 +4003,7 @@ void func_88(int iParam0) // Position - 0x4ED3
 			func_89(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);

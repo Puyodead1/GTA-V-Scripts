@@ -1779,7 +1779,7 @@ void main() // Position - 0x0
 				if (func_4())
 					Global_22758 = 1;
 			}
-			else if (func_3(FRONTEND_CONTROL, Global_20351, 0) || IS_BIT_SET(Global_8254, 12))
+			else if (func_3(FRONTEND_CONTROL, Global_20351, 0) || IS_BIT_SET(G_SleepModeOffOn11, 12))
 			{
 				if (MISC::ARE_STRINGS_EQUAL(&Global_4541032[iLocal_36], "CELL_FINV"))
 				{
@@ -1787,7 +1787,7 @@ void main() // Position - 0x0
 				else
 				{
 					SYSTEM::WAIT(0);
-					MISC::CLEAR_BIT(&Global_8254, 12);
+					MISC::CLEAR_BIT(&G_SleepModeOffOn11, 12);
 					func_2();
 					Global_20361 = 1;
 					Global_22791 = 0;
@@ -2043,7 +2043,7 @@ void func_12() // Position - 0x51C
 					else
 					{
 						Global_75806 = 7;
-						MISC::SET_BIT(&Global_8254, 10);
+						MISC::SET_BIT(&G_SleepModeOffOn11, 10);
 						Global_20383.f_1 = 6;
 					}
 				}
@@ -2598,7 +2598,7 @@ void func_20(int iParam0) // Position - 0x129A
 						
 							if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value = 42;
 									Global_20588 = 1;
@@ -2712,7 +2712,7 @@ void func_20(int iParam0) // Position - 0x129A
 							}
 							else if (num == 2)
 							{
-								if (IS_BIT_SET(Global_8254, 6))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 									value4 = 42;
 								else
 									value4 = 255;
@@ -2728,7 +2728,7 @@ void func_20(int iParam0) // Position - 0x129A
 							}
 							else if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value5 = 42;
 									Global_20588 = 1;
@@ -2759,7 +2759,7 @@ void func_20(int iParam0) // Position - 0x129A
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8254, 6))
+							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(G_SleepModeOffOn11, 6))
 							{
 								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -4559,7 +4559,7 @@ void func_60(int iParam0) // Position - 0x3F6A
 			func_62(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);

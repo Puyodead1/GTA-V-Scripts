@@ -416,7 +416,7 @@ void main() // Position - 0x0
 			{
 				if (!HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 				{
-					if (!IS_BIT_SET(Global_8254, 28))
+					if (!IS_BIT_SET(G_SleepModeOffOn11, 28))
 					{
 						if (bLocal_128 && bLocal_131 == false && !func_161())
 						{
@@ -464,7 +464,7 @@ void main() // Position - 0x0
 				MISC::SET_GAME_PAUSED(false);
 			}
 		
-			if (IS_BIT_SET(Global_8254, 3))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 			{
 				Global_20383.f_1 = 3;
 				MISC::SET_GAME_PAUSED(false);
@@ -958,7 +958,7 @@ void main() // Position - 0x0
 							iLocal_155 = 0;
 							func_115(false, true);
 						
-							if (IS_BIT_SET(Global_8254, 28))
+							if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 								iLocal_111 = 0;
 							else
 								iLocal_111 = 2;
@@ -1156,7 +1156,7 @@ void func_6() // Position - 0x1304
 			break;
 	
 		case 2:
-			if (IS_BIT_SET(Global_8254, 28))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 			{
 				iLocal_103 = 0;
 				iLocal_109 = 0;
@@ -1181,7 +1181,7 @@ void func_7() // Position - 0x1496
 	{
 		func_1(0);
 	
-		if (IS_BIT_SET(Global_8254, 28))
+		if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 		{
 			MISC::SET_GAME_PAUSED(false);
 			SYSTEM::SETTIMERB(0);
@@ -1196,7 +1196,7 @@ void func_7() // Position - 0x1496
 		}
 		else if (func_11())
 		{
-			if (IS_BIT_SET(Global_8254, 14))
+			if (IS_BIT_SET(G_SleepModeOffOn11, 14))
 			{
 				_DISPLAY_HELP_TEXT("CELL_299" /*Cannot save as last picture failed.*/, -1);
 			}
@@ -1243,7 +1243,7 @@ void func_7() // Position - 0x1496
 	{
 		func_1(0);
 	
-		if (func_123() || IS_BIT_SET(Global_8254, 28))
+		if (func_123() || IS_BIT_SET(G_SleepModeOffOn11, 28))
 		{
 		}
 		else
@@ -2164,7 +2164,7 @@ void func_22() // Position - 0x28DD
 	iLocal_115 = 0;
 	func_117(true);
 
-	if (!IS_BIT_SET(Global_8254, 28))
+	if (!IS_BIT_SET(G_SleepModeOffOn11, 28))
 		if (NETWORK::NETWORK_HAS_SOCIAL_NETWORKING_SHARING_PRIV() == false)
 			if (MISC::IS_XBOX360_VERSION())
 				if (iLocal_117 == 0)
@@ -8016,7 +8016,7 @@ void func_96() // Position - 0xD253
 	func_165(iLocal_141, "SET_CLEAR_SPACE", 200f, -1082130432, -1082130432, -1082130432, -1082130432);
 	func_165(iLocal_141, "SET_DATA_SLOT_EMPTY", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
 
-	if (IS_BIT_SET(Global_8254, 28))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 	{
 		func_78(iLocal_141, "SET_DATA_SLOT", 0f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_SELECT, true), "CELL_286" /*Continue*/);
 	}
@@ -8038,7 +8038,7 @@ void func_97() // Position - 0xD322
 	func_165(iLocal_141, "SET_CLEAR_SPACE", 200f, -1082130432, -1082130432, -1082130432, -1082130432);
 	func_165(iLocal_141, "SET_DATA_SLOT_EMPTY", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
 
-	if (IS_BIT_SET(Global_8254, 28))
+	if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 	{
 		func_78(iLocal_141, "SET_DATA_SLOT", 1f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_CELLPHONE_EXTRA_OPTION, true), func_67());
 		func_78(iLocal_141, "SET_DATA_SLOT", 0f, PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(PLAYER_CONTROL, INPUT_CELLPHONE_SELECT, true), "CELL_286" /*Continue*/);
@@ -8860,7 +8860,7 @@ void func_109(int iParam0) // Position - 0xE63B
 						
 							if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value = 42;
 									Global_20588 = 1;
@@ -8974,7 +8974,7 @@ void func_109(int iParam0) // Position - 0xE63B
 							}
 							else if (num == 2)
 							{
-								if (IS_BIT_SET(Global_8254, 6))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 6))
 									value4 = 42;
 								else
 									value4 = 255;
@@ -8990,7 +8990,7 @@ void func_109(int iParam0) // Position - 0xE63B
 							}
 							else if (num == 3)
 							{
-								if (IS_BIT_SET(Global_8254, 3))
+								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
 								{
 									value5 = 42;
 									Global_20588 = 1;
@@ -9021,7 +9021,7 @@ void func_109(int iParam0) // Position - 0xE63B
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8254, 6))
+							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(G_SleepModeOffOn11, 6))
 							{
 								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
@@ -9895,7 +9895,7 @@ void func_146(int iParam0) // Position - 0xFB34
 			func_115(false, false);
 
 	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&Global_8254, 16);
+		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -10207,7 +10207,7 @@ BOOL func_163() // Position - 0x1010B
 			return false;
 
 	if (MISC::IS_XBOX360_VERSION() || MISC::IS_PS3_VERSION())
-		if (IS_BIT_SET(Global_8254, 28))
+		if (IS_BIT_SET(G_SleepModeOffOn11, 28))
 			return false;
 
 	return true;
