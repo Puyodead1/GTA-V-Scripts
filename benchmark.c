@@ -2395,7 +2395,7 @@ void func_84(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		func_91(true, bParam3, bParam2, false);
 		Global_63368 = 1;
 		Global_75696 = 1;
-		Global_78556 = true;
+		G_DisableMessagesAndCalls1 = true;
 	}
 	else
 	{
@@ -2416,7 +2416,7 @@ void func_84(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_89(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false);
 	
-		Global_78556 = false;
+		G_DisableMessagesAndCalls1 = false;
 	}
 
 	return;
@@ -92887,7 +92887,7 @@ int func_546(int iParam0, BOOL bParam1, int iParam2) // Position - 0x7359E
 	if (Global_32419)
 		return 8;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return 4;
 
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))

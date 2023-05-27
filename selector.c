@@ -5218,7 +5218,7 @@ void func_132() // Position - 0x60B5
 						iLocal_246 = 0;
 					
 						if (func_831() || func_832() || func_833() && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS() && Global_98159.f_44 != 1)
-							if (Global_78556 == 1 && CAM::IS_GAMEPLAY_CAM_RENDERING() == false)
+							if (G_DisableMessagesAndCalls1 == 1 && CAM::IS_GAMEPLAY_CAM_RENDERING() == false)
 								func_835(1);
 							else
 								func_697(1);

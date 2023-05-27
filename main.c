@@ -96225,7 +96225,7 @@ void func_582(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		func_588(true, bParam3, bParam2, false);
 		Global_63368 = 1;
 		Global_75696 = 1;
-		Global_78556 = true;
+		G_DisableMessagesAndCalls1 = true;
 	}
 	else
 	{
@@ -96246,7 +96246,7 @@ void func_582(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_586(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false);
 	
-		Global_78556 = false;
+		G_DisableMessagesAndCalls1 = false;
 	}
 
 	return;
@@ -141607,7 +141607,7 @@ void func_1797() // Position - 0xB99CC
 
 void func_1798() // Position - 0xB9A3F
 {
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		HUD::THEFEED_HIDE_THIS_FRAME();
 
 	return;
@@ -143089,7 +143089,7 @@ int func_1828(int iParam0, BOOL bParam1, int iParam2) // Position - 0xBBA8E
 	if (Global_32419)
 		return 8;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return 4;
 
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))

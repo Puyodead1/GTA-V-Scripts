@@ -512,7 +512,7 @@ BOOL func_20(const char* sParam0) // Position - 0xC01
 		if (func_21())
 			return false;
 	
-		if (Global_78556)
+		if (G_DisableMessagesAndCalls1)
 			return false;
 	
 		if (Global_97601)

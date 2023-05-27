@@ -33971,7 +33971,7 @@ BOOL func_143() // Position - 0x2BC02
 	if (!PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 		return false;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return false;
 
 	if (iLocal_266 > 15)

@@ -611,7 +611,7 @@ void main() // Position - 0x0
 		iLocal_393 = 0;
 		iLocal_394 = 0;
 	
-		if (Global_78556 == 1)
+		if (G_DisableMessagesAndCalls1 == 1)
 			func_180();
 	}
 
@@ -7863,7 +7863,7 @@ BOOL func_163() // Position - 0xB53A
 			if (Global_113638 == 1)
 				return true;
 		
-			if (Global_78556 == 1 && Global_32169 == 0 && Global_8257 == 0 && Global_32419 == 0 && Global_32420 == 0 && Global_32421 == 0 && Global_60543 == 0 && !func_146() && !func_16() && Global_102832 == 0 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !func_165())
+			if (G_DisableMessagesAndCalls1 == 1 && Global_32169 == 0 && Global_8257 == 0 && Global_32419 == 0 && Global_32420 == 0 && Global_32421 == 0 && Global_60543 == 0 && !func_146() && !func_16() && Global_102832 == 0 && _DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()) && !func_165())
 				return true;
 		
 			if (Global_97601 == 1)

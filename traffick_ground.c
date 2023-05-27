@@ -16091,7 +16091,7 @@ void func_211(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		func_217(true, bParam3, bParam2, false);
 		Global_63368 = 1;
 		Global_75696 = 1;
-		Global_78556 = 1;
+		G_DisableMessagesAndCalls1 = 1;
 	}
 	else
 	{
@@ -16112,7 +16112,7 @@ void func_211(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bPara
 		else if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_215(PLAYER::PLAYER_ID()) && !bParam4 && !bParam5)
 			ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), false);
 	
-		Global_78556 = 0;
+		G_DisableMessagesAndCalls1 = 0;
 	}
 
 	return;

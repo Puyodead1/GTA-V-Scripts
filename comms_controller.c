@@ -330,7 +330,7 @@ void main() // Position - 0x0
 						if (!func_149())
 							bLocal_49 = false;
 					}
-					else if (func_148() || func_147() || func_149() || Global_78556)
+					else if (func_148() || func_147() || func_149() || G_DisableMessagesAndCalls1)
 					{
 						func_150(&gameTimer, false);
 						iLocal_58 = 0;
@@ -7906,7 +7906,7 @@ BOOL func_204(int iParam0, eCharacter echParam1, int iParam2, int iParam3, int i
 			if (IS_BIT_SET(iParam0, _GET_CURRENT_PLAYER_CHARACTER_0()) && !IS_BIT_SET(iParam4, 19))
 				return false;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return false;
 
 	if (CUTSCENE::IS_CUTSCENE_PLAYING())

@@ -555,7 +555,7 @@ int func_8() // Position - 0x476
 			if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 207.43358f, -1019.7954f, -100.47276f, 189.93378f, -1019.6235f, -95.56883f, 17.1875f, false, true, 0) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), true))
 				return 3;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return 2;
 
 	if (Global_77348.f_577)

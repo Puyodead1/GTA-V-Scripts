@@ -34537,7 +34537,7 @@ void func_342(var uParam0, int iParam1, BOOL bParam2, int iParam3, BOOL bParam4,
 		PED::PLAY_FACIAL_ANIM(uParam0->f_122, &animName, priorityLowData.f_1);
 	}
 
-	if (scriptTaskStatus == 7 && !Global_78556 || Global_1935176 && !uParam0->f_105)
+	if (scriptTaskStatus == 7 && !G_DisableMessagesAndCalls1 || Global_1935176 && !uParam0->f_105)
 	{
 		TASK::OPEN_SEQUENCE_TASK(&(uParam0->f_118));
 		TASK::TASK_SCRIPTED_ANIMATION(0, &priorityLowData, &priorityMidData, &priorityMidData, blendInDelta, blendOutDelta);
@@ -35360,7 +35360,7 @@ BOOL func_371(int iParam0, int iParam1) // Position - 0x1AC4F
 
 int func_372() // Position - 0x1ACA0
 {
-	if (_IS_FMMC_ACTIVE() || Global_78556 || func_262(PLAYER::PLAYER_ID()))
+	if (_IS_FMMC_ACTIVE() || G_DisableMessagesAndCalls1 || func_262(PLAYER::PLAYER_ID()))
 		return 1;
 
 	return 0;
@@ -165184,7 +165184,7 @@ int func_1344(int iParam0, BOOL bParam1, int iParam2) // Position - 0xCD17B
 	if (Global_32419)
 		return 8;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return 4;
 
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))

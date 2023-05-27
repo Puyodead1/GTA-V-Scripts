@@ -9947,7 +9947,7 @@ BOOL func_226(int iParam0, eCharacter echParam1, int iParam2, int iParam3, int i
 			if (IS_BIT_SET(iParam0, _GET_CURRENT_PLAYER_CHARACTER()) && !IS_BIT_SET(iParam4, 19))
 				return false;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return false;
 
 	if (CUTSCENE::IS_CUTSCENE_PLAYING())

@@ -89047,7 +89047,7 @@ int func_431(int iParam0, BOOL bParam1, int iParam2) // Position - 0x6DB6E
 	if (Global_32419)
 		return 8;
 
-	if (Global_78556)
+	if (G_DisableMessagesAndCalls1)
 		return 4;
 
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
