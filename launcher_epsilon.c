@@ -773,7 +773,7 @@ void func_5() // Position - 0x916
 
 	for (i = 0; i < Global_75457; i = i + 1)
 	{
-		switch (Global_63587[Global_75458[i]])
+		switch (MissionObjectives[Global_75458[i]])
 		{
 			case 1:
 			case 9:
@@ -786,7 +786,7 @@ void func_5() // Position - 0x916
 				break;
 		
 			case 6:
-				if (Global_63587[Global_75458[i]].f_3)
+				if (MissionObjectives[Global_75458[i]].f_3)
 					if (Global_75458[i].f_1 != 0)
 						Global_75458[i].f_3 = 1;
 				break;
@@ -1036,7 +1036,7 @@ void func_7(int iParam0) // Position - 0xDB1
 	Global_75458[Global_75457] = iParam0;
 	Global_75457 = Global_75457 + 1;
 
-	if (Global_63587[iParam0] == 16)
+	if (MissionObjectives[iParam0] == 16)
 		Global_75609 = 1;
 
 	return;

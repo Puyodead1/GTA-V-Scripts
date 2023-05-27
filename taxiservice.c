@@ -5403,7 +5403,7 @@ void func_115() // Position - 0x60DA
 
 	for (i = 0; i < Global_75457; i = i + 1)
 	{
-		switch (Global_63587[Global_75458[i]])
+		switch (MissionObjectives[Global_75458[i]])
 		{
 			case 1:
 				Global_75458[i].f_3 = 3;

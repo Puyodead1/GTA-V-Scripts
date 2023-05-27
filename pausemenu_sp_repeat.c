@@ -1607,7 +1607,7 @@ void func_46(int iParam0) // Position - 0x1655
 				break;
 		}
 	
-		if (!Global_63587[num5].f_7 && flag)
+		if (!MissionObjectives[num5].f_7 && flag)
 		{
 			if (func_53(num5, num3, 0))
 				num4 = num4 + 1;
@@ -1809,10 +1809,10 @@ BOOL func_53(int iParam0, int iParam1, int iParam2) // Position - 0x1A18
 		if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iParam2))
 			return false;
 
-	if (Global_63587[iParam0].f_7)
+	if (MissionObjectives[iParam0].f_7)
 		return true;
 
-	num = { Global_63587[iParam0] };
+	num = { MissionObjectives[iParam0] };
 	num2 = func_63(iParam0);
 
 	switch (iParam0)
@@ -4403,7 +4403,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0(int iParam0) // Position - 0x31B
 
 int func_63(int iParam0) // Position - 0x436E
 {
-	if (func_64(iParam0, func_71(Global_63587[iParam0].f_4)))
+	if (func_64(iParam0, func_71(MissionObjectives[iParam0].f_4)))
 		return 1;
 
 	return 0;
@@ -4414,7 +4414,7 @@ BOOL func_64(int iParam0, int iParam1) // Position - 0x4391
 	if (iParam1 < 0)
 		return false;
 
-	switch (Global_63587[iParam0])
+	switch (MissionObjectives[iParam0])
 	{
 		case 1:
 		case 2:
@@ -4430,12 +4430,12 @@ BOOL func_64(int iParam0, int iParam1) // Position - 0x4391
 		return false;
 
 	if (iParam0 == 881 || iParam0 == 889 || iParam0 == 897 && Global_113648.f_24906[4] == _GET_CURRENT_PLAYER_CHARACTER())
-		Global_63587[iParam0].f_2 = 0;
+		MissionObjectives[iParam0].f_2 = 0;
 
-	if (Global_63587[iParam0].f_3)
-		if (iParam1 < Global_63587[iParam0].f_2)
+	if (MissionObjectives[iParam0].f_3)
+		if (iParam1 < MissionObjectives[iParam0].f_2)
 			return true;
-	else if (iParam1 >= Global_63587[iParam0].f_2)
+	else if (iParam1 >= MissionObjectives[iParam0].f_2)
 		return true;
 
 	return false;
@@ -4536,7 +4536,7 @@ int func_72(int iParam0) // Position - 0x4617
 {
 	int num;
 
-	num = func_71(Global_63587[iParam0].f_4);
+	num = func_71(MissionObjectives[iParam0].f_4);
 
 	if (num > -2)
 		return num;
@@ -5792,7 +5792,7 @@ void func_83() // Position - 0x555F
 		{
 			num4 = func_73(num, Global_78808, j);
 		
-			if (!Global_63587[num4].f_7)
+			if (!MissionObjectives[num4].f_7)
 			{
 				if (func_63(num4) == 1)
 					num3 = num3 + 1;

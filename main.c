@@ -145406,12 +145406,12 @@ void func_1927(int iParam0, int iParam1) // Position - 0xBF424
 	Hash statName;
 	int value;
 
-	statName = Global_63587[iParam1].f_4;
+	statName = MissionObjectives[iParam1].f_4;
 
 	if (statName == 0)
 		return;
 
-	Global_63587[iParam1].f_1 = iParam0;
+	MissionObjectives[iParam1].f_1 = iParam0;
 	value = iParam0 + 1;
 	STATS::STAT_SET_INT(statName, value, true);
 
@@ -145438,19 +145438,19 @@ void func_1928() // Position - 0xBF47D
 		num = i;
 		unk.f_4 = 0;
 		func_1931(num, &unk);
-		Global_63587[i] = unk;
-		Global_63587[i].f_2 = unk.f_2;
-		Global_63587[i].f_3 = unk.f_3;
-		Global_63587[i].f_4 = unk.f_4;
-		Global_63587[i].f_5 = unk.f_5;
-		Global_63587[i].f_6 = unk.f_6;
-		Global_63587[i].f_7 = unk.f_7;
-		Global_63587[i].f_8 = unk.f_8;
-		Global_63587[i].f_9 = unk.f_9;
-		Global_63587[i].f_10 = unk.f_10;
-		Global_63587[i].f_11 = unk.f_11;
-		Global_63587[i].f_12 = unk.f_12;
-		Global_63587[i].f_1 = func_1930(Global_63587[i].f_4);
+		MissionObjectives[i] = unk;
+		MissionObjectives[i].f_2 = unk.f_2;
+		MissionObjectives[i].f_3 = unk.f_3;
+		MissionObjectives[i].f_4 = unk.f_4;
+		MissionObjectives[i].f_5 = unk.f_5;
+		MissionObjectives[i].f_6 = unk.f_6;
+		MissionObjectives[i].f_7 = unk.f_7;
+		MissionObjectives[i].f_8 = unk.f_8;
+		MissionObjectives[i].f_9 = unk.f_9;
+		MissionObjectives[i].f_10 = unk.f_10;
+		MissionObjectives[i].f_11 = unk.f_11;
+		MissionObjectives[i].f_12 = unk.f_12;
+		MissionObjectives[i].f_1 = func_1930(MissionObjectives[i].f_4);
 	}
 
 	func_1929();

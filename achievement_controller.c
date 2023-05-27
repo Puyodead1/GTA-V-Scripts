@@ -14590,7 +14590,7 @@ int func_145(BOOL bParam0) // Position - 0x1136F
 			{
 				num6 = func_151(i, 7, j);
 			
-				if (!Global_63587[num6].f_7)
+				if (!MissionObjectives[num6].f_7)
 				{
 					if (func_148(num6) == 1)
 						num4 = num4 + 1;
@@ -14654,7 +14654,7 @@ float func_147(int iParam0, int iParam1, BOOL bParam2) // Position - 0x11498
 
 int func_148(int iParam0) // Position - 0x114F7
 {
-	if (func_149(iParam0, func_150(Global_63587[iParam0].f_4)))
+	if (func_149(iParam0, func_150(MissionObjectives[iParam0].f_4)))
 		return 1;
 
 	return 0;
@@ -14665,7 +14665,7 @@ BOOL func_149(int iParam0, int iParam1) // Position - 0x1151A
 	if (iParam1 < 0)
 		return false;
 
-	switch (Global_63587[iParam0])
+	switch (MissionObjectives[iParam0])
 	{
 		case 1:
 		case 2:
@@ -14681,12 +14681,12 @@ BOOL func_149(int iParam0, int iParam1) // Position - 0x1151A
 		return false;
 
 	if (iParam0 == 881 || iParam0 == 889 || iParam0 == 897 && Global_113648.f_24906[4] == _GET_CURRENT_PLAYER_CHARACTER())
-		Global_63587[iParam0].f_2 = 0;
+		MissionObjectives[iParam0].f_2 = 0;
 
-	if (Global_63587[iParam0].f_3)
-		if (iParam1 < Global_63587[iParam0].f_2)
+	if (MissionObjectives[iParam0].f_3)
+		if (iParam1 < MissionObjectives[iParam0].f_2)
 			return true;
-	else if (iParam1 >= Global_63587[iParam0].f_2)
+	else if (iParam1 >= MissionObjectives[iParam0].f_2)
 		return true;
 
 	return false;
@@ -15771,7 +15771,7 @@ int func_157(BOOL bParam0) // Position - 0x122A4
 			{
 				num6 = func_151(i, 1, j);
 			
-				if (!Global_63587[num6].f_7)
+				if (!MissionObjectives[num6].f_7)
 				{
 					if (func_148(num6) == 1)
 						num4 = num4 + 1;
@@ -15813,7 +15813,7 @@ int func_158(int iParam0) // Position - 0x123BE
 {
 	int num;
 
-	num = func_150(Global_63587[iParam0].f_4);
+	num = func_150(MissionObjectives[iParam0].f_4);
 
 	if (num > -2)
 		return num;

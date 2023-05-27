@@ -796,9 +796,9 @@ void main() // Position - 0x0
 					for (i = 0; i < Global_75457; i = i + 1)
 					{
 						if (Global_75458[i] > 0)
-							if (Global_63587[Global_75458[i]] == 4)
-								if (!Global_63587[Global_75458[i]].f_7)
-									if (Global_63587[Global_75458[i]].f_3)
+							if (MissionObjectives[Global_75458[i]] == 4)
+								if (!MissionObjectives[Global_75458[i]].f_7)
+									if (MissionObjectives[Global_75458[i]].f_3)
 										if (Global_75458[i].f_1 == 0)
 											Global_75458[i].f_3 = 5;
 					}
@@ -3169,7 +3169,7 @@ BOOL func_62() // Position - 0x36C1
 	for (i = 0; i < Global_75457; i = i + 1)
 	{
 		if (Global_75458[i] > 0)
-			if (Global_63587[Global_75458[i]].f_7 == false)
+			if (MissionObjectives[Global_75458[i]].f_7 == false)
 				return 1;
 	}
 
@@ -3472,10 +3472,10 @@ void func_71() // Position - 0x3C86
 	for (i = 0; i < Global_75457; i = i + 1)
 	{
 		num3 = Global_75458[i];
-		flag = !Global_63587[num3].f_7;
-		flag2 = Global_63587[num3].f_8;
-		unk = Global_63587[num3].f_12;
-		unk2 = Global_63587[num3].f_9;
+		flag = !MissionObjectives[num3].f_7;
+		flag2 = MissionObjectives[num3].f_8;
+		unk = MissionObjectives[num3].f_12;
+		unk2 = MissionObjectives[num3].f_9;
 		flag3 = false;
 		flag3 = false;
 	
@@ -6534,7 +6534,7 @@ BOOL func_76(int iParam0, int iParam1) // Position - 0xB9D9
 	if (iParam1 < 0)
 		return false;
 
-	switch (Global_63587[iParam0])
+	switch (MissionObjectives[iParam0])
 	{
 		case 1:
 		case 2:
@@ -6550,12 +6550,12 @@ BOOL func_76(int iParam0, int iParam1) // Position - 0xB9D9
 		return false;
 
 	if (iParam0 == 881 || iParam0 == 889 || iParam0 == 897 && Global_113648.f_24906[4] == _GET_CURRENT_PLAYER_CHARACTER())
-		Global_63587[iParam0].f_2 = 0;
+		MissionObjectives[iParam0].f_2 = 0;
 
-	if (Global_63587[iParam0].f_3)
-		if (iParam1 < Global_63587[iParam0].f_2)
+	if (MissionObjectives[iParam0].f_3)
+		if (iParam1 < MissionObjectives[iParam0].f_2)
 			return true;
-	else if (iParam1 >= Global_63587[iParam0].f_2)
+	else if (iParam1 >= MissionObjectives[iParam0].f_2)
 		return true;
 
 	return false;
@@ -6603,7 +6603,7 @@ void func_77(var uParam0) // Position - 0xBAA3
 	
 		if (Global_75458[i] >= 0)
 		{
-			if (!Global_63587[Global_75458[i]].f_7)
+			if (!MissionObjectives[Global_75458[i]].f_7)
 			{
 				iLocal_628 = iLocal_628 + 1;
 			
@@ -6875,7 +6875,7 @@ BOOL func_88(var uParam0, int iParam1) // Position - 0xBF5B
 		return false;
 	}
 
-	num3 = { Global_63587[Global_75458[iParam1]] };
+	num3 = { MissionObjectives[Global_75458[iParam1]] };
 
 	if (num3 == 15)
 		Global_75458[iParam1].f_1 = iLocal_635;
@@ -8159,12 +8159,12 @@ void func_90(int iParam0, int iParam1) // Position - 0xD60D
 	Hash statName;
 	int value;
 
-	statName = Global_63587[iParam1].f_4;
+	statName = MissionObjectives[iParam1].f_4;
 
 	if (statName == 0)
 		return;
 
-	Global_63587[iParam1].f_1 = iParam0;
+	MissionObjectives[iParam1].f_1 = iParam0;
 	value = iParam0 + 1;
 	STATS::STAT_SET_INT(statName, value, true);
 
@@ -8570,7 +8570,7 @@ void func_99(int iParam0, int iParam1, BOOL bParam2) // Position - 0xE125
 
 	if (Global_75458[i] != -1)
 	{
-		if (Global_63587[Global_75458[i]] == 3)
+		if (MissionObjectives[Global_75458[i]] == 3)
 		{
 			if (Global_75458[i].f_1 > 1)
 				Global_75458[i].f_1 = 1;
@@ -8697,10 +8697,10 @@ void func_102() // Position - 0xE3AF
 	
 		if (num > 0)
 		{
-			if (Global_63587[num] == 9)
+			if (MissionObjectives[num] == 9)
 				Global_75458[i].f_1 = SYSTEM::ROUND(fLocal_634);
 		
-			if (Global_63587[num] == 15)
+			if (MissionObjectives[num] == 15)
 				Global_75458[i].f_1 = iLocal_635;
 		}
 	}
@@ -8835,7 +8835,7 @@ void func_107() // Position - 0xE5B1
 	{
 		if (Global_75458[i] >= 0)
 		{
-			num = Global_63587[Global_75458[i]];
+			num = MissionObjectives[Global_75458[i]];
 		
 			switch (num)
 			{
@@ -9179,7 +9179,7 @@ void func_109(int iParam0) // Position - 0xED95
 	{
 		num = Global_75458[i];
 	
-		if (Global_63587[num] == 13)
+		if (MissionObjectives[num] == 13)
 			Global_75458[i].f_1 = Global_75458[i].f_1 + iParam0;
 	}
 
@@ -9197,7 +9197,7 @@ void func_110() // Position - 0xEDE2
 	{
 		num = Global_75458[i];
 	
-		if (Global_63587[num] == 16)
+		if (MissionObjectives[num] == 16)
 			Global_75458[i].f_1 = Global_75458[i].f_1 + 1;
 	}
 
@@ -9219,7 +9219,7 @@ void func_111() // Position - 0xEE2E
 	{
 		num = Global_75458[i];
 	
-		if (Global_63587[num] == 7)
+		if (MissionObjectives[num] == 7)
 		{
 			Global_75458[i].f_1 = Global_75458[i].f_1 + 1;
 			flag = true;

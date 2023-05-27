@@ -1454,7 +1454,7 @@ void func_38(int iParam0) // Position - 0x196B
 
 	for (i = 0; i < Global_75457; i = i + 1)
 	{
-		if (Global_63587[Global_75458[i]] == 12)
+		if (MissionObjectives[Global_75458[i]] == 12)
 			Global_75458[i].f_1 = Global_75458[i].f_1 + iParam0;
 	}
 
@@ -1468,7 +1468,7 @@ void func_39(int iParam0) // Position - 0x19B4
 
 	Global_63363 = 0;
 
-	if (!(Global_63587[iParam0] == 3))
+	if (!(MissionObjectives[iParam0] == 3))
 		return;
 
 	flag = false;
@@ -1530,7 +1530,7 @@ void func_42(BOOL bParam0, int iParam1) // Position - 0x1A6B
 	{
 		for (i = 0; i < Global_75457; i = i + 1)
 		{
-			if (Global_63587[Global_75458[i]] == 4)
+			if (MissionObjectives[Global_75458[i]] == 4)
 			{
 				Global_75458[i].f_5 = 0;
 				return;

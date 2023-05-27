@@ -37094,7 +37094,7 @@ void func_302(int iParam0) // Position - 0x2AB93
 
 	Global_63363 = 0;
 
-	if (!(Global_63587[iParam0] == 3))
+	if (!(MissionObjectives[iParam0] == 3))
 		return;
 
 	flag = false;
@@ -38582,7 +38582,7 @@ void func_326(BOOL bParam0, int iParam1) // Position - 0x2D058
 	{
 		for (i = 0; i < Global_75457; i = i + 1)
 		{
-			if (Global_63587[Global_75458[i]] == 4)
+			if (MissionObjectives[Global_75458[i]] == 4)
 			{
 				Global_75458[i].f_5 = 0;
 				return;

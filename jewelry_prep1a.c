@@ -3156,7 +3156,7 @@ void func_21(int iParam0) // Position - 0x9CE
 
 	Global_63363 = 0;
 
-	if (!(Global_63587[iParam0] == 3))
+	if (!(MissionObjectives[iParam0] == 3))
 		return;
 
 	flag = false;

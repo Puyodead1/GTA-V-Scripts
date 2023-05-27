@@ -4172,7 +4172,7 @@ void func_98(int iParam0) // Position - 0x40A1
 
 	Global_63363 = 0;
 
-	if (!(Global_63587[iParam0] == 3))
+	if (!(MissionObjectives[iParam0] == 3))
 		return;
 
 	flag = false;

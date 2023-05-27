@@ -2396,7 +2396,7 @@ void func_10(int iParam0, int iParam1, BOOL bParam2) // Position - 0x932
 
 	if (Global_75458[i] != -1)
 	{
-		if (Global_63587[Global_75458[i]] == 3)
+		if (MissionObjectives[Global_75458[i]] == 3)
 		{
 			if (Global_75458[i].f_1 > 1)
 				Global_75458[i].f_1 = 1;

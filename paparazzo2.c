@@ -36945,7 +36945,7 @@ void func_233(int iParam0, int iParam1, BOOL bParam2) // Position - 0x2838C
 
 	if (Global_75458[i] != -1)
 	{
-		if (Global_63587[Global_75458[i]] == 3)
+		if (MissionObjectives[Global_75458[i]] == 3)
 		{
 			if (Global_75458[i].f_1 > 1)
 				Global_75458[i].f_1 = 1;
@@ -56427,7 +56427,7 @@ void func_576(int iParam0) // Position - 0x479FB
 
 	Global_63363 = 0;
 
-	if (!(Global_63587[iParam0] == 3))
+	if (!(MissionObjectives[iParam0] == 3))
 		return;
 
 	flag = false;
