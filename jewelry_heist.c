@@ -32051,8 +32051,8 @@ void func_134() // Position - 0x1C3C4
 
 	WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_UNARMED"), true);
 	PED::DELETE_PED(&uLocal_2664[0]);
-	ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), Global_99120[11], true, false, false, true);
-	func_175(Global_99120[11], 40f, 0, 10000);
+	ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), G_SwitchPositions[11], true, false, false, true);
+	func_175(G_SwitchPositions[11], 40f, 0, 10000);
 	ENTITY::SET_ENTITY_ONLY_DAMAGED_BY_PLAYER(PLAYER::PLAYER_PED_ID(), false);
 
 	while (!func_153())

@@ -1698,7 +1698,7 @@ void func_77() // Position - 0x2D92
 	for (i = 0; i < 317; i = i + 1)
 	{
 		if (func_78(i, &unk))
-			Global_99120[i] = { unk };
+			G_SwitchPositions[i] = { unk };
 	}
 
 	for (j = 0; j < 3; j = j + 1)

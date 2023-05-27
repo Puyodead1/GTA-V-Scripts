@@ -4862,7 +4862,7 @@ int func_58(int iParam0, var uParam1, var uParam2, char* sParam3) // Position - 
 				return 1;
 		}
 	
-		*uParam1 = { Global_99120[iParam0] };
+		*uParam1 = { G_SwitchPositions[iParam0] };
 		return 1;
 	}
 
