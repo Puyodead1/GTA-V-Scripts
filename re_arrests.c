@@ -3541,7 +3541,7 @@ BOOL func_75(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x419C
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
@@ -3627,7 +3627,7 @@ BOOL func_75(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x419C
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8253, 9))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 					return 0;
 			}
 		

@@ -32686,9 +32686,9 @@ BOOL func_198() // Position - 0x2664E
 void func_199(int iParam0) // Position - 0x26675
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 13);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 13);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 13);
 
 	return;
 }

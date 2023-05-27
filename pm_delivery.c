@@ -3388,7 +3388,7 @@ BOOL func_87(int iParam0) // Position - 0x45B6
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;

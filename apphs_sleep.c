@@ -156,7 +156,7 @@ void func_3() // Position - 0x172
 	if (Global_9058[2][0].f_259 == 2)
 		Global_9058[2][0].f_259 = 0;
 
-	MISC::CLEAR_BIT(&Global_8253, 25);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
 	MISC::SET_BIT(&Global_8254, 11);
 	return;
 }
@@ -533,7 +533,7 @@ void func_19() // Position - 0x73B
 	}
 
 	func_20(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	MISC::CLEAR_BIT(&Global_8253, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	return;
 }
 
@@ -728,7 +728,7 @@ void func_26() // Position - 0xB5E
 	}
 
 	func_20(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	MISC::CLEAR_BIT(&Global_8253, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	return;
 }
 

@@ -3535,7 +3535,7 @@ BOOL func_23(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1731
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
@@ -3621,7 +3621,7 @@ BOOL func_23(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1731
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8253, 9))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 					return 0;
 			}
 		
@@ -7443,9 +7443,9 @@ void func_133(int iParam0) // Position - 0x65B4
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_31())
 		Global_20383.f_1 = 3;
@@ -7491,7 +7491,7 @@ BOOL func_136(int iParam0) // Position - 0x66C0
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -17979,7 +17979,7 @@ int func_377(eCharacter echParam0, int iParam1, char* sParam2, int iParam3, int 
 	char* str3;
 	char* str4;
 
-	MISC::CLEAR_BIT(&Global_8253, 10);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 10);
 	num = 0;
 	str = "NULL";
 	num2 = -99;
@@ -17995,8 +17995,8 @@ int func_377(eCharacter echParam0, int iParam1, char* sParam2, int iParam3, int 
 			Global_8960 = iParam7;
 			Global_8863[3] = { _GET_CHARACTER_NAME(echParam0) };
 			Global_8940 = echParam0;
-			MISC::SET_BIT(&Global_8253, 1);
-			MISC::SET_BIT(&Global_8253, 7);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 1);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 7);
 		}
 	
 		return 1;
@@ -18096,7 +18096,7 @@ int func_379(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_67), sParam14, 64);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_83), sParam15, 64);
 
-	if (IS_BIT_SET(Global_8253, 10))
+	if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 	{
 		Global_113648.f_14143[Global_22792].f_99[0] = 1;
 		Global_113648.f_14143[Global_22792].f_99[1] = 1;
@@ -18162,7 +18162,7 @@ int func_379(int iParam0, char* sParam1, int iParam2, int iParam3, char* sParam4
 
 	if (iParam7 == 1)
 	{
-		if (IS_BIT_SET(Global_8253, 10))
+		if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 		{
 			Global_113648.f_14053[0].f_17 = 1;
 			Global_113648.f_14053[1].f_17 = 1;
@@ -23879,9 +23879,9 @@ int func_503(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 void func_504(int iParam0) // Position - 0x2023B
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 13);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 13);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 13);
 
 	return;
 }

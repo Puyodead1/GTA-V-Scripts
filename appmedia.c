@@ -370,7 +370,7 @@ void func_3() // Position - 0x199
 	}
 
 	func_6(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	MISC::CLEAR_BIT(&Global_8253, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	return;
 }
 
@@ -568,7 +568,7 @@ void func_9() // Position - 0x536
 		}
 	
 		func_6(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&Global_8253, 17);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		func_7(Global_20364, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 		func_4(Global_20364, "SET_HEADER", &uLocal_52[iLocal_23], 0, 0, 0, 0);
 	}
@@ -783,7 +783,7 @@ void func_22() // Position - 0x9A5
 						}
 					
 						func_6(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-						MISC::CLEAR_BIT(&Global_8253, 17);
+						MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 						Global_22764 = iLocal_23;
 						Global_22760 = 12;
 						Global_20383.f_1 = 8;

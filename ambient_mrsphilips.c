@@ -6984,7 +6984,7 @@ void func_135() // Position - 0xAA56
 	if (Global_9058[2][0].f_259 == 2)
 		Global_9058[2][0].f_259 = 0;
 
-	MISC::CLEAR_BIT(&Global_8253, 25);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
 	MISC::SET_BIT(&Global_8254, 11);
 	return;
 }

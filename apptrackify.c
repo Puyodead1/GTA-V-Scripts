@@ -201,7 +201,7 @@ void func_7() // Position - 0x288
 	}
 
 	func_8(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	MISC::CLEAR_BIT(&Global_8253, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	return;
 }
 

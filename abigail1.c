@@ -1161,7 +1161,7 @@ void func_31() // Position - 0x168C
 	if (Global_9058[2][0].f_259 == 0)
 		Global_9058[2][0].f_259 = 2;
 
-	MISC::SET_BIT(&Global_8253, 25);
+	MISC::SET_BIT(&G_SleepModeOnOn25, 25);
 	MISC::SET_BIT(&Global_8254, 11);
 	return;
 }
@@ -33396,7 +33396,7 @@ void func_205() // Position - 0x26E58
 		HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(&txdName, &txdName, false, 3, "", 0);
 	}
 
-	MISC::CLEAR_BIT(&Global_8253, 0);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 0);
 	return;
 }
 
@@ -33721,9 +33721,9 @@ BOOL func_224() // Position - 0x274F2
 void func_225(int iParam0) // Position - 0x27519
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 13);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 13);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 13);
 
 	return;
 }
@@ -38050,9 +38050,9 @@ void func_310(int iParam0) // Position - 0x2F1F4
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_224())
 		Global_20383.f_1 = 3;
@@ -38098,7 +38098,7 @@ BOOL func_313(int iParam0) // Position - 0x2F300
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;

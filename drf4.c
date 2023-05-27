@@ -3238,9 +3238,9 @@ void func_55(int iParam0) // Position - 0x2751
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_56())
 		Global_20383.f_1 = 3;
@@ -3289,7 +3289,7 @@ BOOL func_58(int iParam0) // Position - 0x2876
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -3318,9 +3318,9 @@ BOOL func_60() // Position - 0x28DB
 void func_61(int iParam0) // Position - 0x28EA
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 24);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 24);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 24);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 24);
 
 	return;
 }
@@ -3559,7 +3559,7 @@ BOOL func_76(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position - 
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		

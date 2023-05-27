@@ -110148,7 +110148,7 @@ void func_1436() // Position - 0x917D4
 		HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(&txdName, &txdName, false, 3, "", 0);
 	}
 
-	MISC::CLEAR_BIT(&Global_8253, 0);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 0);
 	return;
 }
 
@@ -141470,9 +141470,9 @@ void func_2138() // Position - 0xBD52F
 void func_2139(int iParam0) // Position - 0xBD53B
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 24);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 24);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 24);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 24);
 
 	return;
 }
@@ -141497,9 +141497,9 @@ void func_2140(int iParam0) // Position - 0xBD55E
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_2141())
 		Global_20383.f_1 = 3;
@@ -141548,7 +141548,7 @@ BOOL func_2143(int iParam0) // Position - 0xBD683
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -141834,7 +141834,7 @@ BOOL func_2158(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xBDA1C
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
@@ -141920,7 +141920,7 @@ BOOL func_2158(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xBDA1C
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8253, 9))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 					return 0;
 			}
 		
@@ -142133,9 +142133,9 @@ void func_2166(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4
 void func_2167(int iParam0) // Position - 0xBDFE9
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 20);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 20);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 20);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 
 	return;
 }

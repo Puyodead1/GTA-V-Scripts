@@ -1277,7 +1277,7 @@ void func_36() // Position - 0x127D
 	if (Global_9058[2][0].f_259 == 2)
 		Global_9058[2][0].f_259 = 0;
 
-	MISC::CLEAR_BIT(&Global_8253, 25);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
 	MISC::SET_BIT(&Global_8254, 11);
 	return;
 }
@@ -1720,7 +1720,7 @@ BOOL func_55(int iParam0) // Position - 0x1AB8
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;

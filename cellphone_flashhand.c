@@ -172,18 +172,18 @@ void main() // Position - 0x0
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	Global_20581 = 145;
 	MISC::CLEAR_BIT(&Global_8254, 8);
-	MISC::CLEAR_BIT(&Global_8253, 14);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 14);
 	MISC::CLEAR_BIT(&Global_4542297, 3);
 	MISC::CLEAR_BIT(&Global_8254, 10);
-	MISC::CLEAR_BIT(&Global_8253, 17);
-	MISC::CLEAR_BIT(&Global_8253, 9);
-	MISC::CLEAR_BIT(&Global_8253, 26);
-	MISC::CLEAR_BIT(&Global_8253, 23);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 26);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 23);
 	MISC::CLEAR_BIT(&Global_8254, 24);
 	MISC::CLEAR_BIT(&Global_8254, 25);
 	MISC::CLEAR_BIT(&Global_8254, 27);
 	MISC::CLEAR_BIT(&Global_8254, 26);
-	MISC::CLEAR_BIT(&Global_8253, 30);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 	Global_2803654 = 0;
 	iLocal_122 = 0;
 	GRAPHICS::DRAW_LOW_QUALITY_PHOTO_TO_PHONE(false, false);
@@ -264,9 +264,9 @@ void main() // Position - 0x0
 			func_118();
 			Global_20371 = false;
 			MOBILE::DESTROY_MOBILE_PHONE();
-			MISC::CLEAR_BIT(&Global_8253, 9);
-			MISC::CLEAR_BIT(&Global_8253, 27);
-			MISC::CLEAR_BIT(&Global_8253, 30);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 27);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 			MISC::CLEAR_BIT(&Global_8254, 5);
 			MISC::CLEAR_BIT(&Global_8254, 21);
 			MISC::CLEAR_BIT(&Global_8255, 2);
@@ -439,7 +439,7 @@ void main() // Position - 0x0
 
 	Global_20361 = 0;
 	Global_20585 = false;
-	MISC::CLEAR_BIT(&Global_8253, 9);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
 	Global_2694521 = false;
 
 	if (func_87(0) && NETWORK::NETWORK_IS_SIGNED_ONLINE())
@@ -488,12 +488,12 @@ void main() // Position - 0x0
 		if (Global_20586 == false)
 		{
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 		else if (Global_78558)
 		{
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 		else
 		{
@@ -507,7 +507,7 @@ void main() // Position - 0x0
 			else
 				func_81(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 		
-			MISC::SET_BIT(&Global_8253, 17);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 		}
 	
 		func_80();
@@ -612,7 +612,7 @@ void main() // Position - 0x0
 		
 			if (Global_20383.f_1 > 4)
 			{
-				if (IS_BIT_SET(Global_8253, 14) && Global_4542576 == 0 && Global_20323 == 0)
+				if (IS_BIT_SET(G_SleepModeOnOn25, 14) && Global_4542576 == 0 && Global_20323 == 0)
 				{
 					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 					{
@@ -795,7 +795,7 @@ void main() // Position - 0x0
 					{
 						PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20353);
 					
-						if (IS_BIT_SET(Global_8253, 17))
+						if (IS_BIT_SET(G_SleepModeOnOn25, 17))
 							PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20354);
 					}
 				
@@ -939,7 +939,7 @@ void main() // Position - 0x0
 			if (Global_20383.f_1 == 6)
 				func_44();
 		}
-		else if (!IS_BIT_SET(Global_8253, 23))
+		else if (!IS_BIT_SET(G_SleepModeOnOn25, 23))
 		{
 			if (Global_20383.f_1 == 5 || Global_20383.f_1 == 6)
 			{
@@ -948,7 +948,7 @@ void main() // Position - 0x0
 					if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appcamera")) < 1 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appemail")) < 1)
 					{
 						if (Global_20326 == false)
-							if (IS_BIT_SET(Global_8253, 14))
+							if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 								if (!Global_78558)
 									if (iLocal_75 == 0)
 										if (!func_82(14))
@@ -960,7 +960,7 @@ void main() // Position - 0x0
 								else
 									func_24();
 					
-						if (IS_BIT_SET(Global_8253, 9))
+						if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 						{
 							func_22(0, 0, 1, true);
 						}
@@ -986,7 +986,7 @@ void main() // Position - 0x0
 								{
 									if (IS_BIT_SET(Global_4542297, 1))
 									{
-										if (IS_BIT_SET(Global_8253, 14))
+										if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 										{
 											if (Global_78558)
 												func_22(7, 0, 1, false);
@@ -997,7 +997,7 @@ void main() // Position - 0x0
 											MISC::CLEAR_BIT(&Global_4542297, 1);
 										}
 									}
-									else if (IS_BIT_SET(Global_8253, 14))
+									else if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 									{
 										func_22(7, 0, 1, false);
 										Global_22784 = 0;
@@ -1052,7 +1052,7 @@ void main() // Position - 0x0
 		
 			SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&(Global_8260[Global_20386].f_5));
 			Global_8256 = 99;
-			MISC::CLEAR_BIT(&Global_8253, 23);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 23);
 		}
 	
 		if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
@@ -1083,7 +1083,7 @@ void main() // Position - 0x0
 							{
 								if (func_8())
 								{
-									if (!IS_BIT_SET(Global_8253, 9))
+									if (!IS_BIT_SET(G_SleepModeOnOn25, 9))
 									{
 										if (func_62(FRONTEND_CONTROL, Global_20355, 0))
 										{
@@ -1152,7 +1152,7 @@ void main() // Position - 0x0
 						if (IS_BIT_SET(Global_4718592.f_37, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632)
 						{
 							func_5(true, true);
-							MISC::SET_BIT(&Global_8253, 14);
+							MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 						}
 						else
 						{
@@ -1567,7 +1567,7 @@ BOOL func_6(int iParam0) // Position - 0x20AA
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -1636,7 +1636,7 @@ void func_9() // Position - 0x211D
 
 	num = 350f;
 
-	if (IS_BIT_SET(Global_8253, 30) || IS_BIT_SET(Global_8255, 2))
+	if (IS_BIT_SET(G_SleepModeOnOn25, 30) || IS_BIT_SET(Global_8255, 2))
 		num = 25f;
 
 	unk = { Global_20343 };
@@ -1644,7 +1644,7 @@ void func_9() // Position - 0x211D
 	if (Global_20368 == 1)
 		unk = Vector3( -45f, 45f, 25f );
 
-	if (IS_BIT_SET(Global_8254, 26) || IS_BIT_SET(Global_8253, 30) || IS_BIT_SET(Global_8255, 2))
+	if (IS_BIT_SET(Global_8254, 26) || IS_BIT_SET(G_SleepModeOnOn25, 30) || IS_BIT_SET(Global_8255, 2))
 		uLocal_119 = { Global_20329[Global_20328] };
 	else
 		uLocal_119 = { Global_20336[Global_20328] };
@@ -1686,10 +1686,10 @@ void func_9() // Position - 0x211D
 			func_11();
 	
 		MISC::CLEAR_BIT(&Global_8254, 8);
-		MISC::CLEAR_BIT(&Global_8253, 14);
-		MISC::CLEAR_BIT(&Global_8253, 9);
-		MISC::CLEAR_BIT(&Global_8253, 27);
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 14);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 9);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 27);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 		MISC::CLEAR_BIT(&Global_8254, 5);
 		MISC::CLEAR_BIT(&Global_8254, 19);
 		MISC::CLEAR_BIT(&Global_8254, 21);
@@ -1785,7 +1785,7 @@ void func_11() // Position - 0x24ED
 	if (Global_9058[2][0].f_259 == 2)
 		Global_9058[2][0].f_259 = 0;
 
-	MISC::CLEAR_BIT(&Global_8253, 25);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 25);
 	MISC::SET_BIT(&Global_8254, 11);
 	return;
 }
@@ -1939,7 +1939,7 @@ float func_15(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	if (Global_4542576 == 0)
 	{
-		if (IS_BIT_SET(Global_8253, 14) && Global_20383.f_1 < 4)
+		if (IS_BIT_SET(G_SleepModeOnOn25, 14) && Global_20383.f_1 < 4)
 		{
 			MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 		
@@ -2041,12 +2041,12 @@ void func_19() // Position - 0x29A7
 	if (Global_20586 == false)
 	{
 		func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&Global_8253, 17);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	}
 	else if (Global_78558)
 	{
 		func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&Global_8253, 17);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	}
 	else
 	{
@@ -2060,7 +2060,7 @@ void func_19() // Position - 0x29A7
 		else
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 	
-		MISC::SET_BIT(&Global_8253, 17);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 	}
 
 	return;
@@ -2112,7 +2112,7 @@ void func_21() // Position - 0x2AFF
 						{
 							if (!IS_BIT_SET(Global_4542297, 3))
 							{
-								if (!IS_BIT_SET(Global_8253, 14))
+								if (!IS_BIT_SET(G_SleepModeOnOn25, 14))
 								{
 									Global_20361 = 1;
 									MISC::SET_BIT(&Global_4542297, 3);
@@ -3642,17 +3642,17 @@ void func_44() // Position - 0x3F49
 				if (num == 0)
 				{
 					func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-					MISC::CLEAR_BIT(&Global_8253, 17);
+					MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 					Global_20383.f_1 = 7;
 				
-					if (IS_BIT_SET(Global_8253, 23))
+					if (IS_BIT_SET(G_SleepModeOnOn25, 23))
 					{
 					}
 					else
 					{
 						func_38();
 						SCRIPT::REQUEST_SCRIPT(&(Global_8260[Global_20386].f_5));
-						MISC::SET_BIT(&Global_8253, 23);
+						MISC::SET_BIT(&G_SleepModeOnOn25, 23);
 					}
 				}
 				else
@@ -3681,7 +3681,7 @@ void func_44() // Position - 0x3F49
 			
 				case 16:
 					num = 1;
-					MISC::SET_BIT(&Global_8253, 26);
+					MISC::SET_BIT(&G_SleepModeOnOn25, 26);
 					break;
 			
 				case 5:
@@ -3722,16 +3722,16 @@ void func_44() // Position - 0x3F49
 			{
 				func_38();
 				func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 				Global_20383.f_1 = 7;
 			
-				if (IS_BIT_SET(Global_8253, 23))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 23))
 				{
 				}
 				else
 				{
 					SCRIPT::REQUEST_SCRIPT(&(Global_8260[Global_20386].f_5));
-					MISC::SET_BIT(&Global_8253, 23);
+					MISC::SET_BIT(&G_SleepModeOnOn25, 23);
 				}
 			}
 			else if (Global_20386 != 20)
@@ -3835,7 +3835,7 @@ void func_51() // Position - 0x456F
 	if (IS_BIT_SET(Global_8255, 2))
 	{
 		MISC::SET_BIT(&Global_8254, 8);
-		MISC::SET_BIT(&Global_8253, 14);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 		Global_20323 = 0;
 		iLocal_18 = 0;
 		MOBILE::SET_MOBILE_PHONE_ROTATION(Global_20343, 0);
@@ -3847,7 +3847,7 @@ void func_51() // Position - 0x456F
 		if (num >= 1f)
 		{
 			MISC::SET_BIT(&Global_8254, 8);
-			MISC::SET_BIT(&Global_8253, 14);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 			Global_20323 = 0;
 			iLocal_18 = 0;
 			MISC::CLEAR_BIT(&Global_8255, 2);
@@ -3873,7 +3873,7 @@ void func_51() // Position - 0x456F
 		if (num2 >= 1f)
 		{
 			MISC::SET_BIT(&Global_8254, 8);
-			MISC::SET_BIT(&Global_8253, 14);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 14);
 			Global_20323 = 0;
 			iLocal_18 = 0;
 			MISC::CLEAR_BIT(&Global_8255, 2);
@@ -3963,7 +3963,7 @@ void func_53() // Position - 0x4718
 	{
 		if (iLocal_99 == 0)
 		{
-			if (IS_BIT_SET(Global_8253, 27))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 27))
 			{
 				iLocal_99 = 1;
 				SYSTEM::SETTIMERB(0);
@@ -3980,7 +3980,7 @@ void func_53() // Position - 0x4718
 							else if (!IS_BIT_SET(Global_8255, 5))
 								AUDIO::PLAY_PED_RINGTONE("Remote_Ring", PLAYER::PLAYER_PED_ID(), true);
 		
-			if (!IS_BIT_SET(Global_8253, 27))
+			if (!IS_BIT_SET(G_SleepModeOnOn25, 27))
 			{
 				iLocal_99 = 0;
 			
@@ -4038,9 +4038,9 @@ void func_53() // Position - 0x4718
 										break;
 								
 									case 7:
-										IS_BIT_SET(Global_8253, 23) == true;
+										IS_BIT_SET(G_SleepModeOnOn25, 23) == true;
 									
-										if (Global_8861 - Global_8860 > Global_8862 && IS_BIT_SET(Global_8253, 23) == false)
+										if (Global_8861 - Global_8860 > Global_8862 && IS_BIT_SET(G_SleepModeOnOn25, 23) == false)
 										{
 											if (IS_BIT_SET(Global_8254, 0))
 											{
@@ -4156,12 +4156,12 @@ void func_54() // Position - 0x4A45
 			if (Global_20586 == false)
 			{
 				func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 			}
 			else if (Global_78558)
 			{
 				func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 			}
 			else
 			{
@@ -4175,7 +4175,7 @@ void func_54() // Position - 0x4A45
 				else
 					func_81(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 			
-				MISC::SET_BIT(&Global_8253, 17);
+				MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 			}
 		
 			if (Global_78558)
@@ -4193,9 +4193,9 @@ void func_54() // Position - 0x4A45
 			func_112(Global_20364, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 			func_81(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		
-			if (IS_BIT_SET(Global_8253, 20))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 			{
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
@@ -4309,7 +4309,7 @@ void func_55() // Position - 0x5018
 		
 			if (Global_21772)
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
-			else if (IS_BIT_SET(Global_8253, 20))
+			else if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			else if (Global_20371)
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_204" /*REJECT*/, 0, 0, 0, 0);
@@ -4317,15 +4317,15 @@ void func_55() // Position - 0x5018
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 		
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 		else
 		{
 			func_81(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		
-			if (IS_BIT_SET(Global_8253, 20))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 			{
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
@@ -4351,7 +4351,7 @@ void func_56() // Position - 0x5199
 	if (Global_78558)
 	{
 		func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&Global_8253, 17);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	}
 
 	return;
@@ -4393,9 +4393,9 @@ void func_59() // Position - 0x5242
 		{
 			func_81(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_81(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		
-			if (IS_BIT_SET(Global_8253, 20))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 			{
 				func_81(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
@@ -4516,9 +4516,9 @@ void func_65(int iParam0) // Position - 0x54ED
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_66())
 		Global_20383.f_1 = 3;
@@ -4595,7 +4595,7 @@ void func_69() // Position - 0x55D6
 									PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 242, false);
 								}
 							
-								MISC::SET_BIT(&Global_8253, 11);
+								MISC::SET_BIT(&G_SleepModeOnOn25, 11);
 								TASK::TASK_USE_MOBILE_PHONE(PLAYER::PLAYER_PED_ID(), true, 1);
 							}
 						}
@@ -4610,7 +4610,7 @@ void func_69() // Position - 0x55D6
 
 void func_70() // Position - 0x56FA
 {
-	if (IS_BIT_SET(Global_8253, 14) && Global_4542576 == 0 && Global_20323 == 0)
+	if (IS_BIT_SET(G_SleepModeOnOn25, 14) && Global_4542576 == 0 && Global_20323 == 0)
 	{
 		if (func_75())
 		{
@@ -4647,7 +4647,7 @@ void func_71() // Position - 0x5742
 
 void func_72() // Position - 0x5769
 {
-	if (IS_BIT_SET(Global_8253, 14) && Global_4542576 == 0 && Global_20323 == 0)
+	if (IS_BIT_SET(G_SleepModeOnOn25, 14) && Global_4542576 == 0 && Global_20323 == 0)
 	{
 		if (bLocal_76 == false)
 		{
@@ -4786,7 +4786,7 @@ void func_76() // Position - 0x5ACD
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (IS_BIT_SET(Global_8253, 11))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 11))
 			{
 				if (!Global_20326)
 					TASK::TASK_USE_MOBILE_PHONE(PLAYER::PLAYER_PED_ID(), false, 1);
@@ -4798,7 +4798,7 @@ void func_76() // Position - 0x5ACD
 					PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 242, true);
 				}
 			
-				MISC::CLEAR_BIT(&Global_8253, 11);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 11);
 			}
 		}
 	}
@@ -4842,7 +4842,7 @@ void func_80() // Position - 0x5B83
 			return;
 	
 		func_81(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::SET_BIT(&Global_8253, 17);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 	}
 
 	return;

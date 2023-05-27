@@ -2480,7 +2480,7 @@ void func_6() // Position - 0x342
 				Global_113648.f_14143[iLocal_58].f_29 = 2;
 				Global_113648.f_14143[iLocal_58].f_24 = 1;
 				Global_113648.f_14143[iLocal_58].f_31 = 0;
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 				Global_22791 = 0;
 			
 				if (Global_20383.f_1 > 3)
@@ -2594,12 +2594,12 @@ void func_7() // Position - 0x6A6
 			if (Global_20586 == 0)
 			{
 				func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 			}
 			else if (Global_78558)
 			{
 				func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 			}
 			else
 			{
@@ -2613,7 +2613,7 @@ void func_7() // Position - 0x6A6
 				else
 					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 			
-				MISC::SET_BIT(&Global_8253, 17);
+				MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 			}
 		
 			if (Global_78558)
@@ -2631,9 +2631,9 @@ void func_7() // Position - 0x6A6
 			func_46(Global_20364, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 			func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		
-			if (IS_BIT_SET(Global_8253, 20))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 			{
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
@@ -2747,7 +2747,7 @@ void func_8() // Position - 0xC5B
 		
 			if (Global_21772)
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
-			else if (IS_BIT_SET(Global_8253, 20))
+			else if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			else if (Global_20371)
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_204" /*REJECT*/, 0, 0, 0, 0);
@@ -2755,15 +2755,15 @@ void func_8() // Position - 0xC5B
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 		
 			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 		else
 		{
 			func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		
-			if (IS_BIT_SET(Global_8253, 20))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
 			{
 				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
@@ -2789,7 +2789,7 @@ void func_9() // Position - 0xDD9
 	if (Global_78558)
 	{
 		func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&Global_8253, 17);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	}
 
 	return;
@@ -2966,7 +2966,7 @@ void func_12() // Position - 0x1092
 			return;
 	
 		func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::SET_BIT(&Global_8253, 17);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 	}
 
 	return;
@@ -3318,7 +3318,7 @@ void func_19() // Position - 0x176D
 									PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 242, false);
 								}
 							
-								MISC::SET_BIT(&Global_8253, 11);
+								MISC::SET_BIT(&G_SleepModeOnOn25, 11);
 								TASK::TASK_USE_MOBILE_PHONE(PLAYER::PLAYER_PED_ID(), true, 1);
 							}
 						}
@@ -3593,7 +3593,7 @@ void func_33() // Position - 0x1E08
 				if (Global_20383.f_1 > 3)
 				{
 					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
-					MISC::CLEAR_BIT(&Global_8253, 17);
+					MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 					Global_20383.f_1 = 8;
 				}
 			
@@ -3647,7 +3647,7 @@ void func_33() // Position - 0x1E08
 					else
 						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 16f, -1f, -1f, 0, 0, 0, 0, 0);
 				
-					MISC::SET_BIT(&Global_8253, 17);
+					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 					Global_113648.f_14143[iLocal_58].f_26 = 1;
 					Global_113648.f_14143[iLocal_58].f_24 = 2;
 				}
@@ -3834,23 +3834,23 @@ void func_33() // Position - 0x1E08
 						else
 							func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
 					
-						MISC::SET_BIT(&Global_8253, 17);
+						MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 					}
 					else if (iLocal_60 == 0)
 					{
 						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-						MISC::CLEAR_BIT(&Global_8253, 17);
+						MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 					}
 				}
 				else if (Global_20371)
 				{
 					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, "CELL_216" /*DELETE*/, 0, 0, 0, 0);
-					MISC::SET_BIT(&Global_8253, 17);
+					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 				}
 				else
 				{
 					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, 0, 0, 0, 0, 0);
-					MISC::SET_BIT(&Global_8253, 17);
+					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
 				}
 			
 				Global_113648.f_14053[Global_20383].f_18 = 0;
@@ -4210,12 +4210,12 @@ void func_43() // Position - 0x2CA5
 		if (Global_78558)
 		{
 			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 		else
 		{
 			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&Global_8253, 17);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 		}
 	}
 	else
@@ -5091,9 +5091,9 @@ void func_60(int iParam0) // Position - 0x4D3C
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_61())
 		Global_20383.f_1 = 3;
@@ -5142,7 +5142,7 @@ BOOL func_63(int iParam0) // Position - 0x4E61
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;

@@ -92033,7 +92033,7 @@ BOOL func_344(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x68E9C
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
@@ -92119,7 +92119,7 @@ BOOL func_344(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x68E9C
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8253, 9))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 					return 0;
 			}
 		
@@ -92390,7 +92390,7 @@ BOOL func_357(int iParam0) // Position - 0x6957A
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -107539,9 +107539,9 @@ int func_593(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position
 void func_594(int iParam0) // Position - 0x82D5A
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 13);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 13);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 13);
 
 	return;
 }
@@ -108360,7 +108360,7 @@ int _SEND_TEXT_MESSAGE_FROM_CHARACTER_2(eCharacter echParam0, char* sParam1, int
 	char* str4;
 	int num4;
 
-	MISC::CLEAR_BIT(&Global_8253, 10);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 10);
 	num = 0;
 	str = "NULL";
 	num2 = -99;
@@ -108377,8 +108377,8 @@ int _SEND_TEXT_MESSAGE_FROM_CHARACTER_2(eCharacter echParam0, char* sParam1, int
 			Global_8960 = iParam6;
 			Global_8863[3] = { _GET_CHARACTER_NAME(echParam0) };
 			Global_8940 = echParam0;
-			MISC::SET_BIT(&Global_8253, 1);
-			MISC::SET_BIT(&Global_8253, 7);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 1);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 7);
 		}
 	
 		return 1;
@@ -108478,7 +108478,7 @@ int func_616(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_67), sParam14, 64);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_83), sParam15, 64);
 
-	if (IS_BIT_SET(Global_8253, 10))
+	if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 	{
 		Global_113648.f_14143[Global_22792].f_99[0] = 1;
 		Global_113648.f_14143[Global_22792].f_99[1] = 1;
@@ -108544,7 +108544,7 @@ int func_616(eCharacter echParam0, char* sParam1, int iParam2, int iParam3, char
 
 	if (iParam7 == 1)
 	{
-		if (IS_BIT_SET(Global_8253, 10))
+		if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 		{
 			Global_113648.f_14053[0].f_17 = 1;
 			Global_113648.f_14053[1].f_17 = 1;
@@ -109425,7 +109425,7 @@ void func_629() // Position - 0x851DF
 				}
 			}
 		
-			if (IS_BIT_SET(Global_8253, 21))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 21))
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PHOTO_H1A"))
 					HUD::CLEAR_HELP(true);
 		
@@ -109476,7 +109476,7 @@ void func_629() // Position - 0x851DF
 			if (!PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 				PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 		
-			if (IS_BIT_SET(Global_8253, 21))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 21))
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PHOTO_H2A"))
 					HUD::CLEAR_HELP(true);
 		
@@ -109519,7 +109519,7 @@ void func_629() // Position - 0x851DF
 			if (!PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
 				PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, 0);
 		
-			if (IS_BIT_SET(Global_8253, 21))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 21))
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PHOTO_H2A"))
 					HUD::CLEAR_HELP(true);
 		
@@ -109652,9 +109652,9 @@ BOOL func_633() // Position - 0x85DA3
 void func_634(BOOL bParam0) // Position - 0x85DC0
 {
 	if (bParam0)
-		MISC::SET_BIT(&Global_8253, 28);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 28);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 28);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 28);
 
 	return;
 }
@@ -109662,16 +109662,16 @@ void func_634(BOOL bParam0) // Position - 0x85DC0
 void func_635(int iParam0) // Position - 0x85DE2
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 15);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 15);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 15);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 15);
 
 	return;
 }
 
 BOOL func_636() // Position - 0x85E05
 {
-	if (IS_BIT_SET(Global_8253, 15))
+	if (IS_BIT_SET(G_SleepModeOnOn25, 15))
 		return true;
 
 	return false;
@@ -109793,9 +109793,9 @@ void func_645(int iParam0) // Position - 0x86004
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_350())
 		Global_20383.f_1 = 3;
@@ -109958,7 +109958,7 @@ void func_655() // Position - 0x863CA
 	switch (iLocal_5063)
 	{
 		case 0:
-			!IS_BIT_SET(Global_8253, 21);
+			!IS_BIT_SET(G_SleepModeOnOn25, 21);
 		
 			if (!func_658())
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PH_HELP2"))
@@ -110021,7 +110021,7 @@ void func_655() // Position - 0x863CA
 				if (HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 					HUD::CLEAR_HELP(true);
 			
-				if (IS_BIT_SET(Global_8253, 18))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 18))
 					iLocal_5063 = iLocal_5063 + 1;
 			}
 		
@@ -110039,7 +110039,7 @@ void func_655() // Position - 0x863CA
 				
 					SYSTEM::SETTIMERA(0);
 				
-					if (!IS_BIT_SET(Global_8253, 21))
+					if (!IS_BIT_SET(G_SleepModeOnOn25, 21))
 						_DISPLAY_HELP_TEXT("PHOTO_H1A", 60000);
 				}
 			}
@@ -110072,7 +110072,7 @@ void func_655() // Position - 0x863CA
 				
 					SYSTEM::SETTIMERA(0);
 				
-					if (!IS_BIT_SET(Global_8253, 21))
+					if (!IS_BIT_SET(G_SleepModeOnOn25, 21))
 						_DISPLAY_HELP_TEXT("PHOTO_H2A", 60000);
 				}
 			}
@@ -110102,7 +110102,7 @@ void func_655() // Position - 0x863CA
 				
 					SYSTEM::SETTIMERA(0);
 				
-					if (!IS_BIT_SET(Global_8253, 21))
+					if (!IS_BIT_SET(G_SleepModeOnOn25, 21))
 						_DISPLAY_HELP_TEXT("PHOTO_H3A", 60000);
 				}
 			}
@@ -110113,7 +110113,7 @@ void func_655() // Position - 0x863CA
 			
 				SYSTEM::SETTIMERA(0);
 			
-				if (!IS_BIT_SET(Global_8253, 21))
+				if (!IS_BIT_SET(G_SleepModeOnOn25, 21))
 				{
 					func_656("PH_HELP5");
 					iLocal_5063 = iLocal_5063 + 1;
@@ -128798,7 +128798,7 @@ void func_867(BOOL bParam0, int iParam1) // Position - 0xA691C
 	PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 	func_634(false);
 	func_650(0);
-	MISC::CLEAR_BIT(&Global_8253, 22);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 22);
 	func_717(0);
 	func_646(false, false);
 	iLocal_5209 = 0;

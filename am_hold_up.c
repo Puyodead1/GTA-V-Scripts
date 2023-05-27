@@ -6003,7 +6003,7 @@ BOOL func_173(int iParam0) // Position - 0x768A
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -8289,7 +8289,7 @@ int func_235(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xA97A
 	
 		if (Global_21731)
 		{
-			MISC::CLEAR_BIT(&Global_8253, 20);
+			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 20);
 			MISC::CLEAR_BIT(&Global_8254, 17);
 			MISC::CLEAR_BIT(&Global_8255, 0);
 		
@@ -8375,7 +8375,7 @@ int func_235(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xA97A
 						break;
 				}
 			
-				if (IS_BIT_SET(Global_8253, 9))
+				if (IS_BIT_SET(G_SleepModeOnOn25, 9))
 					return 0;
 			}
 		
@@ -9250,7 +9250,7 @@ BOOL func_268(int iParam0) // Position - 0xBE7A
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				if (Global_20382 == 1)
 					return true;
 				else
@@ -15035,9 +15035,9 @@ void func_351(int iParam0) // Position - 0x1481F
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_241())
 		Global_20383.f_1 = 3;

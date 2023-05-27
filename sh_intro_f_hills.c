@@ -28912,9 +28912,9 @@ BOOL func_144() // Position - 0x1F0B2
 void func_145(int iParam0) // Position - 0x1F0D9
 {
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 13);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 13);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 13);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 13);
 
 	return;
 }

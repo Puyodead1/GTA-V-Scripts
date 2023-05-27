@@ -9559,9 +9559,9 @@ void func_70(int iParam0) // Position - 0xC49B
 	Global_21725 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&Global_8253, 30);
+		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
 	else
-		MISC::CLEAR_BIT(&Global_8253, 30);
+		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
 
 	if (!func_71())
 		Global_20383.f_1 = 3;
@@ -9620,7 +9620,7 @@ BOOL func_75(int iParam0) // Position - 0xC5DD
 {
 	if (iParam0 == 1)
 		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(Global_8253, 14))
+			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
 				return true;
 			else
 				return false;
@@ -9993,7 +9993,7 @@ int func_90(eCharacter echParam0, char* sParam1, int iParam2, const char* sParam
 			break;
 	}
 
-	MISC::CLEAR_BIT(&Global_8253, 10);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 10);
 	num = 3;
 
 	if (func_92(echParam0, sParam1, iParam2, iParam6, sParam3, sParam5, iParam4, iParam7, iParam8, iParam9, bParam11, iParam12, iParam13, iParam14, sParam15, sParam16, num) == 1)
@@ -10004,8 +10004,8 @@ int func_90(eCharacter echParam0, char* sParam1, int iParam2, const char* sParam
 			Global_8863[3] = { _GET_CHARACTER_NAME(echParam0) };
 			Global_8940 = echParam0;
 			TEXT_LABEL_ASSIGN_STRING(&Global_8941, sParam5, 64);
-			MISC::SET_BIT(&Global_8253, 1);
-			MISC::SET_BIT(&Global_8253, 7);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 1);
+			MISC::SET_BIT(&G_SleepModeOnOn25, 7);
 		}
 	
 		return 1;
@@ -10105,7 +10105,7 @@ int func_92(int iParam0, char* sParam1, int iParam2, int iParam3, const char* sP
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_67), sParam14, 64);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_113648.f_14143[Global_22792].f_83), sParam15, 64);
 
-	if (IS_BIT_SET(Global_8253, 10))
+	if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 	{
 		Global_113648.f_14143[Global_22792].f_99[0] = 1;
 		Global_113648.f_14143[Global_22792].f_99[1] = 1;
@@ -10171,7 +10171,7 @@ int func_92(int iParam0, char* sParam1, int iParam2, int iParam3, const char* sP
 
 	if (iParam7 == 1)
 	{
-		if (IS_BIT_SET(Global_8253, 10))
+		if (IS_BIT_SET(G_SleepModeOnOn25, 10))
 		{
 			Global_113648.f_14053[0].f_17 = 1;
 			Global_113648.f_14053[1].f_17 = 1;
@@ -11949,7 +11949,7 @@ void func_144() // Position - 0xF52E
 		HUD::END_TEXT_COMMAND_THEFEED_POST_MESSAGETEXT(&txdName, &txdName, false, 3, "", 0);
 	}
 
-	MISC::CLEAR_BIT(&Global_8253, 0);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 0);
 	return;
 }
 

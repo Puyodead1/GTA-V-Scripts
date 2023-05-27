@@ -311,7 +311,7 @@ void func_8() // Position - 0x3D7
 				}
 			
 				func_7(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&Global_8253, 17);
+				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 				bLocal_61 = true;
 				SYSTEM::SETTIMERA(0);
 			}
@@ -466,7 +466,7 @@ void func_14() // Position - 0x695
 	}
 
 	func_7(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-	MISC::CLEAR_BIT(&Global_8253, 17);
+	MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
 	return;
 }
 
