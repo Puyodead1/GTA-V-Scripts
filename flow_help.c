@@ -67,7 +67,7 @@ void main() // Position - 0x0
 		{
 			if (!Global_112288)
 			{
-				if (Global_43257 != 6 && Global_43257 != 15 && !Global_96688)
+				if (Global_43257 != 6 && Global_43257 != 15 && !G_DisableMessagesAndCalls3)
 					func_23();
 			
 				if (!Global_112287)
@@ -195,7 +195,7 @@ void main() // Position - 0x0
 			if (iLocal_37 >= Global_113648.f_20412.f_145)
 				iLocal_37 = 0;
 		}
-		else if (Global_43257 != 6 && Global_43257 != 15 && !Global_96688)
+		else if (Global_43257 != 6 && Global_43257 != 15 && !G_DisableMessagesAndCalls3)
 		{
 			func_23();
 		}

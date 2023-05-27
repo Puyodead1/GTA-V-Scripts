@@ -1767,7 +1767,7 @@ BOOL func_34(int iParam0, eCharacter echParam1, int iParam2, int iParam3, int iP
 	if (G_DisableMessagesAndCalls2)
 		return false;
 
-	if (Global_96688)
+	if (G_DisableMessagesAndCalls3)
 		return false;
 
 	if (func_54() || Global_23131.f_4 && Global_23131.f_104 == 4 || func_53())

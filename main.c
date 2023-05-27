@@ -102907,7 +102907,7 @@ void func_659() // Position - 0x8751F
 	func_660();
 	Global_113648.f_1.f_118 = 0;
 	Global_113648.f_1.f_119 = 0;
-	Global_96688 = false;
+	G_DisableMessagesAndCalls3 = false;
 	Global_96709 = 0;
 	Global_96901.f_3 = 0;
 	return;
@@ -143970,7 +143970,7 @@ void func_1874() // Position - 0xBD8DB
 
 void func_1875() // Position - 0xBD905
 {
-	if (Global_43257 == 6 || Global_43257 == 15 || Global_96688)
+	if (Global_43257 == 6 || Global_43257 == 15 || G_DisableMessagesAndCalls3)
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("flow_help")) == 0)
 			func_1827(joaat("flow_help"), MICRO);
 

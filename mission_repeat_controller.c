@@ -106356,7 +106356,7 @@ void func_716() // Position - 0x8B357
 
 	func_729(num, 0, true);
 
-	while (Global_96688 == 0)
+	while (G_DisableMessagesAndCalls3 == 0)
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -119897,7 +119897,7 @@ void func_858() // Position - 0xA1847
 	func_859();
 	Global_113648.f_1.f_118 = 0;
 	Global_113648.f_1.f_119 = 0;
-	Global_96688 = 0;
+	G_DisableMessagesAndCalls3 = 0;
 	Global_96709 = false;
 	Global_96901.f_3 = 0;
 	return;

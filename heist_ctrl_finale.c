@@ -2798,7 +2798,7 @@ void func_70(var uParam0, BOOL bParam1) // Position - 0x2862
 	func_65(uParam0);
 	MISC::CLEAR_BIT(&(uParam0->f_449), 7);
 	MISC::CLEAR_BIT(&(uParam0->f_449), 2);
-	Global_96688 = 0;
+	G_DisableMessagesAndCalls3 = 0;
 	return;
 }
 
@@ -5006,7 +5006,7 @@ void func_122(var uParam0) // Position - 0x5EBA
 
 	uParam0->f_466 = PAD::GET_CONTROL_GROUP_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, 10, true);
 	MISC::SET_BIT(&(uParam0->f_449), 2);
-	Global_96688 = 1;
+	G_DisableMessagesAndCalls3 = 1;
 	func_7(uParam0, uParam0->f_464, 0);
 	return;
 }
