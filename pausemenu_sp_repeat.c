@@ -392,7 +392,7 @@ void main() // Position - 0x0
 					
 						if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 							if (VEHICLE::IS_VEHICLE_DRIVEABLE(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false), false))
-								Global_78810 = { ENTITY::GET_ENTITY_VELOCITY(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)) };
+								Global_78810 = Vector3(ENTITY::GET_ENTITY_VELOCITY(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)));
 					
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
@@ -1559,7 +1559,7 @@ void func_46(int iParam0) // Position - 0x1655
 	int num5;
 	BOOL flag;
 
-	uLocal_28 = { func_78(iParam0, Global_78808) };
+	uLocal_28 = Vector3(func_78(iParam0, Global_78808));
 
 	if (!func_4(2))
 		return;
@@ -1812,7 +1812,7 @@ BOOL func_53(int iParam0, int iParam1, int iParam2) // Position - 0x1A18
 	if (MissionObjectives[iParam0].f_7)
 		return true;
 
-	num = { MissionObjectives[iParam0] };
+	num = Vector3(MissionObjectives[iParam0]);
 	num2 = func_63(iParam0);
 
 	switch (iParam0)
@@ -5402,7 +5402,7 @@ struct<2> func_78(int iParam0, int iParam1) // Position - 0x4F74
 			break;
 	
 		case 7:
-			unk = { func_79(iParam0) };
+			unk = Vector3(func_79(iParam0));
 			break;
 	
 		default:
@@ -5418,7 +5418,7 @@ struct<2> func_79(int iParam0) // Position - 0x500A
 	var unk2;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "", 8);
-	unk3 = { func_80(iParam0) };
+	unk3 = Vector3(func_80(iParam0));
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(&unk3))
 	{
@@ -5786,7 +5786,7 @@ void func_83() // Position - 0x555F
 		num3 = 0;
 		num7 = -1;
 		num = uLocal_30[i];
-		uLocal_28 = { func_78(num, Global_78808) };
+		uLocal_28 = Vector3(func_78(num, Global_78808));
 	
 		for (j = 0; j < func_75(num, Global_78808); j = j + 1)
 		{

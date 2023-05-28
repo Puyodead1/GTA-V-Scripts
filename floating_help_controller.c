@@ -72,7 +72,7 @@ void func_2(int iParam0) // Position - 0x204
 	TEXT_LABEL_ASSIGN_STRING(&Global_112300[iParam0], "", 16);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_112300[iParam0].f_4), "", 64);
 	Global_112300[iParam0].f_23 = 0;
-	Global_112300[iParam0].f_24 = { 0f, 0f, 0f };
+	Global_112300[iParam0].f_24 = Vector3(0f, 0f, 0f);
 	Global_112300[iParam0].f_27 = 0;
 	Global_112300[iParam0].f_20 = 0;
 	Global_112300[iParam0].f_22 = 0;

@@ -1687,7 +1687,7 @@ void main() // Position - 0x0
 	iLocal_42 = 64;
 	iLocal_77 = HUD::GET_STANDARD_BLIP_ENUM_ID();
 	iLocal_78 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
-	uLocal_83 = { 500f, 500f, 500f };
+	uLocal_83 = Vector3(500f, 500f, 500f);
 	bLocal_1646 = true;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(67))
@@ -1698,7 +1698,7 @@ void main() // Position - 0x0
 	func_417(&uLocal_1310);
 	func_416();
 	func_397();
-	uLocal_859.f_14 = { 4186.797f, -3657.3494f, -0.5762f };
+	uLocal_859.f_14 = Vector3(4186.797f, -3657.3494f, -0.5762f);
 
 	while (true)
 	{
@@ -1786,7 +1786,7 @@ void func_1() // Position - 0xDF
 				if (!ENTITY::DOES_ENTITY_EXIST(uLocal_859.f_3))
 				{
 					func_254(&uLocal_859, uLocal_859.f_14);
-					uLocal_859.f_11 = { uLocal_859.f_14 };
+					uLocal_859.f_11 = Vector3(uLocal_859.f_14);
 					func_253(uLocal_859.f_14, false);
 					MISC::CLEAR_AREA_OF_PEDS(uLocal_859.f_14, 2f, 0);
 					uLocal_859.f_3 = PED::CREATE_PED(PED_TYPE_MISSION, hLocal_1564, uLocal_859.f_11, 0, true, true);
@@ -1836,8 +1836,8 @@ void func_1() // Position - 0xDF
 				if (func_218(&uLocal_859))
 				{
 					func_213(&uLocal_1297);
-					uLocal_859.f_17 = { func_212(uLocal_1297.f_1) };
-					uLocal_859.f_29 = { func_211(uLocal_1297.f_1) };
+					uLocal_859.f_17 = Vector3(func_212(uLocal_1297.f_1));
+					uLocal_859.f_29 = Vector3(func_211(uLocal_1297.f_1));
 					func_207(&uLocal_859, 9, 1, false, false);
 				
 					if (!HUD::DOES_BLIP_EXIST(uLocal_859.f_9))
@@ -2105,7 +2105,7 @@ void func_8(int iParam0) // Position - 0x970
 
 	if (uLocal_57[0] != 0)
 	{
-		TEXT_LABEL_COPY(&unk, { func_9(iParam0) }, 6);
+		TEXT_LABEL_COPY(&unk, Vector3(func_9(iParam0)), 6);
 		!MISC::IS_STRING_NULL(&unk);
 	}
 
@@ -2415,8 +2415,8 @@ void func_29(var uParam0, var uParam1, var uParam2, BOOL bParam3, int iParam4) /
 	Vector3 vector;
 	Vector3 unk;
 
-	vector = { func_30(uParam0, 1f, -iParam4, -iParam4, -iParam4) };
-	vector2 = { func_30(uParam0, 1f, iParam4, iParam4, iParam4) };
+	vector = Vector3(func_30(uParam0, 1f, -iParam4, -iParam4, -iParam4));
+	vector2 = Vector3(func_30(uParam0, 1f, iParam4, iParam4, iParam4));
 	vector.f_2 = vector.f_2 - 22f;
 	vector2.f_2 = vector2.f_2 + 22f;
 
@@ -2446,7 +2446,7 @@ Vector3 func_30(var uParam0, var uParam1, var uParam2, float fParam3, int iParam
 	num3 = SYSTEM::SIN(value);
 	num = (iParam4 * num2) + (iParam4.f_1 * num3);
 	num.f_1 = (iParam4.f_1 * num2) - (iParam4 * num3);
-	unk3 = { uParam0 + num };
+	unk3 = Vector3(uParam0 + num);
 	return unk3;
 }
 
@@ -2491,14 +2491,14 @@ void func_32(BOOL bParam0, BOOL bParam1) // Position - 0x1030
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -4575,7 +4575,7 @@ void func_104(Ped pedParam0, var uParam1, BOOL bParam2, int iParam3) // Position
 
 	if (!PED::IS_PED_INJURED(pedParam0))
 	{
-		uParam1->f_2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		uParam1->f_2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 		PED::SET_PED_MONEY(pedParam0, 0);
 		*uParam1 = 0;
 	}
@@ -4586,12 +4586,12 @@ void func_104(Ped pedParam0, var uParam1, BOOL bParam2, int iParam3) // Position
 		else
 			*uParam1 = iParam3;
 	
-		uParam1->f_2 = { PED::GET_DEAD_PED_PICKUP_COORDS(pedParam0, 1067030938, 1069547520) };
+		uParam1->f_2 = Vector3(PED::GET_DEAD_PED_PICKUP_COORDS(pedParam0, 1067030938, 1069547520));
 	}
 
 	MISC::SET_BIT(&(uParam1->f_1), 3);
 	MISC::SET_BIT(&(uParam1->f_1), 4);
-	safePickupCoords = { OBJECT::GET_SAFE_PICKUP_COORDS(uParam1->f_2, 1067030938, 1069547520) };
+	safePickupCoords = Vector3(OBJECT::GET_SAFE_PICKUP_COORDS(uParam1->f_2, 1067030938, 1069547520));
 	uParam1->f_6 = OBJECT::CREATE_PICKUP(joaat("PICKUP_MONEY_VARIABLE"), safePickupCoords, uParam1->f_1, *uParam1, true, 0);
 
 	if (bParam2)
@@ -5181,9 +5181,9 @@ void func_127(var uParam0, Ped pedParam1, Vector3 vParam2, var uParam3, var uPar
 			if (!PED::IS_PED_IN_ANY_VEHICLE(pedIndexFromEntityIndex, false))
 				if (PED::IS_PED_A_PLAYER(pedIndexFromEntityIndex))
 					if (!func_128())
-						vParam2 = { 0f, 0f, 1f };
+						vParam2 = Vector3(0f, 0f, 1f);
 				else if (PED::IS_PED_MALE(pedIndexFromEntityIndex))
-					vParam2 = { 0f, 0f, 1f };
+					vParam2 = Vector3(0f, 0f, 1f);
 		}
 	}
 
@@ -5720,9 +5720,9 @@ void func_148(var uParam0) // Position - 0x50F1
 	var unk;
 
 	if (_IS_NULL_VECTOR(uParam0->f_29))
-		unk = { uParam0->f_17 };
+		unk = Vector3(uParam0->f_17);
 	else
-		unk = { uParam0->f_29 };
+		unk = Vector3(uParam0->f_29);
 
 	func_149(uParam0, unk);
 	return;
@@ -5737,8 +5737,8 @@ void func_149(var uParam0, Vector3 vParam1, var uParam2, var uParam3) // Positio
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_3, false) && PED::IS_PED_SITTING_IN_VEHICLE(uParam0->f_3, uParam0->f_4))
 		{
-			offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, -1.78774f, -1.62399f, -0.6206f) };
-			offsetFromEntityInWorldCoords2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 1.78498f, -1.24105f, -0.6422f) };
+			offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, -1.78774f, -1.62399f, -0.6206f));
+			offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 1.78498f, -1.24105f, -0.6422f));
 		
 			if (func_150(uParam0->f_3, uParam0->f_4) == 0)
 				TASK::TASK_LEAVE_VEHICLE(uParam0->f_3, uParam0->f_4, 512);
@@ -6182,9 +6182,9 @@ float func_167(Entity eParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL b
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(eParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -6613,14 +6613,14 @@ float func_187(Ped pedParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x63
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(veParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(veParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(veParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(veParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(veParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -6936,7 +6936,7 @@ BOOL func_208(var uParam0) // Position - 0x695B
 
 	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 	{
-		string1 = { func_210() };
+		string1 = Vector3(func_210());
 	
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(&string1))
 		{
@@ -7326,7 +7326,7 @@ void func_213(var uParam0) // Position - 0x7379
 	{
 		if (num < 6)
 		{
-			unk = { func_212(i) };
+			unk = Vector3(func_212(i));
 			num3 = func_215(unk, true);
 		
 			if (num3 < num2 && num3 >= func_214(uParam0->f_10) && i != Global_112727[0] && i != Global_112727[1] && i != Global_112727[2] && i != Global_112727[3])
@@ -7715,21 +7715,21 @@ BOOL func_221(var uParam0) // Position - 0x7B24
 		case 2:
 			if (uParam0->f_7 == 0)
 			{
-				vector2 = { 1.5f, 0f, -0.6422f };
-				vector = { -1.4309f, 3.958f, 3.5037f };
-				unk3 = { 0.1017f, 1.3354f, -0.0925f };
+				vector2 = Vector3(1.5f, 0f, -0.6422f);
+				vector = Vector3(-1.4309f, 3.958f, 3.5037f);
+				unk3 = Vector3(0.1017f, 1.3354f, -0.0925f);
 			}
 			else if (uParam0->f_7 == 2)
 			{
-				vector2 = { 1.5f, -1f, -0.6422f };
-				vector = { 1.4309f, 3.958f, 0.5037f };
-				unk3 = { 0.1017f, 1.3354f, -0.0925f };
+				vector2 = Vector3(1.5f, -1f, -0.6422f);
+				vector = Vector3(1.4309f, 3.958f, 0.5037f);
+				unk3 = Vector3(0.1017f, 1.3354f, -0.0925f);
 			}
 			else
 			{
-				vector2 = { -1.5f, -1f, -0.6422f };
-				vector = { -1.4823f, 4.2333f, 0.5939f };
-				unk3 = { -0.4718f, 1.4282f, 0.3619f };
+				vector2 = Vector3(-1.5f, -1f, -0.6422f);
+				vector = Vector3(-1.4823f, 4.2333f, 0.5939f);
+				unk3 = Vector3(-0.4718f, 1.4282f, 0.3619f);
 			}
 		
 			num = func_229(&(uParam0->f_409), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 0f, 2.2f, 0.275f), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, vector), true);
@@ -7739,7 +7739,7 @@ BOOL func_221(var uParam0) // Position - 0x7B24
 				vector.f_2 = vector.f_2 + 1.5f;
 			
 				if (uParam0->f_7 == 2)
-					unk3 = { 0.7632f, 1.4884f, 0.4369f };
+					unk3 = Vector3(0.7632f, 1.4884f, 0.4369f);
 			}
 		
 			if (num != -1)
@@ -7751,7 +7751,7 @@ BOOL func_221(var uParam0) // Position - 0x7B24
 				HUD::CLEAR_PRINTS();
 				func_161();
 				func_250(uParam0, 0, false);
-				offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, vector2) };
+				offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, vector2));
 				ENTITY::SET_ENTITY_COORDS(uParam0->f_3, offsetFromEntityInWorldCoords, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(uParam0->f_3, func_226(uParam0));
 				func_225(uParam0, 1f, 1f, 1f, 0f, 0f, 0f, 1112014848);
@@ -7892,12 +7892,12 @@ float func_226(var uParam0) // Position - 0x80F6
 	var offsetFromEntityInWorldCoords;
 
 	num = 0f;
-	offsetFromEntityInWorldCoords = { func_142() };
+	offsetFromEntityInWorldCoords = Vector3(func_142());
 
 	if (uParam0->f_7 == 2)
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 0.773f, -0.646f, -0.6422f) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, 0.773f, -0.646f, -0.6422f));
 	else
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, -0.773f, -0.646f, -0.6422f) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, -0.773f, -0.646f, -0.6422f));
 
 	num = func_227(ENTITY::GET_ENTITY_COORDS(uParam0->f_3, true), offsetFromEntityInWorldCoords);
 	return num;
@@ -8192,7 +8192,7 @@ int func_239(Vehicle veParam0, Ped pedParam1) // Position - 0x8609
 	int unk2;
 
 	vehicleMaxNumberOfPassengers = VEHICLE::GET_VEHICLE_MAX_NUMBER_OF_PASSENGERS(veParam0);
-	offsetFromEntityGivenWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(veParam0, ENTITY::GET_ENTITY_COORDS(pedParam1, true)) };
+	offsetFromEntityGivenWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(veParam0, ENTITY::GET_ENTITY_COORDS(pedParam1, true)));
 
 	if (ENTITY::GET_ENTITY_MODEL(veParam0) != joaat("vacca"))
 	{
@@ -8256,17 +8256,17 @@ BOOL func_241(var uParam0, int iParam1) // Position - 0x875F
 
 	if (entityBoneIndexByName != -1)
 	{
-		worldPositionOfEntityBone = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(uParam0->f_4, entityBoneIndexByName) };
-		worldPositionOfEntityBone = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(uParam0->f_4, worldPositionOfEntityBone) };
+		worldPositionOfEntityBone = Vector3(ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(uParam0->f_4, entityBoneIndexByName));
+		worldPositionOfEntityBone = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(uParam0->f_4, worldPositionOfEntityBone));
 		worldPositionOfEntityBone.f_1 = worldPositionOfEntityBone.f_1 + 1f;
 	}
 	else
 	{
-		worldPositionOfEntityBone = { 0f, 1f, 1f };
+		worldPositionOfEntityBone = Vector3(0f, 1f, 1f);
 	}
 
-	offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, worldPositionOfEntityBone) };
-	offsetFromEntityInWorldCoords2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_3, 0f, 0.25f, 0.9f) };
+	offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_4, worldPositionOfEntityBone));
+	offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uParam0->f_3, 0f, 0.25f, 0.9f));
 	GRAPHICS::DRAW_DEBUG_LINE(offsetFromEntityInWorldCoords, offsetFromEntityInWorldCoords2, 0, 0, 255, 255);
 
 	switch (iLocal_87)
@@ -8479,8 +8479,8 @@ void func_253(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 
 	if (!func_130(uParam0, func_142(), false))
 	{
-		vector = { func_30(uParam0, 1f, -30f, -30f, -10f) };
-		vector2 = { func_30(uParam0, 1f, 30f, 30f, 10f) };
+		vector = Vector3(func_30(uParam0, 1f, -30f, -30f, -10f));
+		vector2 = Vector3(func_30(uParam0, 1f, 30f, 30f, 10f));
 		VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(vector, vector2, bParam3, true);
 	}
 
@@ -8908,7 +8908,7 @@ void func_268(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 
 	for (i = 0; i < uParam0->[iParam1].f_1; i = i + 1)
 	{
-		unk = { func_270(uParam0, iParam1, i) };
+		unk = Vector3(func_270(uParam0, iParam1, i));
 	
 		if (func_215(unk, true) < func_215(*uParam2, true))
 		{
@@ -8917,7 +8917,7 @@ void func_268(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 			}
 			else if (func_269(unk, true) > 40f)
 			{
-				*uParam2 = { unk };
+				*uParam2 = Vector3(unk);
 				*uParam4 = i;
 			
 				if (func_215(*uParam2, true) <= 0.6f)
@@ -8941,7 +8941,7 @@ Vector3 func_270(var uParam0, int iParam1, int iParam2) // Position - 0x9555
 {
 	var unk;
 
-	unk = { func_142() };
+	unk = Vector3(func_142());
 
 	if (iParam2 == -1)
 		iParam2 = MISC::GET_RANDOM_INT_IN_RANGE(0, 65535) % uParam0->[iParam1].f_1;
@@ -8949,91 +8949,91 @@ Vector3 func_270(var uParam0, int iParam1, int iParam2) // Position - 0x9555
 	switch (iParam1)
 	{
 		case 0:
-			unk = { uLocal_409[iParam2] };
+			unk = Vector3(uLocal_409[iParam2]);
 			break;
 	
 		case 1:
-			unk = { uLocal_434[iParam2] };
+			unk = Vector3(uLocal_434[iParam2]);
 			break;
 	
 		case 2:
-			unk = { uLocal_471[iParam2] };
+			unk = Vector3(uLocal_471[iParam2]);
 			break;
 	
 		case 3:
-			unk = { uLocal_490[iParam2] };
+			unk = Vector3(uLocal_490[iParam2]);
 			break;
 	
 		case 4:
-			unk = { uLocal_506[iParam2] };
+			unk = Vector3(uLocal_506[iParam2]);
 			break;
 	
 		case 5:
-			unk = { uLocal_567[iParam2] };
+			unk = Vector3(uLocal_567[iParam2]);
 			break;
 	
 		case 6:
-			unk = { uLocal_601[iParam2] };
+			unk = Vector3(uLocal_601[iParam2]);
 			break;
 	
 		case 7:
-			unk = { uLocal_611[iParam2] };
+			unk = Vector3(uLocal_611[iParam2]);
 			break;
 	
 		case 8:
-			unk = { uLocal_621[iParam2] };
+			unk = Vector3(uLocal_621[iParam2]);
 			break;
 	
 		case 9:
-			unk = { uLocal_634[iParam2] };
+			unk = Vector3(uLocal_634[iParam2]);
 			break;
 	
 		case 10:
-			unk = { uLocal_656[iParam2] };
+			unk = Vector3(uLocal_656[iParam2]);
 			break;
 	
 		case 11:
-			unk = { uLocal_666[iParam2] };
+			unk = Vector3(uLocal_666[iParam2]);
 			break;
 	
 		case 12:
-			unk = { uLocal_679[iParam2] };
+			unk = Vector3(uLocal_679[iParam2]);
 			break;
 	
 		case 13:
-			unk = { uLocal_686[iParam2] };
+			unk = Vector3(uLocal_686[iParam2]);
 			break;
 	
 		case 14:
-			unk = { uLocal_699[iParam2] };
+			unk = Vector3(uLocal_699[iParam2]);
 			break;
 	
 		case 15:
-			unk = { uLocal_721[iParam2] };
+			unk = Vector3(uLocal_721[iParam2]);
 			break;
 	
 		case 16:
-			unk = { uLocal_743[iParam2] };
+			unk = Vector3(uLocal_743[iParam2]);
 			break;
 	
 		case 17:
-			unk = { uLocal_768[iParam2] };
+			unk = Vector3(uLocal_768[iParam2]);
 			break;
 	
 		case 18:
-			unk = { uLocal_784[iParam2] };
+			unk = Vector3(uLocal_784[iParam2]);
 			break;
 	
 		case 19:
-			unk = { uLocal_800[iParam2] };
+			unk = Vector3(uLocal_800[iParam2]);
 			break;
 	
 		case 20:
-			unk = { uLocal_819[iParam2] };
+			unk = Vector3(uLocal_819[iParam2]);
 			break;
 	
 		case 21:
-			unk = { uLocal_838[iParam2] };
+			unk = Vector3(uLocal_838[iParam2]);
 			break;
 	}
 
@@ -9559,7 +9559,7 @@ BOOL func_277(var uParam0) // Position - 0xA129
 
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, false))
 	{
-		entitySpeedVector = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true) };
+		entitySpeedVector = Vector3(ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true));
 	
 		if (entitySpeedVector.f_1 < -10f && !func_7(&(uLocal_190[0].f_3)))
 		{
@@ -9588,7 +9588,7 @@ BOOL func_278(var uParam0) // Position - 0xA1B8
 
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, false) && !func_7(&(uLocal_190[0].f_3)) && !func_7(&(uLocal_190[1].f_3)) && !func_7(&(uLocal_190[5].f_3)) && !func_7(&(uLocal_190[9].f_3)) && !func_7(&(uLocal_190[7].f_3)) && !func_7(&(uLocal_190[8].f_3)))
 	{
-		entitySpeedVector = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true) };
+		entitySpeedVector = Vector3(ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true));
 	
 		if (MISC::ABSF(entitySpeedVector) > 2.5f && !func_7(&(uLocal_190[0].f_3)))
 		{
@@ -9687,14 +9687,14 @@ BOOL func_281(Entity eParam0) // Position - 0xA524
 	PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(ENTITY::GET_ENTITY_COORDS(eParam0, true), 2, &outPosition2, 1, 1077936128, 0);
 	PATHFIND::GET_POSITION_BY_SIDE_OF_ROAD(outPosition, -1, &outPosition3);
 	num = SYSTEM::VMAG(outPosition3 - outPosition);
-	unk7 = { func_285(outPosition2 - outPosition, outPosition2.f_1 - outPosition.f_1, 0f) };
-	unk10 = { func_284(unk7, 0) * { num, num, num } };
-	unk7 = { unk7 * { 2f, 2f, 2f } };
-	unk13 = { (outPosition - unk7) + unk10 };
-	unk16 = { outPosition - unk7 - unk10 };
-	unk19 = { outPosition2 + unk7 + unk10 };
-	unk22 = { (outPosition2 + unk7) - unk10 };
-	unk22 = { unk22 };
+	unk7 = Vector3(func_285(outPosition2 - outPosition, outPosition2.f_1 - outPosition.f_1, 0f));
+	unk10 = { func_284(unk7, 0) * Vector3(num, num, num) };
+	unk7 = { unk7 * Vector3(2f, 2f, 2f) };
+	unk13 = Vector3((outPosition - unk7) + unk10);
+	unk16 = Vector3(outPosition - unk7 - unk10);
+	unk19 = Vector3(outPosition2 + unk7 + unk10);
+	unk22 = Vector3((outPosition2 + unk7) - unk10);
+	unk22 = Vector3(unk22);
 	return func_282(ENTITY::GET_ENTITY_COORDS(eParam0, true), unk13, unk16, unk19);
 }
 
@@ -9715,8 +9715,8 @@ BOOL func_282(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	uParam3.f_2 = 0f;
 	uParam6.f_2 = 0f;
 	uParam9.f_2 = 0f;
-	unk = { func_285(uParam6 - uParam3) };
-	unk4 = { func_285(uParam9 - uParam3) };
+	unk = Vector3(func_285(uParam6 - uParam3));
+	unk4 = Vector3(func_285(uParam9 - uParam3));
 	num = func_283(uParam0, unk);
 	num2 = func_283(uParam3, unk);
 	num3 = func_283(uParam6, unk);
@@ -9788,7 +9788,7 @@ Vector3 func_285(float fParam0, float fParam1, float fParam2) // Position - 0xA7
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -9935,7 +9935,7 @@ BOOL func_291(var uParam0) // Position - 0xA9E8
 
 	if (VEHICLE::IS_VEHICLE_DRIVEABLE(uParam0->f_4, false))
 	{
-		entitySpeedVector = { ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true) };
+		entitySpeedVector = Vector3(ENTITY::GET_ENTITY_SPEED_VECTOR(uParam0->f_4, true));
 	
 		if (MISC::ABSF(entitySpeedVector) > 3f && !func_7(&(uLocal_190[0].f_3)))
 		{
@@ -10051,7 +10051,7 @@ void func_298(var uParam0, char* sParam1, int iParam2) // Position - 0xAC1A
 
 	func_201();
 	func_67(2);
-	string1 = { func_315() };
+	string1 = Vector3(func_315());
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(&string1) && _CONVERSATION_IS_DIALOGUE_IN_PROGRESS() && !MISC::ARE_STRINGS_EQUAL(&string1, "NULL"))
 	{
@@ -10352,16 +10352,16 @@ int func_300(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xB217
 		if (func_310(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_309();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -10498,7 +10498,7 @@ void func_301() // Position - 0xB4E5
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -10557,18 +10557,18 @@ void func_306() // Position - 0xB5D9
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -10650,7 +10650,7 @@ void func_309() // Position - 0xB7A9
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -10669,7 +10669,7 @@ BOOL func_310(int iParam0, int iParam1) // Position - 0xB801
 
 void func_311(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xB839
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -10824,7 +10824,7 @@ int func_318(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 			case 1:
 				if (!func_326(uParam0))
 				{
-					uParam2->f_7 = { func_325(uParam1) };
+					uParam2->f_7 = Vector3(func_325(uParam1));
 					_CONVERSATION_ADD_LINE(&(uParam0->f_244), uParam0->f_144, &(uParam2->f_7), 8, 0, 0, 0);
 					*uParam2 = 2;
 					bParam3;
@@ -10834,7 +10834,7 @@ int func_318(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 			case 2:
 				if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 				{
-					uParam2->f_13 = { func_210() };
+					uParam2->f_13 = Vector3(func_210());
 				
 					if (MISC::ARE_STRINGS_EQUAL(&(uParam2->f_13), &(uParam2->f_7)))
 						bParam3;
@@ -10857,7 +10857,7 @@ int func_318(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 					if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 					{
 						func_68(uParam0, 17, 0f, true);
-						uParam2->f_1 = { func_320() };
+						uParam2->f_1 = Vector3(func_320());
 					
 						if (PLAYER::GET_PLAYER_WANTED_LEVEL(PLAYER::GET_PLAYER_INDEX()) >= 1)
 							*uParam2 = 0;
@@ -10867,7 +10867,7 @@ int func_318(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position - 
 				}
 				else if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 				{
-					uParam2->f_19 = { func_315() };
+					uParam2->f_19 = Vector3(func_315());
 				}
 				else
 				{
@@ -11038,7 +11038,7 @@ struct<6> func_325(var uParam0) // Position - 0xBEC5
 	{
 		if (func_249(uParam0->[i].f_7, 2))
 		{
-			unk = { uParam0->[i] };
+			unk = Vector3(uParam0->[i]);
 			func_245(&(uParam0->[i].f_7), 4);
 		}
 	}
@@ -11143,7 +11143,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		{
 			case 55:
 				TEXT_LABEL_APPEND_STRING(&unk, "_lvMe1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_93), 3, &unk7, false, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_68(uParam0, 16, 0, false);
@@ -11223,7 +11223,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 56:
 				TEXT_LABEL_APPEND_STRING(&unk, "_lvMe2", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_93), 3, &unk7, false, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_68(uParam0, 16, 0, false);
@@ -11245,7 +11245,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 4:
 				TEXT_LABEL_APPEND_STRING(&unk, "_hail1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 			
 				if (!func_249(uParam0->f_44, 128))
 				{
@@ -11680,7 +11680,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				TEXT_LABEL_APPEND_STRING(&unk, "_rCar1", 24);
 				func_209(&unk);
 				func_336(unk, uParam1);
-				uParam0->f_124 = { unk };
+				uParam0->f_124 = Vector3(unk);
 				func_68(uParam0, 16, 0, false);
 				func_250(uParam0, 0, false);
 				break;
@@ -11689,7 +11689,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				TEXT_LABEL_APPEND_STRING(&unk, "_rCar2", 24);
 				func_209(&unk);
 				func_336(unk, uParam1);
-				uParam0->f_124 = { unk };
+				uParam0->f_124 = Vector3(unk);
 				func_68(uParam0, 16, 0, false);
 				func_250(uParam0, 0, false);
 				break;
@@ -11698,7 +11698,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				TEXT_LABEL_APPEND_STRING(&unk, "_rCar3", 24);
 				func_209(&unk);
 				func_336(unk, uParam1);
-				uParam0->f_124 = { unk };
+				uParam0->f_124 = Vector3(unk);
 				func_68(uParam0, 16, 0, false);
 				func_250(uParam0, 0, false);
 				break;
@@ -11799,7 +11799,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 38:
 				TEXT_LABEL_APPEND_STRING(&unk, "_dOff1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				randomIntInRange = MISC::GET_RANDOM_INT_IN_RANGE(0, 120);
 			
 				if (!func_249(uParam0->f_82, 268435456))
@@ -11833,7 +11833,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 39:
 				TEXT_LABEL_APPEND_STRING(&unk, "_bdOff1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				randomIntInRange = MISC::GET_RANDOM_INT_IN_RANGE(0, 100);
 			
 				if (!func_249(uParam0->f_82, 268435456))
@@ -11996,14 +11996,14 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				else if (uParam0->f_411 == 1)
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "_carHt", 24);
-					unk7 = { unk };
+					unk7 = Vector3(unk);
 					func_346(&(uParam0->f_95), 5, &unk7, true, false, true);
 					_CONVERSATION_ADD_LINE(&(uParam0->f_244), uParam0->f_144, &unk7, 8, 0, 0, 0);
 				}
 				else
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "_carHt1", 24);
-					unk7 = { unk };
+					unk7 = Vector3(unk);
 				
 					if (uParam0->f_411 == 0)
 						func_346(&(uParam0->f_95), 8, &unk7, true, true, false);
@@ -12145,7 +12145,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				if (uParam0->f_411 == 1)
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "_good1", 24);
-					unk7 = { unk };
+					unk7 = Vector3(unk);
 					func_346(&(uParam0->f_93), 6, &unk7, false, true, false);
 					func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 					func_344(9, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk, false);
@@ -12156,7 +12156,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 92:
 				TEXT_LABEL_APPEND_STRING(&unk, "_EtoB1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_96), 2, &unk7, false, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_344(9, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk, false);
@@ -12166,7 +12166,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 93:
 				TEXT_LABEL_APPEND_STRING(&unk, "_BtoE1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_97), 2, &unk7, false, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_344(12, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk, false);
@@ -12315,7 +12315,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 						
 							case 8:
 								TEXT_LABEL_APPEND_STRING(&unk, "_good1", 24);
-								unk7 = { unk };
+								unk7 = Vector3(unk);
 								func_346(&(uParam0->f_93), 6, &unk7, true, true, false);
 								func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 								func_344(23, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk7, false);
@@ -12327,7 +12327,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 								if (!bLocal_64)
 								{
 									TEXT_LABEL_APPEND_STRING(&unk, "_sBant1", 24);
-									unk7 = { unk };
+									unk7 = Vector3(unk);
 									func_343(uParam0, &unk, 0, false, 8);
 									func_68(uParam0, 16, 0, false);
 									func_68(uParam0, 11, 0, false);
@@ -12371,7 +12371,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 78:
 				TEXT_LABEL_APPEND_STRING(&unk, "_speed1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_87), 6, &unk7, true, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_344(10, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk, false);
@@ -12396,7 +12396,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				else
 					TEXT_LABEL_APPEND_STRING(&unk, "_stop1", 24);
 			
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_86), 4, &unk7, false, true, false);
 			
 				if (uParam0->f_411 != 9)
@@ -12475,7 +12475,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 67:
 				TEXT_LABEL_APPEND_STRING(&unk, "_ofrd1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_88), 4, &unk7, false, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_344(16, &(uParam0->f_57), &(uParam0->f_55), &(uParam0->f_124), unk7, false);
@@ -12517,8 +12517,8 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 					if (uParam0->f_411 == 2)
 					{
 						TEXT_LABEL_APPEND_STRING(&unk, "_copBa1", 24);
-						unk7 = { unk };
-						unk7 = { unk };
+						unk7 = Vector3(unk);
+						unk7 = Vector3(unk);
 						func_343(uParam0, &unk, 0, false, 8);
 						func_207(uParam0, 52, 1, false, false);
 						func_68(uParam0, 16, 0, false);
@@ -12530,7 +12530,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 						else
 							TEXT_LABEL_APPEND_STRING(&unk, "_copBa1", 24);
 					
-						unk7 = { unk };
+						unk7 = Vector3(unk);
 						func_343(uParam0, &unk, 0, false, 8);
 						func_68(uParam0, 16, 0, false);
 					}
@@ -12538,7 +12538,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				else
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "_copBa1", 24);
-					unk7 = { unk };
+					unk7 = Vector3(unk);
 					func_346(&(uParam0->f_85), 6, &unk7, true, true, false);
 					func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 					func_68(uParam0, 16, 0, false);
@@ -12600,7 +12600,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 87:
 				TEXT_LABEL_APPEND_STRING(&unk, "_rdtip1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				TEXT_LABEL_APPEND_STRING(&unk7, "_", 24);
 				TEXT_LABEL_APPEND_INT(&unk7, uParam0->f_418.f_3, 24);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
@@ -12733,7 +12733,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 				if (uParam0->f_411 == 6)
 				{
 					TEXT_LABEL_APPEND_STRING(&unk, "_kill1", 24);
-					unk7 = { unk };
+					unk7 = Vector3(unk);
 					func_346(&(uParam0->f_93), 6, &unk7, true, true, true);
 					func_209(&unk);
 					func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
@@ -12791,7 +12791,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 115:
 				TEXT_LABEL_APPEND_STRING(&unk, "_AlCk1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_91), 5, &unk7, true, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_68(uParam0, 16, 0, false);
@@ -12800,7 +12800,7 @@ void func_328(var uParam0, var uParam1) // Position - 0xC15C
 		
 			case 116:
 				TEXT_LABEL_APPEND_STRING(&unk, "_eggG1", 24);
-				unk7 = { unk };
+				unk7 = Vector3(unk);
 				func_346(&(uParam0->f_92), 5, &unk7, true, true, false);
 				func_345(&(uParam0->f_244), uParam0->f_144, &unk, &unk7, 8, 0, 0);
 				func_68(uParam0, 16, 0, false);
@@ -13054,7 +13054,7 @@ void func_330(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 {
 	var unk;
 
-	unk = { uParam1 };
+	unk = Vector3(uParam1);
 
 	if (!func_249(uParam0->f_82, 64))
 	{
@@ -13155,7 +13155,7 @@ void func_336(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	if (num > -1)
 	{
-		uParam6->[num] = { uParam0 };
+		uParam6->[num] = Vector3(uParam0);
 		func_245(&(uParam6->[num].f_7), 2);
 	}
 
@@ -13582,7 +13582,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			else
 				*uParam1 = *uParam1 + 3;
 		
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 8)
@@ -13590,7 +13590,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 1073741824))
 		{
 			*uParam1 = *uParam1 + 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 1)
@@ -13600,7 +13600,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (!func_249(*iParam2, 4096))
 			{
 				*uParam1 = *uParam1 - 1;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else
 			{
@@ -13610,7 +13610,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		else if (func_249(*iParam2, 8))
 		{
 			*uParam1 = *uParam1 + 3;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 5)
@@ -13620,7 +13620,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (!func_249(*iParam2, 4096))
 			{
 				*uParam1 = *uParam1 - 1;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else
 			{
@@ -13635,7 +13635,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (!func_249(*iParam2, 4096))
 			{
 				*uParam1 = *uParam1 - 1;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else
 			{
@@ -13645,7 +13645,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		else if (func_249(*iParam2, 32))
 		{
 			*uParam1 = *uParam1 + 3;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 3)
@@ -13655,7 +13655,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (!func_249(*iParam2, 4096))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else
 			{
@@ -13665,7 +13665,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		else if (func_249(*iParam2, 128))
 		{
 			*uParam1 = *uParam1 + 3;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 4)
@@ -13673,7 +13673,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 256))
 		{
 			*uParam1 = *uParam1 - 1;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 6)
@@ -13681,7 +13681,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 1024))
 		{
 			*uParam1 = *uParam1 + 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 7)
@@ -13689,7 +13689,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 2048))
 		{
 			*uParam1 = *uParam1 - 1;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 9)
@@ -13699,12 +13699,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 + 3;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13715,12 +13715,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13731,12 +13731,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13747,7 +13747,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13758,12 +13758,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13774,12 +13774,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13790,12 +13790,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13806,12 +13806,12 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 2097152))
 			{
 				*uParam1 = *uParam1 - 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 			else if (func_249(*iParam2, 4194304))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13820,7 +13820,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 8388608))
 		{
 			*uParam1 = *uParam1 - 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 22)
@@ -13828,7 +13828,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 16777216))
 		{
 			*uParam1 = *uParam1 - 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 23)
@@ -13836,7 +13836,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 33554432))
 		{
 			*uParam1 = *uParam1 + 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 17)
@@ -13846,7 +13846,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			if (func_249(*iParam2, 67108864))
 			{
 				*uParam1 = *uParam1 + 2;
-				*uParam3 = { uParam4 };
+				*uParam3 = Vector3(uParam4);
 			}
 		}
 	}
@@ -13855,7 +13855,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 134217728))
 		{
 			*uParam1 = *uParam1 - 1;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 20)
@@ -13863,7 +13863,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 536870912))
 		{
 			*uParam1 = *uParam1 - 1;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 19)
@@ -13871,7 +13871,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 268435456))
 		{
 			*uParam1 = *uParam1 + 1;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 	else if (iParam0 == 25)
@@ -13879,7 +13879,7 @@ void func_344(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 		if (func_249(*iParam2, 32768))
 		{
 			*uParam1 = *uParam1 - 2;
-			*uParam3 = { uParam4 };
+			*uParam3 = Vector3(uParam4);
 		}
 	}
 
@@ -14903,7 +14903,7 @@ BOOL func_388(Ped pedParam0, Ped pedParam1, var uParam2, BOOL bParam3) // Positi
 	vehiclePedIsIn = 0;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 
 	if (MISC::IS_BULLET_IN_AREA(entityCoords, 4f, true))
 		return true;
@@ -15337,267 +15337,267 @@ void func_417(var uParam0) // Position - 0x12605
 {
 	func_418();
 	uParam0->[0] = "Region 0 - Los Puerta";
-	uParam0->[0].f_2 = { -1902f, -1280f, 20f };
-	uParam0->[0].f_5 = { -373f, -3533f, -20f };
+	uParam0->[0].f_2 = Vector3(-1902f, -1280f, 20f);
+	uParam0->[0].f_5 = Vector3(-373f, -3533f, -20f);
 	uParam0->[0].f_1 = 8;
-	uParam0->[0].f_8 = { (float)1, (float)4, (float)5 };
+	uParam0->[0].f_8 = Vector3((float)1, (float)4, (float)5);
 	uParam0->[1] = "Region 1 - South Los Santos";
-	uParam0->[1].f_2 = { -373f, -1280f, 20f };
-	uParam0->[1].f_5 = { 708f, -3533f, -20f };
+	uParam0->[1].f_2 = Vector3(-373f, -1280f, 20f);
+	uParam0->[1].f_5 = Vector3(708f, -3533f, -20f);
 	uParam0->[1].f_1 = 12;
-	uParam0->[1].f_8 = { (float)0, (float)1, (float)5 };
+	uParam0->[1].f_8 = Vector3((float)0, (float)1, (float)5);
 	uParam0->[2] = "Region 2 - Vinewood Hills";
-	uParam0->[2].f_2 = { 708f, -1280f, 20f };
-	uParam0->[2].f_5 = { 1952f, -3533f, -20f };
+	uParam0->[2].f_2 = Vector3(708f, -1280f, 20f);
+	uParam0->[2].f_5 = Vector3(1952f, -3533f, -20f);
 	uParam0->[2].f_1 = 6;
-	uParam0->[2].f_8 = { (float)0, (float)4, (float)5 };
+	uParam0->[2].f_8 = Vector3((float)0, (float)4, (float)5);
 	uParam0->[3] = "Region 3 - Del Perro";
-	uParam0->[3].f_2 = { -4613f, 315f, 20f };
-	uParam0->[3].f_5 = { -1902f, -1280f, -20f };
+	uParam0->[3].f_2 = Vector3(-4613f, 315f, 20f);
+	uParam0->[3].f_5 = Vector3(-1902f, -1280f, -20f);
 	uParam0->[3].f_1 = 5;
-	uParam0->[3].f_8 = { (float)0, (float)4, (float)5 };
+	uParam0->[3].f_8 = Vector3((float)0, (float)4, (float)5);
 	uParam0->[4] = "Region 4 - Little Seoul";
-	uParam0->[4].f_2 = { -1902f, 315f, 20f };
-	uParam0->[4].f_5 = { -373f, -1280f, 33f };
+	uParam0->[4].f_2 = Vector3(-1902f, 315f, 20f);
+	uParam0->[4].f_5 = Vector3(-373f, -1280f, 33f);
 	uParam0->[4].f_1 = 20;
-	uParam0->[4].f_8 = { (float)5, (float)0, (float)1 };
+	uParam0->[4].f_8 = Vector3((float)5, (float)0, (float)1);
 	uParam0->[5] = "Region 5 -  Downtown";
-	uParam0->[5].f_2 = { -373f, 315f, 20f };
-	uParam0->[5].f_5 = { 708f, -1280f, -17f };
+	uParam0->[5].f_2 = Vector3(-373f, 315f, 20f);
+	uParam0->[5].f_5 = Vector3(708f, -1280f, -17f);
 	uParam0->[5].f_1 = 11;
-	uParam0->[5].f_8 = { (float)0, (float)4, (float)2 };
+	uParam0->[5].f_8 = Vector3((float)0, (float)4, (float)2);
 	uParam0->[6] = "Region 6 - SouthGate";
-	uParam0->[6].f_2 = { 708f, 315f, 20f };
-	uParam0->[6].f_5 = { 1952f, -1280f, -20f };
+	uParam0->[6].f_2 = Vector3(708f, 315f, 20f);
+	uParam0->[6].f_5 = Vector3(1952f, -1280f, -20f);
 	uParam0->[6].f_1 = 3;
-	uParam0->[6].f_8 = { (float)4, (float)5, (float)2 };
+	uParam0->[6].f_8 = Vector3((float)4, (float)5, (float)2);
 	uParam0->[7] = "Region 7 - City Hills";
-	uParam0->[7].f_2 = { 1952f, 315f, 35f };
-	uParam0->[7].f_5 = { 4603f, -1280f, -20f };
+	uParam0->[7].f_2 = Vector3(1952f, 315f, 35f);
+	uParam0->[7].f_5 = Vector3(4603f, -1280f, -20f);
 	uParam0->[7].f_1 = 3;
-	uParam0->[7].f_8 = { (float)5, (float)2, (float)6 };
+	uParam0->[7].f_8 = Vector3((float)5, (float)2, (float)6);
 	uParam0->[8] = "Region 8 - Country Hills";
-	uParam0->[8].f_2 = { -4613f, 2550f, 35f };
-	uParam0->[8].f_5 = { -1902f, 315f, -20f };
+	uParam0->[8].f_2 = Vector3(-4613f, 2550f, 35f);
+	uParam0->[8].f_5 = Vector3(-1902f, 315f, -20f);
 	uParam0->[8].f_1 = 4;
-	uParam0->[8].f_8 = { (float)9, (float)4, (float)0 };
+	uParam0->[8].f_8 = Vector3((float)9, (float)4, (float)0);
 	uParam0->[9] = "Region 9 - Bel Air";
-	uParam0->[9].f_2 = { -1902f, 2550f, 35f };
-	uParam0->[9].f_5 = { -373f, 315f, -20f };
+	uParam0->[9].f_2 = Vector3(-1902f, 2550f, 35f);
+	uParam0->[9].f_5 = Vector3(-373f, 315f, -20f);
 	uParam0->[9].f_1 = 7;
-	uParam0->[9].f_8 = { (float)4, (float)5, (float)10 };
+	uParam0->[9].f_8 = Vector3((float)4, (float)5, (float)10);
 	uParam0->[10] = "Region 10 - West Hollywood";
-	uParam0->[10].f_2 = { -373f, 2550f, 35f };
-	uParam0->[10].f_5 = { 708f, 315f, -20f };
+	uParam0->[10].f_2 = Vector3(-373f, 2550f, 35f);
+	uParam0->[10].f_5 = Vector3(708f, 315f, -20f);
 	uParam0->[10].f_1 = 3;
-	uParam0->[10].f_8 = { (float)4, (float)5, (float)6 };
+	uParam0->[10].f_8 = Vector3((float)4, (float)5, (float)6);
 	uParam0->[11] = "Region 11 - Echo Park";
-	uParam0->[11].f_2 = { 708f, 2550f, 35f };
-	uParam0->[11].f_5 = { 1952f, 315f, -20f };
+	uParam0->[11].f_2 = Vector3(708f, 2550f, 35f);
+	uParam0->[11].f_5 = Vector3(1952f, 315f, -20f);
 	uParam0->[11].f_1 = 4;
-	uParam0->[11].f_8 = { (float)10, (float)5, (float)6 };
+	uParam0->[11].f_8 = Vector3((float)10, (float)5, (float)6);
 	uParam0->[12] = "Region 12 - North City Hills";
-	uParam0->[12].f_2 = { 1952f, 2550f, 35f };
-	uParam0->[12].f_5 = { 4603f, 315f, -20f };
+	uParam0->[12].f_2 = Vector3(1952f, 2550f, 35f);
+	uParam0->[12].f_5 = Vector3(4603f, 315f, -20f);
 	uParam0->[12].f_1 = 2;
-	uParam0->[12].f_8 = { (float)11, (float)6, (float)6 };
+	uParam0->[12].f_8 = Vector3((float)11, (float)6, (float)6);
 	uParam0->[13] = "Region 13 - Vinewood";
-	uParam0->[13].f_2 = { -4613f, 4435f, 35f };
-	uParam0->[13].f_5 = { -1902f, 2550f, -20f };
+	uParam0->[13].f_2 = Vector3(-4613f, 4435f, 35f);
+	uParam0->[13].f_5 = Vector3(-1902f, 2550f, -20f);
 	uParam0->[13].f_1 = 4;
-	uParam0->[13].f_8 = { (float)9, (float)8, (float)9 };
+	uParam0->[13].f_8 = Vector3((float)9, (float)8, (float)9);
 	uParam0->[14] = "Region 14 - Mountains";
-	uParam0->[14].f_2 = { -1902f, 4435f, 35f };
-	uParam0->[14].f_5 = { -373f, 2550f, -20f };
+	uParam0->[14].f_2 = Vector3(-1902f, 4435f, 35f);
+	uParam0->[14].f_5 = Vector3(-373f, 2550f, -20f);
 	uParam0->[14].f_1 = 7;
-	uParam0->[14].f_8 = { (float)8, (float)9, (float)10 };
+	uParam0->[14].f_8 = Vector3((float)8, (float)9, (float)10);
 	uParam0->[15] = "Region 15 - Lakes";
-	uParam0->[15].f_2 = { -373f, 4435f, 35f };
-	uParam0->[15].f_5 = { 708f, 2550f, 1f };
+	uParam0->[15].f_2 = Vector3(-373f, 4435f, 35f);
+	uParam0->[15].f_5 = Vector3(708f, 2550f, 1f);
 	uParam0->[15].f_1 = 7;
-	uParam0->[15].f_8 = { (float)9, (float)10, (float)11 };
+	uParam0->[15].f_8 = Vector3((float)9, (float)10, (float)11);
 	uParam0->[16] = "Region 16 - Sandy Shores";
-	uParam0->[16].f_2 = { 708f, 4435f, 35f };
-	uParam0->[16].f_5 = { 1952f, 2550f, -20f };
+	uParam0->[16].f_2 = Vector3(708f, 4435f, 35f);
+	uParam0->[16].f_5 = Vector3(1952f, 2550f, -20f);
 	uParam0->[16].f_1 = 8;
-	uParam0->[16].f_8 = { (float)10, (float)11, (float)15 };
+	uParam0->[16].f_8 = Vector3((float)10, (float)11, (float)15);
 	uParam0->[17] = "Region 17 - SS Hills";
-	uParam0->[17].f_2 = { 1952f, 4435f, 35f };
-	uParam0->[17].f_5 = { 4603f, 2550f, -20f };
+	uParam0->[17].f_2 = Vector3(1952f, 4435f, 35f);
+	uParam0->[17].f_5 = Vector3(4603f, 2550f, -20f);
 	uParam0->[17].f_1 = 5;
-	uParam0->[17].f_8 = { (float)11, (float)15, (float)12 };
+	uParam0->[17].f_8 = Vector3((float)11, (float)15, (float)12);
 	uParam0->[18] = "Region 18 - NW Country";
-	uParam0->[18].f_2 = { -1902f, 7693f, 35f };
-	uParam0->[18].f_5 = { -373f, 4435f, -20f };
+	uParam0->[18].f_2 = Vector3(-1902f, 7693f, 35f);
+	uParam0->[18].f_5 = Vector3(-373f, 4435f, -20f);
 	uParam0->[18].f_1 = 5;
-	uParam0->[18].f_8 = { (float)13, (float)14, (float)15 };
+	uParam0->[18].f_8 = Vector3((float)13, (float)14, (float)15);
 	uParam0->[19] = "Region 19 - N Country";
-	uParam0->[19].f_2 = { -373f, 7693f, 35f };
-	uParam0->[19].f_5 = { 708f, 4435f, -20f };
+	uParam0->[19].f_2 = Vector3(-373f, 7693f, 35f);
+	uParam0->[19].f_5 = Vector3(708f, 4435f, -20f);
 	uParam0->[19].f_1 = 6;
-	uParam0->[19].f_8 = { (float)18, (float)20, (float)15 };
+	uParam0->[19].f_8 = Vector3((float)18, (float)20, (float)15);
 	uParam0->[20] = "Region 20 - E Country";
-	uParam0->[20].f_2 = { 708f, 7693f, 35f };
-	uParam0->[20].f_5 = { 1952f, 4435f, -20f };
+	uParam0->[20].f_2 = Vector3(708f, 7693f, 35f);
+	uParam0->[20].f_5 = Vector3(1952f, 4435f, -20f);
 	uParam0->[20].f_1 = 6;
-	uParam0->[20].f_8 = { (float)19, (float)21, (float)16 };
+	uParam0->[20].f_8 = Vector3((float)19, (float)21, (float)16);
 	uParam0->[21] = "Region 21 - CountrySide";
-	uParam0->[21].f_2 = { 1952f, 7693f, 35f };
-	uParam0->[21].f_5 = { 4603f, 4435f, 1f };
+	uParam0->[21].f_2 = Vector3(1952f, 7693f, 35f);
+	uParam0->[21].f_5 = Vector3(4603f, 4435f, 1f);
 	uParam0->[21].f_1 = 6;
-	uParam0->[21].f_8 = { (float)17, (float)20, (float)16 };
+	uParam0->[21].f_8 = Vector3((float)17, (float)20, (float)16);
 	uParam0->[22] = "Region 8 - Special POIs";
-	uParam0->[22].f_2 = { -4613f, 7693f, 20f };
-	uParam0->[22].f_5 = { 4603f, -3533f, -20f };
+	uParam0->[22].f_2 = Vector3(-4613f, 7693f, 20f);
+	uParam0->[22].f_5 = Vector3(4603f, -3533f, -20f);
 	uParam0->[22].f_1 = 10;
-	uParam0->[22].f_8 = { (float)1, (float)2, (float)3 };
+	uParam0->[22].f_8 = Vector3((float)1, (float)2, (float)3);
 	return;
 }
 
 void func_418() // Position - 0x12DA7
 {
-	uLocal_409[0] = { -939.6133f, -1523.37f, 4.1764f };
-	uLocal_409[1] = { -1161.5302f, -1492.471f, 3.3139f };
-	uLocal_409[2] = { -1037.1715f, -2730.9226f, 19.1697f };
-	uLocal_409[3] = { -1204.5907f, -1377.7397f, 3.1844f };
-	uLocal_409[4] = { -939.6133f, -1523.37f, 4.1764f };
-	uLocal_409[5] = { -91.6341f, -1328.1545f, 28.3373f };
-	uLocal_409[6] = { -900.3735f, -2690.0142f, 12.9447f };
-	uLocal_409[7] = { -1012.7864f, -2468.6018f, 12.8384f };
-	uLocal_434[0] = { 87.0014f, -1402.4484f, 28.2549f };
-	uLocal_434[1] = { 146.5773f, -1426.8824f, 28.2915f };
-	uLocal_434[2] = { 435.1445f, -1462.7794f, 28.2915f };
-	uLocal_434[3] = { 135.1209f, -1302.6038f, 28.1936f };
-	uLocal_434[4] = { 112.2743f, -1947.2144f, 19.6826f };
-	uLocal_434[5] = { 65.3804f, -1568.9438f, 28.6028f };
-	uLocal_434[6] = { 137.8282f, -1724.2274f, 28.2079f };
-	uLocal_434[7] = { 132.9427f, -2009.9111f, 17.2055f };
-	uLocal_434[8] = { -184.5559f, -1438.0306f, 30.3049f };
-	uLocal_434[9] = { 153.5036f, -1451.8922f, 28.1418f };
-	uLocal_434[10] = { 50.2007f, -1379.7288f, 32f };
-	uLocal_434[11] = { -297.4216f, -1848.1876f, 24.7217f };
-	uLocal_471[0] = { 768.2622f, -2371.7468f, 21.6783f };
-	uLocal_471[1] = { 1188.8407f, -3249.5051f, 5.0276f };
-	uLocal_471[2] = { 770.0794f, -2991.9758f, 5.0203f };
-	uLocal_471[3] = { 946.5765f, -2453.4355f, 27.5512f };
-	uLocal_471[4] = { 957.6567f, -2097.351f, 29.6646f };
-	uLocal_471[5] = { 926.1091f, -1749.8364f, 29.9898f };
-	uLocal_490[0] = { -2075.6023f, -330.3965f, 12.3162f };
-	uLocal_490[1] = { -1994.4458f, -545.3368f, 10.7213f };
-	uLocal_490[2] = { -3171.3213f, 918.0819f, 13.4239f };
-	uLocal_490[3] = { -1918.1833f, -370.5667f, 48.1919f };
-	uLocal_490[4] = { -1938.766f, -441.2331f, 18.7351f };
-	uLocal_506[0] = { -1392.6733f, -179.0173f, 46.3472f };
-	uLocal_506[1] = { -1428.5615f, -195.809f, 46.4109f };
-	uLocal_506[2] = { -385.7066f, -403.3985f, 30.5014f };
-	uLocal_506[3] = { -486.7284f, -389.6814f, 33.2888f };
-	uLocal_506[4] = { -583.0761f, -446.2154f, 33.299f };
-	uLocal_506[5] = { -496.0706f, 236.211f, 82.0245f };
-	uLocal_506[6] = { -536.2413f, -679.3174f, 32.2419f };
-	uLocal_506[7] = { -1156.0463f, -1418.8805f, 3.7969f };
-	uLocal_506[8] = { -856.6715f, -1148.855f, 5.2178f };
-	uLocal_506[9] = { -696.4865f, -823.45f, 22.8254f };
-	uLocal_506[10] = { -1142.8555f, -933.465f, 1.6658f };
-	uLocal_506[11] = { -1281.3527f, -882.9135f, 10.3152f };
-	uLocal_506[12] = { -1099.7911f, -1702.4319f, 3.37f };
-	uLocal_506[13] = { -1270.7485f, -1159.347f, 5.2547f };
-	uLocal_506[14] = { -1130.5422f, -1195.1903f, 1.2757f };
-	uLocal_506[15] = { -1076.0032f, -1011.8756f, 1.1503f };
-	uLocal_506[16] = { -1035.1838f, -1252.2964f, 5.197f };
-	uLocal_506[17] = { -1006.7727f, -1106.0552f, 1.1484f };
-	uLocal_506[18] = { -1847.1997f, -602.4301f, 10.4091f };
-	uLocal_506[19] = { -597.1105f, -304.0766f, 33.9632f };
-	uLocal_567[0] = { -272.7684f, 248.4368f, 89.1359f };
-	uLocal_567[1] = { 56.3248f, 288.189f, 109.281f };
-	uLocal_567[2] = { 415.2359f, 103.9472f, 99.8247f };
-	uLocal_567[3] = { 394.9993f, -200.0683f, 58.3083f };
-	uLocal_567[4] = { 253.857f, -378.6688f, 43.6252f };
-	uLocal_567[5] = { 223.6173f, -50.8911f, 68.2267f };
-	uLocal_567[6] = { 544.0235f, 202.5245f, 100.61f };
-	uLocal_567[7] = { -264.7876f, -1062.8395f, 24.8463f };
-	uLocal_567[8] = { -234.3063f, -732.1405f, 32.5016f };
-	uLocal_567[9] = { -84.3683f, 241.2898f, 99.4509f };
-	uLocal_567[10] = { 346.413f, -960.6713f, 28.4297f };
-	uLocal_601[0] = { 898.7972f, 56.0888f, 78.0298f };
-	uLocal_601[1] = { 832.3909f, -191.5166f, 71.6695f };
-	uLocal_601[2] = { 790.4477f, -734.7306f, 26.5794f };
-	uLocal_611[0] = { 2590.3372f, -293.4442f, 92.0786f };
-	uLocal_611[1] = { 2531.4043f, -600.4139f, 63.2007f };
-	uLocal_611[2] = { 2604.2168f, 375.1005f, 107.472f };
-	uLocal_621[0] = { -3233.2627f, 953.5733f, 12.2187f };
-	uLocal_621[1] = { -3078.3464f, 675.666f, 12.9159f };
-	uLocal_621[2] = { -2647.8303f, 1504.821f, 117.968f };
-	uLocal_621[3] = { -2564.214f, 2318.03f, 32.2153f };
-	uLocal_634[0] = { -1314.0194f, 2483.44f, 22.774f };
-	uLocal_634[1] = { -409.0888f, 1172.8971f, 324.6412f };
-	uLocal_634[2] = { -1506.1864f, 1473.5696f, 116.8286f };
-	uLocal_634[3] = { -518.6162f, 1995.3928f, 205.0397f };
-	uLocal_634[4] = { -742.0004f, 2320.376f, 70.661f };
-	uLocal_634[5] = { -1851.372f, -602.5151f, 10.4741f };
-	uLocal_634[6] = { -1666.4133f, -538.9609f, 34.2561f };
-	uLocal_656[0] = { -139.8096f, 1872.3776f, 197.166f };
-	uLocal_656[1] = { 695.1385f, 2297.1184f, 49.9406f };
-	uLocal_656[2] = { 167.7863f, 782.6042f, 208.0805f };
-	uLocal_666[0] = { 1498.5458f, 774.8596f, 76.4493f };
-	uLocal_666[1] = { 1309.908f, 1090.1334f, 104.561f };
-	uLocal_666[2] = { 1510.7048f, 1712.5287f, 109.2625f };
-	uLocal_666[3] = { 1070.3932f, 2038.0148f, 52.5529f };
-	uLocal_679[0] = { 2509.3093f, 1601.6224f, 30.0754f };
-	uLocal_679[1] = { 2546.5505f, 1971.3053f, 19.0362f };
-	uLocal_686[0] = { -2339.021f, 3424.6162f, 28.7394f };
-	uLocal_686[1] = { -2494.4658f, 3644.7483f, 12.9216f };
-	uLocal_686[2] = { -2223.4434f, 4335.2515f, 48.4857f };
-	uLocal_686[3] = { -2369.6516f, 4033.3623f, 27.9193f };
-	uLocal_699[0] = { -1578.525f, 3005.025f, 32.3629f };
-	uLocal_699[1] = { -1441.7157f, 4224.607f, 49.0816f };
-	uLocal_699[2] = { -637.3727f, 4014.45f, 124.2407f };
-	uLocal_699[3] = { -1092.5985f, 2696.0288f, 18.9957f };
-	uLocal_699[4] = { -482.845f, 2853.0522f, 32.7909f };
-	uLocal_699[5] = { -1280.5435f, 2543.4397f, 17.3096f };
-	uLocal_699[6] = { -435.94427f, 3039.766f, 27.85744f };
-	uLocal_721[0] = { 322.4791f, 2624.6846f, 43.4903f };
-	uLocal_721[1] = { -118.0555f, 2831.1055f, 49.9236f };
-	uLocal_721[2] = { 8.32642f, 3036.625f, 39.93201f };
-	uLocal_721[3] = { 486.82f, 3094.7231f, 39.68279f };
-	uLocal_721[4] = { 355.66324f, 3465.564f, 34.46225f };
-	uLocal_721[5] = { 73.93981f, 3597.8992f, 38.72102f };
-	uLocal_721[6] = { -223.5336f, 3914.4094f, 36.4796f };
-	uLocal_743[0] = { 914.0446f, 3641.2002f, 31.4356f };
-	uLocal_743[1] = { 1713.807f, 3786.2986f, 33.6656f };
-	uLocal_743[2] = { 1798.2664f, 3773.4963f, 32.6142f };
-	uLocal_743[3] = { 2008.2037f, 3771.9539f, 31.1457f };
-	uLocal_743[4] = { 1860.1516f, 3675.656f, 32.669f };
-	uLocal_743[5] = { 1974.862f, 3855.3694f, 31.162f };
-	uLocal_743[6] = { 1841.707f, 3799.654f, 32.219f };
-	uLocal_743[7] = { 1775.6593f, 3335.4927f, 40.2247f };
-	uLocal_768[0] = { 2506.6829f, 4104.0376f, 37.3903f };
-	uLocal_768[1] = { 2902.4426f, 4428.438f, 47.2892f };
-	uLocal_768[2] = { 2338.3906f, 3146.7617f, 47.1288f };
-	uLocal_768[3] = { 2756.3962f, 3396.395f, 55.5796f };
-	uLocal_768[4] = { 2560.3132f, 2619.5896f, 36.7532f };
-	uLocal_784[0] = { -1499.3542f, 4980.8174f, 61.8513f };
-	uLocal_784[1] = { -686.7758f, 5841.2407f, 15.7987f };
-	uLocal_784[2] = { -547.5048f, 5405.4707f, 64.2441f };
-	uLocal_784[3] = { -411.6347f, 6050.651f, 30.4916f };
-	uLocal_784[4] = { -860.8704f, 5421.5054f, 33.9464f };
-	uLocal_800[0] = { 331.2503f, 6586.893f, 27.8962f };
-	uLocal_800[1] = { -37.7542f, 6319.7397f, 30.3761f };
-	uLocal_800[2] = { -115.5213f, 6456.377f, 30.4546f };
-	uLocal_800[3] = { -145.1629f, 6442.3926f, 30.4404f };
-	uLocal_800[4] = { -46.1561f, 6475.15f, 30.4923f };
-	uLocal_800[5] = { 533.2067f, 6537.78f, 26.6048f };
-	uLocal_819[0] = { 1592.8146f, 6427.924f, 24.2329f };
-	uLocal_819[1] = { 1664.3406f, 4845.467f, 41.0121f };
-	uLocal_819[2] = { 1705.2246f, 4713.1606f, 41.4366f };
-	uLocal_819[3] = { 1731.8092f, 6387.0054f, 33.5953f };
-	uLocal_819[4] = { 1082.4832f, 6503.5376f, 20.0265f };
-	uLocal_819[5] = { 1996.3209f, 5148.716f, 44.2356f };
-	uLocal_838[0] = { 2172.5203f, 4759.795f, 40.0044f };
-	uLocal_838[1] = { 2451.0212f, 4953.2886f, 43.9633f };
-	uLocal_838[2] = { 2245.1553f, 5562.862f, 51.4367f };
-	uLocal_838[3] = { 2456.1868f, 4596.7407f, 35.8278f };
-	uLocal_838[4] = { 3336.8147f, 5464.448f, 18.5259f };
-	uLocal_838[5] = { 3491.209f, 4707.0747f, 50.1144f };
+	uLocal_409[0] = Vector3(-939.6133f, -1523.37f, 4.1764f);
+	uLocal_409[1] = Vector3(-1161.5302f, -1492.471f, 3.3139f);
+	uLocal_409[2] = Vector3(-1037.1715f, -2730.9226f, 19.1697f);
+	uLocal_409[3] = Vector3(-1204.5907f, -1377.7397f, 3.1844f);
+	uLocal_409[4] = Vector3(-939.6133f, -1523.37f, 4.1764f);
+	uLocal_409[5] = Vector3(-91.6341f, -1328.1545f, 28.3373f);
+	uLocal_409[6] = Vector3(-900.3735f, -2690.0142f, 12.9447f);
+	uLocal_409[7] = Vector3(-1012.7864f, -2468.6018f, 12.8384f);
+	uLocal_434[0] = Vector3(87.0014f, -1402.4484f, 28.2549f);
+	uLocal_434[1] = Vector3(146.5773f, -1426.8824f, 28.2915f);
+	uLocal_434[2] = Vector3(435.1445f, -1462.7794f, 28.2915f);
+	uLocal_434[3] = Vector3(135.1209f, -1302.6038f, 28.1936f);
+	uLocal_434[4] = Vector3(112.2743f, -1947.2144f, 19.6826f);
+	uLocal_434[5] = Vector3(65.3804f, -1568.9438f, 28.6028f);
+	uLocal_434[6] = Vector3(137.8282f, -1724.2274f, 28.2079f);
+	uLocal_434[7] = Vector3(132.9427f, -2009.9111f, 17.2055f);
+	uLocal_434[8] = Vector3(-184.5559f, -1438.0306f, 30.3049f);
+	uLocal_434[9] = Vector3(153.5036f, -1451.8922f, 28.1418f);
+	uLocal_434[10] = Vector3(50.2007f, -1379.7288f, 32f);
+	uLocal_434[11] = Vector3(-297.4216f, -1848.1876f, 24.7217f);
+	uLocal_471[0] = Vector3(768.2622f, -2371.7468f, 21.6783f);
+	uLocal_471[1] = Vector3(1188.8407f, -3249.5051f, 5.0276f);
+	uLocal_471[2] = Vector3(770.0794f, -2991.9758f, 5.0203f);
+	uLocal_471[3] = Vector3(946.5765f, -2453.4355f, 27.5512f);
+	uLocal_471[4] = Vector3(957.6567f, -2097.351f, 29.6646f);
+	uLocal_471[5] = Vector3(926.1091f, -1749.8364f, 29.9898f);
+	uLocal_490[0] = Vector3(-2075.6023f, -330.3965f, 12.3162f);
+	uLocal_490[1] = Vector3(-1994.4458f, -545.3368f, 10.7213f);
+	uLocal_490[2] = Vector3(-3171.3213f, 918.0819f, 13.4239f);
+	uLocal_490[3] = Vector3(-1918.1833f, -370.5667f, 48.1919f);
+	uLocal_490[4] = Vector3(-1938.766f, -441.2331f, 18.7351f);
+	uLocal_506[0] = Vector3(-1392.6733f, -179.0173f, 46.3472f);
+	uLocal_506[1] = Vector3(-1428.5615f, -195.809f, 46.4109f);
+	uLocal_506[2] = Vector3(-385.7066f, -403.3985f, 30.5014f);
+	uLocal_506[3] = Vector3(-486.7284f, -389.6814f, 33.2888f);
+	uLocal_506[4] = Vector3(-583.0761f, -446.2154f, 33.299f);
+	uLocal_506[5] = Vector3(-496.0706f, 236.211f, 82.0245f);
+	uLocal_506[6] = Vector3(-536.2413f, -679.3174f, 32.2419f);
+	uLocal_506[7] = Vector3(-1156.0463f, -1418.8805f, 3.7969f);
+	uLocal_506[8] = Vector3(-856.6715f, -1148.855f, 5.2178f);
+	uLocal_506[9] = Vector3(-696.4865f, -823.45f, 22.8254f);
+	uLocal_506[10] = Vector3(-1142.8555f, -933.465f, 1.6658f);
+	uLocal_506[11] = Vector3(-1281.3527f, -882.9135f, 10.3152f);
+	uLocal_506[12] = Vector3(-1099.7911f, -1702.4319f, 3.37f);
+	uLocal_506[13] = Vector3(-1270.7485f, -1159.347f, 5.2547f);
+	uLocal_506[14] = Vector3(-1130.5422f, -1195.1903f, 1.2757f);
+	uLocal_506[15] = Vector3(-1076.0032f, -1011.8756f, 1.1503f);
+	uLocal_506[16] = Vector3(-1035.1838f, -1252.2964f, 5.197f);
+	uLocal_506[17] = Vector3(-1006.7727f, -1106.0552f, 1.1484f);
+	uLocal_506[18] = Vector3(-1847.1997f, -602.4301f, 10.4091f);
+	uLocal_506[19] = Vector3(-597.1105f, -304.0766f, 33.9632f);
+	uLocal_567[0] = Vector3(-272.7684f, 248.4368f, 89.1359f);
+	uLocal_567[1] = Vector3(56.3248f, 288.189f, 109.281f);
+	uLocal_567[2] = Vector3(415.2359f, 103.9472f, 99.8247f);
+	uLocal_567[3] = Vector3(394.9993f, -200.0683f, 58.3083f);
+	uLocal_567[4] = Vector3(253.857f, -378.6688f, 43.6252f);
+	uLocal_567[5] = Vector3(223.6173f, -50.8911f, 68.2267f);
+	uLocal_567[6] = Vector3(544.0235f, 202.5245f, 100.61f);
+	uLocal_567[7] = Vector3(-264.7876f, -1062.8395f, 24.8463f);
+	uLocal_567[8] = Vector3(-234.3063f, -732.1405f, 32.5016f);
+	uLocal_567[9] = Vector3(-84.3683f, 241.2898f, 99.4509f);
+	uLocal_567[10] = Vector3(346.413f, -960.6713f, 28.4297f);
+	uLocal_601[0] = Vector3(898.7972f, 56.0888f, 78.0298f);
+	uLocal_601[1] = Vector3(832.3909f, -191.5166f, 71.6695f);
+	uLocal_601[2] = Vector3(790.4477f, -734.7306f, 26.5794f);
+	uLocal_611[0] = Vector3(2590.3372f, -293.4442f, 92.0786f);
+	uLocal_611[1] = Vector3(2531.4043f, -600.4139f, 63.2007f);
+	uLocal_611[2] = Vector3(2604.2168f, 375.1005f, 107.472f);
+	uLocal_621[0] = Vector3(-3233.2627f, 953.5733f, 12.2187f);
+	uLocal_621[1] = Vector3(-3078.3464f, 675.666f, 12.9159f);
+	uLocal_621[2] = Vector3(-2647.8303f, 1504.821f, 117.968f);
+	uLocal_621[3] = Vector3(-2564.214f, 2318.03f, 32.2153f);
+	uLocal_634[0] = Vector3(-1314.0194f, 2483.44f, 22.774f);
+	uLocal_634[1] = Vector3(-409.0888f, 1172.8971f, 324.6412f);
+	uLocal_634[2] = Vector3(-1506.1864f, 1473.5696f, 116.8286f);
+	uLocal_634[3] = Vector3(-518.6162f, 1995.3928f, 205.0397f);
+	uLocal_634[4] = Vector3(-742.0004f, 2320.376f, 70.661f);
+	uLocal_634[5] = Vector3(-1851.372f, -602.5151f, 10.4741f);
+	uLocal_634[6] = Vector3(-1666.4133f, -538.9609f, 34.2561f);
+	uLocal_656[0] = Vector3(-139.8096f, 1872.3776f, 197.166f);
+	uLocal_656[1] = Vector3(695.1385f, 2297.1184f, 49.9406f);
+	uLocal_656[2] = Vector3(167.7863f, 782.6042f, 208.0805f);
+	uLocal_666[0] = Vector3(1498.5458f, 774.8596f, 76.4493f);
+	uLocal_666[1] = Vector3(1309.908f, 1090.1334f, 104.561f);
+	uLocal_666[2] = Vector3(1510.7048f, 1712.5287f, 109.2625f);
+	uLocal_666[3] = Vector3(1070.3932f, 2038.0148f, 52.5529f);
+	uLocal_679[0] = Vector3(2509.3093f, 1601.6224f, 30.0754f);
+	uLocal_679[1] = Vector3(2546.5505f, 1971.3053f, 19.0362f);
+	uLocal_686[0] = Vector3(-2339.021f, 3424.6162f, 28.7394f);
+	uLocal_686[1] = Vector3(-2494.4658f, 3644.7483f, 12.9216f);
+	uLocal_686[2] = Vector3(-2223.4434f, 4335.2515f, 48.4857f);
+	uLocal_686[3] = Vector3(-2369.6516f, 4033.3623f, 27.9193f);
+	uLocal_699[0] = Vector3(-1578.525f, 3005.025f, 32.3629f);
+	uLocal_699[1] = Vector3(-1441.7157f, 4224.607f, 49.0816f);
+	uLocal_699[2] = Vector3(-637.3727f, 4014.45f, 124.2407f);
+	uLocal_699[3] = Vector3(-1092.5985f, 2696.0288f, 18.9957f);
+	uLocal_699[4] = Vector3(-482.845f, 2853.0522f, 32.7909f);
+	uLocal_699[5] = Vector3(-1280.5435f, 2543.4397f, 17.3096f);
+	uLocal_699[6] = Vector3(-435.94427f, 3039.766f, 27.85744f);
+	uLocal_721[0] = Vector3(322.4791f, 2624.6846f, 43.4903f);
+	uLocal_721[1] = Vector3(-118.0555f, 2831.1055f, 49.9236f);
+	uLocal_721[2] = Vector3(8.32642f, 3036.625f, 39.93201f);
+	uLocal_721[3] = Vector3(486.82f, 3094.7231f, 39.68279f);
+	uLocal_721[4] = Vector3(355.66324f, 3465.564f, 34.46225f);
+	uLocal_721[5] = Vector3(73.93981f, 3597.8992f, 38.72102f);
+	uLocal_721[6] = Vector3(-223.5336f, 3914.4094f, 36.4796f);
+	uLocal_743[0] = Vector3(914.0446f, 3641.2002f, 31.4356f);
+	uLocal_743[1] = Vector3(1713.807f, 3786.2986f, 33.6656f);
+	uLocal_743[2] = Vector3(1798.2664f, 3773.4963f, 32.6142f);
+	uLocal_743[3] = Vector3(2008.2037f, 3771.9539f, 31.1457f);
+	uLocal_743[4] = Vector3(1860.1516f, 3675.656f, 32.669f);
+	uLocal_743[5] = Vector3(1974.862f, 3855.3694f, 31.162f);
+	uLocal_743[6] = Vector3(1841.707f, 3799.654f, 32.219f);
+	uLocal_743[7] = Vector3(1775.6593f, 3335.4927f, 40.2247f);
+	uLocal_768[0] = Vector3(2506.6829f, 4104.0376f, 37.3903f);
+	uLocal_768[1] = Vector3(2902.4426f, 4428.438f, 47.2892f);
+	uLocal_768[2] = Vector3(2338.3906f, 3146.7617f, 47.1288f);
+	uLocal_768[3] = Vector3(2756.3962f, 3396.395f, 55.5796f);
+	uLocal_768[4] = Vector3(2560.3132f, 2619.5896f, 36.7532f);
+	uLocal_784[0] = Vector3(-1499.3542f, 4980.8174f, 61.8513f);
+	uLocal_784[1] = Vector3(-686.7758f, 5841.2407f, 15.7987f);
+	uLocal_784[2] = Vector3(-547.5048f, 5405.4707f, 64.2441f);
+	uLocal_784[3] = Vector3(-411.6347f, 6050.651f, 30.4916f);
+	uLocal_784[4] = Vector3(-860.8704f, 5421.5054f, 33.9464f);
+	uLocal_800[0] = Vector3(331.2503f, 6586.893f, 27.8962f);
+	uLocal_800[1] = Vector3(-37.7542f, 6319.7397f, 30.3761f);
+	uLocal_800[2] = Vector3(-115.5213f, 6456.377f, 30.4546f);
+	uLocal_800[3] = Vector3(-145.1629f, 6442.3926f, 30.4404f);
+	uLocal_800[4] = Vector3(-46.1561f, 6475.15f, 30.4923f);
+	uLocal_800[5] = Vector3(533.2067f, 6537.78f, 26.6048f);
+	uLocal_819[0] = Vector3(1592.8146f, 6427.924f, 24.2329f);
+	uLocal_819[1] = Vector3(1664.3406f, 4845.467f, 41.0121f);
+	uLocal_819[2] = Vector3(1705.2246f, 4713.1606f, 41.4366f);
+	uLocal_819[3] = Vector3(1731.8092f, 6387.0054f, 33.5953f);
+	uLocal_819[4] = Vector3(1082.4832f, 6503.5376f, 20.0265f);
+	uLocal_819[5] = Vector3(1996.3209f, 5148.716f, 44.2356f);
+	uLocal_838[0] = Vector3(2172.5203f, 4759.795f, 40.0044f);
+	uLocal_838[1] = Vector3(2451.0212f, 4953.2886f, 43.9633f);
+	uLocal_838[2] = Vector3(2245.1553f, 5562.862f, 51.4367f);
+	uLocal_838[3] = Vector3(2456.1868f, 4596.7407f, 35.8278f);
+	uLocal_838[4] = Vector3(3336.8147f, 5464.448f, 18.5259f);
+	uLocal_838[5] = Vector3(3491.209f, 4707.0747f, 50.1144f);
 	return;
 }
 
@@ -15896,8 +15896,8 @@ void func_430(var uParam0) // Position - 0x13FD9
 	uParam0->f_2 = PLAYER::PLAYER_PED_ID();
 	uParam0->f_3 = 0;
 	uParam0->f_4 = 0;
-	uParam0->f_14 = { func_142() };
-	uParam0->f_17 = { func_142() };
+	uParam0->f_14 = Vector3(func_142());
+	uParam0->f_17 = Vector3(func_142());
 	uParam0->f_35 = 0f;
 	uParam0->f_76 = 0;
 	uParam0->f_49 = 0;

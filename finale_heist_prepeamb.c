@@ -1467,8 +1467,8 @@ void main() // Position - 0x0
 	iLocal_43 = 145;
 	iLocal_100 = -1;
 	fLocal_104 = 0f;
-	uLocal_106 = { 0f, 0f, 0f };
-	uLocal_110 = { 0f, 0f, 0f };
+	uLocal_106 = Vector3(0f, 0f, 0f);
+	uLocal_110 = Vector3(0f, 0f, 0f);
 	fLocal_113 = 0f;
 	iLocal_203 = 1;
 	sLocal_1263 = "";
@@ -1483,7 +1483,7 @@ void main() // Position - 0x0
 		if (iLocal_37 == 2)
 		{
 			MISC::SET_BIT(&iLocal_105, 10);
-			uLocal_110 = { func_265(25) };
+			uLocal_110 = Vector3(func_265(25));
 			fLocal_113 = func_264(25);
 		
 			if (func_263(&uLocal_114, 25))
@@ -1517,7 +1517,7 @@ void main() // Position - 0x0
 	}
 
 	func_244(2);
-	uLocal_106 = { -166.1555f, -621.9833f, 31.4281f };
+	uLocal_106 = Vector3(-166.1555f, -621.9833f, 31.4281f);
 
 	while (true)
 	{
@@ -2049,7 +2049,7 @@ void func_21(Vehicle veParam0, var uParam1, var uParam2, var uParam3, float fPar
 	
 		if (func_79(uParam1, 0f, 0f, 0f, false))
 		{
-			uParam1 = { ENTITY::GET_ENTITY_COORDS(veParam0, true) };
+			uParam1 = Vector3(ENTITY::GET_ENTITY_COORDS(veParam0, true));
 			fParam4 = ENTITY::GET_ENTITY_HEADING(veParam0);
 		}
 	
@@ -4113,7 +4113,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	BOOL num;
 	int num2;
 
-	*uParam0 = { 0f, 0f, 0f };
+	*uParam0 = Vector3(0f, 0f, 0f);
 	uParam0->f_3 = 0f;
 	uParam0->f_4 = 0;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_5), "", 16);
@@ -4123,13 +4123,13 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	uParam0->f_12 = 145;
 	uParam0->f_13 = -1;
 	uParam0->f_14 = 0;
-	uParam0->f_15 = { 0f, 0f, 0f };
-	uParam0->f_18 = { 0f, 0f, 0f };
+	uParam0->f_15 = Vector3(0f, 0f, 0f);
+	uParam0->f_18 = Vector3(0f, 0f, 0f);
 
 	switch (iParam1)
 	{
 		case 0:
-			*uParam0 = { -831.8538f, 172.1154f, 69.9058f };
+			*uParam0 = Vector3(-831.8538f, 172.1154f, 69.9058f);
 			uParam0->f_3 = 157.5705f;
 			uParam0->f_4 = func_55(CHAR_MICHAEL, 1);
 			uParam0->f_12 = 0;
@@ -4139,7 +4139,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 1:
-			*uParam0 = { 1970.9434f, 3801.6838f, 31.1396f };
+			*uParam0 = Vector3(1970.9434f, 3801.6838f, 31.1396f);
 			uParam0->f_3 = 301.3964f;
 			uParam0->f_4 = func_55(0, 1);
 			uParam0->f_12 = 0;
@@ -4149,7 +4149,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 2:
-			*uParam0 = { -22.6297f, -1439.1368f, 29.6549f };
+			*uParam0 = Vector3(-22.6297f, -1439.1368f, 29.6549f);
 			uParam0->f_3 = 180.0808f;
 			uParam0->f_4 = func_55(1, 1);
 			uParam0->f_12 = 1;
@@ -4159,7 +4159,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 3:
-			*uParam0 = { -22.5229f, -1434.6986f, 29.6552f };
+			*uParam0 = Vector3(-22.5229f, -1434.6986f, 29.6552f);
 			uParam0->f_3 = 141.6114f;
 			uParam0->f_4 = func_55(1, 2);
 			uParam0->f_12 = 1;
@@ -4169,7 +4169,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 4:
-			*uParam0 = { 10.9281f, 545.669f, 174.7951f };
+			*uParam0 = Vector3(10.9281f, 545.669f, 174.7951f);
 			uParam0->f_3 = 61.392f;
 			uParam0->f_4 = func_55(1, 1);
 			uParam0->f_12 = 1;
@@ -4179,7 +4179,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 5:
-			*uParam0 = { 6.1093f, 544.9742f, 174.2835f };
+			*uParam0 = Vector3(6.1093f, 544.9742f, 174.2835f);
 			uParam0->f_3 = 92.1548f;
 			uParam0->f_4 = func_55(1, 2);
 			uParam0->f_12 = 1;
@@ -4189,7 +4189,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 6:
-			*uParam0 = { 1981.4163f, 3808.1313f, 31.1384f };
+			*uParam0 = Vector3(1981.4163f, 3808.1313f, 31.1384f);
 			uParam0->f_3 = 117.2557f;
 			uParam0->f_4 = func_55(2, 1);
 			uParam0->f_12 = 2;
@@ -4199,7 +4199,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 7:
-			*uParam0 = { -1158.4875f, -1529.3673f, 3.8995f };
+			*uParam0 = Vector3(-1158.4875f, -1529.3673f, 3.8995f);
 			uParam0->f_3 = 35.7505f;
 			uParam0->f_4 = func_55(2, 1);
 			uParam0->f_12 = 2;
@@ -4209,7 +4209,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 8:
-			*uParam0 = { 148.2868f, -1270.5695f, 28.2252f };
+			*uParam0 = Vector3(148.2868f, -1270.5695f, 28.2252f);
 			uParam0->f_3 = 208.4685f;
 			uParam0->f_4 = func_55(2, 1);
 			uParam0->f_12 = 2;
@@ -4219,7 +4219,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 9:
-			*uParam0 = { 1459.5085f, -1380.45f, 78.3259f };
+			*uParam0 = Vector3(1459.5085f, -1380.45f, 78.3259f);
 			uParam0->f_3 = 99.6211f;
 			uParam0->f_4 = joaat("scorcher");
 			MISC::SET_BIT(&(uParam0->f_9), 6);
@@ -4227,7 +4227,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 10:
-			*uParam0 = { -1518.947f, -1387.8655f, -0.5134f };
+			*uParam0 = Vector3(-1518.947f, -1387.8655f, -0.5134f);
 			uParam0->f_3 = 98.3867f;
 			uParam0->f_4 = joaat("seashark");
 			num = 1;
@@ -4235,7 +4235,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 11:
-			*uParam0 = { 353.0926f, 3577.5925f, 32.351f };
+			*uParam0 = Vector3(353.0926f, 3577.5925f, 32.351f);
 			uParam0->f_3 = 16.6205f;
 			uParam0->f_4 = joaat("duster");
 			num = 1;
@@ -4244,7 +4244,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 12:
 			uParam0->f_14 = 0;
-			*uParam0 = { -1652.0043f, -3142.3484f, 12.9921f };
+			*uParam0 = Vector3(-1652.0043f, -3142.3484f, 12.9921f);
 			uParam0->f_3 = 329.1082f;
 			uParam0->f_12 = 0;
 			uParam0->f_13 = 359;
@@ -4260,7 +4260,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 13:
 			uParam0->f_14 = 1;
-			*uParam0 = { -1271.6487f, -3380.6853f, 12.9451f };
+			*uParam0 = Vector3(-1271.6487f, -3380.6853f, 12.9451f);
 			uParam0->f_3 = 329.5137f;
 			uParam0->f_12 = 1;
 			uParam0->f_13 = 359;
@@ -4276,7 +4276,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 14:
 			uParam0->f_14 = 2;
-			*uParam0 = { 1735.5863f, 3294.5305f, 40.1651f };
+			*uParam0 = Vector3(1735.5863f, 3294.5305f, 40.1651f);
 			uParam0->f_3 = 194.9525f;
 			uParam0->f_12 = 2;
 			uParam0->f_13 = 359;
@@ -4292,7 +4292,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 15:
 			uParam0->f_14 = 3;
-			*uParam0 = { -846.27f, -1363.19f, 0.22f };
+			*uParam0 = Vector3(-846.27f, -1363.19f, 0.22f);
 			uParam0->f_3 = 108.78f;
 			uParam0->f_12 = 0;
 			uParam0->f_13 = 356;
@@ -4309,7 +4309,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 16:
 			uParam0->f_14 = 4;
-			*uParam0 = { -849.47f, -1354.99f, 0.24f };
+			*uParam0 = Vector3(-849.47f, -1354.99f, 0.24f);
 			uParam0->f_3 = 109.84f;
 			uParam0->f_12 = 1;
 			uParam0->f_13 = 356;
@@ -4326,7 +4326,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 17:
 			uParam0->f_14 = 5;
-			*uParam0 = { -852.47f, -1346.2f, 0.21f };
+			*uParam0 = Vector3(-852.47f, -1346.2f, 0.21f);
 			uParam0->f_3 = 108.76f;
 			uParam0->f_12 = 2;
 			uParam0->f_13 = 356;
@@ -4343,11 +4343,11 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 18:
 			uParam0->f_14 = 6;
-			*uParam0 = { -745.857f, -1433.9036f, 4.0005f };
+			*uParam0 = Vector3(-745.857f, -1433.9036f, 4.0005f);
 			uParam0->f_12 = 0;
 			uParam0->f_13 = 360;
-			uParam0->f_15 = { -756.2952f, -1441.6093f, 2.9184f };
-			uParam0->f_18 = { -738.0606f, -1423.0676f, 8.2835f };
+			uParam0->f_15 = Vector3(-756.2952f, -1441.6093f, 2.9184f);
+			uParam0->f_18 = Vector3(-738.0606f, -1423.0676f, 8.2835f);
 			MISC::SET_BIT(&(uParam0->f_9), 0);
 			MISC::SET_BIT(&(uParam0->f_9), 21);
 			MISC::SET_BIT(&(uParam0->f_9), 14);
@@ -4360,11 +4360,11 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 19:
 			uParam0->f_14 = 7;
-			*uParam0 = { -761.8486f, -1453.8293f, 4.0005f };
+			*uParam0 = Vector3(-761.8486f, -1453.8293f, 4.0005f);
 			uParam0->f_12 = 1;
 			uParam0->f_13 = 360;
-			uParam0->f_15 = { -772.8158f, -1459.9572f, 3.2894f };
-			uParam0->f_18 = { -754.3353f, -1440.836f, 8.3334f };
+			uParam0->f_15 = Vector3(-772.8158f, -1459.9572f, 3.2894f);
+			uParam0->f_18 = Vector3(-754.3353f, -1440.836f, 8.3334f);
 			MISC::SET_BIT(&(uParam0->f_9), 0);
 			MISC::SET_BIT(&(uParam0->f_9), 21);
 			MISC::SET_BIT(&(uParam0->f_9), 14);
@@ -4377,7 +4377,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 20:
 			uParam0->f_14 = 8;
-			*uParam0 = { 1769.3f, 3244f, 41.1f };
+			*uParam0 = Vector3(1769.3f, 3244f, 41.1f);
 			uParam0->f_12 = 2;
 			uParam0->f_13 = 360;
 			MISC::SET_BIT(&(uParam0->f_9), 0);
@@ -4393,7 +4393,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 21:
 			uParam0->f_14 = 9;
-			*uParam0 = { 192.7897f, -1020.5385f, -99.98f };
+			*uParam0 = Vector3(192.7897f, -1020.5385f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 0;
@@ -4412,7 +4412,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 22:
 			uParam0->f_14 = 10;
-			*uParam0 = { 192.7897f, -1020.5385f, -99.98f };
+			*uParam0 = Vector3(192.7897f, -1020.5385f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 1;
@@ -4431,7 +4431,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 23:
 			uParam0->f_14 = 11;
-			*uParam0 = { 192.7897f, -1020.5385f, -99.98f };
+			*uParam0 = Vector3(192.7897f, -1020.5385f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 2;
@@ -4453,7 +4453,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 		case 28:
 			num2 = iParam1 - 26;
 			uParam0->f_14 = 12 + num2;
-			*uParam0 = { 196.2794f, -1020.4791f, -99.98f };
+			*uParam0 = Vector3(196.2794f, -1020.4791f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 0 + num2;
@@ -4471,7 +4471,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 		case 31:
 			num2 = iParam1 - 29;
 			uParam0->f_14 = 15 + num2;
-			*uParam0 = { 199.8872f, -1020.048f, -99.98f };
+			*uParam0 = Vector3(199.8872f, -1020.048f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 0 + num2;
@@ -4489,7 +4489,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 		case 34:
 			num2 = iParam1 - 32;
 			uParam0->f_14 = 18 + num2;
-			*uParam0 = { 203.6006f, -1019.7762f, -99.98f };
+			*uParam0 = Vector3(203.6006f, -1019.7762f, -99.98f);
 			uParam0->f_3 = 180f;
 			uParam0->f_4 = 0;
 			uParam0->f_12 = 0 + num2;
@@ -4504,7 +4504,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 24:
 			uParam0->f_14 = 21;
-			*uParam0 = { 0f, 0f, 0f };
+			*uParam0 = Vector3(0f, 0f, 0f);
 			uParam0->f_3 = 0f;
 			uParam0->f_4 = 0;
 			MISC::SET_BIT(&(uParam0->f_9), 10);
@@ -4516,7 +4516,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	
 		case 25:
 			uParam0->f_14 = 22;
-			*uParam0 = { 723.2515f, -632.0496f, 27.1484f };
+			*uParam0 = Vector3(723.2515f, -632.0496f, 27.1484f);
 			uParam0->f_3 = 12.9316f;
 			uParam0->f_4 = joaat("tailgater");
 			MISC::SET_BIT(&(uParam0->f_9), 10);
@@ -4527,7 +4527,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 35:
-			*uParam0 = { -51.23f, 3111.9f, 24.95f };
+			*uParam0 = Vector3(-51.23f, 3111.9f, 24.95f);
 			uParam0->f_3 = 46.78f;
 			uParam0->f_4 = joaat("proptrailer");
 			MISC::SET_BIT(&(uParam0->f_9), 8);
@@ -4535,7 +4535,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 36:
-			*uParam0 = { -55.7984f, -1096.5856f, 25.4223f };
+			*uParam0 = Vector3(-55.7984f, -1096.5856f, 25.4223f);
 			uParam0->f_3 = 308.0596f;
 			uParam0->f_4 = joaat("bjxl");
 			uParam0->f_10 = 126;
@@ -4546,7 +4546,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 37:
-			*uParam0 = { -2892.93f, 3192.37f, 11.66f };
+			*uParam0 = Vector3(-2892.93f, 3192.37f, 11.66f);
 			uParam0->f_3 = -132.35f;
 			uParam0->f_4 = joaat("velum");
 			uParam0->f_10 = 157;
@@ -4558,7 +4558,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 38:
-			*uParam0 = { 1744.3083f, 3270.673f, 40.2076f };
+			*uParam0 = Vector3(1744.3083f, 3270.673f, 40.2076f);
 			uParam0->f_3 = 125f;
 			uParam0->f_4 = joaat("cargobob3");
 			MISC::SET_BIT(&(uParam0->f_9), 23);
@@ -4567,7 +4567,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 39:
-			*uParam0 = { 1751.4397f, 3322.643f, 42.1855f };
+			*uParam0 = Vector3(1751.4397f, 3322.643f, 42.1855f);
 			uParam0->f_3 = 268.134f;
 			uParam0->f_4 = joaat("submersible");
 			MISC::SET_BIT(&(uParam0->f_9), 23);
@@ -4575,7 +4575,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 41:
-			*uParam0 = { 1377.1045f, -2076.2f, 52f };
+			*uParam0 = Vector3(1377.1045f, -2076.2f, 52f);
 			uParam0->f_3 = 37.5f;
 			uParam0->f_4 = joaat("towtruck");
 			MISC::SET_BIT(&(uParam0->f_9), 8);
@@ -4583,7 +4583,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 40:
-			*uParam0 = { 1380.42f, -2072.7695f, 51.7607f };
+			*uParam0 = Vector3(1380.42f, -2072.7695f, 51.7607f);
 			uParam0->f_3 = 37.5f;
 			uParam0->f_4 = joaat("trash");
 			MISC::SET_BIT(&(uParam0->f_9), 8);
@@ -4591,7 +4591,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 42:
-			*uParam0 = { 1359.3892f, 3618.4407f, 33.8907f };
+			*uParam0 = Vector3(1359.3892f, 3618.4407f, 33.8907f);
 			uParam0->f_3 = 108.2337f;
 			uParam0->f_4 = joaat("barracks");
 			MISC::SET_BIT(&(uParam0->f_9), 8);
@@ -4599,7 +4599,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 43:
-			*uParam0 = { 693.1154f, -1018.1551f, 21.6387f };
+			*uParam0 = Vector3(693.1154f, -1018.1551f, 21.6387f);
 			uParam0->f_3 = 177.6454f;
 			uParam0->f_4 = joaat("firetruk");
 			MISC::SET_BIT(&(uParam0->f_9), 23);
@@ -4608,56 +4608,56 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 44:
-			*uParam0 = { -73.6963f, 495.124f, 143.5226f };
+			*uParam0 = Vector3(-73.6963f, 495.124f, 143.5226f);
 			uParam0->f_3 = 155.5994f;
 			uParam0->f_4 = joaat("vacca");
 			num = 1;
 			break;
 	
 		case 45:
-			*uParam0 = { -67.6314f, 891.8266f, 234.5348f };
+			*uParam0 = Vector3(-67.6314f, 891.8266f, 234.5348f);
 			uParam0->f_3 = 294.993f;
 			uParam0->f_4 = joaat("surano");
 			num = 1;
 			break;
 	
 		case 46:
-			*uParam0 = { 533.9048f, -169.2469f, 53.7005f };
+			*uParam0 = Vector3(533.9048f, -169.2469f, 53.7005f);
 			uParam0->f_3 = 1.2998f;
 			uParam0->f_4 = joaat("tornado2");
 			num = 1;
 			break;
 	
 		case 47:
-			*uParam0 = { -726.8914f, -408.6952f, 34.0416f };
+			*uParam0 = Vector3(-726.8914f, -408.6952f, 34.0416f);
 			uParam0->f_3 = 267.7392f;
 			uParam0->f_4 = joaat("superd");
 			num = 1;
 			break;
 	
 		case 48:
-			*uParam0 = { -1321.5186f, 261.3993f, 61.5709f };
+			*uParam0 = Vector3(-1321.5186f, 261.3993f, 61.5709f);
 			uParam0->f_3 = 350.7697f;
 			uParam0->f_4 = joaat("double");
 			num = 1;
 			break;
 	
 		case 49:
-			*uParam0 = { -1267.9991f, 451.6463f, 93.7071f };
+			*uParam0 = Vector3(-1267.9991f, 451.6463f, 93.7071f);
 			uParam0->f_3 = 48.9311f;
 			uParam0->f_4 = joaat("double");
 			num = 1;
 			break;
 	
 		case 50:
-			*uParam0 = { -1062.0762f, -226.7637f, 37.157f };
+			*uParam0 = Vector3(-1062.0762f, -226.7637f, 37.157f);
 			uParam0->f_3 = 234.2767f;
 			uParam0->f_4 = joaat("double");
 			num = 1;
 			break;
 	
 		case 51:
-			*uParam0 = { 68.16914f, -1558.9581f, 29.469042f };
+			*uParam0 = Vector3(68.16914f, -1558.9581f, 29.469042f);
 			uParam0->f_3 = 49.905754f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4666,7 +4666,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 52:
-			*uParam0 = { 589.4399f, 2736.7078f, 42.033165f };
+			*uParam0 = Vector3(589.4399f, 2736.7078f, 42.033165f);
 			uParam0->f_3 = -175.7105f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4675,7 +4675,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 53:
-			*uParam0 = { -488.77396f, -344.57205f, 34.363564f };
+			*uParam0 = Vector3(-488.77396f, -344.57205f, 34.363564f);
 			uParam0->f_3 = 82.4042f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4684,7 +4684,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 54:
-			*uParam0 = { 288.88083f, -585.47284f, 43.15428f };
+			*uParam0 = Vector3(288.88083f, -585.47284f, 43.15428f);
 			uParam0->f_3 = -20.807068f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4693,7 +4693,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 55:
-			*uParam0 = { 304.82938f, -1383.6742f, 31.677443f };
+			*uParam0 = Vector3(304.82938f, -1383.6742f, 31.677443f);
 			uParam0->f_3 = -41.116028f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4702,7 +4702,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 56:
-			*uParam0 = { 1126.1943f, -1481.486f, 34.701603f };
+			*uParam0 = Vector3(1126.1943f, -1481.486f, 34.701603f);
 			uParam0->f_3 = -91.43369f;
 			uParam0->f_4 = joaat("rumpo2");
 			uParam0->f_12 = 2;
@@ -4711,7 +4711,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 57:
-			*uParam0 = { -1598.36f, 5252.84f, 0f };
+			*uParam0 = Vector3(-1598.36f, 5252.84f, 0f);
 			uParam0->f_3 = 28.14f;
 			uParam0->f_4 = joaat("submersible");
 			uParam0->f_13 = 308;
@@ -4722,7 +4722,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 58:
-			*uParam0 = { -1602.62f, 5260.37f, 0.86f };
+			*uParam0 = Vector3(-1602.62f, 5260.37f, 0.86f);
 			uParam0->f_3 = 25.32f;
 			uParam0->f_4 = joaat("dinghy");
 			uParam0->f_13 = 404;
@@ -4733,14 +4733,14 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 59:
-			*uParam0 = { 2116.571f, 4763.2793f, 40.1596f };
+			*uParam0 = Vector3(2116.571f, 4763.2793f, 40.1596f);
 			uParam0->f_3 = 198.723f;
 			uParam0->f_4 = joaat("bfinjection");
 			num = 1;
 			break;
 	
 		case 60:
-			*uParam0 = { 1133.21f, 120.2f, 80.9f };
+			*uParam0 = Vector3(1133.21f, 120.2f, 80.9f);
 			uParam0->f_3 = 134.4f;
 		
 			if (_IS_EXCLUSIVE_CONTENT_UNLOCKED())
@@ -4758,7 +4758,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 61:
-			*uParam0 = { -806.31f, -2679.65f, 13.9f };
+			*uParam0 = Vector3(-806.31f, -2679.65f, 13.9f);
 			uParam0->f_3 = 150.54f;
 		
 			if (_IS_EXCLUSIVE_CONTENT_UNLOCKED())
@@ -4776,7 +4776,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 62:
-			*uParam0 = { 1985.85f, 3828.96f, 31.98f };
+			*uParam0 = Vector3(1985.85f, 3828.96f, 31.98f);
 			uParam0->f_3 = -16.58f;
 			uParam0->f_4 = joaat("blazer3");
 			MISC::SET_BIT(&(uParam0->f_9), 6);
@@ -4784,7 +4784,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 63:
-			*uParam0 = { 3870.75f, 4464.67f, 0f };
+			*uParam0 = Vector3(3870.75f, 4464.67f, 0f);
 			uParam0->f_3 = 0f;
 			uParam0->f_4 = joaat("submersible2");
 			uParam0->f_13 = 308;
@@ -4797,7 +4797,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 64:
-			*uParam0 = { 1257.7295f, -2564.474f, 41.717f };
+			*uParam0 = Vector3(1257.7295f, -2564.474f, 41.717f);
 			uParam0->f_3 = 284.5561f;
 			uParam0->f_4 = joaat("dukes2");
 			MISC::SET_BIT(&(uParam0->f_9), 6);
@@ -4805,7 +4805,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 65:
-			*uParam0 = { 643.2823f, 3014.152f, 42.2733f };
+			*uParam0 = Vector3(643.2823f, 3014.152f, 42.2733f);
 			uParam0->f_3 = 128.0554f;
 			uParam0->f_4 = joaat("dukes2");
 			MISC::SET_BIT(&(uParam0->f_9), 6);
@@ -4813,7 +4813,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 66:
-			*uParam0 = { 38.9368f, 850.8677f, 196.3f };
+			*uParam0 = Vector3(38.9368f, 850.8677f, 196.3f);
 			uParam0->f_3 = 311.6813f;
 			uParam0->f_4 = joaat("dodo");
 			MISC::SET_BIT(&(uParam0->f_9), 30);
@@ -4823,7 +4823,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 			break;
 	
 		case 67:
-			*uParam0 = { 1333.8752f, 4262.2256f, 30.78f };
+			*uParam0 = Vector3(1333.8752f, 4262.2256f, 30.78f);
 			uParam0->f_3 = 262.5293f;
 			uParam0->f_4 = joaat("dodo");
 			MISC::SET_BIT(&(uParam0->f_9), 30);
@@ -4841,13 +4841,13 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 		{
 			if (uParam0->f_4 == joaat("miljet") || uParam0->f_4 == joaat("besra") || uParam0->f_4 == joaat("luxor") || uParam0->f_4 == joaat("shamal") || uParam0->f_4 == joaat("titan") || uParam0->f_4 == joaat("luxor2"))
 			{
-				*uParam0 = { 1678.8f, 3229.6f, 41.8f };
+				*uParam0 = Vector3(1678.8f, 3229.6f, 41.8f);
 				uParam0->f_3 = 106.0906f;
 			}
 		}
 	
 		if (!func_79(Global_113648.f_32751.f_1864[uParam0->f_14], 0f, 0f, 0f, false))
-			*uParam0 = { Global_113648.f_32751.f_1864[uParam0->f_14] };
+			*uParam0 = Vector3(Global_113648.f_32751.f_1864[uParam0->f_14]);
 	
 		if (Global_113648.f_32751.f_1934[uParam0->f_14] != -1f)
 			uParam0->f_3 = Global_113648.f_32751.f_1934[uParam0->f_14];
@@ -4857,7 +4857,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	{
 		if (!func_79(Global_113648.f_2365.f_539.f_3588[1][uParam0->f_12], 0f, 0f, 0f, false))
 		{
-			*uParam0 = { Global_113648.f_2365.f_539.f_3588[1][uParam0->f_12] };
+			*uParam0 = Vector3(Global_113648.f_2365.f_539.f_3588[1][uParam0->f_12]);
 			uParam0->f_3 = Global_113648.f_2365.f_539.f_3609[1][uParam0->f_12];
 		}
 	}
@@ -4865,7 +4865,7 @@ BOOL func_54(var uParam0, int iParam1) // Position - 0x506A
 	{
 		if (!func_79(Global_113648.f_2365.f_539.f_3588[0][uParam0->f_12], 0f, 0f, 0f, false))
 		{
-			*uParam0 = { Global_113648.f_2365.f_539.f_3588[0][uParam0->f_12] };
+			*uParam0 = Vector3(Global_113648.f_2365.f_539.f_3588[0][uParam0->f_12]);
 			uParam0->f_3 = Global_113648.f_2365.f_539.f_3609[0][uParam0->f_12];
 		}
 	}
@@ -5024,12 +5024,12 @@ void func_58(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, fl
 		
 			if (IS_BIT_SET(Global_77348.f_555[0].f_9, 11))
 			{
-				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = { uParam2 };
+				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = Vector3(uParam2);
 				Global_113648.f_32751.f_1934[Global_77348.f_555[0].f_14] = fParam5;
 			}
 			else
 			{
-				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = { 0f, 0f, 0f };
+				Global_113648.f_32751.f_1864[Global_77348.f_555[0].f_14] = Vector3(0f, 0f, 0f);
 				Global_113648.f_32751.f_1934[Global_77348.f_555[0].f_14] = -1f;
 			}
 		
@@ -5083,13 +5083,13 @@ void func_61(var uParam0, var uParam1) // Position - 0x6B92
 {
 	uParam1->f_66 = uParam0->f_66;
 	*uParam1 = *uParam0;
-	uParam1->f_1 = { uParam0->f_1 };
+	uParam1->f_1 = Vector3(uParam0->f_1);
 	uParam1->f_5 = uParam0->f_5;
 	uParam1->f_6 = uParam0->f_6;
 	uParam1->f_7 = uParam0->f_7;
 	uParam1->f_8 = uParam0->f_8;
-	uParam1->f_9 = { uParam0->f_9 };
-	uParam1->f_59 = { uParam0->f_59 };
+	uParam1->f_9 = Vector3(uParam0->f_9);
+	uParam1->f_59 = Vector3(uParam0->f_59);
 	uParam1->f_62 = uParam0->f_62;
 	uParam1->f_63 = uParam0->f_63;
 	uParam1->f_64 = uParam0->f_64;
@@ -5489,7 +5489,7 @@ void func_70(BOOL bParam0) // Position - 0x737C
 			func_93(34, false);
 	
 		if (iLocal_42 != 2)
-			uLocal_106 = { 0f, 0f, 0f };
+			uLocal_106 = Vector3(0f, 0f, 0f);
 	
 		iLocal_40 = 0;
 		iLocal_41 = 0;
@@ -6176,7 +6176,7 @@ void func_111() // Position - 0x8182
 
 	if (iLocal_40 != 0)
 	{
-		unk = { func_130() };
+		unk = Vector3(func_130());
 	
 		switch (iLocal_40)
 		{
@@ -6343,7 +6343,7 @@ int func_113(int iParam0, int iParam1, eCharacter echParam2, eCharacter echParam
 		if (iParam1 == 0)
 			MISC::SET_BIT(&(num.f_1), 10);
 	
-		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = { num };
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 		func_114(echParam2);
 		return 1;
@@ -6493,14 +6493,14 @@ void func_122(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			{
 				if (iLocal_42 == 0)
 				{
-					unk = { func_124(bParam6) };
+					unk = Vector3(func_124(bParam6));
 					func_93(46, true);
 					func_129(sLocal_1272, &unk);
 					func_128(true);
 				}
 				else if (iLocal_42 == 1)
 				{
-					unk = { func_123(bParam6) };
+					unk = Vector3(func_123(bParam6));
 					func_129(sLocal_1272, &unk);
 					func_128(true);
 				}
@@ -6819,7 +6819,7 @@ void func_141() // Position - 0x8CBC
 	{
 		if (func_87(veLocal_109))
 		{
-			uLocal_110 = { ENTITY::GET_ENTITY_COORDS(veLocal_109, true) };
+			uLocal_110 = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_109, true));
 			fLocal_113 = ENTITY::GET_ENTITY_HEADING(veLocal_109);
 			MISC::SET_BIT(&iLocal_105, 6);
 			MISC::SET_BIT(&iLocal_105, 2);
@@ -7005,7 +7005,7 @@ BOOL func_151(Vehicle veParam0) // Position - 0x8F96
 		return false;
 	}
 
-	entityRotation = { ENTITY::GET_ENTITY_ROTATION(veParam0, 2) };
+	entityRotation = Vector3(ENTITY::GET_ENTITY_ROTATION(veParam0, 2));
 
 	if (entityRotation >= 10f || entityRotation <= -10f)
 	{
@@ -7264,14 +7264,14 @@ void func_157(BOOL bParam0, BOOL bParam1) // Position - 0x9449
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -7515,7 +7515,7 @@ void func_175(int iParam0, Vector3 vParam1, var uParam2, var uParam3) // Positio
 
 	for (i = 0; i <= 2; i = i + 1)
 	{
-		Global_32543[iParam0][i] = { vParam1 };
+		Global_32543[iParam0][i] = Vector3(vParam1);
 	}
 
 	return;
@@ -7585,16 +7585,16 @@ BOOL func_177(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x9903
 		if (func_188(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_187();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -7731,7 +7731,7 @@ void func_178() // Position - 0x9BD1
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -7795,18 +7795,18 @@ void func_184() // Position - 0x9CCC
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -7888,7 +7888,7 @@ void func_187() // Position - 0x9E9C
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -7930,7 +7930,7 @@ void func_189() // Position - 0x9F2A
 
 void func_190(var uParam0, var uParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x9F81
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = uParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -8140,7 +8140,7 @@ void func_194(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posit
 				{
 					if (Global_20383 != echParam1)
 					{
-						Global_8912[echParam1] = { _GET_CHARACTER_NAME(echParam0) };
+						Global_8912[echParam1] = Vector3(_GET_CHARACTER_NAME(echParam0));
 						Global_8929[echParam1] = 1;
 						Global_8934[echParam1] = echParam0;
 					}
@@ -8149,21 +8149,21 @@ void func_194(eCharacter echParam0, eCharacter echParam1, BOOL bParam2) // Posit
 					}
 					else
 					{
-						Global_8863[1] = { _GET_CHARACTER_NAME(echParam0) };
+						Global_8863[1] = Vector3(_GET_CHARACTER_NAME(echParam0));
 						Global_8863[1].f_5 = echParam1;
 						func_195();
 					}
 				}
 				else
 				{
-					Global_8863[1] = { _GET_CHARACTER_NAME(echParam0) };
+					Global_8863[1] = Vector3(_GET_CHARACTER_NAME(echParam0));
 					Global_8863[1].f_5 = echParam1;
 					func_195();
 				}
 			}
 			else
 			{
-				Global_8863[1] = { _GET_CHARACTER_NAME(echParam0) };
+				Global_8863[1] = Vector3(_GET_CHARACTER_NAME(echParam0));
 				Global_8863[1].f_5 = echParam1;
 				func_195();
 			}
@@ -10231,7 +10231,7 @@ void func_224() // Position - 0xC95C
 				func_160();
 			
 				if (iLocal_42 != 2)
-					uLocal_106 = { 0f, 0f, 0f };
+					uLocal_106 = Vector3(0f, 0f, 0f);
 			
 				MISC::CLEAR_BIT(&iLocal_105, 8);
 			}
@@ -10746,8 +10746,8 @@ void func_241(int iParam0) // Position - 0xD34C
 
 void func_242(int iParam0, int iParam1) // Position - 0xD3E4
 {
-	Global_113648.f_20412[iParam0] = { Global_113648.f_20412[iParam1] };
-	Global_113648.f_20412[iParam0].f_4 = { Global_113648.f_20412[iParam1].f_4 };
+	Global_113648.f_20412[iParam0] = Vector3(Global_113648.f_20412[iParam1]);
+	Global_113648.f_20412[iParam0].f_4 = Vector3(Global_113648.f_20412[iParam1].f_4);
 	Global_113648.f_20412[iParam0].f_8 = Global_113648.f_20412[iParam1].f_8;
 	Global_113648.f_20412[iParam0].f_10 = Global_113648.f_20412[iParam1].f_10;
 	Global_113648.f_20412[iParam0].f_9 = Global_113648.f_20412[iParam1].f_9;
@@ -10931,103 +10931,103 @@ void func_247() // Position - 0xD989
 	uLocal_1249[10] = "MTGORDO" /*Mount Gordo*/;
 	uLocal_1249[11] = "SANCHIA" /*San Chianski Mountain Range*/;
 	uLocal_1249[12] = "TATAMO" /*Tataviam Mountains*/;
-	uLocal_204[0][0] = { func_248("DELBE" /*Del Perro Beach*/, -1615.2574f, -952.59436f, 20.01716f, -2160.7058f, -423f, -1.28679f, 327.8f) };
-	uLocal_204[0][1] = { func_248("DELBE" /*Del Perro Beach*/, -1521.7163f, -914.56757f, 20.17247f, -1855.7148f, -1325.784f, -44.79295f, 254.8f) };
-	uLocal_204[0][2] = { func_248("BEACH" /*Vespucci Beach*/, -1162.3699f, -1815.0084f, 15.33822f, -1553.2072f, -1098.6849f, 0.46467f, 253.91f) };
-	uLocal_204[0][3] = { func_248("BEACH" /*Vespucci Beach*/, -1464.2185f, -1136.7828f, 0.32167f, -2241.5664f, -358.88486f, 20.32481f, 282.21f) };
-	uLocal_204[0][4] = { func_248("PBOX" /*Pillbox Hill*/, 156.41087f, -1042.6412f, 22.31273f, 238.63815f, -821.1217f, 35.10069f, 176.96f) };
-	uLocal_204[0][5] = { func_248("CHIL" /*Vinewood Hills*/, 883.1121f, 534.72833f, 115.72503f, 559.7425f, 644.602f, 150.59714f, 301.08f) };
-	uLocal_204[0][6] = { func_248("EAST_V" /*East Vinewood*/, 941.45306f, -329.4256f, 60.77003f, 727.76514f, -200.95193f, 75.59085f, 88.89f) };
-	uLocal_204[0][7] = { func_248("EAST_V" /*East Vinewood*/, 689.1177f, -273.14056f, 60.21559f, 834.7326f, -352.1655f, 50.92442f, 81.23f) };
-	uLocal_204[0][8] = { func_248("MIRR" /*Mirror Park*/, 1048.4985f, -357.0332f, 60.92149f, 1401.5808f, -783.8975f, 75.7477f, 325.93f) };
-	uLocal_204[0][9] = { func_248("MIRR" /*Mirror Park*/, 892.28357f, -461.57523f, 70.86029f, 1161.3007f, -829.8299f, 45.90131f, 184.12f) };
-	uLocal_204[0][10] = { func_248("VCANA" /*Vespucci Canals*/, -1161.3606f, -1143.7163f, -5.71593f, -864.9714f, -981.12573f, 21.09691f, 328.65f) };
-	uLocal_204[0][11] = { func_248("BAYTRE" /*Baytree Canyon*/, 251.40108f, 1068.3472f, 280.6663f, 189.60123f, 1272.3522f, 143.80351f, 160.32f) };
-	uLocal_204[0][13] = { func_248("OBSERV" /*Galileo Observatory*/, -450.98346f, 1048.4084f, 252.94498f, -389.56403f, 1244.5039f, 370.24692f, 199.93f) };
-	uLocal_204[0][14] = { func_248("AIRP" /*Los Santos International Airport*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][15] = { func_248("TERMINA" /*Terminal*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][16] = { func_248("STAD" /*Maze Bank Arena*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][17] = { func_248("MOVIE" /*Richards Majestic*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][18] = { func_248("GOLF" /*GWC and Golfing Society*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][19] = { func_248("HORS" /*Vinewood Racetrack*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[0][20] = { func_248("PBOX" /*Pillbox Hill*/, -28.39781f, -1071.2449f, 50.21438f, -49.8352f, -1131.2766f, 20.02555f, 55.12f) };
-	uLocal_204[0][21] = { func_248("LOSSF" /*Los Santos Freeway*/, 843.19617f, 25.93548f, 65.16061f, 1138.6865f, 363.05872f, 105.41279f, 61.11f) };
-	uLocal_204[0][22] = { func_248("ROCKF" /*Rockford Hills*/, -992.56384f, -199.7673f, 30.74956f, -687.9904f, -43.23445f, 80.93306f, 80.53f) };
-	uLocal_204[0][23] = { func_248("ROCKF" /*Rockford Hills*/, -251.8548f, -446.2141f, 29.5887f, -362.685f, -434.7425f, 90.931f, 50f) };
-	uLocal_204[0][24] = { func_248("ALTA" /*Alta*/, 180.2637f, -404.9771f, 40.1713f, 289.9432f, -445.1485f, 124.3793f, 100f) };
-	uLocal_204[0][25] = { func_248("ALTA" /*Alta*/, 343.8481f, -323.1273f, 80.7749f, 427.08f, -361.0469f, 45.3411f, 85f) };
-	uLocal_204[0][26] = { func_248("RANCHO" /*Rancho*/, 414.5057f, -2092.0999f, 19.8533f, 350.8093f, -2158.395f, 12.3916f, 55f) };
-	uLocal_204[0][27] = { func_248("RANCHO" /*Rancho*/, 283.7474f, -2103.9177f, 12.9242f, 391.8871f, -1983.2037f, 33.0042f, 100f) };
-	uLocal_204[0][28] = { func_248("PBOX" /*Pillbox Hill*/, 85.038f, -670.3274f, 42.8642f, 227.8234f, -722.2458f, 274f, 175f) };
-	uLocal_204[0][29] = { func_248("PBOX" /*Pillbox Hill*/, -107.2516f, -906.36f, 28.2051f, -49.9007f, -752.925f, 330f, 125f) };
-	uLocal_204[0][30] = { func_248("TEXTI" /*Textile City*/, 456.8563f, -683.8335f, 32.2903f, 457.5504f, -819.4669f, 25.9553f, 14.4f) };
-	uLocal_204[0][31] = { func_248("ROCKF" /*Rockford Hills*/, -699.7205f, -227.3646f, 67.818f, -645.1068f, -332.5107f, 30.9132f, 127.1f) };
+	uLocal_204[0][0] = Vector3(func_248("DELBE" /*Del Perro Beach*/, -1615.2574f, -952.59436f, 20.01716f, -2160.7058f, -423f, -1.28679f, 327.8f));
+	uLocal_204[0][1] = Vector3(func_248("DELBE" /*Del Perro Beach*/, -1521.7163f, -914.56757f, 20.17247f, -1855.7148f, -1325.784f, -44.79295f, 254.8f));
+	uLocal_204[0][2] = Vector3(func_248("BEACH" /*Vespucci Beach*/, -1162.3699f, -1815.0084f, 15.33822f, -1553.2072f, -1098.6849f, 0.46467f, 253.91f));
+	uLocal_204[0][3] = Vector3(func_248("BEACH" /*Vespucci Beach*/, -1464.2185f, -1136.7828f, 0.32167f, -2241.5664f, -358.88486f, 20.32481f, 282.21f));
+	uLocal_204[0][4] = Vector3(func_248("PBOX" /*Pillbox Hill*/, 156.41087f, -1042.6412f, 22.31273f, 238.63815f, -821.1217f, 35.10069f, 176.96f));
+	uLocal_204[0][5] = Vector3(func_248("CHIL" /*Vinewood Hills*/, 883.1121f, 534.72833f, 115.72503f, 559.7425f, 644.602f, 150.59714f, 301.08f));
+	uLocal_204[0][6] = Vector3(func_248("EAST_V" /*East Vinewood*/, 941.45306f, -329.4256f, 60.77003f, 727.76514f, -200.95193f, 75.59085f, 88.89f));
+	uLocal_204[0][7] = Vector3(func_248("EAST_V" /*East Vinewood*/, 689.1177f, -273.14056f, 60.21559f, 834.7326f, -352.1655f, 50.92442f, 81.23f));
+	uLocal_204[0][8] = Vector3(func_248("MIRR" /*Mirror Park*/, 1048.4985f, -357.0332f, 60.92149f, 1401.5808f, -783.8975f, 75.7477f, 325.93f));
+	uLocal_204[0][9] = Vector3(func_248("MIRR" /*Mirror Park*/, 892.28357f, -461.57523f, 70.86029f, 1161.3007f, -829.8299f, 45.90131f, 184.12f));
+	uLocal_204[0][10] = Vector3(func_248("VCANA" /*Vespucci Canals*/, -1161.3606f, -1143.7163f, -5.71593f, -864.9714f, -981.12573f, 21.09691f, 328.65f));
+	uLocal_204[0][11] = Vector3(func_248("BAYTRE" /*Baytree Canyon*/, 251.40108f, 1068.3472f, 280.6663f, 189.60123f, 1272.3522f, 143.80351f, 160.32f));
+	uLocal_204[0][13] = Vector3(func_248("OBSERV" /*Galileo Observatory*/, -450.98346f, 1048.4084f, 252.94498f, -389.56403f, 1244.5039f, 370.24692f, 199.93f));
+	uLocal_204[0][14] = Vector3(func_248("AIRP" /*Los Santos International Airport*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][15] = Vector3(func_248("TERMINA" /*Terminal*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][16] = Vector3(func_248("STAD" /*Maze Bank Arena*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][17] = Vector3(func_248("MOVIE" /*Richards Majestic*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][18] = Vector3(func_248("GOLF" /*GWC and Golfing Society*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][19] = Vector3(func_248("HORS" /*Vinewood Racetrack*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[0][20] = Vector3(func_248("PBOX" /*Pillbox Hill*/, -28.39781f, -1071.2449f, 50.21438f, -49.8352f, -1131.2766f, 20.02555f, 55.12f));
+	uLocal_204[0][21] = Vector3(func_248("LOSSF" /*Los Santos Freeway*/, 843.19617f, 25.93548f, 65.16061f, 1138.6865f, 363.05872f, 105.41279f, 61.11f));
+	uLocal_204[0][22] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -992.56384f, -199.7673f, 30.74956f, -687.9904f, -43.23445f, 80.93306f, 80.53f));
+	uLocal_204[0][23] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -251.8548f, -446.2141f, 29.5887f, -362.685f, -434.7425f, 90.931f, 50f));
+	uLocal_204[0][24] = Vector3(func_248("ALTA" /*Alta*/, 180.2637f, -404.9771f, 40.1713f, 289.9432f, -445.1485f, 124.3793f, 100f));
+	uLocal_204[0][25] = Vector3(func_248("ALTA" /*Alta*/, 343.8481f, -323.1273f, 80.7749f, 427.08f, -361.0469f, 45.3411f, 85f));
+	uLocal_204[0][26] = Vector3(func_248("RANCHO" /*Rancho*/, 414.5057f, -2092.0999f, 19.8533f, 350.8093f, -2158.395f, 12.3916f, 55f));
+	uLocal_204[0][27] = Vector3(func_248("RANCHO" /*Rancho*/, 283.7474f, -2103.9177f, 12.9242f, 391.8871f, -1983.2037f, 33.0042f, 100f));
+	uLocal_204[0][28] = Vector3(func_248("PBOX" /*Pillbox Hill*/, 85.038f, -670.3274f, 42.8642f, 227.8234f, -722.2458f, 274f, 175f));
+	uLocal_204[0][29] = Vector3(func_248("PBOX" /*Pillbox Hill*/, -107.2516f, -906.36f, 28.2051f, -49.9007f, -752.925f, 330f, 125f));
+	uLocal_204[0][30] = Vector3(func_248("TEXTI" /*Textile City*/, 456.8563f, -683.8335f, 32.2903f, 457.5504f, -819.4669f, 25.9553f, 14.4f));
+	uLocal_204[0][31] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -699.7205f, -227.3646f, 67.818f, -645.1068f, -332.5107f, 30.9132f, 127.1f));
 	uLocal_204[0].f_260 = 0;
 	uLocal_204[0].f_257 = 32;
-	uLocal_204[2][0] = { func_248("PBOX" /*Pillbox Hill*/, -25.50944f, -932.38464f, 20.41711f, 119.94056f, -523.43976f, 33.07988f, 363.4f) };
-	uLocal_204[2][1] = { func_248("DOWNT" /*Downtown*/, -25.50944f, -932.38464f, 20.41711f, 119.94056f, -523.43976f, 33.07988f, 363.4f) };
-	uLocal_204[2][2] = { func_248("COSI" /*Countryside*/, 1426.9344f, 1225.1151f, 90.76305f, 1429.9823f, 1006.8307f, 120.66425f, 259.89f) };
-	uLocal_204[2][3] = { func_248("COSI" /*Countryside*/, 3503.5603f, 3546.4026f, 20.18748f, 3513.9546f, 3875.7952f, 72.94806f, 393.78f) };
-	uLocal_204[2][4] = { func_248("SKID" /*Mission Row*/, 403.54044f, -864.46936f, 20.33799f, 396.34406f, -1127.3247f, 35.49262f, 325.93f) };
-	uLocal_204[2][5] = { func_248("JAIL" /*Bolingbroke Penitentiary*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[2][6] = { func_248("ARMYB" /*Fort Zancudo*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
+	uLocal_204[2][0] = Vector3(func_248("PBOX" /*Pillbox Hill*/, -25.50944f, -932.38464f, 20.41711f, 119.94056f, -523.43976f, 33.07988f, 363.4f));
+	uLocal_204[2][1] = Vector3(func_248("DOWNT" /*Downtown*/, -25.50944f, -932.38464f, 20.41711f, 119.94056f, -523.43976f, 33.07988f, 363.4f));
+	uLocal_204[2][2] = Vector3(func_248("COSI" /*Countryside*/, 1426.9344f, 1225.1151f, 90.76305f, 1429.9823f, 1006.8307f, 120.66425f, 259.89f));
+	uLocal_204[2][3] = Vector3(func_248("COSI" /*Countryside*/, 3503.5603f, 3546.4026f, 20.18748f, 3513.9546f, 3875.7952f, 72.94806f, 393.78f));
+	uLocal_204[2][4] = Vector3(func_248("SKID" /*Mission Row*/, 403.54044f, -864.46936f, 20.33799f, 396.34406f, -1127.3247f, 35.49262f, 325.93f));
+	uLocal_204[2][5] = Vector3(func_248("JAIL" /*Bolingbroke Penitentiary*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[2][6] = Vector3(func_248("ARMYB" /*Fort Zancudo*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
 	uLocal_204[2].f_260 = 2;
 	uLocal_204[2].f_257 = 7;
-	uLocal_204[1][0] = { func_248("PALETO" /*Paleto Bay*/, -422.86185f, 6068.399f, 20.34662f, -282.74524f, 6206.324f, 50.46586f, 196.61f) };
-	uLocal_204[1][1] = { func_248("ROCKF" /*Rockford Hills*/, -755.2506f, 147.4266f, 75.41048f, -1079.0332f, 169.38055f, 50.46801f, 179.12f) };
-	uLocal_204[1][2] = { func_248("ROCKF" /*Rockford Hills*/, -752.36743f, 90.76733f, 65.5171f, -938.79803f, -15.91457f, 35.48347f, 205.78f) };
-	uLocal_204[1][3] = { func_248("ROCKF" /*Rockford Hills*/, -890.4999f, 431.1449f, 90.29848f, -875.3576f, 232.3266f, 60.20724f, 263.82f) };
-	uLocal_204[1][4] = { func_248("ROCKF" /*Rockford Hills*/, -752.36743f, 90.76733f, 65.5171f, -938.79803f, -15.91457f, 35.48347f, 205.78f) };
-	uLocal_204[1][5] = { func_248("ROCKF" /*Rockford Hills*/, -1198.1826f, 638.63666f, 115.10664f, -444.509f, 750.9377f, 198.29713f, 473.88f) };
-	uLocal_204[1][6] = { func_248("ROCKF" /*Rockford Hills*/, -844.40753f, 400.9413f, 80.433f, -109.53111f, 420.5014f, 120.2088f, 256.03f) };
-	uLocal_204[1][7] = { func_248("ROCKF" /*Rockford Hills*/, -518.62134f, 648.82654f, 130.93524f, -64.0709f, 582.45044f, 215.30841f, 162.72f) };
-	uLocal_204[1][8] = { func_248("RICHM" /*Richman*/, -934.98016f, 349.61014f, 85.77298f, -1432.4509f, 269.98038f, 50.7303f, 185.03f) };
-	uLocal_204[1][9] = { func_248("RICHM" /*Richman*/, -1633.8134f, -69.53224f, 65.10236f, -1446.8229f, 69.71544f, 48.23926f, 214.92f) };
-	uLocal_204[1][10] = { func_248("RICHM" /*Richman*/, -1732.258f, 444.13525f, 130.12581f, -2065.6904f, 412.21207f, 98.09863f, 175.17f) };
-	uLocal_204[1][11] = { func_248("RICHM" /*Richman*/, -1618.0363f, 50.95197f, 70.95364f, -1396.5143f, 221.1004f, 50.84464f, 161.61f) };
-	uLocal_204[1][12] = { func_248("RICHM" /*Richman*/, -1801.285f, 106.8786f, 72.12892f, -1541.7401f, 263.37378f, 50.44112f, 155.88f) };
-	uLocal_204[1][13] = { func_248("PELUFF", -2208.5627f, 146.41006f, 150.93246f, -2350.1223f, 486.60657f, 200.5952f, 299.18f) };
-	uLocal_204[1][14] = { func_248("PELUFF", -1852.3263f, 134.41718f, 70.06226f, -1994.3872f, 299.62833f, 100.96516f, 182.04f) };
-	uLocal_204[1][15] = { func_248("CHIL" /*Vinewood Hills*/, -1982.6697f, 505.9648f, 100.93644f, -1918.8427f, 713.6382f, 150.73953f, 168.9f) };
-	uLocal_204[1][16] = { func_248("CHIL" /*Vinewood Hills*/, -1455.7506f, 887.3351f, 191.97572f, -1663.2073f, 767.3684f, 160.81076f, 239.65f) };
-	uLocal_204[1][17] = { func_248("CHIL" /*Vinewood Hills*/, -1570.2218f, 508.20563f, 140.38838f, -808.95325f, 526.43335f, 90.18556f, 238.43f) };
-	uLocal_204[1][18] = { func_248("CHIL" /*Vinewood Hills*/, 242.62039f, 583.59045f, 159.40428f, 268.04242f, 827.4494f, 201.69531f, 105.09f) };
-	uLocal_204[1][19] = { func_248("CHIL" /*Vinewood Hills*/, -21.10285f, 706.8648f, 150.72626f, -210.43822f, 1056.2755f, 280.31824f, 290.15f) };
-	uLocal_204[1][20] = { func_248("RGLEN" /*Richman Glen*/, -1837.5383f, 774.2984f, 120.56287f, -1765.8419f, 831.0044f, 160.35838f, 68.09f) };
-	uLocal_204[1][21] = { func_248("DIVINE", -372.0849f, 372.71826f, 100.60433f, 390.2198f, 532.5167f, 180.53801f, 305.88f) };
+	uLocal_204[1][0] = Vector3(func_248("PALETO" /*Paleto Bay*/, -422.86185f, 6068.399f, 20.34662f, -282.74524f, 6206.324f, 50.46586f, 196.61f));
+	uLocal_204[1][1] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -755.2506f, 147.4266f, 75.41048f, -1079.0332f, 169.38055f, 50.46801f, 179.12f));
+	uLocal_204[1][2] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -752.36743f, 90.76733f, 65.5171f, -938.79803f, -15.91457f, 35.48347f, 205.78f));
+	uLocal_204[1][3] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -890.4999f, 431.1449f, 90.29848f, -875.3576f, 232.3266f, 60.20724f, 263.82f));
+	uLocal_204[1][4] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -752.36743f, 90.76733f, 65.5171f, -938.79803f, -15.91457f, 35.48347f, 205.78f));
+	uLocal_204[1][5] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -1198.1826f, 638.63666f, 115.10664f, -444.509f, 750.9377f, 198.29713f, 473.88f));
+	uLocal_204[1][6] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -844.40753f, 400.9413f, 80.433f, -109.53111f, 420.5014f, 120.2088f, 256.03f));
+	uLocal_204[1][7] = Vector3(func_248("ROCKF" /*Rockford Hills*/, -518.62134f, 648.82654f, 130.93524f, -64.0709f, 582.45044f, 215.30841f, 162.72f));
+	uLocal_204[1][8] = Vector3(func_248("RICHM" /*Richman*/, -934.98016f, 349.61014f, 85.77298f, -1432.4509f, 269.98038f, 50.7303f, 185.03f));
+	uLocal_204[1][9] = Vector3(func_248("RICHM" /*Richman*/, -1633.8134f, -69.53224f, 65.10236f, -1446.8229f, 69.71544f, 48.23926f, 214.92f));
+	uLocal_204[1][10] = Vector3(func_248("RICHM" /*Richman*/, -1732.258f, 444.13525f, 130.12581f, -2065.6904f, 412.21207f, 98.09863f, 175.17f));
+	uLocal_204[1][11] = Vector3(func_248("RICHM" /*Richman*/, -1618.0363f, 50.95197f, 70.95364f, -1396.5143f, 221.1004f, 50.84464f, 161.61f));
+	uLocal_204[1][12] = Vector3(func_248("RICHM" /*Richman*/, -1801.285f, 106.8786f, 72.12892f, -1541.7401f, 263.37378f, 50.44112f, 155.88f));
+	uLocal_204[1][13] = Vector3(func_248("PELUFF", -2208.5627f, 146.41006f, 150.93246f, -2350.1223f, 486.60657f, 200.5952f, 299.18f));
+	uLocal_204[1][14] = Vector3(func_248("PELUFF", -1852.3263f, 134.41718f, 70.06226f, -1994.3872f, 299.62833f, 100.96516f, 182.04f));
+	uLocal_204[1][15] = Vector3(func_248("CHIL" /*Vinewood Hills*/, -1982.6697f, 505.9648f, 100.93644f, -1918.8427f, 713.6382f, 150.73953f, 168.9f));
+	uLocal_204[1][16] = Vector3(func_248("CHIL" /*Vinewood Hills*/, -1455.7506f, 887.3351f, 191.97572f, -1663.2073f, 767.3684f, 160.81076f, 239.65f));
+	uLocal_204[1][17] = Vector3(func_248("CHIL" /*Vinewood Hills*/, -1570.2218f, 508.20563f, 140.38838f, -808.95325f, 526.43335f, 90.18556f, 238.43f));
+	uLocal_204[1][18] = Vector3(func_248("CHIL" /*Vinewood Hills*/, 242.62039f, 583.59045f, 159.40428f, 268.04242f, 827.4494f, 201.69531f, 105.09f));
+	uLocal_204[1][19] = Vector3(func_248("CHIL" /*Vinewood Hills*/, -21.10285f, 706.8648f, 150.72626f, -210.43822f, 1056.2755f, 280.31824f, 290.15f));
+	uLocal_204[1][20] = Vector3(func_248("RGLEN" /*Richman Glen*/, -1837.5383f, 774.2984f, 120.56287f, -1765.8419f, 831.0044f, 160.35838f, 68.09f));
+	uLocal_204[1][21] = Vector3(func_248("DIVINE", -372.0849f, 372.71826f, 100.60433f, 390.2198f, 532.5167f, 180.53801f, 305.88f));
 	uLocal_204[1].f_260 = 1;
 	uLocal_204[1].f_257 = 22;
-	uLocal_204[3][0] = { func_248("MTCHIL" /*Mount Chiliad*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[3][1] = { func_248("MTGORDO" /*Mount Gordo*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[3][2] = { func_248("SANCHIA" /*San Chianski Mountain Range*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[3][3] = { func_248("TATAMO" /*Tataviam Mountains*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f) };
-	uLocal_204[3][4] = { func_248("ELYSIAN" /*Elysian Island*/, 531.2397f, -3019.2666f, 50f, 530.1656f, -3393.6226f, -22.4165f, 210f) };
-	uLocal_204[3][5] = { func_248("ELYSIAN" /*Elysian Island*/, 569.1023f, -2913.018f, 15.891f, 420.8226f, -2912.775f, -15.0372f, 25f) };
-	uLocal_204[3][6] = { func_248("ELYSIAN" /*Elysian Island*/, 495.1012f, -2833.1753f, 5.164f, 460.1983f, -2813.5283f, 0.4269f, 12f) };
-	uLocal_204[3][7] = { func_248("ELYSIAN" /*Elysian Island*/, 675.2973f, -2747.4504f, 4.952f, 689.2358f, -2747.3955f, 10.9001f, 4.3f) };
-	uLocal_204[3][8] = { func_248("CYPRE" /*Cypress Flats*/, 533.437f, -2693.2793f, 17.4952f, 588.6345f, -2693.4624f, 5.3007f, 15f) };
-	uLocal_204[3][9] = { func_248("CYPRE" /*Cypress Flats*/, 534.9656f, -2699.1365f, 4.9004f, 560.1779f, -2662.1921f, 9.0007f, 15f) };
-	uLocal_204[3][10] = { func_248("CYPRE" /*Cypress Flats*/, 583.903f, -2689.2068f, 16.9771f, 549.8469f, -2665.3176f, 3.9007f, 17.3f) };
-	uLocal_204[3][11] = { func_248("CYPRE" /*Cypress Flats*/, 683.428f, -2635.1343f, 9.3367f, 694.4725f, -2679.6597f, 4.7815f, 10f) };
-	uLocal_204[3][12] = { func_248("CYPRE" /*Cypress Flats*/, 695.2171f, -2694.7688f, 5.9815f, 695.5035f, -2679.1677f, 4.8365f, 10f) };
-	uLocal_204[3][13] = { func_248("CYPRE" /*Cypress Flats*/, 731.7991f, -2659.5796f, 4.7713f, 732.5307f, -2678.4001f, 10.5065f, 25f) };
-	uLocal_204[3][14] = { func_248("ELYSIAN" /*Elysian Island*/, 86.1885f, -2430.6963f, -0.1888f, 119.1515f, -2453.121f, 2.8614f, 13f) };
-	uLocal_204[3][15] = { func_248("ELYSIAN" /*Elysian Island*/, 260.3166f, -2426.7773f, 21.2819f, 313.7871f, -2433.6558f, 6.5609f, 20.5f) };
-	uLocal_204[3][16] = { func_248("ELYSIAN" /*Elysian Island*/, 260.3166f, -2426.7773f, 21.2819f, 313.7871f, -2433.6558f, 6.5609f, 20.5f) };
-	uLocal_204[3][17] = { func_248("ELYSIAN" /*Elysian Island*/, 283.1514f, -2456.7773f, 19.4609f, 290.2325f, -2403.6113f, 4.2465f, 20.5f) };
-	uLocal_204[3][18] = { func_248("ELYSIAN" /*Elysian Island*/, 266.0341f, -2446.724f, 19.4623f, 308.3783f, -2414.5442f, 4.5423f, 20.5f) };
-	uLocal_204[3][19] = { func_248("ELYSIAN" /*Elysian Island*/, 303.5269f, -2451.4456f, 19.4091f, 270.9798f, -2409.4517f, 4.4609f, 20.5f) };
-	uLocal_204[3][20] = { func_248("RANCHO" /*Rancho*/, 515.026f, -1653.5404f, 37.2615f, 582.571f, -1577.8248f, 26.3365f, 100f) };
-	uLocal_204[3][21] = { func_248("BURTON" /*Burton*/, -150.7403f, -419.0541f, 28.6163f, -52.8669f, -453.5552f, 39.4051f, 100f) };
-	uLocal_204[3][22] = { func_248("SanAnd" /*San Andreas*/, 50.2035f, -470.7132f, 36.9003f, 102.0394f, -322.0089f, 115f, 130f) };
-	uLocal_204[3][23] = { func_248("ALTA" /*Alta*/, 499.1769f, -241.2495f, 47.3462f, 393.5317f, -205.7358f, 79.3132f, 120f) };
-	uLocal_204[3][24] = { func_248("DTVINE" /*Downtown Vinewood*/, 422.3247f, 62.118f, 113.2905f, 478.494f, 43.322f, 83.4541f, 80f) };
-	uLocal_204[3][25] = { func_248("DTVINE" /*Downtown Vinewood*/, 385.4908f, 56.1423f, 159.58f, 332.458f, -87.6805f, 63.3657f, 80f) };
-	uLocal_204[3][26] = { func_248("DTVINE" /*Downtown Vinewood*/, 213.6192f, 90.2228f, 98.9357f, 203.3067f, 61.8088f, 86.9197f, 60f) };
-	uLocal_204[3][27] = { func_248("DTVINE" /*Downtown Vinewood*/, 192.813f, -14.9451f, 85.3158f, 149.2689f, 0.6803f, 67.0343f, 40f) };
-	uLocal_204[3][28] = { func_248("WVINE" /*West Vinewood*/, 16.1659f, 61.8685f, 70.8467f, -17.1751f, 74.3771f, 76.88f, 4.5f) };
-	uLocal_204[3][29] = { func_248("WVINE" /*West Vinewood*/, -86.5425f, 84.8701f, 80.2147f, -50.4826f, 67.7335f, 70.297f, 20f) };
-	uLocal_204[3][30] = { func_248("ELGORL" /*El Gordo Lighthouse*/, 3449.839f, 5173.9814f, 0.0662f, 3412.309f, 5166.8896f, 14.8342f, 33.7f) };
+	uLocal_204[3][0] = Vector3(func_248("MTCHIL" /*Mount Chiliad*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[3][1] = Vector3(func_248("MTGORDO" /*Mount Gordo*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[3][2] = Vector3(func_248("SANCHIA" /*San Chianski Mountain Range*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[3][3] = Vector3(func_248("TATAMO" /*Tataviam Mountains*/, 0f, 0f, 0f, 0f, 0f, 0f, 0f));
+	uLocal_204[3][4] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 531.2397f, -3019.2666f, 50f, 530.1656f, -3393.6226f, -22.4165f, 210f));
+	uLocal_204[3][5] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 569.1023f, -2913.018f, 15.891f, 420.8226f, -2912.775f, -15.0372f, 25f));
+	uLocal_204[3][6] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 495.1012f, -2833.1753f, 5.164f, 460.1983f, -2813.5283f, 0.4269f, 12f));
+	uLocal_204[3][7] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 675.2973f, -2747.4504f, 4.952f, 689.2358f, -2747.3955f, 10.9001f, 4.3f));
+	uLocal_204[3][8] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 533.437f, -2693.2793f, 17.4952f, 588.6345f, -2693.4624f, 5.3007f, 15f));
+	uLocal_204[3][9] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 534.9656f, -2699.1365f, 4.9004f, 560.1779f, -2662.1921f, 9.0007f, 15f));
+	uLocal_204[3][10] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 583.903f, -2689.2068f, 16.9771f, 549.8469f, -2665.3176f, 3.9007f, 17.3f));
+	uLocal_204[3][11] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 683.428f, -2635.1343f, 9.3367f, 694.4725f, -2679.6597f, 4.7815f, 10f));
+	uLocal_204[3][12] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 695.2171f, -2694.7688f, 5.9815f, 695.5035f, -2679.1677f, 4.8365f, 10f));
+	uLocal_204[3][13] = Vector3(func_248("CYPRE" /*Cypress Flats*/, 731.7991f, -2659.5796f, 4.7713f, 732.5307f, -2678.4001f, 10.5065f, 25f));
+	uLocal_204[3][14] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 86.1885f, -2430.6963f, -0.1888f, 119.1515f, -2453.121f, 2.8614f, 13f));
+	uLocal_204[3][15] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 260.3166f, -2426.7773f, 21.2819f, 313.7871f, -2433.6558f, 6.5609f, 20.5f));
+	uLocal_204[3][16] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 260.3166f, -2426.7773f, 21.2819f, 313.7871f, -2433.6558f, 6.5609f, 20.5f));
+	uLocal_204[3][17] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 283.1514f, -2456.7773f, 19.4609f, 290.2325f, -2403.6113f, 4.2465f, 20.5f));
+	uLocal_204[3][18] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 266.0341f, -2446.724f, 19.4623f, 308.3783f, -2414.5442f, 4.5423f, 20.5f));
+	uLocal_204[3][19] = Vector3(func_248("ELYSIAN" /*Elysian Island*/, 303.5269f, -2451.4456f, 19.4091f, 270.9798f, -2409.4517f, 4.4609f, 20.5f));
+	uLocal_204[3][20] = Vector3(func_248("RANCHO" /*Rancho*/, 515.026f, -1653.5404f, 37.2615f, 582.571f, -1577.8248f, 26.3365f, 100f));
+	uLocal_204[3][21] = Vector3(func_248("BURTON" /*Burton*/, -150.7403f, -419.0541f, 28.6163f, -52.8669f, -453.5552f, 39.4051f, 100f));
+	uLocal_204[3][22] = Vector3(func_248("SanAnd" /*San Andreas*/, 50.2035f, -470.7132f, 36.9003f, 102.0394f, -322.0089f, 115f, 130f));
+	uLocal_204[3][23] = Vector3(func_248("ALTA" /*Alta*/, 499.1769f, -241.2495f, 47.3462f, 393.5317f, -205.7358f, 79.3132f, 120f));
+	uLocal_204[3][24] = Vector3(func_248("DTVINE" /*Downtown Vinewood*/, 422.3247f, 62.118f, 113.2905f, 478.494f, 43.322f, 83.4541f, 80f));
+	uLocal_204[3][25] = Vector3(func_248("DTVINE" /*Downtown Vinewood*/, 385.4908f, 56.1423f, 159.58f, 332.458f, -87.6805f, 63.3657f, 80f));
+	uLocal_204[3][26] = Vector3(func_248("DTVINE" /*Downtown Vinewood*/, 213.6192f, 90.2228f, 98.9357f, 203.3067f, 61.8088f, 86.9197f, 60f));
+	uLocal_204[3][27] = Vector3(func_248("DTVINE" /*Downtown Vinewood*/, 192.813f, -14.9451f, 85.3158f, 149.2689f, 0.6803f, 67.0343f, 40f));
+	uLocal_204[3][28] = Vector3(func_248("WVINE" /*West Vinewood*/, 16.1659f, 61.8685f, 70.8467f, -17.1751f, 74.3771f, 76.88f, 4.5f));
+	uLocal_204[3][29] = Vector3(func_248("WVINE" /*West Vinewood*/, -86.5425f, 84.8701f, 80.2147f, -50.4826f, 67.7335f, 70.297f, 20f));
+	uLocal_204[3][30] = Vector3(func_248("ELGORL" /*El Gordo Lighthouse*/, 3449.839f, 5173.9814f, 0.0662f, 3412.309f, 5166.8896f, 14.8342f, 33.7f));
 	uLocal_204[3].f_260 = 3;
 	uLocal_204[3].f_257 = 31;
 
@@ -11042,8 +11042,8 @@ struct<8> func_248(char* sParam0, float fParam1, float fParam2, float fParam3, f
 	char* str;
 
 	str = sParam0;
-	str.f_1 = { fParam1 };
-	str.f_4 = { fParam4 };
+	str.f_1 = Vector3(fParam1);
+	str.f_4 = Vector3(fParam4);
 	str.f_7 = fParam7;
 	return str;
 }

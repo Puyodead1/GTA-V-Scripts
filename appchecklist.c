@@ -845,7 +845,7 @@ void func_20() // Position - 0xCE1
 			if (Global_95682 < 52)
 			{
 				num = G_TextMessageConfig.f_109[Global_91433[i]];
-				TEXT_LABEL_COPY(&Global_95473[Global_95682], { func_24(num) }, 4);
+				TEXT_LABEL_COPY(&Global_95473[Global_95682], Vector3(func_24(num)), 4);
 				Global_95682 = Global_95682 + 1;
 			}
 			else
@@ -861,7 +861,7 @@ void func_20() // Position - 0xCE1
 		{
 			if (Global_95682 < 52)
 			{
-				TEXT_LABEL_COPY(&Global_95473[Global_95682], { func_22(i) }, 4);
+				TEXT_LABEL_COPY(&Global_95473[Global_95682], Vector3(func_22(i)), 4);
 				Global_95682 = Global_95682 + 1;
 			}
 			else
@@ -964,7 +964,7 @@ struct<2> func_22(int iParam0) // Position - 0xF5C
 	var unk2;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "", 8);
-	unk3 = { func_23(iParam0) };
+	unk3 = Vector3(func_23(iParam0));
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(&unk3))
 	{

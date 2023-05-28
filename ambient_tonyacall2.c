@@ -253,10 +253,10 @@ void main() // Position - 0x0
 	iLocal_35 = 3;
 	fLocal_41 = 50f;
 	fLocal_42 = 2500f;
-	uLocal_43 = { 409.1539f, -1626.6769f, 28.2928f };
-	uLocal_49 = { 409.27472f, -1623.0219f, 28.29278f };
+	uLocal_43 = Vector3(409.1539f, -1626.6769f, 28.2928f);
+	uLocal_49 = Vector3(409.27472f, -1623.0219f, 28.29278f);
 	fLocal_52 = 202.6928f;
-	uLocal_53 = { 415.6071f, -1647.6045f, 28.2928f };
+	uLocal_53 = Vector3(415.6071f, -1647.6045f, 28.2928f);
 	fLocal_56 = 85.7173f;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
@@ -273,7 +273,7 @@ void main() // Position - 0x0
 			func_33();
 	
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			uLocal_46 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			uLocal_46 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 	
 		if (SYSTEM::VDIST2(uLocal_46, uLocal_43) > fLocal_42)
 			func_33();
@@ -320,12 +320,12 @@ BOOL func_1() // Position - 0x1BA
 	float unk3;
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedLocal_38, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedLocal_38, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_38, true));
 	else
-		entityCoords2 = { 408.5002f, -1624.5825f, 29.2928f };
+		entityCoords2 = Vector3(408.5002f, -1624.5825f, 29.2928f);
 
 	if (SYSTEM::VDIST2(entityCoords, entityCoords2) > 10000f || ENTITY::IS_ENTITY_DEAD(pedLocal_38, false) || func_27())
 		return true;
@@ -515,16 +515,16 @@ BOOL func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x54D
 		if (func_24(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_23();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -661,7 +661,7 @@ void func_6() // Position - 0x81B
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -725,18 +725,18 @@ void func_12() // Position - 0x917
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -909,7 +909,7 @@ void func_23() // Position - 0xCAF
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -951,7 +951,7 @@ void func_25() // Position - 0xD3E
 
 void func_26(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xD95
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1011,7 +1011,7 @@ BOOL func_28() // Position - 0xE6C
 	Hash unk2;
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	PED::GET_CLOSEST_PED(entityCoords, fLocal_41, true, true, &outPed, false, true, -1);
 
@@ -1060,7 +1060,7 @@ void func_30() // Position - 0xF6D
 
 	if (ENTITY::DOES_ENTITY_EXIST(pedLocal_38) && !ENTITY::IS_ENTITY_DEAD(pedLocal_38, false))
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_38, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_38, true));
 	
 		if (_IS_NULL_VECTOR(uLocal_57))
 		{
@@ -1069,12 +1069,12 @@ void func_30() // Position - 0xF6D
 		
 			if (fLocal_61 < fLocal_62)
 			{
-				uLocal_57 = { uLocal_49 };
+				uLocal_57 = Vector3(uLocal_49);
 				fLocal_60 = fLocal_52;
 			}
 			else
 			{
-				uLocal_57 = { uLocal_53 };
+				uLocal_57 = Vector3(uLocal_53);
 				fLocal_60 = fLocal_56;
 			}
 		
@@ -1082,7 +1082,7 @@ void func_30() // Position - 0xF6D
 			{
 				if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 407.4285f, -1626.572f, 27.292778f, 412.82452f, -1620.1666f, 33.292778f, 6f, false, true, 0))
 				{
-					uLocal_57 = { uLocal_53 };
+					uLocal_57 = Vector3(uLocal_53);
 					fLocal_60 = fLocal_56;
 				}
 			}

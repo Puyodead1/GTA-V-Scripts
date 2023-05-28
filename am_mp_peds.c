@@ -10287,8 +10287,8 @@ int func_11(Ped pedParam0, int iParam1, var uParam2, var uParam3) // Position - 
 	if (_IS_FMMC_ACTIVE() || func_14() || func_13())
 		return 0;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!func_12(0f, 0f, entityCoords.f_2, 0f, 0f, entityCoords2.f_2, 1056964608, false))
 		return 0;
@@ -11306,7 +11306,7 @@ void func_40(var uParam0) // Position - 0x1BF0
 	unk.f_79.f_15.f_5 = -1;
 	unk.f_79.f_15.f_7 = 1065353216;
 	unk.f_79.f_15.f_14 = -1;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	func_44(&(uParam0->f_35));
 	*uParam0 = "";
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_2), "", 64);
@@ -11347,8 +11347,8 @@ void func_42(var uParam0) // Position - 0x1D2F
 	uParam0->f_5 = -1;
 	uParam0->f_6 = 0;
 	uParam0->f_7 = 1f;
-	uParam0->f_8 = { 0f, 0f, 0f };
-	uParam0->f_11 = { 0f, 0f, 0f };
+	uParam0->f_8 = Vector3(0f, 0f, 0f);
+	uParam0->f_11 = Vector3(0f, 0f, 0f);
 	uParam0->f_14 = -1;
 	return;
 }
@@ -11407,7 +11407,7 @@ void func_46(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4, BO
 	}
 
 	if (!_IS_NULL_VECTOR(uParam2->f_28))
-		uParam2->f_28 = { func_48(func_32(uParam0), func_31(uParam0), uParam2->f_28) };
+		uParam2->f_28 = Vector3(func_48(func_32(uParam0), func_31(uParam0), uParam2->f_28));
 
 	if (uParam2->f_31.f_2 != -1f)
 		uParam2->f_31.f_2 = func_47(func_31(uParam0), uParam2->f_31.f_2);
@@ -11466,8 +11466,8 @@ void func_50(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1F16
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0f, 0.0001f, 0f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(0f, 0.0001f, 0f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -11501,8 +11501,8 @@ void func_51(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1FC8
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0f, 0.0001f, 0f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(0f, 0.0001f, 0f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -11536,8 +11536,8 @@ void func_52(var uParam0, int iParam1, BOOL bParam2) // Position - 0x207A
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0f, 0.0001f, 0f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(0f, 0.0001f, 0f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -12065,8 +12065,8 @@ int func_69(Ped pedParam0, int iParam1, var uParam2, var uParam3) // Position - 
 	if (_IS_FMMC_ACTIVE() || func_14() || func_13())
 		return 0;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!func_12(0f, 0f, entityCoords.f_2, 0f, 0f, entityCoords2.f_2, 1056964608, false))
 		return 0;
@@ -12152,7 +12152,7 @@ void func_72(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position - 
 				*uParam0 = 0;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -12162,7 +12162,7 @@ void func_72(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position - 
 				*uParam0 = 1;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -12172,7 +12172,7 @@ void func_72(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position - 
 				*uParam0 = 2;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -12182,7 +12182,7 @@ void func_72(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position - 
 				*uParam0 = 3;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -13886,8 +13886,8 @@ void func_86(var uParam0, char* sParam1, char* sParam2, char* sParam3, char* sPa
 	uParam0->f_1 = sParam2;
 	uParam0->f_3 = sParam3;
 	uParam0->f_2 = sParam4;
-	uParam0->f_8 = { uParam5 };
-	uParam0->f_11 = { uParam8 };
+	uParam0->f_8 = Vector3(uParam5);
+	uParam0->f_11 = Vector3(uParam8);
 	uParam0->f_7 = fParam11;
 	uParam0->f_5 = iParam12;
 	uParam0->f_14 = iParam13;
@@ -13946,7 +13946,7 @@ void func_89(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4, BO
 	}
 
 	if (!_IS_NULL_VECTOR(uParam2->f_28))
-		uParam2->f_28 = { func_48(func_80(uParam0), func_79(uParam0), uParam2->f_28) };
+		uParam2->f_28 = Vector3(func_48(func_80(uParam0), func_79(uParam0), uParam2->f_28));
 
 	if (uParam2->f_31.f_2 != -1f)
 		uParam2->f_31.f_2 = func_47(func_79(uParam0), uParam2->f_31.f_2);
@@ -13976,8 +13976,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.2459f, -2.58f, -0.64f };
-					uParam0->f_31 = { 0f, 0f, 250.56f };
+					uParam0->f_28 = Vector3(-11.2459f, -2.58f, -0.64f);
+					uParam0->f_31 = Vector3(0f, 0f, 250.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 4);
@@ -14004,8 +14004,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.9759f, -10.3901f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 317.52f };
+					uParam0->f_28 = Vector3(-8.9759f, -10.3901f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 317.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					func_39(&(uParam0->f_11), 31);
@@ -14032,8 +14032,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.6359f, -9.5501f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(-8.6359f, -9.5501f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 4);
@@ -14078,8 +14078,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 				
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5459f, -2.4901f, -1.137f };
-					uParam0->f_31 = { 0f, 0f, 102.96f };
+					uParam0->f_28 = Vector3(-8.5459f, -2.4901f, -1.137f);
+					uParam0->f_31 = Vector3(0f, 0f, 102.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -14109,8 +14109,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 196865;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.3059f, -0.0301f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 252f };
+					uParam0->f_28 = Vector3(-6.3059f, -0.0301f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 252f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14134,8 +14134,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 33619970;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.9059f, -5.3601f, -1.157f };
-					uParam0->f_31 = { 0f, 0f, 7.92f };
+					uParam0->f_28 = Vector3(-9.9059f, -5.3601f, -1.157f);
+					uParam0->f_31 = Vector3(0f, 0f, 7.92f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14159,8 +14159,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.61f, -36.75f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 311.04f };
+					uParam0->f_28 = Vector3(1.61f, -36.75f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 311.04f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -14185,8 +14185,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.4459f, -3.4001f, -1.157f };
-					uParam0->f_31 = { 0f, 0f, 100.08f };
+					uParam0->f_28 = Vector3(-8.4459f, -3.4001f, -1.157f);
+					uParam0->f_31 = Vector3(0f, 0f, 100.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14210,8 +14210,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.67f, -36.85f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 64.8f };
+					uParam0->f_28 = Vector3(2.67f, -36.85f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 64.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14235,8 +14235,8 @@ void func_90(var uParam0, int iParam1, BOOL bParam2) // Position - 0x53EC
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.3859f, -0.5101f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 48.96f };
+					uParam0->f_28 = Vector3(-5.3859f, -0.5101f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 48.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -14269,8 +14269,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.6859f, -3.5201f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 358.56f };
+					uParam0->f_28 = Vector3(-15.6859f, -3.5201f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 358.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 31);
@@ -14297,8 +14297,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.4059f, -1.3401f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 233.28f };
+					uParam0->f_28 = Vector3(-6.4059f, -1.3401f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 233.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					func_39(&(uParam0->f_11), 31);
@@ -14325,8 +14325,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.6159f, -8.5001f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 270.14f };
+					uParam0->f_28 = Vector3(-7.6159f, -8.5001f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 270.14f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 4);
@@ -14371,8 +14371,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 				
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.7459f, -9.0301f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 48.96f };
+					uParam0->f_28 = Vector3(-6.7459f, -9.0301f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 48.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -14408,8 +14408,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 196865;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.4859f, -0.9201f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 126.72f };
+					uParam0->f_28 = Vector3(-5.4859f, -0.9201f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 126.72f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14433,8 +14433,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 33619970;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.6359f, -2.4601f, -1.137f };
-					uParam0->f_31 = { 0f, 0f, 270.14f };
+					uParam0->f_28 = Vector3(-16.6359f, -2.4601f, -1.137f);
+					uParam0->f_31 = Vector3(0f, 0f, 270.14f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14458,8 +14458,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 5.87f, -31.77f, -0.517f };
-					uParam0->f_31 = { 0f, 0f, 118.8f };
+					uParam0->f_28 = Vector3(5.87f, -31.77f, -0.517f);
+					uParam0->f_31 = Vector3(0f, 0f, 118.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14483,8 +14483,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 4.89f, -32.79f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 329.76f };
+					uParam0->f_28 = Vector3(4.89f, -32.79f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 329.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -14509,8 +14509,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.4159f, -1.9001f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 61.92f };
+					uParam0->f_28 = Vector3(-5.4159f, -1.9001f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 61.92f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14534,8 +14534,8 @@ void func_91(var uParam0, int iParam1, BOOL bParam2) // Position - 0x5B42
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.5559f, 0.1799f, -1.137f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(-15.5559f, 0.1799f, -1.137f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14567,8 +14567,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.6359f, -10.1201f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 309.6f };
+					uParam0->f_28 = Vector3(-6.6359f, -10.1201f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 309.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					func_39(&(uParam0->f_11), 1);
@@ -14595,8 +14595,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.7259f, -1.0301f, -1.127f };
-					uParam0->f_31 = { 0f, 0f, 270.14f };
+					uParam0->f_28 = Vector3(-16.7259f, -1.0301f, -1.127f);
+					uParam0->f_31 = Vector3(0f, 0f, 270.14f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					break;
@@ -14621,8 +14621,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.6459f, -2.5301f, -1.137f };
-					uParam0->f_31 = { 0f, 0f, 95.04f };
+					uParam0->f_28 = Vector3(-8.6459f, -2.5301f, -1.137f);
+					uParam0->f_31 = Vector3(0f, 0f, 95.04f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 31);
@@ -14668,8 +14668,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 				
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.33f, 1.36f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-7.33f, 1.36f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_5(Global_1853746, 5))
@@ -14703,8 +14703,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 196865;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.3559f, -0.6301f, -1.137f };
-					uParam0->f_31 = { 0f, 0f, 125.28f };
+					uParam0->f_28 = Vector3(-15.3559f, -0.6301f, -1.137f);
+					uParam0->f_31 = Vector3(0f, 0f, 125.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14728,8 +14728,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 33619970;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5559f, -3.4801f, -1.15f };
-					uParam0->f_31 = { 0f, 0f, 84.9f };
+					uParam0->f_28 = Vector3(-8.5559f, -3.4801f, -1.15f);
+					uParam0->f_31 = Vector3(0f, 0f, 84.9f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14753,8 +14753,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.5359f, -9.8801f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 64.8f };
+					uParam0->f_28 = Vector3(-5.5359f, -9.8801f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 64.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14778,8 +14778,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.4459f, -9.1501f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 213.84f };
+					uParam0->f_28 = Vector3(-6.4459f, -9.1501f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 213.84f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14803,8 +14803,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.98f, -37.23f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 33.12f };
+					uParam0->f_28 = Vector3(2.98f, -37.23f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 33.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -14829,8 +14829,8 @@ void func_92(var uParam0, int iParam1, BOOL bParam2) // Position - 0x62A2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.52f, -36.39f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 195.12f };
+					uParam0->f_28 = Vector3(2.52f, -36.39f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 195.12f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -14862,8 +14862,8 @@ void func_93(var uParam0, int iParam1, BOOL bParam2) // Position - 0x69E2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.9959f, -9.0101f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 242.64f };
+					uParam0->f_28 = Vector3(-6.9959f, -9.0101f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 242.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					func_39(&(uParam0->f_11), 4);
@@ -14890,8 +14890,8 @@ void func_93(var uParam0, int iParam1, BOOL bParam2) // Position - 0x69E2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.3759f, -9.7201f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 20.88f };
+					uParam0->f_28 = Vector3(-6.3759f, -9.7201f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 20.88f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					func_39(&(uParam0->f_11), 31);
@@ -14918,8 +14918,8 @@ void func_93(var uParam0, int iParam1, BOOL bParam2) // Position - 0x69E2
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5659f, -3.7801f, -1.157f };
-					uParam0->f_31 = { 0f, 0f, 93.6f };
+					uParam0->f_28 = Vector3(-8.5659f, -3.7801f, -1.157f);
+					uParam0->f_31 = Vector3(0f, 0f, 93.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 4);
@@ -14964,8 +14964,8 @@ void func_93(var uParam0, int iParam1, BOOL bParam2) // Position - 0x69E2
 				
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.1559f, -3.2401f, -0.647f };
-					uParam0->f_31 = { 0f, 0f, 237.6f };
+					uParam0->f_28 = Vector3(-10.1559f, -3.2401f, -0.647f);
+					uParam0->f_31 = Vector3(0f, 0f, 237.6f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_5(Global_1853746, 5))
@@ -15515,7 +15515,7 @@ void func_112(Ped pedParam0) // Position - 0x76E0
 
 	while (num != num2 + num3)
 	{
-		vector = { func_113(num) };
+		vector = Vector3(func_113(num));
 		TASK::TASK_EXTEND_ROUTE(vector);
 		num = num + num3;
 	}
@@ -15534,11 +15534,11 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 1101.5233f, -3100.61f, -39.9999f };
+					unk = Vector3(1101.5233f, -3100.61f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 1087.53f, -3099.41f, -40f };
+					unk = Vector3(1087.53f, -3099.41f, -40f);
 					break;
 			}
 			break;
@@ -15548,7 +15548,7 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 1087.53f, -3099.41f, -40f };
+					unk = Vector3(1087.53f, -3099.41f, -40f);
 					break;
 			}
 			break;
@@ -15558,11 +15558,11 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 1052.4991f, -3098.0396f, -39.9999f };
+					unk = Vector3(1052.4991f, -3098.0396f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 1048.32f, -3097.12f, -40f };
+					unk = Vector3(1048.32f, -3097.12f, -40f);
 					break;
 			}
 			break;
@@ -15571,19 +15571,19 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 1069.4734f, -3100.96f, -39.9999f };
+					unk = Vector3(1069.4734f, -3100.96f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 1063.7432f, -3098.0845f, -39.9999f };
+					unk = Vector3(1063.7432f, -3098.0845f, -39.9999f);
 					break;
 			
 				case 3:
-					unk = { 1052.4991f, -3098.0396f, -39.9999f };
+					unk = Vector3(1052.4991f, -3098.0396f, -39.9999f);
 					break;
 			
 				case 4:
-					unk = { 1048.32f, -3097.12f, -40f };
+					unk = Vector3(1048.32f, -3097.12f, -40f);
 					break;
 			}
 			break;
@@ -15592,23 +15592,23 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 1017.7685f, -3100.6338f, -39.9999f };
+					unk = Vector3(1017.7685f, -3100.6338f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 1002.1666f, -3100.7676f, -39.9999f };
+					unk = Vector3(1002.1666f, -3100.7676f, -39.9999f);
 					break;
 			
 				case 3:
-					unk = { 997.1729f, -3101.919f, -39.9999f };
+					unk = Vector3(997.1729f, -3101.919f, -39.9999f);
 					break;
 			
 				case 4:
-					unk = { 994.934f, -3102.0842f, -39.9908f };
+					unk = Vector3(994.934f, -3102.0842f, -39.9908f);
 					break;
 			
 				case 5:
-					unk = { 992.48f, -3097.83f, -39.99f };
+					unk = Vector3(992.48f, -3097.83f, -39.99f);
 					break;
 			}
 			break;
@@ -15617,15 +15617,15 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 997.1729f, -3101.919f, -39.9999f };
+					unk = Vector3(997.1729f, -3101.919f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 994.934f, -3102.0842f, -39.9908f };
+					unk = Vector3(994.934f, -3102.0842f, -39.9908f);
 					break;
 			
 				case 3:
-					unk = { 992.48f, -3097.83f, -39.99f };
+					unk = Vector3(992.48f, -3097.83f, -39.99f);
 					break;
 			}
 			break;
@@ -15634,15 +15634,15 @@ Vector3 func_113(int iParam0) // Position - 0x7726
 			switch (iParam0)
 			{
 				case 1:
-					unk = { 996.6786f, -3102.7542f, -39.9999f };
+					unk = Vector3(996.6786f, -3102.7542f, -39.9999f);
 					break;
 			
 				case 2:
-					unk = { 994.934f, -3102.0842f, -39.9908f };
+					unk = Vector3(994.934f, -3102.0842f, -39.9908f);
 					break;
 			
 				case 3:
-					unk = { 992.48f, -3097.83f, -39.99f };
+					unk = Vector3(992.48f, -3097.83f, -39.99f);
 					break;
 			}
 			break;
@@ -16213,7 +16213,7 @@ void func_135(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 0;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -16836,8 +16836,8 @@ void func_159(var uParam0, int iParam1, BOOL bParam2) // Position - 0x8CFC
 						uParam0->f_26 = 423;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 997.8175f, -3109.485f, -39.00166f };
-					uParam0->f_31 = { 0f, 0f, -53.74f };
+					uParam0->f_28 = Vector3(997.8175f, -3109.485f, -39.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, -53.74f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -16952,8 +16952,8 @@ void func_162(var uParam0, int iParam1, BOOL bParam2) // Position - 0x8F8C
 						uParam0->f_26 = 422;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1001.805f, -3092.803f, -40.00166f };
-					uParam0->f_31 = { 0f, 0f, -166.86f };
+					uParam0->f_28 = Vector3(1001.805f, -3092.803f, -40.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, -166.86f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -16984,8 +16984,8 @@ void func_163(var uParam0, int iParam1, BOOL bParam2) // Position - 0x9022
 						uParam0->f_26 = 423;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1025.093f, -3098.251f, -39.00166f };
-					uParam0->f_31 = { 0f, 0f, 104f };
+					uParam0->f_28 = Vector3(1025.093f, -3098.251f, -39.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, 104f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17016,8 +17016,8 @@ void func_164(var uParam0, int iParam1, BOOL bParam2) // Position - 0x90B8
 						uParam0->f_26 = 422;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1060.139f, -3098.929f, -40.00166f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(1060.139f, -3098.929f, -40.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17048,8 +17048,8 @@ void func_165(var uParam0, int iParam1, BOOL bParam2) // Position - 0x914E
 						uParam0->f_26 = 422;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1071.512f, -3107.35f, -40.00166f };
-					uParam0->f_31 = { 0f, 0f, 50.25f };
+					uParam0->f_28 = Vector3(1071.512f, -3107.35f, -40.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, 50.25f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17080,8 +17080,8 @@ void func_166(var uParam0, int iParam1, BOOL bParam2) // Position - 0x91E4
 						uParam0->f_26 = 423;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1071.233f, -3097.829f, -39.00166f };
-					uParam0->f_31 = { 0f, 0f, 134.75f };
+					uParam0->f_28 = Vector3(1071.233f, -3097.829f, -39.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, 134.75f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17112,8 +17112,8 @@ void func_167(var uParam0, int iParam1, BOOL bParam2) // Position - 0x927A
 						uParam0->f_26 = 422;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1093.597f, -3098.03f, -40.00166f };
-					uParam0->f_31 = { 0f, 0f, -172.5f };
+					uParam0->f_28 = Vector3(1093.597f, -3098.03f, -40.00166f);
+					uParam0->f_31 = Vector3(0f, 0f, -172.5f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17144,8 +17144,8 @@ void func_168(var uParam0, int iParam1, BOOL bParam2) // Position - 0x9310
 						uParam0->f_26 = 423;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1103.173f, -3101.958f, -39.02092f };
-					uParam0->f_31 = { 0f, 0f, 24.12f };
+					uParam0->f_28 = Vector3(1103.173f, -3101.958f, -39.02092f);
+					uParam0->f_31 = Vector3(0f, 0f, 24.12f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17176,8 +17176,8 @@ void func_169(var uParam0, int iParam1, BOOL bParam2) // Position - 0x93A6
 						uParam0->f_26 = 422;
 				
 					uParam0->f_27 = 2;
-					uParam0->f_28 = { 1099.822f, -3097.927f, -40.02092f };
-					uParam0->f_31 = { 0f, 0f, 156f };
+					uParam0->f_28 = Vector3(1099.822f, -3097.927f, -40.02092f);
+					uParam0->f_31 = Vector3(0f, 0f, 156f);
 					func_44(&(uParam0->f_11));
 					func_160(uParam0);
 					func_39(&(uParam0->f_11), 1);
@@ -17257,7 +17257,7 @@ int func_177(var uParam0, int iParam1) // Position - 0x94F6
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_148(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -17804,8 +17804,8 @@ void func_196(var uParam0, int iParam1, BOOL bParam2) // Position - 0x9FC9
 					uParam0->f_21[0] = 50397186;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { 997.5905f, -3166.324f, -34.075f };
-					uParam0->f_31 = { 0f, 0f, -75.12f };
+					uParam0->f_28 = Vector3(997.5905f, -3166.324f, -34.075f);
+					uParam0->f_31 = Vector3(0f, 0f, -75.12f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -17829,8 +17829,8 @@ void func_196(var uParam0, int iParam1, BOOL bParam2) // Position - 0x9FC9
 					uParam0->f_21[0] = 50397186;
 					uParam0->f_21[1] = 50463490;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 999.8905f, -3165.08f, -34.075f };
-					uParam0->f_31 = { 0f, 0f, 176.75f };
+					uParam0->f_28 = Vector3(999.8905f, -3165.08f, -34.075f);
+					uParam0->f_31 = Vector3(0f, 0f, 176.75f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -17854,8 +17854,8 @@ void func_196(var uParam0, int iParam1, BOOL bParam2) // Position - 0x9FC9
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 131074;
-					uParam0->f_28 = { 999.8905f, -3165.783f, -34.075f };
-					uParam0->f_31 = { 0f, 0f, 8.64f };
+					uParam0->f_28 = Vector3(999.8905f, -3165.783f, -34.075f);
+					uParam0->f_31 = Vector3(0f, 0f, 8.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -17888,8 +17888,8 @@ void func_197(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA1EE
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 131072;
-					uParam0->f_28 = { 997.919f, -3166.064f, -34.05f };
-					uParam0->f_31 = { 0f, 0f, -162.36f };
+					uParam0->f_28 = Vector3(997.919f, -3166.064f, -34.05f);
+					uParam0->f_31 = Vector3(0f, 0f, -162.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -17914,8 +17914,8 @@ void func_197(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA1EE
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 16973825;
 					uParam0->f_21[2] = 131073;
-					uParam0->f_28 = { 997.6565f, -3166.819f, -34.05f };
-					uParam0->f_31 = { 0f, 0f, 29.16f };
+					uParam0->f_28 = Vector3(997.6565f, -3166.819f, -34.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 29.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -17939,8 +17939,8 @@ void func_197(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA1EE
 					uParam0->f_21[0] = 50331649;
 					uParam0->f_21[1] = 512;
 					uParam0->f_21[2] = 131074;
-					uParam0->f_28 = { 999.9925f, -3169.012f, -34.3f };
-					uParam0->f_31 = { 0f, 0f, 117.25f };
+					uParam0->f_28 = Vector3(999.9925f, -3169.012f, -34.3f);
+					uParam0->f_31 = Vector3(0f, 0f, 117.25f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -17972,8 +17972,8 @@ void func_198(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA40D
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 50397442;
 					uParam0->f_21[2] = 65539;
-					uParam0->f_28 = { 999.875f, -3167.542f, -34.076f };
-					uParam0->f_31 = { 0f, 0f, -65.65f };
+					uParam0->f_28 = Vector3(999.875f, -3167.542f, -34.076f);
+					uParam0->f_31 = Vector3(0f, 0f, -65.65f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -17998,8 +17998,8 @@ void func_198(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA40D
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 16908291;
 					uParam0->f_21[2] = 131073;
-					uParam0->f_28 = { 1000.7605f, -3167.488f, -34.05f };
-					uParam0->f_31 = { 0f, 0f, 117f };
+					uParam0->f_28 = Vector3(1000.7605f, -3167.488f, -34.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 117f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18023,8 +18023,8 @@ void func_198(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA40D
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 196611;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 997.4065f, -3164.083f, -34.05f };
-					uParam0->f_31 = { 0f, 0f, -90f };
+					uParam0->f_28 = Vector3(997.4065f, -3164.083f, -34.05f);
+					uParam0->f_31 = Vector3(0f, 0f, -90f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18056,8 +18056,8 @@ void func_199(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA62E
 					uParam0->f_21[0] = 50462720;
 					uParam0->f_21[1] = 33620225;
 					uParam0->f_21[2] = 65538;
-					uParam0->f_28 = { 1123.041f, -3142.595f, -37.05f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1123.041f, -3142.595f, -37.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18081,8 +18081,8 @@ void func_199(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA62E
 					uParam0->f_21[0] = 131073;
 					uParam0->f_21[1] = 196608;
 					uParam0->f_21[2] = 131072;
-					uParam0->f_28 = { 1124.62f, -3147.976f, -37.05f };
-					uParam0->f_31 = { 0f, 0f, 114.5f };
+					uParam0->f_28 = Vector3(1124.62f, -3147.976f, -37.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 114.5f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -18107,8 +18107,8 @@ void func_199(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA62E
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 16842755;
 					uParam0->f_21[2] = 131073;
-					uParam0->f_28 = { 1123.876f, -3147.965f, -37.05f };
-					uParam0->f_31 = { 0f, 0f, 279.25f };
+					uParam0->f_28 = Vector3(1123.876f, -3147.965f, -37.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 279.25f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18140,8 +18140,8 @@ void func_200(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA84E
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 50332416;
 					uParam0->f_21[2] = 131072;
-					uParam0->f_28 = { 1120.2314f, -3148.8044f, -37.05f };
-					uParam0->f_31 = { 0f, 0f, 32.865f };
+					uParam0->f_28 = Vector3(1120.2314f, -3148.8044f, -37.05f);
+					uParam0->f_31 = Vector3(0f, 0f, 32.865f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18165,8 +18165,8 @@ void func_200(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA84E
 					uParam0->f_21[0] = 50397184;
 					uParam0->f_21[1] = 65537;
 					uParam0->f_21[2] = 65536;
-					uParam0->f_28 = { 1119.8665f, -3148.2266f, -37.068f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1119.8665f, -3148.2266f, -37.068f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -18191,8 +18191,8 @@ void func_200(var uParam0, int iParam1, BOOL bParam2) // Position - 0xA84E
 					uParam0->f_21[0] = 33619969;
 					uParam0->f_21[1] = 16908546;
 					uParam0->f_21[2] = 65536;
-					uParam0->f_28 = { 1125.354f, -3146.43f, -37.546f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(1125.354f, -3146.43f, -37.546f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18224,8 +18224,8 @@ void func_201(var uParam0, int iParam1, BOOL bParam2) // Position - 0xAA76
 					uParam0->f_21[0] = 50397184;
 					uParam0->f_21[1] = 50529026;
 					uParam0->f_21[2] = 65537;
-					uParam0->f_28 = { 1122.76f, -3143.686f, -37.275f };
-					uParam0->f_31 = { 0f, 0f, 85.14f };
+					uParam0->f_28 = Vector3(1122.76f, -3143.686f, -37.275f);
+					uParam0->f_31 = Vector3(0f, 0f, 85.14f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18249,8 +18249,8 @@ void func_201(var uParam0, int iParam1, BOOL bParam2) // Position - 0xAA76
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 196611;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { 1125.535f, -3149.074f, -37.546f };
-					uParam0->f_31 = { 0f, 0f, 98.89f };
+					uParam0->f_28 = Vector3(1125.535f, -3149.074f, -37.546f);
+					uParam0->f_31 = Vector3(0f, 0f, 98.89f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18274,8 +18274,8 @@ void func_201(var uParam0, int iParam1, BOOL bParam2) // Position - 0xAA76
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 16974595;
 					uParam0->f_21[2] = 131075;
-					uParam0->f_28 = { 1124.467f, -3148.53f, -37.0375f };
-					uParam0->f_31 = { 0f, 0f, 236f };
+					uParam0->f_28 = Vector3(1124.467f, -3148.53f, -37.0375f);
+					uParam0->f_31 = Vector3(0f, 0f, 236f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -18456,7 +18456,7 @@ void func_212(var uParam0) // Position - 0xAF2B
 	func_213(&(uParam0->f_17), &(uParam0->f_21));
 	uParam0->f_26 = 0;
 	uParam0->f_27 = 0;
-	uParam0->f_31 = { 0f, 0f, -1f };
+	uParam0->f_31 = Vector3(0f, 0f, -1f);
 	uParam0->f_35 = -1;
 	uParam0->f_35.f_1 = 0;
 	uParam0->f_35.f_2 = 0;
@@ -18908,46 +18908,46 @@ void func_232(var uParam0) // Position - 0xB742
 	
 		case 0:
 			uParam0->f_26 = 405;
-			uParam0->f_28 = { -1633.309f, -2996.884f, -78.1125f };
-			uParam0->f_31 = { 0f, 0f, 109.8f };
+			uParam0->f_28 = Vector3(-1633.309f, -2996.884f, -78.1125f);
+			uParam0->f_31 = Vector3(0f, 0f, 109.8f);
 			break;
 	
 		case 1:
 			uParam0->f_26 = 404;
-			uParam0->f_28 = { -1608.5745f, -3015.3684f, -79.6875f };
-			uParam0->f_31 = { 0f, 0f, -111.5f };
+			uParam0->f_28 = Vector3(-1608.5745f, -3015.3684f, -79.6875f);
+			uParam0->f_31 = Vector3(0f, 0f, -111.5f);
 			func_39(&(uParam0->f_11), 31);
 			break;
 	
 		case 2:
 			uParam0->f_26 = 406;
-			uParam0->f_28 = { -1587.359f, -3007.812f, -79f };
-			uParam0->f_31 = { 0f, 0f, -92f };
+			uParam0->f_28 = Vector3(-1587.359f, -3007.812f, -79f);
+			uParam0->f_31 = Vector3(0f, 0f, -92f);
 			break;
 	
 		case 3:
 			uParam0->f_26 = 407;
-			uParam0->f_28 = { -1580.7953f, -3016.358f, -80.0059f };
-			uParam0->f_31 = { 0f, 0f, 266.1042f };
+			uParam0->f_28 = Vector3(-1580.7953f, -3016.358f, -80.0059f);
+			uParam0->f_31 = Vector3(0f, 0f, 266.1042f);
 			func_39(&(uParam0->f_11), 4);
 			break;
 	
 		case 4:
 			uParam0->f_26 = 409;
-			uParam0->f_28 = { -1601.631f, -3002.895f, -76.25f };
-			uParam0->f_31 = { 0f, 0f, -90f };
+			uParam0->f_28 = Vector3(-1601.631f, -3002.895f, -76.25f);
+			uParam0->f_31 = Vector3(0f, 0f, -90f);
 			break;
 	
 		case 5:
 			uParam0->f_26 = 410;
-			uParam0->f_28 = { -1613.653f, -3019.959f, -75.2125f };
-			uParam0->f_31 = { 0f, 0f, 113.5f };
+			uParam0->f_28 = Vector3(-1613.653f, -3019.959f, -75.2125f);
+			uParam0->f_31 = Vector3(0f, 0f, 113.5f);
 			break;
 	
 		case 6:
 			uParam0->f_26 = 408;
-			uParam0->f_28 = { -1581.498f, -3006.177f, -76.025f };
-			uParam0->f_31 = { 0f, 0f, 153.75f };
+			uParam0->f_28 = Vector3(-1581.498f, -3006.177f, -76.025f);
+			uParam0->f_31 = Vector3(0f, 0f, 153.75f);
 			break;
 	}
 
@@ -19252,7 +19252,7 @@ int func_241(var uParam0, int iParam1) // Position - 0xBEF6
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_230(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -20700,8 +20700,8 @@ void func_266(var uParam0, var uParam1, int iParam2, var uParam3, BOOL bParam4) 
 				uParam0->f_6 = 4f;
 				uParam0->f_7 = 5.5f;
 				uParam0->f_8 = 7f;
-				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), { 64.72798f, -749.761f, -1008.6142f } - { 60.89419f, -759.604f, -1003.911f }) };
-				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), { 66.58668f, -749.9338f, -1001.2277f } - { 60.89419f, -759.604f, -1003.911f }) };
+				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(64.72798f, -749.761f, -1008.6142f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
+				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(66.58668f, -749.9338f, -1001.2277f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
 				uParam0->f_15 = 6.75f;
 				uParam3->[uParam0->f_2] = iParam2;
 				func_39(uParam0, 2);
@@ -20713,8 +20713,8 @@ void func_266(var uParam0, var uParam1, int iParam2, var uParam3, BOOL bParam4) 
 				uParam0->f_6 = 4.3f;
 				uParam0->f_7 = 5f;
 				uParam0->f_8 = 7f;
-				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), { 69.49414f, -747.81433f, -1012.00116f } - { 60.89419f, -759.604f, -1003.911f }) };
-				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), { 71.26809f, -752.7428f, -1011.83325f } - { 60.89419f, -759.604f, -1003.911f }) };
+				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(69.49414f, -747.81433f, -1012.00116f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
+				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(71.26809f, -752.7428f, -1011.83325f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
 				uParam0->f_15 = 5.75f;
 				uParam3->[uParam0->f_2] = iParam2;
 				func_39(uParam0, 2);
@@ -20845,7 +20845,7 @@ void func_273(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 0;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -20855,7 +20855,7 @@ void func_273(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 1;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -20865,7 +20865,7 @@ void func_273(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 6;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -20875,7 +20875,7 @@ void func_273(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 7;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -20885,7 +20885,7 @@ void func_273(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 8;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -21903,8 +21903,8 @@ void func_303(int iParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) 
 					uParam1->f_21[0] = 16908288;
 					uParam1->f_21[1] = 1;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.859f, 5.9914f, 0.585f };
-					uParam1->f_31 = { 0f, 0f, 15.095f };
+					uParam1->f_28 = Vector3(5.859f, 5.9914f, 0.585f);
+					uParam1->f_31 = Vector3(0f, 0f, 15.095f);
 					func_44(&(uParam1->f_11));
 				
 					if (Global_1981409)
@@ -21941,8 +21941,8 @@ void func_303(int iParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) 
 					uParam1->f_21[0] = -1;
 					uParam1->f_21[1] = -1;
 					uParam1->f_21[2] = -1;
-					uParam1->f_28 = { -7.3487f, -0.3719f, 8.6058f };
-					uParam1->f_31 = { 0f, 0f, 0f };
+					uParam1->f_28 = Vector3(-7.3487f, -0.3719f, 8.6058f);
+					uParam1->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 7);
 					func_39(&(uParam1->f_11), 4);
@@ -22184,8 +22184,8 @@ void func_303(int iParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 9.119f, 2.6278f, 0.615f };
-					uParam1->f_31 = { 0f, 0f, 317.205f };
+					uParam1->f_28 = Vector3(9.119f, 2.6278f, 0.615f);
+					uParam1->f_31 = Vector3(0f, 0f, 317.205f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 1);
 					func_39(&(uParam1->f_11), 48);
@@ -22344,7 +22344,7 @@ void func_303(int iParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4) 
 	}
 
 	if (!_IS_NULL_VECTOR(uParam1->f_28))
-		uParam1->f_28 = { func_48(func_280(iParam0), func_279(iParam0), uParam1->f_28) };
+		uParam1->f_28 = Vector3(func_48(func_280(iParam0), func_279(iParam0), uParam1->f_28));
 
 	if (uParam1->f_31.f_2 != -1f)
 		uParam1->f_31.f_2 = func_47(func_279(iParam0), uParam1->f_31.f_2);
@@ -22368,7 +22368,7 @@ void func_304(var uParam0, var uParam1, var uParam2) // Position - 0xFC71
 		case 5:
 		case 6:
 		case 7:
-			*uParam0 = { 0.353f, 0.0113f, 4.795f };
+			*uParam0 = Vector3(0.353f, 0.0113f, 4.795f);
 			*uParam1 = 311.98f;
 			break;
 	
@@ -22380,7 +22380,7 @@ void func_304(var uParam0, var uParam1, var uParam2) // Position - 0xFC71
 		case 13:
 		case 14:
 		case 15:
-			*uParam0 = { 1.703f, -1.1887f, 4.795f };
+			*uParam0 = Vector3(1.703f, -1.1887f, 4.795f);
 			*uParam1 = 160f;
 			break;
 	}
@@ -22392,12 +22392,12 @@ void func_305(var uParam0, var uParam1, var uParam2) // Position - 0xFD22
 {
 	if (func_306(uParam2) == 0)
 	{
-		*uParam0 = { 2.923f, 8.2713f, 0.175f };
+		*uParam0 = Vector3(2.923f, 8.2713f, 0.175f);
 		*uParam1 = 263.68f;
 	}
 	else
 	{
-		*uParam0 = { 9.093f, -5.9987f, 3.795f };
+		*uParam0 = Vector3(9.093f, -5.9987f, 3.795f);
 		*uParam1 = 92.18f;
 	}
 
@@ -22460,7 +22460,7 @@ void func_308(var uParam0, var uParam1, var uParam2) // Position - 0xFE0C
 		case 9:
 		case 12:
 		case 13:
-			*uParam0 = { 10.803f, -7.2787f, 0.995f };
+			*uParam0 = Vector3(10.803f, -7.2787f, 0.995f);
 			*uParam1 = 268.28f;
 			break;
 	
@@ -22472,7 +22472,7 @@ void func_308(var uParam0, var uParam1, var uParam2) // Position - 0xFE0C
 		case 11:
 		case 14:
 		case 15:
-			*uParam0 = { -1.457f, -16.2687f, 4.785f };
+			*uParam0 = Vector3(-1.457f, -16.2687f, 4.785f);
 			*uParam1 = 207.18f;
 			break;
 	}
@@ -22496,7 +22496,7 @@ void func_309(var uParam0, var uParam1, var uParam2) // Position - 0xFEBD
 		case 10:
 		case 12:
 		case 14:
-			*uParam0 = { 2.263f, 4.1013f, 4.805f };
+			*uParam0 = Vector3(2.263f, 4.1013f, 4.805f);
 			*uParam1 = 318.08f;
 			break;
 	
@@ -22508,7 +22508,7 @@ void func_309(var uParam0, var uParam1, var uParam2) // Position - 0xFEBD
 		case 11:
 		case 13:
 		case 15:
-			*uParam0 = { 3.073f, -1.3787f, 0.9948f };
+			*uParam0 = Vector3(3.073f, -1.3787f, 0.9948f);
 			*uParam1 = 228.38f;
 			break;
 	}
@@ -22525,12 +22525,12 @@ void func_310(var uParam0, var uParam1, var uParam2) // Position - 0xFF6E
 	switch (func_246(num))
 	{
 		case 0:
-			*uParam0 = { -5.02f, 9.47f, 8.5958f };
+			*uParam0 = Vector3(-5.02f, 9.47f, 8.5958f);
 			*uParam1 = 90f;
 			break;
 	
 		case 1:
-			*uParam0 = { -7.51f, 7.32f, 8.6f };
+			*uParam0 = Vector3(-7.51f, 7.32f, 8.6f);
 			*uParam1 = 351.3f;
 			break;
 	}
@@ -22552,18 +22552,18 @@ void func_311(var uParam0, var uParam1) // Position - 0xFFCF
 	switch (uParam0->f_26)
 	{
 		case 400:
-			uParam0->f_28 = { -3.807f, 9.9713f, 3.825f };
+			uParam0->f_28 = Vector3(-3.807f, 9.9713f, 3.825f);
 			uParam0->f_31.f_2 = 277.7f;
 			break;
 	
 		case 401:
-			uParam0->f_28 = { 2.186f, 9.6232f, 3.815f };
+			uParam0->f_28 = Vector3(2.186f, 9.6232f, 3.815f);
 			uParam0->f_31.f_2 = 90f;
 			func_39(&(uParam0->f_11), 31);
 			break;
 	
 		case 402:
-			uParam0->f_28 = { -3.217f, 9.8613f, 3.825f };
+			uParam0->f_28 = Vector3(-3.217f, 9.8613f, 3.825f);
 			uParam0->f_31.f_2 = 270f;
 			break;
 	}
@@ -22581,32 +22581,32 @@ void func_312(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		case 0:
 		case 1:
-			*uParam0 = { -8.4519f, 4.1221f, 9.09f };
+			*uParam0 = Vector3(-8.4519f, 4.1221f, 9.09f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 2:
 		case 3:
-			*uParam0 = { -8.536f, -2.5734f, 9.09f };
+			*uParam0 = Vector3(-8.536f, -2.5734f, 9.09f);
 			*uParam1 = 5f;
 			break;
 	
 		case 4:
 		case 5:
-			*uParam0 = { -6.492f, -2.591f, 9.09f };
+			*uParam0 = Vector3(-6.492f, -2.591f, 9.09f);
 			*uParam1 = 356.45f;
 			break;
 	
 		case 6:
 		case 7:
-			*uParam0 = { -0.5727f, 5.2458f, 9.58f };
+			*uParam0 = Vector3(-0.5727f, 5.2458f, 9.58f);
 			*uParam1 = 90.98f;
 			*uParam2 = 394;
 			break;
 	
 		case 8:
 		case 9:
-			*uParam0 = { -4.474f, -4.375f, 9.58f };
+			*uParam0 = Vector3(-4.474f, -4.375f, 9.58f);
 			*uParam1 = 274.65f;
 			*uParam2 = 394;
 			break;
@@ -22614,14 +22614,14 @@ void func_312(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 10:
 		case 11:
 		case 12:
-			*uParam0 = { -6.4989f, 2.0799f, 9.09f };
+			*uParam0 = Vector3(-6.4989f, 2.0799f, 9.09f);
 			*uParam1 = 352.15f;
 			break;
 	
 		case 13:
 		case 14:
 		case 15:
-			*uParam0 = { -6.417f, 4.1655f, 9.1f };
+			*uParam0 = Vector3(-6.417f, 4.1655f, 9.1f);
 			*uParam1 = 177.95f;
 			break;
 	}
@@ -22639,47 +22639,47 @@ void func_313(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		case 0:
 		case 1:
-			*uParam0 = { -8.536f, -2.5734f, 9.09f };
+			*uParam0 = Vector3(-8.536f, -2.5734f, 9.09f);
 			*uParam1 = 5f;
 			break;
 	
 		case 2:
 		case 3:
-			*uParam0 = { -6.492f, -2.591f, 9.09f };
+			*uParam0 = Vector3(-6.492f, -2.591f, 9.09f);
 			*uParam1 = 356.45f;
 			break;
 	
 		case 4:
 		case 5:
-			*uParam0 = { -0.5727f, 5.2458f, 9.58f };
+			*uParam0 = Vector3(-0.5727f, 5.2458f, 9.58f);
 			*uParam1 = 90.98f;
 			*uParam2 = 395;
 			break;
 	
 		case 6:
 		case 7:
-			*uParam0 = { -4.474f, -4.375f, 9.58f };
+			*uParam0 = Vector3(-4.474f, -4.375f, 9.58f);
 			*uParam1 = 274.65f;
 			*uParam2 = 395;
 			break;
 	
 		case 8:
 		case 9:
-			*uParam0 = { -6.4989f, 2.0799f, 9.09f };
+			*uParam0 = Vector3(-6.4989f, 2.0799f, 9.09f);
 			*uParam1 = 352.15f;
 			break;
 	
 		case 10:
 		case 11:
 		case 12:
-			*uParam0 = { -6.417f, 4.1655f, 9.1f };
+			*uParam0 = Vector3(-6.417f, 4.1655f, 9.1f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 13:
 		case 14:
 		case 15:
-			*uParam0 = { -8.4519f, 4.1221f, 9.09f };
+			*uParam0 = Vector3(-8.4519f, 4.1221f, 9.09f);
 			*uParam1 = 177.95f;
 			break;
 	}
@@ -22697,47 +22697,47 @@ void func_314(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		case 0:
 		case 1:
-			*uParam0 = { -0.5727f, 5.2458f, 9.58f };
+			*uParam0 = Vector3(-0.5727f, 5.2458f, 9.58f);
 			*uParam1 = 90.98f;
 			*uParam2 = 394;
 			break;
 	
 		case 2:
 		case 3:
-			*uParam0 = { -4.474f, -4.375f, 9.58f };
+			*uParam0 = Vector3(-4.474f, -4.375f, 9.58f);
 			*uParam1 = 274.65f;
 			*uParam2 = 394;
 			break;
 	
 		case 4:
 		case 5:
-			*uParam0 = { -6.4989f, 2.0799f, 9.09f };
+			*uParam0 = Vector3(-6.4989f, 2.0799f, 9.09f);
 			*uParam1 = 352.15f;
 			break;
 	
 		case 6:
 		case 7:
-			*uParam0 = { -6.417f, 4.1655f, 9.1f };
+			*uParam0 = Vector3(-6.417f, 4.1655f, 9.1f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 8:
 		case 9:
-			*uParam0 = { -8.4519f, 4.1221f, 9.09f };
+			*uParam0 = Vector3(-8.4519f, 4.1221f, 9.09f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 10:
 		case 11:
 		case 12:
-			*uParam0 = { -8.536f, -2.5734f, 9.09f };
+			*uParam0 = Vector3(-8.536f, -2.5734f, 9.09f);
 			*uParam1 = 5f;
 			break;
 	
 		case 13:
 		case 14:
 		case 15:
-			*uParam0 = { -6.492f, -2.591f, 9.09f };
+			*uParam0 = Vector3(-6.492f, -2.591f, 9.09f);
 			*uParam1 = 356.45f;
 			break;
 	}
@@ -22755,38 +22755,38 @@ void func_315(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 	{
 		case 0:
 		case 1:
-			*uParam0 = { -6.4989f, 2.0799f, 9.09f };
+			*uParam0 = Vector3(-6.4989f, 2.0799f, 9.09f);
 			*uParam1 = 352.15f;
 			break;
 	
 		case 2:
 		case 3:
-			*uParam0 = { -6.417f, 4.1655f, 9.1f };
+			*uParam0 = Vector3(-6.417f, 4.1655f, 9.1f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 4:
 		case 5:
-			*uParam0 = { -8.4519f, 4.1221f, 9.09f };
+			*uParam0 = Vector3(-8.4519f, 4.1221f, 9.09f);
 			*uParam1 = 177.95f;
 			break;
 	
 		case 6:
 		case 7:
-			*uParam0 = { -8.536f, -2.5734f, 9.09f };
+			*uParam0 = Vector3(-8.536f, -2.5734f, 9.09f);
 			*uParam1 = 5f;
 			break;
 	
 		case 8:
 		case 9:
-			*uParam0 = { -6.492f, -2.591f, 9.09f };
+			*uParam0 = Vector3(-6.492f, -2.591f, 9.09f);
 			*uParam1 = 356.45f;
 			break;
 	
 		case 10:
 		case 11:
 		case 12:
-			*uParam0 = { -0.5727f, 5.2458f, 9.58f };
+			*uParam0 = Vector3(-0.5727f, 5.2458f, 9.58f);
 			*uParam1 = 90.98f;
 			*uParam2 = 395;
 			break;
@@ -22794,7 +22794,7 @@ void func_315(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 13:
 		case 14:
 		case 15:
-			*uParam0 = { -4.474f, -4.375f, 9.58f };
+			*uParam0 = Vector3(-4.474f, -4.375f, 9.58f);
 			*uParam1 = 274.65f;
 			*uParam2 = 395;
 			break;
@@ -22844,7 +22844,7 @@ int func_320(var uParam0, int iParam1) // Position - 0x105F4
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_302(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -23123,35 +23123,35 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_chair") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_chair"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_01a") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_01a"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_01b") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_01b"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_02a") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_02a"));
 					break;
 			
 				case 5:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_02a^1") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_02a^1"));
 					break;
 			
 				case 6:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_02b") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_02b"));
 					break;
 			
 				case 7:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_mixer_02b^1") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_mixer_02b^1"));
 					break;
 			}
 			break;
@@ -23190,7 +23190,7 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_chair") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_chair"));
 					break;
 			}
 			break;
@@ -23202,7 +23202,7 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_chair") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_chair"));
 					break;
 			}
 			break;
@@ -23214,7 +23214,7 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_chair") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_chair"));
 					break;
 			}
 			break;
@@ -23226,7 +23226,7 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_chair") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_chair"));
 					break;
 			}
 			break;
@@ -23238,23 +23238,23 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_lstick") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_lstick"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_rstick") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_rstick"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_drums") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_drums"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_stool") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_stool"));
 					break;
 			}
 			break;
@@ -23266,7 +23266,7 @@ void func_327(int iParam0, var uParam1, int iParam2, int iParam3, var uParam4, v
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			}
 			break;
@@ -24873,7 +24873,7 @@ void func_347(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 3;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -24883,7 +24883,7 @@ void func_347(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 4;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -25245,10 +25245,10 @@ void func_358(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 		
 			if (func_363(iParam0, iParam2))
-				uParam1->f_18 = { func_333(func_328(iParam0, iParam2), "", "_facial") };
+				uParam1->f_18 = Vector3(func_333(func_328(iParam0, iParam2), "", "_facial"));
 			break;
 	
 		case 354:
@@ -25260,10 +25260,10 @@ void func_358(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 		
 			if (func_363(iParam0, iParam2))
-				uParam1->f_18 = { func_333(func_328(iParam0, iParam2), "", "_facial") };
+				uParam1->f_18 = Vector3(func_333(func_328(iParam0, iParam2), "", "_facial"));
 			break;
 	
 		case 353:
@@ -25281,8 +25281,8 @@ void func_358(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_18 = { func_333(func_328(iParam0, iParam2), "", "_facial") };
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_18 = Vector3(func_333(func_328(iParam0, iParam2), "", "_facial"));
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 359:
@@ -25291,8 +25291,8 @@ void func_358(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, v
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_18 = { func_333(func_328(iParam0, iParam2), "", "_facial") };
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_18 = Vector3(func_333(func_328(iParam0, iParam2), "", "_facial"));
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 2:
@@ -26462,26 +26462,26 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 						case 9:
 						case 10:
 							uParam0->f_26 = 349;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						case 13:
 							uParam0->f_26 = 350;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						case 11:
 							uParam0->f_26 = 351;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						case 12:
 							uParam0->f_26 = 352;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						case 8:
-							uParam0->f_28 = { 5.0555f, -10.501f, 0.4356f };
+							uParam0->f_28 = Vector3(5.0555f, -10.501f, 0.4356f);
 							break;
 					}
 				
@@ -26492,7 +26492,7 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 22);
@@ -26552,8 +26552,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 22);
@@ -26584,16 +26584,16 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					{
 						case 11:
 							uParam0->f_26 = 358;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						case 12:
 							uParam0->f_26 = 359;
-							uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
+							uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
 							break;
 					
 						default:
-							uParam0->f_28 = { 5.0108f, -8.1127f, 0.4356f };
+							uParam0->f_28 = Vector3(5.0108f, -8.1127f, 0.4356f);
 							break;
 					}
 				
@@ -26604,7 +26604,7 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 22);
@@ -26640,8 +26640,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 513;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -12.541f, -13.228f, 0.694f };
-					uParam0->f_31 = { 0f, 0f, 18.6748f };
+					uParam0->f_28 = Vector3(-12.541f, -13.228f, 0.694f);
+					uParam0->f_31 = Vector3(0f, 0f, 18.6748f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 1);
@@ -26865,8 +26865,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 22);
 					func_39(&(uParam0->f_11), 7);
@@ -26901,8 +26901,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 22);
 					func_39(&(uParam0->f_11), 7);
@@ -26937,8 +26937,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { { -100.0031f, -53.6589f, -1004.9483f } - func_355(-1) };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = { Vector3(-100.0031f, -53.6589f, -1004.9483f) - func_355(-1) };
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 8);
 					func_39(&(uParam0->f_11), 54);
@@ -26968,8 +26968,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { { -100.4031f, -83.3802f, -1009.9588f } - func_355(-1) };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = { Vector3(-100.4031f, -83.3802f, -1009.9588f) - func_355(-1) };
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 8);
 					func_39(&(uParam0->f_11), 54);
@@ -26992,8 +26992,8 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 				case 3:
 					uParam0->f_26 = 387;
 					uParam0->f_27 = 0;
-					uParam0->f_28 = { -0.0045f, 0.0099f, 0.4031f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-0.0045f, 0.0099f, 0.4031f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 22);
 					func_39(&(uParam0->f_11), 7);
@@ -27010,7 +27010,7 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 	}
 
 	if (!_IS_NULL_VECTOR(uParam0->f_28))
-		uParam0->f_28 = { func_48(func_355(-1), func_354(-1), uParam0->f_28) };
+		uParam0->f_28 = Vector3(func_48(func_355(-1), func_354(-1), uParam0->f_28));
 
 	if (uParam0->f_31.f_2 != -1f)
 		uParam0->f_31.f_2 = func_47(func_354(-1), uParam0->f_31.f_2);
@@ -27030,25 +27030,25 @@ void func_384(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			switch (iParam0)
 			{
 				case 0:
-					*uParam1 = { 20.1395f, 10.1931f, 1.4231f };
+					*uParam1 = Vector3(20.1395f, 10.1931f, 1.4231f);
 					*uParam2 = 80.97f;
 					*uParam3 = 361;
 					break;
 			
 				case 1:
-					*uParam1 = { 18.927f, 10.8181f, 1.4231f };
+					*uParam1 = Vector3(18.927f, 10.8181f, 1.4231f);
 					*uParam2 = 147.5f;
 					*uParam3 = 360;
 					break;
 			
 				case 2:
-					*uParam1 = { 16.7792f, -5.5146f, 1.3974f };
+					*uParam1 = Vector3(16.7792f, -5.5146f, 1.3974f);
 					*uParam2 = 108.25f;
 					*uParam3 = 362;
 					break;
 			
 				case 3:
-					*uParam1 = { -7.1085f, -21.1569f, 0.5107f };
+					*uParam1 = Vector3(-7.1085f, -21.1569f, 0.5107f);
 					*uParam2 = 90f;
 					*uParam3 = 363;
 					break;
@@ -27059,19 +27059,19 @@ void func_384(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			switch (iParam0)
 			{
 				case 0:
-					*uParam1 = { 24.5542f, -5.5771f, 1.3974f };
+					*uParam1 = Vector3(24.5542f, -5.5771f, 1.3974f);
 					*uParam2 = 152.25f;
 					*uParam3 = 361;
 					break;
 			
 				case 1:
-					*uParam1 = { 19.4205f, 2.3224f, 1.4031f };
+					*uParam1 = Vector3(19.4205f, 2.3224f, 1.4031f);
 					*uParam2 = 161.46f;
 					*uParam3 = 364;
 					break;
 			
 				case 2:
-					*uParam1 = { -2.4395f, -18.51511f, 0.9944f };
+					*uParam1 = Vector3(-2.4395f, -18.51511f, 0.9944f);
 					*uParam2 = 161.5f;
 					*uParam3 = 370;
 					break;
@@ -27079,13 +27079,13 @@ void func_384(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 				case 3:
 					if (iParam5 != 11)
 					{
-						*uParam1 = { 9.9145f, -8.5896f, 1.3974f };
+						*uParam1 = Vector3(9.9145f, -8.5896f, 1.3974f);
 						*uParam2 = 98.5f;
 						*uParam3 = 365;
 					}
 					else
 					{
-						*uParam1 = { -8.1445f, -15.0694f, 1.0106f };
+						*uParam1 = Vector3(-8.1445f, -15.0694f, 1.0106f);
 						*uParam2 = 180f;
 						*uParam3 = 367;
 					}
@@ -27097,25 +27097,25 @@ void func_384(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, i
 			switch (iParam0)
 			{
 				case 0:
-					*uParam1 = { 23.777f, -2.2694f, 1.4107f };
+					*uParam1 = Vector3(23.777f, -2.2694f, 1.4107f);
 					*uParam2 = 264.58f;
 					*uParam3 = 366;
 					break;
 			
 				case 1:
-					*uParam1 = { -2.533f, -1.5794f, 1.0107f };
+					*uParam1 = Vector3(-2.533f, -1.5794f, 1.0107f);
 					*uParam2 = 270.64f;
 					*uParam3 = 378;
 					break;
 			
 				case 2:
-					*uParam1 = { 24.682f, -10.6444f, 1.3981f };
+					*uParam1 = Vector3(24.682f, -10.6444f, 1.3981f);
 					*uParam2 = 10.25f;
 					*uParam3 = 361;
 					break;
 			
 				case 3:
-					*uParam1 = { -10.8695f, -13.6319f, 0.5831f };
+					*uParam1 = Vector3(-10.8695f, -13.6319f, 0.5831f);
 					*uParam2 = 14.5f;
 					*uParam3 = 369;
 					break;
@@ -27137,19 +27137,19 @@ void func_385(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4) /
 		switch (num)
 		{
 			case 0:
-				*uParam0 = { 8.6265f, 8.2099f, 1.3906f };
+				*uParam0 = Vector3(8.6265f, 8.2099f, 1.3906f);
 				*uParam1 = -172.25f;
 				*uParam2 = 381;
 				break;
 		
 			case 1:
-				*uParam0 = { 5.8865f, 2.3849f, 1.3906f };
+				*uParam0 = Vector3(5.8865f, 2.3849f, 1.3906f);
 				*uParam1 = -117.26f;
 				*uParam2 = 381;
 				break;
 		
 			case 2:
-				*uParam0 = { 5.8865f, 2.3849f, 1.3906f };
+				*uParam0 = Vector3(5.8865f, 2.3849f, 1.3906f);
 				*uParam1 = -117.26f;
 				*uParam2 = 381;
 				break;
@@ -27160,19 +27160,19 @@ void func_385(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4) /
 		switch (num)
 		{
 			case 0:
-				*uParam0 = { -3.491f, -18.7105f, 0.9981f };
+				*uParam0 = Vector3(-3.491f, -18.7105f, 0.9981f);
 				*uParam1 = 170.5569f;
 				*uParam2 = 383;
 				break;
 		
 			case 1:
-				*uParam0 = { 10.6855f, 9.2579f, 1.4001f };
+				*uParam0 = Vector3(10.6855f, 9.2579f, 1.4001f);
 				*uParam1 = -110.09f;
 				*uParam2 = 377;
 				break;
 		
 			case 2:
-				*uParam0 = { 7.6095f, 2.6349f, 1.404f };
+				*uParam0 = Vector3(7.6095f, 2.6349f, 1.404f);
 				*uParam1 = 77.04f;
 				*uParam2 = 380;
 				break;
@@ -27193,19 +27193,19 @@ void func_386(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4) /
 		switch (num)
 		{
 			case 0:
-				*uParam0 = { 8.3755f, 7.8224f, 0.8906f };
+				*uParam0 = Vector3(8.3755f, 7.8224f, 0.8906f);
 				*uParam1 = -149.01f;
 				*uParam2 = 382;
 				break;
 		
 			case 1:
-				*uParam0 = { 6.3755f, 2.8724f, 0.9281f };
+				*uParam0 = Vector3(6.3755f, 2.8724f, 0.9281f);
 				*uParam1 = -108.76f;
 				*uParam2 = 382;
 				break;
 		
 			case 2:
-				*uParam0 = { 6.3755f, 2.8724f, 0.9281f };
+				*uParam0 = Vector3(6.3755f, 2.8724f, 0.9281f);
 				*uParam1 = -108.76f;
 				*uParam2 = 382;
 				break;
@@ -27216,19 +27216,19 @@ void func_386(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4) /
 		switch (num)
 		{
 			case 0:
-				*uParam0 = { -2.9995f, -12.75123f, 0.99377f };
+				*uParam0 = Vector3(-2.9995f, -12.75123f, 0.99377f);
 				*uParam1 = 180f;
 				*uParam2 = 378;
 				break;
 		
 			case 1:
-				*uParam0 = { 11.5735f, 8.8329f, 1.4001f };
+				*uParam0 = Vector3(11.5735f, 8.8329f, 1.4001f);
 				*uParam1 = 76.86f;
 				*uParam2 = 379;
 				break;
 		
 			case 2:
-				*uParam0 = { 6.3815f, 2.7974f, 0.904f };
+				*uParam0 = Vector3(6.3815f, 2.7974f, 0.904f);
 				*uParam1 = -102.57f;
 				*uParam2 = 384;
 				break;
@@ -27249,7 +27249,7 @@ void func_387(var uParam0, var uParam1, int iParam2) // Position - 0x16158
 		switch (num)
 		{
 			case 0:
-				uParam0->f_28 = { 7.7905f, 6.9408f, 0.4069f };
+				uParam0->f_28 = Vector3(7.7905f, 6.9408f, 0.4069f);
 				uParam0->f_31.f_2 = 240f;
 				uParam0->f_26 = 371;
 				func_39(&(uParam0->f_11), 48);
@@ -27257,7 +27257,7 @@ void func_387(var uParam0, var uParam1, int iParam2) // Position - 0x16158
 				break;
 		
 			case 1:
-				uParam0->f_28 = { 5.4195f, 6.5849f, 0.4031f };
+				uParam0->f_28 = Vector3(5.4195f, 6.5849f, 0.4031f);
 				uParam0->f_31.f_2 = -131.76f;
 				uParam0->f_26 = 372;
 				func_39(&(uParam0->f_11), 31);
@@ -27265,7 +27265,7 @@ void func_387(var uParam0, var uParam1, int iParam2) // Position - 0x16158
 				break;
 		
 			case 2:
-				uParam0->f_28 = { 5.5525f, 6.7033f, 0.4069f };
+				uParam0->f_28 = Vector3(5.5525f, 6.7033f, 0.4069f);
 				uParam0->f_31.f_2 = 240f;
 				uParam0->f_26 = 373;
 				break;
@@ -27276,19 +27276,19 @@ void func_387(var uParam0, var uParam1, int iParam2) // Position - 0x16158
 		switch (num)
 		{
 			case 0:
-				uParam0->f_28 = { 6.6235f, 2.6349f, 0.4031f };
+				uParam0->f_28 = Vector3(6.6235f, 2.6349f, 0.4031f);
 				uParam0->f_31.f_2 = -123.12f;
 				uParam0->f_26 = 374;
 				break;
 		
 			case 1:
-				uParam0->f_28 = { -8.9235f, -18.9151f, 0.504f };
+				uParam0->f_28 = Vector3(-8.9235f, -18.9151f, 0.504f);
 				uParam0->f_31.f_2 = 180f;
 				uParam0->f_26 = 376;
 				break;
 		
 			case 2:
-				uParam0->f_28 = { -8.9235f, -18.9151f, 0.504f };
+				uParam0->f_28 = Vector3(-8.9235f, -18.9151f, 0.504f);
 				uParam0->f_31.f_2 = 180f;
 				uParam0->f_26 = 376;
 				break;
@@ -27347,7 +27347,7 @@ int func_393(var uParam0, int iParam1) // Position - 0x16319
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_382(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -28134,8 +28134,8 @@ int func_402(Ped pedParam0, int iParam1, int iParam2, var uParam3) // Position -
 	if (func_131())
 		return 0;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!func_12(0f, 0f, entityCoords.f_2, 0f, 0f, entityCoords2.f_2, 1056964608, false))
 		return 0;
@@ -30240,7 +30240,7 @@ void func_419(var uParam0, int iParam1, char* sParam2, var uParam3, var uParam4,
 	switch (iParam1)
 	{
 		case 0:
-			TEXT_LABEL_COPY(&(uParam0->f_2), { uParam3 }, 16);
+			TEXT_LABEL_COPY(&(uParam0->f_2), Vector3(uParam3), 16);
 			TEXT_LABEL_APPEND_STRING(&(uParam0->f_2), &uParam9, 64);
 			TEXT_LABEL_APPEND_STRING(&(uParam0->f_2), "_trans_", 64);
 			TEXT_LABEL_APPEND_STRING(&(uParam0->f_2), &uParam10, 64);
@@ -31195,8 +31195,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -128.9668f, -110.0447f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 263.7999f };
+					uParam0->f_28 = Vector3(-128.9668f, -110.0447f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 263.7999f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -31221,8 +31221,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 66050;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -129.4226f, -113.9912f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 280.8f };
+					uParam0->f_28 = Vector3(-129.4226f, -113.9912f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 280.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31246,8 +31246,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -128.6745f, -100.4075f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 252.7997f };
+					uParam0->f_28 = Vector3(-128.6745f, -100.4075f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 252.7997f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31271,8 +31271,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 519;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -128.979f, -101.3176f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 284.4f };
+					uParam0->f_28 = Vector3(-128.979f, -101.3176f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 284.4f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31296,8 +31296,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -128.9677f, -111.1096f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 252.7997f };
+					uParam0->f_28 = Vector3(-128.9677f, -111.1096f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 252.7997f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31321,8 +31321,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 11;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -129.2502f, -118.7561f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 291.6f };
+					uParam0->f_28 = Vector3(-129.2502f, -118.7561f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 291.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31346,8 +31346,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66304;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -129.1802f, -117.6282f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 252.7997f };
+					uParam0->f_28 = Vector3(-129.1802f, -117.6282f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 252.7997f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31371,8 +31371,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 125.1035f, -193.5156f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 108f };
+					uParam0->f_28 = Vector3(125.1035f, -193.5156f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 108f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31396,8 +31396,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 125.1826f, -194.5066f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 57.6f };
+					uParam0->f_28 = Vector3(125.1826f, -194.5066f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 57.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31421,8 +31421,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 773;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 124.8086f, -201.6896f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 73.3995f };
+					uParam0->f_28 = Vector3(124.8086f, -201.6896f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 73.3995f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31446,8 +31446,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 65545;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 124.8425f, -200.5925f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 108f };
+					uParam0->f_28 = Vector3(124.8425f, -200.5925f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 108f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31471,8 +31471,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65538;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -34.7374f, -9.8076f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 131.76f };
+					uParam0->f_28 = Vector3(-34.7374f, -9.8076f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 131.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -31497,8 +31497,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -32.2675f, -6.9976f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 298.08f };
+					uParam0->f_28 = Vector3(-32.2675f, -6.9976f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 298.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31522,8 +31522,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 779;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5485f, 2.6414f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 15.84f };
+					uParam0->f_28 = Vector3(-8.5485f, 2.6414f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 15.84f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					func_39(&(uParam0->f_11), 7);
@@ -31549,8 +31549,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 66309;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -34.7675f, -10.4976f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 54.72f };
+					uParam0->f_28 = Vector3(-34.7675f, -10.4976f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 54.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					break;
@@ -31575,8 +31575,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.5044f, 2.4944f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 334.08f };
+					uParam0->f_28 = Vector3(-5.5044f, 2.4944f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -31601,8 +31601,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.0184f, 2.9915f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 295.92f };
+					uParam0->f_28 = Vector3(-6.0184f, 2.9915f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 295.92f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -31627,8 +31627,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66050;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.6919f, -13.3291f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 118.8f };
+					uParam0->f_28 = Vector3(-11.6919f, -13.3291f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 118.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31652,8 +31652,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -23.6794f, -23.9675f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 148.32f };
+					uParam0->f_28 = Vector3(-23.6794f, -23.9675f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 148.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31677,8 +31677,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 66305;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -25.3324f, -23.9705f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 214.56f };
+					uParam0->f_28 = Vector3(-25.3324f, -23.9705f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 214.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31702,8 +31702,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.4495f, -23.7527f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(-24.4495f, -23.7527f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31727,8 +31727,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -36.8254f, -19.5405f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 64.8f };
+					uParam0->f_28 = Vector3(-36.8254f, -19.5405f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 64.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31752,8 +31752,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66308;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -36.6544f, -18.4265f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 110.16f };
+					uParam0->f_28 = Vector3(-36.6544f, -18.4265f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 110.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -31778,8 +31778,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 131590;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -20.2734f, -17.4526f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 12.96f };
+					uParam0->f_28 = Vector3(-20.2734f, -17.4526f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 12.96f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31803,8 +31803,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.2975f, -17.1855f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 316.8f };
+					uParam0->f_28 = Vector3(-21.2975f, -17.1855f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 316.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31828,8 +31828,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.3024f, -14.3047f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 313.2f };
+					uParam0->f_28 = Vector3(-3.3024f, -14.3047f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 313.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -31854,8 +31854,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.3634f, -12.9375f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 241.2f };
+					uParam0->f_28 = Vector3(-3.3634f, -12.9375f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 241.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -31880,8 +31880,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 32.2075f, -24.4817f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 238.32f };
+					uParam0->f_28 = Vector3(32.2075f, -24.4817f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 238.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31905,8 +31905,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { 21.1926f, -16.3945f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 334.8f };
+					uParam0->f_28 = Vector3(21.1926f, -16.3945f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -31931,8 +31931,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 131080;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 17.4426f, -17.1545f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 309.6f };
+					uParam0->f_28 = Vector3(17.4426f, -17.1545f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 309.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31956,8 +31956,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 66049;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 29.4205f, -19.1626f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 37.44f };
+					uParam0->f_28 = Vector3(29.4205f, -19.1626f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 37.44f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -31981,8 +31981,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 25.0636f, -19.2095f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 306.72f };
+					uParam0->f_28 = Vector3(25.0636f, -19.2095f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 306.72f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32006,8 +32006,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 131843;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 34.2325f, -24.3777f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 127.44f };
+					uParam0->f_28 = Vector3(34.2325f, -24.3777f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 127.44f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32031,8 +32031,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66054;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 33.2275f, -24.2856f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 187.2f };
+					uParam0->f_28 = Vector3(33.2275f, -24.2856f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 187.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32056,8 +32056,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 65793;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 18.0455f, -16.4705f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 183.6f };
+					uParam0->f_28 = Vector3(18.0455f, -16.4705f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 183.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32081,8 +32081,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.0486f, -16.4456f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 32.4f };
+					uParam0->f_28 = Vector3(22.0486f, -16.4456f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 32.4f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32106,8 +32106,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33620224;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.9481f, -28.2766f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 65.625f };
+					uParam0->f_28 = Vector3(3.9481f, -28.2766f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 65.625f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -32132,8 +32132,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 131590;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.4061f, -29.895f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 29.36f };
+					uParam0->f_28 = Vector3(3.4061f, -29.895f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 29.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -32158,8 +32158,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619969;
 					uParam0->f_21[1] = 131844;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 18.6166f, -5.4966f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 224.64f };
+					uParam0->f_28 = Vector3(18.6166f, -5.4966f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 224.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -32184,8 +32184,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.1276f, 3.3015f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 324f };
+					uParam0->f_28 = Vector3(12.1276f, 3.3015f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 324f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -32209,8 +32209,8 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 13.2075f, 3.2715f, 3.3058f };
-					uParam0->f_31 = { 0f, 0f, 22.32f };
+					uParam0->f_28 = Vector3(13.2075f, 3.2715f, 3.3058f);
+					uParam0->f_31 = Vector3(0f, 0f, 22.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -32219,7 +32219,7 @@ void func_445(var uParam0, int iParam1, BOOL bParam2) // Position - 0x1B633
 	}
 
 	if (!_IS_NULL_VECTOR(uParam0->f_28))
-		uParam0->f_28 = { func_48(func_414(-1), func_413(-1), uParam0->f_28) };
+		uParam0->f_28 = Vector3(func_48(func_414(-1), func_413(-1), uParam0->f_28));
 
 	if (uParam0->f_31.f_2 != -1f)
 		uParam0->f_31.f_2 = func_47(func_413(-1), uParam0->f_31.f_2);
@@ -32268,7 +32268,7 @@ int func_450(var uParam0, int iParam1) // Position - 0x1D238
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_444(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -33200,8 +33200,8 @@ int func_476(Ped pedParam0, int iParam1, var uParam2, var uParam3) // Position -
 	if (func_131())
 		return 0;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!func_12(0f, 0f, entityCoords.f_2, 0f, 0f, entityCoords2.f_2, 1056964608, false))
 		return 0;
@@ -33283,7 +33283,7 @@ void func_480(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 0;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -33293,7 +33293,7 @@ void func_480(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 1;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -33303,7 +33303,7 @@ void func_480(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 2;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -33686,7 +33686,7 @@ BOOL func_494(var uParam0) // Position - 0x1ED21
 
 void func_495(var uParam0, var uParam1, var uParam2) // Position - 0x1ED7C
 {
-	*uParam0 = { -1358.102f, 137.978f, -95.374f };
+	*uParam0 = Vector3(-1358.102f, 137.978f, -95.374f);
 	*uParam1 = 120f;
 	*uParam2 = 173;
 	return;
@@ -33757,7 +33757,7 @@ void func_499(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 18:
 		case 19:
 		case 20:
-			*uParam0 = { -1347.5183f, 160.7719f, -100.1944f };
+			*uParam0 = Vector3(-1347.5183f, 160.7719f, -100.1944f);
 			*uParam1 = 281.8026f;
 			*uParam2 = 173;
 			break;
@@ -33771,7 +33771,7 @@ void func_499(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 21:
 		case 22:
 		case 23:
-			*uParam0 = { -1359.3383f, 152.3411f, -100.1943f };
+			*uParam0 = Vector3(-1359.3383f, 152.3411f, -100.1943f);
 			*uParam1 = 325.1877f;
 			*uParam2 = 170;
 			break;
@@ -33782,13 +33782,13 @@ void func_499(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 15:
 			if (Global_2766152[0])
 			{
-				*uParam0 = { -1350.7726f, 162.8027f, -100.1943f };
+				*uParam0 = Vector3(-1350.7726f, 162.8027f, -100.1943f);
 				*uParam1 = 50.328f;
 				*uParam2 = 166;
 			}
 			else
 			{
-				*uParam0 = { -1347.5183f, 160.7719f, -100.1944f };
+				*uParam0 = Vector3(-1347.5183f, 160.7719f, -100.1944f);
 				*uParam1 = 281.8026f;
 				*uParam2 = 173;
 			}
@@ -33801,13 +33801,13 @@ void func_499(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 26:
 			if (Global_2766152[0])
 			{
-				*uParam0 = { -1350.7726f, 162.8027f, -100.1943f };
+				*uParam0 = Vector3(-1350.7726f, 162.8027f, -100.1943f);
 				*uParam1 = 50.328f;
 				*uParam2 = 166;
 			}
 			else
 			{
-				*uParam0 = { -1359.4801f, 158.0303f, -100.1944f };
+				*uParam0 = Vector3(-1359.4801f, 158.0303f, -100.1944f);
 				*uParam1 = 270f;
 				*uParam2 = 170;
 			}
@@ -33866,7 +33866,7 @@ void func_501(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 18:
 		case 21:
 		case 24:
-			*uParam0 = { -1345.79f, 147.8905f, -99.1983f };
+			*uParam0 = Vector3(-1345.79f, 147.8905f, -99.1983f);
 			*uParam1 = 0f;
 			*uParam2 = 168;
 			break;
@@ -33880,7 +33880,7 @@ void func_501(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 19:
 		case 22:
 		case 25:
-			*uParam0 = { -1366.401f, 163.7315f, -98.9858f };
+			*uParam0 = Vector3(-1366.401f, 163.7315f, -98.9858f);
 			*uParam1 = 70f;
 			*uParam2 = 167;
 			break;
@@ -33891,13 +33891,13 @@ void func_501(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 11:
 			if (Global_2766152[1])
 			{
-				*uParam0 = { -1361.0786f, 159.0363f, -99.9943f };
+				*uParam0 = Vector3(-1361.0786f, 159.0363f, -99.9943f);
 				*uParam1 = 61.3876f;
 				*uParam2 = 166;
 			}
 			else
 			{
-				*uParam0 = { -1345.79f, 147.8905f, -99.1983f };
+				*uParam0 = Vector3(-1345.79f, 147.8905f, -99.1983f);
 				*uParam1 = 0f;
 				*uParam2 = 168;
 			}
@@ -33910,13 +33910,13 @@ void func_501(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 26:
 			if (Global_2766152[1])
 			{
-				*uParam0 = { -1361.0786f, 159.0363f, -99.9943f };
+				*uParam0 = Vector3(-1361.0786f, 159.0363f, -99.9943f);
 				*uParam1 = 61.3876f;
 				*uParam2 = 166;
 			}
 			else
 			{
-				*uParam0 = { -1366.401f, 163.7315f, -98.9858f };
+				*uParam0 = Vector3(-1366.401f, 163.7315f, -98.9858f);
 				*uParam1 = 70f;
 				*uParam2 = 167;
 			}
@@ -33976,7 +33976,7 @@ void func_503(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 6:
 		case 7:
 		case 8:
-			*uParam0 = { -1347.511f, 143.653f, -95.12327f };
+			*uParam0 = Vector3(-1347.511f, 143.653f, -95.12327f);
 			*uParam1 = 90f;
 			*uParam2 = 169;
 			break;
@@ -33995,7 +33995,7 @@ void func_503(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 			if (func_504())
 				MISC::SET_BIT(&Global_1579659, 1);
 		
-			*uParam0 = { -1358.842f, 137.978f, -95.53577f };
+			*uParam0 = Vector3(-1358.842f, 137.978f, -95.53577f);
 			*uParam1 = 90f;
 			*uParam2 = 171;
 			break;
@@ -34009,7 +34009,7 @@ void func_503(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		case 24:
 		case 25:
 		case 26:
-			*uParam0 = { -1356.55f, 151.8067f, -95.13281f };
+			*uParam0 = Vector3(-1356.55f, 151.8067f, -95.13281f);
 			*uParam1 = 180f;
 			*uParam2 = 169;
 			break;
@@ -34111,7 +34111,7 @@ int func_509(var uParam0, int iParam1) // Position - 0x1F838
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_491(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -37816,7 +37816,7 @@ void func_542(var uParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4, 
 			if (bParam3)
 			{
 				func_419(uParam0, iParam1, "anim@amb@carmeet@checkout_car@", uParam4, uParam10, uParam11);
-				uParam0->f_18 = { uParam0->f_2 };
+				uParam0->f_18 = Vector3(uParam0->f_2);
 				TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 				uParam0->f_49 = 1;
 			}
@@ -37834,7 +37834,7 @@ void func_542(var uParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4, 
 			if (bParam3)
 			{
 				func_419(uParam0, iParam1, "anim@amb@carmeet@checkout_car@", uParam4, uParam11, uParam10);
-				uParam0->f_18 = { uParam0->f_2 };
+				uParam0->f_18 = Vector3(uParam0->f_2);
 				TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 				uParam0->f_49 = 1;
 			}
@@ -37948,7 +37948,7 @@ void func_545(var uParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4, 
 			if (bParam3)
 			{
 				func_419(uParam0, iParam1, "anim@amb@carmeet@checkout_engine@", uParam4, uParam10, uParam11);
-				uParam0->f_18 = { uParam0->f_2 };
+				uParam0->f_18 = Vector3(uParam0->f_2);
 				TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 			}
 			else if (bParam12)
@@ -37965,7 +37965,7 @@ void func_545(var uParam0, int iParam1, int iParam2, BOOL bParam3, var uParam4, 
 			if (bParam3)
 			{
 				func_419(uParam0, iParam1, "anim@amb@carmeet@checkout_engine@", uParam4, uParam11, uParam10);
-				uParam0->f_18 = { uParam0->f_2 };
+				uParam0->f_18 = Vector3(uParam0->f_2);
 				TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 			}
 			else if (bParam12)
@@ -38195,7 +38195,7 @@ void func_550(var uParam0, int iParam1, var uParam2) // Position - 0x26754
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38241,7 +38241,7 @@ void func_551(var uParam0, int iParam1, var uParam2) // Position - 0x26853
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38285,7 +38285,7 @@ void func_552(var uParam0, int iParam1, var uParam2) // Position - 0x26952
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38329,7 +38329,7 @@ void func_553(var uParam0, int iParam1, var uParam2) // Position - 0x26A47
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38459,7 +38459,7 @@ void func_556(var uParam0, int iParam1, var uParam2) // Position - 0x26CF6
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38505,7 +38505,7 @@ void func_557(var uParam0, int iParam1, var uParam2) // Position - 0x26DF5
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38633,7 +38633,7 @@ void func_560(var uParam0, int iParam1, var uParam2) // Position - 0x270AE
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38677,7 +38677,7 @@ void func_561(var uParam0, int iParam1, var uParam2) // Position - 0x271A3
 			break;
 	}
 
-	uParam0->f_18 = { uParam0->f_2 };
+	uParam0->f_18 = Vector3(uParam0->f_2);
 	TEXT_LABEL_APPEND_STRING(&(uParam0->f_18), "_facial", 64);
 	return;
 }
@@ -38957,8 +38957,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 27.7905f, 44.3623f, 2.1071f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(27.7905f, 44.3623f, 2.1071f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -38983,8 +38983,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65538;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 10.5455f, -2.9966f, 0.9904f };
-					uParam0->f_31 = { 0f, 0f, 164.16f };
+					uParam0->f_28 = Vector3(10.5455f, -2.9966f, 0.9904f);
+					uParam0->f_31 = Vector3(0f, 0f, 164.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39009,8 +39009,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 9.6655f, -2.9966f, 0.9904f };
-					uParam0->f_31 = { 0f, 0f, 196.56f };
+					uParam0->f_28 = Vector3(9.6655f, -2.9966f, 0.9904f);
+					uParam0->f_31 = Vector3(0f, 0f, 196.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39035,8 +39035,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 519;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.9255f, 2.6934f, 0.9904f };
-					uParam0->f_31 = { 0f, 0f, 353.52f };
+					uParam0->f_28 = Vector3(12.9255f, 2.6934f, 0.9904f);
+					uParam0->f_31 = Vector3(0f, 0f, 353.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39061,8 +39061,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 21.592f, 35.6499f, 2.1116f };
-					uParam0->f_31 = { 0f, 0f, 26.795f };
+					uParam0->f_28 = Vector3(21.592f, 35.6499f, 2.1116f);
+					uParam0->f_31 = Vector3(0f, 0f, 26.795f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39087,8 +39087,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 11;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 20.843f, 35.3689f, 2.1032f };
-					uParam0->f_31 = { 0f, 0f, 2.16f };
+					uParam0->f_28 = Vector3(20.843f, 35.3689f, 2.1032f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39112,8 +39112,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66304;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 24.4336f, 27.5444f, 2.1002f };
-					uParam0->f_31 = { 0f, 0f, 231.12f };
+					uParam0->f_28 = Vector3(24.4336f, 27.5444f, 2.1002f);
+					uParam0->f_31 = Vector3(0f, 0f, 231.12f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39137,8 +39137,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.8156f, 3.2395f, 0.9904f };
-					uParam0->f_31 = { 0f, 0f, 337.68f };
+					uParam0->f_28 = Vector3(1.8156f, 3.2395f, 0.9904f);
+					uParam0->f_31 = Vector3(0f, 0f, 337.68f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39162,8 +39162,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.8256f, 3.1394f, 0.9904f };
-					uParam0->f_31 = { 0f, 0f, 0.72f };
+					uParam0->f_28 = Vector3(2.8256f, 3.1394f, 0.9904f);
+					uParam0->f_31 = Vector3(0f, 0f, 0.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39188,8 +39188,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 769;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.0295f, 28.4805f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 99.36f };
+					uParam0->f_28 = Vector3(7.0295f, 28.4805f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 99.36f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39213,8 +39213,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 65545;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 6.4565f, 29.5095f, 2.1007f };
-					uParam0->f_31 = { 0f, 0f, 135.36f };
+					uParam0->f_28 = Vector3(6.4565f, 29.5095f, 2.1007f);
+					uParam0->f_31 = Vector3(0f, 0f, 135.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39239,8 +39239,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 11.4511f, 38.793f, 2.1083f };
-					uParam0->f_31 = { 0f, 0f, 186.48f };
+					uParam0->f_28 = Vector3(11.4511f, 38.793f, 2.1083f);
+					uParam0->f_31 = Vector3(0f, 0f, 186.48f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39264,8 +39264,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 14.8921f, 38.4724f, 2.1014f };
-					uParam0->f_31 = { 0f, 0f, 148.32f };
+					uParam0->f_28 = Vector3(14.8921f, 38.4724f, 2.1014f);
+					uParam0->f_31 = Vector3(0f, 0f, 148.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39290,8 +39290,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.2861f, 38.3179f, 2.1029f };
-					uParam0->f_31 = { 0f, 0f, 158.655f };
+					uParam0->f_28 = Vector3(12.2861f, 38.3179f, 2.1029f);
+					uParam0->f_31 = Vector3(0f, 0f, 158.655f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39315,8 +39315,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 131847;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 10.598f, 38.116f, 2.1121f };
-					uParam0->f_31 = { 0f, 0f, 231.12f };
+					uParam0->f_28 = Vector3(10.598f, 38.116f, 2.1121f);
+					uParam0->f_31 = Vector3(0f, 0f, 231.12f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39340,8 +39340,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.6035f, 38.4873f, 2.0284f };
-					uParam0->f_31 = { 0f, 0f, 228.24f };
+					uParam0->f_28 = Vector3(8.6035f, 38.4873f, 2.0284f);
+					uParam0->f_31 = Vector3(0f, 0f, 228.24f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39365,8 +39365,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 66305;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -20.7844f, 42.2295f, 2.1017f };
-					uParam0->f_31 = { 0f, 0f, 293.76f };
+					uParam0->f_28 = Vector3(-20.7844f, 42.2295f, 2.1017f);
+					uParam0->f_31 = Vector3(0f, 0f, 293.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39391,8 +39391,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -14.3904f, 44.3994f, 2.1005f };
-					uParam0->f_31 = { 0f, 0f, 137.52f };
+					uParam0->f_28 = Vector3(-14.3904f, 44.3994f, 2.1005f);
+					uParam0->f_31 = Vector3(0f, 0f, 137.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39417,8 +39417,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -14.2885f, 43.1423f, 2.101f };
-					uParam0->f_31 = { 0f, 0f, 65.52f };
+					uParam0->f_28 = Vector3(-14.2885f, 43.1423f, 2.101f);
+					uParam0->f_31 = Vector3(0f, 0f, 65.52f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39442,8 +39442,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5736f, 39.0674f, 2.0817f };
-					uParam0->f_31 = { 0f, 0f, 191.52f };
+					uParam0->f_28 = Vector3(2.5736f, 39.0674f, 2.0817f);
+					uParam0->f_31 = Vector3(0f, 0f, 191.52f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39467,8 +39467,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 779;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.4736f, 39.0674f, 2.1028f };
-					uParam0->f_31 = { 0f, 0f, 145.44f };
+					uParam0->f_28 = Vector3(3.4736f, 39.0674f, 2.1028f);
+					uParam0->f_31 = Vector3(0f, 0f, 145.44f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39492,8 +39492,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 66309;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -29.1294f, 18.6804f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 149.76f };
+					uParam0->f_28 = Vector3(-29.1294f, 18.6804f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 149.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39518,8 +39518,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.3544f, 38.5544f, 2.1126f };
-					uParam0->f_31 = { 0f, 0f, 40.32f };
+					uParam0->f_28 = Vector3(-21.3544f, 38.5544f, 2.1126f);
+					uParam0->f_31 = Vector3(0f, 0f, 40.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39543,8 +39543,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 66306;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -22.1514f, 38.4885f, 2.1008f };
-					uParam0->f_31 = { 0f, 0f, 2.16f };
+					uParam0->f_28 = Vector3(-22.1514f, 38.4885f, 2.1008f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39568,8 +39568,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.5804f, 39.5085f, 2.1088f };
-					uParam0->f_31 = { 0f, 0f, 169.2f };
+					uParam0->f_28 = Vector3(-21.5804f, 39.5085f, 2.1088f);
+					uParam0->f_31 = Vector3(0f, 0f, 169.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39593,8 +39593,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 131328;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -26.7759f, 39.6528f, 2.1018f };
-					uParam0->f_31 = { 0f, 0f, 169.25f };
+					uParam0->f_28 = Vector3(-26.7759f, 39.6528f, 2.1018f);
+					uParam0->f_31 = Vector3(0f, 0f, 169.25f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39618,8 +39618,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 131073;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -28.1869f, 39.3669f, 2.1003f };
-					uParam0->f_31 = { 0f, 0f, 220.795f };
+					uParam0->f_28 = Vector3(-28.1869f, 39.3669f, 2.1003f);
+					uParam0->f_31 = Vector3(0f, 0f, 220.795f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39643,8 +39643,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 769;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.1635f, 17.0764f, 2.0986f };
-					uParam0->f_31 = { 0f, 0f, 210.96f };
+					uParam0->f_28 = Vector3(-10.1635f, 17.0764f, 2.0986f);
+					uParam0->f_31 = Vector3(0f, 0f, 210.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -39669,8 +39669,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131337;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 26.3146f, 27.9805f, 2.112f };
-					uParam0->f_31 = { 0f, 0f, 144f };
+					uParam0->f_28 = Vector3(26.3146f, 27.9805f, 2.112f);
+					uParam0->f_31 = Vector3(0f, 0f, 144f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39694,8 +39694,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 66058;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 25.4205f, 28.0435f, 2.1076f };
-					uParam0->f_31 = { 0f, 0f, 185.76f };
+					uParam0->f_28 = Vector3(25.4205f, 28.0435f, 2.1076f);
+					uParam0->f_31 = Vector3(0f, 0f, 185.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39719,8 +39719,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -23.3295f, 20.6504f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 180.72f };
+					uParam0->f_28 = Vector3(-23.3295f, 20.6504f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 180.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -39745,8 +39745,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.4346f, 17.7324f, 2.1124f };
-					uParam0->f_31 = { 0f, 0f, 115.2f };
+					uParam0->f_28 = Vector3(8.4346f, 17.7324f, 2.1124f);
+					uParam0->f_31 = Vector3(0f, 0f, 115.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39771,8 +39771,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.4956f, 18.2874f, 2.1116f };
-					uParam0->f_31 = { 0f, 0f, 158.4f };
+					uParam0->f_28 = Vector3(7.4956f, 18.2874f, 2.1116f);
+					uParam0->f_31 = Vector3(0f, 0f, 158.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39797,8 +39797,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -39.5024f, 31.5173f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 199.44f };
+					uParam0->f_28 = Vector3(-39.5024f, 31.5173f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 199.44f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39822,8 +39822,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -38.2384f, 26.9214f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 48.96f };
+					uParam0->f_28 = Vector3(-38.2384f, 26.9214f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 48.96f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39847,8 +39847,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131841;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.9435f, 27.9863f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 88.56f };
+					uParam0->f_28 = Vector3(-37.9435f, 27.9863f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 88.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39872,8 +39872,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 513;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -38.2024f, 31.1885f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 138.24f };
+					uParam0->f_28 = Vector3(-38.2024f, 31.1885f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 138.24f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39897,8 +39897,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131072;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -39.3544f, 0.0764f, 1.0091f };
-					uParam0->f_31 = { 0f, 0f, 218.16f };
+					uParam0->f_28 = Vector3(-39.3544f, 0.0764f, 1.0091f);
+					uParam0->f_31 = Vector3(0f, 0f, 218.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39922,8 +39922,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.7134f, 16.0364f, 2.0984f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-10.7134f, 16.0364f, 2.0984f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -39948,8 +39948,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 131330;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -38.6874f, 0.5925f, 0.9942f };
-					uParam0->f_31 = { 0f, 0f, 195.12f };
+					uParam0->f_28 = Vector3(-38.6874f, 0.5925f, 0.9942f);
+					uParam0->f_31 = Vector3(0f, 0f, 195.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -39974,8 +39974,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.8074f, 3.5044f, 0.9966f };
-					uParam0->f_31 = { 0f, 0f, 355.68f };
+					uParam0->f_28 = Vector3(-16.8074f, 3.5044f, 0.9966f);
+					uParam0->f_31 = Vector3(0f, 0f, 355.68f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -39999,8 +39999,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 770;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.6115f, 3.6924f, 0.9973f };
-					uParam0->f_31 = { 0f, 0f, 45.36f };
+					uParam0->f_28 = Vector3(-15.6115f, 3.6924f, 0.9973f);
+					uParam0->f_31 = Vector3(0f, 0f, 45.36f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40024,8 +40024,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.5044f, 2.4944f, 0.9981f };
-					uParam0->f_31 = { 0f, 0f, 334.08f };
+					uParam0->f_28 = Vector3(-5.5044f, 2.4944f, 0.9981f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 31);
@@ -40051,8 +40051,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.0184f, 2.9915f, 0.9919f };
-					uParam0->f_31 = { 0f, 0f, 295.92f };
+					uParam0->f_28 = Vector3(-6.0184f, 2.9915f, 0.9919f);
+					uParam0->f_31 = Vector3(0f, 0f, 295.92f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -40077,8 +40077,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -17.084f, -2.7815f, 1.0069f };
-					uParam0->f_31 = { 0f, 0f, 190.08f };
+					uParam0->f_28 = Vector3(-17.084f, -2.7815f, 1.0069f);
+					uParam0->f_31 = Vector3(0f, 0f, 190.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40102,8 +40102,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66050;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.9485f, -14.2876f, 0.9967f };
-					uParam0->f_31 = { 0f, 0f, 62.64f };
+					uParam0->f_28 = Vector3(-11.9485f, -14.2876f, 0.9967f);
+					uParam0->f_31 = Vector3(0f, 0f, 62.64f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40127,8 +40127,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 513;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8064f, -13.1885f, 0.994f };
-					uParam0->f_31 = { 0f, 0f, 123.84f };
+					uParam0->f_28 = Vector3(-11.8064f, -13.1885f, 0.994f);
+					uParam0->f_31 = Vector3(0f, 0f, 123.84f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40152,8 +40152,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 65792;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.4285f, -17.0767f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 10.8f };
+					uParam0->f_28 = Vector3(-13.4285f, -17.0767f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 10.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -40181,8 +40181,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -18.1189f, -3.2012f, 0.9999f };
-					uParam0->f_31 = { 0f, 0f, 221.76f };
+					uParam0->f_28 = Vector3(-18.1189f, -3.2012f, 0.9999f);
+					uParam0->f_31 = Vector3(0f, 0f, 221.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -40210,8 +40210,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -23.6794f, -23.9675f, 1.0069f };
-					uParam0->f_31 = { 0f, 0f, 148.32f };
+					uParam0->f_28 = Vector3(-23.6794f, -23.9675f, 1.0069f);
+					uParam0->f_31 = Vector3(0f, 0f, 148.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40235,8 +40235,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 66305;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -25.3899f, -23.9202f, 1.0066f };
-					uParam0->f_31 = { 0f, 0f, 214.56f };
+					uParam0->f_28 = Vector3(-25.3899f, -23.9202f, 1.0066f);
+					uParam0->f_31 = Vector3(0f, 0f, 214.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40260,8 +40260,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.4495f, -23.7527f, 1.0066f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(-24.4495f, -23.7527f, 1.0066f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40285,8 +40285,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -36.6654f, -19.0605f, 1.0022f };
-					uParam0->f_31 = { 0f, 0f, 64.8f };
+					uParam0->f_28 = Vector3(-36.6654f, -19.0605f, 1.0022f);
+					uParam0->f_31 = Vector3(0f, 0f, 64.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40310,8 +40310,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 258;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.0679f, -20.021f, 0.9956f };
-					uParam0->f_31 = { 0f, 0f, 36.72f };
+					uParam0->f_28 = Vector3(-37.0679f, -20.021f, 0.9956f);
+					uParam0->f_31 = Vector3(0f, 0f, 36.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31662)
@@ -40338,8 +40338,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.7465f, -17.1711f, 1.008f };
-					uParam0->f_31 = { 0f, 0f, 165.6f };
+					uParam0->f_28 = Vector3(-37.7465f, -17.1711f, 1.008f);
+					uParam0->f_31 = Vector3(0f, 0f, 165.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40363,8 +40363,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66306;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -36.621f, -17.676f, 0.9963f };
-					uParam0->f_31 = { 0f, 0f, 115.2f };
+					uParam0->f_28 = Vector3(-36.621f, -17.676f, 0.9963f);
+					uParam0->f_31 = Vector3(0f, 0f, 115.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40388,8 +40388,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -20.1079f, -17.6521f, 1.0021f };
-					uParam0->f_31 = { 0f, 0f, 12.96f };
+					uParam0->f_28 = Vector3(-20.1079f, -17.6521f, 1.0021f);
+					uParam0->f_31 = Vector3(0f, 0f, 12.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40414,8 +40414,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.1675f, -17.3057f, 0.9936f };
-					uParam0->f_31 = { 0f, 0f, 316.8f };
+					uParam0->f_28 = Vector3(-21.1675f, -17.3057f, 0.9936f);
+					uParam0->f_31 = Vector3(0f, 0f, 316.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40440,8 +40440,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 258;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.3524f, -6.5046f, 0.9996f };
-					uParam0->f_31 = { 0f, 0f, 113.76f };
+					uParam0->f_28 = Vector3(-11.3524f, -6.5046f, 0.9996f);
+					uParam0->f_31 = Vector3(0f, 0f, 113.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -40469,8 +40469,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.4534f, -7.3477f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 47.52f };
+					uParam0->f_28 = Vector3(-11.4534f, -7.3477f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 47.52f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31662)
@@ -40497,8 +40497,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.4225f, -19.7107f, 0.994f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-24.4225f, -19.7107f, 0.994f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -40523,8 +40523,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.6919f, -3.0781f, 0.9906f };
-					uParam0->f_31 = { 0f, 0f, 214.56f };
+					uParam0->f_28 = Vector3(-0.6919f, -3.0781f, 0.9906f);
+					uParam0->f_31 = Vector3(0f, 0f, 214.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40548,8 +40548,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 65540;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.5209f, -3.895f, 1.0001f };
-					uParam0->f_31 = { 0f, 0f, 274.79f };
+					uParam0->f_28 = Vector3(-1.5209f, -3.895f, 1.0001f);
+					uParam0->f_31 = Vector3(0f, 0f, 274.79f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					break;
@@ -40574,8 +40574,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 32.2476f, -24.4717f, 0.9966f };
-					uParam0->f_31 = { 0f, 0f, 243.36f };
+					uParam0->f_28 = Vector3(32.2476f, -24.4717f, 0.9966f);
+					uParam0->f_31 = Vector3(0f, 0f, 243.36f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40599,8 +40599,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 66307;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.9155f, 5.2175f, 0.9878f };
-					uParam0->f_31 = { 0f, 0f, 263.52f };
+					uParam0->f_28 = Vector3(22.9155f, 5.2175f, 0.9878f);
+					uParam0->f_31 = Vector3(0f, 0f, 263.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40625,8 +40625,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 24.1051f, 3.8269f, 0.9914f };
-					uParam0->f_31 = { 0f, 0f, 0.72f };
+					uParam0->f_28 = Vector3(24.1051f, 3.8269f, 0.9914f);
+					uParam0->f_31 = Vector3(0f, 0f, 0.72f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40650,8 +40650,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 131328;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { 25.2921f, 4.022f, 0.9909f };
-					uParam0->f_31 = { 0f, 0f, 36.72f };
+					uParam0->f_28 = Vector3(25.2921f, 4.022f, 0.9909f);
+					uParam0->f_31 = Vector3(0f, 0f, 36.72f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40675,8 +40675,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 21.5856f, -3.4436f, 0.9863f };
-					uParam0->f_31 = { 0f, 0f, 173.7858f };
+					uParam0->f_28 = Vector3(21.5856f, -3.4436f, 0.9863f);
+					uParam0->f_31 = Vector3(0f, 0f, 173.7858f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 31);
@@ -40702,8 +40702,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 19.0526f, -3.4006f, 0.9875f };
-					uParam0->f_31 = { 0f, 0f, 208.8f };
+					uParam0->f_28 = Vector3(19.0526f, -3.4006f, 0.9875f);
+					uParam0->f_31 = Vector3(0f, 0f, 208.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40728,8 +40728,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131845;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 27.1826f, -2.8735f, 0.9878f };
-					uParam0->f_31 = { 0f, 0f, 138.24f };
+					uParam0->f_28 = Vector3(27.1826f, -2.8735f, 0.9878f);
+					uParam0->f_31 = Vector3(0f, 0f, 138.24f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40753,8 +40753,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { 21.1926f, -16.3945f, 0.9886f };
-					uParam0->f_31 = { 0f, 0f, 334.8f };
+					uParam0->f_28 = Vector3(21.1926f, -16.3945f, 0.9886f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40778,8 +40778,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 131080;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 17.4525f, -17.1545f, 1.0002f };
-					uParam0->f_31 = { 0f, 0f, 309.6f };
+					uParam0->f_28 = Vector3(17.4525f, -17.1545f, 1.0002f);
+					uParam0->f_31 = Vector3(0f, 0f, 309.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40803,8 +40803,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 66049;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 30.3105f, -17.7227f, 0.9937f };
-					uParam0->f_31 = { 0f, 0f, 91.44f };
+					uParam0->f_28 = Vector3(30.3105f, -17.7227f, 0.9937f);
+					uParam0->f_31 = Vector3(0f, 0f, 91.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40829,8 +40829,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 23.9136f, -17.6397f, 0.9953f };
-					uParam0->f_31 = { 0f, 0f, 266.4f };
+					uParam0->f_28 = Vector3(23.9136f, -17.6397f, 0.9953f);
+					uParam0->f_31 = Vector3(0f, 0f, 266.4f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40854,8 +40854,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 770;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 24.4166f, -18.6287f, 0.9956f };
-					uParam0->f_31 = { 0f, 0f, 324f };
+					uParam0->f_28 = Vector3(24.4166f, -18.6287f, 0.9956f);
+					uParam0->f_31 = Vector3(0f, 0f, 324f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40879,8 +40879,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 131843;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 34.1826f, -24.1377f, 0.9994f };
-					uParam0->f_31 = { 0f, 0f, 138.96f };
+					uParam0->f_28 = Vector3(34.1826f, -24.1377f, 0.9994f);
+					uParam0->f_31 = Vector3(0f, 0f, 138.96f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40904,8 +40904,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 33.1376f, -23.9255f, 0.9879f };
-					uParam0->f_31 = { 0f, 0f, 187.2f };
+					uParam0->f_28 = Vector3(33.1376f, -23.9255f, 0.9879f);
+					uParam0->f_31 = Vector3(0f, 0f, 187.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40929,8 +40929,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 65793;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 18.0455f, -16.4705f, 0.9884f };
-					uParam0->f_31 = { 0f, 0f, 183.6f };
+					uParam0->f_28 = Vector3(18.0455f, -16.4705f, 0.9884f);
+					uParam0->f_31 = Vector3(0f, 0f, 183.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -40954,8 +40954,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 131082;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 28.9896f, -7.0105f, 0.9882f };
-					uParam0->f_31 = { 0f, 0f, 114.48f };
+					uParam0->f_28 = Vector3(28.9896f, -7.0105f, 0.9882f);
+					uParam0->f_31 = Vector3(0f, 0f, 114.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -40980,8 +40980,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.0486f, -16.4456f, 0.9997f };
-					uParam0->f_31 = { 0f, 0f, 17.28f };
+					uParam0->f_28 = Vector3(22.0486f, -16.4456f, 0.9997f);
+					uParam0->f_31 = Vector3(0f, 0f, 17.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41006,8 +41006,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131330;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.7506f, -25.9465f, 1.1948f };
-					uParam0->f_31 = { 0f, 0f, 128.16f };
+					uParam0->f_28 = Vector3(12.7506f, -25.9465f, 1.1948f);
+					uParam0->f_31 = Vector3(0f, 0f, 128.16f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -41034,8 +41034,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33620224;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -23.1494f, 24.4805f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 48.24f };
+					uParam0->f_28 = Vector3(-23.1494f, 24.4805f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 48.24f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41060,8 +41060,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 131590;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.0094f, 24.3105f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 347.76f };
+					uParam0->f_28 = Vector3(-24.0094f, 24.3105f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 347.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41085,8 +41085,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 131333;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.6356f, -26.8357f, 1.2004f };
-					uParam0->f_31 = { 0f, 0f, 69.12f };
+					uParam0->f_28 = Vector3(12.6356f, -26.8357f, 1.2004f);
+					uParam0->f_31 = Vector3(0f, 0f, 69.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -41113,8 +41113,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.928f, -3.175f, 0.9974f };
-					uParam0->f_31 = { 0f, 0f, 146.16f };
+					uParam0->f_28 = Vector3(-15.928f, -3.175f, 0.9974f);
+					uParam0->f_31 = Vector3(0f, 0f, 146.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41138,8 +41138,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 65537;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -34.7574f, -9.9475f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 95.76f };
+					uParam0->f_28 = Vector3(-34.7574f, -9.9475f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 95.76f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31662)
@@ -41166,8 +41166,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619969;
 					uParam0->f_21[1] = 131844;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 19.5966f, -11.1265f, 0.9883f };
-					uParam0->f_31 = { 0f, 0f, 302.4f };
+					uParam0->f_28 = Vector3(19.5966f, -11.1265f, 0.9883f);
+					uParam0->f_31 = Vector3(0f, 0f, 302.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -41192,8 +41192,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 66306;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.3976f, -3.3306f, 0.9898f };
-					uParam0->f_31 = { 0f, 0f, 176.4f };
+					uParam0->f_28 = Vector3(22.3976f, -3.3306f, 0.9898f);
+					uParam0->f_31 = Vector3(0f, 0f, 176.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41218,8 +41218,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131073;
 					uParam0->f_21[1] = 265;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 23.1576f, 4.3445f, 0.989f };
-					uParam0->f_31 = { 0f, 0f, 318.96f };
+					uParam0->f_28 = Vector3(23.1576f, 4.3445f, 0.989f);
+					uParam0->f_31 = Vector3(0f, 0f, 318.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41244,8 +41244,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.1575f, -16.9246f, 0.9954f };
-					uParam0->f_31 = { 0f, 0f, 21.6f };
+					uParam0->f_28 = Vector3(-0.1575f, -16.9246f, 0.9954f);
+					uParam0->f_31 = Vector3(0f, 0f, 21.6f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -41272,8 +41272,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.2074f, -16.9846f, 1.0004f };
-					uParam0->f_31 = { 0f, 0f, 336.24f };
+					uParam0->f_28 = Vector3(-1.2074f, -16.9846f, 1.0004f);
+					uParam0->f_31 = Vector3(0f, 0f, 336.24f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -41300,8 +41300,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 66307;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -22.2184f, 39.4065f, 2.0893f };
-					uParam0->f_31 = { 0f, 0f, 216f };
+					uParam0->f_28 = Vector3(-22.2184f, 39.4065f, 2.0893f);
+					uParam0->f_31 = Vector3(0f, 0f, 216f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 31);
@@ -41327,8 +41327,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 13.7711f, 38.5288f, 2.1014f };
-					uParam0->f_31 = { -15.12f, 0f, 215.615f };
+					uParam0->f_28 = Vector3(13.7711f, 38.5288f, 2.1014f);
+					uParam0->f_31 = Vector3(-15.12f, 0f, 215.615f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41352,8 +41352,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 131082;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.4835f, 37.6785f, 2.1047f };
-					uParam0->f_31 = { 0f, 0f, 275.76f };
+					uParam0->f_28 = Vector3(8.4835f, 37.6785f, 2.1047f);
+					uParam0->f_31 = Vector3(0f, 0f, 275.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41419,8 +41419,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 				case 3:
 					uParam0->f_26 = 347;
 					uParam0->f_27 = 0;
-					uParam0->f_28 = { 15.4336f, -0.8333f, 0.9998f };
-					uParam0->f_31 = { 0f, 0f, 266.3013f };
+					uParam0->f_28 = Vector3(15.4336f, -0.8333f, 0.9998f);
+					uParam0->f_31 = Vector3(0f, 0f, 266.3013f);
 					func_568(uParam0, iParam1, iParam2);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 15);
@@ -41441,8 +41441,8 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 				case 3:
 					uParam0->f_26 = 347;
 					uParam0->f_27 = 0;
-					uParam0->f_28 = { -13.6299f, 16.6377f, 1.1037f };
-					uParam0->f_31 = { 0f, 0f, 177.5264f };
+					uParam0->f_28 = Vector3(-13.6299f, 16.6377f, 1.1037f);
+					uParam0->f_31 = Vector3(0f, 0f, 177.5264f);
 					func_568(uParam0, iParam1, iParam2);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 15);
@@ -41456,7 +41456,7 @@ void func_566(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 	if (!func_567(iParam1))
 	{
 		if (!_IS_NULL_VECTOR(uParam0->f_28))
-			uParam0->f_28 = { func_48(func_536(-1), func_535(-1), uParam0->f_28) };
+			uParam0->f_28 = Vector3(func_48(func_536(-1), func_535(-1), uParam0->f_28));
 	
 		if (uParam0->f_31.f_2 != -1f)
 			uParam0->f_31.f_2 = func_47(func_535(-1), uParam0->f_31.f_2);
@@ -41585,7 +41585,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 2:
 				case 3:
 				case 4:
-					*uParam2 = { -2210.978f, 1087.57f, -23.262f };
+					*uParam2 = Vector3(-2210.978f, 1087.57f, -23.262f);
 					*uParam3 = 210.24f;
 					*uParam4 = 233;
 					break;
@@ -41595,7 +41595,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 7:
 				case 8:
 				case 9:
-					*uParam2 = { -2174.856f, 1095.6829f, -24.362f };
+					*uParam2 = Vector3(-2174.856f, 1095.6829f, -24.362f);
 					*uParam3 = 74.9529f;
 					*uParam4 = 336;
 					break;
@@ -41605,7 +41605,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 12:
 				case 13:
 				case 14:
-					*uParam2 = { -2161.1113f, 1130.4016f, -24.362f };
+					*uParam2 = Vector3(-2161.1113f, 1130.4016f, -24.362f);
 					*uParam3 = 7.9766f;
 					*uParam4 = 291;
 					break;
@@ -41615,7 +41615,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 17:
 				case 18:
 				case 19:
-					*uParam2 = { -2168.677f, 1114.3773f, -24.362f };
+					*uParam2 = Vector3(-2168.677f, 1114.3773f, -24.362f);
 					*uParam3 = 238.0675f;
 					*uParam4 = 190;
 					break;
@@ -41625,7 +41625,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 22:
 				case 23:
 				case 24:
-					*uParam2 = { -2196.9785f, 1116.8539f, -23.262f };
+					*uParam2 = Vector3(-2196.9785f, 1116.8539f, -23.262f);
 					*uParam3 = 47.8405f;
 					*uParam4 = 293;
 					break;
@@ -41635,7 +41635,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 27:
 				case 28:
 				case 29:
-					*uParam2 = { -2147.9866f, 1078.2937f, -24.362f };
+					*uParam2 = Vector3(-2147.9866f, 1078.2937f, -24.362f);
 					*uParam3 = 266.3582f;
 					*uParam4 = 291;
 					break;
@@ -41650,7 +41650,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 15:
 				case 20:
 				case 25:
-					*uParam2 = { -2210.978f, 1087.57f, -23.262f };
+					*uParam2 = Vector3(-2210.978f, 1087.57f, -23.262f);
 					*uParam3 = 210.24f;
 					*uParam4 = 233;
 					break;
@@ -41660,7 +41660,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 16:
 				case 21:
 				case 26:
-					*uParam2 = { -2174.856f, 1095.6829f, -24.362f };
+					*uParam2 = Vector3(-2174.856f, 1095.6829f, -24.362f);
 					*uParam3 = 74.9529f;
 					*uParam4 = 336;
 					break;
@@ -41670,7 +41670,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 17:
 				case 22:
 				case 27:
-					*uParam2 = { -2161.1113f, 1130.4016f, -24.362f };
+					*uParam2 = Vector3(-2161.1113f, 1130.4016f, -24.362f);
 					*uParam3 = 7.9766f;
 					*uParam4 = 291;
 					break;
@@ -41680,7 +41680,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 12:
 				case 23:
 				case 28:
-					*uParam2 = { -2168.677f, 1114.3773f, -24.362f };
+					*uParam2 = Vector3(-2168.677f, 1114.3773f, -24.362f);
 					*uParam3 = 238.0675f;
 					*uParam4 = 190;
 					break;
@@ -41690,7 +41690,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 13:
 				case 18:
 				case 29:
-					*uParam2 = { -2196.9785f, 1116.8539f, -23.262f };
+					*uParam2 = Vector3(-2196.9785f, 1116.8539f, -23.262f);
 					*uParam3 = 47.8405f;
 					*uParam4 = 293;
 					break;
@@ -41700,7 +41700,7 @@ void func_571(int iParam0, int iParam1, var uParam2, var uParam3, var uParam4) /
 				case 14:
 				case 19:
 				case 24:
-					*uParam2 = { -2147.9866f, 1078.2937f, -24.362f };
+					*uParam2 = Vector3(-2147.9866f, 1078.2937f, -24.362f);
 					*uParam3 = 266.3582f;
 					*uParam4 = 291;
 					break;
@@ -41733,8 +41733,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 27.7905f, 44.3623f, 2.1071f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(27.7905f, 44.3623f, 2.1071f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -41759,8 +41759,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65538;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -34.7374f, -9.8076f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 131.76f };
+					uParam0->f_28 = Vector3(-34.7374f, -9.8076f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 131.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41785,8 +41785,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -32.2675f, -6.9976f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 298.08f };
+					uParam0->f_28 = Vector3(-32.2675f, -6.9976f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 298.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -41814,8 +41814,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 9.9675f, -2.9985f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 153.36f };
+					uParam0->f_28 = Vector3(9.9675f, -2.9985f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 153.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41840,8 +41840,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 21.592f, 35.6499f, 2.1116f };
-					uParam0->f_31 = { 0f, 0f, 26.795f };
+					uParam0->f_28 = Vector3(21.592f, 35.6499f, 2.1116f);
+					uParam0->f_31 = Vector3(0f, 0f, 26.795f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41866,8 +41866,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 11;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 20.843f, 35.3689f, 2.1032f };
-					uParam0->f_31 = { 0f, 0f, 2.16f };
+					uParam0->f_28 = Vector3(20.843f, 35.3689f, 2.1032f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41891,8 +41891,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66304;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 24.6536f, 27.9143f, 2.1002f };
-					uParam0->f_31 = { 0f, 0f, 223.2f };
+					uParam0->f_28 = Vector3(24.6536f, 27.9143f, 2.1002f);
+					uParam0->f_31 = Vector3(0f, 0f, 223.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41917,8 +41917,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.9255f, 2.9695f, 1.0004f };
-					uParam0->f_31 = { 0f, 0f, 334.08f };
+					uParam0->f_28 = Vector3(1.9255f, 2.9695f, 1.0004f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41942,8 +41942,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.9355f, 3.0095f, 1.0004f };
-					uParam0->f_31 = { 0f, 0f, 2.16f };
+					uParam0->f_28 = Vector3(2.9355f, 3.0095f, 1.0004f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -41968,8 +41968,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 770;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 6.9996f, 28.7405f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 113.76f };
+					uParam0->f_28 = Vector3(6.9996f, 28.7405f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 113.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -41993,8 +41993,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 6.3766f, 29.6794f, 2.1007f };
-					uParam0->f_31 = { 0f, 0f, 138.24f };
+					uParam0->f_28 = Vector3(6.3766f, 29.6794f, 2.1007f);
+					uParam0->f_31 = Vector3(0f, 0f, 138.24f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42019,8 +42019,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 11.431f, 39.0688f, 2.1083f };
-					uParam0->f_31 = { 0f, 0f, 186.48f };
+					uParam0->f_28 = Vector3(11.431f, 39.0688f, 2.1083f);
+					uParam0->f_31 = Vector3(0f, 0f, 186.48f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42044,8 +42044,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 14.666f, 38.6223f, 2.1014f };
-					uParam0->f_31 = { 0f, 0f, 165.6f };
+					uParam0->f_28 = Vector3(14.666f, 38.6223f, 2.1014f);
+					uParam0->f_31 = Vector3(0f, 0f, 165.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42069,8 +42069,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.4196f, 38.8613f, 2.1029f };
-					uParam0->f_31 = { 0f, 0f, 165.6f };
+					uParam0->f_28 = Vector3(12.4196f, 38.8613f, 2.1029f);
+					uParam0->f_31 = Vector3(0f, 0f, 165.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42094,8 +42094,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 131847;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 10.5521f, 38.561f, 2.1021f };
-					uParam0->f_31 = { 0f, 0f, 228.24f };
+					uParam0->f_28 = Vector3(10.5521f, 38.561f, 2.1021f);
+					uParam0->f_31 = Vector3(0f, 0f, 228.24f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -42122,8 +42122,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.6035f, 38.4873f, 2.0284f };
-					uParam0->f_31 = { 0f, 0f, 228.24f };
+					uParam0->f_28 = Vector3(8.6035f, 38.4873f, 2.0284f);
+					uParam0->f_31 = Vector3(0f, 0f, 228.24f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42147,8 +42147,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 66305;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -18.4445f, 41.9395f, 2.1017f };
-					uParam0->f_31 = { 0f, 0f, 336.24f };
+					uParam0->f_28 = Vector3(-18.4445f, 41.9395f, 2.1017f);
+					uParam0->f_31 = Vector3(0f, 0f, 336.24f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -42176,8 +42176,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -14.2804f, 44.2295f, 2.1005f };
-					uParam0->f_31 = { 0f, 0f, 118.8f };
+					uParam0->f_28 = Vector3(-14.2804f, 44.2295f, 2.1005f);
+					uParam0->f_31 = Vector3(0f, 0f, 118.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42202,8 +42202,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -14.3784f, 43.0425f, 2.101f };
-					uParam0->f_31 = { 0f, 0f, 62.64f };
+					uParam0->f_28 = Vector3(-14.3784f, 43.0425f, 2.101f);
+					uParam0->f_31 = Vector3(0f, 0f, 62.64f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42227,8 +42227,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.4844f, -5.7107f, 1.0004f };
-					uParam0->f_31 = { 0f, 0f, 243.36f };
+					uParam0->f_28 = Vector3(-2.4844f, -5.7107f, 1.0004f);
+					uParam0->f_31 = Vector3(0f, 0f, 243.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42253,8 +42253,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 779;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5485f, 2.6414f, 0.9914f };
-					uParam0->f_31 = { 0f, 0f, 15.84f };
+					uParam0->f_28 = Vector3(-8.5485f, 2.6414f, 0.9914f);
+					uParam0->f_31 = Vector3(0f, 0f, 15.84f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 31);
@@ -42280,8 +42280,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 66309;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -34.7675f, -10.4976f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 54.72f };
+					uParam0->f_28 = Vector3(-34.7675f, -10.4976f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 54.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					break;
@@ -42306,8 +42306,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.3544f, 38.5544f, 2.1126f };
-					uParam0->f_31 = { 0f, 0f, 40.32f };
+					uParam0->f_28 = Vector3(-21.3544f, 38.5544f, 2.1126f);
+					uParam0->f_31 = Vector3(0f, 0f, 40.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42331,8 +42331,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 66306;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -22.1575f, 38.4924f, 2.0984f };
-					uParam0->f_31 = { 0f, 0f, 2.16f };
+					uParam0->f_28 = Vector3(-22.1575f, 38.4924f, 2.0984f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42356,8 +42356,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -22.9204f, 24.5483f, 2.1088f };
-					uParam0->f_31 = { 0f, 0f, 15.12f };
+					uParam0->f_28 = Vector3(-22.9204f, 24.5483f, 2.1088f);
+					uParam0->f_31 = Vector3(0f, 0f, 15.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42382,8 +42382,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 131328;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -26.7744f, 39.5054f, 2.1018f };
-					uParam0->f_31 = { 0f, 0f, 170.64f };
+					uParam0->f_28 = Vector3(-26.7744f, 39.5054f, 2.1018f);
+					uParam0->f_31 = Vector3(0f, 0f, 170.64f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42407,8 +42407,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 131073;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -27.8984f, 39.3074f, 2.1003f };
-					uParam0->f_31 = { 0f, 0f, 205.2f };
+					uParam0->f_28 = Vector3(-27.8984f, 39.3074f, 2.1003f);
+					uParam0->f_31 = Vector3(0f, 0f, 205.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42433,8 +42433,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 769;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.2729f, 17.177f, 2.0986f };
-					uParam0->f_31 = { 0f, 0f, 210.96f };
+					uParam0->f_28 = Vector3(-10.2729f, 17.177f, 2.0986f);
+					uParam0->f_31 = Vector3(0f, 0f, 210.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -42459,8 +42459,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131337;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 26.6746f, 28.0305f, 2.112f };
-					uParam0->f_31 = { 0f, 0f, 136.08f };
+					uParam0->f_28 = Vector3(26.6746f, 28.0305f, 2.112f);
+					uParam0->f_31 = Vector3(0f, 0f, 136.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42484,8 +42484,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 66058;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 25.7606f, 28.2534f, 2.1076f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(25.7606f, 28.2534f, 2.1076f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42509,8 +42509,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 17.3706f, 20.5803f, 2.1004f };
-					uParam0->f_31 = { 0f, 0f, 172.8f };
+					uParam0->f_28 = Vector3(17.3706f, 20.5803f, 2.1004f);
+					uParam0->f_31 = Vector3(0f, 0f, 172.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -42535,8 +42535,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.8945f, 18.2524f, 2.1024f };
-					uParam0->f_31 = { 0f, 0f, 150.48f };
+					uParam0->f_28 = Vector3(7.8945f, 18.2524f, 2.1024f);
+					uParam0->f_31 = Vector3(0f, 0f, 150.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42561,8 +42561,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 6.9656f, 18.1675f, 2.1016f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(6.9656f, 18.1675f, 2.1016f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42586,8 +42586,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -39.9924f, 31.7075f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 218.16f };
+					uParam0->f_28 = Vector3(-39.9924f, 31.7075f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 218.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42611,8 +42611,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.6184f, 30.6013f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 89.28f };
+					uParam0->f_28 = Vector3(-37.6184f, 30.6013f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 89.28f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31662)
@@ -42639,8 +42639,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131841;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.9534f, 31.5764f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 118.08f };
+					uParam0->f_28 = Vector3(-37.9534f, 31.5764f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 118.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -42668,8 +42668,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -38.9924f, 31.9585f, 2.1084f };
-					uParam0->f_31 = { 0f, 0f, 182.16f };
+					uParam0->f_28 = Vector3(-38.9924f, 31.9585f, 2.1084f);
+					uParam0->f_31 = Vector3(0f, 0f, 182.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42693,8 +42693,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 65544;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -38.106f, 0.1365f, 0.9966f };
-					uParam0->f_31 = { 0f, 0f, 180.72f };
+					uParam0->f_28 = Vector3(-38.106f, 0.1365f, 0.9966f);
+					uParam0->f_31 = Vector3(0f, 0f, 180.72f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42718,8 +42718,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.778f, 15.979f, 2.0984f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-10.778f, 15.979f, 2.0984f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -42744,8 +42744,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 131330;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -39.1949f, 0.0925f, 0.9974f };
-					uParam0->f_31 = { 0f, 0f, 209.52f };
+					uParam0->f_28 = Vector3(-39.1949f, 0.0925f, 0.9974f);
+					uParam0->f_31 = Vector3(0f, 0f, 209.52f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42769,8 +42769,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 11;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.4974f, 3.2444f, 0.9966f };
-					uParam0->f_31 = { 0f, 0f, 355.68f };
+					uParam0->f_28 = Vector3(-16.4974f, 3.2444f, 0.9966f);
+					uParam0->f_31 = Vector3(0f, 0f, 355.68f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42794,8 +42794,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 770;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.5314f, 3.5024f, 0.9973f };
-					uParam0->f_31 = { 0f, 0f, 45.36f };
+					uParam0->f_28 = Vector3(-15.5314f, 3.5024f, 0.9973f);
+					uParam0->f_31 = Vector3(0f, 0f, 45.36f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42819,8 +42819,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 131329;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.5044f, 2.4944f, 0.9981f };
-					uParam0->f_31 = { 0f, 0f, 334.08f };
+					uParam0->f_28 = Vector3(-5.5044f, 2.4944f, 0.9981f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 31);
@@ -42846,8 +42846,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65537;
 					uParam0->f_21[1] = 66048;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.0184f, 2.9915f, 0.9919f };
-					uParam0->f_31 = { 0f, 0f, 295.92f };
+					uParam0->f_28 = Vector3(-6.0184f, 2.9915f, 0.9919f);
+					uParam0->f_31 = Vector3(0f, 0f, 295.92f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					break;
@@ -42872,8 +42872,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.9724f, -2.7815f, 1.0069f };
-					uParam0->f_31 = { 0f, 0f, 190.08f };
+					uParam0->f_28 = Vector3(-16.9724f, -2.7815f, 1.0069f);
+					uParam0->f_31 = Vector3(0f, 0f, 190.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42897,8 +42897,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66050;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.6919f, -13.3291f, 0.9967f };
-					uParam0->f_31 = { 0f, 0f, 118.8f };
+					uParam0->f_28 = Vector3(-11.6919f, -13.3291f, 0.9967f);
+					uParam0->f_31 = Vector3(0f, 0f, 118.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -42922,8 +42922,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 513;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.6869f, -14.429f, 0.994f };
-					uParam0->f_31 = { 0f, 0f, 54.72f };
+					uParam0->f_28 = Vector3(-11.6869f, -14.429f, 0.994f);
+					uParam0->f_31 = Vector3(0f, 0f, 54.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -42950,8 +42950,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 65792;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.0385f, -6.3765f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 79.2f };
+					uParam0->f_28 = Vector3(-12.0385f, -6.3765f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 79.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -42976,8 +42976,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -17.7975f, -3.0916f, 0.9999f };
-					uParam0->f_31 = { 0f, 0f, 221.76f };
+					uParam0->f_28 = Vector3(-17.7975f, -3.0916f, 0.9999f);
+					uParam0->f_31 = Vector3(0f, 0f, 221.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43001,8 +43001,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 65797;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -23.6794f, -23.9675f, 1.0069f };
-					uParam0->f_31 = { 0f, 0f, 148.32f };
+					uParam0->f_28 = Vector3(-23.6794f, -23.9675f, 1.0069f);
+					uParam0->f_31 = Vector3(0f, 0f, 148.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43026,8 +43026,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 66305;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -25.3324f, -23.9705f, 1.0066f };
-					uParam0->f_31 = { 0f, 0f, 214.56f };
+					uParam0->f_28 = Vector3(-25.3324f, -23.9705f, 1.0066f);
+					uParam0->f_31 = Vector3(0f, 0f, 214.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43051,8 +43051,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.4495f, -23.7527f, 1.0066f };
-					uParam0->f_31 = { 0f, 0f, 179.28f };
+					uParam0->f_28 = Vector3(-24.4495f, -23.7527f, 1.0066f);
+					uParam0->f_31 = Vector3(0f, 0f, 179.28f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43076,8 +43076,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 257;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -36.491f, -19.5581f, 1.0022f };
-					uParam0->f_31 = { 0f, 0f, 64.8f };
+					uParam0->f_28 = Vector3(-36.491f, -19.5581f, 1.0022f);
+					uParam0->f_31 = Vector3(0f, 0f, 64.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43101,8 +43101,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 258;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.4744f, -20.1707f, 0.9956f };
-					uParam0->f_31 = { 0f, 0f, 24.48f };
+					uParam0->f_28 = Vector3(-37.4744f, -20.1707f, 0.9956f);
+					uParam0->f_31 = Vector3(0f, 0f, 24.48f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43126,8 +43126,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -37.2764f, -17.5776f, 1.008f };
-					uParam0->f_31 = { 0f, 0f, 140.4f };
+					uParam0->f_28 = Vector3(-37.2764f, -17.5776f, 1.008f);
+					uParam0->f_31 = Vector3(0f, 0f, 140.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43152,8 +43152,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66308;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -36.6544f, -18.4265f, 0.9963f };
-					uParam0->f_31 = { 0f, 0f, 110.16f };
+					uParam0->f_28 = Vector3(-36.6544f, -18.4265f, 0.9963f);
+					uParam0->f_31 = Vector3(0f, 0f, 110.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43178,8 +43178,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -20.4235f, -17.7427f, 1.0021f };
-					uParam0->f_31 = { 0f, 0f, 12.96f };
+					uParam0->f_28 = Vector3(-20.4235f, -17.7427f, 1.0021f);
+					uParam0->f_31 = Vector3(0f, 0f, 12.96f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43203,8 +43203,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -21.4574f, -17.4956f, 0.9936f };
-					uParam0->f_31 = { 0f, 0f, 316.8f };
+					uParam0->f_28 = Vector3(-21.4574f, -17.4956f, 0.9936f);
+					uParam0->f_31 = Vector3(0f, 0f, 316.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43229,8 +43229,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.3024f, -14.3047f, 0.9896f };
-					uParam0->f_31 = { 0f, 0f, 313.2f };
+					uParam0->f_28 = Vector3(-3.3024f, -14.3047f, 0.9896f);
+					uParam0->f_31 = Vector3(0f, 0f, 313.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43255,8 +43255,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 514;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.3634f, -12.9375f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 241.2f };
+					uParam0->f_28 = Vector3(-3.3634f, -12.9375f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 241.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43281,8 +43281,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 261;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.8971f, -3.269f, 0.994f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(7.8971f, -3.269f, 0.994f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43306,8 +43306,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 522;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0.1855f, -2.8335f, 1.0006f };
-					uParam0->f_31 = { 0f, 0f, 154.8f };
+					uParam0->f_28 = Vector3(0.1855f, -2.8335f, 1.0006f);
+					uParam0->f_31 = Vector3(0f, 0f, 154.8f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43331,8 +43331,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 65540;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -0.8044f, -3.0505f, 1.0001f };
-					uParam0->f_31 = { 0f, 0f, 208.8f };
+					uParam0->f_28 = Vector3(-0.8044f, -3.0505f, 1.0001f);
+					uParam0->f_31 = Vector3(0f, 0f, 208.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					break;
@@ -43357,8 +43357,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 32.2075f, -24.4817f, 0.9966f };
-					uParam0->f_31 = { 0f, 0f, 238.32f };
+					uParam0->f_28 = Vector3(32.2075f, -24.4817f, 0.9966f);
+					uParam0->f_31 = Vector3(0f, 0f, 238.32f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43382,8 +43382,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 66307;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.5631f, 5.2573f, 0.9878f };
-					uParam0->f_31 = { 0f, 0f, 293.04f };
+					uParam0->f_28 = Vector3(22.5631f, 5.2573f, 0.9878f);
+					uParam0->f_31 = Vector3(0f, 0f, 293.04f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -43411,8 +43411,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 23.108f, 4.229f, 0.9914f };
-					uParam0->f_31 = { 0f, 0f, 324f };
+					uParam0->f_28 = Vector3(23.108f, 4.229f, 0.9914f);
+					uParam0->f_31 = Vector3(0f, 0f, 324f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43436,8 +43436,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554432;
 					uParam0->f_21[1] = 131328;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { 24.1906f, 3.573f, 0.9909f };
-					uParam0->f_31 = { 0f, 0f, 2.88f };
+					uParam0->f_28 = Vector3(24.1906f, 3.573f, 0.9909f);
+					uParam0->f_31 = Vector3(0f, 0f, 2.88f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43461,8 +43461,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33685504;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 21.5156f, -3.4436f, 0.9963f };
-					uParam0->f_31 = { 0f, 0f, 193.68f };
+					uParam0->f_28 = Vector3(21.5156f, -3.4436f, 0.9963f);
+					uParam0->f_31 = Vector3(0f, 0f, 193.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 31);
@@ -43488,8 +43488,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 19.0526f, -3.4006f, 0.9875f };
-					uParam0->f_31 = { 0f, 0f, 200.88f };
+					uParam0->f_28 = Vector3(19.0526f, -3.4006f, 0.9875f);
+					uParam0->f_31 = Vector3(0f, 0f, 200.88f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43514,8 +43514,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 131845;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 28.7426f, -5.9937f, 0.9878f };
-					uParam0->f_31 = { 0f, 0f, 104.4f };
+					uParam0->f_28 = Vector3(28.7426f, -5.9937f, 0.9878f);
+					uParam0->f_31 = Vector3(0f, 0f, 104.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43540,8 +43540,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { 21.1926f, -16.3945f, 0.9886f };
-					uParam0->f_31 = { 0f, 0f, 334.8f };
+					uParam0->f_28 = Vector3(21.1926f, -16.3945f, 0.9886f);
+					uParam0->f_31 = Vector3(0f, 0f, 334.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43566,8 +43566,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 131080;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 17.4426f, -17.1545f, 1.0002f };
-					uParam0->f_31 = { 0f, 0f, 309.6f };
+					uParam0->f_28 = Vector3(17.4426f, -17.1545f, 1.0002f);
+					uParam0->f_31 = Vector3(0f, 0f, 309.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43591,8 +43591,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 66049;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 29.5806f, -19.8425f, 0.9937f };
-					uParam0->f_31 = { 0f, 0f, 28.08f };
+					uParam0->f_28 = Vector3(29.5806f, -19.8425f, 0.9937f);
+					uParam0->f_31 = Vector3(0f, 0f, 28.08f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43616,8 +43616,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 775;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 25.0636f, -19.2095f, 0.9953f };
-					uParam0->f_31 = { 0f, 0f, 306.72f };
+					uParam0->f_28 = Vector3(25.0636f, -19.2095f, 0.9953f);
+					uParam0->f_31 = Vector3(0f, 0f, 306.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43642,8 +43642,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 770;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 30.3265f, -19.2085f, 0.9956f };
-					uParam0->f_31 = { 0f, 0f, 56.88f };
+					uParam0->f_28 = Vector3(30.3265f, -19.2085f, 0.9956f);
+					uParam0->f_31 = Vector3(0f, 0f, 56.88f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43667,8 +43667,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 131843;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 34.2325f, -24.3777f, 0.9994f };
-					uParam0->f_31 = { 0f, 0f, 127.44f };
+					uParam0->f_28 = Vector3(34.2325f, -24.3777f, 0.9994f);
+					uParam0->f_31 = Vector3(0f, 0f, 127.44f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43692,8 +43692,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 66054;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 33.2275f, -24.2856f, 0.9879f };
-					uParam0->f_31 = { 0f, 0f, 187.2f };
+					uParam0->f_28 = Vector3(33.2275f, -24.2856f, 0.9879f);
+					uParam0->f_31 = Vector3(0f, 0f, 187.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43717,8 +43717,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777217;
 					uParam0->f_21[1] = 65793;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 18.0455f, -16.4705f, 0.9884f };
-					uParam0->f_31 = { 0f, 0f, 183.6f };
+					uParam0->f_28 = Vector3(18.0455f, -16.4705f, 0.9884f);
+					uParam0->f_31 = Vector3(0f, 0f, 183.6f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43742,8 +43742,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 131082;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 28.9896f, -7.0105f, 0.9882f };
-					uParam0->f_31 = { 0f, 0f, 79.2f };
+					uParam0->f_28 = Vector3(28.9896f, -7.0105f, 0.9882f);
+					uParam0->f_31 = Vector3(0f, 0f, 79.2f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43767,8 +43767,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.0486f, -16.4456f, 0.9997f };
-					uParam0->f_31 = { 0f, 0f, 32.4f };
+					uParam0->f_28 = Vector3(22.0486f, -16.4456f, 0.9997f);
+					uParam0->f_31 = Vector3(0f, 0f, 32.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43793,8 +43793,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 1;
 					uParam0->f_21[1] = 131330;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -20.8774f, 18.4224f, 2.0984f };
-					uParam0->f_31 = { 0f, 0f, 214.56f };
+					uParam0->f_28 = Vector3(-20.8774f, 18.4224f, 2.0984f);
+					uParam0->f_31 = Vector3(0f, 0f, 214.56f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43818,8 +43818,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33620224;
 					uParam0->f_21[1] = 65536;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.9481f, -28.2766f, 1.1985f };
-					uParam0->f_31 = { 0f, 0f, 65.625f };
+					uParam0->f_28 = Vector3(3.9481f, -28.2766f, 1.1985f);
+					uParam0->f_31 = Vector3(0f, 0f, 65.625f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -43846,8 +43846,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 131590;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.4061f, -29.895f, 1.1985f };
-					uParam0->f_31 = { 0f, 0f, 29.36f };
+					uParam0->f_28 = Vector3(3.4061f, -29.895f, 1.1985f);
+					uParam0->f_31 = Vector3(0f, 0f, 29.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (Global_262145.f_31663)
@@ -43874,8 +43874,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 131333;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -19.8374f, 18.5425f, 2.0984f };
-					uParam0->f_31 = { 0f, 0f, 159.84f };
+					uParam0->f_28 = Vector3(-19.8374f, 18.5425f, 2.0984f);
+					uParam0->f_31 = Vector3(0f, 0f, 159.84f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43899,8 +43899,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 131584;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.0325f, -3.0215f, 0.9974f };
-					uParam0->f_31 = { 0f, 0f, 146.16f };
+					uParam0->f_28 = Vector3(-16.0325f, -3.0215f, 0.9974f);
+					uParam0->f_31 = Vector3(0f, 0f, 146.16f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -43924,8 +43924,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 65537;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -29.7074f, 18.3125f, 2.0944f };
-					uParam0->f_31 = { 0f, 0f, 154.8f };
+					uParam0->f_28 = Vector3(-29.7074f, 18.3125f, 2.0944f);
+					uParam0->f_31 = Vector3(0f, 0f, 154.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -43950,8 +43950,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619969;
 					uParam0->f_21[1] = 131844;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 18.6166f, -5.4966f, 0.9883f };
-					uParam0->f_31 = { 0f, 0f, 224.64f };
+					uParam0->f_28 = Vector3(18.6166f, -5.4966f, 0.9883f);
+					uParam0->f_31 = Vector3(0f, 0f, 224.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 42);
 					break;
@@ -43976,8 +43976,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 66306;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 22.2375f, -3.4006f, 0.9998f };
-					uParam0->f_31 = { 0f, 0f, 169.92f };
+					uParam0->f_28 = Vector3(22.2375f, -3.4006f, 0.9998f);
+					uParam0->f_31 = Vector3(0f, 0f, 169.92f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -44001,8 +44001,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 131073;
 					uParam0->f_21[1] = 265;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 25.233f, 4.1919f, 0.989f };
-					uParam0->f_31 = { 0f, 0f, 33.12f };
+					uParam0->f_28 = Vector3(25.233f, 4.1919f, 0.989f);
+					uParam0->f_31 = Vector3(0f, 0f, 33.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 				
@@ -44030,8 +44030,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 16777218;
 					uParam0->f_21[1] = 65794;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 12.1276f, 3.3015f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 324f };
+					uParam0->f_28 = Vector3(12.1276f, 3.3015f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 324f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -44055,8 +44055,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 131586;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 13.2075f, 3.2715f, 0.9944f };
-					uParam0->f_31 = { 0f, 0f, 22.32f };
+					uParam0->f_28 = Vector3(13.2075f, 3.2715f, 0.9944f);
+					uParam0->f_31 = Vector3(0f, 0f, 22.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 31);
 					break;
@@ -44081,8 +44081,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 65536;
 					uParam0->f_21[1] = 66307;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -22.2184f, 39.4065f, 2.1093f };
-					uParam0->f_31 = { 0f, 0f, 216f };
+					uParam0->f_28 = Vector3(-22.2184f, 39.4065f, 2.1093f);
+					uParam0->f_31 = Vector3(0f, 0f, 216f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 31);
@@ -44108,8 +44108,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 131585;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 13.504f, 38.2859f, 2.1014f };
-					uParam0->f_31 = { -15.12f, 0f, 221.04f };
+					uParam0->f_28 = Vector3(13.504f, 38.2859f, 2.1014f);
+					uParam0->f_31 = Vector3(-15.12f, 0f, 221.04f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -44133,8 +44133,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33554434;
 					uParam0->f_21[1] = 131082;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.4835f, 37.6785f, 2.1047f };
-					uParam0->f_31 = { 0f, 0f, 275.76f };
+					uParam0->f_28 = Vector3(8.4835f, 37.6785f, 2.1047f);
+					uParam0->f_31 = Vector3(0f, 0f, 275.76f);
 					func_44(&(uParam0->f_11));
 					break;
 			}
@@ -44206,8 +44206,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 15.4336f, -0.8333f, 0.9998f };
-					uParam0->f_31 = { 0f, 0f, 266.3013f };
+					uParam0->f_28 = Vector3(15.4336f, -0.8333f, 0.9998f);
+					uParam0->f_31 = Vector3(0f, 0f, 266.3013f);
 					func_568(uParam0, iParam1, iParam2);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 15);
@@ -44234,8 +44234,8 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 518;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.6299f, 16.6377f, 1.1037f };
-					uParam0->f_31 = { 0f, 0f, 177.5264f };
+					uParam0->f_28 = Vector3(-13.6299f, 16.6377f, 1.1037f);
+					uParam0->f_31 = Vector3(0f, 0f, 177.5264f);
 					func_568(uParam0, iParam1, iParam2);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 15);
@@ -44249,7 +44249,7 @@ void func_572(var uParam0, int iParam1, int iParam2, BOOL bParam3) // Position -
 	if (!func_567(iParam1))
 	{
 		if (!_IS_NULL_VECTOR(uParam0->f_28))
-			uParam0->f_28 = { func_48(func_536(-1), func_535(-1), uParam0->f_28) };
+			uParam0->f_28 = Vector3(func_48(func_536(-1), func_535(-1), uParam0->f_28));
 	
 		if (uParam0->f_31.f_2 != -1f)
 			uParam0->f_31.f_2 = func_47(func_535(-1), uParam0->f_31.f_2);
@@ -44304,7 +44304,7 @@ int func_577(var uParam0, int iParam1) // Position - 0x30498
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_563(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -44782,7 +44782,7 @@ void func_587(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 6;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44792,7 +44792,7 @@ void func_587(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 13;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44802,7 +44802,7 @@ void func_587(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 47;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44812,7 +44812,7 @@ void func_587(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 70;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44836,7 +44836,7 @@ void func_588(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 6;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44846,7 +44846,7 @@ void func_588(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 13;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44856,7 +44856,7 @@ void func_588(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 47;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44866,7 +44866,7 @@ void func_588(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 70;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 4f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -44882,14 +44882,14 @@ void func_589(int iParam0, var uParam1) // Position - 0x30F48
 	switch (iParam0)
 	{
 		case 2:
-			uParam1->f_3 = { -1025.4703f, -221.34189f, 36.94617f };
-			uParam1->f_6 = { -1023.5352f, -217.7226f, 39.42221f };
+			uParam1->f_3 = Vector3(-1025.4703f, -221.34189f, 36.94617f);
+			uParam1->f_6 = Vector3(-1023.5352f, -217.7226f, 39.42221f);
 			*uParam1 = 1.25f;
 			break;
 	
 		case 3:
-			uParam1->f_3 = { -1026.5872f, -220.7659f, 36.944595f };
-			uParam1->f_6 = { -1024.6469f, -217.13046f, 39.422775f };
+			uParam1->f_3 = Vector3(-1026.5872f, -220.7659f, 36.944595f);
+			uParam1->f_6 = Vector3(-1024.6469f, -217.13046f, 39.422775f);
 			*uParam1 = 1.25f;
 			break;
 	}
@@ -45168,8 +45168,8 @@ int func_593(Ped pedParam0, int iParam1, var uParam2, var uParam3) // Position -
 		case 61:
 		case 95:
 		case 117:
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
-			entityCoords2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
+			entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		
 			if (!func_12(0f, 0f, entityCoords2.f_2, 0f, 0f, entityCoords.f_2, 1056964608, false))
 				return 0;
@@ -45735,11 +45735,11 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "_HEADPHONES") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", "_HEADPHONES"));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_WINEGLASS") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_WINEGLASS"));
 					break;
 			}
 			break;
@@ -45750,15 +45750,15 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bottle") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bottle"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_tumbler") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_tumbler"));
 					break;
 			}
 			break;
@@ -45769,15 +45769,15 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bottle") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bottle"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_COCONUTDRINK") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_COCONUTDRINK"));
 					break;
 			}
 			break;
@@ -45788,27 +45788,27 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_tumbler") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_tumbler"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_T_BOTTLE") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_T_BOTTLE"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_01") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_01"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_02") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_02"));
 					break;
 			
 				case 5:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_03") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_03"));
 					break;
 			}
 			break;
@@ -45819,11 +45819,11 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "PTRX_", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "PTRX_", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "PTRX_", "_BEER_CAN") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "PTRX_", "_BEER_CAN"));
 					break;
 			}
 			break;
@@ -45834,27 +45834,27 @@ void func_605(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_turntable_left") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_turntable_left"));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_turntable_right") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_turntable_right"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_lp_left") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_lp_left"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_lp_right") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_lp_right"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bag") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bag"));
 					break;
 			
 				case 5:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_TUMBLER") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_TUMBLER"));
 					break;
 			}
 			break;
@@ -47173,7 +47173,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "_SOL") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", "_SOL"));
 			break;
 	
 		case 136:
@@ -47182,7 +47182,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 135:
@@ -47191,7 +47191,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 134:
@@ -47200,7 +47200,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 137:
@@ -47209,7 +47209,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "PTRX_", "_DJ_PTRAX") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "PTRX_", "_DJ_PTRAX"));
 			break;
 	
 		case 138:
@@ -47218,7 +47218,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 139:
@@ -47227,7 +47227,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_617(iParam2, 1), "", "_dancer_a") };
+			uParam1->f_2 = Vector3(func_333(func_617(iParam2, 1), "", "_dancer_a"));
 			break;
 	
 		case 140:
@@ -47236,7 +47236,7 @@ void func_607(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_617(iParam2, 2), "", "_dancer_b") };
+			uParam1->f_2 = Vector3(func_333(func_617(iParam2, 2), "", "_dancer_b"));
 			break;
 	
 		case 149:
@@ -68804,23 +68804,23 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 				
 					if (num == 6)
 					{
-						uParam0->f_28 = { -0.3997f, 0.0652f, -0.0433f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.3997f, 0.0652f, -0.0433f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else if (num == 4)
 					{
-						uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else if (num == 7)
 					{
-						uParam0->f_28 = { -0.5197f, -0.0198f, -0.0903f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.5197f, -0.0198f, -0.0903f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else
 					{
-						uParam0->f_28 = { 1.8594f, -0.1765f, -2.1764f };
-						uParam0->f_31 = { 0f, 0f, 180f };
+						uParam0->f_28 = Vector3(1.8594f, -0.1765f, -2.1764f);
+						uParam0->f_31 = Vector3(0f, 0f, 180f);
 					}
 				
 					func_44(&(uParam0->f_11));
@@ -68848,8 +68848,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 						case 5:
 							uParam0->f_25 = 21;
 							uParam0->f_26 = 135;
-							uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 33619968;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 16908288;
@@ -68867,8 +68867,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 						case 7:
 							uParam0->f_25 = 27;
 							uParam0->f_26 = 139;
-							uParam0->f_28 = { -0.5326f, 0.0402f, -0.1703f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5326f, 0.0402f, -0.1703f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -68893,8 +68893,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { -10.9946f, 3.2402f, -0.7703f };
-							uParam0->f_31 = { 0f, 0f, 259.2f };
+							uParam0->f_28 = Vector3(-10.9946f, 3.2402f, -0.7703f);
+							uParam0->f_31 = Vector3(0f, 0f, 259.2f);
 							func_44(&(uParam0->f_11));
 						
 							if (func_611(uParam0->f_26))
@@ -68922,8 +68922,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 						case 5:
 							uParam0->f_25 = 22;
 							uParam0->f_26 = 136;
-							uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 16777216;
 							uParam0->f_17[1] = 257;
 							uParam0->f_17[2] = 1;
@@ -68941,8 +68941,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 						case 7:
 							uParam0->f_25 = 28;
 							uParam0->f_26 = 140;
-							uParam0->f_28 = { -0.5326f, 0.0402f, -0.1703f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5326f, 0.0402f, -0.1703f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -68967,8 +68967,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { -9.4426f, -4.2098f, -0.7703f };
-							uParam0->f_31 = { 0f, 0f, 330f };
+							uParam0->f_28 = Vector3(-9.4426f, -4.2098f, -0.7703f);
+							uParam0->f_31 = Vector3(0f, 0f, 330f);
 							func_44(&(uParam0->f_11));
 							func_39(&(uParam0->f_11), 14);
 						
@@ -68996,8 +68996,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 						case 7:
 							uParam0->f_25 = 29;
 							uParam0->f_26 = 141;
-							uParam0->f_28 = { 1.9154f, 1.6202f, 0.024f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(1.9154f, 1.6202f, 0.024f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -69024,8 +69024,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { 7.7544f, -8.2748f, 2.2297f };
-							uParam0->f_31 = { 0f, 0f, 0f };
+							uParam0->f_28 = Vector3(7.7544f, -8.2748f, 2.2297f);
+							uParam0->f_31 = Vector3(0f, 0f, 0f);
 							func_44(&(uParam0->f_11));
 							func_39(&(uParam0->f_11), 14);
 						
@@ -69058,8 +69058,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33619972;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.0706f, 4.4262f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 235f };
+					uParam0->f_28 = Vector3(-12.0706f, 4.4262f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 235f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69086,8 +69086,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50397185;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.5734f, -4.3271f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 352.8016f };
+					uParam0->f_28 = Vector3(-4.5734f, -4.3271f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 352.8016f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69115,8 +69115,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -14.6241f, 0.9928f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 241.19f };
+					uParam0->f_28 = Vector3(-14.6241f, 0.9928f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 241.19f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 7);
@@ -69145,8 +69145,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50331650;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.9434f, 0.7738f, -0.9803f };
-					uParam0->f_31 = { 0f, 0f, 105f };
+					uParam0->f_28 = Vector3(3.9434f, 0.7738f, -0.9803f);
+					uParam0->f_31 = Vector3(0f, 0f, 105f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -69175,8 +69175,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117440515;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.3354f, -0.7912f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-7.3354f, -0.7912f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69204,8 +69204,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151126019;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8606f, 4.6303f, 2.2239f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(-11.8606f, 4.6303f, 2.2239f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69232,8 +69232,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { -23.6451f, 0.3655f, 2.2243f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(-23.6451f, 0.3655f, 2.2243f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 0);
 					func_39(&(uParam0->f_11), 14);
@@ -69262,8 +69262,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117702660;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.2926f, 5.6602f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 200f };
+					uParam0->f_28 = Vector3(-4.2926f, 5.6602f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 200f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69290,8 +69290,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50397188;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -27.4756f, 1.8302f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 239f };
+					uParam0->f_28 = Vector3(-27.4756f, 1.8302f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 239f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69321,8 +69321,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -19.9531f, 4.6957f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 56.51f };
+					uParam0->f_28 = Vector3(-19.9531f, 4.6957f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 56.51f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					func_39(&(uParam0->f_11), 1);
@@ -69351,8 +69351,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.7046f, -1.1111f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 289.44f };
+					uParam0->f_28 = Vector3(-4.7046f, -1.1111f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 289.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69380,8 +69380,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134283267;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.7426f, -0.4076f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 298.8f };
+					uParam0->f_28 = Vector3(-5.7426f, -0.4076f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 298.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69409,8 +69409,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67108867;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.9246f, -0.2492f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 271.44f };
+					uParam0->f_28 = Vector3(-3.9246f, -0.2492f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 271.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69438,8 +69438,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151126016;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.3436f, -0.1441f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 271.44f };
+					uParam0->f_28 = Vector3(-6.3436f, -0.1441f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 271.44f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69466,8 +69466,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 65540;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.0696f, -1.247f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 35.2f };
+					uParam0->f_28 = Vector3(-16.0696f, -1.247f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 35.2f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69497,8 +69497,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 150994944;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.1545f, -1.7798f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 301.68f };
+					uParam0->f_28 = Vector3(-12.1545f, -1.7798f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 301.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -69527,8 +69527,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100794371;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.3676f, -3.8672f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 302.105f };
+					uParam0->f_28 = Vector3(-5.3676f, -3.8672f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 302.105f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69555,8 +69555,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67174404;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.9016f, -0.2858f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 277.2f };
+					uParam0->f_28 = Vector3(-2.9016f, -0.2858f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 277.2f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69583,8 +69583,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117637121;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.9006f, -2.3505f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 338.4f };
+					uParam0->f_28 = Vector3(-3.9006f, -2.3505f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 338.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69612,8 +69612,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67436547;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.9937f, -4.8784f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-3.9937f, -4.8784f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69643,8 +69643,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84017154;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.1187f, -4.9212f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 353f };
+					uParam0->f_28 = Vector3(-3.1187f, -4.9212f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 353f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69674,8 +69674,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50462724;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.0764f, 3.7209f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 219.6f };
+					uParam0->f_28 = Vector3(-3.0764f, 3.7209f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 219.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69703,8 +69703,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134283265;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.9224f, -2.3191f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 300f };
+					uParam0->f_28 = Vector3(-2.9224f, -2.3191f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 300f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69731,8 +69731,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100925443;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.1504f, -3.3401f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 354.135f };
+					uParam0->f_28 = Vector3(-3.1504f, -3.3401f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 354.135f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69759,8 +69759,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -26.0216f, 6.3058f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 116.64f };
+					uParam0->f_28 = Vector3(-26.0216f, 6.3058f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 116.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69791,8 +69791,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33882114;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.9706f, 0.7286f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 243.975f };
+					uParam0->f_28 = Vector3(-3.9706f, 0.7286f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 243.975f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69819,8 +69819,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 150994948;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.7526f, 2.0378f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 240.48f };
+					uParam0->f_28 = Vector3(-2.7526f, 2.0378f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 240.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -69848,8 +69848,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 2;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.4204f, -1.1742f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 58.32f };
+					uParam0->f_28 = Vector3(3.4204f, -1.1742f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 58.32f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69876,8 +69876,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 83951619;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.4596f, 0.9657f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 17.46f };
+					uParam0->f_28 = Vector3(-8.4596f, 0.9657f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 17.46f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69904,8 +69904,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 83886081;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -27.3156f, 1.2002f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 348.58f };
+					uParam0->f_28 = Vector3(-27.3156f, 1.2002f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 348.58f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69935,8 +69935,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100859907;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.9314f, 0.8458f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 254.88f };
+					uParam0->f_28 = Vector3(-2.9314f, 0.8458f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 254.88f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -69963,8 +69963,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134414340;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -5.2816f, -2.2768f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 300f };
+					uParam0->f_28 = Vector3(-5.2816f, -2.2768f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 300f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -69993,8 +69993,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50397186;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.2709f, 1.0103f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 297.764f };
+					uParam0->f_28 = Vector3(-5.2709f, 1.0103f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 297.764f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70021,8 +70021,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.7056f, -1.3081f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 320f };
+					uParam0->f_28 = Vector3(-3.7056f, -1.3081f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 320f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70049,8 +70049,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 17039364;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.8785f, -0.0161f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 273.5967f };
+					uParam0->f_28 = Vector3(-4.8785f, -0.0161f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 273.5967f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70077,8 +70077,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151060482;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -5.2816f, -2.2768f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 300f };
+					uParam0->f_28 = Vector3(-5.2816f, -2.2768f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 300f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -70107,8 +70107,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50528260;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.6805f, 4.573f, 2.2243f };
-					uParam0->f_31 = { 0f, 0f, 215f };
+					uParam0->f_28 = Vector3(-15.6805f, 4.573f, 2.2243f);
+					uParam0->f_31 = Vector3(0f, 0f, 215f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70136,8 +70136,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117571584;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.1545f, -1.7798f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 301.68f };
+					uParam0->f_28 = Vector3(-12.1545f, -1.7798f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 301.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -70165,8 +70165,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151257090;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.0836f, -7.3387f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-3.0836f, -7.3387f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70197,8 +70197,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50462720;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { 0.4551f, -4.9087f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 352f };
+					uParam0->f_28 = Vector3(0.4551f, -4.9087f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 352f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70229,8 +70229,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67371012;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.7144f, -5.9948f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 170f };
+					uParam0->f_28 = Vector3(8.7144f, -5.9948f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 170f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70260,8 +70260,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 131074;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.7756f, -3.4472f, 2.2249f };
-					uParam0->f_31 = { 0f, 0f, 277.92f };
+					uParam0->f_28 = Vector3(-11.7756f, -3.4472f, 2.2249f);
+					uParam0->f_31 = Vector3(0f, 0f, 277.92f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70291,8 +70291,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117702658;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -15.3055f, 3.9823f, 2.2043f };
-					uParam0->f_31 = { 0f, 0f, 54f };
+					uParam0->f_28 = Vector3(-15.3055f, 3.9823f, 2.2043f);
+					uParam0->f_31 = Vector3(0f, 0f, 54f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70320,8 +70320,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5984f, 5.3428f, -0.3803f };
-					uParam0->f_31 = { 0f, 0f, 92.16f };
+					uParam0->f_28 = Vector3(2.5984f, 5.3428f, -0.3803f);
+					uParam0->f_31 = Vector3(0f, 0f, 92.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 				
@@ -70349,8 +70349,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151060483;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -12.1545f, -1.7798f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 301.68f };
+					uParam0->f_28 = Vector3(-12.1545f, -1.7798f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 301.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -70379,8 +70379,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67436544;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8256f, 2.1105f, 2.2243f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-11.8256f, 2.1105f, 2.2243f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70407,8 +70407,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 262144;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.4904f, -1.7541f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 280.8f };
+					uParam0->f_28 = Vector3(-7.4904f, -1.7541f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 280.8f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70435,8 +70435,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67305476;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.9606f, -1.471f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 300f };
+					uParam0->f_28 = Vector3(-5.9606f, -1.471f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 300f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70463,8 +70463,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100728832;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -2.8026f, -1.2898f, -0.7765f };
-					uParam0->f_31 = { 0f, 0f, 285.12f };
+					uParam0->f_28 = Vector3(-2.8026f, -1.2898f, -0.7765f);
+					uParam0->f_31 = Vector3(0f, 0f, 285.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70492,8 +70492,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50593794;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -18.2036f, -4.7636f, 2.2254f };
-					uParam0->f_31 = { 0f, 0f, 13f };
+					uParam0->f_28 = Vector3(-18.2036f, -4.7636f, 2.2254f);
+					uParam0->f_31 = Vector3(0f, 0f, 13f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70521,8 +70521,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84082690;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.1246f, 6.3302f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 198f };
+					uParam0->f_28 = Vector3(-2.1246f, 6.3302f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 198f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70549,8 +70549,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16973825;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -7.2524f, 0.6438f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 324.89f };
+					uParam0->f_28 = Vector3(-7.2524f, 0.6438f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 324.89f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70578,8 +70578,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67371008;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.7126f, -7.3262f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 320.4f };
+					uParam0->f_28 = Vector3(-3.7126f, -7.3262f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 320.4f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70607,8 +70607,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -70639,8 +70639,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -70671,8 +70671,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100794368;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.2146f, 6.1002f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 146.16f };
+					uParam0->f_28 = Vector3(-1.2146f, 6.1002f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 146.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70700,8 +70700,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33554433;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.1316f, 4.461f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(-5.1316f, 4.461f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70728,8 +70728,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -70761,8 +70761,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33816579;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.9846f, -1.4944f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 320f };
+					uParam0->f_28 = Vector3(-8.9846f, -1.4944f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 320f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -70791,8 +70791,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16777216;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.1024f, -4.4252f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 10f };
+					uParam0->f_28 = Vector3(3.1024f, -4.4252f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 10f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70819,8 +70819,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33816577;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.9536f, -2.6077f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 320f };
+					uParam0->f_28 = Vector3(-9.9536f, -2.6077f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 320f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70847,8 +70847,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33751042;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.3326f, 1.4115f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 232.56f };
+					uParam0->f_28 = Vector3(-7.3326f, 1.4115f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 232.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70876,8 +70876,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67239940;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -15.6716f, -5.9456f, 2.2248f };
-					uParam0->f_31 = { 0f, 0f, 54.72f };
+					uParam0->f_28 = Vector3(-15.6716f, -5.9456f, 2.2248f);
+					uParam0->f_31 = Vector3(0f, 0f, 54.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70905,8 +70905,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 83886083;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.6006f, 3.6549f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 293.11f };
+					uParam0->f_28 = Vector3(-5.6006f, 3.6549f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 293.11f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -70934,8 +70934,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134545408;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.8036f, -2.4031f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 311.76f };
+					uParam0->f_28 = Vector3(-6.8036f, -2.4031f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 311.76f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -70962,8 +70962,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16973826;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.9846f, -1.4944f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 320f };
+					uParam0->f_28 = Vector3(-8.9846f, -1.4944f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 320f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -70991,8 +70991,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.6344f, -4.2998f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 170f };
+					uParam0->f_28 = Vector3(7.6344f, -4.2998f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 170f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 				
@@ -71020,8 +71020,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84148227;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { 3.6733f, -3.2768f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 30f };
+					uParam0->f_28 = Vector3(3.6733f, -3.2768f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 30f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71052,8 +71052,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117506049;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.1646f, 5.4739f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 192.96f };
+					uParam0->f_28 = Vector3(-7.1646f, 5.4739f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 192.96f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71081,8 +71081,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33619971;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.3766f, 4.5194f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 333.61f };
+					uParam0->f_28 = Vector3(-7.3766f, 4.5194f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 333.61f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71110,8 +71110,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117637120;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.8236f, -1.9468f, 2.2239f };
-					uParam0->f_31 = { 0f, 0f, 206.64f };
+					uParam0->f_28 = Vector3(-13.8236f, -1.9468f, 2.2239f);
+					uParam0->f_31 = Vector3(0f, 0f, 206.64f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71139,8 +71139,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 65538;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.1146f, 2.4979f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(-16.1146f, 2.4979f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71167,8 +71167,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84082689;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.7316f, -2.5178f, 2.2239f };
-					uParam0->f_31 = { 0f, 0f, 1.44f };
+					uParam0->f_28 = Vector3(-13.7316f, -2.5178f, 2.2239f);
+					uParam0->f_31 = Vector3(0f, 0f, 1.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71196,8 +71196,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 83886084;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.2725f, -4.8357f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-9.2725f, -4.8357f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71227,8 +71227,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84082692;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -11.8646f, 0.4277f, 2.1947f };
-					uParam0->f_31 = { 0f, 0f, 260f };
+					uParam0->f_28 = Vector3(-11.8646f, 0.4277f, 2.1947f);
+					uParam0->f_31 = Vector3(0f, 0f, 260f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71259,8 +71259,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134479872;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.3116f, 4.969f, 2.2251f };
-					uParam0->f_31 = { 0f, 0f, 225.36f };
+					uParam0->f_28 = Vector3(-12.3116f, 4.969f, 2.2251f);
+					uParam0->f_31 = Vector3(0f, 0f, 225.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71288,8 +71288,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.1836f, 1.5536f, 2.0147f };
-					uParam0->f_31 = { 0f, 0f, 351.36f };
+					uParam0->f_28 = Vector3(-16.1836f, 1.5536f, 2.0147f);
+					uParam0->f_31 = Vector3(0f, 0f, 351.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71316,8 +71316,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84082689;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8676f, -0.4401f, 2.2251f };
-					uParam0->f_31 = { 0f, 0f, 267.56f };
+					uParam0->f_28 = Vector3(-11.8676f, -0.4401f, 2.2251f);
+					uParam0->f_31 = Vector3(0f, 0f, 267.56f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71347,8 +71347,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117571585;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.0166f, 3.4892f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 232.56f };
+					uParam0->f_28 = Vector3(-8.0166f, 3.4892f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 232.56f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71375,8 +71375,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50462720;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.8365f, 4.1592f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 257.76f };
+					uParam0->f_28 = Vector3(-9.8365f, 4.1592f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 257.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71404,8 +71404,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33882115;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.3564f, 1.7718f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 247.275f };
+					uParam0->f_28 = Vector3(-6.3564f, 1.7718f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 247.275f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71432,8 +71432,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 17039362;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.0627f, 2.4768f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 215.7211f };
+					uParam0->f_28 = Vector3(-6.0627f, 2.4768f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 215.7211f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71461,8 +71461,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67305476;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.3376f, -3.8792f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 323.1489f };
+					uParam0->f_28 = Vector3(-7.3376f, -3.8792f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 323.1489f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71489,8 +71489,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100859904;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.0582f, -3.2593f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 272.4489f };
+					uParam0->f_28 = Vector3(-8.0582f, -3.2593f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 272.4489f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71517,8 +71517,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 17039360;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.5106f, 3.1499f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 225f };
+					uParam0->f_28 = Vector3(-4.5106f, 3.1499f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 225f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71545,8 +71545,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { 2.5264f, -3.5971f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 30f };
+					uParam0->f_28 = Vector3(2.5264f, -3.5971f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 30f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -71575,8 +71575,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134217729;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5264f, -3.5971f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 30f };
+					uParam0->f_28 = Vector3(2.5264f, -3.5971f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 30f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -71604,8 +71604,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -8.9666f, 3.6592f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 36f };
+					uParam0->f_28 = Vector3(-8.9666f, 3.6592f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71633,8 +71633,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134217731;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.0767f, 4.6592f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 159.12f };
+					uParam0->f_28 = Vector3(-9.0767f, 4.6592f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 159.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71661,8 +71661,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50331651;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.2017f, -6.3158f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 351.36f };
+					uParam0->f_28 = Vector3(-16.2017f, -6.3158f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 351.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71689,8 +71689,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117440512;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.9434f, 0.7738f, -0.9803f };
-					uParam0->f_31 = { 0f, 0f, 105f };
+					uParam0->f_28 = Vector3(3.9434f, 0.7738f, -0.9803f);
+					uParam0->f_31 = Vector3(0f, 0f, 105f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -71718,8 +71718,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 20);
@@ -71749,8 +71749,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134479875;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.5746f, 1.8322f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 254f };
+					uParam0->f_28 = Vector3(-3.5746f, 1.8322f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 254f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71778,8 +71778,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 151126018;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.1454f, -1.5198f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 24.48f };
+					uParam0->f_28 = Vector3(2.1454f, -1.5198f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 24.48f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71806,8 +71806,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 33816577;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -10.1554f, 1.6979f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 311.76f };
+					uParam0->f_28 = Vector3(-10.1554f, 1.6979f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 311.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71835,8 +71835,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67108866;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.8896f, 2.4952f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 173.52f };
+					uParam0->f_28 = Vector3(-9.8896f, 2.4952f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 173.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71864,8 +71864,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 327683;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 5.7144f, -2.3048f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 36.72f };
+					uParam0->f_28 = Vector3(5.7144f, -2.3048f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 36.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71895,8 +71895,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 17039360;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 5.8544f, -1.3648f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 151.2f };
+					uParam0->f_28 = Vector3(5.8544f, -1.3648f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 151.2f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -71926,8 +71926,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50528260;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 8.8844f, -6.4748f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 36.72f };
+					uParam0->f_28 = Vector3(8.8844f, -6.4748f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 36.72f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71958,8 +71958,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16908288;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.8414f, -4.9097f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-1.8414f, -4.9097f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -71987,8 +71987,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100794371;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -6.9766f, 3.3292f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 115.2f };
+					uParam0->f_28 = Vector3(-6.9766f, 3.3292f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 115.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72016,8 +72016,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 65540;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.5066f, 2.5192f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 348.48f };
+					uParam0->f_28 = Vector3(-7.5066f, 2.5192f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 348.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72045,8 +72045,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134283266;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 4.9944f, -4.8348f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(4.9944f, -4.8348f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -72073,8 +72073,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16973824;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.6324f, -0.248f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 274.0486f };
+					uParam0->f_28 = Vector3(-10.6324f, -0.248f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 274.0486f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 12);
 				
@@ -72102,8 +72102,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50528260;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.9434f, 0.7738f, -0.9803f };
-					uParam0->f_31 = { 0f, 0f, 105f };
+					uParam0->f_28 = Vector3(3.9434f, 0.7738f, -0.9803f);
+					uParam0->f_31 = Vector3(0f, 0f, 105f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -72131,8 +72131,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100728834;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.9954f, 2.2002f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 143.28f };
+					uParam0->f_28 = Vector3(2.9954f, 2.2002f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 143.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72160,8 +72160,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 100794369;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.3416f, -5.5158f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 219f };
+					uParam0->f_28 = Vector3(-16.3416f, -5.5158f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 219f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72189,8 +72189,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 150994946;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.6324f, -0.248f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 274.0486f };
+					uParam0->f_28 = Vector3(-10.6324f, -0.248f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 274.0486f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -72218,8 +72218,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 262148;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5754f, -0.2498f, -0.9803f };
-					uParam0->f_31 = { 0f, 0f, 76.32f };
+					uParam0->f_28 = Vector3(2.5754f, -0.2498f, -0.9803f);
+					uParam0->f_31 = Vector3(0f, 0f, 76.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -72248,8 +72248,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 67239940;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5754f, -0.2498f, -0.9803f };
-					uParam0->f_31 = { 0f, 0f, 76.32f };
+					uParam0->f_28 = Vector3(2.5754f, -0.2498f, -0.9803f);
+					uParam0->f_31 = Vector3(0f, 0f, 76.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -72278,8 +72278,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134217728;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -9.1384f, 1.4049f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 264.35f };
+					uParam0->f_28 = Vector3(-9.1384f, 1.4049f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 264.35f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72307,8 +72307,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 262146;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -5.2876f, 1.9243f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 240f };
+					uParam0->f_28 = Vector3(-5.2876f, 1.9243f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 240f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72336,8 +72336,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 134283268;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.4641f, 1.9971f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 137.384f };
+					uParam0->f_28 = Vector3(-4.4641f, 1.9971f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 137.384f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -72364,8 +72364,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -72396,8 +72396,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 84017152;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -26.6306f, 6.4662f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 241.2f };
+					uParam0->f_28 = Vector3(-26.6306f, 6.4662f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 241.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72428,8 +72428,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 16973828;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.5266f, 2.7792f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 265f };
+					uParam0->f_28 = Vector3(-12.5266f, 2.7792f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 265f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -72458,8 +72458,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 117440512;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -12.5266f, 2.7792f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 265f };
+					uParam0->f_28 = Vector3(-12.5266f, 2.7792f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 265f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -72488,8 +72488,8 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 					uParam0->f_21[0] = 50462721;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.2854f, -4.8688f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1.2854f, -4.8688f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -72503,7 +72503,7 @@ void func_860(var uParam0, int iParam1, BOOL bParam2) // Position - 0x47D2F
 	}
 
 	if (!_IS_NULL_VECTOR(uParam0->f_28))
-		uParam0->f_28 = { func_48(func_863(-1), func_862(-1), uParam0->f_28) };
+		uParam0->f_28 = Vector3(func_48(func_863(-1), func_862(-1), uParam0->f_28));
 
 	if (uParam0->f_31.f_2 != -1f)
 		uParam0->f_31.f_2 = func_47(func_862(-1), uParam0->f_31.f_2);
@@ -72581,23 +72581,23 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 				
 					if (num == 6)
 					{
-						uParam0->f_28 = { -0.3997f, 0.0652f, -0.0433f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.3997f, 0.0652f, -0.0433f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else if (num == 4)
 					{
-						uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else if (num == 7)
 					{
-						uParam0->f_28 = { -0.5197f, -0.0198f, -0.0903f };
-						uParam0->f_31 = { 0f, 0f, 90f };
+						uParam0->f_28 = Vector3(-0.5197f, -0.0198f, -0.0903f);
+						uParam0->f_31 = Vector3(0f, 0f, 90f);
 					}
 					else
 					{
-						uParam0->f_28 = { 1.8594f, -0.1765f, -2.1764f };
-						uParam0->f_31 = { 0f, 0f, 180f };
+						uParam0->f_28 = Vector3(1.8594f, -0.1765f, -2.1764f);
+						uParam0->f_31 = Vector3(0f, 0f, 180f);
 					}
 				
 					func_44(&(uParam0->f_11));
@@ -72625,8 +72625,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 						case 5:
 							uParam0->f_25 = 21;
 							uParam0->f_26 = 135;
-							uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 33619968;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 16908288;
@@ -72644,8 +72644,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 						case 7:
 							uParam0->f_25 = 27;
 							uParam0->f_26 = 139;
-							uParam0->f_28 = { -0.5326f, 0.0402f, -0.1703f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5326f, 0.0402f, -0.1703f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -72670,8 +72670,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { -4.1646f, -4.4098f, -0.7703f };
-							uParam0->f_31 = { 0f, 0f, 357.12f };
+							uParam0->f_28 = Vector3(-4.1646f, -4.4098f, -0.7703f);
+							uParam0->f_31 = Vector3(0f, 0f, 357.12f);
 							func_44(&(uParam0->f_11));
 						
 							if (func_611(uParam0->f_26))
@@ -72699,8 +72699,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 						case 5:
 							uParam0->f_25 = 22;
 							uParam0->f_26 = 136;
-							uParam0->f_28 = { -0.5135f, 0.0502f, -0.0903f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5135f, 0.0502f, -0.0903f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 16777216;
 							uParam0->f_17[1] = 257;
 							uParam0->f_17[2] = 1;
@@ -72718,8 +72718,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 						case 7:
 							uParam0->f_25 = 28;
 							uParam0->f_26 = 140;
-							uParam0->f_28 = { -0.5326f, 0.0402f, -0.1703f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(-0.5326f, 0.0402f, -0.1703f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -72744,8 +72744,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { -9.9546f, -3.9798f, -0.7703f };
-							uParam0->f_31 = { 0f, 0f, 296.64f };
+							uParam0->f_28 = Vector3(-9.9546f, -3.9798f, -0.7703f);
+							uParam0->f_31 = Vector3(0f, 0f, 296.64f);
 							func_44(&(uParam0->f_11));
 							func_39(&(uParam0->f_11), 14);
 						
@@ -72773,8 +72773,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 						case 7:
 							uParam0->f_25 = 29;
 							uParam0->f_26 = 141;
-							uParam0->f_28 = { 1.9154f, 1.6202f, 0.024f };
-							uParam0->f_31 = { 0f, 0f, 90f };
+							uParam0->f_28 = Vector3(1.9154f, 1.6202f, 0.024f);
+							uParam0->f_31 = Vector3(0f, 0f, 90f);
 							uParam0->f_17[0] = 0;
 							uParam0->f_17[1] = 0;
 							uParam0->f_17[2] = 0;
@@ -72801,8 +72801,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 							uParam0->f_21[0] = -1;
 							uParam0->f_21[1] = -1;
 							uParam0->f_21[2] = -1;
-							uParam0->f_28 = { -3.6526f, 6.2782f, -0.7763f };
-							uParam0->f_31 = { 0f, 0f, 200f };
+							uParam0->f_28 = Vector3(-3.6526f, 6.2782f, -0.7763f);
+							uParam0->f_31 = Vector3(0f, 0f, 200f);
 							func_44(&(uParam0->f_11));
 							func_39(&(uParam0->f_11), 14);
 						
@@ -72832,8 +72832,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100990980;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.5226f, 6.3682f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 200f };
+					uParam0->f_28 = Vector3(-4.5226f, 6.3682f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 200f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -72860,8 +72860,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 196611;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.0216f, -2.0771f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 292.32f };
+					uParam0->f_28 = Vector3(-5.0216f, -2.0771f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 292.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -72890,8 +72890,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -14.6241f, 0.9928f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 241.19f };
+					uParam0->f_28 = Vector3(-14.6241f, 0.9928f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 241.19f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 					func_39(&(uParam0->f_11), 7);
@@ -72920,8 +72920,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 262144;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.2184f, 0.5224f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 95f };
+					uParam0->f_28 = Vector3(3.2184f, 0.5224f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 95f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -72949,8 +72949,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100925443;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.4806f, 0.1028f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 280.08f };
+					uParam0->f_28 = Vector3(-7.4806f, 0.1028f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 280.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -72979,8 +72979,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16842753;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.6506f, -1.5301f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 321.12f };
+					uParam0->f_28 = Vector3(-8.6506f, -1.5301f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 321.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73007,8 +73007,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { -23.5591f, 0.2105f, 2.2243f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(-23.5591f, 0.2105f, 2.2243f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 0);
 					func_39(&(uParam0->f_11), 14);
@@ -73037,8 +73037,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134479872;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -26.2697f, 6.4932f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(-26.2697f, 6.4932f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73069,8 +73069,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 17039360;
 					uParam0->f_21[1] = 131074;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -25.1106f, 2.9532f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 167.04f };
+					uParam0->f_28 = Vector3(-25.1106f, 2.9532f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 167.04f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73097,8 +73097,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -19.7671f, 4.6432f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 51.12f };
+					uParam0->f_28 = Vector3(-19.7671f, 4.6432f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 51.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 4);
 					func_39(&(uParam0->f_11), 1);
@@ -73127,8 +73127,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16842755;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.8643f, -0.365f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 291.424f };
+					uParam0->f_28 = Vector3(-5.8643f, -0.365f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 291.424f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73155,8 +73155,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117506049;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -5.3976f, 0.4755f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 188.664f };
+					uParam0->f_28 = Vector3(-5.3976f, 0.4755f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 188.664f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73184,8 +73184,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151191555;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.0276f, 1.8122f, 1.9447f };
-					uParam0->f_31 = { 0f, 0f, 92.5f };
+					uParam0->f_28 = Vector3(-16.0276f, 1.8122f, 1.9447f);
+					uParam0->f_31 = Vector3(0f, 0f, 92.5f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73216,8 +73216,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50659328;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.2086f, -1.0751f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 272f };
+					uParam0->f_28 = Vector3(-4.2086f, -1.0751f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 272f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73244,8 +73244,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50331652;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.7646f, 1.434f, -0.7759f };
-					uParam0->f_31 = { 0f, 0f, 253.44f };
+					uParam0->f_28 = Vector3(-5.7646f, 1.434f, -0.7759f);
+					uParam0->f_31 = Vector3(0f, 0f, 253.44f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73272,8 +73272,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117506050;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -3.9286f, -0.1056f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 342.935f };
+					uParam0->f_28 = Vector3(-3.9286f, -0.1056f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 342.935f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73301,8 +73301,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100925440;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.1426f, -1.4282f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 289.44f };
+					uParam0->f_28 = Vector3(-6.1426f, -1.4282f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 289.44f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73329,8 +73329,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151060480;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.1149f, -3.8337f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 311.04f };
+					uParam0->f_28 = Vector3(-5.1149f, -3.8337f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 311.04f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73358,8 +73358,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50528259;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.7726f, -1.3498f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 285.12f };
+					uParam0->f_28 = Vector3(-2.7726f, -1.3498f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 285.12f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73387,8 +73387,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33619969;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.1566f, 2.9906f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 228.96f };
+					uParam0->f_28 = Vector3(-3.1566f, 2.9906f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 228.96f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73415,8 +73415,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.7036f, -4.9184f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 356f };
+					uParam0->f_28 = Vector3(-3.7036f, -4.9184f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 356f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73446,8 +73446,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67305474;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -3.9886f, -7.2012f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 292.32f };
+					uParam0->f_28 = Vector3(-3.9886f, -7.2012f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 292.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73475,8 +73475,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50397185;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.2766f, 2.7649f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 162.72f };
+					uParam0->f_28 = Vector3(-6.2766f, 2.7649f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 162.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73503,8 +73503,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84082691;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.7906f, 0.5902f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 260f };
+					uParam0->f_28 = Vector3(-2.7906f, 0.5902f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 260f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73531,8 +73531,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.8036f, 1.5996f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 264.24f };
+					uParam0->f_28 = Vector3(-2.8036f, 1.5996f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 264.24f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73560,8 +73560,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117440515;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -2.6816f, -2.4212f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 318f };
+					uParam0->f_28 = Vector3(-2.6816f, -2.4212f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 318f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73588,8 +73588,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 83951620;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -4.0717f, 0.8629f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 229.825f };
+					uParam0->f_28 = Vector3(-4.0717f, 0.8629f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 229.825f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73617,8 +73617,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33619970;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.9286f, 1.6202f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 271.36f };
+					uParam0->f_28 = Vector3(-10.9286f, 1.6202f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 271.36f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73646,8 +73646,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67305474;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.6053f, -1.1879f, -0.9703f };
-					uParam0->f_31 = { 0f, 0f, 67.68f };
+					uParam0->f_28 = Vector3(3.6053f, -1.1879f, -0.9703f);
+					uParam0->f_31 = Vector3(0f, 0f, 67.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -73676,8 +73676,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50659332;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.5496f, 1.2339f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 321.12f };
+					uParam0->f_28 = Vector3(-8.5496f, 1.2339f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 321.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73704,8 +73704,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67108867;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.8806f, -2.5174f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 90.72f };
+					uParam0->f_28 = Vector3(-9.8806f, -2.5174f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 90.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73732,8 +73732,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16842754;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.9386f, 3.4149f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 262.8f };
+					uParam0->f_28 = Vector3(-8.9386f, 3.4149f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 262.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -73761,8 +73761,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.6053f, -1.1879f, -0.9703f };
-					uParam0->f_31 = { 0f, 0f, 67.68f };
+					uParam0->f_28 = Vector3(3.6053f, -1.1879f, -0.9703f);
+					uParam0->f_31 = Vector3(0f, 0f, 67.68f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -73791,8 +73791,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 4;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.0201f, -0.4912f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 18.5608f };
+					uParam0->f_28 = Vector3(-5.0201f, -0.4912f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 18.5608f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73819,8 +73819,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117571584;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.5796f, -1.9561f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 309.6f };
+					uParam0->f_28 = Vector3(-3.5796f, -1.9561f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 309.6f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73847,8 +73847,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33751042;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.4716f, 1.6349f, -0.7759f };
-					uParam0->f_31 = { 0f, 0f, 267.84f };
+					uParam0->f_28 = Vector3(-4.4716f, 1.6349f, -0.7759f);
+					uParam0->f_31 = Vector3(0f, 0f, 267.84f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73876,8 +73876,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134479873;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -5.0216f, -2.0771f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 292.32f };
+					uParam0->f_28 = Vector3(-5.0216f, -2.0771f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 292.32f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -73906,8 +73906,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100728834;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.3954f, -4.8792f, 2.2242f };
-					uParam0->f_31 = { 0f, 0f, 5f };
+					uParam0->f_28 = Vector3(2.3954f, -4.8792f, 2.2242f);
+					uParam0->f_31 = Vector3(0f, 0f, 5f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73935,8 +73935,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134217730;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.2136f, -7.2787f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 26.64f };
+					uParam0->f_28 = Vector3(-3.2136f, -7.2787f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 26.64f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -73963,8 +73963,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33554436;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0.4551f, -4.9087f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 352f };
+					uParam0->f_28 = Vector3(0.4551f, -4.9087f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 352f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -73995,8 +73995,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 83951616;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 4.9644f, -4.8248f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(4.9644f, -4.8248f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74027,8 +74027,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67108867;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.4825f, -3.0968f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 320f };
+					uParam0->f_28 = Vector3(-3.4825f, -3.0968f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 320f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74056,8 +74056,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.7366f, -3.3324f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 299.6002f };
+					uParam0->f_28 = Vector3(-8.7366f, -3.3324f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 299.6002f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74084,8 +74084,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5984f, 5.3428f, -0.3803f };
-					uParam0->f_31 = { 0f, 0f, 92.16f };
+					uParam0->f_28 = Vector3(2.5984f, 5.3428f, -0.3803f);
+					uParam0->f_31 = Vector3(0f, 0f, 92.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 				
@@ -74113,8 +74113,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84148228;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.4236f, -0.5002f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 285.12f };
+					uParam0->f_28 = Vector3(-11.4236f, -0.5002f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 285.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74141,8 +74141,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100794369;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.3875f, -3.6591f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 348.48f };
+					uParam0->f_28 = Vector3(2.3875f, -3.6591f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 348.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74170,8 +74170,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33685505;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -14.3306f, 3.1769f, 2.2147f };
-					uParam0->f_31 = { 0f, 0f, 73.44f };
+					uParam0->f_28 = Vector3(-14.3306f, 3.1769f, 2.2147f);
+					uParam0->f_31 = Vector3(0f, 0f, 73.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74202,8 +74202,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 131073;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -17.9615f, -2.3321f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 222.48f };
+					uParam0->f_28 = Vector3(-17.9615f, -2.3321f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 222.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -74232,8 +74232,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117702657;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.2626f, 2.018f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 173.52f };
+					uParam0->f_28 = Vector3(-8.2626f, 2.018f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 173.52f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74260,8 +74260,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134479876;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.6125f, 2.433f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 191.52f };
+					uParam0->f_28 = Vector3(-10.6125f, 2.433f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 191.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74289,8 +74289,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151257092;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.0076f, 3.1322f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 321.12f };
+					uParam0->f_28 = Vector3(-15.0076f, 3.1322f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 321.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74320,8 +74320,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16973824;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -3.5856f, 2.1112f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 254.88f };
+					uParam0->f_28 = Vector3(-3.5856f, 2.1112f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 254.88f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74349,8 +74349,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 17104897;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -17.8516f, -3.3348f, -1.2763f };
-					uParam0->f_31 = { 0f, 0f, 352.08f };
+					uParam0->f_28 = Vector3(-17.8516f, -3.3348f, -1.2763f);
+					uParam0->f_31 = Vector3(0f, 0f, 352.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -74379,8 +74379,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -74411,8 +74411,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 20);
@@ -74442,8 +74442,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 131075;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.1906f, -0.7923f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 284.28f };
+					uParam0->f_28 = Vector3(-9.1906f, -0.7923f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 284.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74471,8 +74471,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134348800;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.9165f, 1.7626f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 81.36f };
+					uParam0->f_28 = Vector3(-9.9165f, 1.7626f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 81.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74499,8 +74499,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -74532,8 +74532,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84148226;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.8776f, 2.2277f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 262.8f };
+					uParam0->f_28 = Vector3(-6.8776f, 2.2277f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 262.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74561,8 +74561,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33751040;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -16.2866f, -2.6721f, 2.2251f };
-					uParam0->f_31 = { 0f, 0f, 5.76f };
+					uParam0->f_28 = Vector3(-16.2866f, -2.6721f, 2.2251f);
+					uParam0->f_31 = Vector3(0f, 0f, 5.76f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74592,8 +74592,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84082691;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.2246f, 4.8802f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 219.6f };
+					uParam0->f_28 = Vector3(-5.2246f, 4.8802f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 219.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -74621,8 +74621,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100925440;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 2;
-					uParam0->f_28 = { -7.9286f, -3.8491f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 347.76f };
+					uParam0->f_28 = Vector3(-7.9286f, -3.8491f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 347.76f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74650,8 +74650,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 150994944;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { -10.4996f, -0.9487f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 28.08f };
+					uParam0->f_28 = Vector3(-10.4996f, -0.9487f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 28.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74679,8 +74679,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33751040;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.9706f, -0.0028f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 225.36f };
+					uParam0->f_28 = Vector3(-8.9706f, -0.0028f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 225.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74707,8 +74707,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16973827;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.8746f, -2.3898f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 284.4f };
+					uParam0->f_28 = Vector3(-12.8746f, -2.3898f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 284.4f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74735,8 +74735,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151257089;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8676f, 5.5718f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 258f };
+					uParam0->f_28 = Vector3(-11.8676f, 5.5718f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 258f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74763,8 +74763,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 256;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.6344f, -4.2998f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 170f };
+					uParam0->f_28 = Vector3(7.6344f, -4.2998f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 170f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 1);
 				
@@ -74792,8 +74792,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67239939;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { 7.9044f, -7.9548f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 115.2f };
+					uParam0->f_28 = Vector3(7.9044f, -7.9548f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 115.2f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74821,8 +74821,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50528260;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -12.4886f, -7.2442f, 2.2244f };
-					uParam0->f_31 = { 0f, 0f, 52f };
+					uParam0->f_28 = Vector3(-12.4886f, -7.2442f, 2.2244f);
+					uParam0->f_31 = Vector3(0f, 0f, 52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74853,8 +74853,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67108868;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.7706f, -1.9162f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 197.28f };
+					uParam0->f_28 = Vector3(-13.7706f, -1.9162f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 197.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74882,8 +74882,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117571585;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.1106f, -7.07f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 308.16f };
+					uParam0->f_28 = Vector3(-13.1106f, -7.07f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 308.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74914,8 +74914,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 131076;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -9.1426f, -4.8955f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 356.3979f };
+					uParam0->f_28 = Vector3(-9.1426f, -4.8955f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 356.3979f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -74945,8 +74945,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134217728;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.7256f, -2.917f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 286.56f };
+					uParam0->f_28 = Vector3(-11.7256f, -2.917f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 286.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -74977,8 +74977,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50528256;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -15.8217f, -2.172f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 90.72f };
+					uParam0->f_28 = Vector3(-15.8217f, -2.172f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 90.72f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75008,8 +75008,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117637122;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.1154f, -1.6198f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 9.36f };
+					uParam0->f_28 = Vector3(2.1154f, -1.6198f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 9.36f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75036,8 +75036,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151060482;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -13.7366f, -2.6411f, 2.2245f };
-					uParam0->f_31 = { 0f, 0f, 301.68f };
+					uParam0->f_28 = Vector3(-13.7366f, -2.6411f, 2.2245f);
+					uParam0->f_31 = Vector3(0f, 0f, 301.68f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75064,8 +75064,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117702659;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.2246f, 4.8802f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 219.6f };
+					uParam0->f_28 = Vector3(-5.2246f, 4.8802f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 219.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -75094,8 +75094,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50462724;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 2.5955f, -0.6598f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 85f };
+					uParam0->f_28 = Vector3(2.5955f, -0.6598f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 85f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75123,8 +75123,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134217730;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -24.9886f, 2.4142f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 90f };
+					uParam0->f_28 = Vector3(-24.9886f, 2.4142f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 90f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75151,8 +75151,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 83886080;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -17.0605f, -7.3328f, 2.2547f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(-17.0605f, -7.3328f, 2.2547f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75180,8 +75180,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84017155;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.4806f, 0.1028f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 280.08f };
+					uParam0->f_28 = Vector3(-7.4806f, 0.1028f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 280.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -75209,8 +75209,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134479876;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -7.4806f, 0.1028f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 280.08f };
+					uParam0->f_28 = Vector3(-7.4806f, 0.1028f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 280.08f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -75239,8 +75239,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100663297;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.4836f, -2.481f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-7.4836f, -2.481f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 12);
 				
@@ -75268,8 +75268,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50397187;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.4836f, -2.481f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 270f };
+					uParam0->f_28 = Vector3(-7.4836f, -2.481f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 270f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 13);
 				
@@ -75297,8 +75297,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 150994946;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -6.4956f, -2.8049f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 30.8639f };
+					uParam0->f_28 = Vector3(-6.4956f, -2.8049f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 30.8639f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75325,8 +75325,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 150994945;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.3654f, -4.486f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 65.52f };
+					uParam0->f_28 = Vector3(1.3654f, -4.486f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 65.52f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75354,8 +75354,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67174404;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.3614f, -3.5167f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 48.96f };
+					uParam0->f_28 = Vector3(3.3614f, -3.5167f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 48.96f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75382,8 +75382,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84148225;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -8.0626f, -4.8758f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 356.398f };
+					uParam0->f_28 = Vector3(-8.0626f, -4.8758f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 356.398f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75413,8 +75413,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117571586;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8356f, 0.0632f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 265f };
+					uParam0->f_28 = Vector3(-11.8356f, 0.0632f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 265f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75444,8 +75444,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 150994946;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.8756f, 0.9032f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 252.48f };
+					uParam0->f_28 = Vector3(-11.8756f, 0.9032f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 252.48f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75475,8 +75475,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67436547;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -18.0416f, -4.6952f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 16f };
+					uParam0->f_28 = Vector3(-18.0416f, -4.6952f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 16f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75503,8 +75503,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 20);
@@ -75534,8 +75534,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 3;
-					uParam0->f_28 = { 3.6444f, 1.377f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 106.56f };
+					uParam0->f_28 = Vector3(3.6444f, 1.377f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 106.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75563,8 +75563,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100794368;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 0.3374f, -4.4888f, -0.7762f };
-					uParam0->f_31 = { 0f, 0f, 302.4f };
+					uParam0->f_28 = Vector3(0.3374f, -4.4888f, -0.7762f);
+					uParam0->f_31 = Vector3(0f, 0f, 302.4f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75591,8 +75591,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 1;
 					uParam0->f_21[2] = 1;
-					uParam0->f_28 = { -16.3036f, 2.4359f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 125.28f };
+					uParam0->f_28 = Vector3(-16.3036f, 2.4359f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 125.28f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75623,8 +75623,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 327681;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -27.5836f, 1.0065f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 268f };
+					uParam0->f_28 = Vector3(-27.5836f, 1.0065f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 268f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75651,8 +75651,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117702658;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 5.6144f, -1.3048f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 86.8f };
+					uParam0->f_28 = Vector3(5.6144f, -1.3048f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 86.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75680,8 +75680,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 262144;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.4844f, -8.3448f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(7.4844f, -8.3448f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75708,8 +75708,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151126019;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { 5.5144f, -4.6648f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 120.24f };
+					uParam0->f_28 = Vector3(5.5144f, -4.6648f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 120.24f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75737,8 +75737,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16908289;
 					uParam0->f_21[1] = 4;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.7076f, -2.3636f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 289.44f };
+					uParam0->f_28 = Vector3(-10.7076f, -2.3636f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 289.44f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75766,8 +75766,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 83951618;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -14.8186f, 4.0242f, 2.2297f };
-					uParam0->f_31 = { 0f, 0f, 204.48f };
+					uParam0->f_28 = Vector3(-14.8186f, 4.0242f, 2.2297f);
+					uParam0->f_31 = Vector3(0f, 0f, 204.48f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75798,8 +75798,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134348801;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.2246f, 4.8802f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 219.6f };
+					uParam0->f_28 = Vector3(-5.2246f, 4.8802f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 219.6f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 13);
@@ -75828,8 +75828,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 67108867;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.2286f, 4.7352f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 217.44f };
+					uParam0->f_28 = Vector3(-7.2286f, 4.7352f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 217.44f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75856,8 +75856,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 100859906;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.4366f, 4.9592f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 159.84f };
+					uParam0->f_28 = Vector3(-10.4366f, 4.9592f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 159.84f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75884,8 +75884,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16842752;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -11.2366f, 4.3692f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 268.56f };
+					uParam0->f_28 = Vector3(-11.2366f, 4.3692f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 268.56f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -75913,8 +75913,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 84148225;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 3.0955f, 2.204f, 0.0297f };
-					uParam0->f_31 = { 0f, 0f, 138.96f };
+					uParam0->f_28 = Vector3(3.0955f, 2.204f, 0.0297f);
+					uParam0->f_31 = Vector3(0f, 0f, 138.96f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75941,8 +75941,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 16908290;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -3.1016f, -0.3558f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 277.2f };
+					uParam0->f_28 = Vector3(-3.1016f, -0.3558f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 277.2f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75969,8 +75969,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151126020;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -10.7976f, 0.451f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 218.16f };
+					uParam0->f_28 = Vector3(-10.7976f, 0.451f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 218.16f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -75997,8 +75997,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 33619968;
 					uParam0->f_21[1] = 9;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.0146f, 6.2202f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 143.28f };
+					uParam0->f_28 = Vector3(-1.0146f, 6.2202f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 143.28f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -76025,8 +76025,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 4;
 					uParam0->f_21[1] = 8;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -1.8947f, 6.2102f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 231.84f };
+					uParam0->f_28 = Vector3(-1.8947f, 6.2102f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 231.84f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -76054,8 +76054,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 50331651;
 					uParam0->f_21[1] = 6;
 					uParam0->f_21[2] = 4;
-					uParam0->f_28 = { -8.9386f, 3.4149f, -1.7903f };
-					uParam0->f_31 = { 0f, 0f, 262.8f };
+					uParam0->f_28 = Vector3(-8.9386f, 3.4149f, -1.7903f);
+					uParam0->f_31 = Vector3(0f, 0f, 262.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 					func_39(&(uParam0->f_11), 12);
@@ -76084,8 +76084,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 117637124;
 					uParam0->f_21[1] = 7;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -4.4476f, 3.0943f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 164.16f };
+					uParam0->f_28 = Vector3(-4.4476f, 3.0943f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 164.16f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -76113,8 +76113,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 150994946;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -5.1046f, 2.5871f, -0.7764f };
-					uParam0->f_31 = { 0f, 0f, 249.12f };
+					uParam0->f_28 = Vector3(-5.1046f, 2.5871f, -0.7764f);
+					uParam0->f_31 = Vector3(0f, 0f, 249.12f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -76141,8 +76141,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.7854f, -0.0798f, -1.7703f };
-					uParam0->f_31 = { 0f, 0f, 180f };
+					uParam0->f_28 = Vector3(1.7854f, -0.0798f, -1.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 180f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 14);
@@ -76173,8 +76173,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 151257089;
 					uParam0->f_21[1] = 5;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { -7.5706f, 3.2762f, -0.7763f };
-					uParam0->f_31 = { 0f, 0f, 244.8f };
+					uParam0->f_28 = Vector3(-7.5706f, 3.2762f, -0.7763f);
+					uParam0->f_31 = Vector3(0f, 0f, 244.8f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 14);
 				
@@ -76202,8 +76202,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134414340;
 					uParam0->f_21[1] = 3;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 7.1954f, 6.3102f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 156.24f };
+					uParam0->f_28 = Vector3(7.1954f, 6.3102f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 156.24f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -76233,8 +76233,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134414340;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 6.6554f, 5.7402f, -0.7703f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(6.6554f, 5.7402f, -0.7703f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -76264,8 +76264,8 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 					uParam0->f_21[0] = 134348801;
 					uParam0->f_21[1] = 2;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { 1.2854f, -4.9588f, 2.2247f };
-					uParam0->f_31 = { 0f, 0f, 1.44f };
+					uParam0->f_28 = Vector3(1.2854f, -4.9588f, 2.2247f);
+					uParam0->f_31 = Vector3(0f, 0f, 1.44f);
 					func_44(&(uParam0->f_11));
 				
 					if (func_611(uParam0->f_26))
@@ -76276,7 +76276,7 @@ void func_861(var uParam0, int iParam1, BOOL bParam2) // Position - 0x4E273
 	}
 
 	if (!_IS_NULL_VECTOR(uParam0->f_28))
-		uParam0->f_28 = { func_48(func_863(-1), func_862(-1), uParam0->f_28) };
+		uParam0->f_28 = Vector3(func_48(func_863(-1), func_862(-1), uParam0->f_28));
 
 	if (uParam0->f_31.f_2 != -1f)
 		uParam0->f_31.f_2 = func_47(func_862(-1), uParam0->f_31.f_2);
@@ -76330,7 +76330,7 @@ int func_867(var uParam0, int iParam1) // Position - 0x54531
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_859(iParam1, uParam0, &unk, i + 125, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -76363,7 +76363,7 @@ int func_868(var uParam0, int iParam1) // Position - 0x545D2
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_859(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -77565,8 +77565,8 @@ int func_886(Ped pedParam0, int iParam1, int iParam2, var uParam3) // Position -
 	if (func_131())
 		return 0;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!func_12(0f, 0f, entityCoords.f_2, 0f, 0f, entityCoords2.f_2, 1056964608, false))
 		return 0;
@@ -78210,7 +78210,7 @@ void func_902(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_39(&(uParam1->f_35), 9);
 			func_39(&(uParam1->f_35), 16);
 			TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_2), func_907(uParam1, uParam2), 64);
-			uParam1->f_18 = { func_333(&(uParam1->f_2), "", "_Facial") };
+			uParam1->f_18 = Vector3(func_333(&(uParam1->f_2), "", "_Facial"));
 			break;
 	
 		case 145:
@@ -78233,7 +78233,7 @@ void func_902(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_39(&(uParam1->f_35), 9);
 			func_39(&(uParam1->f_35), 16);
 			TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_2), func_905(uParam1, uParam2), 64);
-			uParam1->f_18 = { func_333(&(uParam1->f_2), "", "_Facial") };
+			uParam1->f_18 = Vector3(func_333(&(uParam1->f_2), "", "_Facial"));
 			i = 0;
 		
 			for (i = 0; i < 5; i = i + 1)
@@ -78254,7 +78254,7 @@ void func_902(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_39(&(uParam1->f_35), 9);
 			func_39(&(uParam1->f_35), 16);
 			TEXT_LABEL_ASSIGN_STRING(&(uParam1->f_2), func_904(uParam1, uParam2), 64);
-			uParam1->f_18 = { func_333(&(uParam1->f_2), "", "_Facial") };
+			uParam1->f_18 = Vector3(func_333(&(uParam1->f_2), "", "_Facial"));
 			break;
 	
 		case 148:
@@ -78658,8 +78658,8 @@ void func_910(var uParam0, int iParam1, BOOL bParam2) // Position - 0x56C5F
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { 1560f, 400f, -50f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1560f, 400f, -50f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -78694,8 +78694,8 @@ void func_911(var uParam0, int iParam1, BOOL bParam2) // Position - 0x56D22
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { 1560f, 400f, -50f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1560f, 400f, -50f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -78729,8 +78729,8 @@ void func_912(var uParam0, int iParam1, BOOL bParam2) // Position - 0x56DDB
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { 1560f, 400f, -50f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1560f, 400f, -50f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -78765,8 +78765,8 @@ void func_913(var uParam0, int iParam1, BOOL bParam2) // Position - 0x56E9E
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { 1560f, 400f, -50f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1560f, 400f, -50f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -78800,8 +78800,8 @@ void func_914(var uParam0, int iParam1, BOOL bParam2) // Position - 0x56F57
 					uParam0->f_21[0] = -1;
 					uParam0->f_21[1] = -1;
 					uParam0->f_21[2] = -1;
-					uParam0->f_28 = { 1560f, 400f, -50f };
-					uParam0->f_31 = { 0f, 0f, 0f };
+					uParam0->f_28 = Vector3(1560f, 400f, -50f);
+					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 7);
 					func_39(&(uParam0->f_11), 4);
@@ -79201,7 +79201,7 @@ void func_934(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 119;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -79211,7 +79211,7 @@ void func_934(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 120;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -79221,7 +79221,7 @@ void func_934(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 121;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -79231,7 +79231,7 @@ void func_934(var uParam0, int iParam1, var uParam2, BOOL bParam3) // Position -
 				*uParam0 = 122;
 				uParam0->f_1 = -1;
 				uParam0->f_2 = 7f;
-				uParam0->f_3 = { 0f, 0f, 0f };
+				uParam0->f_3 = Vector3(0f, 0f, 0f);
 				uParam0->f_6 = 0;
 				uParam0->f_7 = 3;
 				uParam2->[*uParam0] = iParam1;
@@ -79247,14 +79247,14 @@ void func_935(int iParam0, var uParam1) // Position - 0x57722
 	switch (iParam0)
 	{
 		case 2:
-			uParam1->f_3 = { -1025.4703f, -221.34189f, 36.94617f };
-			uParam1->f_6 = { -1023.5352f, -217.7226f, 39.42221f };
+			uParam1->f_3 = Vector3(-1025.4703f, -221.34189f, 36.94617f);
+			uParam1->f_6 = Vector3(-1023.5352f, -217.7226f, 39.42221f);
 			*uParam1 = 1.25f;
 			break;
 	
 		case 3:
-			uParam1->f_3 = { -1026.5872f, -220.7659f, 36.944595f };
-			uParam1->f_6 = { -1024.6469f, -217.13046f, 39.422775f };
+			uParam1->f_3 = Vector3(-1026.5872f, -220.7659f, 36.944595f);
+			uParam1->f_6 = Vector3(-1024.6469f, -217.13046f, 39.422775f);
 			*uParam1 = 1.25f;
 			break;
 	}
@@ -81236,11 +81236,11 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "_HEADPHONES") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", "_HEADPHONES"));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_WINEGLASS") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_WINEGLASS"));
 					break;
 			}
 			break;
@@ -81251,15 +81251,15 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bottle") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bottle"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_tumbler") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_tumbler"));
 					break;
 			}
 			break;
@@ -81270,15 +81270,15 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bottle") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bottle"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_COCONUTDRINK") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_COCONUTDRINK"));
 					break;
 			}
 			break;
@@ -81289,27 +81289,27 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_tumbler") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_tumbler"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_T_BOTTLE") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_T_BOTTLE"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_01") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_01"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_02") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_02"));
 					break;
 			
 				case 5:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_S_GLASS_03") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_S_GLASS_03"));
 					break;
 			}
 			break;
@@ -81320,11 +81320,11 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_335(iParam0, iParam3), "PTRX_", "") };
+					uParam1->f_1 = Vector3(func_333(func_335(iParam0, iParam3), "PTRX_", ""));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "PTRX_", "_BEER_CAN") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "PTRX_", "_BEER_CAN"));
 					break;
 			}
 			break;
@@ -81335,27 +81335,27 @@ void func_955(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, i
 			switch (iParam2)
 			{
 				case 0:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_turntable_left") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_turntable_left"));
 					break;
 			
 				case 1:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_turntable_right") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_turntable_right"));
 					break;
 			
 				case 2:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_lp_left") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_lp_left"));
 					break;
 			
 				case 3:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_lp_right") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_lp_right"));
 					break;
 			
 				case 4:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_bag") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_bag"));
 					break;
 			
 				case 5:
-					uParam1->f_1 = { func_333(func_328(iParam0, iParam3), "", "_TUMBLER") };
+					uParam1->f_1 = Vector3(func_333(func_328(iParam0, iParam3), "", "_TUMBLER"));
 					break;
 			}
 			break;
@@ -83072,7 +83072,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "_SOL") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", "_SOL"));
 			break;
 	
 		case 136:
@@ -83081,7 +83081,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 135:
@@ -83090,7 +83090,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 134:
@@ -83099,7 +83099,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
 			func_39(&(uParam1->f_35), 25);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 137:
@@ -83107,7 +83107,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "PTRX_", "_DJ_PTRAX") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "PTRX_", "_DJ_PTRAX"));
 			break;
 	
 		case 138:
@@ -83115,7 +83115,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_328(iParam0, iParam2), "", "") };
+			uParam1->f_2 = Vector3(func_333(func_328(iParam0, iParam2), "", ""));
 			break;
 	
 		case 139:
@@ -83123,7 +83123,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_617(iParam2, 1), "", "_dancer_a") };
+			uParam1->f_2 = Vector3(func_333(func_617(iParam2, 1), "", "_dancer_a"));
 			break;
 	
 		case 140:
@@ -83131,7 +83131,7 @@ void func_956(int iParam0, var uParam1, int iParam2, var uParam3, var uParam4, B
 			uParam1->f_51 = 5;
 			uParam1->f_53 = 1;
 			func_39(&(uParam1->f_35), 0);
-			uParam1->f_2 = { func_333(func_617(iParam2, 2), "", "_dancer_b") };
+			uParam1->f_2 = Vector3(func_333(func_617(iParam2, 2), "", "_dancer_b"));
 			break;
 	
 		case 142:
@@ -104440,8 +104440,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 2.1325f, 0.016f, 1.9063f };
-					uParam1->f_31 = { 0f, 0f, 270.7f };
+					uParam1->f_28 = Vector3(2.1325f, 0.016f, 1.9063f);
+					uParam1->f_31 = Vector3(0f, 0f, 270.7f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104475,8 +104475,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 2.1325f, 0.016f, 1.9063f };
-					uParam1->f_31 = { 0f, 0f, 270.7f };
+					uParam1->f_28 = Vector3(2.1325f, 0.016f, 1.9063f);
+					uParam1->f_31 = Vector3(0f, 0f, 270.7f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104508,8 +104508,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 2.1325f, 0.016f, 1.9063f };
-					uParam1->f_31 = { 0f, 0f, 270.7f };
+					uParam1->f_28 = Vector3(2.1325f, 0.016f, 1.9063f);
+					uParam1->f_31 = Vector3(0f, 0f, 270.7f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104543,8 +104543,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 66052;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -0.4083f, -0.4944f, 1.0263f };
-					uParam1->f_31 = { 0f, 0f, 292.75f };
+					uParam1->f_28 = Vector3(-0.4083f, -0.4944f, 1.0263f);
+					uParam1->f_31 = Vector3(0f, 0f, 292.75f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104576,8 +104576,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 131086;
 					uParam1->f_21[2] = 67108864;
-					uParam1->f_28 = { -0.1019f, 0.441f, 1.0263f };
-					uParam1->f_31 = { 0f, 0f, 273.209f };
+					uParam1->f_28 = Vector3(-0.1019f, 0.441f, 1.0263f);
+					uParam1->f_31 = Vector3(0f, 0f, 273.209f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104609,8 +104609,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 524551;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { -2.4094f, 0.1249f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 287.82f };
+					uParam1->f_28 = Vector3(-2.4094f, 0.1249f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 287.82f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104637,16 +104637,16 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 131589;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { -2.3436f, 0.9981f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 243.199f };
+					uParam1->f_28 = Vector3(-2.3436f, 0.9981f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 243.199f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
 					{
 						if (!func_881(func_925(), 0))
 						{
-							uParam1->f_28 = { -3.0173f, 0.8461f, 1.8913f };
-							uParam1->f_31 = { 0f, 0f, 258.1f };
+							uParam1->f_28 = Vector3(-3.0173f, 0.8461f, 1.8913f);
+							uParam1->f_31 = Vector3(0f, 0f, 258.1f);
 							func_39(&(uParam1->f_11), 0);
 						}
 					}
@@ -104678,8 +104678,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 262405;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -2.1304f, 2.1887f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 253.98f };
+					uParam1->f_28 = Vector3(-2.1304f, 2.1887f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 253.98f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -104709,8 +104709,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 515;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -3.1423f, -1.0017f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 298.62f };
+					uParam1->f_28 = Vector3(-3.1423f, -1.0017f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 298.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104737,8 +104737,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 918023;
 					uParam1->f_21[2] = 50331648;
-					uParam1->f_28 = { -1.909f, -1.6132f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 298.62f };
+					uParam1->f_28 = Vector3(-1.909f, -1.6132f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 298.62f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 7);
 				
@@ -104766,8 +104766,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 131595;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 5.3546f, -2.6012f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 51.697f };
+					uParam1->f_28 = Vector3(5.3546f, -2.6012f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 51.697f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104794,8 +104794,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 66055;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.2355f, 0.0059f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 89.1f };
+					uParam1->f_28 = Vector3(5.2355f, 0.0059f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 89.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104822,8 +104822,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 65795;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.2997f, 0.9763f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 85.5f };
+					uParam1->f_28 = Vector3(5.2997f, 0.9763f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 85.5f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104850,8 +104850,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 266;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 5.1746f, 2.0864f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 110.498f };
+					uParam1->f_28 = Vector3(5.1746f, 2.0864f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 110.498f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104878,8 +104878,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 259;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 44.6551f, -14.0048f, 2.1013f };
-					uParam1->f_31 = { 0f, 0f, 189.9f };
+					uParam1->f_28 = Vector3(44.6551f, -14.0048f, 2.1013f);
+					uParam1->f_31 = Vector3(0f, 0f, 189.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104906,8 +104906,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 262401;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 5.7606f, 5.9845f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 148.14f };
+					uParam1->f_28 = Vector3(5.7606f, 5.9845f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 148.14f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -104935,8 +104935,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 131590;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.7606f, 5.9845f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 148.14f };
+					uParam1->f_28 = Vector3(5.7606f, 5.9845f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 148.14f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 				
@@ -104964,8 +104964,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 459016;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 5.9394f, 4.0387f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 122.897f };
+					uParam1->f_28 = Vector3(5.9394f, 4.0387f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 122.897f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -104992,8 +104992,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 262145;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 8.3415f, 1.6022f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 90.54f };
+					uParam1->f_28 = Vector3(8.3415f, 1.6022f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 90.54f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105020,8 +105020,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 131586;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 6.7657f, 1.8173f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 91.697f };
+					uParam1->f_28 = Vector3(6.7657f, 1.8173f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 91.697f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105048,8 +105048,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 393478;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 6.8847f, 0.7436f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 91.697f };
+					uParam1->f_28 = Vector3(6.8847f, 0.7436f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 91.697f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -105079,8 +105079,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 196609;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 6.3256f, -1.2909f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 71.1f };
+					uParam1->f_28 = Vector3(6.3256f, -1.2909f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 71.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105107,8 +105107,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 327697;
 					uParam1->f_21[2] = 83886080;
-					uParam1->f_28 = { 6.5407f, -4.9181f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 52.38f };
+					uParam1->f_28 = Vector3(6.5407f, -4.9181f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 52.38f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105135,8 +105135,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 590087;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.6716f, -5.6967f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 41.58f };
+					uParam1->f_28 = Vector3(5.6716f, -5.6967f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 41.58f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105163,8 +105163,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 852480;
 					uParam1->f_21[2] = 83886080;
-					uParam1->f_28 = { 3.7171f, 8.0825f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 306.54f };
+					uParam1->f_28 = Vector3(3.7171f, 8.0825f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 306.54f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105194,8 +105194,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 655369;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -0.4864f, 1.7842f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 223.74f };
+					uParam1->f_28 = Vector3(-0.4864f, 1.7842f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 223.74f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -105225,8 +105225,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 524550;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 4.5838f, 9.0893f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 156.78f };
+					uParam1->f_28 = Vector3(4.5838f, 9.0893f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 156.78f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105256,8 +105256,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 393736;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { -1.6892f, -3.6945f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 336.78f };
+					uParam1->f_28 = Vector3(-1.6892f, -3.6945f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 336.78f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 				
@@ -105285,8 +105285,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 458752;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 10.1815f, 5.2188f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 110.897f };
+					uParam1->f_28 = Vector3(10.1815f, 5.2188f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 110.897f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105313,8 +105313,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 131592;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 15.5795f, 12.1336f, 1.8913f };
-					uParam1->f_31 = { 0f, 0f, 175.5f };
+					uParam1->f_28 = Vector3(15.5795f, 12.1336f, 1.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 175.5f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105341,8 +105341,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 65797;
 					uParam1->f_21[2] = 67108864;
-					uParam1->f_28 = { 8.3284f, 7.6122f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 138.06f };
+					uParam1->f_28 = Vector3(8.3284f, 7.6122f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 138.06f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -105370,8 +105370,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 65537;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.86f, 7.3076f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 145.98f };
+					uParam1->f_28 = Vector3(5.86f, 7.3076f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 145.98f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105398,8 +105398,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 459272;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 7.4985f, 5.2986f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 142.38f };
+					uParam1->f_28 = Vector3(7.4985f, 5.2986f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 142.38f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105426,8 +105426,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 786434;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 8.2972f, -0.4441f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 81.9f };
+					uParam1->f_28 = Vector3(8.2972f, -0.4441f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 81.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105454,8 +105454,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 66051;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 8.1842f, -1.4897f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 95.297f };
+					uParam1->f_28 = Vector3(8.1842f, -1.4897f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 95.297f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105482,8 +105482,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 786955;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 9.6987f, 0.5718f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 86.297f };
+					uParam1->f_28 = Vector3(9.6987f, 0.5718f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 86.297f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105510,8 +105510,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 66051;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 8.1421f, 2.6487f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 86.297f };
+					uParam1->f_28 = Vector3(8.1421f, 2.6487f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 86.297f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105538,8 +105538,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 2;
 					uParam1->f_21[1] = 393486;
 					uParam1->f_21[2] = 50331648;
-					uParam1->f_28 = { 7.9957f, 4.4778f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 126.54f };
+					uParam1->f_28 = Vector3(7.9957f, 4.4778f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 126.54f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105566,8 +105566,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 9.801f, -0.4685f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 89.1f };
+					uParam1->f_28 = Vector3(9.801f, -0.4685f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 89.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105594,8 +105594,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 131592;
 					uParam1->f_21[2] = 83886080;
-					uParam1->f_28 = { 7.3536f, -2.6473f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 53.296f };
+					uParam1->f_28 = Vector3(7.3536f, -2.6473f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 53.296f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105622,8 +105622,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 327937;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 8.4007f, -3.9964f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 53.296f };
+					uParam1->f_28 = Vector3(8.4007f, -3.9964f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 53.296f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105650,8 +105650,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 524806;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 7.2113f, -6.2757f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 43.02f };
+					uParam1->f_28 = Vector3(7.2113f, -6.2757f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 43.02f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105681,8 +105681,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 459012;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 45.7001f, -14.1686f, 2.1113f };
-					uParam1->f_31 = { 0f, 0f, 133.74f };
+					uParam1->f_28 = Vector3(45.7001f, -14.1686f, 2.1113f);
+					uParam1->f_31 = Vector3(0f, 0f, 133.74f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105709,8 +105709,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 852496;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 10.5164f, 8.6686f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 111.696f };
+					uParam1->f_28 = Vector3(10.5164f, 8.6686f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 111.696f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105740,8 +105740,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 196610;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -1.1879f, 5.4843f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 208.62f };
+					uParam1->f_28 = Vector3(-1.1879f, 5.4843f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 208.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105768,8 +105768,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 65537;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 8.3284f, 7.6122f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 138.06f };
+					uParam1->f_28 = Vector3(8.3284f, 7.6122f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 138.06f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -105801,8 +105801,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 196866;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 8.3284f, 7.6122f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 138.06f };
+					uParam1->f_28 = Vector3(8.3284f, 7.6122f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 138.06f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -105830,8 +105830,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 393476;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 9.5244f, 9.4924f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 145.98f };
+					uParam1->f_28 = Vector3(9.5244f, 9.4924f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 145.98f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -105864,8 +105864,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 10.2357f, 3.9861f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 98.6901f };
+					uParam1->f_28 = Vector3(10.2357f, 3.9861f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 98.6901f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105892,8 +105892,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 131074;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 10.2427f, 2.9452f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 98.696f };
+					uParam1->f_28 = Vector3(10.2427f, 2.9452f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 98.696f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105920,8 +105920,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 196610;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 13.1252f, 3.1452f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 98.696f };
+					uParam1->f_28 = Vector3(13.1252f, 3.1452f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 98.696f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 				
@@ -105949,8 +105949,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 65537;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 12.1152f, -0.0548f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 159.66f };
+					uParam1->f_28 = Vector3(12.1152f, -0.0548f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 159.66f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -105977,8 +105977,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 918023;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 12.0627f, -1.492f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 9.9f };
+					uParam1->f_28 = Vector3(12.0627f, -1.492f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 9.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106005,8 +106005,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 262156;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 9.8208f, -2.9513f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 60.696f };
+					uParam1->f_28 = Vector3(9.8208f, -2.9513f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 60.696f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106033,8 +106033,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 2;
 					uParam1->f_21[1] = 590096;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 9.2688f, -5.6634f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 43.74f };
+					uParam1->f_28 = Vector3(9.2688f, -5.6634f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 43.74f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106064,8 +106064,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 327941;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 12.9949f, -0.7774f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 90.54f };
+					uParam1->f_28 = Vector3(12.9949f, -0.7774f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 90.54f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106095,8 +106095,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 524559;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 13.1252f, 3.1452f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 98.696f };
+					uParam1->f_28 = Vector3(13.1252f, 3.1452f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 98.696f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -106128,8 +106128,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 524296;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 12.1997f, 7.5122f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 116.46f };
+					uParam1->f_28 = Vector3(12.1997f, 7.5122f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 116.46f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -106157,8 +106157,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 720911;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 12.1997f, 7.5122f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 116.46f };
+					uParam1->f_28 = Vector3(12.1997f, 7.5122f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 116.46f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 				
@@ -106186,8 +106186,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 852481;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { -0.1739f, 5.5121f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 141.66f };
+					uParam1->f_28 = Vector3(-0.1739f, 5.5121f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 141.66f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106217,8 +106217,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 459013;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { -2.2643f, 4.1782f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 212.94f };
+					uParam1->f_28 = Vector3(-2.2643f, 4.1782f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 212.94f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -106251,8 +106251,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 196866;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -3.1965f, 2.179f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 246.78f };
+					uParam1->f_28 = Vector3(-3.1965f, 2.179f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 246.78f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 7);
 				
@@ -106280,8 +106280,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 131328;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -1.2309f, -2.2172f, 2.0213f };
-					uParam1->f_31 = { 0f, 0f, 318.06f };
+					uParam1->f_28 = Vector3(-1.2309f, -2.2172f, 2.0213f);
+					uParam1->f_31 = Vector3(0f, 0f, 318.06f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 7);
 				
@@ -106309,8 +106309,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 393220;
 					uParam1->f_21[2] = 67108864;
-					uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 22);
 					func_39(&(uParam1->f_11), 4);
@@ -106339,8 +106339,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 327683;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 14.2312f, -19.9445f, 1.4493f };
-					uParam1->f_31 = { 1.8f, 0f, 15.66f };
+					uParam1->f_28 = Vector3(14.2312f, -19.9445f, 1.4493f);
+					uParam1->f_31 = Vector3(1.8f, 0f, 15.66f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106367,8 +106367,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 459266;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 8.418f, -20.3775f, 1.5363f };
-					uParam1->f_31 = { 0.5f, 0f, 34.38f };
+					uParam1->f_28 = Vector3(8.418f, -20.3775f, 1.5363f);
+					uParam1->f_31 = Vector3(0.5f, 0f, 34.38f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106395,8 +106395,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 655872;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 24.3166f, -18.743f, 1.6493f };
-					uParam1->f_31 = { 0f, 0f, 220.14f };
+					uParam1->f_28 = Vector3(24.3166f, -18.743f, 1.6493f);
+					uParam1->f_31 = Vector3(0f, 0f, 220.14f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106426,8 +106426,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 458752;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 25.4935f, -18.5614f, 1.6263f };
-					uParam1->f_31 = { 0f, 0f, 163.26f };
+					uParam1->f_28 = Vector3(25.4935f, -18.5614f, 1.6263f);
+					uParam1->f_31 = Vector3(0f, 0f, 163.26f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106457,8 +106457,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 1;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 22);
 					func_39(&(uParam1->f_11), 4);
@@ -106487,8 +106487,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 196867;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 45.0042f, -25.2215f, 1.2073f };
-					uParam1->f_31 = { 9f, 0f, 330.3f };
+					uParam1->f_28 = Vector3(45.0042f, -25.2215f, 1.2073f);
+					uParam1->f_31 = Vector3(9f, 0f, 330.3f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106515,8 +106515,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 262401;
 					uParam1->f_21[2] = 50331648;
-					uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 					func_39(&(uParam1->f_11), 22);
@@ -106546,8 +106546,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 131334;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 33.5988f, -20.7518f, 1.2993f };
-					uParam1->f_31 = { 7f, 0f, 341.1f };
+					uParam1->f_28 = Vector3(33.5988f, -20.7518f, 1.2993f);
+					uParam1->f_31 = Vector3(7f, 0f, 341.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106574,8 +106574,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 328197;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 					func_39(&(uParam1->f_11), 22);
@@ -106603,22 +106603,22 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 						if (func_881(func_925(), 0))
 						{
 							uParam1->f_26 = 157;
-							uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 							func_39(&(uParam1->f_11), 12);
 						}
 						else
 						{
 							uParam1->f_26 = 156;
-							uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 						}
 					}
 					else
 					{
 						uParam1->f_26 = 157;
-						uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-						uParam1->f_31 = { 0f, 0f, 92.7f };
+						uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+						uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 						func_39(&(uParam1->f_11), 12);
 					}
 				
@@ -106660,8 +106660,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 197129;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 25.2425f, -21.076f, 1.4493f };
-					uParam1->f_31 = { 0f, 0f, 17.82f };
+					uParam1->f_28 = Vector3(25.2425f, -21.076f, 1.4493f);
+					uParam1->f_31 = Vector3(0f, 0f, 17.82f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106688,8 +106688,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 524288;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 30.3331f, 14.9337f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 138.06f };
+					uParam1->f_28 = Vector3(30.3331f, 14.9337f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 138.06f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106716,8 +106716,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 721418;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 29.5626f, 14.2209f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 259.02f };
+					uParam1->f_28 = Vector3(29.5626f, 14.2209f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 259.02f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106744,8 +106744,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 0;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 30.3712f, 13.494f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 19.26f };
+					uParam1->f_28 = Vector3(30.3712f, 13.494f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 19.26f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106772,8 +106772,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 514;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 39.3015f, 8.5083f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 151.14f };
+					uParam1->f_28 = Vector3(39.3015f, 8.5083f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 151.14f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106800,8 +106800,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 13;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 34.4884f, 15.0417f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 279.9f };
+					uParam1->f_28 = Vector3(34.4884f, 15.0417f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 279.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106828,8 +106828,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 196610;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 33.8119f, 7.3802f, 1.4743f };
-					uParam1->f_31 = { 0f, 0f, 237.42f };
+					uParam1->f_28 = Vector3(33.8119f, 7.3802f, 1.4743f);
+					uParam1->f_31 = Vector3(0f, 0f, 237.42f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106856,8 +106856,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 590087;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 36.627f, 5.785f, 1.4343f };
-					uParam1->f_31 = { 0f, 0f, 73.98f };
+					uParam1->f_28 = Vector3(36.627f, 5.785f, 1.4343f);
+					uParam1->f_31 = Vector3(0f, 0f, 73.98f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106884,8 +106884,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 393735;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 33.881f, 6.0612f, 1.4143f };
-					uParam1->f_31 = { 0f, 0f, 284.22f };
+					uParam1->f_28 = Vector3(33.881f, 6.0612f, 1.4143f);
+					uParam1->f_31 = Vector3(0f, 0f, 284.22f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106912,8 +106912,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 65539;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 20.267f, 9.2594f, 1.4763f };
-					uParam1->f_31 = { 0f, 0f, 73.98f };
+					uParam1->f_28 = Vector3(20.267f, 9.2594f, 1.4763f);
+					uParam1->f_31 = Vector3(0f, 0f, 73.98f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106940,8 +106940,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 524290;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 19.1807f, 10.133f, 1.4013f };
-					uParam1->f_31 = { 0f, 0f, 228.06f };
+					uParam1->f_28 = Vector3(19.1807f, 10.133f, 1.4013f);
+					uParam1->f_31 = Vector3(0f, 0f, 228.06f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106968,8 +106968,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 2;
 					uParam1->f_21[1] = 524550;
 					uParam1->f_21[2] = 67108864;
-					uParam1->f_28 = { 27.2242f, -3.2876f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 47.34f };
+					uParam1->f_28 = Vector3(27.2242f, -3.2876f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 47.34f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -106999,8 +106999,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 262144;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 26.1092f, -3.6628f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 350.46f };
+					uParam1->f_28 = Vector3(26.1092f, -3.6628f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 350.46f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107030,8 +107030,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 393217;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 26.3888f, -2.4501f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 193.5f };
+					uParam1->f_28 = Vector3(26.3888f, -2.4501f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 193.5f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107061,8 +107061,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 327680;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 22.0111f, -7.357f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 317.6989f };
+					uParam1->f_28 = Vector3(22.0111f, -7.357f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 317.6989f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107089,8 +107089,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 655366;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 23.2273f, -6.9512f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 95.697f };
+					uParam1->f_28 = Vector3(23.2273f, -6.9512f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 95.697f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107117,8 +107117,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 65799;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 18f, 3.7505f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 280.62f };
+					uParam1->f_28 = Vector3(18f, 3.7505f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 280.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107148,8 +107148,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 327939;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 15.1932f, 5.7196f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(15.1932f, 5.7196f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 12);
 				
@@ -107177,8 +107177,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 65797;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 15.1932f, 5.7196f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(15.1932f, 5.7196f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -107206,8 +107206,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 65799;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 18.0366f, -5.2548f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 179.1f };
+					uParam1->f_28 = Vector3(18.0366f, -5.2548f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 179.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107237,8 +107237,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 459271;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 17.247f, -6.1939f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 261.9f };
+					uParam1->f_28 = Vector3(17.247f, -6.1939f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 261.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107264,22 +107264,22 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 						if (func_881(func_925(), 0))
 						{
 							uParam1->f_26 = 158;
-							uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 							func_39(&(uParam1->f_11), 13);
 						}
 						else
 						{
-							uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 							func_39(&(uParam1->f_11), 0);
 						}
 					}
 					else
 					{
 						uParam1->f_26 = 158;
-						uParam1->f_28 = { 20.6096f, 11.509f, 0.994f };
-						uParam1->f_31 = { 0f, 0f, 92.7f };
+						uParam1->f_28 = Vector3(20.6096f, 11.509f, 0.994f);
+						uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 						func_39(&(uParam1->f_11), 13);
 					}
 				
@@ -107320,8 +107320,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 131592;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 13.3563f, -4.0257f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 66.695f };
+					uParam1->f_28 = Vector3(13.3563f, -4.0257f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 66.695f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107348,8 +107348,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 262660;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 12.9856f, -5.0585f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 61.74f };
+					uParam1->f_28 = Vector3(12.9856f, -5.0585f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 61.74f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107376,8 +107376,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 4;
 					uParam1->f_21[2] = 83886080;
-					uParam1->f_28 = { 18.3397f, 4.7676f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 189.9f };
+					uParam1->f_28 = Vector3(18.3397f, 4.7676f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 189.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107404,8 +107404,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 197123;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 19.7324f, 1.3456f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 211.5f };
+					uParam1->f_28 = Vector3(19.7324f, 1.3456f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 211.5f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107432,8 +107432,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131072;
 					uParam1->f_21[1] = 918017;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 20.326f, 0.285f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 47.34f };
+					uParam1->f_28 = Vector3(20.326f, 0.285f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 47.34f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107460,8 +107460,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 264;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 15.4206f, 0.5556f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 229.5f };
+					uParam1->f_28 = Vector3(15.4206f, 0.5556f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 229.5f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107488,8 +107488,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 262145;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 24.4953f, 3.8183f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 189.9f };
+					uParam1->f_28 = Vector3(24.4953f, 3.8183f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 189.9f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107521,22 +107521,22 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 							{
 								case 0:
 									uParam1->f_26 = 160;
-									uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-									uParam1->f_31 = { 0f, 0f, 92.7f };
+									uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+									uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 									break;
 							
 								case 1:
 									uParam1->f_26 = 161;
-									uParam1->f_28 = { 6.7193f, -36.6094f, -0.8453f };
-									uParam1->f_31 = { 0f, 0f, 92.7f };
+									uParam1->f_28 = Vector3(6.7193f, -36.6094f, -0.8453f);
+									uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 									break;
 							}
 						}
 						else
 						{
 							uParam1->f_26 = 159;
-							uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 						}
 					}
 					else
@@ -107545,20 +107545,20 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 						{
 							case 0:
 								uParam1->f_26 = 159;
-								uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-								uParam1->f_31 = { 0f, 0f, 92.7f };
+								uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+								uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 								break;
 						
 							case 1:
 								uParam1->f_26 = 160;
-								uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-								uParam1->f_31 = { 0f, 0f, 92.7f };
+								uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+								uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 								break;
 						
 							case 2:
 								uParam1->f_26 = 161;
-								uParam1->f_28 = { 6.7193f, -36.6094f, -0.8453f };
-								uParam1->f_31 = { 0f, 0f, 92.7f };
+								uParam1->f_28 = Vector3(6.7193f, -36.6094f, -0.8453f);
+								uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 								break;
 						}
 					}
@@ -107601,8 +107601,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 328195;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 32.0365f, -4.1869f, 1.4303f };
-					uParam1->f_31 = { 0f, 0f, 28.62f };
+					uParam1->f_28 = Vector3(32.0365f, -4.1869f, 1.4303f);
+					uParam1->f_31 = Vector3(0f, 0f, 28.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107632,8 +107632,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 5;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 31.8846f, -2.8518f, 1.4913f };
-					uParam1->f_31 = { 0f, 0f, 148.86f };
+					uParam1->f_28 = Vector3(31.8846f, -2.8518f, 1.4913f);
+					uParam1->f_31 = Vector3(0f, 0f, 148.86f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107663,8 +107663,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 66053;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 18.9538f, -6.0675f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 92.7f };
+					uParam1->f_28 = Vector3(18.9538f, -6.0675f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107691,8 +107691,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 524548;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 17.9235f, -6.9099f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 352.62f };
+					uParam1->f_28 = Vector3(17.9235f, -6.9099f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 352.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107719,8 +107719,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 393478;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 19.1885f, 3.8818f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 79.74f };
+					uParam1->f_28 = Vector3(19.1885f, 3.8818f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 79.74f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107747,8 +107747,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65538;
 					uParam1->f_21[1] = 131074;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 16.1938f, -0.4261f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 41.58f };
+					uParam1->f_28 = Vector3(16.1938f, -0.4261f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 41.58f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107774,22 +107774,22 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 						if (func_881(func_925(), 0))
 						{
 							uParam1->f_26 = 155;
-							uParam1->f_28 = { 30.0454f, -6.3603f, 1.5133f };
-							uParam1->f_31 = { 0f, 0f, 182.7f };
+							uParam1->f_28 = Vector3(30.0454f, -6.3603f, 1.5133f);
+							uParam1->f_31 = Vector3(0f, 0f, 182.7f);
 							func_39(&(uParam1->f_11), 22);
 						}
 						else
 						{
 							uParam1->f_26 = 154;
-							uParam1->f_28 = { 17.5452f, 1.2258f, 0.994f };
-							uParam1->f_31 = { 0f, 0f, 92.7f };
+							uParam1->f_28 = Vector3(17.5452f, 1.2258f, 0.994f);
+							uParam1->f_31 = Vector3(0f, 0f, 92.7f);
 							func_39(&(uParam1->f_11), 22);
 						}
 					}
 					else
 					{
-						uParam1->f_28 = { -1.7641f, 1.0255f, 2.0213f };
-						uParam1->f_31 = { 0f, 0f, 243.199f };
+						uParam1->f_28 = Vector3(-1.7641f, 1.0255f, 2.0213f);
+						uParam1->f_31 = Vector3(0f, 0f, 243.199f);
 						func_39(&(uParam1->f_11), 0);
 					}
 				
@@ -107829,8 +107829,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = -1;
 					uParam1->f_21[1] = -1;
 					uParam1->f_21[2] = -1;
-					uParam1->f_28 = { 35.7145f, -2.7381f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 122.94f };
+					uParam1->f_28 = Vector3(35.7145f, -2.7381f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 122.94f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107859,8 +107859,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = -1;
 					uParam1->f_21[1] = -1;
 					uParam1->f_21[2] = -1;
-					uParam1->f_28 = { 29.7028f, -8.1763f, 1.4033f };
-					uParam1->f_31 = { 0f, 0f, 102.06f };
+					uParam1->f_28 = Vector3(29.7028f, -8.1763f, 1.4033f);
+					uParam1->f_31 = Vector3(0f, 0f, 102.06f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107889,8 +107889,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 516;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 23.1285f, 12.7848f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 89.1f };
+					uParam1->f_28 = Vector3(23.1285f, 12.7848f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 89.1f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107917,8 +107917,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 131587;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 21.6278f, 13.375f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 208.62f };
+					uParam1->f_28 = Vector3(21.6278f, 13.375f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 208.62f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107945,8 +107945,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 1;
 					uParam1->f_21[1] = 393480;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 5.2482f, -4.1089f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 27.18f };
+					uParam1->f_28 = Vector3(5.2482f, -4.1089f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 27.18f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -107973,8 +107973,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 459010;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { -1.6892f, -3.6945f, 0.8913f };
-					uParam1->f_31 = { 0f, 0f, 336.78f };
+					uParam1->f_28 = Vector3(-1.6892f, -3.6945f, 0.8913f);
+					uParam1->f_31 = Vector3(0f, 0f, 336.78f);
 					func_44(&(uParam1->f_11));
 					func_39(&(uParam1->f_11), 13);
 				
@@ -108002,8 +108002,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 0;
 					uParam1->f_21[1] = 327948;
 					uParam1->f_21[2] = 0;
-					uParam1->f_28 = { 36.4559f, 6.8235f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 96.3f };
+					uParam1->f_28 = Vector3(36.4559f, 6.8235f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 96.3f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -108030,8 +108030,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 262401;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 25.0473f, 2.4678f, 1.9013f };
-					uParam1->f_31 = { 0f, 0f, 39.42f };
+					uParam1->f_28 = Vector3(25.0473f, 2.4678f, 1.9013f);
+					uParam1->f_31 = Vector3(0f, 0f, 39.42f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_611(uParam1->f_26))
@@ -108061,8 +108061,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 131073;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 2.5565f, 23.7581f, 1.9113f };
-					uParam1->f_31 = { 0f, 0f, 39.64f };
+					uParam1->f_28 = Vector3(2.5565f, 23.7581f, 1.9113f);
+					uParam1->f_31 = Vector3(0f, 0f, 39.64f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -108095,8 +108095,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131073;
 					uParam1->f_21[1] = 2;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { -32.1073f, 52.717f, 2.4098f };
-					uParam1->f_31 = { 0f, 0f, 263.65f };
+					uParam1->f_28 = Vector3(-32.1073f, 52.717f, 2.4098f);
+					uParam1->f_31 = Vector3(0f, 0f, 263.65f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -108130,8 +108130,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 131074;
 					uParam1->f_21[1] = 131073;
 					uParam1->f_21[2] = 33554432;
-					uParam1->f_28 = { 10.4971f, 63.9014f, 3.4438f };
-					uParam1->f_31 = { 0f, 0f, 150.735f };
+					uParam1->f_28 = Vector3(10.4971f, 63.9014f, 3.4438f);
+					uParam1->f_31 = Vector3(0f, 0f, 150.735f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -108165,8 +108165,8 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 					uParam1->f_21[0] = 65537;
 					uParam1->f_21[1] = 65794;
 					uParam1->f_21[2] = 16777216;
-					uParam1->f_28 = { 51.7089f, -18.2157f, 1.9913f };
-					uParam1->f_31 = { 0f, 0f, 119.335f };
+					uParam1->f_28 = Vector3(51.7089f, -18.2157f, 1.9913f);
+					uParam1->f_31 = Vector3(0f, 0f, 119.335f);
 					func_44(&(uParam1->f_11));
 				
 					if (func_926(PLAYER::PLAYER_ID()))
@@ -108184,7 +108184,7 @@ void func_1254(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 	}
 
 	if (!_IS_NULL_VECTOR(uParam1->f_28))
-		uParam1->f_28 = { func_48(func_1256(-1), func_1255(-1), uParam1->f_28) };
+		uParam1->f_28 = Vector3(func_48(func_1256(-1), func_1255(-1), uParam1->f_28));
 
 	if (uParam1->f_31.f_2 != -1f)
 		uParam1->f_31.f_2 = func_47(func_1255(-1), uParam1->f_31.f_2);
@@ -108238,7 +108238,7 @@ int func_1260(var uParam0, int iParam1) // Position - 0x75DFE
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_1253(iParam1, uParam0, &unk, i + 125, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -108271,7 +108271,7 @@ int func_1261(var uParam0, int iParam1) // Position - 0x75E9F
 
 	for (i = 0; i < 125; i = i + 1)
 	{
-		unk.f_28 = { func_178() };
+		unk.f_28 = Vector3(func_178());
 		func_1253(iParam1, uParam0, &unk, i, uParam0->f_1, true);
 	
 		if (!_IS_NULL_VECTOR(unk.f_28))
@@ -108793,14 +108793,14 @@ void func_1290(BOOL bParam0, BOOL bParam1) // Position - 0x768D0
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -109334,10 +109334,10 @@ void func_1304() // Position - 0x77274
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -109696,7 +109696,7 @@ void func_1329(int iParam0) // Position - 0x77878
 	TEXT_LABEL_ASSIGN_STRING(&Global_112300[iParam0], "", 16);
 	TEXT_LABEL_ASSIGN_STRING(&(Global_112300[iParam0].f_4), "", 64);
 	Global_112300[iParam0].f_23 = 0;
-	Global_112300[iParam0].f_24 = { 0f, 0f, 0f };
+	Global_112300[iParam0].f_24 = Vector3(0f, 0f, 0f);
 	Global_112300[iParam0].f_27 = 0;
 	Global_112300[iParam0].f_20 = 0;
 	Global_112300[iParam0].f_22 = 0;
@@ -109948,8 +109948,8 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("prop_bar_stool_01");
-					uParam3->f_11 = { 1122.76f, -3143.686f, -38.063f };
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_11 = Vector3(1122.76f, -3143.686f, -38.063f);
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -109961,8 +109961,8 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("prop_bar_stool_01");
-					uParam3->f_11 = { 999.901f, -3169.038f, -35.088f };
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_11 = Vector3(999.901f, -3169.038f, -35.088f);
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -109989,7 +109989,7 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("ex_p_ex_tumbler_01_s");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0f, 0f, 0.035f };
+					uParam3->f_5 = Vector3(0f, 0f, 0.035f);
 					break;
 			}
 			break;
@@ -110039,7 +110039,7 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 				case 1:
 					*uParam3 = joaat("prop_npc_phone");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -1002.372f, -81.416f, -100.166f };
+					uParam3->f_11 = Vector3(-1002.372f, -81.416f, -100.166f);
 					break;
 			}
 			break;
@@ -110104,7 +110104,7 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_pencil_01");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0f, 0f, -0.025f };
+					uParam3->f_5 = Vector3(0f, 0f, -0.025f);
 					break;
 			}
 			break;
@@ -110138,7 +110138,7 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_npc_phone");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0f, 0f, 0.035f };
+					uParam3->f_5 = Vector3(0f, 0f, 0.035f);
 					break;
 			}
 			break;
@@ -110156,50 +110156,50 @@ void func_1349(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 				case 1:
 					*uParam3 = joaat("hei_prop_heist_off_chair");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -996.423f, -68.3292f, -99.983f };
-					uParam3->f_14 = { 0f, 0f, 0f };
+					uParam3->f_11 = Vector3(-996.423f, -68.3292f, -99.983f);
+					uParam3->f_14 = Vector3(0f, 0f, 0f);
 					break;
 			
 				case 2:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_01a");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -995.6716f, -68.6484f, -99.1514f };
-					uParam3->f_14 = { 13.178f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-995.6716f, -68.6484f, -99.1514f);
+					uParam3->f_14 = Vector3(13.178f, 0f, -119.726f);
 					break;
 			
 				case 3:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_01b");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -996.1022f, -68.4025f, -99.2365f };
-					uParam3->f_14 = { 0f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-996.1022f, -68.4025f, -99.2365f);
+					uParam3->f_14 = Vector3(0f, 0f, -119.726f);
 					break;
 			
 				case 4:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_02a");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -995.1022f, -67.9159f, -99.1514f };
-					uParam3->f_14 = { 13.178f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-995.1022f, -67.9159f, -99.1514f);
+					uParam3->f_14 = Vector3(13.178f, 0f, -119.726f);
 					break;
 			
 				case 5:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_02a");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -996.0898f, -69.3809f, -99.1514f };
-					uParam3->f_14 = { 13.178f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-996.0898f, -69.3809f, -99.1514f);
+					uParam3->f_14 = Vector3(13.178f, 0f, -119.726f);
 					break;
 			
 				case 6:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_02b");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -995.684f, -67.67f, -99.2365f };
-					uParam3->f_14 = { 0f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-995.684f, -67.67f, -99.2365f);
+					uParam3->f_14 = Vector3(0f, 0f, -119.726f);
 					break;
 			
 				case 7:
 					*uParam3 = joaat("sf_prop_sf_s_mixer_02b");
 					uParam3->f_3 = 1;
-					uParam3->f_11 = { -996.5204f, -69.1349f, -99.2365f };
-					uParam3->f_14 = { 0f, 0f, -119.726f };
+					uParam3->f_11 = Vector3(-996.5204f, -69.1349f, -99.2365f);
+					uParam3->f_14 = Vector3(0f, 0f, -119.726f);
 					break;
 			}
 			break;
@@ -110340,10 +110340,10 @@ void func_1350(var uParam0) // Position - 0x7848C
 	uParam0->f_2 = 0;
 	uParam0->f_3 = 0;
 	uParam0->f_4 = 0;
-	uParam0->f_5 = { 0f, 0f, 0f };
-	uParam0->f_8 = { 0f, 0f, 0f };
-	uParam0->f_11 = { 0f, 0f, 0f };
-	uParam0->f_14 = { 0f, 0f, 0f };
+	uParam0->f_5 = Vector3(0f, 0f, 0f);
+	uParam0->f_8 = Vector3(0f, 0f, 0f);
+	uParam0->f_11 = Vector3(0f, 0f, 0f);
+	uParam0->f_14 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -110843,8 +110843,8 @@ void func_1374(var uParam0, int iParam1, int iParam2) // Position - 0x78F3E
 	Vector3 unk;
 	var unk2;
 
-	vector = { func_1381() };
-	vector2 = { func_1380() };
+	vector = Vector3(func_1381());
+	vector2 = Vector3(func_1380());
 	TEXT_LABEL_ASSIGN_STRING(&animationName, "", 64);
 	Global_1579601.f_5 = 1;
 	func_1287(1);
@@ -112071,8 +112071,8 @@ void func_1382(var uParam0, int iParam1, int iParam2) // Position - 0x7A474
 	Vector3 unk;
 	var unk2;
 
-	vector = { func_1381() };
-	vector2 = { func_1380() };
+	vector = Vector3(func_1381());
+	vector2 = Vector3(func_1380());
 	TEXT_LABEL_ASSIGN_STRING(&animationName, "", 64);
 	func_1287(1);
 	HUD::HIDE_HELP_TEXT_THIS_FRAME();
@@ -112339,8 +112339,8 @@ void func_1386(var uParam0, var uParam1, int iParam2, int iParam3) // Position -
 		return;
 	}
 
-	vector = { func_1381() };
-	vector2 = { func_1380() };
+	vector = Vector3(func_1381());
+	vector2 = Vector3(func_1380());
 	unk5 = 3;
 	unk9 = 3;
 	TEXT_LABEL_ASSIGN_STRING(&animationName, "", 64);
@@ -112425,7 +112425,7 @@ void func_1386(var uParam0, var uParam1, int iParam2, int iParam3) // Position -
 					}
 					else
 					{
-						uParam0->f_8612.f_31[i] = OBJECT::CREATE_OBJECT(func_1387(num2), vector + { (float)i, (float)i, (float)i }, false, true, false);
+						uParam0->f_8612.f_31[i] = OBJECT::CREATE_OBJECT(func_1387(num2), vector + Vector3((float)i, (float)i, (float)i), false, true, false);
 						ENTITY::SET_ENTITY_COORDS(uParam0->f_8612.f_31[i], vector, true, false, false, true);
 						ENTITY::SET_ENTITY_VISIBLE(uParam0->f_8612.f_31[i], false, false);
 						ENTITY::FREEZE_ENTITY_POSITION(uParam0->f_8612.f_31[i], true);
@@ -113918,7 +113918,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_cs_ciggy_01");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0.02f, -0.0175f, -0.02f };
+					uParam3->f_5 = Vector3(0.02f, -0.0175f, -0.02f);
 					break;
 			}
 			break;
@@ -113968,7 +113968,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("p_tumbler_01_s");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { -0.0125f, 0.0175f, 0f };
+					uParam3->f_5 = Vector3(-0.0125f, 0.0175f, 0f);
 					break;
 			}
 			break;
@@ -113980,7 +113980,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("p_tumbler_01_s");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { -0.025f, -0.0175f, 0f };
+					uParam3->f_5 = Vector3(-0.025f, -0.0175f, 0f);
 					break;
 			}
 			break;
@@ -113992,7 +113992,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_beer_logger");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { -0.0135f, -0.004f, 0f };
+					uParam3->f_5 = Vector3(-0.0135f, -0.004f, 0f);
 					break;
 			}
 			break;
@@ -114101,7 +114101,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_amb_beer_bottle");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0f, 0f, 0.15f };
+					uParam3->f_5 = Vector3(0f, 0f, 0.15f);
 					break;
 			}
 			break;
@@ -114177,7 +114177,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 					*uParam3 = joaat("prop_amb_beer_bottle");
 					uParam3->f_1 = 28422;
 					uParam3->f_2 = 1;
-					uParam3->f_5 = { 0f, 0f, 0.15f };
+					uParam3->f_5 = Vector3(0f, 0f, 0.15f);
 					break;
 			}
 			break;
@@ -114339,8 +114339,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			
 				case 2:
 					*uParam3 = joaat("h4_prop_h4_engine_fusebox_01a");
-					uParam3->f_11 = { 1562.2163f, 430.1717f, -55.8142f };
-					uParam3->f_14 = { 0f, 0f, 0f };
+					uParam3->f_11 = Vector3(1562.2163f, 430.1717f, -55.8142f);
+					uParam3->f_14 = Vector3(0f, 0f, 0f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114357,8 +114357,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			
 				case 1:
 					*uParam3 = joaat("h4_prop_h4_engine_fusebox_01a");
-					uParam3->f_11 = { 1562.2163f, 430.1717f, -55.8142f };
-					uParam3->f_14 = { 0f, 0f, 0f };
+					uParam3->f_11 = Vector3(1562.2163f, 430.1717f, -55.8142f);
+					uParam3->f_14 = Vector3(0f, 0f, 0f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114380,8 +114380,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			
 				case 2:
 					*uParam3 = joaat("h4_prop_h4_engine_fusebox_01a");
-					uParam3->f_11 = { 1562.2163f, 430.1717f, -55.8142f };
-					uParam3->f_14 = { 0f, 0f, 0f };
+					uParam3->f_11 = Vector3(1562.2163f, 430.1717f, -55.8142f);
+					uParam3->f_14 = Vector3(0f, 0f, 0f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114408,8 +114408,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("h4_prop_h4_engine_fusebox_01a");
-					uParam3->f_11 = { 1562.2163f, 430.1717f, -55.8142f };
-					uParam3->f_14 = { 0f, 0f, 0f };
+					uParam3->f_11 = Vector3(1562.2163f, 430.1717f, -55.8142f);
+					uParam3->f_14 = Vector3(0f, 0f, 0f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114529,7 +114529,7 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 				case 0:
 					*uParam3 = joaat("prop_amb_phone");
 					uParam3->f_1 = 28422;
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_2 = 1;
 					break;
 			}
@@ -114590,8 +114590,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			
 				case 1:
 					*uParam3 = joaat("prop_off_chair_04_s");
-					uParam3->f_11 = { -1358.352f, 137.978f, -96.07f };
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_11 = Vector3(-1358.352f, 137.978f, -96.07f);
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114603,16 +114603,16 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("tr_prop_tr_laptop_jimmy");
-					uParam3->f_11 = { -1358.102f, 137.978f, -95.374f };
-					uParam3->f_14 = { 0f, 0f, 270f };
+					uParam3->f_11 = Vector3(-1358.102f, 137.978f, -95.374f);
+					uParam3->f_14 = Vector3(0f, 0f, 270f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
 			
 				case 1:
 					*uParam3 = joaat("prop_off_chair_04_s");
-					uParam3->f_11 = { -1358.792f, 137.978f, -96.07f };
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_11 = Vector3(-1358.792f, 137.978f, -96.07f);
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114624,8 +114624,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("gr_prop_gr_laptop_01c");
-					uParam3->f_11 = { -1020.656f, -84.475f, -99.606f };
-					uParam3->f_14 = { 0f, 0f, -166.095f };
+					uParam3->f_11 = Vector3(-1020.656f, -84.475f, -99.606f);
+					uParam3->f_14 = Vector3(0f, 0f, -166.095f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114637,8 +114637,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			{
 				case 0:
 					*uParam3 = joaat("prop_off_chair_04_s");
-					uParam3->f_11 = { -1022.555f, -83.4179f, -100.3531f };
-					uParam3->f_14 = { 0f, 0f, 18.6748f };
+					uParam3->f_11 = Vector3(-1022.555f, -83.4179f, -100.3531f);
+					uParam3->f_14 = Vector3(0f, 0f, 18.6748f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -114808,8 +114808,8 @@ void func_1416(int iParam0, int iParam1, int iParam2, var uParam3) // Position -
 			
 				case 1:
 					*uParam3 = joaat("prop_off_chair_04_s");
-					uParam3->f_11 = { -1358.352f, 137.978f, -96.07f };
-					uParam3->f_14 = { 0f, 0f, 90f };
+					uParam3->f_11 = Vector3(-1358.352f, 137.978f, -96.07f);
+					uParam3->f_14 = Vector3(0f, 0f, 90f);
 					uParam3->f_3 = 1;
 					uParam3->f_4 = 1;
 					break;
@@ -115705,8 +115705,8 @@ void func_1444(int iParam0, var uParam1, var uParam2, int iParam3) // Position -
 	{
 		if (func_1448(*uParam1, playerPed, uParam2->f_2, true))
 		{
-			entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(*uParam1) };
-			unk3 = { func_1447(ENTITY::GET_ENTITY_COORDS(playerPed, true) - ENTITY::GET_ENTITY_COORDS(*uParam1, true)) };
+			entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(*uParam1));
+			unk3 = Vector3(func_1447(ENTITY::GET_ENTITY_COORDS(playerPed, true) - ENTITY::GET_ENTITY_COORDS(*uParam1, true)));
 		
 			if (func_1446(entityForwardVector, unk3) > 0.1f)
 				flag = 1;
@@ -115759,7 +115759,7 @@ Vector3 func_1447(float fParam0, var uParam1, var uParam2) // Position - 0x7F04E
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -117554,7 +117554,7 @@ void func_1498(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	if (!_DOES_ENTITY_EXIST_AND_IS_ALIVE(pedParam52) || !_DOES_ENTITY_EXIST_AND_IS_ALIVE(PLAYER::PLAYER_PED_ID()))
 		return;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	switch (iParam51)
 	{
@@ -117768,7 +117768,7 @@ void func_1502(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 
 	_CONVERSATION_ADD_LINE(uParam4, iParam5.f_6, iParam5.f_4, 9, num, 0, 0);
 	unk = 16;
-	*uParam4 = { unk };
+	*uParam4 = Vector3(unk);
 	return;
 }
 
@@ -117831,16 +117831,16 @@ int func_1504(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x81D87
 		if (func_1521(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_1520();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -117977,7 +117977,7 @@ void func_1505() // Position - 0x82055
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -118036,18 +118036,18 @@ void func_1510() // Position - 0x82148
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -118212,7 +118212,7 @@ void func_1520() // Position - 0x824B9
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -118254,7 +118254,7 @@ void func_1522() // Position - 0x82548
 
 void func_1523(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x8259F
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -119908,8 +119908,8 @@ void func_1557(int iParam0, var uParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				func_1530(iParam0, uParam1->f_26, &unk17, i, 0, iParam3, iParam4, bParam5, func_25(&(uParam1->f_11), 14));
 				flag = NETWORK::NETWORK_IS_IN_MP_CUTSCENE();
-				unk39 = { func_1563(uParam1, model, unk17) };
-				vector = { func_1562(uParam1, model, unk17) };
+				unk39 = Vector3(func_1563(uParam1, model, unk17));
+				vector = Vector3(func_1562(uParam1, model, unk17));
 			
 				if (flag)
 					NETWORK::SET_NETWORK_CUTSCENE_ENTITIES(true);
@@ -120012,13 +120012,13 @@ Vector3 func_1562(var uParam0, var uParam1, var uParam2, var uParam3, var uParam
 {
 	var animInitialOffsetRotation;
 
-	animInitialOffsetRotation = { 0f, 0f, 0f };
+	animInitialOffsetRotation = Vector3(0f, 0f, 0f);
 
 	if (uParam1.f_1 == -1)
 		if (uParam1.f_3)
-			animInitialOffsetRotation = { uParam1.f_14 };
+			animInitialOffsetRotation = Vector3(uParam1.f_14);
 		else if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam18) && !MISC::IS_STRING_NULL_OR_EMPTY(&(sParam18.f_1)))
-			animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sParam18, &(sParam18.f_1), uParam0->f_28, uParam0->f_31, 0, 2) };
+			animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sParam18, &(sParam18.f_1), uParam0->f_28, uParam0->f_31, 0, 2));
 
 	return animInitialOffsetRotation;
 }
@@ -120027,25 +120027,25 @@ Vector3 func_1563(var uParam0, var uParam1, var uParam2, var uParam3, var uParam
 {
 	var animInitialOffsetPosition;
 
-	animInitialOffsetPosition = { uParam0->f_28 };
+	animInitialOffsetPosition = Vector3(uParam0->f_28);
 
 	if (uParam1.f_1 == -1)
 	{
 		if (uParam1.f_3)
 		{
-			animInitialOffsetPosition = { uParam1.f_11 };
+			animInitialOffsetPosition = Vector3(uParam1.f_11);
 		}
 		else if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam18) && !MISC::IS_STRING_NULL_OR_EMPTY(&(sParam18.f_1)))
 		{
-			animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sParam18, &(sParam18.f_1), uParam0->f_28, uParam0->f_31, 0, 2) };
+			animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sParam18, &(sParam18.f_1), uParam0->f_28, uParam0->f_31, 0, 2));
 		
 			if (_IS_NULL_VECTOR(animInitialOffsetPosition))
-				animInitialOffsetPosition = { uParam0->f_28 };
+				animInitialOffsetPosition = Vector3(uParam0->f_28);
 		}
 	}
 	else
 	{
-		animInitialOffsetPosition = { PED::GET_PED_BONE_COORDS(*uParam0, uParam1.f_1, uParam1.f_5) };
+		animInitialOffsetPosition = Vector3(PED::GET_PED_BONE_COORDS(*uParam0, uParam1.f_1, uParam1.f_5));
 	}
 
 	return animInitialOffsetPosition;
@@ -120569,8 +120569,8 @@ void func_1586(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, 
 			if (!ENTITY::DOES_ENTITY_EXIST(uParam1->f_1[i]))
 			{
 				func_1530(iParam0, uParam1->f_26, &unk17, i, 0, iParam3, iParam4, bParam5, func_25(&(uParam1->f_11), 14));
-				vector = { func_1563(uParam1, model, unk17) };
-				vector2 = { func_1562(uParam1, model, unk17) };
+				vector = Vector3(func_1563(uParam1, model, unk17));
+				vector2 = Vector3(func_1562(uParam1, model, unk17));
 				uParam1->f_1[i] = OBJECT::CREATE_OBJECT_NO_OFFSET(model, vector, false, false, false);
 			
 				if (!bParam6)
@@ -121837,7 +121837,7 @@ void func_1635() // Position - 0x87539
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		Global_1579637[i] = { unk };
+		Global_1579637[i] = Vector3(unk);
 	}
 
 	return;
@@ -122452,7 +122452,7 @@ void func_1662(var uParam0) // Position - 0x88012
 
 	unk = -1;
 	unk.f_1 = 3;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -122538,7 +122538,7 @@ void func_1669(var uParam0) // Position - 0x88160
 
 	unk = -1;
 	unk.f_1 = 1065353216;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -122601,7 +122601,7 @@ void func_1674(var uParam0) // Position - 0x8823E
 	unk.f_1 = -1;
 	unk.f_2 = 1077936128;
 	unk.f_7 = 2;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -122695,7 +122695,7 @@ void func_1682(var uParam0) // Position - 0x883DB
 
 	unk = 10;
 	unk.f_12 = 10;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -122777,7 +122777,7 @@ void func_1689(var uParam0) // Position - 0x88525
 	unk = 1;
 	unk.f_2 = -1;
 	unk.f_3 = -1;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -122925,7 +122925,7 @@ void func_1698(int iParam0) // Position - 0x887B4
 
 void func_1699(var uParam0) // Position - 0x88834
 {
-	uParam0->f_31 = { 0f, 0f, -1f };
+	uParam0->f_31 = Vector3(0f, 0f, -1f);
 	func_213(&(uParam0->f_17), &(uParam0->f_21));
 	return;
 }

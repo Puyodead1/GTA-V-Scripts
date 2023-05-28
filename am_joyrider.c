@@ -656,10 +656,10 @@ void func_14(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -682,7 +682,7 @@ int func_15(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -953,7 +953,7 @@ BOOL func_27(Player plParam0) // Position - 0x1079
 	if (func_32(PLAYER::PLAYER_ID(), plParam0))
 		return true;
 
-	Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (NETWORK::NETWORK_IS_FRIEND(&Global_2764203))
 		return true;
@@ -1002,8 +1002,8 @@ BOOL func_32(Player plParam0, Player plParam1) // Position - 0x112E
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{

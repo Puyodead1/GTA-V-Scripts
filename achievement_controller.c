@@ -7773,7 +7773,7 @@ BOOL func_27() // Position - 0x9DCE
 	var unk;
 
 	CLOCK::GET_POSIX_TIME(&year, &(year.f_1), &(year.f_2), &(year.f_3), &(year.f_4), &(year.f_5));
-	unk7 = { func_51(joaat("MPPLY_STARTED_MP")) };
+	unk7 = Vector3(func_51(joaat("MPPLY_STARTED_MP")));
 
 	if (func_28(unk7, year, 7))
 		return true;
@@ -12628,7 +12628,7 @@ void func_98(Ped pedParam0, var uParam1) // Position - 0xF43D
 					}
 				}
 			
-				uParam1->[i] = { pedWeapontypeInSlot };
+				uParam1->[i] = Vector3(pedWeapontypeInSlot);
 			}
 		}
 	
@@ -12689,7 +12689,7 @@ void func_98(Ped pedParam0, var uParam1) // Position - 0xF43D
 					}
 				}
 			
-				uParam1->f_221[num] = { pedWeapontypeInSlot };
+				uParam1->f_221[num] = Vector3(pedWeapontypeInSlot);
 				num = num + 1;
 			}
 		}

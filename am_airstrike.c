@@ -615,7 +615,7 @@ void func_13() // Position - 0x42B
 	{
 		if (func_42(iLocal_242.f_2))
 		{
-			uLocal_63 = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_242.f_2), true) };
+			uLocal_63 = Vector3(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_242.f_2), true));
 			uLocal_63.f_2 = uLocal_63.f_2 - 5f;
 		}
 	}
@@ -627,11 +627,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 };
+					vector = Vector3(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2);
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = Vector3(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2);
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), PLAYER::PLAYER_PED_ID(), true, false, -1f, ped, true, true, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -655,11 +655,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, 5f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, 5f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, 5f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, 5f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -678,11 +678,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -5f, -5f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -5f, -5f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -5f, -5f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -5f, -5f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -701,11 +701,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, -5f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, -5f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, -5f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, -5f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -724,11 +724,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -5f, 5f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -5f, 5f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -5f, 5f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -5f, 5f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -747,11 +747,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, 10f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, 10f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 5f, 10f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 5f, 10f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -770,11 +770,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 10f, 10f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 10f, 10f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 10f, 10f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 10f, 10f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -793,11 +793,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -10f, -10f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -10f, -10f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -10f, -10f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -10f, -10f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -816,11 +816,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 10f, -10f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 10f, -10f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, 10f, -10f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, 10f, -10f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					_STOPWATCH_INITIALIZE(&(iLocal_242.f_51), false, false);
@@ -839,11 +839,11 @@ void func_13() // Position - 0x42B
 			{
 				if (!IS_BIT_SET(iLocal_241, iLocal_242.f_50))
 				{
-					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -10f, 10f } };
+					vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -10f, 10f) };
 					vector.f_2 = uLocal_63.f_2;
-					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0f, -10f, 10f } };
-					vector2 = { vector2 + { 0f, 0.1f, 0.1f } };
-					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + { 10f, 0f, 0f }, &(vector2.f_2), false, false);
+					vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0f, -10f, 10f) };
+					vector2 = { vector2 + Vector3(0f, 0.1f, 0.1f) };
+					MISC::GET_GROUND_Z_FOR_3D_COORD(vector2 + Vector3(10f, 0f, 0f), &(vector2.f_2), false, false);
 					vector2.f_2 = vector2.f_2 - 25f;
 					MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, damage, true, joaat("WEAPON_AIRSTRIKE_ROCKET"), NETWORK::NET_TO_PED(iLocal_242.f_2.f_3), true, false, -1f, ped, true, false, 0, false, 0, 0, 0);
 					iLocal_242.f_50 = iLocal_242.f_50 + 1;
@@ -922,16 +922,16 @@ int func_16(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xE81
 		if (func_35(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_34();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -1068,7 +1068,7 @@ void func_17() // Position - 0x114F
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1132,18 +1132,18 @@ void func_23() // Position - 0x124B
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1316,7 +1316,7 @@ void func_34() // Position - 0x15E3
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -1358,7 +1358,7 @@ void func_36() // Position - 0x1672
 
 void func_37(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x16C9
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1461,14 +1461,14 @@ void func_45() // Position - 0x1818
 	if (func_42(iLocal_242.f_2))
 	{
 		vehicle = NETWORK::NET_TO_VEH(iLocal_242.f_2);
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(vehicle, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(vehicle, true));
 	}
 
 	if (!bLocal_59)
 		if (!_IS_NULL_VECTOR(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2))
-			entityCoords = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 };
+			entityCoords = Vector3(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2);
 		else if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true))
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	if (bLocal_58 && !IS_BIT_SET(Global_44449, 10))
 	{
@@ -1662,9 +1662,9 @@ void func_53() // Position - 0x1CA6
 			else if (IS_BIT_SET(Global_44449, 10) || MISC::GET_COORDS_OF_PROJECTILE_TYPE_WITHIN_DISTANCE(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_FLARE"), 100f, &(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2), true))
 			{
 				if (IS_BIT_SET(Global_44449, 10))
-					uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+					uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 				else if (func_95(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2, 0f, 0f, 0f, false))
-					uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 = { unk };
+					uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 = Vector3(unk);
 			
 				if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("AIRSTRIKE_1" /*Throw a Flare to mark an area for the Airstrike to hit. If you do not mark an area with a Flare before the jet arrives it will leave without deploying any bombs.*/))
 					HUD::CLEAR_HELP(true);
@@ -1742,9 +1742,9 @@ void func_54() // Position - 0x1E3B
 				if (!bLocal_53)
 				{
 					if (!_IS_NULL_VECTOR(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2))
-						vector3 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 };
+						vector3 = Vector3(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2);
 					else
-						vector3 = { uLocal_60 };
+						vector3 = Vector3(uLocal_60);
 				
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(vector3, ENTITY::GET_ENTITY_COORDS(vehicle, true), true) <= 60f * 5f)
 					{
@@ -1792,8 +1792,8 @@ void func_54() // Position - 0x1E3B
 								else if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_67, 7500, false))
 									iLocal_242.f_53 = 1;
 							
-								vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 - { 1000f, 25f, 25f } };
-								vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 1000f, 25f, 25f } };
+								vector = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 - Vector3(1000f, 25f, 25f) };
+								vector2 = { uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(1000f, 25f, 25f) };
 								vector.f_2 = -200f;
 								vector2.f_2 = 1500f;
 							
@@ -1874,7 +1874,7 @@ int func_57() // Position - 0x21E1
 	else if (iLocal_242.f_55 == 2)
 		return iLocal_242.f_55;
 
-	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 0.5f, 0f, 0f }))
+	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(0.5f, 0f, 0f)))
 	{
 		iLocal_242.f_55 = 1;
 		return iLocal_242.f_55;
@@ -2001,7 +2001,7 @@ void func_66() // Position - 0x2497
 		if (func_42(iLocal_242.f_2))
 		{
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_48);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, uLocal_60 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, uLocal_60 + Vector3(50f + 5f, 0f, 0f), 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
 			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, iLocal_242.f_2.f_14, 4, 60f, 25f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
 			TASK::CLOSE_SEQUENCE_TASK(iLocal_48);
 			bLocal_50 = true;
@@ -2055,7 +2055,7 @@ int func_68() // Position - 0x25AF
 				{
 					if (func_69(&(iLocal_242.f_2), iLocal_242.f_2.f_1, unk, num, true, true, true, false, true, true, false, false, false, false))
 					{
-						iLocal_242.f_2.f_14 = { unk * { 0f, -1f, -1f } };
+						iLocal_242.f_2.f_14 = { unk * Vector3(0f, -1f, -1f) };
 						VEHICLE::SET_VEHICLE_DOORS_LOCKED(NETWORK::NET_TO_VEH(iLocal_242.f_2), 2);
 						ENTITY::FREEZE_ENTITY_POSITION(NETWORK::NET_TO_VEH(iLocal_242.f_2), false);
 						ENTITY::SET_ENTITY_DYNAMIC(NETWORK::NET_TO_VEH(iLocal_242.f_2), true);
@@ -2150,10 +2150,10 @@ void func_70(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -2176,7 +2176,7 @@ int func_71(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -2402,7 +2402,7 @@ BOOL func_81(Player plParam0) // Position - 0x2E39
 	if (func_85(PLAYER::PLAYER_ID(), plParam0))
 		return true;
 
-	Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (NETWORK::NETWORK_IS_FRIEND(&Global_2764203))
 		return true;
@@ -2446,8 +2446,8 @@ BOOL func_85(Player plParam0, Player plParam1) // Position - 0x2EE5
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{
@@ -2469,7 +2469,7 @@ void func_86(var uParam0, var uParam1) // Position - 0x2F52
 {
 	float approxHeightForArea;
 
-	*uParam0 = { func_88(uLocal_60 + { 200f, 0f, 0f }, 600f, 600f, 200f / 2f) };
+	*uParam0 = { func_88(uLocal_60 + Vector3(200f, 0f, 0f), 600f, 600f, 200f / 2f) };
 	approxHeightForArea = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(*uParam0 - 600f, uParam0->f_1 - 600f, *uParam0 + 600f, uParam0->f_1 + 600f);
 
 	if (uParam0->f_2 < approxHeightForArea)
@@ -2489,9 +2489,9 @@ Vector3 func_88(var uParam0, var uParam1, var uParam2, float fParam3, float fPar
 	var unk;
 	float unk2;
 
-	unk = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
+	unk = Vector3(MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f);
 	endRange = fParam5 / 2f;
-	unk = { func_89(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(fParam3, fParam4)) };
+	unk = Vector3(func_89(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(fParam3, fParam4)));
 	unk.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-endRange, endRange);
 	return uParam0 + unk;
 }
@@ -2506,7 +2506,7 @@ Vector3 func_89(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	num = SYSTEM::VMAG(vParam0);
 
 	if (num != 0f)
-		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
+		return vParam0 * Vector3(fParam3 / num, fParam3 / num, fParam3 / num);
 
 	return 0f, 0f, 0f;
 }
@@ -2552,7 +2552,7 @@ void func_93() // Position - 0x30D6
 		if (func_42(iLocal_242.f_2))
 		{
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_49);
-			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + { 50f + 5f, 0f, 0f }, 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
+			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, uLocal_300[NETWORK::PARTICIPANT_ID_TO_INT()].f_2 + Vector3(50f + 5f, 0f, 0f), 4, 60f, 15f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
 			TASK::TASK_PLANE_MISSION(0, NETWORK::NET_TO_VEH(iLocal_242.f_2), 0, 0, iLocal_242.f_2.f_14, 4, 60f, 25f, -1f, SYSTEM::CEIL(50f + 5f), 20, true);
 			TASK::CLOSE_SEQUENCE_TASK(iLocal_49);
 			bLocal_51 = true;
@@ -2813,7 +2813,7 @@ void func_116(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		func_103();
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
-		uLocal_60 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+		uLocal_60 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 
 	if (func_4(PLAYER::PLAYER_ID(), true, false))
 		bLocal_52 = true;

@@ -495,7 +495,7 @@ void func_6() // Position - 0x1B9
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1956139, &src, 5843);
 	else
-		Global_1956139 = { src };
+		Global_1956139 = Vector3(src);
 
 	return;
 }
@@ -543,7 +543,7 @@ void func_7() // Position - 0x44B
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1955202, &src, 886);
 	else
-		Global_1955202 = { src };
+		Global_1955202 = Vector3(src);
 
 	return;
 }
@@ -564,7 +564,7 @@ void func_8() // Position - 0x547
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1955050, &src, 150);
 	else
-		Global_1955050 = { src };
+		Global_1955050 = Vector3(src);
 
 	return;
 }
@@ -594,7 +594,7 @@ void func_9() // Position - 0x5A4
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2764253, &src, 91);
 	else
-		Global_2764253 = { src };
+		Global_2764253 = Vector3(src);
 
 	return;
 }
@@ -912,7 +912,7 @@ void func_10() // Position - 0x641
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1950108, &src, 4893);
 	else
-		Global_1950108 = { src };
+		Global_1950108 = Vector3(src);
 
 	Global_1950108.f_3439 = unk4893;
 	return;
@@ -925,7 +925,7 @@ void func_11() // Position - 0xE7F
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2694976, &src, 3);
 	else
-		Global_2694976 = { src };
+		Global_2694976 = Vector3(src);
 
 	return;
 }
@@ -950,7 +950,7 @@ void func_12() // Position - 0xEA6
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2694562, &src, 328);
 	else
-		Global_2694562 = { src };
+		Global_2694562 = Vector3(src);
 
 	return;
 }
@@ -968,7 +968,7 @@ void func_13() // Position - 0xF29
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2802791, &src, 182);
 	else
-		Global_2802791 = { src };
+		Global_2802791 = Vector3(src);
 
 	return;
 }
@@ -1015,7 +1015,7 @@ void func_14() // Position - 0xF78
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2800922, &src, 1668);
 	else
-		Global_2800922 = { src };
+		Global_2800922 = Vector3(src);
 
 	return;
 }
@@ -1126,7 +1126,7 @@ void func_15() // Position - 0x1059
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2656837, &src, 581);
 	else
-		Global_2656837 = { src };
+		Global_2656837 = Vector3(src);
 
 	return;
 }
@@ -1344,7 +1344,7 @@ void func_16() // Position - 0x135E
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2656005, &src, 832);
 	else
-		Global_2656005 = { src };
+		Global_2656005 = Vector3(src);
 
 	return;
 }
@@ -1358,7 +1358,7 @@ void func_17() // Position - 0x186F
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2655780, &src, 225);
 	else
-		Global_2655780 = { src };
+		Global_2655780 = Vector3(src);
 
 	return;
 }
@@ -1388,7 +1388,7 @@ void func_18() // Position - 0x18A1
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2655570, &src, 210);
 	else
-		Global_2655570 = { src };
+		Global_2655570 = Vector3(src);
 
 	return;
 }
@@ -1562,7 +1562,7 @@ void func_19() // Position - 0x1957
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2654913, &src, 657);
 	else
-		Global_2654913 = { src };
+		Global_2654913 = Vector3(src);
 
 	return;
 }
@@ -1582,7 +1582,7 @@ void func_20() // Position - 0x1DD0
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2657418, &src, 171);
 	else
-		Global_2657418 = { src };
+		Global_2657418 = Vector3(src);
 
 	return;
 }
@@ -1678,7 +1678,7 @@ void func_21() // Position - 0x1E2E
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_4521801, &src, 980);
 	else
-		Global_4521801 = { src };
+		Global_4521801 = Vector3(src);
 
 	return;
 }
@@ -1688,7 +1688,7 @@ void func_22() // Position - 0x206A
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2672505, &Global_2676354, 3849);
 	else
-		Global_2672505 = { Global_2676354 };
+		Global_2672505 = Vector3(Global_2676354);
 
 	return;
 }
@@ -2002,7 +2002,7 @@ void func_23() // Position - 0x209B
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2635559, &src, 2943);
 	else
-		Global_2635559 = { src };
+		Global_2635559 = Vector3(src);
 
 	return;
 }
@@ -2062,7 +2062,7 @@ void func_24() // Position - 0x2D88
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2646729, &src, 1876);
 	else
-		Global_2646729 = { src };
+		Global_2646729 = Vector3(src);
 
 	return;
 }
@@ -2143,7 +2143,7 @@ void func_25() // Position - 0x2F22
 	unk.f_252.f_68 = 32;
 	unk.f_353 = 32;
 	unk.f_386 = 32;
-	Global_2851613 = { unk };
+	Global_2851613 = Vector3(unk);
 	return;
 }
 
@@ -2160,7 +2160,7 @@ void func_26() // Position - 0x3127
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2621446, &src, 86);
 	else
-		Global_2621446 = { src };
+		Global_2621446 = Vector3(src);
 
 	return;
 }
@@ -2188,7 +2188,7 @@ void func_27() // Position - 0x3179
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2803655, &src, 1075);
 	else
-		Global_2803655 = { src };
+		Global_2803655 = Vector3(src);
 
 	return;
 }
@@ -2212,7 +2212,7 @@ void func_28() // Position - 0x321F
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2803342, &src, 306);
 	else
-		Global_2803342 = { src };
+		Global_2803342 = Vector3(src);
 
 	return;
 }
@@ -2303,7 +2303,7 @@ void func_29() // Position - 0x329B
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1653913, &src, 1559);
 	else
-		Global_1653913 = { src };
+		Global_1653913 = Vector3(src);
 
 	return;
 }
@@ -2322,7 +2322,7 @@ void func_30() // Position - 0x34D7
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2625288, &src, 24);
 	else
-		Global_2625288 = { src };
+		Global_2625288 = Vector3(src);
 
 	return;
 }
@@ -2341,7 +2341,7 @@ void func_31() // Position - 0x352E
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2621534, &src, 41);
 	else
-		Global_2621534 = { src };
+		Global_2621534 = Vector3(src);
 
 	return;
 }
@@ -2356,7 +2356,7 @@ void func_32() // Position - 0x3585
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1649046, &src, 188);
 	else
-		Global_1649046 = { src };
+		Global_1649046 = Vector3(src);
 
 	return;
 }
@@ -2405,14 +2405,14 @@ void func_33() // Position - 0x35BF
 
 	for (i = 0; i <= 0; i = i + 1)
 	{
-		Global_2793046.f_238[i] = { 0f, 0f, 0f };
+		Global_2793046.f_238[i] = Vector3(0f, 0f, 0f);
 	}
 
-	Global_2793046.f_261 = { 0f, 0f, 0f };
-	Global_2793046.f_264 = { 0f, 0f, 0f };
-	Global_2793046.f_845 = { 0f, 0f, 0f };
-	Global_2793046.f_4643 = { 0f, 0f, 0f };
-	Global_2793046.f_4649 = { 0f, 0f, 0f };
+	Global_2793046.f_261 = Vector3(0f, 0f, 0f);
+	Global_2793046.f_264 = Vector3(0f, 0f, 0f);
+	Global_2793046.f_845 = Vector3(0f, 0f, 0f);
+	Global_2793046.f_4643 = Vector3(0f, 0f, 0f);
+	Global_2793046.f_4649 = Vector3(0f, 0f, 0f);
 	Global_2793046.f_855 = 0f;
 	Global_2793046.f_5158 = -1;
 	Global_2793046.f_5054 = -1;
@@ -2706,7 +2706,7 @@ void func_34() // Position - 0x3FE3
 	var unk8;
 	var unk9;
 
-	Global_2793046.f_912 = { unk };
+	Global_2793046.f_912 = Vector3(unk);
 	unk10 = -1;
 	unk10.f_1 = -1;
 	unk10.f_2.f_1 = -1;
@@ -2717,10 +2717,10 @@ void func_34() // Position - 0x3FE3
 	unk10.f_2.f_20 = -1;
 	unk10.f_23 = -1;
 	unk10.f_47 = 32;
-	Global_2793046.f_28 = { unk10 };
+	Global_2793046.f_28 = Vector3(unk10);
 	unk93.f_2 = -1;
 	unk93.f_3 = -1;
-	Global_2793046.f_198 = { unk93 };
+	Global_2793046.f_198 = Vector3(unk93);
 	unk101.f_4.f_1 = -1;
 	unk101.f_4.f_2 = -1;
 	unk101.f_4.f_9 = -1;
@@ -2728,11 +2728,11 @@ void func_34() // Position - 0x3FE3
 	unk101.f_4.f_19 = -1;
 	unk101.f_4.f_20 = -1;
 	unk101.f_25 = 2;
-	Global_2793046.f_206 = { unk101 };
+	Global_2793046.f_206 = Vector3(unk101);
 	unk133.f_7 = 10;
-	Global_2793046.f_242 = { unk133 };
+	Global_2793046.f_242 = Vector3(unk133);
 	unk151.f_6 = -1;
-	Global_2793046.f_440 = { unk151 };
+	Global_2793046.f_440 = Vector3(unk151);
 	Global_2793046.f_451 = unk161;
 	Global_2793046.f_461 = unk162;
 	src = 12;
@@ -2818,7 +2818,7 @@ void func_35() // Position - 0x410A
 		unk768[i] = Global_2793046.f_5225.f_348[i];
 	}
 
-	Global_2793046.f_5225 = { unk };
+	Global_2793046.f_5225 = Vector3(unk);
 	Global_2793046.f_5225.f_366 = unk777;
 
 	for (i = 0; i < 8; i = i + 1)
@@ -2836,7 +2836,7 @@ void func_36() // Position - 0x4348
 
 	for (i = 0; i <= 15; i = i + 1)
 	{
-		Global_2793046.f_4063[i] = { unk };
+		Global_2793046.f_4063[i] = Vector3(unk);
 	}
 
 	return;
@@ -2853,12 +2853,12 @@ void func_37() // Position - 0x4376
 
 	for (i = 0; i <= 4; i = i + 1)
 	{
-		Global_2793046.f_111[i] = { unk };
+		Global_2793046.f_111[i] = Vector3(unk);
 	}
 
 	for (i = 0; i <= 0; i = i + 1)
 	{
-		Global_2793046.f_4601[i] = { unk18 };
+		Global_2793046.f_4601[i] = Vector3(unk18);
 	}
 
 	unk30.f_2 = -1;
@@ -2872,8 +2872,8 @@ void func_37() // Position - 0x4376
 
 	for (i = 0; i <= 0; i = i + 1)
 	{
-		Global_2793046.f_1167[i] = { unk30 };
-		Global_2793046.f_1423[i] = { unk81 };
+		Global_2793046.f_1167[i] = Vector3(unk30);
+		Global_2793046.f_1423[i] = Vector3(unk81);
 	}
 
 	unk132.f_1 = -1;
@@ -2885,7 +2885,7 @@ void func_37() // Position - 0x4376
 
 	for (i = 0; i <= 15; i = i + 1)
 	{
-		Global_2793046.f_462[i] = { unk132 };
+		Global_2793046.f_462[i] = Vector3(unk132);
 	}
 
 	return;
@@ -2975,7 +2975,7 @@ void func_38() // Position - 0x4484
 	unk.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_40 = -1;
 	unk.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_39 = -1;
 	unk.f_1.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_44.f_40 = -1;
-	Global_2793046.f_2339 = { unk };
+	Global_2793046.f_2339 = Vector3(unk);
 	Global_2793046.f_4058 = unk1720;
 	return;
 }
@@ -2995,14 +2995,14 @@ void func_39() // Position - 0x46D5
 	var unk11;
 	var unk12;
 
-	Global_2793046.f_4564 = { unk };
+	Global_2793046.f_4564 = Vector3(unk);
 	unk13.f_19 = 32;
-	Global_2793046.f_1886 = { unk13 };
-	Global_2793046.f_1949 = { unk74 };
+	Global_2793046.f_1886 = Vector3(unk13);
+	Global_2793046.f_1949 = Vector3(unk74);
 	unk77 = 8;
-	Global_2793046.f_1953 = { unk77 };
-	Global_2793046.f_2311 = { unk435 };
-	Global_2793046.f_2320 = { unk444 };
+	Global_2793046.f_1953 = Vector3(unk77);
+	Global_2793046.f_2311 = Vector3(unk435);
+	Global_2793046.f_2320 = Vector3(unk444);
 	unk463 = 1;
 	unk463.f_3 = 1;
 	unk463.f_6 = 1;
@@ -3011,19 +3011,19 @@ void func_39() // Position - 0x46D5
 	unk463.f_12 = 1;
 	unk463.f_14 = 1;
 	unk463.f_16 = 1;
-	Global_2793046.f_4576 = { unk463 };
-	Global_2793046.f_4595 = { unk482 };
+	Global_2793046.f_4576 = Vector3(unk463);
+	Global_2793046.f_4595 = Vector3(unk482);
 	unk484.f_2 = -1;
 	unk484.f_3 = -1;
 	unk484.f_4 = -1;
 	unk484.f_50 = -1;
-	Global_2793046.f_1679 = { unk484 };
+	Global_2793046.f_1679 = Vector3(unk484);
 	Global_2793046.f_851 = unk535;
 	unk536 = 16;
-	Global_2793046.f_1002 = { unk536 };
+	Global_2793046.f_1002 = Vector3(unk536);
 	unk701 = 5;
 	unk701.f_6 = 5;
-	Global_2793046.f_1736 = { unk701 };
+	Global_2793046.f_1736 = Vector3(unk701);
 	return;
 }
 
@@ -3083,7 +3083,7 @@ void func_43() // Position - 0x48A3
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1943595, &src, 464);
 	else
-		Global_1943595 = { src };
+		Global_1943595 = Vector3(src);
 
 	return;
 }
@@ -3102,7 +3102,7 @@ void func_44() // Position - 0x48E0
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1935690, &src, 35);
 	else
-		Global_1935690 = { src };
+		Global_1935690 = Vector3(src);
 
 	return;
 }
@@ -3119,7 +3119,7 @@ void func_45() // Position - 0x4938
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_4535040, &src, 132);
 	else
-		Global_4535040 = { src };
+		Global_4535040 = Vector3(src);
 
 	return;
 }
@@ -3567,7 +3567,7 @@ void func_46() // Position - 0x497F
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2625825, &src, 2757);
 	else
-		Global_2625825 = { src };
+		Global_2625825 = Vector3(src);
 
 	return;
 }
@@ -3587,7 +3587,7 @@ void func_47() // Position - 0x557E
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2657418, &src, 171);
 	else
-		Global_2657418 = { src };
+		Global_2657418 = Vector3(src);
 
 	return;
 }
@@ -3698,7 +3698,7 @@ void func_48() // Position - 0x55DC
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2656837, &src, 581);
 	else
-		Global_2656837 = { src };
+		Global_2656837 = Vector3(src);
 
 	return;
 }
@@ -3916,7 +3916,7 @@ void func_49() // Position - 0x58E1
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2656005, &src, 832);
 	else
-		Global_2656005 = { src };
+		Global_2656005 = Vector3(src);
 
 	return;
 }
@@ -3930,7 +3930,7 @@ void func_50() // Position - 0x5DF2
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2655780, &src, 225);
 	else
-		Global_2655780 = { src };
+		Global_2655780 = Vector3(src);
 
 	return;
 }
@@ -3960,7 +3960,7 @@ void func_51() // Position - 0x5E24
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2655570, &src, 210);
 	else
-		Global_2655570 = { src };
+		Global_2655570 = Vector3(src);
 
 	return;
 }
@@ -4134,7 +4134,7 @@ void func_52() // Position - 0x5EDA
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2654913, &src, 657);
 	else
-		Global_2654913 = { src };
+		Global_2654913 = Vector3(src);
 
 	return;
 }
@@ -4522,7 +4522,7 @@ void func_53() // Position - 0x6353
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2652258, &src, 2655);
 	else
-		Global_2652258 = { src };
+		Global_2652258 = Vector3(src);
 
 	return;
 }
@@ -5674,7 +5674,7 @@ void func_54() // Position - 0x6C89
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2650102, &src, 2156);
 	else
-		Global_2650102 = { src };
+		Global_2650102 = Vector3(src);
 
 	return;
 }
@@ -5688,7 +5688,7 @@ void func_55() // Position - 0x8B19
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1885209, &src, 33);
 	else
-		Global_1885209 = { src };
+		Global_1885209 = Vector3(src);
 
 	return;
 }
@@ -5700,7 +5700,7 @@ void func_56() // Position - 0x8B4B
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_4456449, &src, 35);
 	else
-		Global_4456449 = { src };
+		Global_4456449 = Vector3(src);
 
 	return;
 }
@@ -5718,7 +5718,7 @@ void func_57() // Position - 0x8B75
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1665699, &src, 26);
 	else
-		Global_1665699 = { src };
+		Global_1665699 = Vector3(src);
 
 	return;
 }
@@ -5753,7 +5753,7 @@ void func_58() // Position - 0x8BC0
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1835504, &src, 574);
 	else
-		Global_1835504 = { src };
+		Global_1835504 = Vector3(src);
 
 	return;
 }
@@ -6021,7 +6021,7 @@ void func_59() // Position - 0x8C80
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2648605, &src, 1497);
 	else
-		Global_2648605 = { src };
+		Global_2648605 = Vector3(src);
 
 	return;
 }
@@ -6048,7 +6048,7 @@ void func_61(int iParam0) // Position - 0x9373
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1889404[iParam0], &src, 7);
 	else
-		Global_1889404[iParam0] = { src };
+		Global_1889404[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6062,7 +6062,7 @@ void func_62(int iParam0) // Position - 0x93A2
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1887707[iParam0], &src, 53);
 	else
-		Global_1887707[iParam0] = { src };
+		Global_1887707[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6080,7 +6080,7 @@ void func_63(int iParam0) // Position - 0x93DC
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1885242[iParam0], &src, 77);
 	else
-		Global_1885242[iParam0] = { src };
+		Global_1885242[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6107,7 +6107,7 @@ void func_64(int iParam0) // Position - 0x942D
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1928088[iParam0], &src, 199);
 	else
-		Global_1928088[iParam0] = { src };
+		Global_1928088[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6123,7 +6123,7 @@ void func_65(int iParam0) // Position - 0x94BF
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1882008[iParam0], &src, 100);
 	else
-		Global_1882008[iParam0] = { src };
+		Global_1882008[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6166,7 +6166,7 @@ void func_66(int iParam0) // Position - 0x9507
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1890444[iParam0], &src, 129);
 	else
-		Global_1890444[iParam0] = { src };
+		Global_1890444[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6178,7 +6178,7 @@ void func_67(int iParam0) // Position - 0x961F
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1665835[iParam0], &src, 26);
 	else
-		Global_1665835[iParam0] = { src };
+		Global_1665835[iParam0] = Vector3(src);
 
 	return;
 }
@@ -6272,12 +6272,12 @@ void func_69(int iParam0) // Position - 0x967C
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1853910[iParam0], &src, 862);
 	else
-		Global_1853910[iParam0] = { src };
+		Global_1853910[iParam0] = Vector3(src);
 
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_1881495[iParam0], &src2, 16);
 	else
-		Global_1881495[iParam0] = { src2 };
+		Global_1881495[iParam0] = Vector3(src2);
 
 	return;
 }
@@ -6354,7 +6354,7 @@ void func_70(int iParam0) // Position - 0x98E2
 	if (Global_2672504)
 		MISC::COPY_SCRIPT_STRUCT(&Global_2657589[iParam0], &src, 466);
 	else
-		Global_2657589[iParam0] = { src };
+		Global_2657589[iParam0] = Vector3(src);
 
 	return;
 }

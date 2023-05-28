@@ -602,9 +602,9 @@ Ped func_13() // Position - 0x62B
 					if (ped == 0)
 						return func_12(num);
 				
-					entityCoords = { ENTITY::GET_ENTITY_COORDS(func_12(num), false) };
-					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(ped, false) };
-					entityCoords3 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+					entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(func_12(num), false));
+					entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(ped, false));
+					entityCoords3 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 					num2 = SYSTEM::VDIST(entityCoords, entityCoords3);
 					num3 = SYSTEM::VDIST(entityCoords3, entityCoords2);
 				

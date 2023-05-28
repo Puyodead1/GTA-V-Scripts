@@ -134,10 +134,10 @@ void main() // Position - 0x0
 	iLocal_45 = 65;
 	iLocal_46 = 49;
 	iLocal_47 = 64;
-	uLocal_64 = { -1124.3922f, -514.70013f, 33.21493f };
+	uLocal_64 = Vector3(-1124.3922f, -514.70013f, 33.21493f);
 	fLocal_67 = 200f;
-	uLocal_68 = { 2490f, 3777f, 2402.879f };
-	uLocal_71 = { -2052f, 3237f, 1450.078f };
+	uLocal_68 = Vector3(2490f, 3777f, 2402.879f);
+	uLocal_71 = Vector3(-2052f, 3237f, 1450.078f);
 	iLocal_74 = -1;
 	iLocal_76 = -1;
 	bLocal_85 = true;
@@ -169,8 +169,8 @@ void main() // Position - 0x0
 	if (!STREAMING::IS_IPL_ACTIVE("ufo"))
 		STREAMING::REQUEST_IPL("ufo");
 
-	iLocal_78[0] = { uLocal_68 };
-	iLocal_78[1] = { uLocal_71 };
+	iLocal_78[0] = Vector3(uLocal_68);
+	iLocal_78[1] = Vector3(uLocal_71);
 
 	while (true)
 	{
@@ -424,7 +424,7 @@ void func_8() // Position - 0x525
 	if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_78[iLocal_76], fLocal_88, true))
 		return;
 
-	vector = { func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - iLocal_78[iLocal_76]) * { fLocal_89, fLocal_89, fLocal_89 } };
+	vector = { func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - iLocal_78[iLocal_76]) * Vector3(fLocal_89, fLocal_89, fLocal_89) };
 	ENTITY::APPLY_FORCE_TO_ENTITY(PLAYER::PLAYER_PED_ID(), 2, vector, 0f, 0f, 0f, 0, false, true, true, false, true);
 	return;
 }
@@ -439,7 +439,7 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{

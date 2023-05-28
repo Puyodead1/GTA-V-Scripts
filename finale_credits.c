@@ -421,7 +421,7 @@ void main() // Position - 0x0
 			
 				if (iLocal_29 > 0)
 				{
-					ENTITY::SET_ENTITY_COORDS_WITHOUT_PLANTS_RESET(PLAYER::PLAYER_PED_ID(), CAM::GET_FINAL_RENDERED_CAM_COORD() + { 3f, 0f, 0f }, true, false, false, true);
+					ENTITY::SET_ENTITY_COORDS_WITHOUT_PLANTS_RESET(PLAYER::PLAYER_PED_ID(), CAM::GET_FINAL_RENDERED_CAM_COORD() + Vector3(3f, 0f, 0f), true, false, false, true);
 					ENTITY::SET_ENTITY_VISIBLE(PLAYER::PLAYER_PED_ID(), false, false);
 					ENTITY::SET_ENTITY_INVINCIBLE(PLAYER::PLAYER_PED_ID(), true);
 				}
@@ -957,7 +957,7 @@ BOOL func_14() // Position - 0x17A0
 
 	VEHICLE::SET_AMBIENT_VEHICLE_RANGE_MULTIPLIER_THIS_FRAME(2f);
 	PATHFIND::SET_AMBIENT_PED_RANGE_MULTIPLIER_THIS_FRAME(2f);
-	unk = { 8f, 8f, 8f };
+	unk = Vector3(8f, 8f, 8f);
 
 	switch (iLocal_31)
 	{
@@ -966,7 +966,7 @@ BOOL func_14() // Position - 0x17A0
 		
 			if (CAM::IS_SCREEN_FADED_OUT())
 			{
-				iLocal_120 = PED::ADD_SCENARIO_BLOCKING_AREA({ 12.629f, 4359.485f, -954.3553f } - unk, { 12.629f, 4359.485f, -954.3553f } + unk, false, true, true, true);
+				iLocal_120 = PED::ADD_SCENARIO_BLOCKING_AREA(Vector3(12.629f, 4359.485f, -954.3553f) - unk, Vector3(12.629f, 4359.485f, -954.3553f) + unk, false, true, true, true);
 				CAM::DESTROY_ALL_CAMS(false);
 				caLocal_30 = CAM::CREATE_CAM("DEFAULT_SPLINE_CAMERA", false);
 				CAM::SET_CAM_SPLINE_SMOOTHING_STYLE(caLocal_30, 0);
@@ -2251,14 +2251,14 @@ void func_49(BOOL bParam0, BOOL bParam1) // Position - 0x45D6
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

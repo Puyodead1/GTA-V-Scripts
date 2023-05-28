@@ -490,7 +490,7 @@ void func_10(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	iLocal_151.f_9 = func_21(PLAYER::PLAYER_ID());
 	iLocal_151.f_76.f_36 = 11;
 	iLocal_151.f_76.f_35 = iLocal_151.f_9;
-	iLocal_151.f_76 = { uParam0 };
+	iLocal_151.f_76 = Vector3(uParam0);
 	iLocal_151.f_76.f_33 = 1;
 	func_11(&(iLocal_151.f_76), iParam16);
 	return;
@@ -504,7 +504,7 @@ void func_11(var uParam0, BOOL bParam1) // Position - 0x300
 
 	eventData = 1768735055;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { *uParam0 };
+	eventData.f_2 = Vector3(*uParam0);
 	eventData.f_34 = uParam0->f_34;
 	eventData.f_37 = bParam1;
 	eventData.f_35 = uParam0->f_35;
@@ -525,7 +525,7 @@ void func_11(var uParam0, BOOL bParam1) // Position - 0x300
 	}
 	else
 	{
-		uParam0->f_16 = { eventData.f_2 };
+		uParam0->f_16 = Vector3(eventData.f_2);
 		_STOPWATCH_DESTROY(&(uParam0->f_37));
 	}
 
@@ -744,7 +744,7 @@ BOOL func_24(Player plParam0, Entity eParam1) // Position - 0x6E9
 	if (!ENTITY::DOES_ENTITY_EXIST(eParam1) || !ENTITY::DOES_ENTITY_EXIST(PLAYER::GET_PLAYER_PED(plParam0)) || ENTITY::IS_ENTITY_DEAD(PLAYER::GET_PLAYER_PED(plParam0), false))
 		return false;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(plParam0), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(plParam0), true));
 	num = entityCoords.f_2;
 
 	if (num <= -48f)
@@ -1266,7 +1266,7 @@ BOOL func_38() // Position - 0xF8E
 {
 	var unk;
 
-	unk = { func_39(iLocal_151.f_4) };
+	unk = Vector3(func_39(iLocal_151.f_4));
 	func_10(unk, 0);
 	return iLocal_151.f_76.f_32;
 }
@@ -1641,10 +1641,10 @@ void func_46() // Position - 0x15F4
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -2241,7 +2241,7 @@ void func_66() // Position - 0x1F20
 	num = -438538740;
 	num.f_2 = 1;
 	num.f_6 = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(NETWORK::GET_NETWORK_TIME(), iLocal_151.f_13));
-	unk11 = { func_33(iLocal_151.f_2) };
+	unk11 = Vector3(func_33(iLocal_151.f_2));
 	num.f_8 = MISC::GET_HASH_KEY(func_70(&unk11));
 
 	if (iLocal_151.f_2 == 19)

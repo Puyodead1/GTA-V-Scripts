@@ -657,8 +657,8 @@ void main() // Position - 0x0
 	iLocal_49 = -1;
 	fLocal_210 = (0.05f + 0.275f) - 0.01f;
 	iLocal_252 = 1;
-	uLocal_510 = { 0f, -0.7f, 1f };
-	uLocal_513 = { 0f, -0.8f, 1f };
+	uLocal_510 = Vector3(0f, -0.7f, 1f);
+	uLocal_513 = Vector3(0f, -0.8f, 1f);
 	fLocal_528 = -1f;
 	fLocal_529 = -1f;
 	iLocal_601 = 3000;
@@ -708,13 +708,13 @@ void main() // Position - 0x0
 	}
 
 	flag = true;
-	uLocal_505 = { ENTITY::GET_ENTITY_COORDS(obScriptParam_613, true) };
+	uLocal_505 = Vector3(ENTITY::GET_ENTITY_COORDS(obScriptParam_613, true));
 	uLocal_505.f_2 = uLocal_505.f_2 + 1f;
 
 	if (CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON)
-		uLocal_516 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_613, uLocal_510) };
+		uLocal_516 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_613, uLocal_510));
 	else
-		uLocal_516 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_613, uLocal_513) };
+		uLocal_516 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_613, uLocal_513));
 
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(uLocal_516, &groundZ, false, false))
 		uLocal_516.f_2 = groundZ + 1f;
@@ -4019,14 +4019,14 @@ void func_47(BOOL bParam0, BOOL bParam1) // Position - 0x419C
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -4618,8 +4618,8 @@ BOOL func_67() // Position - 0x4E5D
 
 	if (iLocal_599 == 0)
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
-		iLocal_599 = SHAPETEST::START_SHAPE_TEST_CAPSULE(entityCoords, entityCoords - { 3f, 0f, 0f }, 0.33f, 2, PLAYER::PLAYER_PED_ID(), 4);
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
+		iLocal_599 = SHAPETEST::START_SHAPE_TEST_CAPSULE(entityCoords, entityCoords - Vector3(3f, 0f, 0f), 0.33f, 2, PLAYER::PLAYER_PED_ID(), 4);
 		return bLocal_598;
 	}
 	else
@@ -5199,8 +5199,8 @@ void func_103(int iParam0) // Position - 0x5953
 
 void func_104(int iParam0, int iParam1) // Position - 0x59ED
 {
-	Global_113648.f_20412[iParam0] = { Global_113648.f_20412[iParam1] };
-	Global_113648.f_20412[iParam0].f_4 = { Global_113648.f_20412[iParam1].f_4 };
+	Global_113648.f_20412[iParam0] = Vector3(Global_113648.f_20412[iParam1]);
+	Global_113648.f_20412[iParam0].f_4 = Vector3(Global_113648.f_20412[iParam1].f_4);
 	Global_113648.f_20412[iParam0].f_8 = Global_113648.f_20412[iParam1].f_8;
 	Global_113648.f_20412[iParam0].f_10 = Global_113648.f_20412[iParam1].f_10;
 	Global_113648.f_20412[iParam0].f_9 = Global_113648.f_20412[iParam1].f_9;

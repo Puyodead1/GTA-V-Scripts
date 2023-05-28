@@ -144,8 +144,8 @@ void main() // Position - 0x0
 			if (!func_51(pedLocal_82))
 				func_56();
 		
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-			entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedLocal_82, true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+			entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_82, true));
 		
 			if (SYSTEM::VDIST2(entityCoords, entityCoords2) >= 100f * 100f)
 				func_56();
@@ -486,7 +486,7 @@ void func_16(BOOL bParam0) // Position - 0x6BE
 
 	if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 	{
-		string1 = { func_22() };
+		string1 = Vector3(func_22());
 		string2 = func_21();
 	
 		if (MISC::ARE_STRINGS_EQUAL(&string1, string2))
@@ -714,8 +714,8 @@ BOOL func_27(Ped pedParam0, float fParam1, BOOL bParam2, BOOL bParam3) // Positi
 	float entityCoords;
 	float unk;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
-	num = { entityCoords };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
+	num = Vector3(entityCoords);
 	entityCoords = entityCoords - fParam1;
 	entityCoords.f_1 = entityCoords.f_1 - fParam1;
 	entityCoords.f_2 = entityCoords.f_2 - fParam1;
@@ -769,15 +769,15 @@ BOOL func_29(Ped pedParam0, var uParam1, var uParam2, var uParam3, float fParam4
 	var unk2;
 	float unk3;
 
-	unk = { func_31(uParam1 - ENTITY::GET_ENTITY_COORDS(pedParam0, true)) };
+	unk = Vector3(func_31(uParam1 - ENTITY::GET_ENTITY_COORDS(pedParam0, true)));
 
 	if (fParam4 < 0.1f || fParam4 > 360f)
 		return true;
 
 	if (iParam5 == 0)
-		entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0) };
+		entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0));
 	else
-		entityForwardVector = { func_31(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)) };
+		entityForwardVector = Vector3(func_31(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)));
 
 	num = func_30(entityForwardVector, unk);
 
@@ -802,7 +802,7 @@ Vector3 func_31(float fParam0, var uParam1, var uParam2) // Position - 0xCC7
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -884,7 +884,7 @@ BOOL func_35(Object obParam0, Ped pedParam1, int iParam2, int iParam3, int iPara
 		iLocal_37[num].f_2 = pedParam1;
 	}
 
-	pedBoneCoords = { PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 0f, 0f) };
+	pedBoneCoords = Vector3(PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 0f, 0f));
 	flag = func_36(&iLocal_37[num], pedBoneCoords, pedParam1, &(iLocal_37[num].f_3), obParam0, iParam5);
 	return flag || MISC::GET_GAME_TIMER() - iLocal_37[num].f_3 < iParam4;
 }
@@ -907,8 +907,8 @@ BOOL func_36(var uParam0, Vector3 vParam1, var uParam2, var uParam3, Ped pedPara
 
 	if (*uParam0 == 0)
 	{
-		endCoords = { func_37(pedParam4, iParam7) };
-		*uParam0 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(vParam1, endCoords + ((endCoords - vParam1) * { 0.1f, 0.1f, 0.1f }), 511, obParam6, 7);
+		endCoords = Vector3(func_37(pedParam4, iParam7));
+		*uParam0 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(vParam1, endCoords + ((endCoords - vParam1) * Vector3(0.1f, 0.1f, 0.1f)), 511, obParam6, 7);
 		return 0;
 	}
 
@@ -1011,15 +1011,15 @@ BOOL func_39(Object obParam0, Ped pedParam1, int iParam2, int iParam3) // Positi
 	var unk2;
 	float unk3;
 
-	unk = { func_31(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(obParam0, true)) };
+	unk = Vector3(func_31(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(obParam0, true)));
 
 	if (iParam2 < 0.1f || iParam2 > 360f)
 		return true;
 
 	if (iParam3 == 0)
-		entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(obParam0) };
+		entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(obParam0));
 	else
-		entityForwardVector = { func_31(PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 0f, 0f)) };
+		entityForwardVector = Vector3(func_31(PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(obParam0, 31086, 0f, 0f, 0f)));
 
 	num = func_30(entityForwardVector, unk);
 
@@ -1109,7 +1109,7 @@ void _CONVERSATION_ADD_LINE_NO_SUBTITLE(var uParam0, char* sParam1, char* sParam
 
 void func_45(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x12B0
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1185,8 +1185,8 @@ void func_48(BOOL bParam0, var uParam1) // Position - 0x1402
 	Vector3 vector;
 	Vector3 unk;
 
-	vector = { 2711.1978f, 4134.4253f, 32.90168f };
-	vector2 = { 2739.9814f, 4155.2207f, 50.28859f };
+	vector = Vector3(2711.1978f, 4134.4253f, 32.90168f);
+	vector2 = Vector3(2739.9814f, 4155.2207f, 50.28859f);
 
 	if (bParam0)
 	{
@@ -1238,7 +1238,7 @@ void func_50() // Position - 0x1541
 		TASK::SET_PED_PATH_CAN_USE_CLIMBOVERS(pedLocal_82, false);
 		TASK::SET_PED_PATH_CAN_DROP_FROM_HEIGHT(pedLocal_82, false);
 		PED::SET_PED_CONFIG_FLAG(pedLocal_82, 118, false);
-		vector = { 2728.33f, 4145.6f, 43.89f };
+		vector = Vector3(2728.33f, 4145.6f, 43.89f);
 	
 		if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(vector, 10f, joaat("prop_table_03b"), false))
 		{

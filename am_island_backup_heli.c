@@ -956,10 +956,10 @@ void func_37(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -982,7 +982,7 @@ int func_38(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -1015,13 +1015,13 @@ BOOL func_40() // Position - 0xFC7
 		{
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 			{
-				x = { func_57(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * SYSTEM::SIN(SYSTEM::TO_FLOAT(iLocal_79.f_1.f_13) * 30f), 200f * SYSTEM::COS(SYSTEM::TO_FLOAT(iLocal_79.f_1.f_13) * 30f), 0f) };
+				x = Vector3(func_57(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), 0f, -200f * SYSTEM::SIN(SYSTEM::TO_FLOAT(iLocal_79.f_1.f_13) * 30f), 200f * SYSTEM::COS(SYSTEM::TO_FLOAT(iLocal_79.f_1.f_13) * 30f), 0f));
 				x.f_2 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(x, x.f_1);
 				x.f_2 = x.f_2 + 30f;
 			
 				if (func_41(x, 20f, 1f, 1f, 15f, true, true, true, 180f, false, -1, true, 0, false, 0, false, false))
 				{
-					iLocal_79.f_1.f_8 = { x };
+					iLocal_79.f_1.f_8 = Vector3(x);
 					return true;
 				}
 				else
@@ -1281,7 +1281,7 @@ BOOL func_51(Player plParam0) // Position - 0x160C
 	if (func_56(PLAYER::PLAYER_ID(), plParam0))
 		return true;
 
-	Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (NETWORK::NETWORK_IS_FRIEND(&Global_2764203))
 		return true;
@@ -1330,8 +1330,8 @@ BOOL func_56(Player plParam0, Player plParam1) // Position - 0x16C1
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{
@@ -1362,7 +1362,7 @@ Vector3 func_57(var uParam0, var uParam1, var uParam2, float fParam3, float fPar
 	num3 = SYSTEM::SIN(value);
 	num = (fParam4 * num2) + (fParam4.f_1 * num3);
 	num.f_1 = (fParam4.f_1 * num2) - (fParam4 * num3);
-	unk3 = { uParam0 + num };
+	unk3 = Vector3(uParam0 + num);
 	return unk3;
 }
 
@@ -2035,7 +2035,7 @@ void func_83() // Position - 0x22EF
 
 	if (flag)
 	{
-		x = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
+		x = Vector3(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()));
 		fLocal_68 = PATHFIND::GET_APPROX_HEIGHT_FOR_POINT(x, x.f_1);
 	
 		if (fLocal_68 < Global_262145.f_11086)

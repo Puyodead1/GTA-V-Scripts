@@ -397,8 +397,8 @@ void main() // Position - 0x0
 	fLocal_25 = -0.0375f;
 	fLocal_26 = 0.17f;
 	iLocal_37 = 1;
-	uLocal_286 = { 0f, 0f, 0f };
-	uLocal_289 = { 0f, 0f, 0f };
+	uLocal_286 = Vector3(0f, 0f, 0f);
+	uLocal_289 = Vector3(0f, 0f, 0f);
 	fLocal_294 = 80f;
 	fLocal_295 = 140f;
 	fLocal_296 = 180f;
@@ -413,11 +413,11 @@ void main() // Position - 0x0
 	sLocal_334 = "f_getin_l_bighouse";
 	sLocal_335 = "f_sleep_l_loop_bighouse";
 	sLocal_336 = "f_getout_l_bighouse";
-	uLocal_337 = { 262.9207f, -1002.9797f, -100.0086f };
-	uLocal_340 = { 261.0173f, -1002.9797f, -98.0086f };
+	uLocal_337 = Vector3(262.9207f, -1002.9797f, -100.0086f);
+	uLocal_340 = Vector3(261.0173f, -1002.9797f, -98.0086f);
 	fLocal_346 = 230.5943f;
-	uLocal_347 = { 262.74f, -1004.344f, -99.575f };
-	uLocal_350 = { 0f, 0f, -162.36f };
+	uLocal_347 = Vector3(262.74f, -1004.344f, -99.575f);
+	uLocal_350 = Vector3(0f, 0f, -162.36f);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(16) || func_83() || Global_2793046.f_1947)
 		func_82();
@@ -432,8 +432,8 @@ void main() // Position - 0x0
 		MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 	}
 
-	uLocal_343 = { uScriptParam_354.f_1[0] };
-	uLocal_343 = { 261.8297f, -1002.9283f, -99.0062f };
+	uLocal_343 = Vector3(uScriptParam_354.f_1[0]);
+	uLocal_343 = Vector3(261.8297f, -1002.9283f, -99.0062f);
 
 	while (true)
 	{
@@ -478,7 +478,7 @@ void func_1() // Position - 0x245
 	var unk;
 	var unk2;
 
-	unk = { 1.5f, 1.5f, 1.5f };
+	unk = Vector3(1.5f, 1.5f, 1.5f);
 
 	switch (iLocal_326)
 	{
@@ -525,8 +525,8 @@ void func_1() // Position - 0x245
 						func_26();
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_UNARMED"), true);
 						func_16(true, true, true, false, false, false, false);
-						uLocal_343 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_333, sLocal_334, uLocal_347, uLocal_350, 0, 2) };
-						animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_333, sLocal_334, uLocal_347, uLocal_350, 0, 2) };
+						uLocal_343 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_333, sLocal_334, uLocal_347, uLocal_350, 0, 2));
+						animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_333, sLocal_334, uLocal_347, uLocal_350, 0, 2));
 						fLocal_346 = animInitialOffsetRotation.f_2;
 						TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), uLocal_343, 1f, 5000, fLocal_346, 0.05f);
 					
@@ -1255,10 +1255,10 @@ void func_29() // Position - 0x11B6
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 

@@ -92,7 +92,7 @@ void main() // Position - 0x0
 	fLocal_33 = -0.0375f;
 	fLocal_34 = 0.17f;
 	fLocal_63 = 277.7314f;
-	uLocal_65 = { -196.045f, -580.13f, 135.0004f };
+	uLocal_65 = Vector3(-196.045f, -580.13f, 135.0004f);
 	CAM::DO_SCREEN_FADE_OUT(800);
 	func_16();
 

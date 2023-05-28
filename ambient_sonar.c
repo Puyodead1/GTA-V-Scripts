@@ -616,7 +616,7 @@ void func_8() // Position - 0x2E0
 
 void func_9(var uParam0, var uParam1, var uParam2, BOOL bParam3, BOOL bParam4) // Position - 0x2F9
 {
-	Global_22831 = { uParam0 };
+	Global_22831 = Vector3(uParam0);
 	MISC::CLEAR_BIT(&G_SleepModeOffOn11, 30);
 
 	if (bParam3)
@@ -2944,7 +2944,7 @@ BOOL func_75(var uParam0, var uParam1) // Position - 0x333C
 	BOOL unk;
 
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	for (i = 0; i < iLocal_392; i = i + 1)
 	{
@@ -3042,14 +3042,14 @@ void func_78(BOOL bParam0, BOOL bParam1) // Position - 0x354F
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -3967,65 +3967,65 @@ void func_121() // Position - 0x476F
 {
 	int i;
 
-	iLocal_55[0].f_3 = { func_10(0) };
+	iLocal_55[0].f_3 = Vector3(func_10(0));
 	iLocal_55[0].f_9 = 179.47f;
-	iLocal_55[1].f_3 = { func_10(1) };
+	iLocal_55[1].f_3 = Vector3(func_10(1));
 	iLocal_55[1].f_9 = 104f;
-	iLocal_55[2].f_3 = { func_10(2) };
+	iLocal_55[2].f_3 = Vector3(func_10(2));
 	iLocal_55[2].f_9 = 321.5f;
-	iLocal_55[3].f_3 = { func_10(3) };
+	iLocal_55[3].f_3 = Vector3(func_10(3));
 	iLocal_55[3].f_9 = -29.79f;
-	iLocal_55[4].f_3 = { func_10(4) };
+	iLocal_55[4].f_3 = Vector3(func_10(4));
 	iLocal_55[4].f_9 = -165.6f;
-	iLocal_55[5].f_3 = { func_10(5) };
+	iLocal_55[5].f_3 = Vector3(func_10(5));
 	iLocal_55[5].f_9 = 116f;
-	iLocal_55[6].f_3 = { func_10(6) };
+	iLocal_55[6].f_3 = Vector3(func_10(6));
 	iLocal_55[6].f_9 = -68.65f;
-	iLocal_55[7].f_3 = { func_10(7) };
+	iLocal_55[7].f_3 = Vector3(func_10(7));
 	iLocal_55[7].f_9 = 40f;
-	iLocal_55[8].f_3 = { func_10(8) };
+	iLocal_55[8].f_3 = Vector3(func_10(8));
 	iLocal_55[8].f_9 = 40f;
-	iLocal_55[9].f_3 = { func_10(9) };
+	iLocal_55[9].f_3 = Vector3(func_10(9));
 	iLocal_55[9].f_9 = 40f;
-	iLocal_55[10].f_3 = { func_10(10) };
+	iLocal_55[10].f_3 = Vector3(func_10(10));
 	iLocal_55[10].f_9 = 40f;
-	iLocal_55[11].f_3 = { func_10(11) };
+	iLocal_55[11].f_3 = Vector3(func_10(11));
 	iLocal_55[11].f_9 = 27.04f;
-	iLocal_55[12].f_3 = { func_10(12) };
+	iLocal_55[12].f_3 = Vector3(func_10(12));
 	iLocal_55[12].f_9 = 40f;
-	iLocal_55[13].f_3 = { func_10(13) };
+	iLocal_55[13].f_3 = Vector3(func_10(13));
 	iLocal_55[13].f_9 = 40f;
-	iLocal_55[14].f_3 = { func_10(14) };
+	iLocal_55[14].f_3 = Vector3(func_10(14));
 	iLocal_55[14].f_9 = 40f;
-	iLocal_55[15].f_3 = { func_10(15) };
+	iLocal_55[15].f_3 = Vector3(func_10(15));
 	iLocal_55[15].f_9 = 40f;
-	iLocal_55[16].f_3 = { func_10(16) };
-	iLocal_55[16].f_6 = { 89.94f, 61.93f, 90.94f };
-	iLocal_55[17].f_3 = { func_10(17) };
+	iLocal_55[16].f_3 = Vector3(func_10(16));
+	iLocal_55[16].f_6 = Vector3(89.94f, 61.93f, 90.94f);
+	iLocal_55[17].f_3 = Vector3(func_10(17));
 	iLocal_55[17].f_9 = 40f;
-	iLocal_55[18].f_3 = { func_10(18) };
+	iLocal_55[18].f_3 = Vector3(func_10(18));
 	iLocal_55[18].f_9 = 40f;
-	iLocal_55[19].f_3 = { func_10(19) };
+	iLocal_55[19].f_3 = Vector3(func_10(19));
 	iLocal_55[19].f_9 = 40f;
-	iLocal_55[20].f_3 = { func_10(20) };
+	iLocal_55[20].f_3 = Vector3(func_10(20));
 	iLocal_55[20].f_9 = 40f;
-	iLocal_55[21].f_3 = { func_10(21) };
+	iLocal_55[21].f_3 = Vector3(func_10(21));
 	iLocal_55[21].f_9 = 40f;
-	iLocal_55[22].f_3 = { func_10(22) };
+	iLocal_55[22].f_3 = Vector3(func_10(22));
 	iLocal_55[22].f_9 = 40f;
-	iLocal_55[23].f_3 = { func_10(23) };
+	iLocal_55[23].f_3 = Vector3(func_10(23));
 	iLocal_55[23].f_9 = 40f;
-	iLocal_55[24].f_3 = { func_10(24) };
+	iLocal_55[24].f_3 = Vector3(func_10(24));
 	iLocal_55[24].f_9 = 40f;
-	iLocal_55[25].f_3 = { func_10(25) };
+	iLocal_55[25].f_3 = Vector3(func_10(25));
 	iLocal_55[25].f_9 = 198f;
-	iLocal_55[26].f_3 = { func_10(26) };
+	iLocal_55[26].f_3 = Vector3(func_10(26));
 	iLocal_55[26].f_9 = 198f;
-	iLocal_55[27].f_3 = { func_10(27) };
+	iLocal_55[27].f_3 = Vector3(func_10(27));
 	iLocal_55[27].f_9 = 198f;
-	iLocal_55[28].f_3 = { func_10(28) };
+	iLocal_55[28].f_3 = Vector3(func_10(28));
 	iLocal_55[28].f_9 = 198f;
-	iLocal_55[29].f_3 = { func_10(29) };
+	iLocal_55[29].f_3 = Vector3(func_10(29));
 	iLocal_55[29].f_9 = -109.43f;
 	func_122(&iLocal_55);
 

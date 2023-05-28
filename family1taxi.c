@@ -339,8 +339,8 @@ void func_12(int iParam0) // Position - 0x64A
 
 void func_13(int iParam0, int iParam1) // Position - 0x6E4
 {
-	Global_113648.f_20412[iParam0] = { Global_113648.f_20412[iParam1] };
-	Global_113648.f_20412[iParam0].f_4 = { Global_113648.f_20412[iParam1].f_4 };
+	Global_113648.f_20412[iParam0] = Vector3(Global_113648.f_20412[iParam1]);
+	Global_113648.f_20412[iParam0].f_4 = Vector3(Global_113648.f_20412[iParam1].f_4);
 	Global_113648.f_20412[iParam0].f_8 = Global_113648.f_20412[iParam1].f_8;
 	Global_113648.f_20412[iParam0].f_10 = Global_113648.f_20412[iParam1].f_10;
 	Global_113648.f_20412[iParam0].f_9 = Global_113648.f_20412[iParam1].f_9;

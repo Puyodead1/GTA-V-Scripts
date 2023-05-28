@@ -659,7 +659,7 @@ void func_14(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	
 		num5 = Global_47790[iParam1].f_32[num4];
 		num3 = num5;
-		unk = { func_25(Global_44465[num5].f_1) };
+		unk = Vector3(func_25(Global_44465[num5].f_1));
 	
 		if (Global_44465[num5].f_2 == iParam0 && !(Global_44465[num5].f_3 == iParam0))
 			return;
@@ -772,9 +772,9 @@ void func_14(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 		num2 = Global_44465[num8].f_2;
 	
 		if (Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_1)
-			TEXT_LABEL_COPY(&unk, { Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2 }, 16);
+			TEXT_LABEL_COPY(&unk, Vector3(Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2), 16);
 		else
-			unk = { func_25(Global_44465[num8].f_1) };
+			unk = Vector3(func_25(Global_44465[num8].f_1));
 	}
 
 	if (!bParam4)
@@ -1848,24 +1848,24 @@ void func_46() // Position - 0x1F1E
 		iLocal_43 = 16000;
 	}
 
-	uLocal_49[0].f_3 = { 501.9415f, 5604.429f, 796.9146f };
-	uLocal_49[1].f_3 = { 2658.18f, -1361.14f, -21.63f };
+	uLocal_49[0].f_3 = Vector3(501.9415f, 5604.429f, 796.9146f);
+	uLocal_49[1].f_3 = Vector3(2658.18f, -1361.14f, -21.63f);
 	uLocal_160[1] = "TRACT_HINT2" /*Where the first of the fleet succumbed to the waves, there the message is seeded.*/;
-	uLocal_49[2].f_3 = { 24.7139f, 7644.334f, 18.0792f };
+	uLocal_49[2].f_3 = Vector3(24.7139f, 7644.334f, 18.0792f);
 	uLocal_160[2] = "TRACT_HINT3" /*When they sail from the North, they will find this offering.*/;
-	uLocal_49[3].f_3 = { -263.55f, 4729.6f, 137.37f };
+	uLocal_49[3].f_3 = Vector3(-263.55f, 4729.6f, 137.37f);
 	uLocal_160[3] = "TRACT_HINT4" /*In the core of the mountain, where the blast is not felt, there you shall find it.*/;
-	uLocal_49[4].f_3 = { -771.98f, -685.22f, 28.86f };
+	uLocal_49[4].f_3 = Vector3(-771.98f, -685.22f, 28.86f);
 	uLocal_160[4] = "TRACT_HINT5" /*In the rubble of the old religion, will be the basis for the new.*/;
-	uLocal_49[5].f_3 = { -1605.03f, 5256.55f, 1.08f };
+	uLocal_49[5].f_3 = Vector3(-1605.03f, 5256.55f, 1.08f);
 	uLocal_160[5] = "TRACT_HINT6" /*Where the first fleet sailed, the new fleet will find its map.*/;
-	uLocal_49[6].f_3 = { -1804.5464f, 403.9298f, 112.1966f };
+	uLocal_49[6].f_3 = Vector3(-1804.5464f, 403.9298f, 112.1966f);
 	uLocal_160[6] = "TRACT_HINT7" /*What dwelling is worthy of Kraff? He is humble, yet we exalt him.*/;
-	uLocal_49[7].f_3 = { 484.2701f, 5617.175f, 787.4708f };
+	uLocal_49[7].f_3 = Vector3(484.2701f, 5617.175f, 787.4708f);
 	uLocal_160[7] = "TRACT_HINT8" /*We are not dinosaurs, nor plants, but a tree in the jet stream may hold Kraff's true word.*/;
-	uLocal_49[8].f_3 = { -75.1004f, -819.0673f, 325.3656f };
+	uLocal_49[8].f_3 = Vector3(-75.1004f, -819.0673f, 325.3656f);
 	uLocal_160[8] = "TRACT_HINT9" /*The tallest obelisk of glass and steel holds no comparison to the word of Kraff.*/;
-	uLocal_49[9].f_3 = { -1725.34f, -189.95f, 57.52f };
+	uLocal_49[9].f_3 = Vector3(-1725.34f, -189.95f, 57.52f);
 	uLocal_160[9] = "TRACT_HINT10" /*Where they discard their earthly prisons, there you may find the germ of a higher civilization.*/;
 	iLocal_42 = MISC::GET_GAME_TIMER();
 

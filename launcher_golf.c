@@ -181,7 +181,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_45 = { 500f, 500f, 500f };
+	uLocal_45 = Vector3(500f, 500f, 500f);
 	iLocal_96 = -1;
 	essLocal_97 = FRIEND;
 	iLocal_98 = -1;
@@ -193,10 +193,10 @@ void main() // Position - 0x0
 	fLocal_117 = 4f;
 	iLocal_118 = 6;
 	iLocal_119 = 18;
-	uLocal_90 = { uScriptParam_125.f_1[0] };
-	uLocal_90 = { uLocal_90 };
+	uLocal_90 = Vector3(uScriptParam_125.f_1[0]);
+	uLocal_90 = Vector3(uLocal_90);
 	veLocal_86 = veLocal_86;
-	uLocal_69 = { uLocal_69 };
+	uLocal_69 = Vector3(uLocal_69);
 	flag = false;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(82))
@@ -255,11 +255,11 @@ void main() // Position - 0x0
 	
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_85) && !ENTITY::IS_ENTITY_DEAD(pedLocal_85, false))
 		{
-			uLocal_87 = { ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) };
+			uLocal_87 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true));
 			fLocal_93 = SYSTEM::VDIST2(uLocal_87, uScriptParam_125.f_1[0]);
 			fLocal_93 = fLocal_93;
-			uLocal_111 = { uLocal_87 };
-			uLocal_114 = { uScriptParam_125.f_1[0] };
+			uLocal_111 = Vector3(uLocal_87);
+			uLocal_114 = Vector3(uScriptParam_125.f_1[0]);
 			uLocal_111.f_2 = 0f;
 			uLocal_114.f_2 = 0f;
 			fLocal_110 = SYSTEM::VDIST2(uLocal_111, uLocal_114);
@@ -317,7 +317,7 @@ void main() // Position - 0x0
 						
 							if (MISC::ARE_STRINGS_EQUAL(&(Global_100681.f_3), &uLocal_69))
 							{
-								uLocal_69 = { uLocal_53 };
+								uLocal_69 = Vector3(uLocal_53);
 								flag2 = false;
 							}
 						
@@ -353,7 +353,7 @@ void main() // Position - 0x0
 					}
 					else
 					{
-						uLocal_69 = { uLocal_53 };
+						uLocal_69 = Vector3(uLocal_53);
 						flag3 = !func_90(iLocal_94, 64);
 						func_94(&iLocal_94, 128);
 					
@@ -607,7 +607,7 @@ void main() // Position - 0x0
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, SPC_REMOVE_FIRES | 16 | 32);
 							iLocal_52 = SYSTEM::START_NEW_SCRIPT(&uLocal_69, essLocal_97);
 							SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_69);
-							uLocal_53 = { uLocal_69 };
+							uLocal_53 = Vector3(uLocal_69);
 							TEXT_LABEL_ASSIGN_STRING(&uLocal_69, "", 64);
 							func_94(&iLocal_94, 4);
 							func_25();

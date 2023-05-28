@@ -727,10 +727,10 @@ void func_16(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -753,7 +753,7 @@ int func_17(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -964,13 +964,13 @@ void func_27() // Position - 0xE2E
 			if (iLocal_85.f_22 < 4)
 			{
 				if (!IS_BIT_SET(iLocal_85.f_1, 0))
-					TASK::TASK_PLANE_MISSION(NETWORK::NET_TO_PED(iLocal_85.f_3), NETWORK::NET_TO_VEH(iLocal_85.f_2), 0, 0, iLocal_85.f_9[iLocal_85.f_22] + { 120f, 0f, 0f }, 4, 20f, 50f, -1f, 90, 60, true);
+					TASK::TASK_PLANE_MISSION(NETWORK::NET_TO_PED(iLocal_85.f_3), NETWORK::NET_TO_VEH(iLocal_85.f_2), 0, 0, iLocal_85.f_9[iLocal_85.f_22] + Vector3(120f, 0f, 0f), 4, 20f, 50f, -1f, 90, 60, true);
 				else
-					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(iLocal_85.f_3), NETWORK::NET_TO_VEH(iLocal_85.f_2), 0, 0, iLocal_85.f_9[iLocal_85.f_22] + { 120f, 0f, 0f }, 4, 20f, 50f, -1f, 90, 60, -1082130432, 0);
+					TASK::TASK_HELI_MISSION(NETWORK::NET_TO_PED(iLocal_85.f_3), NETWORK::NET_TO_VEH(iLocal_85.f_2), 0, 0, iLocal_85.f_9[iLocal_85.f_22] + Vector3(120f, 0f, 0f), 4, 20f, 50f, -1f, 90, 60, -1082130432, 0);
 			}
 			else if (!IS_BIT_SET(iLocal_85.f_1, 2) && !IS_BIT_SET(uLocal_113[NETWORK::PARTICIPANT_ID_TO_INT()].f_1, 1))
 			{
-				offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(NETWORK::NET_TO_VEH(iLocal_85.f_2), 0f, 12000f, 0f) };
+				offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(NETWORK::NET_TO_VEH(iLocal_85.f_2), 0f, 12000f, 0f));
 			
 				if (offsetFromEntityInWorldCoords < -3700f)
 					offsetFromEntityInWorldCoords = -3700f;
@@ -1094,7 +1094,7 @@ void func_36(int iParam0, char* sParam1) // Position - 0x1165
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, sParam1, 16);
-	Global_1649046.f_59[iParam0].f_3 = { unk };
+	Global_1649046.f_59[iParam0].f_3 = Vector3(unk);
 	return;
 }
 
@@ -1856,7 +1856,7 @@ void func_57(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -2066,7 +2066,7 @@ void func_69(int iParam0) // Position - 0x24EB
 
 	for (i = 4; i >= iParam0 + 1; i = i + -1)
 	{
-		Global_1944061.f_5[i] = { Global_1944061.f_5[i - 1] };
+		Global_1944061.f_5[i] = Vector3(Global_1944061.f_5[i - 1]);
 	}
 
 	return;
@@ -3226,7 +3226,7 @@ void func_133(Ped pedParam0, int iParam1, char* sParam2, int iParam3) // Positio
 {
 	var unk;
 
-	unk = { func_136(pedParam0, true) };
+	unk = Vector3(func_136(pedParam0, true));
 
 	if (pedParam0 == func_135(PLAYER::PLAYER_PED_ID()))
 		func_134(1);
@@ -3256,12 +3256,12 @@ Vector3 func_136(Ped pedParam0, BOOL bParam1) // Position - 0x3B25
 	float unk4;
 
 	if (CAM::IS_GAMEPLAY_CAM_RENDERING())
-		gameplayCamRot = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
+		gameplayCamRot = Vector3(CAM::GET_GAMEPLAY_CAM_ROT(2));
 
 	if (pedParam0 == func_137(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == FIRST_PERSON)
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam0, 0f, 8f, -0.2f) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam0, 0f, 8f, -0.2f));
 	else
-		offsetFromEntityInWorldCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	entityHeading = 0f;
 
@@ -3280,7 +3280,7 @@ Vector3 func_136(Ped pedParam0, BOOL bParam1) // Position - 0x3B25
 	else
 		zOffset = minimum.f_2 + 0.18f;
 
-	offsetFromEntityInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromEntityInWorldCoords, entityHeading, 0f, 0f, zOffset) };
+	offsetFromEntityInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromEntityInWorldCoords, entityHeading, 0f, 0f, zOffset));
 	return offsetFromEntityInWorldCoords;
 }
 
@@ -3309,7 +3309,7 @@ void func_138(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, c
 	
 		if (num != -1)
 		{
-			Global_2672505.f_1081[num] = { uParam0 };
+			Global_2672505.f_1081[num] = Vector3(uParam0);
 			Global_2672505.f_1081[num].f_6 = 1;
 			Global_2672505.f_1081[num].f_4 = func_141(Global_2672505.f_1081[num], &Global_1574479, &Global_1574480);
 			Global_2672505.f_1081[num].f_7 = NETWORK::GET_NETWORK_TIME();
@@ -3526,7 +3526,7 @@ void func_148(int iParam0) // Position - 0x402E
 	var gamerHandle;
 	int unk;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
@@ -4573,8 +4573,8 @@ BOOL func_168(Player plParam0, Player plParam1) // Position - 0x55B0
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{
@@ -5298,11 +5298,11 @@ void func_213() // Position - 0x62B7
 	for (i = 0; i < 4; i = i + 1)
 	{
 		randomIntInRange = MISC::GET_RANDOM_INT_IN_RANGE(0, 3);
-		iLocal_85.f_9[i] = { func_215(randomIntInRange) };
+		iLocal_85.f_9[i] = Vector3(func_215(randomIntInRange));
 	
 		if (i > 0)
 			if (func_214(iLocal_85.f_9[i], iLocal_85.f_9[i - 1], 250f, false))
-				iLocal_85.f_9[i] = { func_215(randomIntInRange + 1) };
+				iLocal_85.f_9[i] = Vector3(func_215(randomIntInRange + 1));
 	}
 
 	return;
@@ -5502,8 +5502,8 @@ Vector3 func_218() // Position - 0x66AB
 
 void func_219() // Position - 0x6802
 {
-	iLocal_85.f_6 = { func_215(MISC::GET_RANDOM_INT_IN_RANGE(0, 3)) };
-	iLocal_85.f_6 = { iLocal_85.f_6 + { 120f, 0f, 0f } };
+	iLocal_85.f_6 = Vector3(func_215(MISC::GET_RANDOM_INT_IN_RANGE(0, 3)));
+	iLocal_85.f_6 = { iLocal_85.f_6 + Vector3(120f, 0f, 0f) };
 	return;
 }
 

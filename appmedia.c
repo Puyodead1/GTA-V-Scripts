@@ -607,7 +607,7 @@ void func_13() // Position - 0x770
 	if (bLocal_210 == false)
 	{
 		MOBILE::GET_MOBILE_PHONE_ROTATION(&fLocal_207, 0);
-		fLocal_204 = { Global_20343 };
+		fLocal_204 = Vector3(Global_20343);
 		bLocal_211 = true;
 		bLocal_215 = true;
 		bLocal_216 = true;
@@ -802,7 +802,7 @@ void func_23() // Position - 0xB25
 	if (bLocal_211 == false)
 	{
 		MOBILE::GET_MOBILE_PHONE_ROTATION(&fLocal_207, 0);
-		fLocal_204 = { -90.3f, -0.8f, 90f };
+		fLocal_204 = Vector3(-90.3f, -0.8f, 90f);
 		bLocal_210 = true;
 		bLocal_212 = true;
 		bLocal_213 = true;

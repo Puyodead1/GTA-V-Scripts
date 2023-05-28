@@ -430,25 +430,25 @@ void main() // Position - 0x0
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	iLocal_52 = 1;
-	uLocal_301 = { 0f, 0f, 0f };
-	uLocal_304 = { 0f, 0f, 0f };
+	uLocal_301 = Vector3(0f, 0f, 0f);
+	uLocal_304 = Vector3(0f, 0f, 0f);
 	iLocal_309 = 1;
 	sLocal_335 = "safe@franklin@ig_13";
-	uLocal_339 = { -11.3259f, -1441.4713f, 30.5788f };
-	uLocal_342 = { -0.025f, 0.13f, 0f };
-	uLocal_345 = { -0.025f, 0.12f, 0f };
-	uLocal_348 = { 0f, 90f, 0f };
-	uLocal_351 = { -10.1f, -1440.7f, 31.1f };
-	uLocal_354 = { -4f, 0f, 121.2f };
+	uLocal_339 = Vector3(-11.3259f, -1441.4713f, 30.5788f);
+	uLocal_342 = Vector3(-0.025f, 0.13f, 0f);
+	uLocal_345 = Vector3(-0.025f, 0.12f, 0f);
+	uLocal_348 = Vector3(0f, 90f, 0f);
+	uLocal_351 = Vector3(-10.1f, -1440.7f, 31.1f);
+	uLocal_354 = Vector3(-4f, 0f, 121.2f);
 	fLocal_357 = 31f;
-	uLocal_358 = { -12.1f, -1440.7f, 31.3f };
-	uLocal_361 = { -5.3f, 0f, -117.8f };
+	uLocal_358 = Vector3(-12.1f, -1440.7f, 31.3f);
+	uLocal_361 = Vector3(-5.3f, 0f, -117.8f);
 	fLocal_364 = 40f;
-	uLocal_365 = { -10.1f, -1438.5f, 31.5f };
-	uLocal_368 = { 0.3f, 0f, 159f };
+	uLocal_365 = Vector3(-10.1f, -1438.5f, 31.5f);
+	uLocal_368 = Vector3(0.3f, 0f, 159f);
 	fLocal_371 = 50f;
-	uLocal_372 = { -9.4f, -1439.6f, 30.9f };
-	uLocal_375 = { 2.3f, 0f, 142.8f };
+	uLocal_372 = Vector3(-9.4f, -1439.6f, 30.9f);
+	uLocal_375 = Vector3(2.3f, 0f, 142.8f);
 	fLocal_378 = 25.9f;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
@@ -466,8 +466,8 @@ void main() // Position - 0x0
 	if (PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
 		func_112();
 
-	uLocal_336 = { uScriptParam_379.f_1[0] };
-	uLocal_336 = { -11.3888f, -1441.3252f, 30.1f };
+	uLocal_336 = Vector3(uScriptParam_379.f_1[0]);
+	uLocal_336 = Vector3(-11.3888f, -1441.3252f, 30.1f);
 	iLocal_55 = joaat("p_cs_joint_01");
 
 	while (true)
@@ -769,16 +769,16 @@ int func_5(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x736
 		if (func_18(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_17();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -915,7 +915,7 @@ void func_6() // Position - 0xA04
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -979,18 +979,18 @@ void func_12() // Position - 0xB01
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1085,7 +1085,7 @@ void func_17() // Position - 0xD06
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -1127,7 +1127,7 @@ void func_19() // Position - 0xD96
 
 void func_20(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xDED
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1193,7 +1193,7 @@ void func_22() // Position - 0xEDE
 	float num;
 	float num2;
 
-	unk = { 1.5f, 1.5f, 1.5f };
+	unk = Vector3(1.5f, 1.5f, 1.5f);
 	synchronizedScenePhase = 0f;
 
 	switch (iLocal_308)
@@ -2664,50 +2664,50 @@ Vector3 func_54() // Position - 0x2FBC
 	{
 		case joaat("prop_bong_01"):
 			if (bLocal_49)
-				unk = { 9.95f, 528.9f, 173.6282f };
+				unk = Vector3(9.95f, 528.9f, 173.6282f);
 			else
-				unk = { -807.5781f, 171.357f, 75.7407f };
+				unk = Vector3(-807.5781f, 171.357f, 75.7407f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { -805.881f, 173.8548f, 71.8347f };
+			unk = Vector3(-805.881f, 173.8548f, 71.8347f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { -9.66f, -1429.48f, 31.21f };
+			unk = Vector3(-9.66f, -1429.48f, 31.21f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { -10.6378f, -1441.3145f, 30.1015f };
+			unk = Vector3(-10.6378f, -1441.3145f, 30.1015f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { -1154.343f, -1522.5997f, 9.6327f };
+				unk = Vector3(-1154.343f, -1522.5997f, 9.6327f);
 			else
-				unk = { -800.4056f, 183.4856f, 71.6055f };
+				unk = Vector3(-800.4056f, 183.4856f, 71.6055f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 1972.1417f, 3813.243f, 32.4271f };
+			unk = Vector3(1972.1417f, 3813.243f, 32.4271f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { -1145.91f, -1514.9445f, 9.6327f };
+			unk = Vector3(-1145.91f, -1514.9445f, 9.6327f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 1976.94f, 3821.2417f, 33.3266f };
+			unk = Vector3(1976.94f, 3821.2417f, 33.3266f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { -804.2254f, 184.3325f, 72.6042f };
+			unk = Vector3(-804.2254f, 184.3325f, 72.6042f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { -8.8011f, 515.7225f, 173.6282f };
+			unk = Vector3(-8.8011f, 515.7225f, 173.6282f);
 			break;
 	}
 
@@ -3105,8 +3105,8 @@ void func_70(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 
 	if (CAM::DOES_CAM_EXIST(caParam0))
 	{
-		camRot = { CAM::GET_CAM_ROT(caParam0, 2) };
-		num = { uParam1 };
+		camRot = Vector3(CAM::GET_CAM_ROT(caParam0, 2));
+		num = Vector3(uParam1);
 	
 		if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 		{
@@ -3139,7 +3139,7 @@ void func_70(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num4 = num.f_2 - camRot.f_2;
 			num5 = func_71(num4, -180f, 180f);
-			vector = { camRot + ((num - camRot) * { 0.25f, 0.25f, 0.25f }) };
+			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
 			vector.f_2 = camRot.f_2 + (num5 * 0.25f);
 		}
 		else
@@ -3194,7 +3194,7 @@ void func_70(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num8 = num.f_2 - camRot.f_2;
 			num9 = func_71(num8, -180f, 180f);
-			vector = { camRot + ((num - camRot) * { 0.25f, 0.25f, 0.25f }) };
+			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
 			vector.f_2 = camRot.f_2 + (num9 * 0.25f);
 		}
 	
@@ -3231,56 +3231,56 @@ Vector3 func_72() // Position - 0x3A8B
 {
 	var unk;
 
-	unk = { 0f, 0f, 0f };
+	unk = Vector3(0f, 0f, 0f);
 
 	switch (iLocal_55)
 	{
 		case joaat("prop_bong_01"):
 			if (!bLocal_49)
-				unk = { 0f, 0f, -68.75494f };
+				unk = Vector3(0f, 0f, -68.75494f);
 			else
-				unk = { 0f, 0f, -179.90875f };
+				unk = Vector3(0f, 0f, -179.90875f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { 0f, 0f, 21.1994f };
+			unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { 0f, 0f, -128.34f };
+			unk = Vector3(0f, 0f, -128.34f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { 0f, 0f, 0.5729f };
+			unk = Vector3(0f, 0f, 0.5729f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 0f, 0f, 2.8647f };
+			unk = Vector3(0f, 0f, 2.8647f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { 0f, 0f, 34.9504f };
+				unk = Vector3(0f, 0f, 34.9504f);
 			else
-				unk = { 0f, 0f, 21.1994f };
+				unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { 0f, 0f, 72.76564f };
+			unk = Vector3(0f, 0f, 72.76564f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 0f, 0f, -9.1673f };
+			unk = Vector3(0f, 0f, -9.1673f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { 0f, 0f, 21.1994f };
+			unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { 0f, 0f, -29.793f };
+			unk = Vector3(0f, 0f, -29.793f);
 			break;
 	}
 
@@ -3291,56 +3291,56 @@ Vector3 func_73() // Position - 0x3BA0
 {
 	var unk;
 
-	unk = { 0f, 0f, 0f };
+	unk = Vector3(0f, 0f, 0f);
 
 	switch (iLocal_55)
 	{
 		case joaat("prop_bong_01"):
 			if (!bLocal_49)
-				unk = { -806.82f, 170.03f, 75.74f };
+				unk = Vector3(-806.82f, 170.03f, 75.74f);
 			else
-				unk = { 10.22f, 527.73f, 174.11f };
+				unk = Vector3(10.22f, 527.73f, 174.11f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { -805.17f, 173.99f, 72.69f };
+			unk = Vector3(-805.17f, 173.99f, 72.69f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { -9.66f, -1429.48f, 31.21f };
+			unk = Vector3(-9.66f, -1429.48f, 31.21f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { -10.07f, -1440.64f, 30.36f };
+			unk = Vector3(-10.07f, -1440.64f, 30.36f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 1972.852f, 3812.42f, 33.28f };
+			unk = Vector3(1972.852f, 3812.42f, 33.28f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { -1153.829f, -1523.314f, 10.56f };
+				unk = Vector3(-1153.829f, -1523.314f, 10.56f);
 			else
-				unk = { -800.68f, 184.18f, 72.55f };
+				unk = Vector3(-800.68f, 184.18f, 72.55f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { -1146.284f, -1514.1305f, 10.8468f };
+			unk = Vector3(-1146.284f, -1514.1305f, 10.8468f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 1976.75f, 3822.76f, 33.28f };
+			unk = Vector3(1976.75f, 3822.76f, 33.28f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { -804.87f, 185.69f, 72.75f };
+			unk = Vector3(-804.87f, 185.69f, 72.75f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { -9.1f, 516.83f, 173.62f };
+			unk = Vector3(-9.1f, 516.83f, 173.62f);
 			break;
 	}
 

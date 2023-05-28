@@ -306,7 +306,7 @@ void func_11(var uParam0) // Position - 0x219
 	func_56(uParam0);
 	func_54(uParam0);
 	num.f_1.f_6 = 1061158912;
-	num = { uParam0->[uParam0->f_29.f_2] };
+	num = Vector3(uParam0->[uParam0->f_29.f_2]);
 
 	switch (uParam0->f_29.f_4)
 	{
@@ -364,8 +364,8 @@ void func_11(var uParam0) // Position - 0x219
 		
 			if (num != 3)
 			{
-				animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2) };
-				animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2) };
+				animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2));
+				animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2));
 				targetHeading = animInitialOffsetRotation.f_2;
 				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), animInitialOffsetPosition, 1f, 500, targetHeading, 0.15f);
 			}
@@ -578,7 +578,7 @@ void func_18(var uParam0) // Position - 0x817
 
 	if (uParam0->f_29.f_4 == 6)
 	{
-		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
+		vector = Vector3(PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f);
 		num = SYSTEM::VMAG(vector);
 	
 		if (uParam0->f_29.f_4 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("block_interrupt")) && !func_8(&(uParam0->f_29), 12))
@@ -844,14 +844,14 @@ void func_34(BOOL bParam0, BOOL bParam1) // Position - 0xE02
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -896,7 +896,7 @@ Vector3 func_38(var uParam0) // Position - 0xEEA
 {
 	var unk;
 
-	unk = { uParam0->[uParam0->f_29.f_2].f_8.f_3 };
+	unk = Vector3(uParam0->[uParam0->f_29.f_2].f_8.f_3);
 
 	if (func_16() && uParam0->f_29.f_8 == 0)
 		unk.f_2 = unk.f_2 - 4f;
@@ -1482,10 +1482,10 @@ void func_74(int iParam0, var uParam1, int iParam2) // Position - 0x18A2
 
 	func_80(iParam0, &unk, &num);
 	uParam1->[iParam2] = 8;
-	uParam1->[iParam2].f_8 = { func_77(func_78(), num) + unk };
-	uParam1->[iParam2].f_8.f_3 = { 0f, 0f, num + 0f };
-	uParam1->[iParam2].f_1 = { func_77(func_76(), num) + unk };
-	uParam1->[iParam2].f_1.f_3 = { func_77(func_75(), num) + unk };
+	uParam1->[iParam2].f_8 = Vector3(func_77(func_78(), num) + unk);
+	uParam1->[iParam2].f_8.f_3 = Vector3(0f, 0f, num + 0f);
+	uParam1->[iParam2].f_1 = Vector3(func_77(func_76(), num) + unk);
+	uParam1->[iParam2].f_1.f_3 = Vector3(func_77(func_75(), num) + unk);
 	uParam1->[iParam2].f_1.f_6 = 0.73f;
 	return;
 }
@@ -1516,7 +1516,7 @@ Vector3 func_77(float fParam0, var uParam1, var uParam2, float fParam3) // Posit
 
 Vector3 func_78() // Position - 0x1998
 {
-	return func_77({ -60f, 4841.945f, 362.58f } - func_79(), 180f - -66.83f);
+	return func_77(Vector3(-60f, 4841.945f, 362.58f) - func_79(), 180f - -66.83f);
 }
 
 Vector3 func_79() // Position - 0x19C3
@@ -1529,22 +1529,22 @@ void func_80(int iParam0, var uParam1, var uParam2) // Position - 0x19DA
 	switch (iParam0)
 	{
 		case 0:
-			*uParam1 = { 361.89f, 4842.36f, -59.25f };
+			*uParam1 = Vector3(361.89f, 4842.36f, -59.25f);
 			*uParam2 = 180f + -66.83f;
 			break;
 	
 		case 1:
-			*uParam1 = { 366.28f, 4839.91f, -59.25f };
+			*uParam1 = Vector3(366.28f, 4839.91f, -59.25f);
 			*uParam2 = 180f + 28.31f;
 			break;
 	
 		case 2:
-			*uParam1 = { 367.33f, 4827.37f, -59.25f };
+			*uParam1 = Vector3(367.33f, 4827.37f, -59.25f);
 			*uParam2 = 180f - 163.69f;
 			break;
 	
 		case 3:
-			*uParam1 = { 370.58f, 4827.01f, -59.25f };
+			*uParam1 = Vector3(370.58f, 4827.01f, -59.25f);
 			*uParam2 = 180f + 163.74f;
 			break;
 	}
@@ -1566,10 +1566,10 @@ void func_82(int iParam0, var uParam1, int iParam2) // Position - 0x1AA9
 
 	func_87(iParam0, &unk, &num);
 	uParam1->[iParam2] = 5;
-	uParam1->[iParam2].f_8 = { func_77(func_85(), num) + unk };
-	uParam1->[iParam2].f_8.f_3 = { 0f, 0f, num + 3f };
-	uParam1->[iParam2].f_1 = { func_77(func_84(), num) + unk };
-	uParam1->[iParam2].f_1.f_3 = { func_77(func_83(), num) + unk };
+	uParam1->[iParam2].f_8 = Vector3(func_77(func_85(), num) + unk);
+	uParam1->[iParam2].f_8.f_3 = Vector3(0f, 0f, num + 3f);
+	uParam1->[iParam2].f_1 = Vector3(func_77(func_84(), num) + unk);
+	uParam1->[iParam2].f_1.f_3 = Vector3(func_77(func_83(), num) + unk);
 	uParam1->[iParam2].f_1.f_6 = 0.73f;
 	return;
 }
@@ -1586,7 +1586,7 @@ Vector3 func_84() // Position - 0x1B3F
 
 Vector3 func_85() // Position - 0x1B4A
 {
-	return func_77({ -60f, 4845.8f, 364.74f } - func_86(), -4f);
+	return func_77(Vector3(-60f, 4845.8f, 364.74f) - func_86(), -4f);
 }
 
 Vector3 func_86() // Position - 0x1B6F
@@ -1599,22 +1599,22 @@ void func_87(int iParam0, var uParam1, var uParam2) // Position - 0x1B86
 	switch (iParam0)
 	{
 		case 0:
-			*uParam1 = { 364.74f, 4846.2f, -60f };
+			*uParam1 = Vector3(364.74f, 4846.2f, -60f);
 			*uParam2 = 4f;
 			break;
 	
 		case 1:
-			*uParam1 = { 367.39f, 4845.325f, -60f };
+			*uParam1 = Vector3(367.39f, 4845.325f, -60f);
 			*uParam2 = -46f;
 			break;
 	
 		case 2:
-			*uParam1 = { 369.965f, 4827.239f, -60f };
+			*uParam1 = Vector3(369.965f, 4827.239f, -60f);
 			*uParam2 = -16f;
 			break;
 	
 		case 3:
-			*uParam1 = { 366.7f, 4827.23f, -60f };
+			*uParam1 = Vector3(366.7f, 4827.23f, -60f);
 			*uParam2 = 15f;
 			break;
 	}

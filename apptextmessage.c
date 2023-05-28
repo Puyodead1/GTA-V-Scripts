@@ -3634,12 +3634,12 @@ void func_33() // Position - 0x1E08
 				Global_113648.f_14143[iLocal_58].f_28 = 1;
 				iLocal_60 = 0;
 				TEXT_LABEL_ASSIGN_STRING(&Global_22766, "NO_HYPERLINK", 64);
-				gxt = { Global_113648.f_14143[iLocal_58] };
+				gxt = Vector3(Global_113648.f_14143[iLocal_58]);
 				TEXT_LABEL_APPEND_STRING(&gxt, "_LINK", 64);
 			
 				if (HUD::DOES_TEXT_LABEL_EXIST(&gxt))
 				{
-					Global_22766 = { gxt };
+					Global_22766 = Vector3(gxt);
 					iLocal_60 = 1;
 				
 					if (Global_20371)
@@ -4088,9 +4088,9 @@ void func_37() // Position - 0x2AB5
 			if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_84[i]) && MISC::ARE_STRINGS_EQUAL(&Global_113648.f_14143[iLocal_58], &uLocal_84[i]))
 			{
 				if (i < 19)
-					TEXT_LABEL_COPY(&uLocal_68, { uLocal_2066[i] }, 16);
+					TEXT_LABEL_COPY(&uLocal_68, Vector3(uLocal_2066[i]), 16);
 				else
-					TEXT_LABEL_COPY(&uLocal_68, { uLocal_1075[i] }, 16);
+					TEXT_LABEL_COPY(&uLocal_68, Vector3(uLocal_1075[i]), 16);
 			
 				bLocal_2219 = true;
 				GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT(&uLocal_68, false);
@@ -5120,14 +5120,14 @@ void func_62(BOOL bParam0, BOOL bParam1) // Position - 0x4DED
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

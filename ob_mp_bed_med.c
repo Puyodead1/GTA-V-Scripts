@@ -401,8 +401,8 @@ void main() // Position - 0x0
 	fLocal_25 = -0.0375f;
 	fLocal_26 = 0.17f;
 	iLocal_37 = 1;
-	uLocal_286 = { 0f, 0f, 0f };
-	uLocal_289 = { 0f, 0f, 0f };
+	uLocal_286 = Vector3(0f, 0f, 0f);
+	uLocal_289 = Vector3(0f, 0f, 0f);
 	fLocal_294 = 80f;
 	fLocal_295 = 140f;
 	fLocal_296 = 180f;
@@ -418,12 +418,12 @@ void main() // Position - 0x0
 	sLocal_336 = "f_sleep_l_loop_bighouse";
 	sLocal_337 = "f_getout_l_bighouse";
 	fLocal_341 = 43.8287f;
-	uLocal_342 = { 349f, -997.3587f, -100.5f };
-	uLocal_345 = { 351.74f, -997.3587f, -97f };
-	uLocal_348 = { 349.66f, -996.183f, -99.764f };
-	uLocal_351 = { 0f, 0f, -3.96f };
-	uLocal_338 = { uScriptParam_358.f_1[0] };
-	uLocal_338 = { 349.9853f, -997.8344f, -99.1952f };
+	uLocal_342 = Vector3(349f, -997.3587f, -100.5f);
+	uLocal_345 = Vector3(351.74f, -997.3587f, -97f);
+	uLocal_348 = Vector3(349.66f, -996.183f, -99.764f);
+	uLocal_351 = Vector3(0f, 0f, -3.96f);
+	uLocal_338 = Vector3(uScriptParam_358.f_1[0]);
+	uLocal_338 = Vector3(349.9853f, -997.8344f, -99.1952f);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18) || func_84() || Global_2793046.f_1947)
 		func_83();
@@ -536,7 +536,7 @@ void func_2() // Position - 0x30E
 	var unk;
 	var unk2;
 
-	unk = { 1.5f, 1.5f, 1.5f };
+	unk = Vector3(1.5f, 1.5f, 1.5f);
 
 	switch (iLocal_327)
 	{
@@ -569,7 +569,7 @@ void func_2() // Position - 0x30E
 			break;
 	
 		case 1:
-			uLocal_354 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+			uLocal_354 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 		
 			if (func_44(true, false, true))
 			{
@@ -590,8 +590,8 @@ void func_2() // Position - 0x30E
 						bLocal_36 = true;
 						WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_UNARMED"), true);
 						func_17(true, true, true, false, false, false, false);
-						uLocal_338 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_334, sLocal_335, uLocal_348, uLocal_351, 0, 2) };
-						animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_334, sLocal_335, uLocal_348, uLocal_351, 0, 2) };
+						uLocal_338 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_334, sLocal_335, uLocal_348, uLocal_351, 0, 2));
+						animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_334, sLocal_335, uLocal_348, uLocal_351, 0, 2));
 						fLocal_341 = animInitialOffsetRotation.f_2;
 						TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), uLocal_338, 1f, 5000, fLocal_341, 0.05f);
 					
@@ -1344,10 +1344,10 @@ void func_29() // Position - 0x134B
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 

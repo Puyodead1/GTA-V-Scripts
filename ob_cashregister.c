@@ -76,7 +76,7 @@ void main() // Position - 0x0
 					case 0:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_23))
 						{
-							uLocal_19 = { ENTITY::GET_ENTITY_COORDS(obScriptParam_23, true) };
+							uLocal_19 = Vector3(ENTITY::GET_ENTITY_COORDS(obScriptParam_23, true));
 							iLocal_18 = 1;
 						}
 						break;
@@ -149,7 +149,7 @@ struct<5> func_2(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int iP
 	unk = 123;
 
 	if (func_12() && func_11(hParam0))
-		unk = { func_3(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7) };
+		unk = Vector3(func_3(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7));
 	else
 		unk.f_4 = OBJECT::CREATE_AMBIENT_PICKUP(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7, bParam8);
 
@@ -175,7 +175,7 @@ struct<5> func_3(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int iP
 
 	hash = 123;
 	hash = hParam0;
-	hash.f_1 = { vParam1 };
+	hash.f_1 = Vector3(vParam1);
 
 	if (func_4(&hash) != -1)
 		return unk;
@@ -200,8 +200,8 @@ struct<5> func_3(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int iP
 		}
 	}
 
-	Global_1914091[num2].f_98.f_21[num] = { hash };
-	Global_1914091[num2].f_98.f_21[num].f_5 = { vParam1 };
+	Global_1914091[num2].f_98.f_21[num] = Vector3(hash);
+	Global_1914091[num2].f_98.f_21[num].f_5 = Vector3(vParam1);
 	Global_1914091[num2].f_98.f_21[num].f_8 = iParam4;
 	Global_1914091[num2].f_98.f_21[num].f_9 = iParam5;
 	Global_1914091[num2].f_98.f_21[num].f_10 = hParam6;

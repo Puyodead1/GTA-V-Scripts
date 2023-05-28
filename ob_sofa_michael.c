@@ -432,26 +432,26 @@ void main() // Position - 0x0
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	iLocal_52 = 1;
-	uLocal_301 = { 0f, 0f, 0f };
-	uLocal_304 = { 0f, 0f, 0f };
+	uLocal_301 = Vector3(0f, 0f, 0f);
+	uLocal_304 = Vector3(0f, 0f, 0f);
 	iLocal_309 = 1;
 	iLocal_335 = -1;
 	sLocal_338 = "safe@michael@ig_3";
-	uLocal_339 = { -804.374f, 176.864f, 73.015f };
-	uLocal_342 = { -3.7f, 0f, 172.7f };
+	uLocal_339 = Vector3(-804.374f, 176.864f, 73.015f);
+	uLocal_342 = Vector3(-3.7f, 0f, 172.7f);
 	fLocal_345 = 34f;
-	uLocal_346 = { -806.6f, 173.4f, 72.9f };
-	uLocal_349 = { 6f, 0f, -86.8f };
+	uLocal_346 = Vector3(-806.6f, 173.4f, 72.9f);
+	uLocal_349 = Vector3(6f, 0f, -86.8f);
 	fLocal_352 = 40f;
-	uLocal_353 = { -802.4001f, 175.8452f, 73.3742f };
-	uLocal_356 = { -2.0225f, 0f, 137.6933f };
+	uLocal_353 = Vector3(-802.4001f, 175.8452f, 73.3742f);
+	uLocal_356 = Vector3(-2.0225f, 0f, 137.6933f);
 	fLocal_359 = 50f;
-	uLocal_360 = { 0.11f, 0f, 0f };
-	uLocal_363 = { -0.025f, 0.13f, 0f };
-	uLocal_366 = { -0.015f, 0.13f, 0f };
-	uLocal_369 = { 0f, 90f, 0f };
-	uLocal_375 = { -805.6204f, 172.3675f, 71.8347f };
-	uLocal_378 = { 0f, 0f, 0f };
+	uLocal_360 = Vector3(0.11f, 0f, 0f);
+	uLocal_363 = Vector3(-0.025f, 0.13f, 0f);
+	uLocal_366 = Vector3(-0.015f, 0.13f, 0f);
+	uLocal_369 = Vector3(0f, 90f, 0f);
+	uLocal_375 = Vector3(-805.6204f, 172.3675f, 71.8347f);
+	uLocal_378 = Vector3(0f, 0f, 0f);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 		func_87();
@@ -459,8 +459,8 @@ void main() // Position - 0x0
 	if (func_84(9) || func_83() && !func_82() || func_68(PLAYER::PLAYER_PED_ID()) || AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		func_87();
 
-	uLocal_372 = { uScriptParam_381.f_1[0] };
-	uLocal_372 = { -803.642f, 173.2916f, 71.8347f };
+	uLocal_372 = Vector3(uScriptParam_381.f_1[0]);
+	uLocal_372 = Vector3(-803.642f, 173.2916f, 71.8347f);
 	iLocal_55 = joaat("prop_cigar_03");
 
 	while (true)
@@ -510,7 +510,7 @@ void func_1() // Position - 0x2A6
 	float num;
 	float num2;
 
-	unk = { 1.5f, 1.5f, 1.5f };
+	unk = Vector3(1.5f, 1.5f, 1.5f);
 	synchronizedScenePhase = 0f;
 
 	if (CAM::GET_FOLLOW_PED_CAM_VIEW_MODE() != FIRST_PERSON)
@@ -1378,50 +1378,50 @@ Vector3 func_11() // Position - 0x1953
 	{
 		case joaat("prop_bong_01"):
 			if (bLocal_49)
-				unk = { 9.95f, 528.9f, 173.6282f };
+				unk = Vector3(9.95f, 528.9f, 173.6282f);
 			else
-				unk = { -807.5781f, 171.357f, 75.7407f };
+				unk = Vector3(-807.5781f, 171.357f, 75.7407f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { -805.881f, 173.8548f, 71.8347f };
+			unk = Vector3(-805.881f, 173.8548f, 71.8347f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { -9.66f, -1429.48f, 31.21f };
+			unk = Vector3(-9.66f, -1429.48f, 31.21f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { -10.6378f, -1441.3145f, 30.1015f };
+			unk = Vector3(-10.6378f, -1441.3145f, 30.1015f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { -1154.343f, -1522.5997f, 9.6327f };
+				unk = Vector3(-1154.343f, -1522.5997f, 9.6327f);
 			else
-				unk = { -800.4056f, 183.4856f, 71.6055f };
+				unk = Vector3(-800.4056f, 183.4856f, 71.6055f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 1972.1417f, 3813.243f, 32.4271f };
+			unk = Vector3(1972.1417f, 3813.243f, 32.4271f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { -1145.91f, -1514.9445f, 9.6327f };
+			unk = Vector3(-1145.91f, -1514.9445f, 9.6327f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 1976.94f, 3821.2417f, 33.3266f };
+			unk = Vector3(1976.94f, 3821.2417f, 33.3266f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { -804.2254f, 184.3325f, 72.6042f };
+			unk = Vector3(-804.2254f, 184.3325f, 72.6042f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { -8.8011f, 515.7225f, 173.6282f };
+			unk = Vector3(-8.8011f, 515.7225f, 173.6282f);
 			break;
 	}
 
@@ -1824,56 +1824,56 @@ Vector3 func_27() // Position - 0x2148
 {
 	var unk;
 
-	unk = { 0f, 0f, 0f };
+	unk = Vector3(0f, 0f, 0f);
 
 	switch (iLocal_55)
 	{
 		case joaat("prop_bong_01"):
 			if (!bLocal_49)
-				unk = { 0f, 0f, -68.75494f };
+				unk = Vector3(0f, 0f, -68.75494f);
 			else
-				unk = { 0f, 0f, -179.90875f };
+				unk = Vector3(0f, 0f, -179.90875f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { 0f, 0f, 21.1994f };
+			unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { 0f, 0f, -128.34f };
+			unk = Vector3(0f, 0f, -128.34f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { 0f, 0f, 0.5729f };
+			unk = Vector3(0f, 0f, 0.5729f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 0f, 0f, 2.8647f };
+			unk = Vector3(0f, 0f, 2.8647f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { 0f, 0f, 34.9504f };
+				unk = Vector3(0f, 0f, 34.9504f);
 			else
-				unk = { 0f, 0f, 21.1994f };
+				unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { 0f, 0f, 72.76564f };
+			unk = Vector3(0f, 0f, 72.76564f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 0f, 0f, -9.1673f };
+			unk = Vector3(0f, 0f, -9.1673f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { 0f, 0f, 21.1994f };
+			unk = Vector3(0f, 0f, 21.1994f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { 0f, 0f, -29.793f };
+			unk = Vector3(0f, 0f, -29.793f);
 			break;
 	}
 
@@ -1884,56 +1884,56 @@ Vector3 func_28() // Position - 0x225D
 {
 	var unk;
 
-	unk = { 0f, 0f, 0f };
+	unk = Vector3(0f, 0f, 0f);
 
 	switch (iLocal_55)
 	{
 		case joaat("prop_bong_01"):
 			if (!bLocal_49)
-				unk = { -806.82f, 170.03f, 75.74f };
+				unk = Vector3(-806.82f, 170.03f, 75.74f);
 			else
-				unk = { 10.22f, 527.73f, 174.11f };
+				unk = Vector3(10.22f, 527.73f, 174.11f);
 			break;
 	
 		case joaat("prop_cigar_03"):
-			unk = { -805.17f, 173.99f, 72.69f };
+			unk = Vector3(-805.17f, 173.99f, 72.69f);
 			break;
 	
 		case joaat("prop_cs_beer_bot_01"):
-			unk = { -9.66f, -1429.48f, 31.21f };
+			unk = Vector3(-9.66f, -1429.48f, 31.21f);
 			break;
 	
 		case joaat("p_cs_joint_01"):
-			unk = { -10.07f, -1440.64f, 30.36f };
+			unk = Vector3(-10.07f, -1440.64f, 30.36f);
 			break;
 	
 		case joaat("prop_rolled_sock_02"):
-			unk = { 1972.852f, 3812.42f, 33.28f };
+			unk = Vector3(1972.852f, 3812.42f, 33.28f);
 			break;
 	
 		case joaat("p_tumbler_02_s1"):
 		case joaat("p_tumbler_cs2_s"):
 		case joaat("p_tumbler_cs2_s_trev"):
 			if (bLocal_50)
-				unk = { -1153.829f, -1523.314f, 10.56f };
+				unk = Vector3(-1153.829f, -1523.314f, 10.56f);
 			else
-				unk = { -800.68f, 184.18f, 72.55f };
+				unk = Vector3(-800.68f, 184.18f, 72.55f);
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			unk = { -1146.284f, -1514.1305f, 10.8468f };
+			unk = Vector3(-1146.284f, -1514.1305f, 10.8468f);
 			break;
 	
 		case joaat("prop_radio_01"):
-			unk = { 1976.75f, 3822.76f, 33.28f };
+			unk = Vector3(1976.75f, 3822.76f, 33.28f);
 			break;
 	
 		case joaat("p_w_grass_gls_s"):
-			unk = { -804.87f, 185.69f, 72.75f };
+			unk = Vector3(-804.87f, 185.69f, 72.75f);
 			break;
 	
 		case joaat("p_wine_glass_s"):
-			unk = { -9.1f, 516.83f, 173.62f };
+			unk = Vector3(-9.1f, 516.83f, 173.62f);
 			break;
 	}
 
@@ -2444,13 +2444,13 @@ void func_51() // Position - 0x307E
 				if (Global_32224[4].f_2)
 				{
 					CAM::SET_CAM_ACTIVE(caLocal_329, true);
-					uLocal_378 = { uLocal_349 };
+					uLocal_378 = Vector3(uLocal_349);
 					CAM::SHAKE_CAM(caLocal_329, "HAND_SHAKE", 0.2f / 3f);
 				}
 				else
 				{
 					CAM::SET_CAM_ACTIVE(caLocal_330, true);
-					uLocal_378 = { uLocal_342 };
+					uLocal_378 = Vector3(uLocal_342);
 					CAM::SHAKE_CAM(caLocal_330, "HAND_SHAKE", 0.2f / 3f);
 				}
 			
@@ -2471,7 +2471,7 @@ void func_51() // Position - 0x307E
 			{
 				if (!CAM::IS_CAM_ACTIVE(caLocal_329))
 				{
-					uLocal_378 = { uLocal_349 };
+					uLocal_378 = Vector3(uLocal_349);
 					CAM::SHAKE_CAM(caLocal_329, "HAND_SHAKE", 0.2f / 3f);
 					CAM::SET_CAM_ACTIVE(caLocal_329, true);
 					iLocal_310 = 4;
@@ -2488,7 +2488,7 @@ void func_51() // Position - 0x307E
 			{
 				if (!CAM::IS_CAM_ACTIVE(caLocal_330))
 				{
-					uLocal_378 = { uLocal_342 };
+					uLocal_378 = Vector3(uLocal_342);
 					CAM::SHAKE_CAM(caLocal_330, "HAND_SHAKE", 0.2f / 3f);
 					CAM::SET_CAM_ACTIVE(caLocal_330, true);
 					iLocal_310 = 4;
@@ -2509,8 +2509,8 @@ void func_51() // Position - 0x307E
 		
 			if (Global_32224[4].f_2)
 			{
-				uLocal_353 = { -806.2905f, 173.187f, 73.3211f };
-				uLocal_356 = { -1.0904f, -0.0034f, -94.3685f };
+				uLocal_353 = Vector3(-806.2905f, 173.187f, 73.3211f);
+				uLocal_356 = Vector3(-1.0904f, -0.0034f, -94.3685f);
 				fLocal_359 = 50f;
 			
 				if (CAM::DOES_CAM_EXIST(caLocal_329))
@@ -2521,8 +2521,8 @@ void func_51() // Position - 0x307E
 			}
 			else
 			{
-				uLocal_353 = { -803.3088f, 175.5172f, 73.184f };
-				uLocal_356 = { 2.48f, -0.0034f, 149.8074f };
+				uLocal_353 = Vector3(-803.3088f, 175.5172f, 73.184f);
+				uLocal_356 = Vector3(2.48f, -0.0034f, 149.8074f);
 				fLocal_359 = 50f;
 			
 				if (CAM::DOES_CAM_EXIST(caLocal_330))
@@ -2559,8 +2559,8 @@ void func_52(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 
 	if (CAM::DOES_CAM_EXIST(caParam0))
 	{
-		camRot = { CAM::GET_CAM_ROT(caParam0, 2) };
-		num = { uParam1 };
+		camRot = Vector3(CAM::GET_CAM_ROT(caParam0, 2));
+		num = Vector3(uParam1);
 	
 		if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 		{
@@ -2593,7 +2593,7 @@ void func_52(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num4 = num.f_2 - camRot.f_2;
 			num5 = func_53(num4, -180f, 180f);
-			vector = { camRot + ((num - camRot) * { 0.25f, 0.25f, 0.25f }) };
+			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
 			vector.f_2 = camRot.f_2 + (num5 * 0.25f);
 		}
 		else
@@ -2648,7 +2648,7 @@ void func_52(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num8 = num.f_2 - camRot.f_2;
 			num9 = func_53(num8, -180f, 180f);
-			vector = { camRot + ((num - camRot) * { 0.25f, 0.25f, 0.25f }) };
+			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
 			vector.f_2 = camRot.f_2 + (num9 * 0.25f);
 		}
 	

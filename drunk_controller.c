@@ -534,7 +534,7 @@ void func_16(int iParam0) // Position - 0x770
 	Global_44232[num] = func_17();
 	Global_44232[num].f_1 = Global_44206[iParam0].f_1;
 	Global_44232[num].f_2 = 0;
-	args = { Global_44206[iParam0] };
+	args = Vector3(Global_44206[iParam0]);
 	SYSTEM::START_NEW_SCRIPT_WITH_ARGS("drunk", &args, 5, DEFAULT);
 	SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("drunk");
 	func_19(iParam0);

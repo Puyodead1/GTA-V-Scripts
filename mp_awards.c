@@ -15574,7 +15574,7 @@ void func_150(var uParam0) // Position - 0x10CAD
 	unk.f_441 = 12;
 	unk.f_473 = 12;
 	unk.f_486 = 12;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -15609,7 +15609,7 @@ void func_154(var uParam0) // Position - 0x10D47
 	unk.f_366 = 18;
 	unk.f_385 = 18;
 	unk.f_404 = 18;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 

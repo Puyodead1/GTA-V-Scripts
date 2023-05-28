@@ -884,7 +884,7 @@ BOOL func_11(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 		num.f_11 = -1;
 		num.f_13 = iParam10;
 		MISC::CLEAR_BIT(&(num.f_1), 0);
-		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = { num };
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 + 1;
 		func_12(CHAR_MICHAEL);
 		func_12(1);
@@ -977,7 +977,7 @@ BOOL func_16(var uParam0, var uParam1) // Position - 0x86E
 	if (!func_6(14) && !CAM::IS_SCREEN_FADED_OUT())
 	{
 		PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 	
 		for (i = 0; i < 1; i = i + 1)
 		{
@@ -1726,7 +1726,7 @@ void func_50() // Position - 0x167B
 
 	for (i = 0; i < 50; i = i + 1)
 	{
-		iLocal_55[i].f_3 = { func_51(i, 0) };
+		iLocal_55[i].f_3 = Vector3(func_51(i, 0));
 		iLocal_55[i].f_10 = 0;
 	}
 
@@ -1737,7 +1737,7 @@ void func_50() // Position - 0x167B
 	iLocal_55[4].f_9 = 256.25f;
 	iLocal_55[5].f_9 = 286.5f;
 	iLocal_55[6].f_9 = 0f;
-	iLocal_55[6].f_6 = { 0f, 0f, 1f };
+	iLocal_55[6].f_6 = Vector3(0f, 0f, 1f);
 	iLocal_55[7].f_9 = -165.6051f;
 	iLocal_55[8].f_9 = 91.5f;
 	iLocal_55[9].f_9 = 116f;
@@ -1752,7 +1752,7 @@ void func_50() // Position - 0x167B
 	iLocal_55[18].f_9 = 40f;
 	iLocal_55[19].f_9 = 40f;
 	iLocal_55[20].f_9 = 40f;
-	iLocal_55[21].f_6 = { 90f, 0f, 57f };
+	iLocal_55[21].f_6 = Vector3(90f, 0f, 57f);
 	iLocal_55[22].f_9 = 40f;
 	iLocal_55[23].f_9 = 40f;
 	iLocal_55[24].f_9 = 40f;
@@ -1761,18 +1761,18 @@ void func_50() // Position - 0x167B
 	iLocal_55[27].f_9 = 40f;
 	iLocal_55[28].f_9 = 40f;
 	iLocal_55[29].f_9 = 40f;
-	iLocal_55[29].f_6 = { -24.35f, 15.74f, 14.31f };
+	iLocal_55[29].f_6 = Vector3(-24.35f, 15.74f, 14.31f);
 	iLocal_55[30].f_9 = 40f;
 	iLocal_55[31].f_9 = 40f;
 	iLocal_55[32].f_9 = 40f;
 	iLocal_55[33].f_9 = 40f;
-	iLocal_55[34].f_6 = { 0f, 0f, -15f };
+	iLocal_55[34].f_6 = Vector3(0f, 0f, -15f);
 	iLocal_55[35].f_9 = 40f;
 	iLocal_55[36].f_9 = 40f;
 	iLocal_55[37].f_9 = 40f;
 	iLocal_55[38].f_9 = 40f;
-	iLocal_55[38].f_6 = { 20.18f, -0.87f, 20.46f };
-	iLocal_55[39].f_6 = { 0f, 0f, -4.39f };
+	iLocal_55[38].f_6 = Vector3(20.18f, -0.87f, 20.46f);
+	iLocal_55[39].f_6 = Vector3(0f, 0f, -4.39f);
 	iLocal_55[40].f_9 = 40f;
 	iLocal_55[41].f_9 = 80f;
 	iLocal_55[42].f_9 = 198f;

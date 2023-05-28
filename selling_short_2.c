@@ -6746,7 +6746,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 	switch (iParam1)
 	{
 		case 0:
-			unk = { 0f, 0f, func_25(-4.29f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-4.29f) + 180f);
 			func_23(uParam0, 82047830, 667.319f, 572.133f, 128.521f, unk, 6, 0, 0);
 			func_23(uParam0, 83248680, 666.312f, 571.675f, 128.521f, unk, 6, 1, 0);
 			func_23(uParam0, 71526810, 665.235f, 571.183f, 128.521f, unk, 6, 2, 0);
@@ -6761,7 +6761,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 1:
-			unk = { 0f, 0f, func_25(-3.98f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.98f) + 180f);
 			func_23(uParam0, 21091970, 670.312f, 568.023f, 128.521f, unk, 5, 0, 0.5f);
 			func_23(uParam0, 97482490, 669.189f, 567.502f, 128.522f, unk, 6, 1, 0);
 			func_23(uParam0, 66764240, 668.28f, 566.688f, 128.522f, unk, 6, 0, 0);
@@ -6771,7 +6771,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 2:
-			unk = { 0f, 0f, func_25(-3.78f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.78f) + 180f);
 			func_23(uParam0, 91480760, 673.7f, 564.799f, 128.521f, unk, 6, 0, 0);
 			func_23(uParam0, 64996320, 672.996f, 563.847f, 128.521f, unk, 6, 1, 0);
 			func_23(uParam0, 30855220, 672.271f, 562.865f, 128.521f, unk, 6, 2, 0);
@@ -6782,7 +6782,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 3:
-			unk = { 0f, 0f, func_25(-3.38f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.38f) + 180f);
 			func_23(uParam0, 89689390, 681.517f, 555.801f, 128.522f, unk, 6, 0, 0);
 			func_23(uParam0, 71057000, 681.796f, 556.967f, 128.522f, unk, 6, 1, 0);
 			func_23(uParam0, 26206390, 682.076f, 558.137f, 128.522f, unk, 6, 2, 0);
@@ -6791,7 +6791,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 4:
-			unk = { 0f, 0f, func_25(-3.17f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.17f) + 180f);
 			func_23(uParam0, 78555440, 687.841f, 559.785f, 128.522f, unk, 6, 0, 0);
 			func_23(uParam0, 12324420, 687.807f, 558.602f, 128.522f, unk, 6, 1, 0);
 			func_23(uParam0, 4083210, 687.771f, 557.382f, 128.522f, unk, 6, 2, 0);
@@ -6802,7 +6802,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 5:
-			unk = { 0f, 0f, func_25(-2.97f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-2.97f) + 180f);
 			func_23(uParam0, 31491440, 692.632f, 559.992f, 128.522f, unk, 5, 2, -0.5f);
 			func_23(uParam0, 34393340, 693.189f, 558.886f, 128.522f, unk, 6, 0, 0);
 			func_23(uParam0, 94762900, 693.396f, 557.684f, 128.522f, unk, 6, 1, 0);
@@ -6812,7 +6812,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 6:
-			unk = { 0f, 0f, func_25(-2.7f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-2.7f) + 180f);
 			func_23(uParam0, 86170110, 697.492f, 561.188f, 128.522f, unk, 6, 0, 0);
 			func_23(uParam0, 62247860, 697.964f, 560.188f, 128.522f, unk, 6, 1, 0);
 			func_23(uParam0, 43665230, 698.467f, 559.116f, 128.522f, unk, 6, 2, 0);
@@ -6826,7 +6826,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 7:
-			unk = { 0f, 0f, func_25(-3.99f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.99f) + 180f);
 			func_23(uParam0, 13168530, 652.833f, 570.052f, 128.529f, unk, 6, 0, 0);
 			func_23(uParam0, 92127780, 652.006f, 569.319f, 128.528f, unk, 6, 1, 0);
 			func_23(uParam0, 51664260, 651.136f, 568.538f, 128.729f, unk, 6, 2, 0);
@@ -6836,7 +6836,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 8:
-			unk = { 0f, 0f, func_25(-3.9f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.9f) + 180f);
 			func_23(uParam0, 20501110, 656.955f, 565.868f, 128.53f, unk, 6, 0, 0);
 			func_23(uParam0, 10114780, 656.193f, 565.067f, 128.53f, unk, 6, 1, 0);
 			func_23(uParam0, 12664730, 655.358f, 564.19f, 128.73f, unk, 6, 2, 0);
@@ -6846,7 +6846,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 9:
-			unk = { 0f, 0f, func_25(-3.76f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.76f) + 180f);
 			func_23(uParam0, 75170110, 662.947f, 560.965f, 128.529f, unk, 6, 0, 0);
 			func_23(uParam0, 62246860, 662.306f, 560.065f, 128.529f, unk, 6, 1, 0);
 			func_23(uParam0, 83665250, 661.603f, 559.079f, 128.73f, unk, 6, 2, 0);
@@ -6856,7 +6856,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 10:
-			unk = { 0f, 0f, func_25(-3.68f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.68f) + 180f);
 			func_23(uParam0, 86878180, 667.872f, 557.785f, 128.53f, unk, 6, 0, 0);
 			func_23(uParam0, 22242820, 667.31f, 556.833f, 128.53f, unk, 6, 1, 0);
 			func_23(uParam0, 93969290, 666.693f, 555.791f, 128.73f, unk, 6, 2, 0);
@@ -6866,7 +6866,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 11:
-			unk = { 0f, 0f, func_25(-3.53f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.53f) + 180f);
 			func_23(uParam0, 13130110, 674.882f, 554.326f, 128.529f, unk, 6, 0, 0);
 			func_23(uParam0, 97845810, 674.46f, 553.305f, 128.529f, unk, 6, 1, 0);
 			func_23(uParam0, 12345670, 673.997f, 552.186f, 128.73f, unk, 6, 2, 0);
@@ -6876,7 +6876,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 12:
-			unk = { 0f, 0f, func_25(-3.45f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.45f) + 180f);
 			func_23(uParam0, 60616260, 680.396f, 552.335f, 128.53f, unk, 6, 0, 0);
 			func_23(uParam0, 36465660, 680.063f, 551.281f, 128.53f, unk, 6, 1, 0);
 			func_23(uParam0, 67686970, 679.697f, 550.127f, 128.73f, unk, 6, 2, 0);
@@ -6886,7 +6886,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 13:
-			unk = { 0f, 0f, func_25(-3.31f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.31f) + 180f);
 			func_23(uParam0, 11511610, 688.034f, 550.483f, 128.529f, unk, 6, 0, 0);
 			func_23(uParam0, 17118110, 687.853f, 549.393f, 128.529f, unk, 6, 1, 0);
 			func_23(uParam0, 91201210, 687.653f, 548.199f, 128.73f, unk, 6, 2, 0);
@@ -6896,7 +6896,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 14:
-			unk = { 0f, 0f, func_25(-3.22f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.22f) + 180f);
 			func_23(uParam0, 15515610, 693.855f, 549.783f, 128.53f, unk, 6, 0, 0);
 			func_23(uParam0, 57158150, 693.767f, 548.682f, 128.53f, unk, 6, 1, 0);
 			func_23(uParam0, 91601610, 693.67f, 547.474f, 128.73f, unk, 6, 2, 0);
@@ -6906,7 +6906,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 15:
-			unk = { 0f, 0f, func_25(-3.08f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.08f) + 180f);
 			func_23(uParam0, 19920020, 701.652f, 549.708f, 128.529f, unk, 6, 0, 0);
 			func_23(uParam0, 1202200, 701.721f, 548.605f, 128.529f, unk, 6, 1, 0);
 			func_23(uParam0, 32042050, 701.795f, 547.396f, 128.729f, unk, 6, 2, 0);
@@ -6916,7 +6916,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 16:
-			unk = { 0f, 0f, func_25(-2.99f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-2.99f) + 180f);
 			func_23(uParam0, 24024120, 707.482f, 550.335f, 128.53f, unk, 6, 0, 0);
 			func_23(uParam0, 43244240, 707.644f, 549.242f, 128.53f, unk, 6, 1, 0);
 			func_23(uParam0, 42452460, 707.821f, 548.044f, 128.73f, unk, 6, 2, 0);
@@ -6926,7 +6926,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 17:
-			unk = { 0f, 0f, func_25(-3.98f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.98f) + 180f);
 			func_23(uParam0, 46779100, 646.434f, 564.522f, 128.927f, unk, 6, 0, 0);
 			func_23(uParam0, 93643160, 645.612f, 563.784f, 128.927f, unk, 6, 1, 0);
 			func_23(uParam0, 34729570, 644.71f, 562.975f, 129.127f, unk, 6, 2, 0);
@@ -6936,7 +6936,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 18:
-			unk = { 0f, 0f, func_25(-3.91f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.91f) + 180f);
 			func_23(uParam0, 65187100, 651.092f, 559.707f, 128.926f, unk, 6, 0, 0);
 			func_23(uParam0, 87514460, 650.325f, 558.912f, 128.926f, unk, 6, 1, 0);
 			func_23(uParam0, 46165810, 649.483f, 558.04f, 128.127f, unk, 6, 2, 0);
@@ -6946,7 +6946,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 19:
-			unk = { 0f, 0f, func_25(-3.75f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.75f) + 180f);
 			func_23(uParam0, 55178130, 657.925f, 554.108f, 128.927f, unk, 6, 0, 0);
 			func_23(uParam0, 75148880, 657.29f, 553.204f, 128.927f, unk, 6, 1, 0);
 			func_23(uParam0, 88865540, 656.593f, 552.213f, 129.127f, unk, 6, 2, 0);
@@ -6956,7 +6956,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 20:
-			unk = { 0f, 0f, func_25(-3.68f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.68f) + 180f);
 			func_23(uParam0, 76870120, 663.545f, 550.463f, 128.926f, unk, 6, 0, 0);
 			func_23(uParam0, 32147850, 662.977f, 549.515f, 128.926f, unk, 6, 1, 0);
 			func_23(uParam0, 97662220, 662.353f, 548.477f, 129.127f, unk, 6, 2, 0);
@@ -6966,7 +6966,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 21:
-			unk = { 0f, 0f, func_25(-3.53f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.53f) + 180f);
 			func_23(uParam0, 19202120, 671.531f, 546.515f, 128.927f, unk, 6, 0, 0);
 			func_23(uParam0, 22232420, 671.116f, 545.491f, 128.927f, unk, 6, 1, 0);
 			func_23(uParam0, 52627280, 670.66f, 544.369f, 129.127f, unk, 6, 2, 0);
@@ -6976,7 +6976,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 22:
-			unk = { 0f, 0f, func_25(-3.46f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.46f) + 180f);
 			func_23(uParam0, 18283840, 677.828f, 544.227f, 128.926f, unk, 6, 0, 0);
 			func_23(uParam0, 85858680, 677.487f, 543.176f, 128.926f, unk, 6, 1, 0);
 			func_23(uParam0, 78889900, 677.112f, 542.024f, 129.127f, unk, 6, 2, 0);
@@ -6986,7 +6986,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 23:
-			unk = { 0f, 0f, func_25(-3.3f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.3f) + 180f);
 			func_23(uParam0, 12812910, 686.526f, 542.118f, 128.927f, unk, 6, 0, 0);
 			func_23(uParam0, 30131130, 686.352f, 541.027f, 128.927f, unk, 6, 1, 0);
 			func_23(uParam0, 21331340, 686.16f, 539.831f, 129.127f, unk, 6, 1, 0);
@@ -6996,7 +6996,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 24:
-			unk = { 0f, 0f, func_25(-3.23f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.23f) + 180f);
 			func_23(uParam0, 16917010, 693.176f, 541.306f, 128.926f, unk, 6, 0, 0);
 			func_23(uParam0, 71172170, 693.08f, 540.205f, 128.926f, unk, 6, 1, 0);
 			func_23(uParam0, 31741750, 692.975f, 538.998f, 129.127f, unk, 6, 2, 0);
@@ -7006,7 +7006,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 25:
-			unk = { 0f, 0f, func_25(-3.07f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3.07f) + 180f);
 			func_23(uParam0, 21321420, 702.065f, 541.218f, 128.927f, unk, 6, 0, 0);
 			func_23(uParam0, 15216210, 702.14f, 540.116f, 128.927f, unk, 6, 1, 0);
 			func_23(uParam0, 72182190, 702.223f, 538.907f, 129.127f, unk, 6, 2, 0);
@@ -7016,7 +7016,7 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 			break;
 	
 		case 26:
-			unk = { 0f, 0f, func_25(-3f) + 180f };
+			unk = Vector3(0f, 0f, func_25(-3f) + 180f);
 			func_23(uParam0, 25325420, 708.727f, 541.922f, 128.926f, unk, 6, 0, 0);
 			func_23(uParam0, 55256250, 709.881f, 539.828f, 128.926f, unk, 6, 1, 0);
 			func_23(uParam0, 72582590, 709.05f, 539.628f, 129.127f, unk, 6, 2, 0);
@@ -7034,8 +7034,8 @@ void func_21(var uParam0, int iParam1) // Position - 0xA49
 
 void func_22(var uParam0, float fParam1, float fParam2, float fParam3, var uParam4, var uParam5, var uParam6, int iParam7, float fParam8, float fParam9) // Position - 0x23EE
 {
-	uParam0->f_1 = { fParam1 };
-	uParam0->f_4 = { uParam4 };
+	uParam0->f_1 = Vector3(fParam1);
+	uParam0->f_4 = Vector3(uParam4);
 	uParam0->f_7 = iParam7;
 	*uParam0 = 1;
 	uParam0->f_8 = fParam8;
@@ -7055,8 +7055,8 @@ void func_23(var uParam0, int iParam1, float fParam2, float fParam3, float fPara
 
 void func_24(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, int iParam8, int iParam9, int iParam10) // Position - 0x245B
 {
-	*uParam0 = { uParam2 };
-	uParam0->f_3 = { uParam5 };
+	*uParam0 = Vector3(uParam2);
+	uParam0->f_3 = Vector3(uParam5);
 	uParam0->f_6 = iParam8;
 	uParam0->f_7 = iParam1;
 	uParam0->f_8 = iParam9;
@@ -7321,14 +7321,14 @@ void func_36(BOOL bParam0, BOOL bParam1) // Position - 0x28E6
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

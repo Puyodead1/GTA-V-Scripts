@@ -90,8 +90,8 @@ void func_1() // Position - 0xB1
 
 	if (iLocal_29 != -1 && func_20(iLocal_29))
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
-		x = { func_19(iLocal_29) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
+		x = Vector3(func_19(iLocal_29));
 	
 		if (SYSTEM::VDIST2(x, entityCoords) < (float)func_18(iLocal_29))
 		{
@@ -227,7 +227,7 @@ void func_10(int iParam0) // Position - 0x328
 {
 	float entityCoords;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
 	HUD::SET_FAKE_PAUSEMAP_PLAYER_POSITION_THIS_FRAME(entityCoords, entityCoords.f_1);
 
 	switch (iParam0)
@@ -239,7 +239,7 @@ void func_10(int iParam0) // Position - 0x328
 			break;
 	
 		case 2:
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
 			HUD::SET_FAKE_PAUSEMAP_PLAYER_POSITION_THIS_FRAME(entityCoords, entityCoords.f_1);
 			break;
 	
@@ -265,7 +265,7 @@ int func_11(int iParam0) // Position - 0x396
 			return 0;
 	
 		case 1:
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
 		
 			if (entityCoords.f_2 < 9.7796f)
 				return 0;
@@ -276,7 +276,7 @@ int func_11(int iParam0) // Position - 0x396
 			break;
 	
 		case 2:
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
 		
 			if (entityCoords.f_2 < 178.9f)
 				return 0;
@@ -712,7 +712,7 @@ void func_21() // Position - 0xCC3
 		}
 		else
 		{
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_33, false) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_33, false));
 		
 			if (SYSTEM::VDIST2(func_19(iLocal_28), entityCoords) < SYSTEM::VDIST2(func_19(iLocal_29), entityCoords))
 				iLocal_29 = iLocal_28;

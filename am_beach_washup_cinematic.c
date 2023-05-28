@@ -113,7 +113,7 @@ void func_3(var uParam0) // Position - 0xA3
 		CAM::DESTROY_CAM(uParam0->f_6, false);
 
 	PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID());
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -450,14 +450,14 @@ void func_26(BOOL bParam0, BOOL bParam1) // Position - 0x65E
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -667,7 +667,7 @@ void func_45(var uParam0, var uParam1) // Position - 0x983
 
 void func_46(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x991
 {
-	uParam0->f_1 = { uParam1 };
+	uParam0->f_1 = Vector3(uParam1);
 	return;
 }
 

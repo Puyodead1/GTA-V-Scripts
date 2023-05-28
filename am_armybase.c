@@ -628,7 +628,7 @@ void main() // Position - 0x0
 	iLocal_42 = 49;
 	iLocal_43 = 64;
 	fLocal_64 = (0.05f + 0.275f) - 0.01f;
-	uLocal_95 = { -2357.12f, 3250.68f, 106.04f };
+	uLocal_95 = Vector3(-2357.12f, 3250.68f, 106.04f);
 	iLocal_574 = -1;
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
@@ -1052,44 +1052,44 @@ BOOL func_19(Vector3 vParam0, var uParam1, var uParam2, int iParam3) // Position
 	unk47 = 15;
 	unk93 = 15;
 	debug = false;
-	unk[0] = { -1877.4358f, 2783.1506f, 31.806177f };
-	unk47[0] = { -1797.8734f, 2924.3696f, 307.11057f + (float)iParam3 };
+	unk[0] = Vector3(-1877.4358f, 2783.1506f, 31.806177f);
+	unk47[0] = Vector3(-1797.8734f, 2924.3696f, 307.11057f + (float)iParam3);
 	unk93[0] = 88f;
-	unk[1] = { -1761.1156f, 2834.6511f, 31.806217f };
-	unk47[1] = { -1720.8875f, 2906.4192f, 281.80624f + (float)iParam3 };
+	unk[1] = Vector3(-1761.1156f, 2834.6511f, 31.806217f);
+	unk47[1] = Vector3(-1720.8875f, 2906.4192f, 281.80624f + (float)iParam3);
 	unk93[1] = 88f;
-	unk[2] = { -1761.4933f, 2817.68f, 32.37125f };
-	unk47[2] = { -1769.7045f, 2913.7344f, 281.8066f + (float)iParam3 };
+	unk[2] = Vector3(-1761.4933f, 2817.68f, 32.37125f);
+	unk47[2] = Vector3(-1769.7045f, 2913.7344f, 281.8066f + (float)iParam3);
 	unk93[2] = 88f;
-	unk[3] = { -1879.297f, 2772.6526f, 29.57795f };
-	unk47[3] = { -1864.5205f, 2825.4724f, 281.80618f + (float)iParam3 };
+	unk[3] = Vector3(-1879.297f, 2772.6526f, 29.57795f);
+	unk47[3] = Vector3(-1864.5205f, 2825.4724f, 281.80618f + (float)iParam3);
 	unk93[3] = 88f;
-	unk[4] = { -2676.74f, 3366.9875f, 29.923937f };
-	unk47[4] = { -2744.7896f, 3340.3467f, 37.803787f + (float)iParam3 };
+	unk[4] = Vector3(-2676.74f, 3366.9875f, 29.923937f);
+	unk47[4] = Vector3(-2744.7896f, 3340.3467f, 37.803787f + (float)iParam3);
 	unk93[4] = 9f;
-	unk[5] = { -2676.74f, 3366.9875f, 29.923937f };
-	unk47[5] = { -2744.7896f, 3340.3467f, 37.803787f + (float)iParam3 };
+	unk[5] = Vector3(-2676.74f, 3366.9875f, 29.923937f);
+	unk47[5] = Vector3(-2744.7896f, 3340.3467f, 37.803787f + (float)iParam3);
 	unk93[5] = 9.5f;
-	unk[6] = { -2807.3967f, 3264.2256f, 29.92764f };
-	unk47[6] = { -2879.8052f, 3309.0095f, 37.578644f + (float)iParam3 };
+	unk[6] = Vector3(-2807.3967f, 3264.2256f, 29.92764f);
+	unk47[6] = Vector3(-2879.8052f, 3309.0095f, 37.578644f + (float)iParam3);
 	unk93[6] = 9.5f;
-	unk[7] = { -2808.236f, 3264.6343f, 29.92764f };
-	unk47[7] = { -2747.5503f, 3187.8f, 37.45682f + (float)iParam3 };
+	unk[7] = Vector3(-2808.236f, 3264.6343f, 29.92764f);
+	unk47[7] = Vector3(-2747.5503f, 3187.8f, 37.45682f + (float)iParam3);
 	unk93[7] = 9.5f;
-	unk[8] = { -2530.9958f, 3064.151f, 29.71081f };
-	unk47[8] = { -2748.5571f, 3189.9392f, 37.45682f + (float)iParam3 };
+	unk[8] = Vector3(-2530.9958f, 3064.151f, 29.71081f);
+	unk47[8] = Vector3(-2748.5571f, 3189.9392f, 37.45682f + (float)iParam3);
 	unk93[8] = 9.5f;
-	unk[9] = { -2533.9016f, 3062.4907f, 29.707146f };
-	unk47[9] = { -2520.674f, 2996.8174f, 37.457146f + (float)iParam3 };
+	unk[9] = Vector3(-2533.9016f, 3062.4907f, 29.707146f);
+	unk47[9] = Vector3(-2520.674f, 2996.8174f, 37.457146f + (float)iParam3);
 	unk93[9] = 9.5f;
-	unk[10] = { -2500.7163f, 2927.1028f, 29.45663f };
-	unk47[10] = { -2445.696f, 2896.6575f, 37.680088f + (float)iParam3 };
+	unk[10] = Vector3(-2500.7163f, 2927.1028f, 29.45663f);
+	unk47[10] = Vector3(-2445.696f, 2896.6575f, 37.680088f + (float)iParam3);
 	unk93[10] = 9.5f;
-	unk[11] = { -2020.5427f, 2810.7468f, 29.45658f };
-	unk47[11] = { -1927.949f, 2785.7788f, 37.67057f + (float)iParam3 };
+	unk[11] = Vector3(-2020.5427f, 2810.7468f, 29.45658f);
+	unk47[11] = Vector3(-1927.949f, 2785.7788f, 37.67057f + (float)iParam3);
 	unk93[11] = 9.5f;
-	unk[12] = { -2261.8992f, 3376.5488f, 29.77859f };
-	unk47[12] = { -2141.0674f, 3376.773f, 37.90019f + (float)iParam3 };
+	unk[12] = Vector3(-2261.8992f, 3376.5488f, 29.77859f);
+	unk47[12] = Vector3(-2141.0674f, 3376.773f, 37.90019f + (float)iParam3);
 	unk93[12] = 9.5f;
 	num = 13;
 
@@ -1120,103 +1120,103 @@ BOOL func_20(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4
 	switch (iParam3)
 	{
 		case 1:
-			unk[0] = { -1332.2113f, 100.46083f, 40.384373f };
-			unk47[0] = { -1094.2382f, 148.42744f, 73f };
+			unk[0] = Vector3(-1332.2113f, 100.46083f, 40.384373f);
+			unk47[0] = Vector3(-1094.2382f, 148.42744f, 73f);
 			unk93[0] = 171.25f;
-			unk[1] = { -999.7344f, -110.22309f, 25.257057f };
-			unk47[1] = { -1149.4938f, 109.25583f, 73f };
+			unk[1] = Vector3(-999.7344f, -110.22309f, 25.257057f);
+			unk47[1] = Vector3(-1149.4938f, 109.25583f, 73f);
 			unk93[1] = 132f;
-			unk[2] = { -1035.1129f, -84.958855f, 28.274601f };
-			unk47[2] = { -1261.1031f, 50.081482f, 73f };
+			unk[2] = Vector3(-1035.1129f, -84.958855f, 28.274601f);
+			unk47[2] = Vector3(-1261.1031f, 50.081482f, 73f);
 			unk93[2] = 132f;
 			num = 3;
 			break;
 	
 		case 2:
-			unk[0] = { -804.3439f, -3346.5005f, 10f };
-			unk47[0] = { -1816.9539f, -2768.8933f, (float)250 + iParam4 };
+			unk[0] = Vector3(-804.3439f, -3346.5005f, 10f);
+			unk47[0] = Vector3(-1816.9539f, -2768.8933f, (float)250 + iParam4);
 			unk93[0] = 247f;
-			unk[1] = { -1911.4879f, -2934.197f, 10f };
-			unk47[1] = { -968.6236f, -3477.7476f, (float)250 + iParam4 };
+			unk[1] = Vector3(-1911.4879f, -2934.197f, 10f);
+			unk47[1] = Vector3(-968.6236f, -3477.7476f, (float)250 + iParam4);
 			unk93[1] = 149f;
-			unk[2] = { -844.9433f, -2802.7852f, 10f };
-			unk47[2] = { -1011.08105f, -3086.9038f, (float)250 + iParam4 };
+			unk[2] = Vector3(-844.9433f, -2802.7852f, 10f);
+			unk47[2] = Vector3(-1011.08105f, -3086.9038f, (float)250 + iParam4);
 			unk93[2] = 185.5f;
-			unk[3] = { -1021.0861f, -2952.277f, 10f };
-			unk47[3] = { -1599.0082f, -2616.2705f, (float)250 + iParam4 };
+			unk[3] = Vector3(-1021.0861f, -2952.277f, 10f);
+			unk47[3] = Vector3(-1599.0082f, -2616.2705f, (float)250 + iParam4);
 			unk93[3] = 250f;
-			unk[4] = { -1027.1364f, -2436.457f, 10f };
-			unk47[4] = { -1392.6105f, -2226.7634f, (float)250 + iParam4 };
+			unk[4] = Vector3(-1027.1364f, -2436.457f, 10f);
+			unk47[4] = Vector3(-1392.6105f, -2226.7634f, (float)250 + iParam4);
 			unk93[4] = 193.5f;
-			unk[5] = { -1497.5493f, -2408.7122f, 10f };
-			unk47[5] = { -1136.9174f, -2617.9546f, (float)250 + iParam4 };
+			unk[5] = Vector3(-1497.5493f, -2408.7122f, 10f);
+			unk47[5] = Vector3(-1136.9174f, -2617.9546f, (float)250 + iParam4);
 			unk93[5] = 234.5f;
-			unk[6] = { -982.79236f, -2831.7087f, 12.93313f };
-			unk47[6] = { -966.46765f, -2803.458f, 16.68313f };
+			unk[6] = Vector3(-982.79236f, -2831.7087f, 12.93313f);
+			unk47[6] = Vector3(-966.46765f, -2803.458f, 16.68313f);
 			unk93[6] = 16f;
-			unk[7] = { -1110.0831f, -3496.8057f, 12f };
-			unk47[7] = { -1955.2982f, -3010.4314f, (float)250 + iParam4 };
+			unk[7] = Vector3(-1110.0831f, -3496.8057f, 12f);
+			unk47[7] = Vector3(-1955.2982f, -3010.4314f, (float)250 + iParam4);
 			unk93[7] = 80f;
-			unk[8] = { -1886.8994f, -3193.0237f, 12f };
-			unk47[8] = { -1836.143f, -3105.2683f, (float)250 + iParam4 };
+			unk[8] = Vector3(-1886.8994f, -3193.0237f, 12f);
+			unk47[8] = Vector3(-1836.143f, -3105.2683f, (float)250 + iParam4);
 			unk93[8] = 142f;
-			unk[9] = { -1134.3367f, -3535.6482f, 12f };
-			unk47[9] = { -1259.6486f, -3463.4863f, (float)250 + iParam4 };
+			unk[9] = Vector3(-1134.3367f, -3535.6482f, 12f);
+			unk47[9] = Vector3(-1259.6486f, -3463.4863f, (float)250 + iParam4);
 			unk93[9] = 30.75f;
-			unk[10] = { -969.12787f, -3463.8994f, 12f };
-			unk47[10] = { -896.3734f, -3505.7148f, (float)250 + iParam4 };
+			unk[10] = Vector3(-969.12787f, -3463.8994f, 12f);
+			unk47[10] = Vector3(-896.3734f, -3505.7148f, (float)250 + iParam4);
 			unk93[10] = 150f;
-			unk[11] = { -1369.4913f, -2173.5789f, 10f };
-			unk47[11] = { -1685.6256f, -2720.3635f, (float)250 + iParam4 };
+			unk[11] = Vector3(-1369.4913f, -2173.5789f, 10f);
+			unk47[11] = Vector3(-1685.6256f, -2720.3635f, (float)250 + iParam4);
 			unk93[11] = 29.25f;
-			unk[12] = { -1010.9256f, -3550.9434f, 10f };
-			unk47[12] = { -1110.1978f, -3493.6172f, (float)250 + iParam4 };
+			unk[12] = Vector3(-1010.9256f, -3550.9434f, 10f);
+			unk47[12] = Vector3(-1110.1978f, -3493.6172f, (float)250 + iParam4);
 			unk93[12] = 43f;
 			num = 13;
 			break;
 	
 		case 3:
-			unk[0] = { -1773.944f, 3287.3342f, 30f };
-			unk47[0] = { -2029.7765f, 2845.0833f, (float)250 + iParam4 };
+			unk[0] = Vector3(-1773.944f, 3287.3342f, 30f);
+			unk47[0] = Vector3(-2029.7765f, 2845.0833f, (float)250 + iParam4);
 			unk93[0] = 255f;
-			unk[1] = { -2725.8894f, 3291.0986f, 30f };
-			unk47[1] = { -2009.1815f, 2879.8352f, (float)250 + iParam4 };
+			unk[1] = Vector3(-2725.8894f, 3291.0986f, 30f);
+			unk47[1] = Vector3(-2009.1815f, 2879.8352f, (float)250 + iParam4);
 			unk93[1] = 180f;
-			unk[2] = { -2442.0261f, 3326.6987f, 30f };
-			unk47[2] = { -2033.9279f, 3089.0488f, (float)250 + iParam4 };
+			unk[2] = Vector3(-2442.0261f, 3326.6987f, 30f);
+			unk47[2] = Vector3(-2033.9279f, 3089.0488f, (float)250 + iParam4);
 			unk93[2] = 205f;
-			unk[3] = { -1917.1654f, 3374.209f, 30f };
-			unk47[3] = { -2016.7909f, 3195.058f, (float)250 + iParam4 };
+			unk[3] = Vector3(-1917.1654f, 3374.209f, 30f);
+			unk47[3] = Vector3(-2016.7909f, 3195.058f, (float)250 + iParam4);
 			unk93[3] = 86.25f;
-			unk[4] = { -2192.753f, 3373.2778f, 30f };
-			unk47[4] = { -2191.5444f, 3150.4165f, (float)250 + iParam4 };
+			unk[4] = Vector3(-2192.753f, 3373.2778f, 30f);
+			unk47[4] = Vector3(-2191.5444f, 3150.4165f, (float)250 + iParam4);
 			unk93[4] = 150.5f;
-			unk[5] = { -2077.6633f, 3344.5142f, 30f };
-			unk47[5] = { -2191.5444f, 3150.4165f, (float)250 + iParam4 };
+			unk[5] = Vector3(-2077.6633f, 3344.5142f, 30f);
+			unk47[5] = Vector3(-2191.5444f, 3150.4165f, (float)250 + iParam4);
 			unk93[5] = 140.5f;
-			unk[6] = { -2861.7554f, 3352.6606f, 30f };
-			unk47[6] = { -2715.8708f, 3269.9155f, (float)250 + iParam4 };
+			unk[6] = Vector3(-2861.7554f, 3352.6606f, 30f);
+			unk47[6] = Vector3(-2715.8708f, 3269.9155f, (float)250 + iParam4);
 			unk93[6] = 90f;
-			unk[7] = { -2005.5745f, 3364.5327f, 30f };
-			unk47[7] = { -1977.5688f, 3330.8882f, (float)250 + iParam4 };
+			unk[7] = Vector3(-2005.5745f, 3364.5327f, 30f);
+			unk47[7] = Vector3(-1977.5688f, 3330.8882f, (float)250 + iParam4);
 			unk93[7] = 100f;
-			unk[8] = { -1682.235f, 3004.2852f, 30f };
-			unk47[8] = { -1942.747f, 2947.4412f, (float)250 + iParam4 };
+			unk[8] = Vector3(-1682.235f, 3004.2852f, 30f);
+			unk47[8] = Vector3(-1942.747f, 2947.4412f, (float)250 + iParam4);
 			unk93[8] = 248.75f;
-			unk[9] = { -2393.2954f, 2936.406f, 31.680103f };
-			unk47[9] = { -2453.0366f, 3006.863f, 52.310028f };
+			unk[9] = Vector3(-2393.2954f, 2936.406f, 31.680103f);
+			unk47[9] = Vector3(-2453.0366f, 3006.863f, 52.310028f);
 			unk93[9] = 128f;
-			unk[10] = { -2347.1848f, 3023.8298f, 31.56573f };
-			unk47[10] = { -2517.3298f, 2989.0635f, 49.956444f };
+			unk[10] = Vector3(-2347.1848f, 3023.8298f, 31.56573f);
+			unk47[10] = Vector3(-2517.3298f, 2989.0635f, 49.956444f);
 			unk93[10] = 140f;
-			unk[11] = { -2259.9219f, 3358.0398f, 29.999718f };
-			unk47[11] = { -2299.772f, 3385.79f, 38.060143f };
+			unk[11] = Vector3(-2259.9219f, 3358.0398f, 29.999718f);
+			unk47[11] = Vector3(-2299.772f, 3385.79f, 38.060143f);
 			unk93[11] = 16f;
-			unk[12] = { -2476.3093f, 3363.914f, 31.679329f };
-			unk47[12] = { -2431.9807f, 3287.6694f, 39.978264f };
+			unk[12] = Vector3(-2476.3093f, 3363.914f, 31.679329f);
+			unk47[12] = Vector3(-2431.9807f, 3287.6694f, 39.978264f);
 			unk93[12] = 214.25f;
-			unk[13] = { -2103.0813f, 2797.7834f, 29.37864f };
-			unk47[13] = { -2096.8213f, 2874.4233f, 57.80989f };
+			unk[13] = Vector3(-2103.0813f, 2797.7834f, 29.37864f);
+			unk47[13] = Vector3(-2096.8213f, 2874.4233f, 57.80989f);
 			unk93[13] = 65.75f;
 		
 			if (bParam5)
@@ -1233,99 +1233,99 @@ BOOL func_20(Vector3 vParam0, var uParam1, var uParam2, int iParam3, int iParam4
 			break;
 	
 		case 4:
-			unk[0] = { 1541.6072f, 2527.555f, 40f };
-			unk47[0] = { 1815.5753f, 2535.0596f, (float)150 + iParam4 };
+			unk[0] = Vector3(1541.6072f, 2527.555f, 40f);
+			unk47[0] = Vector3(1815.5753f, 2535.0596f, (float)150 + iParam4);
 			unk93[0] = 114f;
-			unk[1] = { 1788.8787f, 2445.7273f, 40f };
-			unk47[1] = { 1716.9603f, 2502.957f, (float)150 + iParam4 };
+			unk[1] = Vector3(1788.8787f, 2445.7273f, 40f);
+			unk47[1] = Vector3(1716.9603f, 2502.957f, (float)150 + iParam4);
 			unk93[1] = 88.5f;
-			unk[2] = { 1601.1575f, 2436.2441f, 40f };
-			unk47[2] = { 1650.0776f, 2515.9226f, (float)150 + iParam4 };
+			unk[2] = Vector3(1601.1575f, 2436.2441f, 40f);
+			unk47[2] = Vector3(1650.0776f, 2515.9226f, (float)150 + iParam4);
 			unk93[2] = 133.25f;
-			unk[3] = { 1706.3307f, 2407.5972f, 40f };
-			unk47[3] = { 1698.5546f, 2460.2078f, (float)150 + iParam4 };
+			unk[3] = Vector3(1706.3307f, 2407.5972f, 40f);
+			unk47[3] = Vector3(1698.5546f, 2460.2078f, (float)150 + iParam4);
 			unk93[3] = 104.5f;
-			unk[4] = { 1712.4517f, 2756.2175f, 40f };
-			unk47[4] = { 1718.8477f, 2589.1616f, (float)150 + iParam4 };
+			unk[4] = Vector3(1712.4517f, 2756.2175f, 40f);
+			unk47[4] = Vector3(1718.8477f, 2589.1616f, (float)150 + iParam4);
 			unk93[4] = 121.75f;
-			unk[5] = { 1830.2278f, 2661.2402f, 40f };
-			unk47[5] = { 1774.8124f, 2679.4187f, (float)150 + iParam4 };
+			unk[5] = Vector3(1830.2278f, 2661.2402f, 40f);
+			unk47[5] = Vector3(1774.8124f, 2679.4187f, (float)150 + iParam4);
 			unk93[5] = 84.5f;
-			unk[6] = { 1559.0503f, 2632.2205f, 40f };
-			unk47[6] = { 1657.2083f, 2595.4844f, (float)150 + iParam4 };
+			unk[6] = Vector3(1559.0503f, 2632.2205f, 40f);
+			unk47[6] = Vector3(1657.2083f, 2595.4844f, (float)150 + iParam4);
 			unk93[6] = 103.75f;
-			unk[7] = { 1612.0209f, 2716.869f, 40f };
-			unk47[7] = { 1657.1647f, 2669.721f, (float)150 + iParam4 };
+			unk[7] = Vector3(1612.0209f, 2716.869f, 40f);
+			unk47[7] = Vector3(1657.1647f, 2669.721f, (float)150 + iParam4);
 			unk93[7] = 104.25f;
-			unk[8] = { 1809.8721f, 2729.827f, 40f };
-			unk47[8] = { 1789.8551f, 2705.0369f, (float)150 + iParam4 };
+			unk[8] = Vector3(1809.8721f, 2729.827f, 40f);
+			unk47[8] = Vector3(1789.8551f, 2705.0369f, (float)150 + iParam4);
 			unk93[8] = 91f;
-			unk[9] = { 1818.7888f, 2605.9478f, 40f };
-			unk47[9] = { 1783.1143f, 2606.7832f, (float)150 + iParam4 };
+			unk[9] = Vector3(1818.7888f, 2605.9478f, 40f);
+			unk47[9] = Vector3(1783.1143f, 2606.7832f, (float)150 + iParam4);
 			unk93[9] = 51.25f;
 			num = 10;
 			break;
 	
 		case 5:
-			unk[0] = { 3411.002f, 3663.1846f, 20f };
-			unk47[0] = { 3615.583f, 3626.1936f, (float)40 + iParam4 };
+			unk[0] = Vector3(3411.002f, 3663.1846f, 20f);
+			unk47[0] = Vector3(3615.583f, 3626.1936f, (float)40 + iParam4);
 			unk93[0] = 45.75f;
-			unk[1] = { 3426.66f, 3733.078f, 20f };
-			unk47[1] = { 3643.8008f, 3694.3618f, (float)40 + iParam4 };
+			unk[1] = Vector3(3426.66f, 3733.078f, 20f);
+			unk47[1] = Vector3(3643.8008f, 3694.3618f, (float)40 + iParam4);
 			unk93[1] = 99f;
-			unk[2] = { 3446.0364f, 3795.6882f, 20f };
-			unk47[2] = { 3650.9143f, 3766.1516f, (float)40 + iParam4 };
+			unk[2] = Vector3(3446.0364f, 3795.6882f, 20f);
+			unk47[2] = Vector3(3650.9143f, 3766.1516f, (float)40 + iParam4);
 			unk93[2] = 81.5f;
 			num = 3;
 			break;
 	
 		case 6:
-			unk[0] = { 526.05304f, -3391.4968f, -10f };
-			unk47[0] = { 523.22894f, -3118.678f, (float)10 + iParam4 };
+			unk[0] = Vector3(526.05304f, -3391.4968f, -10f);
+			unk47[0] = Vector3(523.22894f, -3118.678f, (float)10 + iParam4);
 			unk93[0] = 120f;
-			unk[1] = { 459.4397f, -3199.9895f, 4.819676f };
-			unk47[1] = { 593.89276f, -3199.998f, 30.069256f };
+			unk[1] = Vector3(459.4397f, -3199.9895f, 4.819676f);
+			unk47[1] = Vector3(593.89276f, -3199.998f, 30.069256f);
 			unk93[1] = 170f;
-			unk[2] = { 552.8467f, -3111.0537f, 4.819394f };
-			unk47[2] = { 585.3137f, -3111.8442f, 17.569231f };
+			unk[2] = Vector3(552.8467f, -3111.0537f, 4.819394f);
+			unk47[2] = Vector3(585.3137f, -3111.8442f, 17.569231f);
 			unk93[2] = 12.5f;
-			unk[3] = { 598.46655f, -3140.1475f, 4.819257f };
-			unk47[3] = { 597.4973f, -3117.0627f, 17.319258f };
+			unk[3] = Vector3(598.46655f, -3140.1475f, 4.819257f);
+			unk47[3] = Vector3(597.4973f, -3117.0627f, 17.319258f);
 			unk93[3] = 9.75f;
 			num = 4;
 			break;
 	
 		case 7:
-			unk[0] = { -1108.5497f, -570.87976f, 20f };
-			unk47[0] = { -1187.8108f, -477.50366f, (float)50 + iParam4 };
+			unk[0] = Vector3(-1108.5497f, -570.87976f, 20f);
+			unk47[0] = Vector3(-1187.8108f, -477.50366f, (float)50 + iParam4);
 			unk93[0] = 162f;
-			unk[1] = { -1201.3776f, -485.96732f, 20f };
-			unk47[1] = { -1215.7959f, -464.82806f, (float)50 + iParam4 };
+			unk[1] = Vector3(-1201.3776f, -485.96732f, 20f);
+			unk47[1] = Vector3(-1215.7959f, -464.82806f, (float)50 + iParam4);
 			unk93[1] = 124f;
-			unk[2] = { -985.6311f, -525.42334f, 20f };
-			unk47[2] = { -1013.3932f, -475.20575f, (float)50 + iParam4 };
+			unk[2] = Vector3(-985.6311f, -525.42334f, 20f);
+			unk47[2] = Vector3(-1013.3932f, -475.20575f, (float)50 + iParam4);
 			unk93[2] = 55f;
-			unk[3] = { -1055.8492f, -477.8226f, 20f };
-			unk47[3] = { -1073.3325f, -498.717f, (float)50 + iParam4 };
+			unk[3] = Vector3(-1055.8492f, -477.8226f, 20f);
+			unk47[3] = Vector3(-1073.3325f, -498.717f, (float)50 + iParam4);
 			unk93[3] = 142f;
 			num = 4;
 			break;
 	
 		case 8:
-			unk[0] = { 461.5684f, -984.57196f, 29.439508f };
-			unk47[0] = { 471.17004f, -984.4292f, 40.14212f };
+			unk[0] = Vector3(461.5684f, -984.57196f, 29.439508f);
+			unk47[0] = Vector3(471.17004f, -984.4292f, 40.14212f);
 			unk93[0] = 7.75f;
-			unk[1] = { 457.3404f, -984.75604f, 34.439507f };
-			unk47[1] = { 457.20837f, -993.71893f, 29.389584f };
+			unk[1] = Vector3(457.3404f, -984.75604f, 34.439507f);
+			unk47[1] = Vector3(457.20837f, -993.71893f, 29.389584f);
 			unk93[1] = 14.75f;
-			unk[2] = { 477.62268f, -986.60004f, 40.00819f };
-			unk47[2] = { 424.8687f, -986.3279f, 48.712406f };
+			unk[2] = Vector3(477.62268f, -986.60004f, 40.00819f);
+			unk47[2] = Vector3(424.8687f, -986.3279f, 48.712406f);
 			unk93[2] = 31.5f;
-			unk[3] = { 474.38895f, -974.4613f, 39.557606f };
-			unk47[3] = { 474.0358f, -1021.9721f, 49.10033f };
+			unk[3] = Vector3(474.38895f, -974.4613f, 39.557606f);
+			unk47[3] = Vector3(474.0358f, -1021.9721f, 49.10033f);
 			unk93[3] = 30.5f;
-			unk[4] = { 442.17685f, -974.1888f, 29.689508f };
-			unk47[4] = { 442.18552f, -979.8635f, 33.439507f };
+			unk[4] = Vector3(442.17685f, -974.1888f, 29.689508f);
+			unk47[4] = Vector3(442.18552f, -979.8635f, 33.439507f);
 			unk93[4] = 6.75f;
 			num = 5;
 			break;
@@ -1874,7 +1874,7 @@ void func_49() // Position - 0x26CF
 
 	func_103();
 	func_98();
-	unk = { uLocal_95 };
+	unk = Vector3(uLocal_95);
 
 	if (func_20(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 3, 1000, false) || func_19(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), 1000) || func_96(PLAYER::PLAYER_PED_ID()) && func_95(PLAYER::PLAYER_PED_ID()))
 		flag = true;
@@ -1888,12 +1888,12 @@ void func_49() // Position - 0x26CF
 
 	if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -1588.9766f, 2793.9412f, 14.982886f, -1575.6636f, 2779.5579f, 26.115358f, 29.75f, false, true, 0))
 	{
-		unk = { -1592.1f, 2797.2f, 17.1f };
+		unk = Vector3(-1592.1f, 2797.2f, 17.1f);
 		uLocal_382.f_181 = 1;
 	}
 	else if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), -2306.9163f, 3390.5454f, 29.178257f, -2322.2449f, 3401.7185f, 35.631306f, 36f, false, true, 0))
 	{
-		unk = { -2303.9f, 3388f, 31.3f };
+		unk = Vector3(-2303.9f, 3388f, 31.3f);
 		uLocal_382.f_181 = 2;
 	}
 
@@ -1908,8 +1908,8 @@ void func_49() // Position - 0x26CF
 			func_88(&(uLocal_382.f_7), 2);
 			_CONVERSATION_INITIALIZE_ACTOR(&(uLocal_382.f_7), 2, 0, "AIRMECH", 0, 1);
 			func_86(&(uLocal_382.f_7), 2, unk);
-			Global_21014.f_162 = { unk };
-			unk4 = { func_85() };
+			Global_21014.f_162 = Vector3(unk);
+			unk4 = Vector3(func_85());
 		
 			if (!MISC::IS_STRING_NULL_OR_EMPTY(&unk4))
 				if (_CONVERSATION_ADD_LINE(&(uLocal_382.f_7), "SMGFZAU", &unk4, 7, 0, 0, 0))
@@ -2218,16 +2218,16 @@ BOOL func_65(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x2CD6
 		if (func_82(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_81();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -2364,7 +2364,7 @@ void func_66() // Position - 0x2FA4
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -2418,18 +2418,18 @@ void func_70() // Position - 0x307F
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -2602,7 +2602,7 @@ void func_81() // Position - 0x3417
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -2644,7 +2644,7 @@ void func_83() // Position - 0x34A6
 
 void func_84(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x34FD
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -2697,7 +2697,7 @@ struct<6> func_85() // Position - 0x3553
 void func_86(var uParam0, int iParam1, var uParam2, var uParam3, var uParam4) // Position - 0x3676
 {
 	uParam0->f_161 = iParam1;
-	uParam0->f_162 = { uParam2 };
+	uParam0->f_162 = Vector3(uParam2);
 	return;
 }
 
@@ -2731,7 +2731,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 void func_88(var uParam0, int iParam1) // Position - 0x3729
 {
 	uParam0->f_161 = -99;
-	uParam0->f_162 = { 0f, 0f, 0f };
+	uParam0->f_162 = Vector3(0f, 0f, 0f);
 	iParam1 < 0;
 	return;
 }
@@ -3452,7 +3452,7 @@ void func_127(int iParam0) // Position - 0x4861
 			if (!ENTITY::IS_ENTITY_DEAD(NETWORK::NET_TO_PED(uLocal_98.f_3[iParam0].f_1), false))
 			{
 				ped = NETWORK::NET_TO_PED(uLocal_98.f_3[iParam0].f_1);
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(ped, true) };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(ped, true));
 			
 				if (entityCoords.f_2 <= -150f)
 				{
@@ -3487,7 +3487,7 @@ void func_127(int iParam0) // Position - 0x4861
 			break;
 	
 		case 2:
-			vector = { func_136(iParam0) };
+			vector = Vector3(func_136(iParam0));
 		
 			if (!_IS_NULL_VECTOR(vector))
 				if (!NETWORK::IS_SPHERE_VISIBLE_TO_ANOTHER_MACHINE(vector, 20f) && !CAM::IS_SPHERE_VISIBLE(vector, 20f))
@@ -3698,10 +3698,10 @@ void func_133(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPa
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -3724,7 +3724,7 @@ int func_134(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -3756,7 +3756,7 @@ Vector3 func_136(int iParam0) // Position - 0x4F56
 	if (ENTITY::IS_ENTITY_DEAD(playerPed, false))
 		return 0f, 0f, 0f;
 
-	offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_HEADING(playerPed), 0f, -250f, 40f * SYSTEM::TO_FLOAT(iParam0)) };
+	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(ENTITY::GET_ENTITY_COORDS(playerPed, true), ENTITY::GET_ENTITY_HEADING(playerPed), 0f, -250f, 40f * SYSTEM::TO_FLOAT(iParam0)));
 
 	if (offsetFromCoordAndHeadingInWorldCoords.f_2 < 100f)
 		offsetFromCoordAndHeadingInWorldCoords.f_2 = 100f;
@@ -3782,7 +3782,7 @@ BOOL func_137(int iParam0) // Position - 0x4FBF
 				{
 					if (PLAYER::GET_PLAYER_WANTED_LEVEL(NETWORK::NETWORK_GET_PLAYER_INDEX(PLAYER::INT_TO_PARTICIPANTINDEX(i))) >= 4)
 					{
-						entityCoords = { ENTITY::GET_ENTITY_COORDS(playerPed, false) };
+						entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(playerPed, false));
 					
 						if (func_20(entityCoords, 3, 1000, false) && entityCoords.f_2 > 90f)
 						{

@@ -313,7 +313,7 @@ void main() // Position - 0x0
 	fLocal_34 = 140f;
 	fLocal_35 = 180f;
 	iLocal_38 = 3;
-	uLocal_40 = { -690.93805f, 512.2703f, 109.36385f };
+	uLocal_40 = Vector3(-690.93805f, 512.2703f, 109.36385f);
 	iLocal_100 = -1;
 	iLocal_108 = 60000;
 	iLocal_285 = 99;
@@ -597,11 +597,11 @@ void func_5(int iParam0) // Position - 0x631
 	if (!Global_53765[num].f_10[num3].f_1)
 	{
 		num4 = Global_53765[num].f_10[num3];
-		TEXT_LABEL_COPY(&unk, { func_10(Global_44465[num4].f_1) }, 4);
+		TEXT_LABEL_COPY(&unk, Vector3(func_10(Global_44465[num4].f_1)), 4);
 	}
 	else
 	{
-		unk = { Global_53765[num].f_10[num3].f_2 };
+		unk = Vector3(Global_53765[num].f_10[num3].f_2);
 	}
 
 	if (iParam0 == 28)
@@ -1394,16 +1394,16 @@ int func_23(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x16B4
 		if (func_36(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_35();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -1540,7 +1540,7 @@ void func_24() // Position - 0x1982
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1604,18 +1604,18 @@ void func_30() // Position - 0x1A7F
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1752,7 +1752,7 @@ void func_37() // Position - 0x1D14
 
 void func_38(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1D6B
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1972,7 +1972,7 @@ void func_49(var uParam0) // Position - 0x20E2
 	}
 	else
 	{
-		vector = { func_50(uParam0->f_19[0], uParam0->f_19[1], 0.5f, true) };
+		vector = Vector3(func_50(uParam0->f_19[0], uParam0->f_19[1], 0.5f, true));
 		uParam0->f_26 = MISC::IS_POSITION_OCCUPIED(vector, 1.2f, false, true, true, false, false, PLAYER::PLAYER_PED_ID(), false);
 		uParam0->f_26;
 	}
@@ -2026,7 +2026,7 @@ Vector3 func_50(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4,
 	if (bParam7)
 		fParam6 = func_51(fParam6, 0f, 1f);
 
-	return uParam0 + ({ fParam6, fParam6, fParam6 } * (uParam3 - uParam0));
+	return uParam0 + (Vector3(fParam6, fParam6, fParam6) * (uParam3 - uParam0));
 }
 
 float func_51(float fParam0, float fParam1, float fParam2) // Position - 0x22CB
@@ -2192,7 +2192,7 @@ void func_55(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	
 		num5 = Global_47790[iParam1].f_32[num4];
 		num3 = num5;
-		unk = { func_10(Global_44465[num5].f_1) };
+		unk = Vector3(func_10(Global_44465[num5].f_1));
 	
 		if (Global_44465[num5].f_2 == iParam0 && !(Global_44465[num5].f_3 == iParam0))
 			return;
@@ -2305,9 +2305,9 @@ void func_55(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 		num2 = Global_44465[num8].f_2;
 	
 		if (Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_1)
-			TEXT_LABEL_COPY(&unk, { Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2 }, 16);
+			TEXT_LABEL_COPY(&unk, Vector3(Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2), 16);
 		else
-			unk = { func_10(Global_44465[num8].f_1) };
+			unk = Vector3(func_10(Global_44465[num8].f_1));
 	}
 
 	if (!bParam4)
@@ -2684,9 +2684,9 @@ float func_63(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bPa
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -3112,16 +3112,16 @@ void func_87(float fParam0, float fParam1, float fParam2, float fParam3, var uPa
 {
 	var unk;
 
-	unk = { fParam3, fParam3, fParam3 };
-	*uParam4 = { fParam0 - unk };
-	*uParam5 = { fParam0 + unk };
+	unk = Vector3(fParam3, fParam3, fParam3);
+	*uParam4 = Vector3(fParam0 - unk);
+	*uParam5 = Vector3(fParam0 + unk);
 	return;
 }
 
 void func_88(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7) // Position - 0x37A5
 {
-	uParam0->[0] = { fParam1 };
-	uParam0->[1] = { fParam4 };
+	uParam0->[0] = Vector3(fParam1);
+	uParam0->[1] = Vector3(fParam4);
 	uParam0->f_7 = fParam7;
 	return;
 }
@@ -3135,12 +3135,12 @@ void func_89(var uParam0, int iParam1) // Position - 0x37C9
 void func_90(var uParam0, int iParam1, float fParam2, float fParam3, float fParam4, var uParam5, var uParam6, var uParam7, float fParam8, float fParam9, float fParam10, float fParam11, float fParam12, float fParam13, float fParam14, float fParam15, float fParam16, float fParam17, float fParam18, float fParam19, float fParam20) // Position - 0x37D7
 {
 	uParam0->f_3 = iParam1;
-	*uParam0 = { fParam2 };
+	*uParam0 = Vector3(fParam2);
 	uParam0->f_5 = 2;
 	uParam0->f_4 = 0;
-	uParam0->f_19[0] = { fParam15 };
-	uParam0->f_19[1] = { fParam18 };
-	uParam0->f_14 = { uParam5 };
+	uParam0->f_19[0] = Vector3(fParam15);
+	uParam0->f_19[1] = Vector3(fParam18);
+	uParam0->f_14 = Vector3(uParam5);
 	func_88(&(uParam0->f_6), fParam8, fParam11, fParam14);
 	return;
 }

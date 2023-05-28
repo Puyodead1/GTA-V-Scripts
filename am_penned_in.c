@@ -2870,7 +2870,7 @@ void main() // Position - 0x0
 								MISC::SET_BIT(&(uLocal_292[NETWORK::PARTICIPANT_ID_TO_INT()].f_1), 7);
 					
 						func_1161();
-						uLocal_572 = { uLocal_604[0] };
+						uLocal_572 = Vector3(uLocal_604[0]);
 						fLocal_579 = func_1160();
 						fLocal_580 = fLocal_579;
 						iLocal_571 = 0;
@@ -3043,7 +3043,7 @@ void func_3() // Position - 0x3AD
 			}
 			else if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_2775, 500, false))
 			{
-				iLocal_93.f_194 = { uLocal_572 };
+				iLocal_93.f_194 = Vector3(uLocal_572);
 				_STOPWATCH_DESTROY(&uLocal_2775);
 			}
 		}
@@ -3347,10 +3347,10 @@ void func_15(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -3373,7 +3373,7 @@ int func_16(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -3396,7 +3396,7 @@ Vector3 func_18(var uParam0, var uParam1, var uParam2) // Position - 0xAE6
 {
 	var unk;
 
-	unk = { uParam0 };
+	unk = Vector3(uParam0);
 	unk.f_2 = unk.f_2 + 100f;
 	return unk;
 }
@@ -3619,11 +3619,11 @@ void func_29(BOOL bParam0) // Position - 0xE88
 
 	if (!func_31(uLocal_572, 0f, 0f, 0f, false))
 		if (!func_31(uLocal_2764, uLocal_572, false))
-			uLocal_2764 = { uLocal_572 };
+			uLocal_2764 = Vector3(uLocal_572);
 
 	if (num < 217)
 	{
-		vector = { uLocal_604[num] };
+		vector = Vector3(uLocal_604[num]);
 		num2 = SYSTEM::VDIST2(uLocal_572, vector);
 	
 		if (!func_31(uLocal_604[num], 0f, 0f, 0f, false))
@@ -3632,26 +3632,26 @@ void func_29(BOOL bParam0) // Position - 0xE88
 			{
 				if (num2 < 0.1f * 0.1f)
 				{
-					uLocal_572 = { uLocal_604[num] };
+					uLocal_572 = Vector3(uLocal_604[num]);
 					iLocal_571 = iLocal_571 + 1;
 					flag = true;
 				}
 				else
 				{
-					unk3 = { vector - uLocal_572 };
-					unk6 = { func_30(unk3) };
+					unk3 = Vector3(vector - uLocal_572);
+					unk6 = Vector3(func_30(unk3));
 				
 					if (!NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
-						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * { iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166 } * { fLocal_2767, fLocal_2767, fLocal_2767 }) };
+						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166) * Vector3(fLocal_2767, fLocal_2767, fLocal_2767)) };
 					else
-						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * { iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166 }) };
+						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166)) };
 				
 					num3 = SYSTEM::VDIST2(uLocal_572, vector2);
 				
 					if (num3 > num2)
-						unk11 = { vector };
+						unk11 = Vector3(vector);
 					else
-						unk11 = { vector2 };
+						unk11 = Vector3(vector2);
 				}
 			}
 		}
@@ -3662,7 +3662,7 @@ void func_29(BOOL bParam0) // Position - 0xE88
 		
 			if (!IS_BIT_SET(iLocal_93.f_1, 4))
 				if (!func_31(uLocal_604[iLocal_1474 - 1], 0f, 0f, 0f, false))
-					unk11 = { uLocal_604[iLocal_1474 - 1] };
+					unk11 = Vector3(uLocal_604[iLocal_1474 - 1]);
 		}
 	}
 
@@ -3677,12 +3677,12 @@ void func_29(BOOL bParam0) // Position - 0xE88
 			{
 				if (!flag)
 				{
-					iLocal_93.f_176 = { unk11 };
+					iLocal_93.f_176 = Vector3(unk11);
 					iLocal_93.f_171 = iLocal_571;
 				}
 				else
 				{
-					iLocal_93.f_176 = { uLocal_572 };
+					iLocal_93.f_176 = Vector3(uLocal_572);
 					iLocal_93.f_171 = iLocal_571;
 				}
 			}
@@ -3700,15 +3700,15 @@ void func_29(BOOL bParam0) // Position - 0xE88
 			if (iLocal_578 != iLocal_93.f_171)
 			{
 				iLocal_578 = iLocal_93.f_171;
-				uLocal_575 = { iLocal_93.f_176 };
-				uLocal_572 = { uLocal_575 };
+				uLocal_575 = Vector3(iLocal_93.f_176);
+				uLocal_572 = Vector3(uLocal_575);
 				iLocal_571 = iLocal_578;
 				flag = true;
 			}
 			else
 			{
-				uLocal_575 = { iLocal_93.f_176 };
-				unk14 = { iLocal_93.f_176 };
+				uLocal_575 = Vector3(iLocal_93.f_176);
+				unk14 = Vector3(iLocal_93.f_176);
 			}
 		
 			flag2 = true;
@@ -3722,17 +3722,17 @@ void func_29(BOOL bParam0) // Position - 0xE88
 			flag3 = true;
 		
 			if (flag3)
-				uLocal_572 = { unk14 };
+				uLocal_572 = Vector3(unk14);
 		}
 		else
 		{
-			uLocal_572 = { unk11 };
+			uLocal_572 = Vector3(unk11);
 		}
 	}
 
 	if (IS_BIT_SET(iLocal_93.f_1, 4))
 		if (!func_31(uLocal_572, uLocal_604[iLocal_1474 - 1], false))
-			uLocal_572 = { uLocal_604[iLocal_1474 - 1] };
+			uLocal_572 = Vector3(uLocal_604[iLocal_1474 - 1]);
 
 	if (HUD::DOES_BLIP_EXIST(blLocal_569))
 		HUD::SET_BLIP_COORDS(blLocal_569, uLocal_572);
@@ -3750,7 +3750,7 @@ Vector3 func_30(float fParam0, var uParam1, var uParam2) // Position - 0x11B6
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -3898,7 +3898,7 @@ void func_37() // Position - 0x13CC
 	var unk26;
 
 	participantIndex = -1;
-	unk13 = { func_442() };
+	unk13 = Vector3(func_442());
 	player = _INVALID_PLAYER_INDEX();
 
 	if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0))
@@ -3994,7 +3994,7 @@ void func_37() // Position - 0x13CC
 												{
 													if (player == player3 || player == player4)
 													{
-														unk39 = { func_429() };
+														unk39 = Vector3(func_429());
 													
 														if (player == player3)
 															func_427(func_428(), &unk39, PLAYER::GET_PLAYER_NAME(player4), 1, 15000, &unk13, 2);
@@ -4010,7 +4010,7 @@ void func_37() // Position - 0x13CC
 													
 														if (!flag)
 														{
-															unk43 = { func_425() };
+															unk43 = Vector3(func_425());
 															func_423(func_424(), _INVALID_PLAYER_INDEX(), _INVALID_PLAYER_INDEX(), -1, &unk43, &unk13, 1, 15000, 2, PLAYER::GET_PLAYER_NAME(player3), PLAYER::GET_PLAYER_NAME(player4), 0);
 														}
 													
@@ -4087,7 +4087,7 @@ void func_37() // Position - 0x13CC
 													}
 												}
 											
-												unk5 = { func_144() };
+												unk5 = Vector3(func_144());
 												_SHOW_BANNER(func_143(), "PEN_WIN" /*WINNER*/, &unk5, 1, 15000, 2, 1, 0);
 												MISC::SET_BIT(&iLocal_549, 17);
 												func_426(true);
@@ -4125,23 +4125,23 @@ void func_37() // Position - 0x13CC
 														
 															if (!flag && !flag2)
 															{
-																unk9 = { func_124() };
+																unk9 = Vector3(func_124());
 																func_427(func_424(), &unk9, PLAYER::GET_PLAYER_NAME(player3), 1, 15000, &unk13, 2);
 															}
 															else if (flag2)
 															{
-																unk9 = { func_123() };
+																unk9 = Vector3(func_123());
 																func_68(func_424(), &unk13, &unk9, str, num6, 0, -1, -1, -1, 2, -1);
 															}
 															else if (NETWORK::NETWORK_IS_PLAYER_A_PARTICIPANT(player3))
 															{
-																unk9 = { func_67() };
+																unk9 = Vector3(func_67());
 																func_427(91, &unk9, PLAYER::GET_PLAYER_NAME(player3), 1, 15000, &unk13, 2);
 																flag3 = true;
 															}
 															else
 															{
-																unk9 = { func_124() };
+																unk9 = Vector3(func_124());
 																func_427(func_424(), &unk9, PLAYER::GET_PLAYER_NAME(player3), 1, 15000, &unk13, 2);
 																flag3 = true;
 															}
@@ -4149,7 +4149,7 @@ void func_37() // Position - 0x13CC
 													}
 													else
 													{
-														unk = { func_66() };
+														unk = Vector3(func_66());
 														_SHOW_BANNER(func_424(), &unk13, &unk, 1, 15000, 2, 1, 0);
 													}
 												
@@ -4195,7 +4195,7 @@ void func_37() // Position - 0x13CC
 										
 											if (flag4)
 											{
-												unk62 = { func_65() };
+												unk62 = Vector3(func_65());
 											
 												if (flag5)
 													_SHOW_BANNER(func_428(), &unk13, &unk62, 1, -1, 2, 1, 0);
@@ -4208,7 +4208,7 @@ void func_37() // Position - 0x13CC
 									}
 									else
 									{
-										unk = { func_66() };
+										unk = Vector3(func_66());
 										_SHOW_BANNER(func_424(), &unk13, &unk, 1, 15000, 2, 1, 0);
 									
 										if (participantIndex == NETWORK::PARTICIPANT_ID_TO_INT())
@@ -4267,17 +4267,17 @@ void func_37() // Position - 0x13CC
 									{
 										if (!func_431(&player3, &player4, &num4))
 										{
-											unk71 = { func_124() };
+											unk71 = Vector3(func_124());
 											func_62(&unk71, player3, HUD_COLOUR_WHITE, false, false, false, true, false);
 										}
 										else if (num4 == 2)
 										{
-											unk75 = { func_61() };
+											unk75 = Vector3(func_61());
 											func_58(&unk75, player3, player4, HUD_COLOUR_WHITE, HUD_COLOUR_WHITE, false, false);
 										}
 										else
 										{
-											unk79 = { func_65() };
+											unk79 = Vector3(func_65());
 											_THEFEED_SHOW_MESSAGE(&unk79, false);
 										}
 									}
@@ -4605,7 +4605,7 @@ void func_56(int iParam0) // Position - 0x2246
 
 	for (i = 4; i >= iParam0 + 1; i = i + -1)
 	{
-		Global_1944061.f_5[i] = { Global_1944061.f_5[i - 1] };
+		Global_1944061.f_5[i] = Vector3(Global_1944061.f_5[i - 1]);
 	}
 
 	return;
@@ -4711,7 +4711,7 @@ int func_62(const char* sParam0, Player plParam1, eHudColour ehcParam2, BOOL bPa
 		}
 		else
 		{
-			Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+			Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 		
 			if (NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Global_2764133, 35, &Global_2764203))
 			{
@@ -4728,7 +4728,7 @@ int func_62(const char* sParam0, Player plParam1, eHudColour ehcParam2, BOOL bPa
 				if (bParam6)
 				{
 					if (bParam7)
-						playerName = { func_63(&playerName) };
+						playerName = Vector3(func_63(&playerName));
 				
 					num = HUD::END_TEXT_COMMAND_THEFEED_POST_CREWTAG_WITH_GAME_NAME(flag, NETWORK::NETWORK_CLAN_IS_ROCKSTAR_CLAN(&Global_2764133, 35), &(Global_2764133.f_17), Global_2764133.f_30, isLeader, false, Global_2764133, &playerName, Global_1576217, Global_1576218, Global_1576219);
 				}
@@ -4887,7 +4887,7 @@ int func_70(var uParam0) // Position - 0x26D4
 	
 		if (Global_2672505.f_2514[0].f_2 == 0)
 		{
-			Global_2672505.f_2514[0] = { *uParam0 };
+			Global_2672505.f_2514[0] = Vector3(*uParam0);
 		
 			if (func_72(uParam0->f_69, 8192))
 				Global_1935182 = 1;
@@ -4900,10 +4900,10 @@ int func_70(var uParam0) // Position - 0x26D4
 	
 		for (i = 2; i >= 1; i = i + -1)
 		{
-			Global_2672505.f_2514[i + 1] = { Global_2672505.f_2514[i] };
+			Global_2672505.f_2514[i + 1] = Vector3(Global_2672505.f_2514[i]);
 		}
 	
-		Global_2672505.f_2514[1] = { *uParam0 };
+		Global_2672505.f_2514[1] = Vector3(*uParam0);
 		return 1;
 	}
 
@@ -4911,7 +4911,7 @@ int func_70(var uParam0) // Position - 0x26D4
 	{
 		if (Global_2672505.f_2514[i].f_2 == 0)
 		{
-			Global_2672505.f_2514[i] = { *uParam0 };
+			Global_2672505.f_2514[i] = Vector3(*uParam0);
 		
 			if (i == 0)
 				func_73();
@@ -6110,7 +6110,7 @@ BOOL func_128(Player plParam0) // Position - 0x4039
 {
 	var gamerHandle;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (IS_XBOX_PLATFORM())
 		if (plParam0 == PLAYER::PLAYER_ID())
@@ -6128,7 +6128,7 @@ BOOL func_129(Player plParam0) // Position - 0x4079
 
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 	{
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	
 		if (MISC::IS_ORBIS_VERSION() && !MISC::IS_PROSPERO_VERSION() || MISC::IS_PC_VERSION())
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
@@ -14498,7 +14498,7 @@ BOOL func_156(int iParam0) // Position - 0xE1FD
 
 BOOL func_157(int iParam0, int iParam1, int iParam2) // Position - 0xE314
 {
-	Global_78341[1] = { func_158(iParam0, iParam1, iParam2, -1) };
+	Global_78341[1] = Vector3(func_158(iParam0, iParam1, iParam2, -1));
 	return IS_BIT_SET(Global_78341[1].f_6, 2);
 }
 
@@ -46431,7 +46431,7 @@ void func_252(int iParam0, int iParam1, int iParam2, Any anParam3, int iParam4, 
 			{
 				if (!_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
 				{
-					num4 = { func_264() };
+					num4 = Vector3(func_264());
 					MONEY::NETWORK_EARN_FROM_BUSINESS_PRODUCT(iParam1, MISC::GET_HASH_KEY(func_263(num4)), func_262(num4), iParam4);
 				}
 			}
@@ -47110,7 +47110,7 @@ void func_270(Ped pedParam0, int iParam1, char* sParam2, int iParam3) // Positio
 {
 	var unk;
 
-	unk = { func_273(pedParam0, true) };
+	unk = Vector3(func_273(pedParam0, true));
 
 	if (pedParam0 == func_272(PLAYER::PLAYER_PED_ID()))
 		func_271(1);
@@ -47140,12 +47140,12 @@ Vector3 func_273(Ped pedParam0, BOOL bParam1) // Position - 0x2E2AC
 	float unk4;
 
 	if (CAM::IS_GAMEPLAY_CAM_RENDERING())
-		gameplayCamRot = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
+		gameplayCamRot = Vector3(CAM::GET_GAMEPLAY_CAM_ROT(2));
 
 	if (pedParam0 == func_274(PLAYER::PLAYER_PED_ID()) && CAM::GET_CAM_VIEW_MODE_FOR_CONTEXT(CAM::GET_CAM_ACTIVE_VIEW_MODE_CONTEXT()) == FIRST_PERSON)
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam0, 0f, 8f, -0.2f) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam0, 0f, 8f, -0.2f));
 	else
-		offsetFromEntityInWorldCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	entityHeading = 0f;
 
@@ -47164,7 +47164,7 @@ Vector3 func_273(Ped pedParam0, BOOL bParam1) // Position - 0x2E2AC
 	else
 		zOffset = minimum.f_2 + 0.18f;
 
-	offsetFromEntityInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromEntityInWorldCoords, entityHeading, 0f, 0f, zOffset) };
+	offsetFromEntityInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromEntityInWorldCoords, entityHeading, 0f, 0f, zOffset));
 	return offsetFromEntityInWorldCoords;
 }
 
@@ -47193,7 +47193,7 @@ void func_275(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, c
 	
 		if (num != -1)
 		{
-			Global_2672505.f_1081[num] = { uParam0 };
+			Global_2672505.f_1081[num] = Vector3(uParam0);
 			Global_2672505.f_1081[num].f_6 = 1;
 			Global_2672505.f_1081[num].f_4 = func_278(Global_2672505.f_1081[num], &Global_1574479, &Global_1574480);
 			Global_2672505.f_1081[num].f_7 = NETWORK::GET_NETWORK_TIME();
@@ -47410,7 +47410,7 @@ void func_285(int iParam0) // Position - 0x2E7B3
 	var gamerHandle;
 	int unk;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
@@ -47838,8 +47838,8 @@ BOOL func_301(Player plParam0, Player plParam1) // Position - 0x2EEEC
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{
@@ -49482,7 +49482,7 @@ int func_346(char* sParam0, char* sParam1, eHudColour ehcParam2, eHudColour ehcP
 	}
 	else
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&Global_2764133, 35, &Global_2764203))
 		{
@@ -50545,7 +50545,7 @@ void func_366(int iParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		{
 			if (func_245())
 			{
-				num = { func_264() };
+				num = Vector3(func_264());
 			
 				if (uParam1->f_10 == uParam1->f_11)
 				{
@@ -50665,7 +50665,7 @@ void func_366(int iParam0, var uParam1, var uParam2, var uParam3) // Position - 
 			}
 			else if (func_255(false))
 			{
-				num10 = { func_367(_GET_BOSS_OF_LOCAL_PLAYER()) };
+				num10 = Vector3(func_367(_GET_BOSS_OF_LOCAL_PLAYER()));
 			
 				if (uParam1->f_10 == uParam1->f_11)
 				{
@@ -52740,7 +52740,7 @@ void func_408(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -54903,7 +54903,7 @@ BOOL func_471(Player plParam0) // Position - 0x372BC
 	if (func_301(PLAYER::PLAYER_ID(), plParam0))
 		return true;
 
-	Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (NETWORK::NETWORK_IS_FRIEND(&Global_2764203))
 		return true;
@@ -54942,23 +54942,23 @@ Vector3 func_474(int iParam0) // Position - 0x37359
 	switch (iParam0)
 	{
 		case 6:
-			unk = { 770.8729f, -232.9857f, 65.1145f };
+			unk = Vector3(770.8729f, -232.9857f, 65.1145f);
 			break;
 	
 		case 7:
-			unk = { 157.237f, -1519.715f, 28.1416f };
+			unk = Vector3(157.237f, -1519.715f, 28.1416f);
 			break;
 	
 		case 8:
-			unk = { -899.8332f, 5567.7617f, 2.7747f };
+			unk = Vector3(-899.8332f, 5567.7617f, 2.7747f);
 			break;
 	
 		case 9:
-			unk = { -1894.427f, 2010.2701f, 140.5029f };
+			unk = Vector3(-1894.427f, 2010.2701f, 140.5029f);
 			break;
 	
 		case 10:
-			unk = { 1036.6892f, -619.3324f, 57.1851f };
+			unk = Vector3(1036.6892f, -619.3324f, 57.1851f);
 			break;
 	}
 
@@ -55097,7 +55097,7 @@ void func_481() // Position - 0x374D4
 				break;
 		
 			case 7:
-				unk = { func_495() };
+				unk = Vector3(func_495());
 			
 				if (!IS_BIT_SET(uLocal_292[NETWORK::PARTICIPANT_ID_TO_INT()].f_4, 7))
 					if (func_496(&unk))
@@ -55199,7 +55199,7 @@ void func_481() // Position - 0x374D4
 						break;
 				
 					case 7:
-						unk = { func_495() };
+						unk = Vector3(func_495());
 					
 						if (!IS_BIT_SET(uLocal_292[num].f_4, 7))
 							if (func_496(&unk))
@@ -55650,9 +55650,9 @@ float func_504(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bP
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -56567,7 +56567,7 @@ void func_541() // Position - 0x39582
 	
 		if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0))
 		{
-			unk = { func_495() };
+			unk = Vector3(func_495());
 		
 			if (iLocal_93.f_197 != 2)
 				if (!func_496(&unk))
@@ -56600,7 +56600,7 @@ void func_541() // Position - 0x39582
 	}
 	else if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0))
 	{
-		unk = { func_495() };
+		unk = Vector3(func_495());
 	
 		if (func_496(&unk))
 			func_494();
@@ -56804,7 +56804,7 @@ void func_551(BOOL bParam0, BOOL bParam1) // Position - 0x39CA0
 		HUD::GET_HUD_COLOUR(HUD_COLOUR_NET_PLAYER2, &r, &g, &b, &a);
 
 	alpha = 0.5f;
-	vector = { uLocal_572 };
+	vector = Vector3(uLocal_572);
 	scaleX = fLocal_579 * 2f;
 
 	switch (iLocal_93.f_167)
@@ -56813,70 +56813,70 @@ void func_551(BOOL bParam0, BOOL bParam1) // Position - 0x39CA0
 			scaleZ = 36.9f;
 			num = 7.875f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 1:
 			scaleZ = 26.25f;
 			num = 4.375f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 2:
 			scaleZ = 49.875f;
 			num = 12f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 3:
 			scaleZ = 9.5f;
 			num = 0f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 4:
 			scaleZ = 38.75f;
 			num = 10.25f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 6:
 			scaleZ = 5.25f;
 			num = 0f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 7:
 			scaleZ = 5.25f;
 			num = 0.875f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 8:
 			scaleZ = 15.375f;
 			num = 4.75f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 9:
 			scaleZ = 13.625f;
 			num = 4.5f;
 			scaleX = 38.875f;
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	
 		case 10:
 			scaleZ = 7.75f;
 			num = 2f;
 			scaleX = func_556();
-			vector = { func_555() };
+			vector = Vector3(func_555());
 			break;
 	}
 
@@ -56924,57 +56924,57 @@ Vector3 func_555() // Position - 0x39F83
 	switch (iLocal_93.f_167)
 	{
 		case 0:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = 1457.639f;
 			num.f_1 = -2371.45f;
 			break;
 	
 		case 1:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = -1903.733f;
 			num.f_1 = 2042.75f;
 			break;
 	
 		case 2:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = 2237.85f;
 			num.f_1 = 1469f;
 			break;
 	
 		case 3:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = -1210.197f;
 			num.f_1 = -2437.739f;
 			break;
 	
 		case 4:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = 106.968f;
 			num.f_1 = 7003.605f;
 			break;
 	
 		case 6:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			break;
 	
 		case 7:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			break;
 	
 		case 8:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = -2653.049f;
 			num.f_1 = 1505.637f;
 			break;
 	
 		case 9:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = -1464.237f;
 			num.f_1 = 2789.826f;
 			break;
 	
 		case 10:
-			num = { uLocal_572 };
+			num = Vector3(uLocal_572);
 			num = 999.892f;
 			num.f_1 = -677.42f;
 			break;
@@ -57398,13 +57398,13 @@ void func_568(var uParam0, int* piParam1, int iParam2, var uParam3, var uParam4,
 							{
 								player = offset;
 								num3 = Global_1853910[player].f_205.f_6;
-								unk34 = { func_613(offset) };
+								unk34 = Vector3(func_613(offset));
 							
 								if (offset == PLAYER::PLAYER_ID())
 									uParam3->f_35 = num11;
 							
 								TEXT_LABEL_ASSIGN_STRING(&(uParam3->f_1), PLAYER::GET_PLAYER_NAME(offset), 64);
-								uParam4->[i] = { GET_GAMER_HANDLE_PLAYER(offset) };
+								uParam4->[i] = Vector3(GET_GAMER_HANDLE_PLAYER(offset));
 								num2 = func_607(offset);
 								pedheadshotTxdString = "";
 							
@@ -57492,8 +57492,8 @@ void func_568(var uParam0, int* piParam1, int iParam2, var uParam3, var uParam4,
 								{
 									player = offset;
 									num3 = Global_1853910[player].f_205.f_6;
-									unk34 = { func_613(offset) };
-									uParam4->[i] = { GET_GAMER_HANDLE_PLAYER(offset) };
+									unk34 = Vector3(func_613(offset));
+									uParam4->[i] = Vector3(GET_GAMER_HANDLE_PLAYER(offset));
 									num2 = func_607(offset);
 									pedheadshotTxdString = "";
 								
@@ -57639,7 +57639,7 @@ BOOL func_571(var uParam0) // Position - 0x3AC92
 
 	if (player != _INVALID_PLAYER_INDEX() && _NETWORK_IS_PLAYER_VALID(player, false, true))
 	{
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(player) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(player));
 		num2 = func_574(uParam0, uParam0->f_37);
 	
 		if (IS_GAMER_HANDLE_VALID(gamerHandle))
@@ -58535,7 +58535,7 @@ void func_611(int iParam0) // Position - 0x3BB51
 
 	for (i = num + 1; i < Global_1666829; i = i + 1)
 	{
-		Global_1666668[num] = { Global_1666668[i] };
+		Global_1666668[num] = Vector3(Global_1666668[i]);
 		num = num + 1;
 	}
 
@@ -58563,7 +58563,7 @@ struct<4> func_613(Player plParam0) // Position - 0x3BC34
 
 	if (_NETWORK_IS_PLAYER_VALID(plParam0, false, true))
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	
 		if (IS_XBOX_PLATFORM())
 			if (IS_GAMER_HANDLE_VALID(Global_2764203))
@@ -58574,7 +58574,7 @@ struct<4> func_613(Player plParam0) // Position - 0x3BC34
 	
 		if (func_617(&Global_2764203))
 		{
-			Global_2764133 = { func_615(plParam0) };
+			Global_2764133 = Vector3(func_615(plParam0));
 			func_614(&Global_2764133, &unk);
 		}
 	}
@@ -58596,7 +58596,7 @@ struct<35> func_615(Player plParam0) // Position - 0x3BCC7
 	if (func_616(plParam0))
 		return Global_1575092[PLAYER::PLAYER_ID()];
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&clanDesc, 35, &gamerHandle);
 	return clanDesc;
 }
@@ -59049,7 +59049,7 @@ BOOL func_641(int* piParam0, int iParam1, var uParam2, int iParam3, BOOL bParam4
 				{
 					func_632(piParam0, 0, 0);
 					str = func_665(iParam1, &(Global_4718592.f_113731), bParam4);
-					unk = { func_663(iParam1) };
+					unk = Vector3(func_663(iParam1));
 				
 					if (bParam4)
 					{
@@ -60495,12 +60495,12 @@ void func_697() // Position - 0x3DD50
 		
 			if (ENTITY::DOES_ENTITY_EXIST(playerPed) && !ENTITY::IS_ENTITY_DEAD(playerPed, false))
 			{
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(playerPed, true) };
-				uLocal_2019.f_2 = { entityCoords };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(playerPed, true));
+				uLocal_2019.f_2 = Vector3(entityCoords);
 			}
 			else if (!_IS_NULL_VECTOR(uLocal_2019.f_2))
 			{
-				entityCoords = { uLocal_2019.f_2 };
+				entityCoords = Vector3(uLocal_2019.f_2);
 			}
 		
 			uLocal_2019.f_1 = NETWORK::NET_TO_ENT(iLocal_93.f_184.f_2);
@@ -60517,7 +60517,7 @@ void func_697() // Position - 0x3DD50
 							{
 								if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 								{
-									uLocal_2769 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+									uLocal_2769 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 									fLocal_2772 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 								}
 							}
@@ -60773,7 +60773,7 @@ void func_709(var uParam0) // Position - 0x3E2C1
 {
 	var unk;
 
-	unk = { func_721() };
+	unk = Vector3(func_721());
 
 	if (func_719(0, -1, false))
 	{
@@ -61291,14 +61291,14 @@ void func_731(BOOL bParam0, BOOL bParam1) // Position - 0x3EBF0
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -61611,10 +61611,10 @@ void func_738() // Position - 0x3F192
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -61999,7 +61999,7 @@ void func_764() // Position - 0x3F7F3
 	if (iLocal_93.f_21 > 0)
 		return;
 
-	unk = { uLocal_604[0] };
+	unk = Vector3(uLocal_604[0]);
 
 	if (!func_31(unk, 0f, 0f, 0f, false))
 		func_765(200, unk, &uLocal_2778, 1140457472, 1144750080, false);
@@ -62015,7 +62015,7 @@ void func_765(int iParam0, Vector3 vParam1, var uParam2, var uParam3, var uParam
 	if (func_47(PLAYER::PLAYER_ID()) && !func_46(PLAYER::PLAYER_ID()) && !IS_BIT_SET(Global_1894573[PLAYER::PLAYER_ID()].f_1, 8) && func_43(PLAYER::PLAYER_ID()) || func_42(PLAYER::PLAYER_ID()) || _IS_NULL_VECTOR(vParam1))
 		return;
 
-	Global_1947724 = { vParam1 };
+	Global_1947724 = Vector3(vParam1);
 	num = SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), vParam1);
 	func_804(iParam0, num);
 
@@ -62154,8 +62154,8 @@ void func_770(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x3FB35
 	}
 	else
 	{
-		Global_2635559.f_45 = { Global_2639866 };
-		Global_2635559.f_45.f_49 = { Global_2639866.f_49 };
+		Global_2635559.f_45 = Vector3(Global_2639866);
+		Global_2635559.f_45.f_49 = Vector3(Global_2639866.f_49);
 		Global_2635559.f_45.f_52 = Global_2639866.f_52;
 		Global_2635559.f_45.f_53 = Global_2639866.f_53;
 	}
@@ -62176,7 +62176,7 @@ void func_771() // Position - 0x3FBDB
 	var unk;
 
 	if (Global_2635559.f_490.f_1 == SCRIPT::GET_ID_OF_THIS_THREAD())
-		Global_2635559.f_490 = { unk };
+		Global_2635559.f_490 = Vector3(unk);
 
 	return;
 }
@@ -62248,7 +62248,7 @@ void func_774() // Position - 0x3FD0B
 void func_775() // Position - 0x3FD53
 {
 	MISC::COPY_SCRIPT_STRUCT(&(Global_2635559.f_714), &(Global_2635559.f_1233), 519);
-	Global_2635559.f_490 = { Global_2635559.f_496 };
+	Global_2635559.f_490 = Vector3(Global_2635559.f_496);
 
 	if (SCRIPT::GET_ID_OF_THIS_THREAD() == Global_2635559.f_714.f_518)
 		Global_2635559.f_1752 = 0;
@@ -62333,7 +62333,7 @@ void func_783() // Position - 0x3FF55
 
 	for (i = 0; i < 100; i = i + 1)
 	{
-		Global_2635559.f_714.f_1[i] = { unk };
+		Global_2635559.f_714.f_1[i] = Vector3(unk);
 	}
 
 	return;
@@ -62348,7 +62348,7 @@ void func_784() // Position - 0x3FF90
 	if (!(SCRIPT::GET_ID_OF_THIS_THREAD() == Global_2635559.f_714.f_518))
 	{
 		MISC::COPY_SCRIPT_STRUCT(&(Global_2635559.f_1233), &(Global_2635559.f_714), 519);
-		Global_2635559.f_496 = { Global_2635559.f_490 };
+		Global_2635559.f_496 = Vector3(Global_2635559.f_490);
 		Global_2635559.f_1752 = 1;
 	}
 
@@ -62382,7 +62382,7 @@ void func_788() // Position - 0x40064
 
 	for (i = 0; i < 50; i = i + 1)
 	{
-		Global_2635559.f_2263[i] = { unk };
+		Global_2635559.f_2263[i] = Vector3(unk);
 	}
 
 	Global_2635559.f_2262 = 0;
@@ -62792,7 +62792,7 @@ BOOL func_801(int iParam0) // Position - 0x4074B
 
 void func_802(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4) // Position - 0x40849
 {
-	Global_2635559.f_45.f_49 = { uParam0 };
+	Global_2635559.f_45.f_49 = Vector3(uParam0);
 	Global_2635559.f_45.f_52 = iParam3;
 	Global_2635559.f_45.f_53 = iParam4;
 	return;
@@ -63045,7 +63045,7 @@ void func_813() // Position - 0x40B4F
 					
 						if (IS_BIT_SET(iLocal_550, 3))
 						{
-							unk = { func_959() };
+							unk = Vector3(func_959());
 						
 							if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk))
 							{
@@ -63151,7 +63151,7 @@ void func_813() // Position - 0x40B4F
 													{
 														if (func_964())
 														{
-															unk5 = { func_953() };
+															unk5 = Vector3(func_953());
 														
 															if (func_964())
 																_DISPLAY_HELP_TEXT_NO_SOUND(&unk5, 30000);
@@ -63282,7 +63282,7 @@ void func_813() // Position - 0x40B4F
 										MISC::SET_BIT(&iLocal_550, 3);
 										_STOPWATCH_DESTROY(&uLocal_2753);
 										_STOPWATCH_INITIALIZE(&uLocal_2753, false, false);
-										unk = { func_959() };
+										unk = Vector3(func_959());
 									
 										if (func_964())
 											_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
@@ -63332,7 +63332,7 @@ void func_813() // Position - 0x40B4F
 					{
 						if (IS_BIT_SET(iLocal_550, 3))
 						{
-							unk = { func_959() };
+							unk = Vector3(func_959());
 						
 							if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk))
 							{
@@ -63363,7 +63363,7 @@ void func_813() // Position - 0x40B4F
 								{
 									if (func_964())
 									{
-										unk9 = { func_947() };
+										unk9 = Vector3(func_947());
 									
 										if (func_964())
 											_DISPLAY_HELP_TEXT_NO_SOUND(&unk9, 30000);
@@ -63390,7 +63390,7 @@ void func_813() // Position - 0x40B4F
 						}
 						else if (IS_BIT_SET(iLocal_93.f_1, 1))
 						{
-							unk = { func_946() };
+							unk = Vector3(func_946());
 						
 							if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk))
 								HUD::CLEAR_HELP(true);
@@ -63401,7 +63401,7 @@ void func_813() // Position - 0x40B4F
 							{
 								if (func_964())
 								{
-									unk = { func_946() };
+									unk = Vector3(func_946());
 								
 									if (func_964())
 										_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
@@ -63427,7 +63427,7 @@ void func_813() // Position - 0x40B4F
 									{
 										if (func_964())
 										{
-											unk = { func_945() };
+											unk = Vector3(func_945());
 										
 											if (func_964())
 												_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
@@ -63631,7 +63631,7 @@ void func_813() // Position - 0x40B4F
 		
 			if (!IS_BIT_SET(iLocal_549, 13))
 			{
-				unk25 = { func_864() };
+				unk25 = Vector3(func_864());
 			
 				if (!func_1127(true))
 				{
@@ -63653,9 +63653,9 @@ void func_813() // Position - 0x40B4F
 				}
 				else
 				{
-					unk13 = { func_953() };
-					unk17 = { func_947() };
-					unk21 = { func_959() };
+					unk13 = Vector3(func_953());
+					unk17 = Vector3(func_947());
+					unk21 = Vector3(func_959());
 				
 					if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk25) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk21) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk13) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(str) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk17) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PEN_MPLAY" /*~s~At least two players in separate vehicles are required to start Penned In.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("PEN_START2" /*~s~Wait within the marked area. Penned In will start when the time expires. You are unable to use weapons during or while waiting for this event.*/))
 						HUD::CLEAR_HELP(true);
@@ -63961,7 +63961,7 @@ BOOL func_815(float fParam0, var uParam1, var uParam2, float fParam3, BOOL bPara
 
 	if (!Global_2672505.f_1024 && !bParam11)
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 	
 		if (MISC::ABSF(entityCoords - fParam0) < 0.2f && MISC::ABSF(entityCoords.f_1 - fParam0.f_1) < 0.2f && MISC::ABSF(entityCoords.f_2 - fParam0.f_2) < 1.2f)
 		{
@@ -64001,7 +64001,7 @@ BOOL func_815(float fParam0, var uParam1, var uParam2, float fParam3, BOOL bPara
 			Global_2672505.f_1025 = 0;
 		}
 	
-		Global_2672505.f_1026 = { fParam0 };
+		Global_2672505.f_1026 = Vector3(fParam0);
 		Global_2672505.f_1029 = fParam3;
 		Global_2672505.f_1024 = 0;
 	}
@@ -64571,7 +64571,7 @@ void func_840() // Position - 0x42C91
 	unk.f_4 = -1;
 	unk.f_5 = -1;
 	unk.f_21 = -1;
-	Global_1836858 = { unk };
+	Global_1836858 = Vector3(unk);
 	return;
 }
 
@@ -64784,7 +64784,7 @@ void func_854() // Position - 0x42F97
 								{
 									if (func_700(false, true, true, true))
 									{
-										unk = { func_855() };
+										unk = Vector3(func_855());
 										_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
 									
 										if (iLocal_93.f_197 != 2)
@@ -64840,7 +64840,7 @@ void func_856() // Position - 0x43071
 						{
 							if (!IS_BIT_SET(iLocal_550, 6))
 							{
-								unk = { func_860() };
+								unk = Vector3(func_860());
 								_DISPLAY_HELP_TEXT_NO_SOUND(&unk, -1);
 							
 								if (iLocal_93.f_197 != 2)
@@ -64853,7 +64853,7 @@ void func_856() // Position - 0x43071
 						{
 							if (!IS_BIT_SET(iLocal_550, 6))
 							{
-								unk = { func_859() };
+								unk = Vector3(func_859());
 								_DISPLAY_HELP_TEXT_NO_SOUND(&unk, -1);
 							
 								if (iLocal_93.f_197 != 2)
@@ -64866,7 +64866,7 @@ void func_856() // Position - 0x43071
 						{
 							if (!IS_BIT_SET(iLocal_550, 6))
 							{
-								unk = { func_859() };
+								unk = Vector3(func_859());
 								_DISPLAY_HELP_TEXT_NO_SOUND(&unk, -1);
 							
 								if (iLocal_93.f_197 != 2)
@@ -64878,7 +64878,7 @@ void func_856() // Position - 0x43071
 					}
 					else if (!IS_BIT_SET(iLocal_93.f_1, 5))
 					{
-						unk = { func_858() };
+						unk = Vector3(func_858());
 						_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
 					
 						if (iLocal_93.f_197 != 2)
@@ -64894,7 +64894,7 @@ void func_856() // Position - 0x43071
 				{
 					if (!IS_BIT_SET(iLocal_549, 20))
 					{
-						unk = { func_858() };
+						unk = Vector3(func_858());
 						_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
 					
 						if (iLocal_93.f_197 != 2)
@@ -64907,7 +64907,7 @@ void func_856() // Position - 0x43071
 		}
 		else
 		{
-			unk = { func_857() };
+			unk = Vector3(func_857());
 			_THEFEED_SHOW_MESSAGE(&unk, false);
 			MISC::SET_BIT(&iLocal_549, 4);
 		}
@@ -65620,7 +65620,7 @@ void func_877() // Position - 0x43F76
 	{
 		if (!HUD::IS_HELP_MESSAGE_BEING_DISPLAYED())
 		{
-			unk = { func_878() };
+			unk = Vector3(func_878());
 			_DISPLAY_HELP_TEXT_NO_SOUND(&unk, 30000);
 		
 			if (iLocal_93.f_197 != 2)
@@ -67377,8 +67377,8 @@ BOOL func_961(BOOL bParam0) // Position - 0x45DFF
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-			vector = { func_555() };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+			vector = Vector3(func_555());
 			distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vector, false);
 			num = func_556() / 2f;
 		
@@ -67391,7 +67391,7 @@ BOOL func_961(BOOL bParam0) // Position - 0x45DFF
 	{
 		if (fLocal_579 < 10f)
 		{
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 			distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, uLocal_572, false);
 		
 			if (distanceBetweenCoords <= fLocal_579)
@@ -68597,7 +68597,7 @@ void func_992(int iParam0, int iParam1, BOOL bParam2, int iParam3, BOOL bParam4,
 		if (_GET_BOSS_OF_LOCAL_PLAYER() != _INVALID_PLAYER_INDEX())
 			TEXT_LABEL_ASSIGN_STRING(&unk, func_1029(_GET_BOSS_OF_LOCAL_PLAYER()), 32);
 	
-		Global_1948628.f_34 = { unk };
+		Global_1948628.f_34 = Vector3(unk);
 	}
 	else
 	{
@@ -80338,7 +80338,7 @@ Hash func_1115(var uParam0) // Position - 0x53456
 	switch (uParam0->f_2)
 	{
 		case 63:
-			unk = { func_1116(uParam0) };
+			unk = Vector3(func_1116(uParam0));
 			return unk.f_1;
 	
 		case 62:
@@ -80516,7 +80516,7 @@ void func_1120() // Position - 0x537BD
 			HUD::SET_BLIP_FLASHES(blLocal_570, true);
 			HUD::SET_BLIP_FLASH_TIMER(blLocal_570, 7000);
 			HUD::SET_BLIP_PRIORITY(blLocal_570, 9);
-			gxtEntry = { func_1123() };
+			gxtEntry = Vector3(func_1123());
 			HUD::SET_BLIP_NAME_FROM_TEXT_FILE(blLocal_570, &gxtEntry);
 		
 			if (iLocal_93.f_197 == 2)
@@ -81434,715 +81434,715 @@ void func_1161() // Position - 0x54799
 	switch (iLocal_93.f_167)
 	{
 		case 0:
-			uLocal_604[0] = { 1476.6367f, -2436.075f, 65.2401f };
-			uLocal_604[1] = { 1591.1584f, -1980.8351f, 93.9884f };
-			uLocal_604[2] = { 1105.5802f, -1734.0144f, 34.7122f };
-			uLocal_604[3] = { 674.1869f, -1733.183f, 28.3527f };
-			uLocal_604[4] = { 276.4475f, -1857.6871f, 25.8607f };
-			uLocal_604[5] = { 241.6554f, -1713.7201f, 28.1339f };
-			uLocal_604[6] = { 276.8612f, -1670.4513f, 28.3137f };
-			uLocal_604[7] = { 158.5084f, -1512.412f, 28.1416f };
-			uLocal_604[8] = { 154.052f, -1394.604f, 28.3049f };
-			uLocal_604[9] = { 297.3363f, -1202.9008f, 28.1848f };
-			uLocal_604[10] = { 216.0453f, -1130.8625f, 28.3051f };
-			uLocal_604[11] = { 303.6096f, -1124.2592f, 28.4586f };
-			uLocal_604[12] = { 349.6563f, -953.8064f, 28.4776f };
-			uLocal_604[13] = { 228.3761f, -955.8815f, 28.3232f };
+			uLocal_604[0] = Vector3(1476.6367f, -2436.075f, 65.2401f);
+			uLocal_604[1] = Vector3(1591.1584f, -1980.8351f, 93.9884f);
+			uLocal_604[2] = Vector3(1105.5802f, -1734.0144f, 34.7122f);
+			uLocal_604[3] = Vector3(674.1869f, -1733.183f, 28.3527f);
+			uLocal_604[4] = Vector3(276.4475f, -1857.6871f, 25.8607f);
+			uLocal_604[5] = Vector3(241.6554f, -1713.7201f, 28.1339f);
+			uLocal_604[6] = Vector3(276.8612f, -1670.4513f, 28.3137f);
+			uLocal_604[7] = Vector3(158.5084f, -1512.412f, 28.1416f);
+			uLocal_604[8] = Vector3(154.052f, -1394.604f, 28.3049f);
+			uLocal_604[9] = Vector3(297.3363f, -1202.9008f, 28.1848f);
+			uLocal_604[10] = Vector3(216.0453f, -1130.8625f, 28.3051f);
+			uLocal_604[11] = Vector3(303.6096f, -1124.2592f, 28.4586f);
+			uLocal_604[12] = Vector3(349.6563f, -953.8064f, 28.4776f);
+			uLocal_604[13] = Vector3(228.3761f, -955.8815f, 28.3232f);
 			iLocal_1474 = 14;
 			break;
 	
 		case 1:
-			uLocal_604[0] = { -1900.1852f, 2050.7751f, 139.7211f };
-			uLocal_604[1] = { -1797.9186f, 1886.7753f, 147.74f };
-			uLocal_604[2] = { -1710.1752f, 1885.3156f, 160.217f };
-			uLocal_604[3] = { -1610.5203f, 2033.9445f, 101.5237f };
-			uLocal_604[4] = { -1517.0043f, 2141.7026f, 55.0511f };
-			uLocal_604[5] = { -1337.5049f, 2178.0967f, 51.2807f };
-			uLocal_604[6] = { -1147.6368f, 2341.3315f, 98.8094f };
-			uLocal_604[7] = { -934.5955f, 2262.8425f, 140.7183f };
-			uLocal_604[8] = { -730.47f, 2344.8604f, 68.405f };
-			uLocal_604[9] = { -708.701f, 2426.9895f, 61.1469f };
-			uLocal_604[10] = { -573.3401f, 2500.4941f, 50.3152f };
-			uLocal_604[11] = { -545.0461f, 2672.9302f, 44.4979f };
-			uLocal_604[12] = { -436.4757f, 2756.3894f, 44.6457f };
-			uLocal_604[13] = { -322.5151f, 2775.0254f, 61.0514f };
-			uLocal_604[14] = { -149.1279f, 2737.5154f, 54.9277f };
-			uLocal_604[15] = { 222.302f, 2489.4434f, 53.8394f };
-			uLocal_604[16] = { 569.7415f, 2454.8682f, 58.4488f };
-			uLocal_604[17] = { 753.546f, 2518.7876f, 72.1194f };
-			uLocal_604[18] = { 924.3738f, 2593.3752f, 60.2089f };
-			uLocal_604[19] = { 965.1749f, 2621.371f, 45.0674f };
-			uLocal_604[20] = { 1039.363f, 2671.289f, 38.5509f };
+			uLocal_604[0] = Vector3(-1900.1852f, 2050.7751f, 139.7211f);
+			uLocal_604[1] = Vector3(-1797.9186f, 1886.7753f, 147.74f);
+			uLocal_604[2] = Vector3(-1710.1752f, 1885.3156f, 160.217f);
+			uLocal_604[3] = Vector3(-1610.5203f, 2033.9445f, 101.5237f);
+			uLocal_604[4] = Vector3(-1517.0043f, 2141.7026f, 55.0511f);
+			uLocal_604[5] = Vector3(-1337.5049f, 2178.0967f, 51.2807f);
+			uLocal_604[6] = Vector3(-1147.6368f, 2341.3315f, 98.8094f);
+			uLocal_604[7] = Vector3(-934.5955f, 2262.8425f, 140.7183f);
+			uLocal_604[8] = Vector3(-730.47f, 2344.8604f, 68.405f);
+			uLocal_604[9] = Vector3(-708.701f, 2426.9895f, 61.1469f);
+			uLocal_604[10] = Vector3(-573.3401f, 2500.4941f, 50.3152f);
+			uLocal_604[11] = Vector3(-545.0461f, 2672.9302f, 44.4979f);
+			uLocal_604[12] = Vector3(-436.4757f, 2756.3894f, 44.6457f);
+			uLocal_604[13] = Vector3(-322.5151f, 2775.0254f, 61.0514f);
+			uLocal_604[14] = Vector3(-149.1279f, 2737.5154f, 54.9277f);
+			uLocal_604[15] = Vector3(222.302f, 2489.4434f, 53.8394f);
+			uLocal_604[16] = Vector3(569.7415f, 2454.8682f, 58.4488f);
+			uLocal_604[17] = Vector3(753.546f, 2518.7876f, 72.1194f);
+			uLocal_604[18] = Vector3(924.3738f, 2593.3752f, 60.2089f);
+			uLocal_604[19] = Vector3(965.1749f, 2621.371f, 45.0674f);
+			uLocal_604[20] = Vector3(1039.363f, 2671.289f, 38.5509f);
 			iLocal_1474 = 21;
 			break;
 	
 		case 2:
-			uLocal_604[0] = { 2304f, 1469f, 66f };
-			uLocal_604[1] = { 2131f, 2031f, 96f };
-			uLocal_604[2] = { 2059f, 2868f, 52f };
-			uLocal_604[3] = { 2707f, 3485f, 64f };
-			uLocal_604[4] = { 2855f, 3729f, 47f };
-			uLocal_604[5] = { 2506f, 4153f, 41f };
-			uLocal_604[6] = { 2885f, 4472f, 51f };
-			uLocal_604[7] = { 2786.236f, 4941.378f, 32.6857f };
-			uLocal_604[8] = { 2890.608f, 5034.026f, 30.7725f };
-			uLocal_604[9] = { 3058.765f, 5052.091f, 24.441f };
-			uLocal_604[10] = { 3063.0515f, 5094.1157f, 23.0524f };
-			uLocal_604[11] = { 3131.7178f, 5101.3706f, 20.6628f };
-			uLocal_604[12] = { 3175.0176f, 5118.771f, 16.61f };
-			uLocal_604[13] = { 3228.4673f, 5133.4f, 18.321f };
-			uLocal_604[14] = { 3283.4993f, 5150.8643f, 17.6323f };
-			uLocal_604[15] = { 3297.6697f, 5150.701f, 17.3023f };
-			uLocal_604[16] = { 3320.5652f, 5151.2954f, 17.3289f };
-			uLocal_604[17] = { 3337.0173f, 5151.8267f, 17.4344f };
-			uLocal_604[18] = { 3348.8008f, 5152.016f, 18.4475f };
+			uLocal_604[0] = Vector3(2304f, 1469f, 66f);
+			uLocal_604[1] = Vector3(2131f, 2031f, 96f);
+			uLocal_604[2] = Vector3(2059f, 2868f, 52f);
+			uLocal_604[3] = Vector3(2707f, 3485f, 64f);
+			uLocal_604[4] = Vector3(2855f, 3729f, 47f);
+			uLocal_604[5] = Vector3(2506f, 4153f, 41f);
+			uLocal_604[6] = Vector3(2885f, 4472f, 51f);
+			uLocal_604[7] = Vector3(2786.236f, 4941.378f, 32.6857f);
+			uLocal_604[8] = Vector3(2890.608f, 5034.026f, 30.7725f);
+			uLocal_604[9] = Vector3(3058.765f, 5052.091f, 24.441f);
+			uLocal_604[10] = Vector3(3063.0515f, 5094.1157f, 23.0524f);
+			uLocal_604[11] = Vector3(3131.7178f, 5101.3706f, 20.6628f);
+			uLocal_604[12] = Vector3(3175.0176f, 5118.771f, 16.61f);
+			uLocal_604[13] = Vector3(3228.4673f, 5133.4f, 18.321f);
+			uLocal_604[14] = Vector3(3283.4993f, 5150.8643f, 17.6323f);
+			uLocal_604[15] = Vector3(3297.6697f, 5150.701f, 17.3023f);
+			uLocal_604[16] = Vector3(3320.5652f, 5151.2954f, 17.3289f);
+			uLocal_604[17] = Vector3(3337.0173f, 5151.8267f, 17.4344f);
+			uLocal_604[18] = Vector3(3348.8008f, 5152.016f, 18.4475f);
 			iLocal_1474 = 19;
 			break;
 	
 		case 3:
 			func_1163();
-			uLocal_604[0] = { -1210.1974f, -2437.7385f, 12.9452f };
-			uLocal_604[1] = { -1342.5873f, -2667.462f, 12.9449f };
-			uLocal_604[2] = { -1220.7985f, -2861.6501f, 12.9455f };
-			uLocal_604[3] = { -1126.435f, -2699.4128f, 22.002935f };
-			uLocal_604[4] = { -1017.0392f, -2713.2148f, 34.565468f };
-			uLocal_604[5] = { -936.5955f, -2585.454f, 21.38621f };
-			uLocal_604[6] = { -841.7922f, -2569.529f, 16.83603f };
-			uLocal_604[7] = { -723.1095f, -2396.833f, 17.031235f };
-			uLocal_604[8] = { -616.2985f, -2279.4082f, 13.040651f };
-			uLocal_604[9] = { -677.78345f, -2181.811f, 14.214618f };
-			uLocal_604[10] = { -613.15393f, -2109.9846f, 21.81665f };
-			uLocal_604[11] = { -475.038f, -2148.0005f, 17.4868f };
-			uLocal_604[12] = { -336.45972f, -2143.6533f, 13.957203f };
-			uLocal_604[13] = { -256.3312f, -2131.8962f, 22.140804f };
-			uLocal_604[14] = { -162.24901f, -2084.9082f, 26.850729f };
-			uLocal_604[15] = { -161.8921f, -2043.3702f, 21.8606f };
-			uLocal_604[16] = { -154.6475f, -2009.5287f, 21.8819f };
-			uLocal_604[17] = { -186.8038f, -2005.3405f, 26.6204f };
-			uLocal_604[18] = { -216.7214f, -1999.232f, 26.7554f };
+			uLocal_604[0] = Vector3(-1210.1974f, -2437.7385f, 12.9452f);
+			uLocal_604[1] = Vector3(-1342.5873f, -2667.462f, 12.9449f);
+			uLocal_604[2] = Vector3(-1220.7985f, -2861.6501f, 12.9455f);
+			uLocal_604[3] = Vector3(-1126.435f, -2699.4128f, 22.002935f);
+			uLocal_604[4] = Vector3(-1017.0392f, -2713.2148f, 34.565468f);
+			uLocal_604[5] = Vector3(-936.5955f, -2585.454f, 21.38621f);
+			uLocal_604[6] = Vector3(-841.7922f, -2569.529f, 16.83603f);
+			uLocal_604[7] = Vector3(-723.1095f, -2396.833f, 17.031235f);
+			uLocal_604[8] = Vector3(-616.2985f, -2279.4082f, 13.040651f);
+			uLocal_604[9] = Vector3(-677.78345f, -2181.811f, 14.214618f);
+			uLocal_604[10] = Vector3(-613.15393f, -2109.9846f, 21.81665f);
+			uLocal_604[11] = Vector3(-475.038f, -2148.0005f, 17.4868f);
+			uLocal_604[12] = Vector3(-336.45972f, -2143.6533f, 13.957203f);
+			uLocal_604[13] = Vector3(-256.3312f, -2131.8962f, 22.140804f);
+			uLocal_604[14] = Vector3(-162.24901f, -2084.9082f, 26.850729f);
+			uLocal_604[15] = Vector3(-161.8921f, -2043.3702f, 21.8606f);
+			uLocal_604[16] = Vector3(-154.6475f, -2009.5287f, 21.8819f);
+			uLocal_604[17] = Vector3(-186.8038f, -2005.3405f, 26.6204f);
+			uLocal_604[18] = Vector3(-216.7214f, -1999.232f, 26.7554f);
 			iLocal_1474 = 19;
 			break;
 	
 		case 4:
-			uLocal_604[0] = { 105.443f, 7028.38f, 10.2844f };
-			uLocal_604[1] = { 157.7284f, 6525.143f, 30.6533f };
-			uLocal_604[2] = { -59.2422f, 6653.8037f, 28.721f };
-			uLocal_604[3] = { -168.4514f, 6476.5537f, 29.0678f };
-			uLocal_604[4] = { -111.8802f, 6419.2456f, 30.4455f };
-			uLocal_604[5] = { -154.2424f, 6339.732f, 30.6176f };
-			uLocal_604[6] = { -93.9484f, 6279.4985f, 30.3124f };
-			uLocal_604[7] = { -182.7545f, 6195.6855f, 30.1968f };
-			uLocal_604[8] = { -260.1141f, 6185.8115f, 30.4429f };
-			uLocal_604[9] = { -304.2122f, 6227.968f, 30.4542f };
-			uLocal_604[10] = { -473.7666f, 6066.5293f, 29.34f };
-			uLocal_604[11] = { -715.7206f, 6049.0933f, -0.0726f };
-			uLocal_604[12] = { -811.3691f, 5957.282f, 19.4103f };
-			uLocal_604[13] = { -897.6384f, 6050.558f, 43.1834f };
+			uLocal_604[0] = Vector3(105.443f, 7028.38f, 10.2844f);
+			uLocal_604[1] = Vector3(157.7284f, 6525.143f, 30.6533f);
+			uLocal_604[2] = Vector3(-59.2422f, 6653.8037f, 28.721f);
+			uLocal_604[3] = Vector3(-168.4514f, 6476.5537f, 29.0678f);
+			uLocal_604[4] = Vector3(-111.8802f, 6419.2456f, 30.4455f);
+			uLocal_604[5] = Vector3(-154.2424f, 6339.732f, 30.6176f);
+			uLocal_604[6] = Vector3(-93.9484f, 6279.4985f, 30.3124f);
+			uLocal_604[7] = Vector3(-182.7545f, 6195.6855f, 30.1968f);
+			uLocal_604[8] = Vector3(-260.1141f, 6185.8115f, 30.4429f);
+			uLocal_604[9] = Vector3(-304.2122f, 6227.968f, 30.4542f);
+			uLocal_604[10] = Vector3(-473.7666f, 6066.5293f, 29.34f);
+			uLocal_604[11] = Vector3(-715.7206f, 6049.0933f, -0.0726f);
+			uLocal_604[12] = Vector3(-811.3691f, 5957.282f, 19.4103f);
+			uLocal_604[13] = Vector3(-897.6384f, 6050.558f, 43.1834f);
 			iLocal_1474 = 14;
 			break;
 	
 		case 6:
-			uLocal_604[0] = { 770.8729f, -232.9857f, 65.1145f };
-			uLocal_604[1] = { 838.7502f, -256.9497f, 64.6297f };
-			uLocal_604[2] = { 903.3063f, -221.7793f, 68.666f };
-			uLocal_604[3] = { 935.5661f, -166.9423f, 73.4974f };
-			uLocal_604[4] = { 935.502f, -150.7537f, 73.7236f };
-			uLocal_604[5] = { 903.4067f, -123.2328f, 76.2099f };
-			uLocal_604[6] = { 881.9219f, -103.4221f, 78.4213f };
-			uLocal_604[7] = { 880.8146f, -80.6718f, 77.7643f };
-			uLocal_604[8] = { 924.9553f, -20.0444f, 77.7643f };
-			uLocal_604[9] = { 953.8312f, -19.9404f, 77.764f };
-			uLocal_604[10] = { 968.3574f, -3.2091f, 79.9909f };
-			uLocal_604[11] = { 1009.3735f, 64.5172f, 79.9909f };
-			uLocal_604[12] = { 1004.3337f, 70.7857f, 79.9909f };
-			uLocal_604[13] = { 961.9669f, 97.0632f, 79.9909f };
-			uLocal_604[14] = { 974.4698f, 116.5434f, 79.9909f };
-			uLocal_604[15] = { 1023.8721f, 169.1899f, 79.9905f };
-			uLocal_604[16] = { 1023.7948f, 181.0932f, 79.8559f };
-			uLocal_604[17] = { 1003.2242f, 191.8311f, 79.9087f };
-			uLocal_604[18] = { 945.6973f, 122.5348f, 79.7235f };
-			uLocal_604[19] = { 931.2999f, 104.402f, 78.3884f };
-			uLocal_604[20] = { 884.1791f, 48.7134f, 77.631f };
-			uLocal_604[21] = { 820.7046f, -20.0586f, 79.7007f };
-			uLocal_604[22] = { 824.5161f, -65.76f, 79.6442f };
-			uLocal_604[23] = { 854.3058f, -113.1723f, 78.3323f };
-			uLocal_604[24] = { 847.928f, -140.3758f, 77.3008f };
-			uLocal_604[25] = { 825.0543f, -176.4968f, 71.886f };
-			uLocal_604[26] = { 803.1815f, -203.4303f, 71.9304f };
-			uLocal_604[27] = { 772.341f, -248.5203f, 65.1143f };
-			uLocal_604[28] = { 766.5759f, -268.8026f, 65.4267f };
-			uLocal_604[29] = { 751.6126f, -300.7643f, 58.892f };
-			uLocal_604[30] = { 723.4518f, -321.204f, 51.9976f };
-			uLocal_604[31] = { 691.1819f, -341.8955f, 39.0741f };
-			uLocal_604[32] = { 644.3198f, -353.9926f, 29.0699f };
-			uLocal_604[33] = { 628.4379f, -365.0165f, 23.5751f };
-			uLocal_604[34] = { 607.2872f, -399.7075f, 23.7997f };
-			uLocal_604[35] = { 599.2954f, -478.0787f, 23.7562f };
-			uLocal_604[36] = { 566.7018f, -553.8478f, 23.7368f };
-			uLocal_604[37] = { 538.7103f, -643.3187f, 23.7397f };
-			uLocal_604[38] = { 508.0503f, -682.8132f, 24.2827f };
-			uLocal_604[39] = { 456.5249f, -685.2498f, 26.8735f };
-			uLocal_604[40] = { 456.4284f, -821.7599f, 26.5584f };
-			uLocal_604[41] = { 406.9605f, -830.3608f, 28.3306f };
-			uLocal_604[42] = { 406.1039f, -876.7354f, 28.3905f };
-			uLocal_604[43] = { 402.9865f, -938.0498f, 28.4551f };
-			uLocal_604[44] = { 404.8474f, -950.4066f, 28.4433f };
-			uLocal_604[45] = { 416.964f, -954.1458f, 28.4324f };
-			uLocal_604[46] = { 485.1107f, -954.6018f, 26.3922f };
-			uLocal_604[47] = { 496.7718f, -957.6362f, 26.1527f };
-			uLocal_604[48] = { 500.8447f, -966.6793f, 26.4009f };
-			uLocal_604[49] = { 499.6066f, -1038.969f, 27.357f };
-			uLocal_604[50] = { 482.2613f, -1070.1821f, 28.2113f };
-			uLocal_604[51] = { 462.5394f, -1125.0022f, 28.3189f };
-			uLocal_604[52] = { 452.1105f, -1131.4785f, 28.4588f };
-			uLocal_604[53] = { 411.7074f, -1132.2982f, 28.4582f };
-			uLocal_604[54] = { 401.2792f, -1126.8384f, 28.4871f };
-			uLocal_604[55] = { 398.4309f, -1108.8948f, 28.4618f };
-			uLocal_604[56] = { 398.5521f, -1011.6366f, 28.4602f };
-			uLocal_604[57] = { 391.9118f, -1000.9362f, 28.4172f };
-			uLocal_604[58] = { 384.0373f, -999.108f, 28.4212f };
-			uLocal_604[59] = { 280.6655f, -998.2255f, 28.2999f };
-			uLocal_604[60] = { 274.747f, -997.3961f, 28.3239f };
-			uLocal_604[61] = { 254.8134f, -990.8824f, 28.2714f };
-			uLocal_604[62] = { 244.1949f, -980.8467f, 28.3573f };
-			uLocal_604[63] = { 244.9183f, -958.1761f, 28.3041f };
-			uLocal_604[64] = { 265.0497f, -896.29f, 27.9801f };
-			uLocal_604[65] = { 259.8165f, -869.8301f, 28.273f };
-			uLocal_604[66] = { 226.9681f, -839.9088f, 29.2632f };
-			uLocal_604[67] = { 224.8172f, -815.2034f, 29.5278f };
-			uLocal_604[68] = { 223.5029f, -758.9518f, 29.8235f };
-			uLocal_604[69] = { 234.023f, -729.6653f, 29.8196f };
-			uLocal_604[70] = { 268.7956f, -743.4052f, 33.64f };
-			uLocal_604[71] = { 224.9066f, -736.6704f, 33.2013f };
-			uLocal_604[72] = { 172.0603f, -721.1422f, 32.1324f };
-			uLocal_604[73] = { 75.1364f, -688.8935f, 30.6218f };
-			uLocal_604[74] = { 112.1867f, -577.6705f, 30.47f };
-			uLocal_604[75] = { 58.5058f, -554.6415f, 32.7843f };
-			uLocal_604[76] = { -35.6377f, -545.9135f, 38.9156f };
-			uLocal_604[77] = { -77.4362f, -537.5404f, 39.1736f };
+			uLocal_604[0] = Vector3(770.8729f, -232.9857f, 65.1145f);
+			uLocal_604[1] = Vector3(838.7502f, -256.9497f, 64.6297f);
+			uLocal_604[2] = Vector3(903.3063f, -221.7793f, 68.666f);
+			uLocal_604[3] = Vector3(935.5661f, -166.9423f, 73.4974f);
+			uLocal_604[4] = Vector3(935.502f, -150.7537f, 73.7236f);
+			uLocal_604[5] = Vector3(903.4067f, -123.2328f, 76.2099f);
+			uLocal_604[6] = Vector3(881.9219f, -103.4221f, 78.4213f);
+			uLocal_604[7] = Vector3(880.8146f, -80.6718f, 77.7643f);
+			uLocal_604[8] = Vector3(924.9553f, -20.0444f, 77.7643f);
+			uLocal_604[9] = Vector3(953.8312f, -19.9404f, 77.764f);
+			uLocal_604[10] = Vector3(968.3574f, -3.2091f, 79.9909f);
+			uLocal_604[11] = Vector3(1009.3735f, 64.5172f, 79.9909f);
+			uLocal_604[12] = Vector3(1004.3337f, 70.7857f, 79.9909f);
+			uLocal_604[13] = Vector3(961.9669f, 97.0632f, 79.9909f);
+			uLocal_604[14] = Vector3(974.4698f, 116.5434f, 79.9909f);
+			uLocal_604[15] = Vector3(1023.8721f, 169.1899f, 79.9905f);
+			uLocal_604[16] = Vector3(1023.7948f, 181.0932f, 79.8559f);
+			uLocal_604[17] = Vector3(1003.2242f, 191.8311f, 79.9087f);
+			uLocal_604[18] = Vector3(945.6973f, 122.5348f, 79.7235f);
+			uLocal_604[19] = Vector3(931.2999f, 104.402f, 78.3884f);
+			uLocal_604[20] = Vector3(884.1791f, 48.7134f, 77.631f);
+			uLocal_604[21] = Vector3(820.7046f, -20.0586f, 79.7007f);
+			uLocal_604[22] = Vector3(824.5161f, -65.76f, 79.6442f);
+			uLocal_604[23] = Vector3(854.3058f, -113.1723f, 78.3323f);
+			uLocal_604[24] = Vector3(847.928f, -140.3758f, 77.3008f);
+			uLocal_604[25] = Vector3(825.0543f, -176.4968f, 71.886f);
+			uLocal_604[26] = Vector3(803.1815f, -203.4303f, 71.9304f);
+			uLocal_604[27] = Vector3(772.341f, -248.5203f, 65.1143f);
+			uLocal_604[28] = Vector3(766.5759f, -268.8026f, 65.4267f);
+			uLocal_604[29] = Vector3(751.6126f, -300.7643f, 58.892f);
+			uLocal_604[30] = Vector3(723.4518f, -321.204f, 51.9976f);
+			uLocal_604[31] = Vector3(691.1819f, -341.8955f, 39.0741f);
+			uLocal_604[32] = Vector3(644.3198f, -353.9926f, 29.0699f);
+			uLocal_604[33] = Vector3(628.4379f, -365.0165f, 23.5751f);
+			uLocal_604[34] = Vector3(607.2872f, -399.7075f, 23.7997f);
+			uLocal_604[35] = Vector3(599.2954f, -478.0787f, 23.7562f);
+			uLocal_604[36] = Vector3(566.7018f, -553.8478f, 23.7368f);
+			uLocal_604[37] = Vector3(538.7103f, -643.3187f, 23.7397f);
+			uLocal_604[38] = Vector3(508.0503f, -682.8132f, 24.2827f);
+			uLocal_604[39] = Vector3(456.5249f, -685.2498f, 26.8735f);
+			uLocal_604[40] = Vector3(456.4284f, -821.7599f, 26.5584f);
+			uLocal_604[41] = Vector3(406.9605f, -830.3608f, 28.3306f);
+			uLocal_604[42] = Vector3(406.1039f, -876.7354f, 28.3905f);
+			uLocal_604[43] = Vector3(402.9865f, -938.0498f, 28.4551f);
+			uLocal_604[44] = Vector3(404.8474f, -950.4066f, 28.4433f);
+			uLocal_604[45] = Vector3(416.964f, -954.1458f, 28.4324f);
+			uLocal_604[46] = Vector3(485.1107f, -954.6018f, 26.3922f);
+			uLocal_604[47] = Vector3(496.7718f, -957.6362f, 26.1527f);
+			uLocal_604[48] = Vector3(500.8447f, -966.6793f, 26.4009f);
+			uLocal_604[49] = Vector3(499.6066f, -1038.969f, 27.357f);
+			uLocal_604[50] = Vector3(482.2613f, -1070.1821f, 28.2113f);
+			uLocal_604[51] = Vector3(462.5394f, -1125.0022f, 28.3189f);
+			uLocal_604[52] = Vector3(452.1105f, -1131.4785f, 28.4588f);
+			uLocal_604[53] = Vector3(411.7074f, -1132.2982f, 28.4582f);
+			uLocal_604[54] = Vector3(401.2792f, -1126.8384f, 28.4871f);
+			uLocal_604[55] = Vector3(398.4309f, -1108.8948f, 28.4618f);
+			uLocal_604[56] = Vector3(398.5521f, -1011.6366f, 28.4602f);
+			uLocal_604[57] = Vector3(391.9118f, -1000.9362f, 28.4172f);
+			uLocal_604[58] = Vector3(384.0373f, -999.108f, 28.4212f);
+			uLocal_604[59] = Vector3(280.6655f, -998.2255f, 28.2999f);
+			uLocal_604[60] = Vector3(274.747f, -997.3961f, 28.3239f);
+			uLocal_604[61] = Vector3(254.8134f, -990.8824f, 28.2714f);
+			uLocal_604[62] = Vector3(244.1949f, -980.8467f, 28.3573f);
+			uLocal_604[63] = Vector3(244.9183f, -958.1761f, 28.3041f);
+			uLocal_604[64] = Vector3(265.0497f, -896.29f, 27.9801f);
+			uLocal_604[65] = Vector3(259.8165f, -869.8301f, 28.273f);
+			uLocal_604[66] = Vector3(226.9681f, -839.9088f, 29.2632f);
+			uLocal_604[67] = Vector3(224.8172f, -815.2034f, 29.5278f);
+			uLocal_604[68] = Vector3(223.5029f, -758.9518f, 29.8235f);
+			uLocal_604[69] = Vector3(234.023f, -729.6653f, 29.8196f);
+			uLocal_604[70] = Vector3(268.7956f, -743.4052f, 33.64f);
+			uLocal_604[71] = Vector3(224.9066f, -736.6704f, 33.2013f);
+			uLocal_604[72] = Vector3(172.0603f, -721.1422f, 32.1324f);
+			uLocal_604[73] = Vector3(75.1364f, -688.8935f, 30.6218f);
+			uLocal_604[74] = Vector3(112.1867f, -577.6705f, 30.47f);
+			uLocal_604[75] = Vector3(58.5058f, -554.6415f, 32.7843f);
+			uLocal_604[76] = Vector3(-35.6377f, -545.9135f, 38.9156f);
+			uLocal_604[77] = Vector3(-77.4362f, -537.5404f, 39.1736f);
 			iLocal_1474 = 78;
 			break;
 	
 		case 7:
-			uLocal_604[0] = { 174.5999f, -2079.6912f, 16.7487f };
-			uLocal_604[1] = { 152.0048f, -2053.0337f, 17.3217f };
-			uLocal_604[2] = { 150.1924f, -2031.7955f, 17.3217f };
-			uLocal_604[3] = { 152.2747f, -2013.484f, 17.1417f };
-			uLocal_604[4] = { 156.9549f, -2002.1061f, 17.2518f };
-			uLocal_604[5] = { 164.4116f, -1991.5688f, 17.2641f };
-			uLocal_604[6] = { 205.3133f, -1942.9099f, 20.535f };
-			uLocal_604[7] = { 211.3832f, -1932.9548f, 21.5803f };
-			uLocal_604[8] = { 208.533f, -1920.3668f, 22.2848f };
-			uLocal_604[9] = { 196.7893f, -1907.7605f, 22.6872f };
-			uLocal_604[10] = { 182.3722f, -1898.4238f, 22.5606f };
-			uLocal_604[11] = { 108.5148f, -1864.7413f, 23.4672f };
-			uLocal_604[12] = { 86.2217f, -1841.1938f, 24.2874f };
-			uLocal_604[13] = { 43.7092f, -1805.9956f, 24.4549f };
-			uLocal_604[14] = { 17.8062f, -1777.3511f, 28.2925f };
-			uLocal_604[15] = { 21.8941f, -1750.0643f, 28.3031f };
-			uLocal_604[16] = { 44.7469f, -1721.5055f, 28.3031f };
-			uLocal_604[17] = { 63.9396f, -1707.9142f, 28.2608f };
-			uLocal_604[18] = { 76.1903f, -1681.8864f, 28.3242f };
-			uLocal_604[19] = { 86.0975f, -1653.2185f, 28.3469f };
-			uLocal_604[20] = { 116.5378f, -1632.7563f, 28.3471f };
-			uLocal_604[21] = { 152.7263f, -1602.194f, 28.3415f };
-			uLocal_604[22] = { 143.9074f, -1564.7122f, 28.2093f };
-			uLocal_604[23] = { 145.1265f, -1550.9044f, 28.1529f };
-			uLocal_604[24] = { 153.1621f, -1536.4783f, 28.3099f };
-			uLocal_604[25] = { 156.3295f, -1515.1399f, 28.1416f };
-			uLocal_604[26] = { 148.7433f, -1498.5558f, 28.1416f };
-			uLocal_604[27] = { 128.6626f, -1476.8137f, 28.1416f };
-			uLocal_604[28] = { 104.1582f, -1414.0946f, 28.1921f };
-			uLocal_604[29] = { 83.6966f, -1380.6022f, 28.2915f };
-			uLocal_604[30] = { 50.458f, -1383.5314f, 28.2943f };
-			uLocal_604[31] = { -1.9688f, -1383.9425f, 28.3059f };
-			uLocal_604[32] = { -24.7047f, -1377.8663f, 28.1996f };
-			uLocal_604[33] = { -92.3499f, -1377.0834f, 28.3276f };
-			uLocal_604[34] = { -130.9038f, -1387.612f, 28.4695f };
-			uLocal_604[35] = { -148.5784f, -1398.7073f, 29.0652f };
-			uLocal_604[36] = { -148.0146f, -1415.7241f, 29.7007f };
-			uLocal_604[37] = { -140.9057f, -1431.5103f, 29.8724f };
-			uLocal_604[38] = { -172.1216f, -1469.8943f, 31.0887f };
-			uLocal_604[39] = { -200.9877f, -1510.3435f, 30.632f };
-			uLocal_604[40] = { -228.8574f, -1535.4877f, 30.6189f };
-			uLocal_604[41] = { -242.2845f, -1539.5383f, 30.5592f };
-			uLocal_604[42] = { -256.5187f, -1570.9397f, 30.9427f };
-			uLocal_604[43] = { -268.7609f, -1629.4132f, 30.8488f };
-			uLocal_604[44] = { -255.8852f, -1689.9532f, 30.8488f };
-			uLocal_604[45] = { -224.6088f, -1727.5677f, 31.5576f };
-			uLocal_604[46] = { -182.6528f, -1758.6221f, 28.8952f };
-			uLocal_604[47] = { -148.3479f, -1787.9008f, 28.7988f };
-			uLocal_604[48] = { -122.57f, -1807.9994f, 27.3089f };
-			uLocal_604[49] = { -73.0749f, -1876.6112f, 7.596f };
-			uLocal_604[50] = { -39.416f, -1901.59f, 9.9099f };
-			uLocal_604[51] = { 7.5512f, -1955.0984f, 4.4117f };
-			uLocal_604[52] = { 55.3094f, -2021.3112f, 0.4589f };
-			uLocal_604[53] = { 69.4583f, -2095.6624f, 0.2051f };
-			uLocal_604[54] = { 49.8936f, -2146.7078f, 1.5683f };
-			uLocal_604[55] = { 41.0185f, -2157.9426f, 4.4323f };
-			uLocal_604[56] = { 24.7718f, -2164.3352f, 8.1637f };
-			uLocal_604[57] = { -2.2288f, -2158.396f, 9.2835f };
-			uLocal_604[58] = { -22.7019f, -2158.6682f, 9.3111f };
-			uLocal_604[59] = { -38.4647f, -2199.5984f, 6.8117f };
-			uLocal_604[60] = { -45.3264f, -2212.2307f, 6.8117f };
-			uLocal_604[61] = { -55.3598f, -2222.49f, 6.8117f };
-			uLocal_604[62] = { -82.3358f, -2223.9185f, 6.8117f };
-			uLocal_604[63] = { -131.381f, -2223.0808f, 6.8117f };
-			uLocal_604[64] = { -150.9629f, -2233.8962f, 6.8117f };
-			uLocal_604[65] = { -158.0284f, -2244.346f, 6.8117f };
-			uLocal_604[66] = { -181.3241f, -2250.3481f, 6.8117f };
-			uLocal_604[67] = { -262.8565f, -2253.1746f, 6.9858f };
-			uLocal_604[68] = { -294.0698f, -2233.267f, 7.2625f };
-			uLocal_604[69] = { -297.9966f, -2218.0999f, 8.5029f };
-			uLocal_604[70] = { -313.9771f, -2206.9487f, 8.4925f };
-			uLocal_604[71] = { -327.7408f, -2209.1553f, 7.2109f };
-			uLocal_604[72] = { -364.1004f, -2262.1985f, 6.6082f };
-			uLocal_604[73] = { -374.4983f, -2272.4255f, 6.6082f };
-			uLocal_604[74] = { -375.8295f, -2282.5625f, 6.6082f };
+			uLocal_604[0] = Vector3(174.5999f, -2079.6912f, 16.7487f);
+			uLocal_604[1] = Vector3(152.0048f, -2053.0337f, 17.3217f);
+			uLocal_604[2] = Vector3(150.1924f, -2031.7955f, 17.3217f);
+			uLocal_604[3] = Vector3(152.2747f, -2013.484f, 17.1417f);
+			uLocal_604[4] = Vector3(156.9549f, -2002.1061f, 17.2518f);
+			uLocal_604[5] = Vector3(164.4116f, -1991.5688f, 17.2641f);
+			uLocal_604[6] = Vector3(205.3133f, -1942.9099f, 20.535f);
+			uLocal_604[7] = Vector3(211.3832f, -1932.9548f, 21.5803f);
+			uLocal_604[8] = Vector3(208.533f, -1920.3668f, 22.2848f);
+			uLocal_604[9] = Vector3(196.7893f, -1907.7605f, 22.6872f);
+			uLocal_604[10] = Vector3(182.3722f, -1898.4238f, 22.5606f);
+			uLocal_604[11] = Vector3(108.5148f, -1864.7413f, 23.4672f);
+			uLocal_604[12] = Vector3(86.2217f, -1841.1938f, 24.2874f);
+			uLocal_604[13] = Vector3(43.7092f, -1805.9956f, 24.4549f);
+			uLocal_604[14] = Vector3(17.8062f, -1777.3511f, 28.2925f);
+			uLocal_604[15] = Vector3(21.8941f, -1750.0643f, 28.3031f);
+			uLocal_604[16] = Vector3(44.7469f, -1721.5055f, 28.3031f);
+			uLocal_604[17] = Vector3(63.9396f, -1707.9142f, 28.2608f);
+			uLocal_604[18] = Vector3(76.1903f, -1681.8864f, 28.3242f);
+			uLocal_604[19] = Vector3(86.0975f, -1653.2185f, 28.3469f);
+			uLocal_604[20] = Vector3(116.5378f, -1632.7563f, 28.3471f);
+			uLocal_604[21] = Vector3(152.7263f, -1602.194f, 28.3415f);
+			uLocal_604[22] = Vector3(143.9074f, -1564.7122f, 28.2093f);
+			uLocal_604[23] = Vector3(145.1265f, -1550.9044f, 28.1529f);
+			uLocal_604[24] = Vector3(153.1621f, -1536.4783f, 28.3099f);
+			uLocal_604[25] = Vector3(156.3295f, -1515.1399f, 28.1416f);
+			uLocal_604[26] = Vector3(148.7433f, -1498.5558f, 28.1416f);
+			uLocal_604[27] = Vector3(128.6626f, -1476.8137f, 28.1416f);
+			uLocal_604[28] = Vector3(104.1582f, -1414.0946f, 28.1921f);
+			uLocal_604[29] = Vector3(83.6966f, -1380.6022f, 28.2915f);
+			uLocal_604[30] = Vector3(50.458f, -1383.5314f, 28.2943f);
+			uLocal_604[31] = Vector3(-1.9688f, -1383.9425f, 28.3059f);
+			uLocal_604[32] = Vector3(-24.7047f, -1377.8663f, 28.1996f);
+			uLocal_604[33] = Vector3(-92.3499f, -1377.0834f, 28.3276f);
+			uLocal_604[34] = Vector3(-130.9038f, -1387.612f, 28.4695f);
+			uLocal_604[35] = Vector3(-148.5784f, -1398.7073f, 29.0652f);
+			uLocal_604[36] = Vector3(-148.0146f, -1415.7241f, 29.7007f);
+			uLocal_604[37] = Vector3(-140.9057f, -1431.5103f, 29.8724f);
+			uLocal_604[38] = Vector3(-172.1216f, -1469.8943f, 31.0887f);
+			uLocal_604[39] = Vector3(-200.9877f, -1510.3435f, 30.632f);
+			uLocal_604[40] = Vector3(-228.8574f, -1535.4877f, 30.6189f);
+			uLocal_604[41] = Vector3(-242.2845f, -1539.5383f, 30.5592f);
+			uLocal_604[42] = Vector3(-256.5187f, -1570.9397f, 30.9427f);
+			uLocal_604[43] = Vector3(-268.7609f, -1629.4132f, 30.8488f);
+			uLocal_604[44] = Vector3(-255.8852f, -1689.9532f, 30.8488f);
+			uLocal_604[45] = Vector3(-224.6088f, -1727.5677f, 31.5576f);
+			uLocal_604[46] = Vector3(-182.6528f, -1758.6221f, 28.8952f);
+			uLocal_604[47] = Vector3(-148.3479f, -1787.9008f, 28.7988f);
+			uLocal_604[48] = Vector3(-122.57f, -1807.9994f, 27.3089f);
+			uLocal_604[49] = Vector3(-73.0749f, -1876.6112f, 7.596f);
+			uLocal_604[50] = Vector3(-39.416f, -1901.59f, 9.9099f);
+			uLocal_604[51] = Vector3(7.5512f, -1955.0984f, 4.4117f);
+			uLocal_604[52] = Vector3(55.3094f, -2021.3112f, 0.4589f);
+			uLocal_604[53] = Vector3(69.4583f, -2095.6624f, 0.2051f);
+			uLocal_604[54] = Vector3(49.8936f, -2146.7078f, 1.5683f);
+			uLocal_604[55] = Vector3(41.0185f, -2157.9426f, 4.4323f);
+			uLocal_604[56] = Vector3(24.7718f, -2164.3352f, 8.1637f);
+			uLocal_604[57] = Vector3(-2.2288f, -2158.396f, 9.2835f);
+			uLocal_604[58] = Vector3(-22.7019f, -2158.6682f, 9.3111f);
+			uLocal_604[59] = Vector3(-38.4647f, -2199.5984f, 6.8117f);
+			uLocal_604[60] = Vector3(-45.3264f, -2212.2307f, 6.8117f);
+			uLocal_604[61] = Vector3(-55.3598f, -2222.49f, 6.8117f);
+			uLocal_604[62] = Vector3(-82.3358f, -2223.9185f, 6.8117f);
+			uLocal_604[63] = Vector3(-131.381f, -2223.0808f, 6.8117f);
+			uLocal_604[64] = Vector3(-150.9629f, -2233.8962f, 6.8117f);
+			uLocal_604[65] = Vector3(-158.0284f, -2244.346f, 6.8117f);
+			uLocal_604[66] = Vector3(-181.3241f, -2250.3481f, 6.8117f);
+			uLocal_604[67] = Vector3(-262.8565f, -2253.1746f, 6.9858f);
+			uLocal_604[68] = Vector3(-294.0698f, -2233.267f, 7.2625f);
+			uLocal_604[69] = Vector3(-297.9966f, -2218.0999f, 8.5029f);
+			uLocal_604[70] = Vector3(-313.9771f, -2206.9487f, 8.4925f);
+			uLocal_604[71] = Vector3(-327.7408f, -2209.1553f, 7.2109f);
+			uLocal_604[72] = Vector3(-364.1004f, -2262.1985f, 6.6082f);
+			uLocal_604[73] = Vector3(-374.4983f, -2272.4255f, 6.6082f);
+			uLocal_604[74] = Vector3(-375.8295f, -2282.5625f, 6.6082f);
 			iLocal_1474 = 75;
 			break;
 	
 		case 8:
-			uLocal_604[0] = { -2653.0486f, 1505.6366f, 116.9031f };
-			uLocal_604[1] = { -2663.5945f, 1470.7433f, 122.7177f };
-			uLocal_604[2] = { -2681.7805f, 1433.7673f, 120.1581f };
-			uLocal_604[3] = { -2701.2942f, 1403.5181f, 112.9536f };
-			uLocal_604[4] = { -2717.1575f, 1376.8065f, 105.1303f };
-			uLocal_604[5] = { -2748.0938f, 1336.4413f, 89.7583f };
-			uLocal_604[6] = { -2772.6619f, 1306.3376f, 82.0139f };
-			uLocal_604[7] = { -2807.1157f, 1282.4966f, 71.1255f };
-			uLocal_604[8] = { -2860.727f, 1279.0245f, 58.2654f };
-			uLocal_604[9] = { -2904.5193f, 1259.0967f, 40.7003f };
-			uLocal_604[10] = { -2921.8503f, 1257.9926f, 37.2144f };
-			uLocal_604[11] = { -2945.2415f, 1243.1675f, 31.8372f };
-			uLocal_604[12] = { -2971.9104f, 1212.2054f, 23.1993f };
-			uLocal_604[13] = { -2993.6616f, 1208.5237f, 18.0748f };
-			uLocal_604[14] = { -3038.5508f, 1209.651f, 14.0096f };
-			uLocal_604[15] = { -3107.9707f, 1226.0641f, 9.658f };
-			uLocal_604[16] = { -3199.3032f, 1252.4889f, 4.3497f };
-			uLocal_604[17] = { -3218.386f, 1252.1344f, 2.8398f };
-			uLocal_604[18] = { -3236.5867f, 1234.2126f, 2.2581f };
-			uLocal_604[19] = { -3257.2288f, 1188.7001f, 1.6827f };
-			uLocal_604[20] = { -3268.8472f, 1110.9958f, 1.1708f };
-			uLocal_604[21] = { -3286.1995f, 1046.9299f, 2.2738f };
-			uLocal_604[22] = { -3291.4673f, 984.0225f, 2.3848f };
-			uLocal_604[23] = { -3291.941f, 951.162f, 1.1346f };
-			uLocal_604[24] = { -3284.4282f, 937.3236f, 1.0801f };
-			uLocal_604[25] = { -3266.2422f, 925.3865f, 1.6379f };
-			uLocal_604[26] = { -3234.6465f, 874.3011f, 1.695f };
-			uLocal_604[27] = { -3219.0833f, 829.6504f, 1.2816f };
-			uLocal_604[28] = { -3198.2463f, 813.9434f, 2.7979f };
-			uLocal_604[29] = { -3165.0793f, 798.1581f, 6.5002f };
-			uLocal_604[30] = { -3143.296f, 790.5193f, 7.0137f };
-			uLocal_604[31] = { -3124.5156f, 789.1387f, 16.9934f };
-			uLocal_604[32] = { -3094.2124f, 777.5895f, 18.5135f };
-			uLocal_604[33] = { -3086.8984f, 756.6077f, 19.5227f };
-			uLocal_604[34] = { -3093.9788f, 726.5751f, 20.3224f };
-			uLocal_604[35] = { -3082.2632f, 693.1727f, 15.8985f };
-			uLocal_604[36] = { -3056.8462f, 661.2524f, 9.0803f };
-			uLocal_604[37] = { -3043.558f, 636.358f, 6.5869f };
-			uLocal_604[38] = { -3024.625f, 583.9476f, 6.8377f };
-			uLocal_604[39] = { -3019.4368f, 554.1682f, 6.6729f };
-			uLocal_604[40] = { -3021.381f, 512.9918f, 6.234f };
-			uLocal_604[41] = { -3031.1975f, 466.6764f, 5.5596f };
-			uLocal_604[42] = { -3049.9348f, 424.7576f, 5.5665f };
-			uLocal_604[43] = { -3066.961f, 377.4491f, 6.0668f };
-			uLocal_604[44] = { -3057.4312f, 345.7499f, 8.5701f };
-			uLocal_604[45] = { -3046.6309f, 292.6304f, 18.9137f };
-			uLocal_604[46] = { -3041.826f, 279.6342f, 16.9957f };
-			uLocal_604[47] = { -3035.306f, 269.0156f, 14.7234f };
-			uLocal_604[48] = { -3012.3623f, 233.9675f, 15.2325f };
-			uLocal_604[49] = { -3013.1875f, 213.9026f, 15.268f };
-			uLocal_604[50] = { -3011.6711f, 196.2197f, 15.146f };
-			uLocal_604[51] = { -3006.4539f, 177.695f, 14.8855f };
-			uLocal_604[52] = { -2994.6628f, 154.9807f, 14.3746f };
-			uLocal_604[53] = { -2979.6724f, 136.2853f, 13.7377f };
-			uLocal_604[54] = { -2950.8318f, 112.3324f, 12.904f };
-			uLocal_604[55] = { -2921.3289f, 97.7186f, 12.7178f };
-			uLocal_604[56] = { -2851.4888f, 75.2672f, 13.5427f };
-			uLocal_604[57] = { -2836.6099f, 32.9254f, 12.8794f };
-			uLocal_604[58] = { -2831.9875f, 18.7339f, 10.4085f };
-			uLocal_604[59] = { -2824.5603f, -8.0105f, 6.1181f };
-			uLocal_604[60] = { -2803.649f, -81.9439f, -0.221f };
-			uLocal_604[61] = { -2780.2065f, -96.5313f, 0.3584f };
-			uLocal_604[62] = { -2736.6733f, -109.0135f, 0.5296f };
-			uLocal_604[63] = { -2700.4514f, -141.5591f, 0.9655f };
-			uLocal_604[64] = { -2671.8303f, -175.5449f, 1.0133f };
-			uLocal_604[65] = { -2630.613f, -198.3817f, 2.1479f };
-			uLocal_604[66] = { -2547.9849f, -249.0516f, 2.2801f };
-			uLocal_604[67] = { -2473.8474f, -295.0556f, 2.7219f };
-			uLocal_604[68] = { -2434.0935f, -326.3175f, 3.0194f };
-			uLocal_604[69] = { -2410.1133f, -331.2293f, 2.6013f };
-			uLocal_604[70] = { -2376.031f, -335.9692f, 2.5363f };
-			uLocal_604[71] = { -2356.186f, -344.7604f, 2.6766f };
-			uLocal_604[72] = { -2327.2456f, -365.7754f, 2.3142f };
-			uLocal_604[73] = { -2276.5415f, -398.5323f, 1.8233f };
-			uLocal_604[74] = { -2230.8225f, -415.3987f, 3.087f };
-			uLocal_604[75] = { -2213.564f, -418.7813f, 5.5765f };
-			uLocal_604[76] = { -2199.3962f, -420.4765f, 11.8061f };
-			uLocal_604[77] = { -2176.1367f, -416.0254f, 12.2345f };
-			uLocal_604[78] = { -2126.0286f, -402.4269f, 11.7143f };
-			uLocal_604[79] = { -2102.2246f, -366.2369f, 11.8076f };
-			uLocal_604[80] = { -2095.2676f, -318.8827f, 12.0248f };
-			uLocal_604[81] = { -2093.9993f, -264.2969f, 18.7933f };
-			uLocal_604[82] = { -2089.104f, -214.1321f, 19.5783f };
-			uLocal_604[83] = { -2071.153f, -210.7178f, 21.0689f };
-			uLocal_604[84] = { -2050.0754f, -223.6322f, 25.6497f };
-			uLocal_604[85] = { -2030.9808f, -224.0641f, 27.9967f };
-			uLocal_604[86] = { -1998.867f, -224.0556f, 31.1763f };
-			uLocal_604[87] = { -1987.9215f, -232.1616f, 32.9357f };
-			uLocal_604[88] = { -1986.7235f, -241.0943f, 33.9168f };
-			uLocal_604[89] = { -1980.2367f, -257.3627f, 33.6684f };
-			uLocal_604[90] = { -1966.5735f, -261.1625f, 34.9521f };
-			uLocal_604[91] = { -1948.8265f, -242.7568f, 34.8759f };
-			uLocal_604[92] = { -1938.9633f, -233.8106f, 35.8376f };
-			uLocal_604[93] = { -1911.051f, -214.8513f, 35.2168f };
-			uLocal_604[94] = { -1874.8605f, -185.5185f, 37.115f };
-			uLocal_604[95] = { -1864.5593f, -180.1412f, 43.2547f };
-			uLocal_604[96] = { -1850.8513f, -185.8726f, 45.6611f };
-			uLocal_604[97] = { -1834.4126f, -189.1538f, 48.8693f };
-			uLocal_604[98] = { -1815.9832f, -200.1424f, 50.7411f };
-			uLocal_604[99] = { -1805.7876f, -203.853f, 51.7412f };
-			uLocal_604[100] = { -1792.7168f, -217.502f, 50.9357f };
-			uLocal_604[101] = { -1774.695f, -229.8553f, 51.7138f };
-			uLocal_604[102] = { -1756.9034f, -238.1252f, 52.0989f };
-			uLocal_604[103] = { -1736.2507f, -241.4447f, 52.672f };
-			uLocal_604[104] = { -1712.5735f, -240.3414f, 53.0528f };
-			uLocal_604[105] = { -1699.116f, -234.5364f, 54.4754f };
-			uLocal_604[106] = { -1689.3018f, -217.4817f, 56.5364f };
-			uLocal_604[107] = { -1682.4846f, -202.5944f, 56.595f };
-			uLocal_604[108] = { -1680.8939f, -188.3022f, 56.5344f };
-			uLocal_604[109] = { -1682.9626f, -173.7911f, 56.5401f };
-			uLocal_604[110] = { -1689.3328f, -162.1221f, 56.5802f };
-			uLocal_604[111] = { -1702.2227f, -155.7313f, 56.3958f };
-			uLocal_604[112] = { -1709.647f, -161.5643f, 56.4539f };
-			uLocal_604[113] = { -1715.4739f, -168.1092f, 56.503f };
-			uLocal_604[114] = { -1725.5365f, -168.0596f, 56.7325f };
-			uLocal_604[115] = { -1733.6442f, -169.4988f, 57.5363f };
-			uLocal_604[116] = { -1733.4342f, -177.1803f, 58.3052f };
-			uLocal_604[117] = { -1731.4307f, -182.4709f, 57.4901f };
-			uLocal_604[118] = { -1730.0248f, -191.5667f, 57.3605f };
+			uLocal_604[0] = Vector3(-2653.0486f, 1505.6366f, 116.9031f);
+			uLocal_604[1] = Vector3(-2663.5945f, 1470.7433f, 122.7177f);
+			uLocal_604[2] = Vector3(-2681.7805f, 1433.7673f, 120.1581f);
+			uLocal_604[3] = Vector3(-2701.2942f, 1403.5181f, 112.9536f);
+			uLocal_604[4] = Vector3(-2717.1575f, 1376.8065f, 105.1303f);
+			uLocal_604[5] = Vector3(-2748.0938f, 1336.4413f, 89.7583f);
+			uLocal_604[6] = Vector3(-2772.6619f, 1306.3376f, 82.0139f);
+			uLocal_604[7] = Vector3(-2807.1157f, 1282.4966f, 71.1255f);
+			uLocal_604[8] = Vector3(-2860.727f, 1279.0245f, 58.2654f);
+			uLocal_604[9] = Vector3(-2904.5193f, 1259.0967f, 40.7003f);
+			uLocal_604[10] = Vector3(-2921.8503f, 1257.9926f, 37.2144f);
+			uLocal_604[11] = Vector3(-2945.2415f, 1243.1675f, 31.8372f);
+			uLocal_604[12] = Vector3(-2971.9104f, 1212.2054f, 23.1993f);
+			uLocal_604[13] = Vector3(-2993.6616f, 1208.5237f, 18.0748f);
+			uLocal_604[14] = Vector3(-3038.5508f, 1209.651f, 14.0096f);
+			uLocal_604[15] = Vector3(-3107.9707f, 1226.0641f, 9.658f);
+			uLocal_604[16] = Vector3(-3199.3032f, 1252.4889f, 4.3497f);
+			uLocal_604[17] = Vector3(-3218.386f, 1252.1344f, 2.8398f);
+			uLocal_604[18] = Vector3(-3236.5867f, 1234.2126f, 2.2581f);
+			uLocal_604[19] = Vector3(-3257.2288f, 1188.7001f, 1.6827f);
+			uLocal_604[20] = Vector3(-3268.8472f, 1110.9958f, 1.1708f);
+			uLocal_604[21] = Vector3(-3286.1995f, 1046.9299f, 2.2738f);
+			uLocal_604[22] = Vector3(-3291.4673f, 984.0225f, 2.3848f);
+			uLocal_604[23] = Vector3(-3291.941f, 951.162f, 1.1346f);
+			uLocal_604[24] = Vector3(-3284.4282f, 937.3236f, 1.0801f);
+			uLocal_604[25] = Vector3(-3266.2422f, 925.3865f, 1.6379f);
+			uLocal_604[26] = Vector3(-3234.6465f, 874.3011f, 1.695f);
+			uLocal_604[27] = Vector3(-3219.0833f, 829.6504f, 1.2816f);
+			uLocal_604[28] = Vector3(-3198.2463f, 813.9434f, 2.7979f);
+			uLocal_604[29] = Vector3(-3165.0793f, 798.1581f, 6.5002f);
+			uLocal_604[30] = Vector3(-3143.296f, 790.5193f, 7.0137f);
+			uLocal_604[31] = Vector3(-3124.5156f, 789.1387f, 16.9934f);
+			uLocal_604[32] = Vector3(-3094.2124f, 777.5895f, 18.5135f);
+			uLocal_604[33] = Vector3(-3086.8984f, 756.6077f, 19.5227f);
+			uLocal_604[34] = Vector3(-3093.9788f, 726.5751f, 20.3224f);
+			uLocal_604[35] = Vector3(-3082.2632f, 693.1727f, 15.8985f);
+			uLocal_604[36] = Vector3(-3056.8462f, 661.2524f, 9.0803f);
+			uLocal_604[37] = Vector3(-3043.558f, 636.358f, 6.5869f);
+			uLocal_604[38] = Vector3(-3024.625f, 583.9476f, 6.8377f);
+			uLocal_604[39] = Vector3(-3019.4368f, 554.1682f, 6.6729f);
+			uLocal_604[40] = Vector3(-3021.381f, 512.9918f, 6.234f);
+			uLocal_604[41] = Vector3(-3031.1975f, 466.6764f, 5.5596f);
+			uLocal_604[42] = Vector3(-3049.9348f, 424.7576f, 5.5665f);
+			uLocal_604[43] = Vector3(-3066.961f, 377.4491f, 6.0668f);
+			uLocal_604[44] = Vector3(-3057.4312f, 345.7499f, 8.5701f);
+			uLocal_604[45] = Vector3(-3046.6309f, 292.6304f, 18.9137f);
+			uLocal_604[46] = Vector3(-3041.826f, 279.6342f, 16.9957f);
+			uLocal_604[47] = Vector3(-3035.306f, 269.0156f, 14.7234f);
+			uLocal_604[48] = Vector3(-3012.3623f, 233.9675f, 15.2325f);
+			uLocal_604[49] = Vector3(-3013.1875f, 213.9026f, 15.268f);
+			uLocal_604[50] = Vector3(-3011.6711f, 196.2197f, 15.146f);
+			uLocal_604[51] = Vector3(-3006.4539f, 177.695f, 14.8855f);
+			uLocal_604[52] = Vector3(-2994.6628f, 154.9807f, 14.3746f);
+			uLocal_604[53] = Vector3(-2979.6724f, 136.2853f, 13.7377f);
+			uLocal_604[54] = Vector3(-2950.8318f, 112.3324f, 12.904f);
+			uLocal_604[55] = Vector3(-2921.3289f, 97.7186f, 12.7178f);
+			uLocal_604[56] = Vector3(-2851.4888f, 75.2672f, 13.5427f);
+			uLocal_604[57] = Vector3(-2836.6099f, 32.9254f, 12.8794f);
+			uLocal_604[58] = Vector3(-2831.9875f, 18.7339f, 10.4085f);
+			uLocal_604[59] = Vector3(-2824.5603f, -8.0105f, 6.1181f);
+			uLocal_604[60] = Vector3(-2803.649f, -81.9439f, -0.221f);
+			uLocal_604[61] = Vector3(-2780.2065f, -96.5313f, 0.3584f);
+			uLocal_604[62] = Vector3(-2736.6733f, -109.0135f, 0.5296f);
+			uLocal_604[63] = Vector3(-2700.4514f, -141.5591f, 0.9655f);
+			uLocal_604[64] = Vector3(-2671.8303f, -175.5449f, 1.0133f);
+			uLocal_604[65] = Vector3(-2630.613f, -198.3817f, 2.1479f);
+			uLocal_604[66] = Vector3(-2547.9849f, -249.0516f, 2.2801f);
+			uLocal_604[67] = Vector3(-2473.8474f, -295.0556f, 2.7219f);
+			uLocal_604[68] = Vector3(-2434.0935f, -326.3175f, 3.0194f);
+			uLocal_604[69] = Vector3(-2410.1133f, -331.2293f, 2.6013f);
+			uLocal_604[70] = Vector3(-2376.031f, -335.9692f, 2.5363f);
+			uLocal_604[71] = Vector3(-2356.186f, -344.7604f, 2.6766f);
+			uLocal_604[72] = Vector3(-2327.2456f, -365.7754f, 2.3142f);
+			uLocal_604[73] = Vector3(-2276.5415f, -398.5323f, 1.8233f);
+			uLocal_604[74] = Vector3(-2230.8225f, -415.3987f, 3.087f);
+			uLocal_604[75] = Vector3(-2213.564f, -418.7813f, 5.5765f);
+			uLocal_604[76] = Vector3(-2199.3962f, -420.4765f, 11.8061f);
+			uLocal_604[77] = Vector3(-2176.1367f, -416.0254f, 12.2345f);
+			uLocal_604[78] = Vector3(-2126.0286f, -402.4269f, 11.7143f);
+			uLocal_604[79] = Vector3(-2102.2246f, -366.2369f, 11.8076f);
+			uLocal_604[80] = Vector3(-2095.2676f, -318.8827f, 12.0248f);
+			uLocal_604[81] = Vector3(-2093.9993f, -264.2969f, 18.7933f);
+			uLocal_604[82] = Vector3(-2089.104f, -214.1321f, 19.5783f);
+			uLocal_604[83] = Vector3(-2071.153f, -210.7178f, 21.0689f);
+			uLocal_604[84] = Vector3(-2050.0754f, -223.6322f, 25.6497f);
+			uLocal_604[85] = Vector3(-2030.9808f, -224.0641f, 27.9967f);
+			uLocal_604[86] = Vector3(-1998.867f, -224.0556f, 31.1763f);
+			uLocal_604[87] = Vector3(-1987.9215f, -232.1616f, 32.9357f);
+			uLocal_604[88] = Vector3(-1986.7235f, -241.0943f, 33.9168f);
+			uLocal_604[89] = Vector3(-1980.2367f, -257.3627f, 33.6684f);
+			uLocal_604[90] = Vector3(-1966.5735f, -261.1625f, 34.9521f);
+			uLocal_604[91] = Vector3(-1948.8265f, -242.7568f, 34.8759f);
+			uLocal_604[92] = Vector3(-1938.9633f, -233.8106f, 35.8376f);
+			uLocal_604[93] = Vector3(-1911.051f, -214.8513f, 35.2168f);
+			uLocal_604[94] = Vector3(-1874.8605f, -185.5185f, 37.115f);
+			uLocal_604[95] = Vector3(-1864.5593f, -180.1412f, 43.2547f);
+			uLocal_604[96] = Vector3(-1850.8513f, -185.8726f, 45.6611f);
+			uLocal_604[97] = Vector3(-1834.4126f, -189.1538f, 48.8693f);
+			uLocal_604[98] = Vector3(-1815.9832f, -200.1424f, 50.7411f);
+			uLocal_604[99] = Vector3(-1805.7876f, -203.853f, 51.7412f);
+			uLocal_604[100] = Vector3(-1792.7168f, -217.502f, 50.9357f);
+			uLocal_604[101] = Vector3(-1774.695f, -229.8553f, 51.7138f);
+			uLocal_604[102] = Vector3(-1756.9034f, -238.1252f, 52.0989f);
+			uLocal_604[103] = Vector3(-1736.2507f, -241.4447f, 52.672f);
+			uLocal_604[104] = Vector3(-1712.5735f, -240.3414f, 53.0528f);
+			uLocal_604[105] = Vector3(-1699.116f, -234.5364f, 54.4754f);
+			uLocal_604[106] = Vector3(-1689.3018f, -217.4817f, 56.5364f);
+			uLocal_604[107] = Vector3(-1682.4846f, -202.5944f, 56.595f);
+			uLocal_604[108] = Vector3(-1680.8939f, -188.3022f, 56.5344f);
+			uLocal_604[109] = Vector3(-1682.9626f, -173.7911f, 56.5401f);
+			uLocal_604[110] = Vector3(-1689.3328f, -162.1221f, 56.5802f);
+			uLocal_604[111] = Vector3(-1702.2227f, -155.7313f, 56.3958f);
+			uLocal_604[112] = Vector3(-1709.647f, -161.5643f, 56.4539f);
+			uLocal_604[113] = Vector3(-1715.4739f, -168.1092f, 56.503f);
+			uLocal_604[114] = Vector3(-1725.5365f, -168.0596f, 56.7325f);
+			uLocal_604[115] = Vector3(-1733.6442f, -169.4988f, 57.5363f);
+			uLocal_604[116] = Vector3(-1733.4342f, -177.1803f, 58.3052f);
+			uLocal_604[117] = Vector3(-1731.4307f, -182.4709f, 57.4901f);
+			uLocal_604[118] = Vector3(-1730.0248f, -191.5667f, 57.3605f);
 			iLocal_1474 = 119;
 			break;
 	
 		case 9:
-			uLocal_604[0] = { -1463.9116f, 2789.8257f, 20.0877f };
-			uLocal_604[1] = { -1477.1481f, 2845.476f, 25.45f };
-			uLocal_604[2] = { -1506.9653f, 2872.3396f, 30.2234f };
-			uLocal_604[3] = { -1577.2604f, 2932.7048f, 31.917f };
-			uLocal_604[4] = { -1591.626f, 2997.5771f, 32.261f };
-			uLocal_604[5] = { -1639.9797f, 3059.17f, 29.948f };
-			uLocal_604[6] = { -1645.0012f, 3178.4958f, 29.4591f };
-			uLocal_604[7] = { -1655.6416f, 3226.4429f, 33.7777f };
-			uLocal_604[8] = { -1694.7043f, 3249.4023f, 32.0673f };
-			uLocal_604[9] = { -1725.4783f, 3262.4731f, 31.5433f };
-			uLocal_604[10] = { -1951.8118f, 3391.708f, 31.1172f };
-			uLocal_604[11] = { -1984.6615f, 3398.1184f, 31.1172f };
-			uLocal_604[12] = { -2011.3973f, 3398.7388f, 30.4796f };
-			uLocal_604[13] = { -2034.7754f, 3383.3872f, 30.2602f };
-			uLocal_604[14] = { -2065.7727f, 3384.6152f, 30.3096f };
-			uLocal_604[15] = { -2109.0266f, 3382.4377f, 30.9568f };
-			uLocal_604[16] = { -2137.1829f, 3393.0408f, 31.1325f };
-			uLocal_604[17] = { -2143.365f, 3397.5947f, 32.7541f };
-			uLocal_604[18] = { -2161.1116f, 3410.7014f, 31.6593f };
-			uLocal_604[19] = { -2187.906f, 3415.621f, 31.7261f };
-			uLocal_604[20] = { -2199.6711f, 3426.6108f, 31.6199f };
-			uLocal_604[21] = { -2217.014f, 3434.519f, 31.6187f };
-			uLocal_604[22] = { -2237.5474f, 3433.5896f, 31.6194f };
-			uLocal_604[23] = { -2251.7886f, 3432.903f, 32.4218f };
-			uLocal_604[24] = { -2256.2153f, 3432.5642f, 31.059f };
-			uLocal_604[25] = { -2276.6184f, 3439.0962f, 31.0393f };
-			uLocal_604[26] = { -2292.811f, 3446.875f, 30.8394f };
-			uLocal_604[27] = { -2315.6826f, 3443.7644f, 30.3699f };
-			uLocal_604[28] = { -2341.1333f, 3432.4043f, 28.5928f };
-			uLocal_604[29] = { -2365.814f, 3428.073f, 26.8742f };
-			uLocal_604[30] = { -2381.9834f, 3423.8833f, 30.3016f };
-			uLocal_604[31] = { -2394.0405f, 3416.595f, 30.5506f };
-			uLocal_604[32] = { -2530.5889f, 3337.5151f, 30.4319f };
-			uLocal_604[33] = { -2548.137f, 3339.1338f, 28.6846f };
-			uLocal_604[34] = { -2562.008f, 3341.58f, 28.0224f };
-			uLocal_604[35] = { -2588.223f, 3351.021f, 24.6836f };
-			uLocal_604[36] = { -2594.0706f, 3356.0793f, 22.1251f };
-			uLocal_604[37] = { -2595.7449f, 3365.9146f, 17.9894f };
-			uLocal_604[38] = { -2595.793f, 3377.5737f, 12.8038f };
-			uLocal_604[39] = { -2608.6619f, 3392.6123f, 13.1174f };
-			uLocal_604[40] = { -2623.4954f, 3407.1426f, 13.6065f };
-			uLocal_604[41] = { -2653.2124f, 3424.437f, 13.7192f };
-			uLocal_604[42] = { -2699.8762f, 3437.2478f, 12.9223f };
-			uLocal_604[43] = { -2721.9482f, 3443.9595f, 11.9598f };
-			uLocal_604[44] = { -2779.478f, 3456.6555f, 10.6559f };
-			uLocal_604[45] = { -2804.6438f, 3470.18f, 9.7878f };
-			uLocal_604[46] = { -2825.7708f, 3501.1694f, 7.9953f };
-			uLocal_604[47] = { -2837.0437f, 3518.584f, 7.4085f };
-			uLocal_604[48] = { -2864.5059f, 3523.5164f, 7.1469f };
-			uLocal_604[49] = { -2913.5396f, 3523.989f, 7.2342f };
-			uLocal_604[50] = { -2944.4956f, 3519.349f, 7.215f };
-			uLocal_604[51] = { -2957.936f, 3509.1182f, 7.5977f };
-			uLocal_604[52] = { -2968.7124f, 3494.8137f, 8.0967f };
-			uLocal_604[53] = { -2982.3132f, 3472.1548f, 8.5156f };
-			uLocal_604[54] = { -2997.359f, 3440.916f, 8.5745f };
-			uLocal_604[55] = { -3006.3542f, 3441.868f, 8.3125f };
-			uLocal_604[56] = { -3010.171f, 3442.161f, 7.8361f };
-			uLocal_604[57] = { -3016.1267f, 3442.6323f, 6.1649f };
-			uLocal_604[58] = { -3044.0186f, 3439.9016f, 2.6837f };
-			uLocal_604[59] = { -3083.78f, 3434.43f, 0.6736f };
-			uLocal_604[60] = { -3108.8635f, 3426.9143f, 0.5969f };
-			uLocal_604[61] = { -3121.0525f, 3417.5256f, 0.8856f };
-			uLocal_604[62] = { -3128.933f, 3401.3784f, 0.723f };
-			uLocal_604[63] = { -3127.117f, 3385.6082f, -0.0289f };
-			uLocal_604[64] = { -3120.6143f, 3370.245f, -0.3007f };
-			uLocal_604[65] = { -3120.8433f, 3355.3367f, -0.3184f };
-			uLocal_604[66] = { -3131.457f, 3337.6663f, -0.4124f };
-			uLocal_604[67] = { -3130.055f, 3331.1333f, 0.453f };
-			uLocal_604[68] = { -3126.0444f, 3311.187f, 1.9264f };
-			uLocal_604[69] = { -3121.6252f, 3297.5825f, 4.969f };
-			uLocal_604[70] = { -3114.6248f, 3288.4163f, 5.7302f };
-			uLocal_604[71] = { -3109.7534f, 3286.727f, 5.3114f };
-			uLocal_604[72] = { -3094.2087f, 3285.1382f, 3.4169f };
-			uLocal_604[73] = { -3078.4607f, 3294.3872f, 3.5013f };
-			uLocal_604[74] = { -3064.6958f, 3299.328f, 4.393f };
-			uLocal_604[75] = { -3042.485f, 3298.6611f, 4.2975f };
-			uLocal_604[76] = { -3012.8215f, 3298.938f, 8.3148f };
-			uLocal_604[77] = { -3005.9194f, 3298.7898f, 8.8372f };
-			uLocal_604[78] = { -2979.5244f, 3296.4094f, 9.4458f };
-			uLocal_604[79] = { -2965.9092f, 3290.2358f, 10.2551f };
-			uLocal_604[80] = { -2956.04f, 3279.582f, 10.3873f };
-			uLocal_604[81] = { -2941.2598f, 3267.0317f, 10.8597f };
-			uLocal_604[82] = { -2928.6233f, 3259.0635f, 10.4515f };
-			uLocal_604[83] = { -2922.0327f, 3248.5322f, 9.6349f };
-			uLocal_604[84] = { -2917.5198f, 3233.9338f, 9.5718f };
-			uLocal_604[85] = { -2907.681f, 3215.4233f, 9.8787f };
-			uLocal_604[86] = { -2879.2188f, 3175.5818f, 9.9335f };
-			uLocal_604[87] = { -2837.9138f, 3137.4614f, 9.104f };
-			uLocal_604[88] = { -2778.5952f, 3095.4136f, 7.9147f };
-			uLocal_604[89] = { -2755.339f, 3093.4353f, 7.9238f };
-			uLocal_604[90] = { -2732.754f, 3091.2634f, 11.8101f };
-			uLocal_604[91] = { -2715.5098f, 3088.629f, 18.9392f };
-			uLocal_604[92] = { -2704.9119f, 3088.065f, 22.5439f };
-			uLocal_604[93] = { -2698.5708f, 3088.8293f, 24.5249f };
-			uLocal_604[94] = { -2688.0886f, 3088.7551f, 26.9138f };
-			uLocal_604[95] = { -2668.202f, 3087.6262f, 31.0204f };
-			uLocal_604[96] = { -2663.953f, 3087.5232f, 31.2972f };
-			uLocal_604[97] = { -2649.556f, 3076.8613f, 31.3129f };
-			uLocal_604[98] = { -2625.872f, 3048.057f, 31.3104f };
-			uLocal_604[99] = { -2598.4082f, 3019.6755f, 31.4648f };
-			uLocal_604[100] = { -2586.2258f, 3015.6416f, 31.7198f };
-			uLocal_604[101] = { -2560.566f, 2996.8481f, 37.5706f };
-			uLocal_604[102] = { -2552.7366f, 2986.7651f, 36.5308f };
-			uLocal_604[103] = { -2545.4165f, 2969.7095f, 35.8487f };
-			uLocal_604[104] = { -2540.3657f, 2955.3162f, 35.0142f };
-			uLocal_604[105] = { -2532.9888f, 2947.1414f, 34.4408f };
-			uLocal_604[106] = { -2527.3262f, 2945.0369f, 33.7632f };
-			uLocal_604[107] = { -2510.0122f, 2935.014f, 31.8324f };
-			uLocal_604[108] = { -2506.855f, 2927.783f, 31.8324f };
-			uLocal_604[109] = { -2502f, 2923.3804f, 31.8656f };
-			uLocal_604[110] = { -2453.2827f, 2895.4429f, 31.827f };
-			uLocal_604[111] = { -2448.6328f, 2893.234f, 31.8105f };
-			uLocal_604[112] = { -2441.9705f, 2894.0757f, 31.8161f };
-			uLocal_604[113] = { -2435.053f, 2899.211f, 31.8101f };
-			uLocal_604[114] = { -2419.4944f, 2912.7275f, 31.8101f };
-			uLocal_604[115] = { -2410.9985f, 2920.6646f, 31.8101f };
-			uLocal_604[116] = { -2402.9812f, 2926.1086f, 31.8101f };
-			uLocal_604[117] = { -2388.7112f, 2931.548f, 31.8101f };
-			uLocal_604[118] = { -2376.1946f, 2935.068f, 31.8101f };
-			uLocal_604[119] = { -2362.1738f, 2937.1716f, 31.8101f };
-			uLocal_604[120] = { -2349.6929f, 2937.4854f, 31.8097f };
-			uLocal_604[121] = { -2335.7468f, 2935.8542f, 31.8095f };
-			uLocal_604[122] = { -2318.9424f, 2929.66f, 31.7445f };
-			uLocal_604[123] = { -2297.4214f, 2923.0554f, 31.402f };
-			uLocal_604[124] = { -2273.0647f, 2913.4954f, 31.1485f };
-			uLocal_604[125] = { -2255.3586f, 2902.8337f, 31.3591f };
-			uLocal_604[126] = { -2229.69f, 2883.8074f, 31.236f };
-			uLocal_604[127] = { -2202.9248f, 2869.3142f, 31.1578f };
-			uLocal_604[128] = { -2183.3064f, 2857.042f, 31.1936f };
-			uLocal_604[129] = { -2163.49f, 2841.4644f, 31.3816f };
-			uLocal_604[130] = { -2149.8618f, 2823.891f, 31.4544f };
-			uLocal_604[131] = { -2144.5872f, 2808.7349f, 31.4497f };
-			uLocal_604[132] = { -2132.1765f, 2795.0198f, 31.7241f };
-			uLocal_604[133] = { -2108.1406f, 2785.463f, 31.7808f };
-			uLocal_604[134] = { -2068.5793f, 2784.0205f, 31.4615f };
-			uLocal_604[135] = { -2051.136f, 2791.3096f, 31.825f };
-			uLocal_604[136] = { -2042.0018f, 2795.7283f, 31.2093f };
-			uLocal_604[137] = { -2024.1208f, 2799.8665f, 31.5836f };
-			uLocal_604[138] = { -2004.3717f, 2797.4036f, 31.7003f };
-			uLocal_604[139] = { -1976.0474f, 2791.3828f, 31.5104f };
-			uLocal_604[140] = { -1947.483f, 2778.565f, 31.1414f };
-			uLocal_604[141] = { -1936.3785f, 2768.8975f, 31.1447f };
-			uLocal_604[142] = { -1929.7583f, 2758.106f, 30.6489f };
-			uLocal_604[143] = { -1925.9906f, 2751.949f, 25.9925f };
-			uLocal_604[144] = { -1921.4097f, 2746.268f, 24.8392f };
-			uLocal_604[145] = { -1915.1368f, 2739.6587f, 23.8019f };
-			uLocal_604[146] = { -1900.3069f, 2727.201f, 21.1878f };
-			uLocal_604[147] = { -1883.7455f, 2715.2625f, 19.6892f };
-			uLocal_604[148] = { -1875.7476f, 2711.0803f, 12.552f };
-			uLocal_604[149] = { -1867.8955f, 2703.139f, 3.0778f };
-			uLocal_604[150] = { -1861.9625f, 2692.4229f, 3.1018f };
-			uLocal_604[151] = { -1857.4758f, 2683.575f, 3.2905f };
-			uLocal_604[152] = { -1848.774f, 2668.9883f, 2.0379f };
-			uLocal_604[153] = { -1842.3397f, 2663.9846f, 1.5316f };
-			uLocal_604[154] = { -1838.2953f, 2661.605f, 0.5979f };
-			uLocal_604[155] = { -1815.5259f, 2665.4827f, 0.7053f };
-			uLocal_604[156] = { -1805.6318f, 2669.1565f, 2.2314f };
-			uLocal_604[157] = { -1786.1377f, 2670.6023f, 2.2725f };
-			uLocal_604[158] = { -1771.0234f, 2668.4907f, 2.1361f };
-			uLocal_604[159] = { -1760.8687f, 2665.975f, 1.8861f };
-			uLocal_604[160] = { -1755.2838f, 2664.367f, 1.7509f };
-			uLocal_604[161] = { -1748.7069f, 2663.0032f, 1.9587f };
-			uLocal_604[162] = { -1736.1887f, 2659.8857f, 1.9917f };
-			uLocal_604[163] = { -1728.4756f, 2658.1829f, 1.9464f };
-			uLocal_604[164] = { -1722.7252f, 2657.996f, 2.0025f };
-			uLocal_604[165] = { -1719.5546f, 2657.8838f, 1.4411f };
-			uLocal_604[166] = { -1715.6056f, 2657.7336f, 0.7234f };
-			uLocal_604[167] = { -1710.3817f, 2658.301f, 0.4668f };
-			uLocal_604[168] = { -1707.3594f, 2659.4832f, 0.282f };
-			uLocal_604[169] = { -1703.7361f, 2660.578f, 0.5126f };
-			uLocal_604[170] = { -1697.2767f, 2662.122f, 0.7382f };
-			uLocal_604[171] = { -1694.4106f, 2662.7053f, 1.5014f };
-			uLocal_604[172] = { -1690.5967f, 2663.5403f, 1.8258f };
-			uLocal_604[173] = { -1683.0225f, 2665.116f, 1.8626f };
-			uLocal_604[174] = { -1677.6127f, 2664.2864f, 1.8642f };
-			uLocal_604[175] = { -1675.0409f, 2662.9934f, 1.525f };
-			uLocal_604[176] = { -1669.6145f, 2661.5696f, 1.3865f };
-			uLocal_604[177] = { -1660.9961f, 2660.5144f, 1.5346f };
-			uLocal_604[178] = { -1654.2736f, 2660.6213f, 1.3163f };
-			uLocal_604[179] = { -1652.6024f, 2661.7214f, 0.846f };
-			uLocal_604[180] = { -1650.7717f, 2663.6042f, 0.3205f };
-			uLocal_604[181] = { -1648.7227f, 2666.7673f, -0.3498f };
-			uLocal_604[182] = { -1646.6138f, 2670.389f, -0.2246f };
-			uLocal_604[183] = { -1645.2985f, 2672.659f, 0.4074f };
-			uLocal_604[184] = { -1643.8861f, 2675.4792f, 1.3415f };
-			uLocal_604[185] = { -1643.0524f, 2678.9778f, 1.7816f };
-			uLocal_604[186] = { -1643.8099f, 2684.7126f, 1.9387f };
-			uLocal_604[187] = { -1644.4364f, 2692.437f, 2.6905f };
-			uLocal_604[188] = { -1643.396f, 2700.8857f, 4.7337f };
-			uLocal_604[189] = { -1642.3713f, 2702.6987f, 4.6934f };
-			uLocal_604[190] = { -1634.9198f, 2708.2915f, 4.7769f };
-			uLocal_604[191] = { -1622.8417f, 2712.6648f, 4.7364f };
-			uLocal_604[192] = { -1616.7406f, 2718.5923f, 4.7278f };
-			uLocal_604[193] = { -1615.26f, 2726.2915f, 4.782f };
-			uLocal_604[194] = { -1615.3722f, 2740.1968f, 5.415f };
-			uLocal_604[195] = { -1615.5627f, 2747.673f, 7.4045f };
-			uLocal_604[196] = { -1615.0973f, 2751.5652f, 8.8844f };
-			uLocal_604[197] = { -1611.7622f, 2755.532f, 10.7072f };
-			uLocal_604[198] = { -1608.429f, 2757.8992f, 11.9354f };
-			uLocal_604[199] = { -1603.6677f, 2759.287f, 13.1858f };
-			uLocal_604[200] = { -1595.8516f, 2761.2637f, 15.6171f };
-			uLocal_604[201] = { -1591.1067f, 2762.9976f, 17.0786f };
-			uLocal_604[202] = { -1588.6313f, 2765.0896f, 17.4527f };
-			uLocal_604[203] = { -1583.6526f, 2766.244f, 17.432f };
-			uLocal_604[204] = { -1575.535f, 2763.5183f, 17.2576f };
-			uLocal_604[205] = { -1568.7128f, 2759.8894f, 17.0294f };
-			uLocal_604[206] = { -1560.9313f, 2756.537f, 16.5327f };
-			uLocal_604[207] = { -1550.3893f, 2752.6716f, 16.8426f };
-			uLocal_604[208] = { -1539.9153f, 2745.9878f, 16.6513f };
-			uLocal_604[209] = { -1329.1594f, 2560.402f, 16.6908f };
-			uLocal_604[210] = { -1312.1677f, 2545.4243f, 17.302f };
-			uLocal_604[211] = { -1299.6853f, 2536.006f, 17.8598f };
-			uLocal_604[212] = { -1294.1882f, 2532.7388f, 18.3548f };
-			uLocal_604[213] = { -1288.1488f, 2528.1138f, 18.6202f };
+			uLocal_604[0] = Vector3(-1463.9116f, 2789.8257f, 20.0877f);
+			uLocal_604[1] = Vector3(-1477.1481f, 2845.476f, 25.45f);
+			uLocal_604[2] = Vector3(-1506.9653f, 2872.3396f, 30.2234f);
+			uLocal_604[3] = Vector3(-1577.2604f, 2932.7048f, 31.917f);
+			uLocal_604[4] = Vector3(-1591.626f, 2997.5771f, 32.261f);
+			uLocal_604[5] = Vector3(-1639.9797f, 3059.17f, 29.948f);
+			uLocal_604[6] = Vector3(-1645.0012f, 3178.4958f, 29.4591f);
+			uLocal_604[7] = Vector3(-1655.6416f, 3226.4429f, 33.7777f);
+			uLocal_604[8] = Vector3(-1694.7043f, 3249.4023f, 32.0673f);
+			uLocal_604[9] = Vector3(-1725.4783f, 3262.4731f, 31.5433f);
+			uLocal_604[10] = Vector3(-1951.8118f, 3391.708f, 31.1172f);
+			uLocal_604[11] = Vector3(-1984.6615f, 3398.1184f, 31.1172f);
+			uLocal_604[12] = Vector3(-2011.3973f, 3398.7388f, 30.4796f);
+			uLocal_604[13] = Vector3(-2034.7754f, 3383.3872f, 30.2602f);
+			uLocal_604[14] = Vector3(-2065.7727f, 3384.6152f, 30.3096f);
+			uLocal_604[15] = Vector3(-2109.0266f, 3382.4377f, 30.9568f);
+			uLocal_604[16] = Vector3(-2137.1829f, 3393.0408f, 31.1325f);
+			uLocal_604[17] = Vector3(-2143.365f, 3397.5947f, 32.7541f);
+			uLocal_604[18] = Vector3(-2161.1116f, 3410.7014f, 31.6593f);
+			uLocal_604[19] = Vector3(-2187.906f, 3415.621f, 31.7261f);
+			uLocal_604[20] = Vector3(-2199.6711f, 3426.6108f, 31.6199f);
+			uLocal_604[21] = Vector3(-2217.014f, 3434.519f, 31.6187f);
+			uLocal_604[22] = Vector3(-2237.5474f, 3433.5896f, 31.6194f);
+			uLocal_604[23] = Vector3(-2251.7886f, 3432.903f, 32.4218f);
+			uLocal_604[24] = Vector3(-2256.2153f, 3432.5642f, 31.059f);
+			uLocal_604[25] = Vector3(-2276.6184f, 3439.0962f, 31.0393f);
+			uLocal_604[26] = Vector3(-2292.811f, 3446.875f, 30.8394f);
+			uLocal_604[27] = Vector3(-2315.6826f, 3443.7644f, 30.3699f);
+			uLocal_604[28] = Vector3(-2341.1333f, 3432.4043f, 28.5928f);
+			uLocal_604[29] = Vector3(-2365.814f, 3428.073f, 26.8742f);
+			uLocal_604[30] = Vector3(-2381.9834f, 3423.8833f, 30.3016f);
+			uLocal_604[31] = Vector3(-2394.0405f, 3416.595f, 30.5506f);
+			uLocal_604[32] = Vector3(-2530.5889f, 3337.5151f, 30.4319f);
+			uLocal_604[33] = Vector3(-2548.137f, 3339.1338f, 28.6846f);
+			uLocal_604[34] = Vector3(-2562.008f, 3341.58f, 28.0224f);
+			uLocal_604[35] = Vector3(-2588.223f, 3351.021f, 24.6836f);
+			uLocal_604[36] = Vector3(-2594.0706f, 3356.0793f, 22.1251f);
+			uLocal_604[37] = Vector3(-2595.7449f, 3365.9146f, 17.9894f);
+			uLocal_604[38] = Vector3(-2595.793f, 3377.5737f, 12.8038f);
+			uLocal_604[39] = Vector3(-2608.6619f, 3392.6123f, 13.1174f);
+			uLocal_604[40] = Vector3(-2623.4954f, 3407.1426f, 13.6065f);
+			uLocal_604[41] = Vector3(-2653.2124f, 3424.437f, 13.7192f);
+			uLocal_604[42] = Vector3(-2699.8762f, 3437.2478f, 12.9223f);
+			uLocal_604[43] = Vector3(-2721.9482f, 3443.9595f, 11.9598f);
+			uLocal_604[44] = Vector3(-2779.478f, 3456.6555f, 10.6559f);
+			uLocal_604[45] = Vector3(-2804.6438f, 3470.18f, 9.7878f);
+			uLocal_604[46] = Vector3(-2825.7708f, 3501.1694f, 7.9953f);
+			uLocal_604[47] = Vector3(-2837.0437f, 3518.584f, 7.4085f);
+			uLocal_604[48] = Vector3(-2864.5059f, 3523.5164f, 7.1469f);
+			uLocal_604[49] = Vector3(-2913.5396f, 3523.989f, 7.2342f);
+			uLocal_604[50] = Vector3(-2944.4956f, 3519.349f, 7.215f);
+			uLocal_604[51] = Vector3(-2957.936f, 3509.1182f, 7.5977f);
+			uLocal_604[52] = Vector3(-2968.7124f, 3494.8137f, 8.0967f);
+			uLocal_604[53] = Vector3(-2982.3132f, 3472.1548f, 8.5156f);
+			uLocal_604[54] = Vector3(-2997.359f, 3440.916f, 8.5745f);
+			uLocal_604[55] = Vector3(-3006.3542f, 3441.868f, 8.3125f);
+			uLocal_604[56] = Vector3(-3010.171f, 3442.161f, 7.8361f);
+			uLocal_604[57] = Vector3(-3016.1267f, 3442.6323f, 6.1649f);
+			uLocal_604[58] = Vector3(-3044.0186f, 3439.9016f, 2.6837f);
+			uLocal_604[59] = Vector3(-3083.78f, 3434.43f, 0.6736f);
+			uLocal_604[60] = Vector3(-3108.8635f, 3426.9143f, 0.5969f);
+			uLocal_604[61] = Vector3(-3121.0525f, 3417.5256f, 0.8856f);
+			uLocal_604[62] = Vector3(-3128.933f, 3401.3784f, 0.723f);
+			uLocal_604[63] = Vector3(-3127.117f, 3385.6082f, -0.0289f);
+			uLocal_604[64] = Vector3(-3120.6143f, 3370.245f, -0.3007f);
+			uLocal_604[65] = Vector3(-3120.8433f, 3355.3367f, -0.3184f);
+			uLocal_604[66] = Vector3(-3131.457f, 3337.6663f, -0.4124f);
+			uLocal_604[67] = Vector3(-3130.055f, 3331.1333f, 0.453f);
+			uLocal_604[68] = Vector3(-3126.0444f, 3311.187f, 1.9264f);
+			uLocal_604[69] = Vector3(-3121.6252f, 3297.5825f, 4.969f);
+			uLocal_604[70] = Vector3(-3114.6248f, 3288.4163f, 5.7302f);
+			uLocal_604[71] = Vector3(-3109.7534f, 3286.727f, 5.3114f);
+			uLocal_604[72] = Vector3(-3094.2087f, 3285.1382f, 3.4169f);
+			uLocal_604[73] = Vector3(-3078.4607f, 3294.3872f, 3.5013f);
+			uLocal_604[74] = Vector3(-3064.6958f, 3299.328f, 4.393f);
+			uLocal_604[75] = Vector3(-3042.485f, 3298.6611f, 4.2975f);
+			uLocal_604[76] = Vector3(-3012.8215f, 3298.938f, 8.3148f);
+			uLocal_604[77] = Vector3(-3005.9194f, 3298.7898f, 8.8372f);
+			uLocal_604[78] = Vector3(-2979.5244f, 3296.4094f, 9.4458f);
+			uLocal_604[79] = Vector3(-2965.9092f, 3290.2358f, 10.2551f);
+			uLocal_604[80] = Vector3(-2956.04f, 3279.582f, 10.3873f);
+			uLocal_604[81] = Vector3(-2941.2598f, 3267.0317f, 10.8597f);
+			uLocal_604[82] = Vector3(-2928.6233f, 3259.0635f, 10.4515f);
+			uLocal_604[83] = Vector3(-2922.0327f, 3248.5322f, 9.6349f);
+			uLocal_604[84] = Vector3(-2917.5198f, 3233.9338f, 9.5718f);
+			uLocal_604[85] = Vector3(-2907.681f, 3215.4233f, 9.8787f);
+			uLocal_604[86] = Vector3(-2879.2188f, 3175.5818f, 9.9335f);
+			uLocal_604[87] = Vector3(-2837.9138f, 3137.4614f, 9.104f);
+			uLocal_604[88] = Vector3(-2778.5952f, 3095.4136f, 7.9147f);
+			uLocal_604[89] = Vector3(-2755.339f, 3093.4353f, 7.9238f);
+			uLocal_604[90] = Vector3(-2732.754f, 3091.2634f, 11.8101f);
+			uLocal_604[91] = Vector3(-2715.5098f, 3088.629f, 18.9392f);
+			uLocal_604[92] = Vector3(-2704.9119f, 3088.065f, 22.5439f);
+			uLocal_604[93] = Vector3(-2698.5708f, 3088.8293f, 24.5249f);
+			uLocal_604[94] = Vector3(-2688.0886f, 3088.7551f, 26.9138f);
+			uLocal_604[95] = Vector3(-2668.202f, 3087.6262f, 31.0204f);
+			uLocal_604[96] = Vector3(-2663.953f, 3087.5232f, 31.2972f);
+			uLocal_604[97] = Vector3(-2649.556f, 3076.8613f, 31.3129f);
+			uLocal_604[98] = Vector3(-2625.872f, 3048.057f, 31.3104f);
+			uLocal_604[99] = Vector3(-2598.4082f, 3019.6755f, 31.4648f);
+			uLocal_604[100] = Vector3(-2586.2258f, 3015.6416f, 31.7198f);
+			uLocal_604[101] = Vector3(-2560.566f, 2996.8481f, 37.5706f);
+			uLocal_604[102] = Vector3(-2552.7366f, 2986.7651f, 36.5308f);
+			uLocal_604[103] = Vector3(-2545.4165f, 2969.7095f, 35.8487f);
+			uLocal_604[104] = Vector3(-2540.3657f, 2955.3162f, 35.0142f);
+			uLocal_604[105] = Vector3(-2532.9888f, 2947.1414f, 34.4408f);
+			uLocal_604[106] = Vector3(-2527.3262f, 2945.0369f, 33.7632f);
+			uLocal_604[107] = Vector3(-2510.0122f, 2935.014f, 31.8324f);
+			uLocal_604[108] = Vector3(-2506.855f, 2927.783f, 31.8324f);
+			uLocal_604[109] = Vector3(-2502f, 2923.3804f, 31.8656f);
+			uLocal_604[110] = Vector3(-2453.2827f, 2895.4429f, 31.827f);
+			uLocal_604[111] = Vector3(-2448.6328f, 2893.234f, 31.8105f);
+			uLocal_604[112] = Vector3(-2441.9705f, 2894.0757f, 31.8161f);
+			uLocal_604[113] = Vector3(-2435.053f, 2899.211f, 31.8101f);
+			uLocal_604[114] = Vector3(-2419.4944f, 2912.7275f, 31.8101f);
+			uLocal_604[115] = Vector3(-2410.9985f, 2920.6646f, 31.8101f);
+			uLocal_604[116] = Vector3(-2402.9812f, 2926.1086f, 31.8101f);
+			uLocal_604[117] = Vector3(-2388.7112f, 2931.548f, 31.8101f);
+			uLocal_604[118] = Vector3(-2376.1946f, 2935.068f, 31.8101f);
+			uLocal_604[119] = Vector3(-2362.1738f, 2937.1716f, 31.8101f);
+			uLocal_604[120] = Vector3(-2349.6929f, 2937.4854f, 31.8097f);
+			uLocal_604[121] = Vector3(-2335.7468f, 2935.8542f, 31.8095f);
+			uLocal_604[122] = Vector3(-2318.9424f, 2929.66f, 31.7445f);
+			uLocal_604[123] = Vector3(-2297.4214f, 2923.0554f, 31.402f);
+			uLocal_604[124] = Vector3(-2273.0647f, 2913.4954f, 31.1485f);
+			uLocal_604[125] = Vector3(-2255.3586f, 2902.8337f, 31.3591f);
+			uLocal_604[126] = Vector3(-2229.69f, 2883.8074f, 31.236f);
+			uLocal_604[127] = Vector3(-2202.9248f, 2869.3142f, 31.1578f);
+			uLocal_604[128] = Vector3(-2183.3064f, 2857.042f, 31.1936f);
+			uLocal_604[129] = Vector3(-2163.49f, 2841.4644f, 31.3816f);
+			uLocal_604[130] = Vector3(-2149.8618f, 2823.891f, 31.4544f);
+			uLocal_604[131] = Vector3(-2144.5872f, 2808.7349f, 31.4497f);
+			uLocal_604[132] = Vector3(-2132.1765f, 2795.0198f, 31.7241f);
+			uLocal_604[133] = Vector3(-2108.1406f, 2785.463f, 31.7808f);
+			uLocal_604[134] = Vector3(-2068.5793f, 2784.0205f, 31.4615f);
+			uLocal_604[135] = Vector3(-2051.136f, 2791.3096f, 31.825f);
+			uLocal_604[136] = Vector3(-2042.0018f, 2795.7283f, 31.2093f);
+			uLocal_604[137] = Vector3(-2024.1208f, 2799.8665f, 31.5836f);
+			uLocal_604[138] = Vector3(-2004.3717f, 2797.4036f, 31.7003f);
+			uLocal_604[139] = Vector3(-1976.0474f, 2791.3828f, 31.5104f);
+			uLocal_604[140] = Vector3(-1947.483f, 2778.565f, 31.1414f);
+			uLocal_604[141] = Vector3(-1936.3785f, 2768.8975f, 31.1447f);
+			uLocal_604[142] = Vector3(-1929.7583f, 2758.106f, 30.6489f);
+			uLocal_604[143] = Vector3(-1925.9906f, 2751.949f, 25.9925f);
+			uLocal_604[144] = Vector3(-1921.4097f, 2746.268f, 24.8392f);
+			uLocal_604[145] = Vector3(-1915.1368f, 2739.6587f, 23.8019f);
+			uLocal_604[146] = Vector3(-1900.3069f, 2727.201f, 21.1878f);
+			uLocal_604[147] = Vector3(-1883.7455f, 2715.2625f, 19.6892f);
+			uLocal_604[148] = Vector3(-1875.7476f, 2711.0803f, 12.552f);
+			uLocal_604[149] = Vector3(-1867.8955f, 2703.139f, 3.0778f);
+			uLocal_604[150] = Vector3(-1861.9625f, 2692.4229f, 3.1018f);
+			uLocal_604[151] = Vector3(-1857.4758f, 2683.575f, 3.2905f);
+			uLocal_604[152] = Vector3(-1848.774f, 2668.9883f, 2.0379f);
+			uLocal_604[153] = Vector3(-1842.3397f, 2663.9846f, 1.5316f);
+			uLocal_604[154] = Vector3(-1838.2953f, 2661.605f, 0.5979f);
+			uLocal_604[155] = Vector3(-1815.5259f, 2665.4827f, 0.7053f);
+			uLocal_604[156] = Vector3(-1805.6318f, 2669.1565f, 2.2314f);
+			uLocal_604[157] = Vector3(-1786.1377f, 2670.6023f, 2.2725f);
+			uLocal_604[158] = Vector3(-1771.0234f, 2668.4907f, 2.1361f);
+			uLocal_604[159] = Vector3(-1760.8687f, 2665.975f, 1.8861f);
+			uLocal_604[160] = Vector3(-1755.2838f, 2664.367f, 1.7509f);
+			uLocal_604[161] = Vector3(-1748.7069f, 2663.0032f, 1.9587f);
+			uLocal_604[162] = Vector3(-1736.1887f, 2659.8857f, 1.9917f);
+			uLocal_604[163] = Vector3(-1728.4756f, 2658.1829f, 1.9464f);
+			uLocal_604[164] = Vector3(-1722.7252f, 2657.996f, 2.0025f);
+			uLocal_604[165] = Vector3(-1719.5546f, 2657.8838f, 1.4411f);
+			uLocal_604[166] = Vector3(-1715.6056f, 2657.7336f, 0.7234f);
+			uLocal_604[167] = Vector3(-1710.3817f, 2658.301f, 0.4668f);
+			uLocal_604[168] = Vector3(-1707.3594f, 2659.4832f, 0.282f);
+			uLocal_604[169] = Vector3(-1703.7361f, 2660.578f, 0.5126f);
+			uLocal_604[170] = Vector3(-1697.2767f, 2662.122f, 0.7382f);
+			uLocal_604[171] = Vector3(-1694.4106f, 2662.7053f, 1.5014f);
+			uLocal_604[172] = Vector3(-1690.5967f, 2663.5403f, 1.8258f);
+			uLocal_604[173] = Vector3(-1683.0225f, 2665.116f, 1.8626f);
+			uLocal_604[174] = Vector3(-1677.6127f, 2664.2864f, 1.8642f);
+			uLocal_604[175] = Vector3(-1675.0409f, 2662.9934f, 1.525f);
+			uLocal_604[176] = Vector3(-1669.6145f, 2661.5696f, 1.3865f);
+			uLocal_604[177] = Vector3(-1660.9961f, 2660.5144f, 1.5346f);
+			uLocal_604[178] = Vector3(-1654.2736f, 2660.6213f, 1.3163f);
+			uLocal_604[179] = Vector3(-1652.6024f, 2661.7214f, 0.846f);
+			uLocal_604[180] = Vector3(-1650.7717f, 2663.6042f, 0.3205f);
+			uLocal_604[181] = Vector3(-1648.7227f, 2666.7673f, -0.3498f);
+			uLocal_604[182] = Vector3(-1646.6138f, 2670.389f, -0.2246f);
+			uLocal_604[183] = Vector3(-1645.2985f, 2672.659f, 0.4074f);
+			uLocal_604[184] = Vector3(-1643.8861f, 2675.4792f, 1.3415f);
+			uLocal_604[185] = Vector3(-1643.0524f, 2678.9778f, 1.7816f);
+			uLocal_604[186] = Vector3(-1643.8099f, 2684.7126f, 1.9387f);
+			uLocal_604[187] = Vector3(-1644.4364f, 2692.437f, 2.6905f);
+			uLocal_604[188] = Vector3(-1643.396f, 2700.8857f, 4.7337f);
+			uLocal_604[189] = Vector3(-1642.3713f, 2702.6987f, 4.6934f);
+			uLocal_604[190] = Vector3(-1634.9198f, 2708.2915f, 4.7769f);
+			uLocal_604[191] = Vector3(-1622.8417f, 2712.6648f, 4.7364f);
+			uLocal_604[192] = Vector3(-1616.7406f, 2718.5923f, 4.7278f);
+			uLocal_604[193] = Vector3(-1615.26f, 2726.2915f, 4.782f);
+			uLocal_604[194] = Vector3(-1615.3722f, 2740.1968f, 5.415f);
+			uLocal_604[195] = Vector3(-1615.5627f, 2747.673f, 7.4045f);
+			uLocal_604[196] = Vector3(-1615.0973f, 2751.5652f, 8.8844f);
+			uLocal_604[197] = Vector3(-1611.7622f, 2755.532f, 10.7072f);
+			uLocal_604[198] = Vector3(-1608.429f, 2757.8992f, 11.9354f);
+			uLocal_604[199] = Vector3(-1603.6677f, 2759.287f, 13.1858f);
+			uLocal_604[200] = Vector3(-1595.8516f, 2761.2637f, 15.6171f);
+			uLocal_604[201] = Vector3(-1591.1067f, 2762.9976f, 17.0786f);
+			uLocal_604[202] = Vector3(-1588.6313f, 2765.0896f, 17.4527f);
+			uLocal_604[203] = Vector3(-1583.6526f, 2766.244f, 17.432f);
+			uLocal_604[204] = Vector3(-1575.535f, 2763.5183f, 17.2576f);
+			uLocal_604[205] = Vector3(-1568.7128f, 2759.8894f, 17.0294f);
+			uLocal_604[206] = Vector3(-1560.9313f, 2756.537f, 16.5327f);
+			uLocal_604[207] = Vector3(-1550.3893f, 2752.6716f, 16.8426f);
+			uLocal_604[208] = Vector3(-1539.9153f, 2745.9878f, 16.6513f);
+			uLocal_604[209] = Vector3(-1329.1594f, 2560.402f, 16.6908f);
+			uLocal_604[210] = Vector3(-1312.1677f, 2545.4243f, 17.302f);
+			uLocal_604[211] = Vector3(-1299.6853f, 2536.006f, 17.8598f);
+			uLocal_604[212] = Vector3(-1294.1882f, 2532.7388f, 18.3548f);
+			uLocal_604[213] = Vector3(-1288.1488f, 2528.1138f, 18.6202f);
 			iLocal_1474 = 214;
 			break;
 	
 		case 10:
-			uLocal_604[0] = { 1007.3921f, -677.4196f, 55.6986f };
-			uLocal_604[1] = { 1015.88f, -640.8702f, 57.6189f };
-			uLocal_604[2] = { 1028.693f, -521.0793f, 60.0037f };
-			uLocal_604[3] = { 1001.0128f, -469.0658f, 62.3685f };
-			uLocal_604[4] = { 1024.2726f, -438.0688f, 64.0854f };
-			uLocal_604[5] = { 1099.3308f, -371.6267f, 66.0863f };
-			uLocal_604[6] = { 1154.2778f, -350.7854f, 66.0453f };
-			uLocal_604[7] = { 1196.4534f, -317.2407f, 68.006f };
-			uLocal_604[8] = { 1228.6578f, -285.5526f, 69.5564f };
-			uLocal_604[9] = { 1269.1396f, -280.8539f, 78.9299f };
-			uLocal_604[10] = { 1303.4813f, -279.4128f, 89.277f };
-			uLocal_604[11] = { 1307.2644f, -261.738f, 93.4534f };
-			uLocal_604[12] = { 1275.5297f, -228.7392f, 97.2897f };
-			uLocal_604[13] = { 1280.2871f, -201.123f, 100.2999f };
-			uLocal_604[14] = { 1316.5217f, -182.0543f, 106.8589f };
-			uLocal_604[15] = { 1328.3549f, -161.1792f, 109.7738f };
-			uLocal_604[16] = { 1330.9841f, -124.4583f, 116.3178f };
-			uLocal_604[17] = { 1349.7177f, -112.3109f, 120.3794f };
-			uLocal_604[18] = { 1440.8389f, -126.4933f, 136.0253f };
-			uLocal_604[19] = { 1547.4641f, -88.492f, 155.8418f };
-			uLocal_604[20] = { 1572.3961f, -73.2005f, 158.7627f };
-			uLocal_604[21] = { 1617.5365f, -76.5607f, 164.2157f };
-			uLocal_604[22] = { 1634.6884f, -86.0398f, 166.32f };
-			uLocal_604[23] = { 1652.0536f, -86.2994f, 169.5492f };
-			uLocal_604[24] = { 1677.1063f, -69.6387f, 172.8701f };
-			uLocal_604[25] = { 1708.0125f, -81.5238f, 176.1925f };
-			uLocal_604[26] = { 1727.5781f, -106.2123f, 177.8113f };
-			uLocal_604[27] = { 1743.8796f, -104.5237f, 180.5338f };
-			uLocal_604[28] = { 1787.022f, -75.6841f, 189.1488f };
-			uLocal_604[29] = { 1830.5481f, -88.8782f, 185.5151f };
-			uLocal_604[30] = { 1869.148f, -84.2897f, 188.3576f };
-			uLocal_604[31] = { 1908.1248f, -94.0947f, 189.7598f };
-			uLocal_604[32] = { 1935.8561f, -70.0841f, 194.3318f };
-			uLocal_604[33] = { 1965.0117f, -81.9638f, 206.0977f };
-			uLocal_604[34] = { 1994.3817f, -81.4886f, 210.8208f };
-			uLocal_604[35] = { 2015.3173f, -15.1936f, 200.4373f };
-			uLocal_604[36] = { 2045.5973f, -7.7503f, 209.3502f };
-			uLocal_604[37] = { 2097.7356f, 3.6562f, 214.3764f };
-			uLocal_604[38] = { 2170.9116f, -23.0015f, 227.7495f };
-			uLocal_604[39] = { 2216.6003f, -39.4283f, 202.1804f };
-			uLocal_604[40] = { 2265.2534f, -42.4669f, 176.595f };
-			uLocal_604[41] = { 2317.6343f, -62.7793f, 143.5891f };
-			uLocal_604[42] = { 2361.621f, -88.1377f, 114.5316f };
-			uLocal_604[43] = { 2415.5408f, -127.203f, 88.2837f };
-			uLocal_604[44] = { 2442.6055f, -132.4298f, 88.5436f };
-			uLocal_604[45] = { 2467.7297f, -87.5151f, 90.4025f };
-			uLocal_604[46] = { 2478.9272f, -49.3336f, 91.7194f };
-			uLocal_604[47] = { 2514.862f, -54.7729f, 90.5497f };
-			uLocal_604[48] = { 2535.4668f, -44.4498f, 95.4292f };
-			uLocal_604[49] = { 2551.9873f, -14.4109f, 96.8787f };
-			uLocal_604[50] = { 2564.848f, 7.4979f, 95.322f };
-			uLocal_604[51] = { 2574.244f, 28.346f, 94.1519f };
-			uLocal_604[52] = { 2583.1035f, 64.6646f, 97.2344f };
-			uLocal_604[53] = { 2590.3132f, 90.8608f, 96.7709f };
-			uLocal_604[54] = { 2605.6155f, 146.4206f, 97.0373f };
-			uLocal_604[55] = { 2608.4385f, 159.9902f, 97.7789f };
-			uLocal_604[56] = { 2616.8008f, 193.4394f, 97.8768f };
-			uLocal_604[57] = { 2620.917f, 208.1355f, 99.8613f };
-			uLocal_604[58] = { 2622.7163f, 214.0569f, 100.3944f };
-			uLocal_604[59] = { 2625.1553f, 223.4091f, 100.4454f };
-			uLocal_604[60] = { 2628.5095f, 238.1807f, 98.0427f };
-			uLocal_604[61] = { 2631.146f, 251.6104f, 99.134f };
-			uLocal_604[62] = { 2644.0332f, 286.1281f, 96.6342f };
-			uLocal_604[63] = { 2668.0095f, 344.2533f, 93.6781f };
-			uLocal_604[64] = { 2674.79f, 475.0252f, 93.3655f };
-			uLocal_604[65] = { 2677.3213f, 563.7356f, 92.1778f };
-			uLocal_604[66] = { 2676.7358f, 657.8879f, 88.5073f };
-			uLocal_604[67] = { 2689.552f, 707.0382f, 83.2467f };
-			uLocal_604[68] = { 2694.685f, 719.9797f, 79.118f };
-			uLocal_604[69] = { 2705.1357f, 742.6617f, 63.8294f };
-			uLocal_604[70] = { 2732.7515f, 770.7942f, 48.8289f };
-			uLocal_604[71] = { 2754.7522f, 779.1329f, 37.7362f };
-			uLocal_604[72] = { 2795.073f, 775.9935f, 19.6025f };
-			uLocal_604[73] = { 2815.3784f, 772.0298f, 18.5162f };
-			uLocal_604[74] = { 2823.101f, 760.8618f, 18.5399f };
-			uLocal_604[75] = { 2829.4165f, 747.6486f, 18.4988f };
-			uLocal_604[76] = { 2838.5505f, 742.6433f, 18.5283f };
-			uLocal_604[77] = { 2852.9902f, 747.0413f, 18.3301f };
-			uLocal_604[78] = { 2866.382f, 755.1819f, 18.1503f };
-			uLocal_604[79] = { 2876.903f, 759.4967f, 16.8825f };
-			uLocal_604[80] = { 2883.9407f, 767.9843f, 17.9021f };
-			uLocal_604[81] = { 2890.1692f, 774.4565f, 18.7225f };
-			uLocal_604[82] = { 2898.9746f, 775.8782f, 19.8196f };
-			uLocal_604[83] = { 2908.9463f, 777.8163f, 22.677f };
-			uLocal_604[84] = { 2911.956f, 780.126f, 23.7715f };
-			uLocal_604[85] = { 2917.168f, 783.8945f, 24.2316f };
-			uLocal_604[86] = { 2924.857f, 790.0166f, 24.7335f };
-			uLocal_604[87] = { 2934.356f, 798.6711f, 23.9277f };
-			uLocal_604[88] = { 2940.8499f, 803.635f, 23.7534f };
-			uLocal_604[89] = { 2944.6406f, 806.6476f, 23.5292f };
-			uLocal_604[90] = { 2951.7722f, 813.8921f, 22.0205f };
+			uLocal_604[0] = Vector3(1007.3921f, -677.4196f, 55.6986f);
+			uLocal_604[1] = Vector3(1015.88f, -640.8702f, 57.6189f);
+			uLocal_604[2] = Vector3(1028.693f, -521.0793f, 60.0037f);
+			uLocal_604[3] = Vector3(1001.0128f, -469.0658f, 62.3685f);
+			uLocal_604[4] = Vector3(1024.2726f, -438.0688f, 64.0854f);
+			uLocal_604[5] = Vector3(1099.3308f, -371.6267f, 66.0863f);
+			uLocal_604[6] = Vector3(1154.2778f, -350.7854f, 66.0453f);
+			uLocal_604[7] = Vector3(1196.4534f, -317.2407f, 68.006f);
+			uLocal_604[8] = Vector3(1228.6578f, -285.5526f, 69.5564f);
+			uLocal_604[9] = Vector3(1269.1396f, -280.8539f, 78.9299f);
+			uLocal_604[10] = Vector3(1303.4813f, -279.4128f, 89.277f);
+			uLocal_604[11] = Vector3(1307.2644f, -261.738f, 93.4534f);
+			uLocal_604[12] = Vector3(1275.5297f, -228.7392f, 97.2897f);
+			uLocal_604[13] = Vector3(1280.2871f, -201.123f, 100.2999f);
+			uLocal_604[14] = Vector3(1316.5217f, -182.0543f, 106.8589f);
+			uLocal_604[15] = Vector3(1328.3549f, -161.1792f, 109.7738f);
+			uLocal_604[16] = Vector3(1330.9841f, -124.4583f, 116.3178f);
+			uLocal_604[17] = Vector3(1349.7177f, -112.3109f, 120.3794f);
+			uLocal_604[18] = Vector3(1440.8389f, -126.4933f, 136.0253f);
+			uLocal_604[19] = Vector3(1547.4641f, -88.492f, 155.8418f);
+			uLocal_604[20] = Vector3(1572.3961f, -73.2005f, 158.7627f);
+			uLocal_604[21] = Vector3(1617.5365f, -76.5607f, 164.2157f);
+			uLocal_604[22] = Vector3(1634.6884f, -86.0398f, 166.32f);
+			uLocal_604[23] = Vector3(1652.0536f, -86.2994f, 169.5492f);
+			uLocal_604[24] = Vector3(1677.1063f, -69.6387f, 172.8701f);
+			uLocal_604[25] = Vector3(1708.0125f, -81.5238f, 176.1925f);
+			uLocal_604[26] = Vector3(1727.5781f, -106.2123f, 177.8113f);
+			uLocal_604[27] = Vector3(1743.8796f, -104.5237f, 180.5338f);
+			uLocal_604[28] = Vector3(1787.022f, -75.6841f, 189.1488f);
+			uLocal_604[29] = Vector3(1830.5481f, -88.8782f, 185.5151f);
+			uLocal_604[30] = Vector3(1869.148f, -84.2897f, 188.3576f);
+			uLocal_604[31] = Vector3(1908.1248f, -94.0947f, 189.7598f);
+			uLocal_604[32] = Vector3(1935.8561f, -70.0841f, 194.3318f);
+			uLocal_604[33] = Vector3(1965.0117f, -81.9638f, 206.0977f);
+			uLocal_604[34] = Vector3(1994.3817f, -81.4886f, 210.8208f);
+			uLocal_604[35] = Vector3(2015.3173f, -15.1936f, 200.4373f);
+			uLocal_604[36] = Vector3(2045.5973f, -7.7503f, 209.3502f);
+			uLocal_604[37] = Vector3(2097.7356f, 3.6562f, 214.3764f);
+			uLocal_604[38] = Vector3(2170.9116f, -23.0015f, 227.7495f);
+			uLocal_604[39] = Vector3(2216.6003f, -39.4283f, 202.1804f);
+			uLocal_604[40] = Vector3(2265.2534f, -42.4669f, 176.595f);
+			uLocal_604[41] = Vector3(2317.6343f, -62.7793f, 143.5891f);
+			uLocal_604[42] = Vector3(2361.621f, -88.1377f, 114.5316f);
+			uLocal_604[43] = Vector3(2415.5408f, -127.203f, 88.2837f);
+			uLocal_604[44] = Vector3(2442.6055f, -132.4298f, 88.5436f);
+			uLocal_604[45] = Vector3(2467.7297f, -87.5151f, 90.4025f);
+			uLocal_604[46] = Vector3(2478.9272f, -49.3336f, 91.7194f);
+			uLocal_604[47] = Vector3(2514.862f, -54.7729f, 90.5497f);
+			uLocal_604[48] = Vector3(2535.4668f, -44.4498f, 95.4292f);
+			uLocal_604[49] = Vector3(2551.9873f, -14.4109f, 96.8787f);
+			uLocal_604[50] = Vector3(2564.848f, 7.4979f, 95.322f);
+			uLocal_604[51] = Vector3(2574.244f, 28.346f, 94.1519f);
+			uLocal_604[52] = Vector3(2583.1035f, 64.6646f, 97.2344f);
+			uLocal_604[53] = Vector3(2590.3132f, 90.8608f, 96.7709f);
+			uLocal_604[54] = Vector3(2605.6155f, 146.4206f, 97.0373f);
+			uLocal_604[55] = Vector3(2608.4385f, 159.9902f, 97.7789f);
+			uLocal_604[56] = Vector3(2616.8008f, 193.4394f, 97.8768f);
+			uLocal_604[57] = Vector3(2620.917f, 208.1355f, 99.8613f);
+			uLocal_604[58] = Vector3(2622.7163f, 214.0569f, 100.3944f);
+			uLocal_604[59] = Vector3(2625.1553f, 223.4091f, 100.4454f);
+			uLocal_604[60] = Vector3(2628.5095f, 238.1807f, 98.0427f);
+			uLocal_604[61] = Vector3(2631.146f, 251.6104f, 99.134f);
+			uLocal_604[62] = Vector3(2644.0332f, 286.1281f, 96.6342f);
+			uLocal_604[63] = Vector3(2668.0095f, 344.2533f, 93.6781f);
+			uLocal_604[64] = Vector3(2674.79f, 475.0252f, 93.3655f);
+			uLocal_604[65] = Vector3(2677.3213f, 563.7356f, 92.1778f);
+			uLocal_604[66] = Vector3(2676.7358f, 657.8879f, 88.5073f);
+			uLocal_604[67] = Vector3(2689.552f, 707.0382f, 83.2467f);
+			uLocal_604[68] = Vector3(2694.685f, 719.9797f, 79.118f);
+			uLocal_604[69] = Vector3(2705.1357f, 742.6617f, 63.8294f);
+			uLocal_604[70] = Vector3(2732.7515f, 770.7942f, 48.8289f);
+			uLocal_604[71] = Vector3(2754.7522f, 779.1329f, 37.7362f);
+			uLocal_604[72] = Vector3(2795.073f, 775.9935f, 19.6025f);
+			uLocal_604[73] = Vector3(2815.3784f, 772.0298f, 18.5162f);
+			uLocal_604[74] = Vector3(2823.101f, 760.8618f, 18.5399f);
+			uLocal_604[75] = Vector3(2829.4165f, 747.6486f, 18.4988f);
+			uLocal_604[76] = Vector3(2838.5505f, 742.6433f, 18.5283f);
+			uLocal_604[77] = Vector3(2852.9902f, 747.0413f, 18.3301f);
+			uLocal_604[78] = Vector3(2866.382f, 755.1819f, 18.1503f);
+			uLocal_604[79] = Vector3(2876.903f, 759.4967f, 16.8825f);
+			uLocal_604[80] = Vector3(2883.9407f, 767.9843f, 17.9021f);
+			uLocal_604[81] = Vector3(2890.1692f, 774.4565f, 18.7225f);
+			uLocal_604[82] = Vector3(2898.9746f, 775.8782f, 19.8196f);
+			uLocal_604[83] = Vector3(2908.9463f, 777.8163f, 22.677f);
+			uLocal_604[84] = Vector3(2911.956f, 780.126f, 23.7715f);
+			uLocal_604[85] = Vector3(2917.168f, 783.8945f, 24.2316f);
+			uLocal_604[86] = Vector3(2924.857f, 790.0166f, 24.7335f);
+			uLocal_604[87] = Vector3(2934.356f, 798.6711f, 23.9277f);
+			uLocal_604[88] = Vector3(2940.8499f, 803.635f, 23.7534f);
+			uLocal_604[89] = Vector3(2944.6406f, 806.6476f, 23.5292f);
+			uLocal_604[90] = Vector3(2951.7722f, 813.8921f, 22.0205f);
 			iLocal_1474 = 91;
 			break;
 	}
 
 	for (i = 0; i < iLocal_1474; i = i + 1)
 	{
-		vector = { uLocal_604[i] };
-		vector2 = { uLocal_604[i + 1] };
+		vector = Vector3(uLocal_604[i]);
+		vector2 = Vector3(uLocal_604[i + 1]);
 	
 		if (!func_31(vector2, 0f, 0f, 0f, false))
 		{
@@ -82158,7 +82158,7 @@ void func_1161() // Position - 0x54799
 
 void func_1162(var uParam0, var uParam1, var uParam2) // Position - 0x586C3
 {
-	Global_1836858.f_6 = { uParam0 };
+	Global_1836858.f_6 = Vector3(uParam0);
 	return;
 }
 
@@ -82759,7 +82759,7 @@ void func_1170() // Position - 0x598B1
 {
 	var unk;
 
-	Global_1948628 = { unk };
+	Global_1948628 = Vector3(unk);
 	return;
 }
 
@@ -82782,7 +82782,7 @@ void func_1173() // Position - 0x59907
 {
 	var unk;
 
-	Global_1948560 = { unk };
+	Global_1948560 = Vector3(unk);
 	return;
 }
 
@@ -83052,7 +83052,7 @@ void func_1192() // Position - 0x59CAD
 {
 	var unk;
 
-	Global_1948491 = { unk };
+	Global_1948491 = Vector3(unk);
 	return;
 }
 
@@ -83067,7 +83067,7 @@ void func_1194() // Position - 0x59CD5
 {
 	var unk;
 
-	Global_1948470 = { unk };
+	Global_1948470 = Vector3(unk);
 	return;
 }
 
@@ -83083,7 +83083,7 @@ void func_1196() // Position - 0x59D03
 {
 	var unk;
 
-	Global_1948357 = { unk };
+	Global_1948357 = Vector3(unk);
 	Global_1948357.f_23 = 0;
 	Global_1948357.f_22 = 0;
 	Global_1948357.f_21 = 0;
@@ -83102,7 +83102,7 @@ void func_1198() // Position - 0x59D46
 {
 	var unk;
 
-	Global_1948269 = { unk };
+	Global_1948269 = Vector3(unk);
 	Global_1948269.f_23 = 0;
 	Global_1948269.f_22 = 0;
 	Global_1948269.f_21 = 0;
@@ -83121,7 +83121,7 @@ void func_1200() // Position - 0x59D89
 {
 	var unk;
 
-	Global_1948194 = { unk };
+	Global_1948194 = Vector3(unk);
 	return;
 }
 
@@ -83198,7 +83198,7 @@ void func_1204() // Position - 0x59DF6
 	unk.f_50 = -1;
 	unk.f_51 = -1;
 	unk.f_52 = -1;
-	Global_1948053 = { unk };
+	Global_1948053 = Vector3(unk);
 	return;
 }
 
@@ -83250,7 +83250,7 @@ void func_1206() // Position - 0x59F33
 	unk.f_36 = -1;
 	unk.f_37 = -1;
 	unk.f_38 = -1;
-	Global_1948107 = { unk };
+	Global_1948107 = Vector3(unk);
 	return;
 }
 
@@ -83361,7 +83361,7 @@ void func_1211() // Position - 0x5A13B
 	unk.f_43 = -1;
 	unk.f_44 = -1;
 	unk.f_45 = -1;
-	Global_1947971 = { unk };
+	Global_1947971 = Vector3(unk);
 	Global_1947971.f_16 = 0;
 	return;
 }
@@ -83425,7 +83425,7 @@ void func_1213() // Position - 0x5A25D
 	unk.f_51 = -1;
 	unk.f_52 = -1;
 	unk.f_53 = -1;
-	Global_1947917 = { unk };
+	Global_1947917 = Vector3(unk);
 	Global_1947917.f_23 = 0;
 	Global_1947917.f_24 = 0;
 	Global_1947917.f_16 = 0;
@@ -85147,7 +85147,7 @@ void func_1229() // Position - 0x5E02F
 {
 	var unk;
 
-	Global_1947870 = { unk };
+	Global_1947870 = Vector3(unk);
 	Global_1947870.f_23 = 0;
 	Global_1947870.f_24 = 0;
 	Global_1947870.f_16 = 0;
@@ -85273,7 +85273,7 @@ void func_1238() // Position - 0x5E276
 	unk.f_60 = -1;
 	unk.f_61 = -1;
 	unk.f_62 = -1;
-	Global_1947807 = { unk };
+	Global_1947807 = Vector3(unk);
 	Global_1947807.f_24 = 0;
 	Global_1947807.f_25 = 0;
 	Global_1947807.f_17 = 0;
@@ -85336,7 +85336,7 @@ void func_1240() // Position - 0x5E3FA
 	unk.f_51 = -1;
 	unk.f_52 = -1;
 	unk.f_53 = -1;
-	Global_1947751 = { unk };
+	Global_1947751 = Vector3(unk);
 	Global_1947751.f_29 = 0;
 	Global_1947751.f_30 = 0;
 	Global_1947751.f_17 = 0;
@@ -85509,7 +85509,7 @@ void func_1247() // Position - 0x5E7E2
 	unk.f_32 = -1;
 	unk.f_33 = -1;
 	unk.f_34 = -1;
-	Global_1948017 = { unk };
+	Global_1948017 = Vector3(unk);
 	return;
 }
 
@@ -86035,7 +86035,7 @@ BOOL func_1266(BOOL bParam0) // Position - 0x5F209
 					Global_1889845 = HUD_COLOUR_WHITE;
 				}
 			
-				Global_1889829 = { Global_1894573[PLAYER::PLAYER_ID()].f_10.f_105 };
+				Global_1889829 = Vector3(Global_1894573[PLAYER::PLAYER_ID()].f_10.f_105);
 			}
 		
 			return true;
@@ -86989,13 +86989,13 @@ void func_1300(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	{
 		if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_CARJACKING"))
 		{
-			unk = { uParam0 };
+			unk = Vector3(uParam0);
 			unk.f_14 = iParam14;
 			STATS::PLAYSTATS_BC_CAR_JACKING(&unk);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_ROB_SHOP"))
 		{
-			unk16 = { uParam0 };
+			unk16 = Vector3(uParam0);
 			unk16.f_14 = Global_1947733.f_14;
 			unk16.f_15 = iParam14;
 			unk16.f_16 = iParam15;
@@ -87005,7 +87005,7 @@ void func_1300(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_COLLECT_MONEY"))
 		{
-			unk35 = { uParam0 };
+			unk35 = Vector3(uParam0);
 			unk35.f_14 = Global_1947733.f_14;
 			unk35.f_15 = iParam14;
 			unk35.f_16 = iParam15;
@@ -87015,14 +87015,14 @@ void func_1300(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_FIVESTAR"))
 		{
-			unk54 = { uParam0 };
+			unk54 = Vector3(uParam0);
 			unk54.f_14 = Global_1947733.f_14;
 			unk54.f_15 = iParam14;
 			STATS::PLAYSTATS_BC_MOST_WANTED(&unk54);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_FINDERSKEEPERS"))
 		{
-			unk70 = { uParam0 };
+			unk70 = Vector3(uParam0);
 			unk70.f_14 = Global_1947733.f_14;
 			unk70.f_15 = iParam14;
 			unk70.f_16 = iParam15;
@@ -87030,13 +87030,13 @@ void func_1300(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_POINT_TO_POINT"))
 		{
-			unk87 = { uParam0 };
+			unk87 = Vector3(uParam0);
 			unk87.f_14 = Global_1947733.f_14;
 			STATS::PLAYSTATS_BC_POINT_TO_POINT(&unk87);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_CASHING_OUT"))
 		{
-			unk102 = { uParam0 };
+			unk102 = Vector3(uParam0);
 			unk102.f_14 = iParam14;
 			unk102.f_15 = SYSTEM::TO_FLOAT(iParam14) / SYSTEM::TO_FLOAT(iParam15);
 			unk102.f_16 = iParam16;
@@ -87044,7 +87044,7 @@ void func_1300(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "GB_SALVAGE"))
 		{
-			unk119 = { uParam0 };
+			unk119 = Vector3(uParam0);
 			unk119.f_14 = iParam14;
 			unk119.f_15 = iParam15;
 			unk119.f_16 = Global_1947733.f_14;
@@ -87060,7 +87060,7 @@ void func_1301() // Position - 0x60A9F
 {
 	var unk;
 
-	Global_1947733 = { unk };
+	Global_1947733 = Vector3(unk);
 	return;
 }
 
@@ -87092,13 +87092,13 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	{
 		if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_hot_target"))
 		{
-			unk = { uParam0 };
+			unk = Vector3(uParam0);
 			unk.f_12 = iParam12;
 			STATS::PLAYSTATS_FM_EVENT_VEHICLETARGET(&unk);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, func_1303()))
 		{
-			unk14 = { uParam0 };
+			unk14 = Vector3(uParam0);
 			unk14.f_12 = iParam12;
 			unk14.f_13 = iParam13;
 			unk14.f_14 = iParam14;
@@ -87106,7 +87106,7 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_cp_collection"))
 		{
-			unk29 = { uParam0 };
+			unk29 = Vector3(uParam0);
 			unk29.f_12 = iParam12;
 			unk29.f_13 = iParam13;
 			unk29.f_14 = iParam14;
@@ -87117,7 +87117,7 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_challenges"))
 		{
-			unk53 = { uParam0 };
+			unk53 = Vector3(uParam0);
 			unk53.f_12 = iParam12;
 			unk53.f_13 = SYSTEM::TO_FLOAT(iParam13);
 		
@@ -87132,27 +87132,27 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_pass_the_parcel"))
 		{
-			unk67 = { uParam0 };
+			unk67 = Vector3(uParam0);
 			unk67.f_12 = iParam12;
 			STATS::PLAYSTATS_FM_EVENT_PASSTHEPARCEL(&unk67);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_hot_property"))
 		{
-			unk80 = { uParam0 };
+			unk80 = Vector3(uParam0);
 			unk80.f_12 = iParam12;
 			unk80.f_13 = iParam13;
 			STATS::PLAYSTATS_FM_EVENT_HOTPROPERTY(&unk80);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_dead_drop"))
 		{
-			unk94 = { uParam0 };
+			unk94 = Vector3(uParam0);
 			unk94.f_12 = iParam12;
 			unk94.f_13 = iParam13;
 			STATS::PLAYSTATS_FM_EVENT_DEADDROP(&unk94);
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_king_of_the_castle"))
 		{
-			unk108 = { uParam0 };
+			unk108 = Vector3(uParam0);
 			unk108.f_12 = iParam12;
 			unk108.f_13 = iParam13;
 			unk108.f_14 = iParam14;
@@ -87161,7 +87161,7 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "AM_CRIMINAL_DAMAGE"))
 		{
-			unk124 = { uParam0 };
+			unk124 = Vector3(uParam0);
 			unk124.f_12 = iParam12;
 			STATS::PLAYSTATS_FM_EVENT_CRIMINALDAMAGE(&unk124);
 		}
@@ -87169,14 +87169,14 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		{
 			if (iParam14 == 0)
 			{
-				unk137 = { uParam0 };
+				unk137 = Vector3(uParam0);
 				unk137.f_12 = iParam12;
 				unk137.f_13 = iParam13;
 				STATS::PLAYSTATS_FM_EVENT_URBANWARFARE(&unk137);
 			}
 			else
 			{
-				unk151 = { uParam0 };
+				unk151 = Vector3(uParam0);
 				unk151.f_12 = iParam12;
 				unk151.f_13 = iParam13;
 				STATS::PLAYSTATS_FM_EVENT_COMPETITIVEURBANWARFARE(&unk151);
@@ -87184,7 +87184,7 @@ void func_1302(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 		}
 		else if (MISC::ARE_STRINGS_EQUAL(thisScriptName, "am_hunt_the_beast"))
 		{
-			unk165 = { uParam0 };
+			unk165 = Vector3(uParam0);
 			unk165.f_12 = iParam12;
 			STATS::PLAYSTATS_FM_EVENT_HUNTBEAST(&unk165);
 		}
@@ -88335,10 +88335,10 @@ int func_1326() // Position - 0x622F7
 void func_1327(int iParam0) // Position - 0x627E6
 {
 	if (!func_31(Global_1894573[PLAYER::PLAYER_ID()].f_10.f_151[iParam0], func_1328(), false))
-		Global_1894573[PLAYER::PLAYER_ID()].f_10.f_151[iParam0] = { func_1328() };
+		Global_1894573[PLAYER::PLAYER_ID()].f_10.f_151[iParam0] = Vector3(func_1328());
 
 	if (!func_31(Global_1894573[PLAYER::PLAYER_ID()].f_10.f_126[iParam0], func_1328(), false))
-		Global_1894573[PLAYER::PLAYER_ID()].f_10.f_126[iParam0] = { func_1328() };
+		Global_1894573[PLAYER::PLAYER_ID()].f_10.f_126[iParam0] = Vector3(func_1328());
 
 	return;
 }
@@ -88360,7 +88360,7 @@ void func_1329() // Position - 0x62870
 	unk.f_6 = -1;
 	unk.f_7 = -1;
 	unk.f_8 = -1;
-	Global_1836078 = { unk };
+	Global_1836078 = Vector3(unk);
 	Global_1836078.f_13 = _INVALID_PLAYER_INDEX();
 
 	if (IS_BIT_SET(Global_1835495, 3))
@@ -89951,7 +89951,7 @@ void func_1412() // Position - 0x648E2
 {
 	var unk;
 
-	Global_1947733 = { unk };
+	Global_1947733 = Vector3(unk);
 	Global_1947733.f_14 = 0;
 	Global_1947733.f_15 = 0;
 	return;
@@ -90981,7 +90981,7 @@ void func_1417() // Position - 0x6577D
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_1647281[i] = { unk };
+		Global_1647281[i] = Vector3(unk);
 	}
 
 	return;

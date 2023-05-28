@@ -12993,7 +12993,7 @@ void func_157(var uParam0) // Position - 0xF88B
 
 void func_158(var uParam0) // Position - 0xF89F
 {
-	*uParam0 = { Global_1651977 };
+	*uParam0 = Vector3(Global_1651977);
 	return;
 }
 

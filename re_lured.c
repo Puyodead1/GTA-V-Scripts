@@ -302,7 +302,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_49 = { uScriptParam_252.f_1[0] };
+	uLocal_49 = Vector3(uScriptParam_252.f_1[0]);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 		func_179();
@@ -1573,16 +1573,16 @@ BOOL func_38(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x18BC
 		if (func_51(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_50();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -1719,7 +1719,7 @@ void func_39() // Position - 0x1B8A
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1783,18 +1783,18 @@ void func_45() // Position - 0x1C86
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1890,7 +1890,7 @@ void func_50() // Position - 0x1E96
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -1932,7 +1932,7 @@ void func_52() // Position - 0x1F25
 
 void func_53(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1F7C
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1988,8 +1988,8 @@ BOOL func_56() // Position - 0x2003
 	Vector3 vector;
 	Vector3 unk;
 
-	vector = { 30f, 30f, 30f };
-	vector2 = { -30f, -30f, -30f };
+	vector = Vector3(30f, 30f, 30f);
+	vector2 = Vector3(-30f, -30f, -30f);
 
 	if (!PED::IS_PED_INJURED(pedLocal_69) && !PED::IS_PED_INJURED(pedLocal_70))
 	{
@@ -2010,8 +2010,8 @@ BOOL func_56() // Position - 0x2003
 			}
 		}
 	
-		vector = { vector + PED::GET_PED_BONE_COORDS(pedLocal_69, 31086, 0f, 0f, 0f) };
-		vector2 = { vector2 + PED::GET_PED_BONE_COORDS(pedLocal_69, 31086, 0f, 0f, 0f) };
+		vector = Vector3(vector + PED::GET_PED_BONE_COORDS(pedLocal_69, 31086, 0f, 0f, 0f));
+		vector2 = Vector3(vector2 + PED::GET_PED_BONE_COORDS(pedLocal_69, 31086, 0f, 0f, 0f));
 	
 		if (MISC::IS_PROJECTILE_TYPE_IN_AREA(vector2, vector, joaat("WEAPON_SMOKEGRENADE"), true) || MISC::IS_PROJECTILE_TYPE_IN_AREA(vector2, vector, joaat("WEAPON_GRENADE"), true) || MISC::IS_PROJECTILE_TYPE_IN_AREA(vector2, vector, joaat("WEAPON_STICKYBOMB"), true))
 			return true;
@@ -3402,14 +3402,14 @@ void func_94(BOOL bParam0, BOOL bParam1) // Position - 0x3C87
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -3668,7 +3668,7 @@ void func_104() // Position - 0x40C5
 					TASK::CLOSE_SEQUENCE_TASK(iLocal_75);
 					TASK::TASK_PERFORM_SEQUENCE(pedLocal_69, iLocal_75);
 					TASK::CLEAR_SEQUENCE_TASK(&iLocal_75);
-					uLocal_55 = { 40f, 40f, 30f };
+					uLocal_55 = Vector3(40f, 40f, 30f);
 				}
 			}
 			else if (!bLocal_248)
@@ -4079,7 +4079,7 @@ void func_117() // Position - 0x48F0
 		SYSTEM::WAIT(0);
 	}
 
-	PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_49 - { 10f, 30f, 30f }, uLocal_49 + { 10f, 30f, 30f }, false, true, true, true);
+	PED::ADD_SCENARIO_BLOCKING_AREA(uLocal_49 - Vector3(10f, 30f, 30f), uLocal_49 + Vector3(10f, 30f, 30f), false, true, true, true);
 	PED::ADD_RELATIONSHIP_GROUP("mugger", &hLocal_68);
 	pedLocal_69 = PED::CREATE_PED(PED_TYPE_DEALER, joaat("A_F_M_SkidRow_01"), uLocal_58, 79.765f, true, true);
 	PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(pedLocal_69, true);
@@ -4139,12 +4139,12 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 
 void func_119() // Position - 0x4B77
 {
-	uLocal_52 = { 879.8144f, -1047.4327f, 32.0067f };
+	uLocal_52 = Vector3(879.8144f, -1047.4327f, 32.0067f);
 	fLocal_67 = 237.0934f;
-	uLocal_58 = { 862.9633f, -1049.8569f, 28.5362f };
-	uLocal_55 = { 15f, 15f, 15f };
-	uLocal_61 = { 881.1367f, -1050.706f, 32.0067f };
-	uLocal_64 = { 876.7977f, -1052.5198f, 32.0067f };
+	uLocal_58 = Vector3(862.9633f, -1049.8569f, 28.5362f);
+	uLocal_55 = Vector3(15f, 15f, 15f);
+	uLocal_61 = Vector3(881.1367f, -1050.706f, 32.0067f);
+	uLocal_64 = Vector3(876.7977f, -1052.5198f, 32.0067f);
 	return;
 }
 
@@ -4487,10 +4487,10 @@ void func_123(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4,
 {
 	uParam0->f_4 = iParam5;
 	*uParam0 = sParam1;
-	uParam0->f_1 = { uParam2 };
+	uParam0->f_1 = Vector3(uParam2);
 	uParam0->f_3 = iParam4;
 	uParam0->f_5 = iParam6;
-	uParam0->f_6 = { fParam7 };
+	uParam0->f_6 = Vector3(fParam7);
 	uParam0->f_9 = iParam10;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_10), sParam11, 16);
 	uParam0->f_14 = iParam12;
@@ -4715,7 +4715,7 @@ struct<2> func_125(int iParam0) // Position - 0x62A8
 	var unk2;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "", 8);
-	unk3 = { func_126(iParam0) };
+	unk3 = Vector3(func_126(iParam0));
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(&unk3))
 	{
@@ -5119,14 +5119,14 @@ BOOL func_137(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		if (!_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 			return false;
 
-	uLocal_43 = { uParam0 };
+	uLocal_43 = Vector3(uParam0);
 	flag = false;
 
 	if (!flag)
 	{
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		
 			if (SYSTEM::VMAG2(ENTITY::GET_ENTITY_VELOCITY(PLAYER::PLAYER_PED_ID())) > 1369f && !func_131())
 				return false;
@@ -5213,7 +5213,7 @@ BOOL func_137(var uParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		{
 			for (i = CHAR_MICHAEL; i < CHAR_MULTIPLAYER; i = i + 1)
 			{
-				vector = { Global_113648.f_2365.f_539.f_2300[i] };
+				vector = Vector3(Global_113648.f_2365.f_539.f_2300[i]);
 				num = Global_113648.f_2365.f_539.f_2296[i];
 			
 				if (func_161(num))
@@ -6210,7 +6210,7 @@ void func_185(int iParam0, int iParam1, int iParam2) // Position - 0x8362
 	unk = func_154();
 	func_188(&unk, 0, 0, iParam2, iParam1, 0, 0);
 	func_187(iParam0, &unk);
-	unk2 = { func_186(&unk) };
+	unk2 = Vector3(func_186(&unk));
 	return;
 }
 

@@ -641,7 +641,7 @@ void func_33(var uParam0, BOOL bParam1, BOOL bParam2) // Position - 0x76C
 	uParam0->f_41 = 0;
 
 	if (bParam2)
-		uParam0->f_42 = { unk };
+		uParam0->f_42 = Vector3(unk);
 
 	if (bParam1)
 		func_34(uParam0, 0);
@@ -1379,7 +1379,7 @@ void func_47(BOOL bParam0) // Position - 0x148C
 			{
 				for (j = i; j <= num2 - 2; j = j + 1)
 				{
-					Global_1021887.f_4[j] = { Global_1021887.f_4[j + 1] };
+					Global_1021887.f_4[j] = Vector3(Global_1021887.f_4[j + 1]);
 				}
 			
 				MISC::CLEAR_BIT(&Global_1835450[num], offset);
@@ -1401,7 +1401,7 @@ void func_47(BOOL bParam0) // Position - 0x148C
 			{
 				for (j = i; j <= num2 - 2; j = j + 1)
 				{
-					Global_1010831.f_4[j] = { Global_1010831.f_4[j + 1] };
+					Global_1010831.f_4[j] = Vector3(Global_1010831.f_4[j + 1]);
 				}
 			
 				MISC::CLEAR_BIT(&Global_1835450[num], offset);
@@ -1564,7 +1564,7 @@ void func_54(var uParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 
 
 	if (Global_1053582.f_935 == 0)
 	{
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&_int, 35, &gamerHandle);
 		Global_1053582.f_935 = _int;
 	}
@@ -1622,8 +1622,8 @@ BOOL func_56(const char* sParam0) // Position - 0x19BB
 	var gamerHandle2;
 	var unk;
 
-	gamerHandle2 = { GET_GAMER_HANDLE_USER(sParam0) };
-	gamerHandle1 = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+	gamerHandle2 = Vector3(GET_GAMER_HANDLE_USER(sParam0));
+	gamerHandle1 = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 
 	if (NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&gamerHandle1, &gamerHandle2))
 		return true;
@@ -1649,8 +1649,8 @@ BOOL func_58(int iParam0, BOOL bParam1, const char* sParam2, int iParam3) // Pos
 
 	if (iParam0 == 0)
 	{
-		gamerHandle2 = { GET_GAMER_HANDLE_USER(sParam2) };
-		gamerHandle1 = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+		gamerHandle2 = Vector3(GET_GAMER_HANDLE_USER(sParam2));
+		gamerHandle1 = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 	
 		if (bParam1)
 		{
@@ -1668,7 +1668,7 @@ BOOL func_58(int iParam0, BOOL bParam1, const char* sParam2, int iParam3) // Pos
 		}
 		else
 		{
-			gamerHandle1 = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			gamerHandle1 = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		
 			if (!NETWORK::NETWORK_ARE_HANDLES_THE_SAME(&gamerHandle1, &gamerHandle2))
 				return false;
@@ -1954,13 +1954,13 @@ void func_64(var uParam0, BOOL bParam1) // Position - 0x1E10
 	unk.f_65 = -1;
 	unk.f_66 = -1;
 	unk.f_67 = 2;
-	Global_1027415.f_33[num] = { unk };
+	Global_1027415.f_33[num] = Vector3(unk);
 	Global_1027415.f_33[num].f_65 = _int;
-	Global_1027415.f_33[num].f_56 = { func_107(dict2) };
+	Global_1027415.f_33[num].f_56 = Vector3(func_107(dict2));
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict2, "cam") == 5)
 	{
-		Global_1027415.f_33[num].f_59 = { func_106(dict2, "cam") };
+		Global_1027415.f_33[num].f_59 = Vector3(func_106(dict2, "cam"));
 	}
 	else if (DATAFILE::DATADICT_GET_TYPE(dict2, "cam") == 6)
 	{
@@ -1982,7 +1982,7 @@ void func_64(var uParam0, BOOL bParam1) // Position - 0x1E10
 			Global_1027415.f_33[num].f_59.f_2 = DATAFILE::DATADICT_GET_FLOAT(dict3, "z");
 	}
 
-	Global_1027415.f_33[num].f_62 = { func_105(dict2) };
+	Global_1027415.f_33[num].f_62 = Vector3(func_105(dict2));
 	Global_1027415.f_33[num].f_69 = DATAFILE::DATADICT_GET_INT(dict2, "min");
 	Global_1027415.f_33[num].f_71 = DATAFILE::DATADICT_GET_INT(dict2, "num");
 
@@ -2629,7 +2629,7 @@ Vector3 func_106(int iParam0, char* sParam1) // Position - 0x30DD
 
 	if (DATAFILE::DATADICT_GET_TYPE(iParam0, sParam1) == 5)
 	{
-		vector = { DATAFILE::DATADICT_GET_VECTOR(iParam0, sParam1) };
+		vector = Vector3(DATAFILE::DATADICT_GET_VECTOR(iParam0, sParam1));
 	}
 	else if (DATAFILE::DATADICT_GET_TYPE(iParam0, sParam1) == 6)
 	{
@@ -2661,13 +2661,13 @@ Vector3 func_107(int iParam0) // Position - 0x31A0
 	if (iParam0 == 0)
 		return 0f, 0f, 0f;
 
-	vector = { func_106(iParam0, "start") };
+	vector = Vector3(func_106(iParam0, "start"));
 
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, -2233.327f, 2436.1338f, -14.65155f, -2229.5598f, 2399.5764f, 11.997612f, 24f, false, true))
-		vector = { -2303.54f, 2428.09f, 2.02f };
+		vector = Vector3(-2303.54f, 2428.09f, 2.02f);
 
 	if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, 603.6218f, 5573.0464f, 694.484f, 594.23785f, 5542.7915f, 727.479f, 33.5f, false, true))
-		vector = { 502.6f, 5537.06f, 777.05f };
+		vector = Vector3(502.6f, 5537.06f, 777.05f);
 
 	return vector;
 }
@@ -2883,7 +2883,7 @@ void func_123(var uParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam4,
 				offset = value % 32;
 				num = SYSTEM::FLOOR(SYSTEM::TO_FLOAT(value) / 32f);
 				MISC::SET_BIT(&Global_1835450[num], offset);
-				netHandle = { GET_GAMER_HANDLE_USER(NETWORK::UGC_GET_CONTENT_USER_ID(uParam0->f_7)) };
+				netHandle = Vector3(GET_GAMER_HANDLE_USER(NETWORK::UGC_GET_CONTENT_USER_ID(uParam0->f_7)));
 			
 				if (bParam4)
 					Global_1021887.f_5461[value] = NETWORK::NETWORK_START_USER_CONTENT_PERMISSIONS_CHECK(&netHandle);
@@ -2978,11 +2978,11 @@ void func_125(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	num = func_126(4);
 	Global_2645068[num] = 4;
-	Global_2645068[num].f_1 = { uParam0 };
+	Global_2645068[num].f_1 = Vector3(uParam0);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], { Global_4718592.f_114011 }, 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
 	return;
 }
 
@@ -3016,11 +3016,11 @@ void func_127(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	num = func_126(3);
 	Global_2645068[num] = 3;
-	Global_2645068[num].f_1 = { uParam0 };
+	Global_2645068[num].f_1 = Vector3(uParam0);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], { Global_4718592.f_114011 }, 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
 	return;
 }
 
@@ -3030,11 +3030,11 @@ void func_128(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 	num = func_126(2);
 	Global_2645068[num] = 2;
-	Global_2645068[num].f_1 = { uParam0 };
+	Global_2645068[num].f_1 = Vector3(uParam0);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], { Global_4718592.f_114011 }, 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
 	return;
 }
 
@@ -3113,7 +3113,7 @@ int func_131(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 
 	eMPStat stat;
 	int address;
 
-	Global_78341[1] = { func_135(iParam0, iParam1, iParam2, -1) };
+	Global_78341[1] = Vector3(func_135(iParam0, iParam1, iParam2, -1));
 
 	if (IS_BIT_SET(Global_78341[1].f_6, 0))
 	{
@@ -34047,7 +34047,7 @@ BOOL func_215(var uParam0, char* sParam1, int iParam2, BOOL bParam3, int iParam4
 	unk.f_65 = -1;
 	unk.f_66 = -1;
 	unk.f_67 = 2;
-	*sParam1 = { unk };
+	*sParam1 = Vector3(unk);
 	fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
 	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
 	dict2 = DATAFILE::DATADICT_GET_DICT(dict, "gen");
@@ -34137,9 +34137,9 @@ BOOL func_215(var uParam0, char* sParam1, int iParam2, BOOL bParam3, int iParam4
 				return false;
 
 	NETWORK::UGC_GET_CONTENT_UPDATED_DATE(uParam0->f_7, &(sParam1->f_82));
-	sParam1->f_56 = { func_107(dict2) };
-	sParam1->f_59 = { func_106(dict2, "cam") };
-	sParam1->f_62 = { func_105(dict2) };
+	sParam1->f_56 = Vector3(func_107(dict2));
+	sParam1->f_59 = Vector3(func_106(dict2, "cam"));
+	sParam1->f_62 = Vector3(func_105(dict2));
 	sParam1->f_69 = DATAFILE::DATADICT_GET_INT(dict2, "min");
 	sParam1->f_71 = DATAFILE::DATADICT_GET_INT(dict2, "num");
 
@@ -34291,13 +34291,13 @@ BOOL func_218(Vector3 vParam0, var uParam1, var uParam2, int iParam3, float fPar
 		{
 			if (Global_1312228[iParam3].f_146.f_57[j].f_2 > Global_1312228[iParam3].f_146.f_57[j].f_3.f_2)
 			{
-				unk[j] = { Global_1312228[iParam3].f_146.f_57[j] };
-				unk11[j] = { Global_1312228[iParam3].f_146.f_57[j].f_3 };
+				unk[j] = Vector3(Global_1312228[iParam3].f_146.f_57[j]);
+				unk11[j] = Vector3(Global_1312228[iParam3].f_146.f_57[j].f_3);
 			}
 			else
 			{
-				unk[j] = { Global_1312228[iParam3].f_146.f_57[j].f_3 };
-				unk11[j] = { Global_1312228[iParam3].f_146.f_57[j] };
+				unk[j] = Vector3(Global_1312228[iParam3].f_146.f_57[j].f_3);
+				unk11[j] = Vector3(Global_1312228[iParam3].f_146.f_57[j]);
 			}
 		
 			unk[j].f_2 = unk[j].f_2 + fParam4;
@@ -34389,7 +34389,7 @@ void func_219(var uParam0, var uParam1, BOOL bParam2, int iParam3, int iParam4) 
 	unk.f_65 = -1;
 	unk.f_66 = -1;
 	unk.f_67 = 2;
-	uParam0->f_1804[num] = { unk };
+	uParam0->f_1804[num] = Vector3(unk);
 
 	if (!func_312())
 	{
@@ -34398,9 +34398,9 @@ void func_219(var uParam0, var uParam1, BOOL bParam2, int iParam3, int iParam4) 
 		uParam0->f_28205[num].f_6 = NETWORK::UGC_GET_CONTENT_LANGUAGE(uParam1->f_7);
 	}
 
-	uParam0->f_1804[num].f_56 = { func_107(dict2) };
-	uParam0->f_1804[num].f_59 = { func_106(dict2, "cam") };
-	uParam0->f_1804[num].f_62 = { func_105(dict2) };
+	uParam0->f_1804[num].f_56 = Vector3(func_107(dict2));
+	uParam0->f_1804[num].f_59 = Vector3(func_106(dict2, "cam"));
+	uParam0->f_1804[num].f_62 = Vector3(func_105(dict2));
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict2, "optbs") == 2)
 		uParam0->f_1804[num].f_76 = DATAFILE::DATADICT_GET_INT(dict2, "optbs");
@@ -35037,7 +35037,7 @@ void func_235(var uParam0, BOOL bParam1) // Position - 0x231EC
 	unk.f_65 = -1;
 	unk.f_66 = -1;
 	unk.f_67 = 2;
-	Global_794709.f_4[uParam0->f_9] = { unk };
+	Global_794709.f_4[uParam0->f_9] = Vector3(unk);
 
 	if (!func_312())
 	{
@@ -35047,7 +35047,7 @@ void func_235(var uParam0, BOOL bParam1) // Position - 0x231EC
 		Global_794709.f_159989[uParam0->f_9].f_6 = NETWORK::UGC_GET_CONTENT_LANGUAGE(uParam0->f_7);
 	}
 
-	Global_794709.f_4[uParam0->f_9].f_56 = { func_107(dict2) };
+	Global_794709.f_4[uParam0->f_9].f_56 = Vector3(func_107(dict2));
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict2, "optbs") == 2)
 		Global_794709.f_4[uParam0->f_9].f_76 = DATAFILE::DATADICT_GET_INT(dict2, "optbs");
@@ -35057,8 +35057,8 @@ void func_235(var uParam0, BOOL bParam1) // Position - 0x231EC
 	MISC::CLEAR_BIT(&(Global_794709.f_4[uParam0->f_9].f_76), 19);
 	MISC::CLEAR_BIT(&(Global_794709.f_4[uParam0->f_9].f_76), 29);
 	MISC::CLEAR_BIT(&(Global_794709.f_4[uParam0->f_9].f_76), 28);
-	Global_794709.f_4[uParam0->f_9].f_59 = { func_106(dict2, "cam") };
-	Global_794709.f_4[uParam0->f_9].f_62 = { func_105(dict2) };
+	Global_794709.f_4[uParam0->f_9].f_59 = Vector3(func_106(dict2, "cam"));
+	Global_794709.f_4[uParam0->f_9].f_62 = Vector3(func_105(dict2));
 
 	if (!func_312())
 		if (NETWORK::UGC_IS_LANGUAGE_SUPPORTED(NETWORK::UGC_GET_CONTENT_LANGUAGE(uParam0->f_7)))
@@ -35107,16 +35107,16 @@ void func_235(var uParam0, BOOL bParam1) // Position - 0x231EC
 		if (Global_1030213.f_684 < 85)
 		{
 			Global_794709.f_4[uParam0->f_9].f_68 = Global_1030213.f_684;
-			Global_1030213[Global_1030213.f_684] = { func_106(dict2, "area") };
+			Global_1030213[Global_1030213.f_684] = Vector3(func_106(dict2, "area"));
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict2, "rad") == 2)
 				Global_1030213.f_512[Global_1030213.f_684] = SYSTEM::TO_FLOAT(DATAFILE::DATADICT_GET_INT(dict2, "rad"));
 			else
 				Global_1030213.f_512[Global_1030213.f_684] = DATAFILE::DATADICT_GET_FLOAT(dict2, "rad");
 		
-			Global_1030213.f_256[Global_1030213.f_684] = { Global_794709.f_4[uParam0->f_9].f_56 };
+			Global_1030213.f_256[Global_1030213.f_684] = Vector3(Global_794709.f_4[uParam0->f_9].f_56);
 			Global_1030213.f_598[Global_1030213.f_684] = hashKey;
-			Global_794709.f_4[uParam0->f_9].f_56 = { Global_794709.f_4[uParam0->f_9].f_59 };
+			Global_794709.f_4[uParam0->f_9].f_56 = Vector3(Global_794709.f_4[uParam0->f_9].f_59);
 			Global_1030213.f_684 = Global_1030213.f_684 + 1;
 		}
 	}
@@ -35130,7 +35130,7 @@ void func_235(var uParam0, BOOL bParam1) // Position - 0x231EC
 
 	if (func_312())
 		if (MISC::ARE_STRINGS_EQUAL(NETWORK::UGC_GET_CONTENT_ID(uParam0->f_7), "lUo6JFfliE-ZQ_8gd90ZxQ"))
-			Global_794709.f_4[uParam0->f_9].f_56 = { 897.5109f, -2340.5986f, 29.4461f };
+			Global_794709.f_4[uParam0->f_9].f_56 = Vector3(897.5109f, -2340.5986f, 29.4461f);
 
 	MISC::SET_BIT(&(Global_794709.f_4[uParam0->f_9].f_76), 13);
 
@@ -35754,9 +35754,9 @@ void func_249(Hash hParam0, int iParam1) // Position - 0x2467D
 		if (hParam0 == Global_262145.f_9494[i])
 		{
 			Global_794709.f_183624[0][i] = iParam1;
-			Global_794709.f_4[iParam1].f_56 = { func_252(0, i) };
-			Global_794709.f_4[iParam1].f_59 = { func_251(0, i) };
-			Global_794709.f_4[iParam1].f_62 = { func_250(0, i) };
+			Global_794709.f_4[iParam1].f_56 = Vector3(func_252(0, i));
+			Global_794709.f_4[iParam1].f_59 = Vector3(func_251(0, i));
+			Global_794709.f_4[iParam1].f_62 = Vector3(func_250(0, i));
 			Global_794709.f_159989[iParam1].f_12 = 0;
 			Global_794709.f_4[iParam1].f_68 = 8;
 			Global_794709.f_4[iParam1].f_75 = 0;
@@ -36140,8 +36140,8 @@ void func_267() // Position - 0x250A9
 
 	for (i = 0; i <= 84; i = i + 1)
 	{
-		Global_1030213[i] = { 0f, 0f, 0f };
-		Global_1030213.f_256[i] = { 0f, 0f, 0f };
+		Global_1030213[i] = Vector3(0f, 0f, 0f);
+		Global_1030213.f_256[i] = Vector3(0f, 0f, 0f);
 		Global_1030213.f_512[i] = 0f;
 	}
 
@@ -36252,7 +36252,7 @@ int func_271(Player plParam0) // Position - 0x25485
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return -1;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	NETWORK::NETWORK_CLAN_PLAYER_GET_DESC(&clanDesc, 35, &gamerHandle);
 	return clanDesc;
 }
@@ -36365,7 +36365,7 @@ void func_276(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	
 		for (i = iParam3; i <= 30; i = i + 1)
 		{
-			iParam0->f_33[i] = { unk };
+			iParam0->f_33[i] = Vector3(unk);
 		}
 	}
 
@@ -36402,21 +36402,21 @@ void func_277(int iParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, int iParam4
 		{
 			for (i = iParam4; i <= 61; i = i + 1)
 			{
-				iParam0->f_4[i] = { unk };
+				iParam0->f_4[i] = Vector3(unk);
 			}
 		}
 		else if (bParam1)
 		{
 			for (i = iParam4; i <= 30; i = i + 1)
 			{
-				iParam0->f_4[i] = { unk };
+				iParam0->f_4[i] = Vector3(unk);
 			}
 		}
 		else
 		{
 			for (i = iParam4 + 31; i <= 61; i = i + 1)
 			{
-				iParam0->f_4[i] = { unk };
+				iParam0->f_4[i] = Vector3(unk);
 			}
 		}
 	}
@@ -36443,7 +36443,7 @@ void func_278(var uParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	
 		for (i = iParam3; i <= 299; i = i + 1)
 		{
-			uParam0->f_1804[i] = { unk };
+			uParam0->f_1804[i] = Vector3(unk);
 		}
 	}
 
@@ -36475,7 +36475,7 @@ void func_279(BOOL bParam0, BOOL bParam1, int iParam2) // Position - 0x257F0
 	
 		for (i = iParam2; i <= num - 1; i = i + 1)
 		{
-			Global_794709.f_4[i] = { unk };
+			Global_794709.f_4[i] = Vector3(unk);
 		}
 	}
 
@@ -36552,7 +36552,7 @@ BOOL func_287(var uParam0) // Position - 0x25914
 	switch (*uParam0)
 	{
 		case 0:
-			gamerHandle = { GET_LOCAL_GAMER_HANDLE() };
+			gamerHandle = Vector3(GET_LOCAL_GAMER_HANDLE());
 			TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_1), NETWORK::NETWORK_MEMBER_ID_FROM_GAMER_HANDLE(&gamerHandle), 24);
 			func_281();
 			*uParam0 = *uParam0 + 1;
@@ -36600,7 +36600,7 @@ void func_288(var uParam0) // Position - 0x259E7
 {
 	var unk;
 
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -36640,7 +36640,7 @@ void func_291(int iParam0, var uParam1) // Position - 0x25A2C
 			for (i = iParam0; i <= (iParam0 + uParam1) - 1; i = i + 1)
 			{
 				if (i < 1800 && func_292(Global_1010831.f_4[j].f_56, Global_794709.f_4[i].f_56, 1082130432))
-					Global_1010831.f_4[j] = { unk };
+					Global_1010831.f_4[j] = Vector3(unk);
 			}
 		
 			if (iParam0 == 0)
@@ -36648,7 +36648,7 @@ void func_291(int iParam0, var uParam1) // Position - 0x25A2C
 				for (i = 0; i <= 299; i = i + 1)
 				{
 					if (func_292(Global_1010831.f_4[j].f_56, Global_978406.f_1804[i].f_56, 1082130432))
-						Global_1010831.f_4[j] = { unk };
+						Global_1010831.f_4[j] = Vector3(unk);
 				}
 			}
 		}
@@ -36718,7 +36718,7 @@ void func_295(int iParam0, int iParam1) // Position - 0x25C1E
 					if (func_292(Global_794709.f_4[i].f_56, Global_978406.f_1804[j].f_56, 1082130432))
 					{
 						MISC::CLEAR_BIT(&(Global_978406.f_1804[j].f_76), 13);
-						Global_978406.f_1804[j] = { unk };
+						Global_978406.f_1804[j] = Vector3(unk);
 						i = 1800;
 					}
 				}
@@ -36836,7 +36836,7 @@ BOOL func_303(var uParam0) // Position - 0x25D86
 			{
 				if (i < 35)
 				{
-					Global_1050140.f_1179[i] = { func_310(i + uParam0->f_12) };
+					Global_1050140.f_1179[i] = Vector3(func_310(i + uParam0->f_12));
 				
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_1050140.f_1179[i]))
 						uParam0->f_13 = uParam0->f_13 + 1;
@@ -37129,7 +37129,7 @@ void func_308(var uParam0) // Position - 0x26317
 	unk.f_65 = -1;
 	unk.f_66 = -1;
 	unk.f_67 = 2;
-	Global_786550.f_1[uParam0->f_9 + uParam0->f_12] = { unk };
+	Global_786550.f_1[uParam0->f_9 + uParam0->f_12] = Vector3(unk);
 
 	if (!func_312())
 	{
@@ -37139,7 +37139,7 @@ void func_308(var uParam0) // Position - 0x26317
 		Global_786550.f_3082[uParam0->f_9].f_6 = NETWORK::UGC_GET_CONTENT_LANGUAGE(uParam0->f_7);
 	}
 
-	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_56 = { func_107(dict2) };
+	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_56 = Vector3(func_107(dict2));
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict2, "optbs") == 2)
 		Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_76 = DATAFILE::DATADICT_GET_INT(dict2, "optbs");
@@ -37149,8 +37149,8 @@ void func_308(var uParam0) // Position - 0x26317
 	MISC::CLEAR_BIT(&(Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_76), 19);
 	MISC::CLEAR_BIT(&(Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_76), 29);
 	MISC::CLEAR_BIT(&(Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_76), 28);
-	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_59 = { func_106(dict2, "cam") };
-	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_62 = { func_105(dict2) };
+	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_59 = Vector3(func_106(dict2, "cam"));
+	Global_786550.f_1[uParam0->f_9 + uParam0->f_12].f_62 = Vector3(func_105(dict2));
 
 	if (!func_312())
 		if (NETWORK::UGC_IS_LANGUAGE_SUPPORTED(NETWORK::UGC_GET_CONTENT_LANGUAGE(uParam0->f_7)))
@@ -37366,7 +37366,7 @@ void func_311() // Position - 0x26B30
 
 	for (i = 1800; i <= 1817; i = i + 1)
 	{
-		Global_794709.f_4[i] = { unk };
+		Global_794709.f_4[i] = Vector3(unk);
 	}
 
 	return;

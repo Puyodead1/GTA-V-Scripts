@@ -1121,7 +1121,7 @@ void func_7(int iParam0) // Position - 0x3D5
 		if (iParam0 != 8)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAPP_STEAL_C0" /*Are you sure you'd like to source ~a~?*/, 16);
-			unk5 = { func_9(iParam0) };
+			unk5 = Vector3(func_9(iParam0));
 		}
 	
 		func_198("HAPP_STEAL_T" /*SOURCE CARGO*/, &unk, "WHOUSE_CONF" /*Confirm*/, "WHOUSE_CANC" /*Cancel*/, false, true, -1, 2, -1, &unk5);
@@ -3031,7 +3031,7 @@ int func_72(int iParam0, Player plParam1) // Position - 0x23DC
 		case 12:
 		case 13:
 			if (_IS_PLAYER_IN_AN_ORGANIZATION(plParam1, true))
-				unk = { func_73(plParam1) };
+				unk = Vector3(func_73(plParam1));
 		
 			if (unk.f_1 == 4)
 				return 4;
@@ -5784,7 +5784,7 @@ int func_131(int iParam0, int iParam1, Player plParam2) // Position - 0x4815
 		case 13:
 			if (plParam2 != _INVALID_PLAYER_INDEX())
 				if (_IS_PLAYER_IN_AN_ORGANIZATION(plParam2, true))
-					unk = { func_73(plParam2) };
+					unk = Vector3(func_73(plParam2));
 			else
 				return 4;
 		
@@ -10627,7 +10627,7 @@ void func_203(int iParam0, BOOL bParam1) // Position - 0x8BA1
 		if (iParam0 != 8)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "HAPP_SELL_D0" /*You have no ~a~ to sell.*/, 16);
-			unk5 = { func_9(iParam0) };
+			unk5 = Vector3(func_9(iParam0));
 		}
 	
 		func_198("HAPP_SELL_T" /*SELL CARGO*/, &unk, "OR_OVRLY_OK" /*Ok*/, "", true, false, -1, 0, -1, &unk5);
@@ -10672,7 +10672,7 @@ void func_203(int iParam0, BOOL bParam1) // Position - 0x8BA1
 				num2 = SYSTEM::ROUND(value);
 			}
 		
-			unk13 = { func_9(iParam0) };
+			unk13 = Vector3(func_9(iParam0));
 		}
 		else if (iParam0 == 8)
 		{
@@ -11613,7 +11613,7 @@ void func_256(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -12495,7 +12495,7 @@ BOOL func_292(Player plParam0) // Position - 0xADDC
 {
 	var gamerHandle;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (IS_XBOX_PLATFORM())
 		if (plParam0 == PLAYER::PLAYER_ID())
@@ -12521,7 +12521,7 @@ BOOL func_294(Player plParam0) // Position - 0xAE33
 
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 	{
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	
 		if (MISC::IS_ORBIS_VERSION() && !MISC::IS_PROSPERO_VERSION() || MISC::IS_PC_VERSION())
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
@@ -13088,7 +13088,7 @@ void func_315(Player plParam0, Player plParam1) // Position - 0xB650
 					{
 						if (!MISC::IS_STRING_NULL_OR_EMPTY(&unk[k]))
 						{
-							unk[j] = { unk[k] };
+							unk[j] = Vector3(unk[k]);
 							TEXT_LABEL_ASSIGN_STRING(&unk[k], "", 64);
 							k = num - 1;
 						}
@@ -13551,14 +13551,14 @@ void func_332(BOOL bParam0, BOOL bParam1) // Position - 0xC0EE
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -13816,7 +13816,7 @@ void func_348() // Position - 0xC4C7
 		
 			if (func_352(num2))
 			{
-				unk = { func_351(num2) };
+				unk = Vector3(func_351(num2));
 				iLocal_114 = func_350(num2);
 				MISC::SET_BIT(&Global_1949959, i);
 				func_343(num2);
@@ -14087,16 +14087,16 @@ BOOL func_357(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xC9F8
 		if (func_373(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_372();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -14233,7 +14233,7 @@ void func_358() // Position - 0xCCC6
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -14287,18 +14287,18 @@ void func_362() // Position - 0xCDA0
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -14463,7 +14463,7 @@ void func_372() // Position - 0xD111
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -14505,7 +14505,7 @@ void func_374() // Position - 0xD19F
 
 void func_375(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0xD1F6
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;

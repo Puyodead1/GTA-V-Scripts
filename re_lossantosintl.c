@@ -279,11 +279,11 @@ void func_4() // Position - 0x493
 	switch (iLocal_88)
 	{
 		case 0:
-			uLocal_61[0] = { -1542.1127f, -3023.8025f, 23.2538f };
-			uLocal_61[1] = { -3089.888f, -1960.0751f, 313.559f };
-			uLocal_61[2] = { -1037.6381f, -3316.1196f, 23.2475f };
-			uLocal_61[3] = { 451.174f, -4009.4602f, 135.1171f };
-			uLocal_74 = { -1612.1736f, -2688.442f, 12.9444f };
+			uLocal_61[0] = Vector3(-1542.1127f, -3023.8025f, 23.2538f);
+			uLocal_61[1] = Vector3(-3089.888f, -1960.0751f, 313.559f);
+			uLocal_61[2] = Vector3(-1037.6381f, -3316.1196f, 23.2475f);
+			uLocal_61[3] = Vector3(451.174f, -4009.4602f, 135.1171f);
+			uLocal_74 = Vector3(-1612.1736f, -2688.442f, 12.9444f);
 		
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 				if (PED::IS_PED_IN_ANY_HELI(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_IN_ANY_PLANE(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
@@ -614,7 +614,7 @@ void func_7() // Position - 0xBF2
 	
 		case 2:
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		
 			if (ENTITY::DOES_ENTITY_EXIST(veLocal_54) && !ENTITY::IS_ENTITY_DEAD(veLocal_54, false))
 				if (!VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(veLocal_54))
@@ -675,10 +675,10 @@ void func_13() // Position - 0xD89
 		{
 			VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(veLocal_89);
 			PED::SET_PED_KEEP_TASK(pedLocal_90, true);
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(veLocal_89, true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_89, true));
 			entityHeading = ENTITY::GET_ENTITY_HEADING(veLocal_89);
-			vector = { 0f, 500f, 50f };
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(entityCoords, entityHeading, vector) };
+			vector = Vector3(0f, 500f, 50f);
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(entityCoords, entityHeading, vector));
 			TASK::TASK_HELI_MISSION(pedLocal_90, veLocal_89, 0, 0, offsetFromCoordAndHeadingInWorldCoords, 4, 50f, -1f, 0f, 100, 50, -1082130432, 0);
 		}
 	}

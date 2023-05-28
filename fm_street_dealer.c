@@ -422,7 +422,7 @@ BOOL func_3() // Position - 0x131
 	if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(iLocal_280.f_2))
 		return true;
 
-	vector = { iLocal_227.f_2 };
+	vector = Vector3(iLocal_227.f_2);
 	heading = iLocal_227.f_5;
 	modelHash = iLocal_227.f_6;
 
@@ -1496,7 +1496,7 @@ void func_31(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 				}
 			
 				func_53(Global_23267, num28 + 0f, iParam5, 0.034722f, r, g, b, a);
-				textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
+				textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown"));
 				textureResolution = textureResolution * (0.5f / num31);
 				textureResolution.f_1 = textureResolution.f_1 * (0.5f / num31);
 			
@@ -3399,7 +3399,7 @@ BOOL func_46() // Position - 0x4CAD
 
 	if (func_47())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3(0f, -500f, 0f);
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)
@@ -3576,7 +3576,7 @@ char* func_54(int iParam0, BOOL bParam1) // Position - 0x4FD3
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_7488[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		
 			if (NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName))
 				return func_55(&txdName);
@@ -3838,7 +3838,7 @@ char* func_57(int iParam0) // Position - 0x551E
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_6463[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 			NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName);
 			return func_55(&txdName);
 		}
@@ -4026,9 +4026,9 @@ BOOL func_64(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 	{
 		num3 = 1f;
 		func_62(bParam5, &num, &num2, &num3);
-		textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName) };
+		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_65(iParam0) / num3;
-		textureResolution = { textureResolution * { num4, num4, num4 } };
+		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
 	
 		if (!bParam2)
 		{
@@ -4205,7 +4205,7 @@ void func_70(var uParam0) // Position - 0x5C75
 	}
 	else if (!func_102(uParam0, num, &unk5))
 	{
-		unk = { unk5 };
+		unk = Vector3(unk5);
 	
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(unk5.f_4))
 			str = unk5.f_4;
@@ -6163,7 +6163,7 @@ void func_132(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 
 	if (iParam2 > num + num2)
 		return;
 
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	uParam0->f_3 = iParam1;
 
 	if (num >= iParam2)
@@ -6742,7 +6742,7 @@ void func_147(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -9170,10 +9170,10 @@ void func_216() // Position - 0xBB89
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -9871,14 +9871,14 @@ void func_263(BOOL bParam0, BOOL bParam1) // Position - 0xC805
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -10543,13 +10543,13 @@ void func_304() // Position - 0xD297
 	int unk2;
 
 	num = Global_2793046.f_6750.f_31;
-	iLocal_227.f_2 = { func_309(num) };
+	iLocal_227.f_2 = Vector3(func_309(num));
 	iLocal_227.f_5 = func_308(num);
 	iLocal_227.f_6 = func_307(num);
 	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, joaat("PLAYER"), joaat("PLAYER"));
-	unk = { func_306(iLocal_227.f_5) };
-	iLocal_227.f_43 = { iLocal_227.f_2 + (unk * { 0.25f, 0.25f, 0.25f }) };
-	iLocal_227.f_46 = { iLocal_227.f_43 + { 2f, 0f, 0f } + (unk * { 2f, 2f, 2f }) };
+	unk = Vector3(func_306(iLocal_227.f_5));
+	iLocal_227.f_43 = { iLocal_227.f_2 + (unk * Vector3(0.25f, 0.25f, 0.25f)) };
+	iLocal_227.f_46 = { iLocal_227.f_43 + Vector3(2f, 0f, 0f) + (unk * Vector3(2f, 2f, 2f)) };
 	num2 = Global_2793046.f_6750.f_32;
 	iLocal_227.f_12.f_7 = Global_2793046.f_6750[num2].f_1;
 	iLocal_227.f_12.f_13 = Global_2793046.f_6750[num2].f_2;

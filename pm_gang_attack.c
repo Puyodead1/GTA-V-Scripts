@@ -536,14 +536,14 @@ float func_5(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x468
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -553,9 +553,9 @@ float func_6(Entity eParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bPa
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(eParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -708,7 +708,7 @@ void func_9() // Position - 0x6C1
 		case 1:
 			if (func_37())
 			{
-				unk = { func_33("START") };
+				unk = Vector3(func_33("START"));
 			
 				if (_CONVERSATION_ADD_LINE(&uLocal_107, &uLocal_274, &unk, 8, 0, 0, 0))
 				{
@@ -826,16 +826,16 @@ BOOL func_11(char* sParam0, int iParam1, BOOL bParam2) // Position - 0xA7B
 		if (func_30(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_29();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -972,7 +972,7 @@ void func_12() // Position - 0xD49
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1036,18 +1036,18 @@ void func_18() // Position - 0xE45
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1220,7 +1220,7 @@ void func_29() // Position - 0x11DD
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -1262,7 +1262,7 @@ void func_31() // Position - 0x126C
 
 void func_32(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x12C3
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1560,7 +1560,7 @@ Vector3 func_40(var uParam0, var uParam1, var uParam2, float fParam3) // Positio
 {
 	var unk;
 
-	unk = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f) };
+	unk = Vector3(MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f));
 	return uParam0 + func_41(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, fParam3));
 }
 
@@ -1574,7 +1574,7 @@ Vector3 func_41(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	num = SYSTEM::VMAG(vParam0);
 
 	if (num != 0f)
-		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
+		return vParam0 * Vector3(fParam3 / num, fParam3 / num, fParam3 / num);
 
 	return 0f, 0f, 0f;
 }
@@ -1843,7 +1843,7 @@ void func_45() // Position - 0x1A3D
 		case 1:
 			if (func_37())
 			{
-				unk9 = { func_33("START") };
+				unk9 = Vector3(func_33("START"));
 			
 				if (_CONVERSATION_ADD_LINE(&uLocal_107, &uLocal_274, &unk9, 8, 0, 0, 0))
 				{
@@ -2156,54 +2156,54 @@ void func_57(var uParam0, int iParam1, int iParam2) // Position - 0x2833
 			switch (iParam2)
 			{
 				case 0:
-					*uParam0 = { -543.6415f, 303.5388f, 82.0202f };
+					*uParam0 = Vector3(-543.6415f, 303.5388f, 82.0202f);
 					uParam0->f_3 = 231.5559f;
-					uParam0->f_4 = { 0f, 0f, 0f };
+					uParam0->f_4 = Vector3(0f, 0f, 0f);
 					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 1:
-					*uParam0 = { -563.5045f, 303.3635f, 82.192f };
+					*uParam0 = Vector3(-563.5045f, 303.3635f, 82.192f);
 					uParam0->f_3 = 191.6703f;
-					uParam0->f_4 = { -561.9358f, 293.7914f, 84.1827f };
+					uParam0->f_4 = Vector3(-561.9358f, 293.7914f, 84.1827f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 2:
-					*uParam0 = { -547.9926f, 299.531f, 82.0218f };
+					*uParam0 = Vector3(-547.9926f, 299.531f, 82.0218f);
 					uParam0->f_3 = 170.2791f;
-					uParam0->f_4 = { -550.0999f, 292.7203f, 87.8903f };
+					uParam0->f_4 = Vector3(-550.0999f, 292.7203f, 87.8903f);
 					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 3:
-					*uParam0 = { -551.7525f, 301.2135f, 82.1226f };
+					*uParam0 = Vector3(-551.7525f, 301.2135f, 82.1226f);
 					uParam0->f_3 = 132.7229f;
-					uParam0->f_4 = { -561.2323f, 294.0457f, 87.6588f };
+					uParam0->f_4 = Vector3(-561.2323f, 294.0457f, 87.6588f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 4:
-					*uParam0 = { -549.7384f, 303.0894f, 82.0981f };
+					*uParam0 = Vector3(-549.7384f, 303.0894f, 82.0981f);
 					uParam0->f_3 = 167.5811f;
-					uParam0->f_4 = { -552.8337f, 292.7388f, 88.2295f };
+					uParam0->f_4 = Vector3(-552.8337f, 292.7388f, 88.2295f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 5:
-					*uParam0 = { -558.4697f, 303.0401f, 82.2333f };
+					*uParam0 = Vector3(-558.4697f, 303.0401f, 82.2333f);
 					uParam0->f_3 = 161.0839f;
-					uParam0->f_4 = { -561.9985f, 293.9765f, 87.8096f };
+					uParam0->f_4 = Vector3(-561.9985f, 293.9765f, 87.8096f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
@@ -2215,54 +2215,54 @@ void func_57(var uParam0, int iParam1, int iParam2) // Position - 0x2833
 			switch (iParam2)
 			{
 				case 0:
-					*uParam0 = { 231.2834f, 345.2137f, 104.3893f };
+					*uParam0 = Vector3(231.2834f, 345.2137f, 104.3893f);
 					uParam0->f_3 = 324.6404f;
-					uParam0->f_4 = { 0f, 0f, 0f };
+					uParam0->f_4 = Vector3(0f, 0f, 0f);
 					uParam0->f_7 = joaat("WEAPON_SAWNOFFSHOTGUN");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 1:
-					*uParam0 = { 236.5094f, 339.3164f, 104.5298f };
+					*uParam0 = Vector3(236.5094f, 339.3164f, 104.5298f);
 					uParam0->f_3 = 112.7911f;
-					uParam0->f_4 = { 230.1282f, 337.069f, 106.8048f };
+					uParam0->f_4 = Vector3(230.1282f, 337.069f, 106.8048f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 2:
-					*uParam0 = { 224.3295f, 348.2992f, 104.4469f };
+					*uParam0 = Vector3(224.3295f, 348.2992f, 104.4469f);
 					uParam0->f_3 = 165.7146f;
-					uParam0->f_4 = { 221.6486f, 340.3152f, 106.6212f };
+					uParam0->f_4 = Vector3(221.6486f, 340.3152f, 106.6212f);
 					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 3:
-					*uParam0 = { 234.1038f, 341.6698f, 104.5309f };
+					*uParam0 = Vector3(234.1038f, 341.6698f, 104.5309f);
 					uParam0->f_3 = 110.0142f;
-					uParam0->f_4 = { 223.9347f, 338.3914f, 106.8137f };
+					uParam0->f_4 = Vector3(223.9347f, 338.3914f, 106.8137f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 4:
-					*uParam0 = { 228.9968f, 344.3681f, 104.5384f };
+					*uParam0 = Vector3(228.9968f, 344.3681f, 104.5384f);
 					uParam0->f_3 = 153.6073f;
-					uParam0->f_4 = { 224.4416f, 336.0886f, 106.1191f };
+					uParam0->f_4 = Vector3(224.4416f, 336.0886f, 106.1191f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 5:
-					*uParam0 = { 221.382f, 346.3744f, 104.5675f };
+					*uParam0 = Vector3(221.382f, 346.3744f, 104.5675f);
 					uParam0->f_3 = 165.8422f;
-					uParam0->f_4 = { 219.6116f, 340.9911f, 106.4532f };
+					uParam0->f_4 = Vector3(219.6116f, 340.9911f, 106.4532f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
@@ -2274,54 +2274,54 @@ void func_57(var uParam0, int iParam1, int iParam2) // Position - 0x2833
 			switch (iParam2)
 			{
 				case 0:
-					*uParam0 = { -325.1079f, 6263.8325f, 30.4151f };
+					*uParam0 = Vector3(-325.1079f, 6263.8325f, 30.4151f);
 					uParam0->f_3 = 195.9702f;
-					uParam0->f_4 = { 0f, 0f, 0f };
+					uParam0->f_4 = Vector3(0f, 0f, 0f);
 					uParam0->f_7 = joaat("WEAPON_SAWNOFFSHOTGUN");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 1:
-					*uParam0 = { -312.9843f, 6250.1147f, 30.4899f };
+					*uParam0 = Vector3(-312.9843f, 6250.1147f, 30.4899f);
 					uParam0->f_3 = 319.1074f;
-					uParam0->f_4 = { -308.3476f, 6254.857f, 32.6941f };
+					uParam0->f_4 = Vector3(-308.3476f, 6254.857f, 32.6941f);
 					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 2:
-					*uParam0 = { -326.1756f, 6268.3384f, 30.4714f };
+					*uParam0 = Vector3(-326.1756f, 6268.3384f, 30.4714f);
 					uParam0->f_3 = 261.9836f;
-					uParam0->f_4 = { -312.8552f, 6265.857f, 43.5835f };
+					uParam0->f_4 = Vector3(-312.8552f, 6265.857f, 43.5835f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 3:
-					*uParam0 = { -323.9344f, 6259.6587f, 30.3539f };
+					*uParam0 = Vector3(-323.9344f, 6259.6587f, 30.3539f);
 					uParam0->f_3 = 292.4941f;
-					uParam0->f_4 = { -313.3472f, 6263.3945f, 42.7414f };
+					uParam0->f_4 = Vector3(-313.3472f, 6263.3945f, 42.7414f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 4:
-					*uParam0 = { -318.7812f, 6259.576f, 30.5161f };
+					*uParam0 = Vector3(-318.7812f, 6259.576f, 30.5161f);
 					uParam0->f_3 = 295.0701f;
-					uParam0->f_4 = { -313.766f, 6261.479f, 32.6516f };
+					uParam0->f_4 = Vector3(-313.766f, 6261.479f, 32.6516f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 5:
-					*uParam0 = { -314.925f, 6255.542f, 30.5164f };
+					*uParam0 = Vector3(-314.925f, 6255.542f, 30.5164f);
 					uParam0->f_3 = 309.7791f;
-					uParam0->f_4 = { -310.572f, 6258.45f, 32.6648f };
+					uParam0->f_4 = Vector3(-310.572f, 6258.45f, 32.6648f);
 					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
@@ -2333,54 +2333,54 @@ void func_57(var uParam0, int iParam1, int iParam2) // Position - 0x2833
 			switch (iParam2)
 			{
 				case 0:
-					*uParam0 = { -2215.3203f, 4275.0464f, 46.475f };
+					*uParam0 = Vector3(-2215.3203f, 4275.0464f, 46.475f);
 					uParam0->f_3 = 16.955f;
-					uParam0->f_4 = { 0f, 0f, 0f };
+					uParam0->f_4 = Vector3(0f, 0f, 0f);
 					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 1:
-					*uParam0 = { -2195.425f, 4262.31f, 47.2741f };
+					*uParam0 = Vector3(-2195.425f, 4262.31f, 47.2741f);
 					uParam0->f_3 = 241.4366f;
-					uParam0->f_4 = { -2185.362f, 4256.3765f, 48.4082f };
+					uParam0->f_4 = Vector3(-2185.362f, 4256.3765f, 48.4082f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 2:
-					*uParam0 = { -2200.848f, 4268.1904f, 47.3093f };
+					*uParam0 = Vector3(-2200.848f, 4268.1904f, 47.3093f);
 					uParam0->f_3 = 331.1949f;
-					uParam0->f_4 = { -2196.5752f, 4275.1294f, 49.0669f };
+					uParam0->f_4 = Vector3(-2196.5752f, 4275.1294f, 49.0669f);
 					uParam0->f_7 = joaat("WEAPON_ASSAULTRIFLE");
 					uParam0->f_8 = -1;
 					uParam0->f_9 = -2;
 					break;
 			
 				case 3:
-					*uParam0 = { -2202.8179f, 4294.1494f, 47.4518f };
+					*uParam0 = Vector3(-2202.8179f, 4294.1494f, 47.4518f);
 					uParam0->f_3 = 263.7257f;
-					uParam0->f_4 = { -2192.7834f, 4289.572f, 50.3251f };
+					uParam0->f_4 = Vector3(-2192.7834f, 4289.572f, 50.3251f);
 					uParam0->f_7 = joaat("WEAPON_MOLOTOV");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = 0;
 					break;
 			
 				case 4:
-					*uParam0 = { -2196.2708f, 4265.0645f, 47.3446f };
+					*uParam0 = Vector3(-2196.2708f, 4265.0645f, 47.3446f);
 					uParam0->f_3 = 325.4524f;
-					uParam0->f_4 = { -2191.1833f, 4271.747f, 49.867f };
+					uParam0->f_4 = Vector3(-2191.1833f, 4271.747f, 49.867f);
 					uParam0->f_7 = joaat("WEAPON_PUMPSHOTGUN");
 					uParam0->f_8 = 1;
 					uParam0->f_9 = -1;
 					break;
 			
 				case 5:
-					*uParam0 = { -2204.4917f, 4290.0586f, 47.3773f };
+					*uParam0 = Vector3(-2204.4917f, 4290.0586f, 47.3773f);
 					uParam0->f_3 = 269.5739f;
-					uParam0->f_4 = { -2193.0168f, 4292.6694f, 54.873f };
+					uParam0->f_4 = Vector3(-2193.0168f, 4292.6694f, 54.873f);
 					uParam0->f_7 = joaat("WEAPON_MICROSMG");
 					uParam0->f_8 = 0;
 					uParam0->f_9 = -1;

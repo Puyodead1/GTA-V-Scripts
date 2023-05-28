@@ -842,7 +842,7 @@ BOOL func_22(Entity eParam0) // Position - 0x807
 {
 	float entityRotation;
 
-	entityRotation = { ENTITY::GET_ENTITY_ROTATION(eParam0, 0) };
+	entityRotation = Vector3(ENTITY::GET_ENTITY_ROTATION(eParam0, 0));
 
 	if (entityRotation > 30f || entityRotation < -30f || entityRotation.f_1 > 30f || entityRotation.f_1 < -30f)
 		return true;
@@ -948,16 +948,16 @@ BOOL func_26(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x937
 		if (func_45(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_44();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -1094,7 +1094,7 @@ void func_27() // Position - 0xC05
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1158,18 +1158,18 @@ void func_33() // Position - 0xD01
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1342,7 +1342,7 @@ void func_44() // Position - 0x1099
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -1384,7 +1384,7 @@ void func_46() // Position - 0x1128
 
 void func_47(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x117F
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1420,14 +1420,14 @@ float func_48(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x11D5
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -1455,35 +1455,35 @@ void func_51() // Position - 0x1276
 
 	if (!func_2(2))
 	{
-		uLocal_210[0].f_3 = { -1569.525f, 444.04f, 108.135f };
+		uLocal_210[0].f_3 = Vector3(-1569.525f, 444.04f, 108.135f);
 		uLocal_210[0].f_9 = 80f;
-		uLocal_210[1].f_3 = { -1352.88f, 613.77f, 134.34f };
+		uLocal_210[1].f_3 = Vector3(-1352.88f, 613.77f, 134.34f);
 		uLocal_210[1].f_9 = 198f;
-		uLocal_210[2].f_3 = { -1467f, -5.5f, 53.105f };
+		uLocal_210[2].f_3 = Vector3(-1467f, -5.5f, 53.105f);
 		uLocal_210[2].f_9 = 104f;
-		uLocal_210[3].f_3 = { -1632.8329f, -413.8573f, 39.9441f };
+		uLocal_210[3].f_3 = Vector3(-1632.8329f, -413.8573f, 39.9441f);
 		uLocal_210[3].f_9 = 321.5f;
-		uLocal_210[4].f_3 = { -1765.6779f, -423.9763f, 41.5f };
+		uLocal_210[4].f_3 = Vector3(-1765.6779f, -423.9763f, 41.5f);
 		uLocal_210[4].f_9 = 256.25f;
-		uLocal_210[5].f_3 = { -380.75f, 427.79f, 110.97f };
+		uLocal_210[5].f_3 = Vector3(-380.75f, 427.79f, 110.97f);
 		uLocal_210[5].f_9 = 286.5f;
-		uLocal_210[6].f_3 = { -163.2826f, 989.2324f, 234.0641f };
+		uLocal_210[6].f_3 = Vector3(-163.2826f, 989.2324f, 234.0641f);
 		uLocal_210[6].f_9 = 0f;
-		uLocal_210[7].f_3 = { -493.083f, 588.6333f, 122.48499f };
+		uLocal_210[7].f_3 = Vector3(-493.083f, 588.6333f, 122.48499f);
 		uLocal_210[7].f_9 = 177.2061f;
-		uLocal_210[8].f_3 = { -818.84f, 434.74f, 88.15f };
+		uLocal_210[8].f_3 = Vector3(-818.84f, 434.74f, 88.15f);
 		uLocal_210[8].f_9 = 91.5f;
-		uLocal_210[9].f_3 = { -913.24f, 785.4f, 184.66f };
+		uLocal_210[9].f_3 = Vector3(-913.24f, 785.4f, 184.66f);
 		uLocal_210[9].f_9 = 96.26f;
-		uLocal_210[10].f_3 = { -825.92f, -26.67f, 38.68f };
+		uLocal_210[10].f_3 = Vector3(-825.92f, -26.67f, 38.68f);
 		uLocal_210[10].f_9 = 15f;
-		uLocal_210[11].f_3 = { -1103.5f, 587.29f, 103.25f };
+		uLocal_210[11].f_3 = Vector3(-1103.5f, 587.29f, 103.25f);
 		uLocal_210[11].f_9 = 305.5f;
-		uLocal_210[12].f_3 = { -1253.4395f, 491.05f, 94.3706f };
+		uLocal_210[12].f_3 = Vector3(-1253.4395f, 491.05f, 94.3706f);
 		uLocal_210[12].f_9 = 0f;
-		uLocal_210[13].f_3 = { 160.29f, 486.71f, 142.96f };
+		uLocal_210[13].f_3 = Vector3(160.29f, 486.71f, 142.96f);
 		uLocal_210[13].f_9 = 95f;
-		uLocal_210[14].f_3 = { -1163.859f, 319.19f, 67.96f };
+		uLocal_210[14].f_3 = Vector3(-1163.859f, 319.19f, 67.96f);
 		uLocal_210[14].f_9 = 40f;
 		iLocal_37 = 1;
 	}
@@ -1671,7 +1671,7 @@ int func_58(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		num.f_11 = -1;
 		num.f_13 = iParam10;
 		MISC::CLEAR_BIT(&(num.f_1), 0);
-		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = { num };
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 + 1;
 		func_59(CHAR_MICHAEL);
 		func_59(CHAR_FRANKLIN);

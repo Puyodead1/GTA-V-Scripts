@@ -75,7 +75,7 @@ void main() // Position - 0x0
 		entityCoords = Vector3( 0f, 0f, 0f );
 	
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 	
 		while (num2 != 2)
 		{
@@ -407,23 +407,23 @@ void func_14() // Position - 0x60E
 {
 	int i;
 
-	Global_32504[0].f_2 = { -2189.5447f, 3129.6125f, 0f };
+	Global_32504[0].f_2 = Vector3(-2189.5447f, 3129.6125f, 0f);
 	Global_32504[0].f_1 = 1000f * 1000f;
 	Global_32504[0] = 0;
 	Global_32504[0].f_5 = 0;
-	Global_32504[1].f_2 = { -1172.8221f, 66.5235f, 0f };
+	Global_32504[1].f_2 = Vector3(-1172.8221f, 66.5235f, 0f);
 	Global_32504[1].f_1 = 300f * 300f;
 	Global_32504[1] = 0;
 	Global_32504[1].f_5 = 0;
-	Global_32504[3].f_2 = { 1692.1469f, 2562.3127f, 0f };
+	Global_32504[3].f_2 = Vector3(1692.1469f, 2562.3127f, 0f);
 	Global_32504[3].f_1 = 300f * 300f;
 	Global_32504[3] = 0;
 	Global_32504[3].f_5 = 0;
-	Global_32504[2].f_2 = { -1329.6797f, 60.3478f, 0f };
+	Global_32504[2].f_2 = Vector3(-1329.6797f, 60.3478f, 0f);
 	Global_32504[2].f_1 = 250f * 250f;
 	Global_32504[2] = 0;
 	Global_32504[2].f_5 = 0;
-	Global_32504[4].f_2 = { 114.64f, -1290.34f, 0f };
+	Global_32504[4].f_2 = Vector3(114.64f, -1290.34f, 0f);
 	Global_32504[4].f_1 = 100f * 100f;
 	Global_32504[4] = 1;
 	Global_32504[4].f_5 = 0;

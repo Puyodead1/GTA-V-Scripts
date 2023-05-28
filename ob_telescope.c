@@ -345,14 +345,14 @@ void func_4() // Position - 0x387
 	{
 		if (ENTITY::GET_ENTITY_MODEL(obLocal_79) == joaat("prop_telescope"))
 		{
-			offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 0.02f, -0.78f, 0f) };
+			offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 0.02f, -0.78f, 0f));
 			sLocal_107 = "UPRIGHT_ENTER_FRONT";
 			sLocal_108 = "UPRIGHT_IDLE";
 			sLocal_109 = "UPRIGHT_EXIT_FRONT";
 		}
 		else if (ENTITY::GET_ENTITY_MODEL(obLocal_79) == joaat("xs_prop_arena_telescope_01"))
 		{
-			offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, -0.03f, 0.96f, 0f) };
+			offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, -0.03f, 0.96f, 0f));
 			sLocal_107 = "PUBLIC_ENTER_FRONT";
 			sLocal_108 = "PUBLIC_IDLE";
 			sLocal_109 = "PUBLIC_EXIT_FRONT";
@@ -360,9 +360,9 @@ void func_4() // Position - 0x387
 		else
 		{
 			if (Global_78558)
-				offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, -0.03f, 0.96f, 0f) };
+				offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, -0.03f, 0.96f, 0f));
 			else
-				offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 0.2f, 0.96f, 0f) };
+				offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 0.2f, 0.96f, 0f));
 		
 			sLocal_107 = "PUBLIC_ENTER_FRONT";
 			sLocal_108 = "PUBLIC_IDLE";
@@ -372,9 +372,9 @@ void func_4() // Position - 0x387
 	else
 	{
 		if (Global_78558)
-			offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 1.14f, 0.02f, 0f) };
+			offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 1.14f, 0.02f, 0f));
 		else
-			offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 1f, -0.4f, 0f) };
+			offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, 1f, -0.4f, 0f));
 	
 		sLocal_107 = "ENTER_FRONT";
 		sLocal_108 = "IDLE";
@@ -395,13 +395,13 @@ void func_4() // Position - 0x387
 			return;
 	}
 
-	xSize = { 1.2f, 1.2f, 1.2f };
+	xSize = Vector3(1.2f, 1.2f, 1.2f);
 
 	if (func_363(Global_1853910[PLAYER::PLAYER_ID()].f_267.f_33))
-		xSize = { 0.8f, 0.8f, 0.8f };
+		xSize = Vector3(0.8f, 0.8f, 0.8f);
 
 	if (ENTITY::GET_ENTITY_MODEL(obLocal_79) == joaat("xs_prop_arena_telescope_01"))
-		xSize = { 0.8f, 0.7f, 1f };
+		xSize = Vector3(0.8f, 0.7f, 1f);
 
 	if (bLocal_67)
 	{
@@ -523,9 +523,9 @@ void func_4() // Position - 0x387
 									{
 										if (!ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), 14.536638f, 529.31537f, 173.6282f, 12.656813f, 528.8023f, 175.8782f, 2f, false, true, 0))
 										{
-											vector = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(obLocal_79) };
-											animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector, 0, 2) };
-											animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector, 0, 2) };
+											vector = Vector3(0f, 0f, ENTITY::GET_ENTITY_HEADING(obLocal_79));
+											animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector, 0, 2));
+											animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector, 0, 2));
 											TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), animInitialOffsetPosition, 1f, 20000, animInitialOffsetRotation.f_2, 0.05f);
 										}
 										else
@@ -542,9 +542,9 @@ void func_4() // Position - 0x387
 									}
 									else
 									{
-										vector2 = { 0f, 0f, ENTITY::GET_ENTITY_HEADING(obLocal_79) };
-										animInitialOffsetPosition2 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector2, 0, 2) };
-										animInitialOffsetRotation2 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector2, 0, 2) };
+										vector2 = Vector3(0f, 0f, ENTITY::GET_ENTITY_HEADING(obLocal_79));
+										animInitialOffsetPosition2 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector2, 0, 2));
+										animInitialOffsetRotation2 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_101, sLocal_107, ENTITY::GET_ENTITY_COORDS(obLocal_79, true), vector2, 0, 2));
 										func_325(true, true, true, false);
 										TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), animInitialOffsetPosition2, 1f, 20000, animInitialOffsetRotation2.f_2, 0.05f);
 										func_310();
@@ -2839,7 +2839,7 @@ void func_63(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -10074,7 +10074,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 
 	if (iParam5 == 0)
 	{
-		Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+		Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 	
 		if (!func_246(iParam3))
 		{
@@ -10099,9 +10099,9 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 		unk = 15;
 	
 		if (iParam5 == 1)
-			unk = { Global_78384 };
+			unk = Vector3(Global_78384);
 		else
-			unk = { func_237(entityModel, iParam2) };
+			unk = Vector3(func_237(entityModel, iParam2));
 	
 		for (i = 0; i <= 14; i = i + 1)
 		{
@@ -10109,7 +10109,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			{
 				if (i == 10 && unk.f_16)
 				{
-					Global_78341[1] = { func_247(entityModel, 10, 0, -1) };
+					Global_78341[1] = Vector3(func_247(entityModel, 10, 0, -1));
 				
 					if (iParam4 == -1)
 						PED::SET_PED_COMPONENT_VARIATION(pedParam0, func_104(i), Global_78341[1].f_3, Global_78341[1].f_4, PED::GET_PED_PALETTE_VARIATION(pedParam0, func_104(i)));
@@ -10121,7 +10121,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 				}
 				else
 				{
-					Global_78341[1] = { func_247(entityModel, i, unk[i], -1) };
+					Global_78341[1] = Vector3(func_247(entityModel, i, unk[i], -1));
 				
 					if (IS_BIT_SET(Global_78341[1].f_6, 0) || i == 13)
 					{
@@ -10130,13 +10130,13 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 							unk18 = 9;
 						
 							if (iParam5 == 1)
-								unk18 = { Global_78401 };
+								unk18 = Vector3(Global_78401);
 							else
-								unk18 = { func_234(entityModel, unk[i]) };
+								unk18 = Vector3(func_234(entityModel, unk[i]));
 						
 							for (j = 0; j <= 8; j = j + 1)
 							{
-								Global_78341[1] = { func_247(entityModel, 14, unk18[j], -1) };
+								Global_78341[1] = Vector3(func_247(entityModel, 14, unk18[j], -1));
 								func_231(pedParam0, Global_78341[1].f_12, Global_78341[1].f_3, Global_78341[1].f_4);
 							
 								if (IS_BIT_SET(Global_78341[1].f_6, 1))
@@ -10161,11 +10161,11 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			}
 			else if (i != 12 && i != 14)
 			{
-				Global_78341[1] = { func_247(entityModel, i, func_326(pedParam0, i, PV_COMP_INVALID), -1) };
+				Global_78341[1] = Vector3(func_247(entityModel, i, func_326(pedParam0, i, PV_COMP_INVALID), -1));
 			
 				if (IS_BIT_SET(Global_78341[1].f_6, 3))
 				{
-					unk28 = { func_237(entityModel, 0) };
+					unk28 = Vector3(func_237(entityModel, 0));
 					func_106(pedParam0, i, unk28[i], 0, -1, 0, 0, 0, -1, -1, -1, 0, false, 0);
 				}
 			}
@@ -10187,11 +10187,11 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 	}
 	else if (iParam1 == 13)
 	{
-		unk45 = { func_234(entityModel, iParam2) };
+		unk45 = Vector3(func_234(entityModel, iParam2));
 	
 		for (j = 0; j <= 8; j = j + 1)
 		{
-			Global_78341[1] = { func_247(entityModel, 14, unk45[j], -1) };
+			Global_78341[1] = Vector3(func_247(entityModel, 14, unk45[j], -1));
 			func_231(pedParam0, Global_78341[1].f_12, Global_78341[1].f_3, Global_78341[1].f_4);
 		
 			if (IS_BIT_SET(Global_78341[1].f_6, 1))
@@ -10227,7 +10227,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 			else if (FILES::DOES_CURRENT_PED_COMPONENT_HAVE_RESTRICTION_TAG(pedParam0, 1, joaat("HAIR_SHRINK")))
 			{
 				func_106(pedParam0, 1, 0, 0, -1, 0, 0, 0, -1, -1, -1, 0, false, 0);
-				Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+				Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 			}
 		}
 	
@@ -10363,7 +10363,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 						if (num13 != -99)
 						{
 							func_106(pedParam0, 8, num13, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, false, 0);
-							Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+							Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 						}
 					}
 				}
@@ -10394,20 +10394,20 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 							if (num15 != -99)
 							{
 								func_106(pedParam0, 8, num15, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, false, 0);
-								Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+								Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 								num5 = -99;
 							}
 							else if (num14 != -99 && pedParam0 == PLAYER::PLAYER_PED_ID() || pedParam0 == Global_4539790)
 							{
 								func_106(pedParam0, 8, num14, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, false, 0);
-								Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+								Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 							}
 							else
 							{
 								if (entityModel == joaat("MP_M_Freemode_01"))
 								{
 									num16 = func_205(entityModel, 11, -1);
-									Global_78341[1] = { func_247(entityModel, 11, num16, -1) };
+									Global_78341[1] = Vector3(func_247(entityModel, 11, num16, -1));
 									num15 = func_209(entityModel, num16, iParam2, Global_78341[1].f_4);
 									componentHash2 = func_102(entityModel, iParam2, 11, 3);
 								
@@ -10425,21 +10425,21 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 								}
 							
 								func_106(pedParam0, 8, num15, 0, iParam4, 0, 0, 0, -1, -1, -1, 0, false, 0);
-								Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+								Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 							}
 						}
 					}
 					else
 					{
-						Global_78341[1] = { func_247(entityModel, 11, num9, -1) };
+						Global_78341[1] = Vector3(func_247(entityModel, 11, num9, -1));
 						num17 = Global_78341[1].f_3;
-						Global_78341[1] = { func_247(entityModel, 11, iParam2, -1) };
+						Global_78341[1] = Vector3(func_247(entityModel, 11, iParam2, -1));
 						num18 = Global_78341[1].f_3;
 					
 						if (num17 != num18)
 						{
 							num20 = func_207(pedParam0, iParam2);
-							Global_78341[1] = { func_247(entityModel, 8, num10, -1) };
+							Global_78341[1] = Vector3(func_247(entityModel, 8, num10, -1));
 							num19 = Global_78341[1].f_4;
 							num21 = func_204(entityModel, num10, num19);
 						
@@ -10458,7 +10458,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 									if (iParam2 >= 96 && iParam2 <= 107 || func_203(componentHash3) == 6 || FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash3, joaat("BIKER_VEST"), 0))
 									{
 										num21 = func_205(entityModel, 11, PV_COMP_INVALID);
-										Global_78341[1] = { func_247(entityModel, 11, num21, -1) };
+										Global_78341[1] = Vector3(func_247(entityModel, 11, num21, -1));
 										num22 = func_209(entityModel, num21, iParam2, Global_78341[1].f_4);
 									}
 								}
@@ -10468,7 +10468,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 									if (!FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(func_102(entityModel, iParam2, 11, 4), joaat("JACKET_ONLY"), 0))
 									{
 										num21 = func_205(entityModel, 11, PV_COMP_INVALID);
-										Global_78341[1] = { func_247(entityModel, 11, num21, -1) };
+										Global_78341[1] = Vector3(func_247(entityModel, 11, num21, -1));
 										num22 = func_209(entityModel, num21, iParam2, Global_78341[1].f_4);
 									}
 								}
@@ -10483,7 +10483,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 								if (FILES::DOES_SHOP_PED_APPAREL_HAVE_RESTRICTION_TAG(componentHash4, joaat("OVERCOAT_ACCS"), 0))
 								{
 									num21 = func_205(entityModel, 11, PV_COMP_INVALID);
-									Global_78341[1] = { func_247(entityModel, 11, num21, -1) };
+									Global_78341[1] = Vector3(func_247(entityModel, 11, num21, -1));
 									num22 = func_209(entityModel, num21, iParam2, Global_78341[1].f_4);
 								}
 							}
@@ -10508,7 +10508,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 							else if (entityModel == joaat("MP_M_Freemode_01"))
 							{
 								num21 = func_205(entityModel, 11, PV_COMP_INVALID);
-								Global_78341[1] = { func_247(entityModel, 11, num21, -1) };
+								Global_78341[1] = Vector3(func_247(entityModel, 11, num21, -1));
 								num22 = func_209(entityModel, num21, iParam2, Global_78341[1].f_4);
 							
 								if (num22 == -99)
@@ -10521,7 +10521,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 								func_106(pedParam0, 8, 48, 0, iParam4, 0, 0, 0, -1, -1, -1, false, false, false);
 							}
 						
-							Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+							Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 						}
 					}
 				}
@@ -10668,7 +10668,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 					if (!func_202(entityModel, iParam2, func_204(entityModel, num31, 0)))
 					{
 						func_106(pedParam0, 8, 240, 0, iParam4, 0, 0, 0, -1, -1, -1, false, false, false);
-						Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+						Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 					}
 				}
 			}
@@ -10679,7 +10679,7 @@ int func_106(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, 
 					if (!func_202(entityModel, iParam2, func_204(entityModel, num31, 0)))
 					{
 						func_106(pedParam0, 8, 78, 0, iParam4, 0, 0, 0, -1, -1, -1, false, false, false);
-						Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+						Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 					}
 				}
 			}
@@ -13635,7 +13635,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_78341[1] = { func_247(entityModel, iParam1, iParam2, -1) };
+	Global_78341[1] = Vector3(func_247(entityModel, iParam1, iParam2, -1));
 	hash = Global_2883588;
 	hash2 = Global_2883589;
 
@@ -13644,7 +13644,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 
 	if (iParam1 == 12)
 	{
-		unk = { func_237(entityModel, iParam2) };
+		unk = Vector3(func_237(entityModel, iParam2));
 	
 		for (k = 0; k < 7; k = k + 1)
 		{
@@ -13689,7 +13689,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 				
 					if (num2 == 13)
 					{
-						unk18 = { func_234(entityModel, unk[num2]) };
+						unk18 = Vector3(func_234(entityModel, unk[num2]));
 					
 						for (i = 0; i <= 8; i = i + 1)
 						{
@@ -13697,7 +13697,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 							{
 								for (j = 0; j <= 19; j = j + 1)
 								{
-									Global_78341[2] = { func_247(entityModel, 14, j, -1) };
+									Global_78341[2] = Vector3(func_247(entityModel, 14, j, -1));
 								
 									if (Global_78341[2].f_12 == i)
 									{
@@ -13718,7 +13718,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 					else
 					{
 						num = func_213(pedParam0, num2);
-						Global_78341[2] = { func_247(entityModel, num2, num, -1) };
+						Global_78341[2] = Vector3(func_247(entityModel, num2, num, -1));
 					
 						if (!func_132(entityModel, iParam2, num2, num, &unk, &Global_78341[2]))
 						{
@@ -13747,7 +13747,7 @@ BOOL func_131(Ped pedParam0, int iParam1, int iParam2) // Position - 0x13111
 	}
 	else if (iParam1 == 13)
 	{
-		unk28 = { func_234(entityModel, iParam2) };
+		unk28 = Vector3(func_234(entityModel, iParam2));
 	
 		for (l = 0; l <= 8; l = l + 1)
 		{
@@ -13824,7 +13824,7 @@ BOOL func_132(Hash hParam0, int iParam1, int iParam2, int iParam3, var uParam4, 
 
 	if (iParam2 == 14)
 	{
-		unk = { func_234(hParam0, uParam4->[13]) };
+		unk = Vector3(func_234(hParam0, uParam4->[13]));
 	
 		for (i = 0; i <= 8; i = i + 1)
 		{
@@ -26819,7 +26819,7 @@ void func_169(char* sParam0, int iParam1, int iParam2, int iParam3) // Position 
 			if (!FILES::IS_CONTENT_ITEM_LOCKED(outComponent))
 			{
 				sParam0->f_11 = iParam2;
-				TEXT_LABEL_COPY(sParam0, { outComponent.f_7 }, 4);
+				TEXT_LABEL_COPY(sParam0, Vector3(outComponent.f_7), 4);
 				sParam0->f_5 = outComponent.f_3;
 				sParam0->f_4 = outComponent.f_2;
 				sParam0->f_8 = outComponent.f_6;
@@ -30944,7 +30944,7 @@ int func_207(Ped pedParam0, int iParam1) // Position - 0x2EE15
 	{
 		if (Global_103494 == 11)
 		{
-			Global_78341[1] = { func_247(ENTITY::GET_ENTITY_MODEL(pedParam0), 11, Global_103493, -1) };
+			Global_78341[1] = Vector3(func_247(ENTITY::GET_ENTITY_MODEL(pedParam0), 11, Global_103493, -1));
 			num = func_209(ENTITY::GET_ENTITY_MODEL(pedParam0), Global_103493, iParam1, Global_78341[1].f_4);
 		
 			if (num != -99)
@@ -30956,7 +30956,7 @@ int func_207(Ped pedParam0, int iParam1) // Position - 0x2EE15
 		
 			if (num2 != -99)
 			{
-				Global_78341[1] = { func_247(ENTITY::GET_ENTITY_MODEL(pedParam0), 11, num2, -1) };
+				Global_78341[1] = Vector3(func_247(ENTITY::GET_ENTITY_MODEL(pedParam0), 11, num2, -1));
 				num3 = func_209(ENTITY::GET_ENTITY_MODEL(pedParam0), num2, iParam1, Global_78341[1].f_4);
 			
 				if (num3 != -99)
@@ -38675,7 +38675,7 @@ void func_241(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 		if (Global_78338 != func_15() || iParam2 == -99)
 			return;
 	
-		Global_78341[2] = { func_247(hParam0, iParam1, iParam2, -1) };
+		Global_78341[2] = Vector3(func_247(hParam0, iParam1, iParam2, -1));
 	
 		if (IS_BIT_SET(Global_78341[2].f_6, 1) && IS_BIT_SET(Global_78341[2].f_6, 6))
 		{
@@ -39107,7 +39107,7 @@ void func_241(Hash hParam0, int iParam1, int iParam2, BOOL bParam3) // Position 
 					}
 				}
 			
-				Global_78341[2] = { func_247(hParam0, iParam1, iParam2, -1) };
+				Global_78341[2] = Vector3(func_247(hParam0, iParam1, iParam2, -1));
 			
 				if (iParam1 == 11)
 				{
@@ -68343,10 +68343,10 @@ void func_300() // Position - 0x57E4D
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -68847,8 +68847,8 @@ void func_316() // Position - 0x58328
 					fLocal_94 = 0f;
 				}
 			
-				vector = { uLocal_85 };
-				vector = { vector + { fLocal_99, 0f, fLocal_98 } };
+				vector = Vector3(uLocal_85);
+				vector = { vector + Vector3(fLocal_99, 0f, fLocal_98) };
 				CAM::SET_CAM_ROT(caLocal_80, vector, 2);
 				fLocal_97 = fLocal_94 / fLocal_96;
 			
@@ -69786,7 +69786,7 @@ BOOL func_368(Object obParam0) // Position - 0x597EE
 {
 	float entityRotation;
 
-	entityRotation = { ENTITY::GET_ENTITY_ROTATION(obParam0, 2) };
+	entityRotation = Vector3(ENTITY::GET_ENTITY_ROTATION(obParam0, 2));
 
 	if (entityRotation < -5f || entityRotation > 5f || entityRotation.f_1 < -5f || entityRotation.f_1 > 5f)
 		return true;
@@ -69809,7 +69809,7 @@ void func_370() // Position - 0x5983F
 		bLocal_67 = true;
 
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(obLocal_79), &minimum, &maximum);
-	uLocal_85 = { ENTITY::GET_ENTITY_ROTATION(obLocal_79, 2) };
+	uLocal_85 = Vector3(ENTITY::GET_ENTITY_ROTATION(obLocal_79, 2));
 
 	if (bLocal_67)
 	{
@@ -69821,24 +69821,24 @@ void func_370() // Position - 0x5983F
 		if (ENTITY::GET_ENTITY_MODEL(obLocal_79) == joaat("prop_telescope_01") || ENTITY::GET_ENTITY_MODEL(obLocal_79) == joaat("xs_prop_arena_telescope_01"))
 		{
 			uLocal_85.f_2 = uLocal_85.f_2 - 180f;
-			vector = { 0f, -maximum.f_1 - 0.5f, maximum.f_2 + 0.5f };
+			vector = Vector3(0f, -maximum.f_1 - 0.5f, maximum.f_2 + 0.5f);
 		}
 		else
 		{
-			vector = { 0f, maximum.f_1, maximum.f_2 };
+			vector = Vector3(0f, maximum.f_1, maximum.f_2);
 		}
 	}
 	else
 	{
 		uLocal_85.f_2 = uLocal_85.f_2 - 270f;
 		sLocal_104 = "TELEHOME" /*Press ~INPUT_CONTEXT~ to look through the telescope.*/;
-		vector = { -fLocal_100, 0f, maximum.f_2 + 0.2f };
+		vector = Vector3(-fLocal_100, 0f, maximum.f_2 + 0.2f);
 	}
 
 	if (uLocal_85.f_2 < 0f)
 		uLocal_85.f_2 = uLocal_85.f_2 + 360f;
 
-	uLocal_82 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, vector) };
+	uLocal_82 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_79, vector));
 	return;
 }
 

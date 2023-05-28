@@ -280,35 +280,35 @@ void main() // Position - 0x0
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_53, "SET_LETTER_TEXT");
 				func_42("HEADER_1");
 				func_42("HEADER_2");
-				unk = { func_41(&uLocal_54) };
+				unk = Vector3(func_41(&uLocal_54));
 				func_42(&unk);
-				unk = { func_40(&uLocal_54) };
+				unk = Vector3(func_40(&uLocal_54));
 				func_42(&unk);
-				unk = { func_39(&uLocal_54) };
+				unk = Vector3(func_39(&uLocal_54));
 				func_42(&unk);
-				unk = { func_38(&uLocal_54) };
+				unk = Vector3(func_38(&uLocal_54));
 				func_42(&unk);
-				unk = { func_37(&uLocal_54) };
+				unk = Vector3(func_37(&uLocal_54));
 				func_42(&unk);
-				unk = { func_35(&uLocal_54) };
+				unk = Vector3(func_35(&uLocal_54));
 				func_42(&unk);
-				unk = { func_33(&uLocal_54) };
+				unk = Vector3(func_33(&uLocal_54));
 				func_42(&unk);
-				unk = { func_32(&uLocal_54) };
+				unk = Vector3(func_32(&uLocal_54));
 				func_42(&unk);
-				unk = { func_31(&uLocal_54) };
+				unk = Vector3(func_31(&uLocal_54));
 				func_42(&unk);
-				unk = { func_30(&uLocal_54) };
+				unk = Vector3(func_30(&uLocal_54));
 				func_42(&unk);
-				unk = { func_28(&uLocal_54) };
+				unk = Vector3(func_28(&uLocal_54));
 				func_42(&unk);
-				unk = { func_24(&uLocal_54) };
+				unk = Vector3(func_24(&uLocal_54));
 				func_42(&unk);
-				unk = { func_23(&uLocal_54) };
+				unk = Vector3(func_23(&uLocal_54));
 				func_42(&unk);
-				unk = { func_21(&uLocal_54) };
+				unk = Vector3(func_21(&uLocal_54));
 				func_42(&unk);
-				unk = { func_20(&uLocal_54) };
+				unk = Vector3(func_20(&uLocal_54));
 				func_42(&unk);
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 			
@@ -1533,14 +1533,14 @@ void func_47(BOOL bParam0, BOOL bParam1) // Position - 0x186C
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

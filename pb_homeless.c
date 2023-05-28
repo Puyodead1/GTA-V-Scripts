@@ -108,7 +108,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	fLocal_47 = { uScriptParam_58.f_1[0] };
+	fLocal_47 = Vector3(uScriptParam_58.f_1[0]);
 	iLocal_44 = MISC::GET_RANDOM_INT_IN_RANGE(0, 2);
 	func_28();
 
@@ -250,7 +250,7 @@ BOOL func_3(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fPar
 	else
 		num = iParam5 + 0.5f;
 
-	vector = { iParam5 + 0.2f, iParam5 + 0.2f, num };
+	vector = Vector3(iParam5 + 0.2f, iParam5 + 0.2f, num);
 
 	if (!PED::IS_PED_INJURED(pedParam0))
 	{
@@ -295,90 +295,90 @@ Vector3 func_6(int iParam0, int iParam1, int iParam2) // Position - 0x42D
 	{
 		case 0:
 			if (iParam0 == 0)
-				unk = { 0f, iParam2, 0f };
+				unk = Vector3(0f, iParam2, 0f);
 			else if (iParam0 == 1)
-				unk = { iParam2, 0f, 0f };
+				unk = Vector3(iParam2, 0f, 0f);
 			else if (iParam0 == 3)
-				unk = { 0f, -iParam2, 0f };
+				unk = Vector3(0f, -iParam2, 0f);
 			else if (iParam0 == 2)
-				unk = { -iParam2, 0f, 0f };
+				unk = Vector3(-iParam2, 0f, 0f);
 			break;
 	
 		case 1:
 			if (iParam0 == 3)
-				unk = { 0f, iParam2, 0f };
+				unk = Vector3(0f, iParam2, 0f);
 			else if (iParam0 == 2)
-				unk = { iParam2, 0f, 0f };
+				unk = Vector3(iParam2, 0f, 0f);
 			else if (iParam0 == 0)
-				unk = { 0f, -iParam2, 0f };
+				unk = Vector3(0f, -iParam2, 0f);
 			else if (iParam0 == 1)
-				unk = { -iParam2, 0f, 0f };
+				unk = Vector3(-iParam2, 0f, 0f);
 			break;
 	
 		case 2:
 			if (iParam0 == 2)
-				unk = { 0f, iParam2, 0f };
+				unk = Vector3(0f, iParam2, 0f);
 			else if (iParam0 == 3)
-				unk = { iParam2, 0f, 0f };
+				unk = Vector3(iParam2, 0f, 0f);
 			else if (iParam0 == 1)
-				unk = { 0f, -iParam2, 0f };
+				unk = Vector3(0f, -iParam2, 0f);
 			else if (iParam0 == 0)
-				unk = { -iParam2, 0f, 0f };
+				unk = Vector3(-iParam2, 0f, 0f);
 			break;
 	
 		case 3:
 			if (iParam0 == 1)
-				unk = { 0f, iParam2, 0f };
+				unk = Vector3(0f, iParam2, 0f);
 			else if (iParam0 == 0)
-				unk = { iParam2, 0f, 0f };
+				unk = Vector3(iParam2, 0f, 0f);
 			else if (iParam0 == 2)
-				unk = { 0f, -iParam2, 0f };
+				unk = Vector3(0f, -iParam2, 0f);
 			else if (iParam0 == 3)
-				unk = { -iParam2, 0f, 0f };
+				unk = Vector3(-iParam2, 0f, 0f);
 			break;
 	
 		case 5:
 			if (iParam0 == 1)
-				unk = { iParam2, iParam2, 0f };
+				unk = Vector3(iParam2, iParam2, 0f);
 			else if (iParam0 == 0)
-				unk = { -iParam2, iParam2, 0f };
+				unk = Vector3(-iParam2, iParam2, 0f);
 			else if (iParam0 == 3)
-				unk = { iParam2, -iParam2, 0f };
+				unk = Vector3(iParam2, -iParam2, 0f);
 			else if (iParam0 == 2)
-				unk = { -iParam2, -iParam2, 0f };
+				unk = Vector3(-iParam2, -iParam2, 0f);
 			break;
 	
 		case 6:
 			if (iParam0 == 0)
-				unk = { iParam2, iParam2, 0f };
+				unk = Vector3(iParam2, iParam2, 0f);
 			else if (iParam0 == 2)
-				unk = { -iParam2, iParam2, 0f };
+				unk = Vector3(-iParam2, iParam2, 0f);
 			else if (iParam0 == 1)
-				unk = { iParam2, -iParam2, 0f };
+				unk = Vector3(iParam2, -iParam2, 0f);
 			else if (iParam0 == 3)
-				unk = { -iParam2, -iParam2, 0f };
+				unk = Vector3(-iParam2, -iParam2, 0f);
 			break;
 	
 		case 7:
 			if (iParam0 == 3)
-				unk = { iParam2, iParam2, 0f };
+				unk = Vector3(iParam2, iParam2, 0f);
 			else if (iParam0 == 1)
-				unk = { -iParam2, iParam2, 0f };
+				unk = Vector3(-iParam2, iParam2, 0f);
 			else if (iParam0 == 2)
-				unk = { iParam2, -iParam2, 0f };
+				unk = Vector3(iParam2, -iParam2, 0f);
 			else if (iParam0 == 0)
-				unk = { -iParam2, -iParam2, 0f };
+				unk = Vector3(-iParam2, -iParam2, 0f);
 			break;
 	
 		case 8:
 			if (iParam0 == 2)
-				unk = { iParam2, iParam2, 0f };
+				unk = Vector3(iParam2, iParam2, 0f);
 			else if (iParam0 == 3)
-				unk = { -iParam2, iParam2, 0f };
+				unk = Vector3(-iParam2, iParam2, 0f);
 			else if (iParam0 == 0)
-				unk = { iParam2, -iParam2, 0f };
+				unk = Vector3(iParam2, -iParam2, 0f);
 			else if (iParam0 == 1)
-				unk = { -iParam2, -iParam2, 0f };
+				unk = Vector3(-iParam2, -iParam2, 0f);
 			break;
 	}
 
@@ -408,7 +408,7 @@ void func_7() // Position - 0x6C5
 	
 		if (iLocal_44 == 1)
 		{
-			uLocal_50 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_54, 0.8f, 0.8f, -1f) };
+			uLocal_50 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_54, 0.8f, 0.8f, -1f));
 			pedLocal_55 = PED::CREATE_PED(PED_TYPE_CIVFEMALE, joaat("G_M_Y_StrPunk_01"), uLocal_50, 0f, true, true);
 			PED::ADD_RELATIONSHIP_GROUP("homeless", &hLocal_53);
 			PED::SET_PED_RELATIONSHIP_GROUP_HASH(pedLocal_55, hLocal_53);

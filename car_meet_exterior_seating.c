@@ -562,8 +562,8 @@ void func_8(var uParam0) // Position - 0x260
 			func_41(uParam0, &animDict);
 			func_40(uParam0, &animName);
 			PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_NEXT_CAMERA, true);
-			animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2) };
-			animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2) };
+			animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2));
+			animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2));
 			targetHeading = animInitialOffsetRotation.f_2;
 			distanceToSlide = 0.05f;
 		
@@ -580,7 +580,7 @@ void func_8(var uParam0) // Position - 0x260
 			func_41(uParam0, &animDict);
 			func_40(uParam0, &animName);
 			scriptTaskStatus = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), SCRIPT_TASK_GO_STRAIGHT_TO_COORD);
-			animInitialOffsetRotation2 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2) };
+			animInitialOffsetRotation2 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_39(uParam0), func_38(uParam0), 0, 2));
 			num = animInitialOffsetRotation2.f_2;
 		
 			if (scriptTaskStatus != 1 && scriptTaskStatus != 0 || func_25(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), num, 2f))
@@ -809,7 +809,7 @@ void func_15(var uParam0) // Position - 0x9C8
 
 	if (uParam0->f_13 == 6)
 	{
-		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
+		vector = Vector3(PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f);
 		num = SYSTEM::VMAG(vector);
 	
 		if (uParam0->f_13 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("BLOCK_INTERRUPT")) && !func_23(&(uParam0->f_7), 12))
@@ -1131,14 +1131,14 @@ void func_34(BOOL bParam0, BOOL bParam1) // Position - 0x10E3
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -1183,7 +1183,7 @@ Vector3 func_38(var uParam0) // Position - 0x11CB
 {
 	var unk;
 
-	unk = { uParam0->f_16[uParam0->f_9].f_3 };
+	unk = Vector3(uParam0->f_16[uParam0->f_9].f_3);
 
 	if (func_11() && uParam0->f_1.f_1 == 0)
 		unk.f_2 = unk.f_2 - 4f;
@@ -2041,10 +2041,10 @@ void func_81(int iParam0, var uParam1, int iParam2, int iParam3) // Position - 0
 
 	func_87(iParam0, &unk, &num);
 	uParam1->f_16[iParam2].f_13 = iParam3;
-	uParam1->f_16[iParam2] = { unk };
-	uParam1->f_16[iParam2].f_3 = { 0f, 0f, num };
-	uParam1->f_16[iParam2].f_6.f_1 = { func_84(func_86(), func_85(iParam3, num)) + unk };
-	uParam1->f_16[iParam2].f_6.f_4 = { func_84(func_83(), func_85(iParam3, num)) + unk };
+	uParam1->f_16[iParam2] = Vector3(unk);
+	uParam1->f_16[iParam2].f_3 = Vector3(0f, 0f, num);
+	uParam1->f_16[iParam2].f_6.f_1 = Vector3(func_84(func_86(), func_85(iParam3, num)) + unk);
+	uParam1->f_16[iParam2].f_6.f_4 = Vector3(func_84(func_83(), func_85(iParam3, num)) + unk);
 	uParam1->f_16[iParam2].f_6 = func_82();
 	return;
 }
@@ -2101,77 +2101,77 @@ void func_87(int iParam0, var uParam1, var uParam2) // Position - 0x218C
 	switch (iParam0)
 	{
 		case 0:
-			*uParam1 = { 752.663f, -1783.328f, 48.3f };
+			*uParam1 = Vector3(752.663f, -1783.328f, 48.3f);
 			*uParam2 = -37.8f;
 			break;
 	
 		case 1:
-			*uParam1 = { 750.85f, -1782.746f, 48.3f };
+			*uParam1 = Vector3(750.85f, -1782.746f, 48.3f);
 			*uParam2 = 11.88f;
 			break;
 	
 		case 2:
-			*uParam1 = { 750f, -1786.55f, 48.3f };
+			*uParam1 = Vector3(750f, -1786.55f, 48.3f);
 			*uParam2 = 149.04f;
 			break;
 	
 		case 3:
-			*uParam1 = { 778.8f, -1831.568f, 48.3f };
+			*uParam1 = Vector3(778.8f, -1831.568f, 48.3f);
 			*uParam2 = -172.44f;
 			break;
 	
 		case 4:
-			*uParam1 = { 780.289f, -1827.899f, 48.3f };
+			*uParam1 = Vector3(780.289f, -1827.899f, 48.3f);
 			*uParam2 = -30.24f;
 			break;
 	
 		case 5:
-			*uParam1 = { 778.538f, -1827.125f, 48.3f };
+			*uParam1 = Vector3(778.538f, -1827.125f, 48.3f);
 			*uParam2 = 0f;
 			break;
 	
 		case 6:
-			*uParam1 = { 777.238f, -1830.767f, 48.3f };
+			*uParam1 = Vector3(777.238f, -1830.767f, 48.3f);
 			*uParam2 = 142.2f;
 			break;
 	
 		case 7:
-			*uParam1 = { 768.375f, -1863.114f, 48.3f };
+			*uParam1 = Vector3(768.375f, -1863.114f, 48.3f);
 			*uParam2 = 9f;
 			break;
 	
 		case 8:
-			*uParam1 = { 769.575f, -1864.481f, 48.3f };
+			*uParam1 = Vector3(769.575f, -1864.481f, 48.3f);
 			*uParam2 = -90f;
 			break;
 	
 		case 9:
-			*uParam1 = { 768.863f, -1866.382f, 48.3f };
+			*uParam1 = Vector3(768.863f, -1866.382f, 48.3f);
 			*uParam2 = -145f;
 			break;
 	
 		case 10:
-			*uParam1 = { 747.361f, -1769.411f, 52.311f };
+			*uParam1 = Vector3(747.361f, -1769.411f, 52.311f);
 			*uParam2 = -163.44f;
 			break;
 	
 		case 11:
-			*uParam1 = { 748.837f, -1767.993f, 52.311f };
+			*uParam1 = Vector3(748.837f, -1767.993f, 52.311f);
 			*uParam2 = -128.16f;
 			break;
 	
 		case 12:
-			*uParam1 = { 748.061f, -1766.24f, 52.311f };
+			*uParam1 = Vector3(748.061f, -1766.24f, 52.311f);
 			*uParam2 = -9.72f;
 			break;
 	
 		case 13:
-			*uParam1 = { 765.861f, -1776.777f, 52.311f };
+			*uParam1 = Vector3(765.861f, -1776.777f, 52.311f);
 			*uParam2 = -151.56f;
 			break;
 	
 		case 14:
-			*uParam1 = { 764.161f, -1777.399f, 52.311f };
+			*uParam1 = Vector3(764.161f, -1777.399f, 52.311f);
 			*uParam2 = 159.84f;
 			break;
 	}

@@ -516,7 +516,7 @@ void func_4(int iParam0) // Position - 0x259
 	{
 		if (ENTITY::DOES_ENTITY_EXIST(iLocal_116.f_2[iParam0].f_10[i].f_4))
 			if (NETWORK::NETWORK_HAS_CONTROL_OF_ENTITY(iLocal_116.f_2[iParam0].f_10[i].f_4))
-				func_5(&iLocal_116.f_2[iParam0].f_10[i], ENTITY::GET_ENTITY_COORDS(iLocal_116.f_2[iParam0].f_10[i].f_4, true) + { 0.046f * 1.5f, 0f, 0f });
+				func_5(&iLocal_116.f_2[iParam0].f_10[i], ENTITY::GET_ENTITY_COORDS(iLocal_116.f_2[iParam0].f_10[i].f_4, true) + Vector3(0.046f * 1.5f, 0f, 0f));
 	}
 
 	return;
@@ -544,7 +544,7 @@ void func_6(var uParam0, Vector3 vParam1, var uParam2, var uParam3) // Position 
 	if (num != -1)
 	{
 		entity = Global_1914091[PLAYER::NETWORK_PLAYER_ID_TO_INT()].f_98.f_21[num].f_4;
-		Global_1914091[PLAYER::NETWORK_PLAYER_ID_TO_INT()].f_98.f_21[num].f_5 = { vParam1 };
+		Global_1914091[PLAYER::NETWORK_PLAYER_ID_TO_INT()].f_98.f_21[num].f_5 = Vector3(vParam1);
 	}
 	else
 	{
@@ -564,8 +564,8 @@ void func_6(var uParam0, Vector3 vParam1, var uParam2, var uParam3) // Position 
 		eventData.f_2 = 123;
 		eventData = -285086167;
 		eventData.f_1 = PLAYER::PLAYER_ID();
-		eventData.f_2 = { *uParam0 };
-		eventData.f_7 = { vParam1 };
+		eventData.f_2 = Vector3(*uParam0);
+		eventData.f_7 = Vector3(vParam1);
 		SCRIPT::SEND_TU_SCRIPT_EVENT(SCRIPT_EVENT_QUEUE_NETWORK, &eventData, 10, playerBits);
 	}
 
@@ -797,8 +797,8 @@ BOOL func_21(int iParam0) // Position - 0x72B
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_116.f_2[iParam0].f_10[i].f_4))
 					{
-						offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0.6f - ((float)i * 0.4f), 0f, 0.1f) };
-						iLocal_116.f_2[iParam0].f_10[i] = { func_23(joaat("PICKUP_GANG_ATTACK_MONEY"), offsetFromCoordAndHeadingInWorldCoords, address, iLocal_116.f_2[iParam0].f_9, 0, true, true) };
+						offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0.6f - ((float)i * 0.4f), 0f, 0.1f));
+						iLocal_116.f_2[iParam0].f_10[i] = Vector3(func_23(joaat("PICKUP_GANG_ATTACK_MONEY"), offsetFromCoordAndHeadingInWorldCoords, address, iLocal_116.f_2[iParam0].f_9, 0, true, true));
 					}
 				}
 			
@@ -813,8 +813,8 @@ BOOL func_21(int iParam0) // Position - 0x72B
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_116.f_2[iParam0].f_10[i].f_4))
 					{
-						offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)i * 0.25f), 0.1f) };
-						iLocal_116.f_2[iParam0].f_10[i] = { func_23(iLocal_116.f_2[iParam0].f_8, offsetFromCoordAndHeadingInWorldCoords, address, -1, 0, true, true) };
+						offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)i * 0.25f), 0.1f));
+						iLocal_116.f_2[iParam0].f_10[i] = Vector3(func_23(iLocal_116.f_2[iParam0].f_8, offsetFromCoordAndHeadingInWorldCoords, address, -1, 0, true, true));
 					}
 				}
 			
@@ -830,8 +830,8 @@ BOOL func_21(int iParam0) // Position - 0x72B
 				{
 					if (!ENTITY::DOES_ENTITY_EXIST(iLocal_116.f_2[iParam0].f_10[i].f_4))
 					{
-						offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)i * 0.25f), 0.2f) };
-						iLocal_116.f_2[iParam0].f_10[i] = { func_23(joaat("PICKUP_AMMO_BULLET_MP"), offsetFromCoordAndHeadingInWorldCoords, address, iLocal_116.f_2[iParam0].f_9, 0, true, true) };
+						offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)i * 0.25f), 0.2f));
+						iLocal_116.f_2[iParam0].f_10[i] = Vector3(func_23(joaat("PICKUP_AMMO_BULLET_MP"), offsetFromCoordAndHeadingInWorldCoords, address, iLocal_116.f_2[iParam0].f_9, 0, true, true));
 					}
 				}
 			
@@ -857,8 +857,8 @@ BOOL func_22(int iParam0, int iParam1) // Position - 0x970
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(iLocal_116.f_2[iParam0].f_10[iParam1].f_4))
 		{
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)iParam1 * 0.25f), 0.1f) };
-			iLocal_116.f_2[iParam0].f_10[iParam1] = { func_23(joaat("PICKUP_GANG_ATTACK_MONEY"), offsetFromCoordAndHeadingInWorldCoords, address, Global_262145.f_4456, 0, true, true) };
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(iLocal_116.f_2[iParam0].f_2, iLocal_116.f_2[iParam0].f_5, 0f, 0.25f - ((float)iParam1 * 0.25f), 0.1f));
+			iLocal_116.f_2[iParam0].f_10[iParam1] = Vector3(func_23(joaat("PICKUP_GANG_ATTACK_MONEY"), offsetFromCoordAndHeadingInWorldCoords, address, Global_262145.f_4456, 0, true, true));
 		}
 	
 		return true;
@@ -874,7 +874,7 @@ struct<5> func_23(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int i
 	unk = 123;
 
 	if (func_19() && func_18(hParam0))
-		unk = { func_24(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7) };
+		unk = Vector3(func_24(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7));
 	else
 		unk.f_4 = OBJECT::CREATE_AMBIENT_PICKUP(hParam0, vParam1, iParam4, iParam5, hParam6, bParam7, bParam8);
 
@@ -900,7 +900,7 @@ struct<5> func_24(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int i
 
 	hash = 123;
 	hash = hParam0;
-	hash.f_1 = { vParam1 };
+	hash.f_1 = Vector3(vParam1);
 
 	if (func_12(&hash) != -1)
 		return unk;
@@ -925,8 +925,8 @@ struct<5> func_24(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, int i
 		}
 	}
 
-	Global_1914091[num2].f_98.f_21[num] = { hash };
-	Global_1914091[num2].f_98.f_21[num].f_5 = { vParam1 };
+	Global_1914091[num2].f_98.f_21[num] = Vector3(hash);
+	Global_1914091[num2].f_98.f_21[num].f_5 = Vector3(vParam1);
 	Global_1914091[num2].f_98.f_21[num].f_8 = iParam4;
 	Global_1914091[num2].f_98.f_21[num].f_9 = iParam5;
 	Global_1914091[num2].f_98.f_21[num].f_10 = hParam6;
@@ -1152,14 +1152,14 @@ BOOL func_43(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
 		iLocal_116.f_141 = uParam0.f_1;
-		iLocal_116.f_138 = { uParam0.f_2 };
+		iLocal_116.f_138 = Vector3(uParam0.f_2);
 	
 		for (i = 0; i < 5; i = i + 1)
 		{
 			if (!IS_BIT_SET(uParam0.f_5, 0))
 				MISC::SET_BIT(&(iLocal_116.f_2[i].f_6), 0);
 		
-			iLocal_116.f_2[i].f_2 = { uParam0.f_6[i] };
+			iLocal_116.f_2[i].f_2 = Vector3(uParam0.f_6[i]);
 			iLocal_116.f_2[i].f_5 = uParam0.f_22[i];
 			iLocal_116.f_2[i].f_7 = uParam0.f_28[i];
 			iLocal_116.f_2[i].f_8 = uParam0.f_34[i];

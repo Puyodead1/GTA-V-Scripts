@@ -358,7 +358,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_45 = { 500f, 500f, 500f };
+	uLocal_45 = Vector3(500f, 500f, 500f);
 	iLocal_96 = -1;
 	essLocal_97 = FRIEND;
 	iLocal_98 = -1;
@@ -368,10 +368,10 @@ void main() // Position - 0x0
 	iLocal_103 = 1;
 	iLocal_105 = 263;
 	fLocal_117 = 4f;
-	uLocal_90 = { uScriptParam_303.f_1[0] };
-	uLocal_90 = { uLocal_90 };
+	uLocal_90 = Vector3(uScriptParam_303.f_1[0]);
+	uLocal_90 = Vector3(uLocal_90);
 	uLocal_86 = uLocal_86;
-	uLocal_69 = { uLocal_69 };
+	uLocal_69 = Vector3(uLocal_69);
 	flag = false;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(114))
@@ -434,11 +434,11 @@ void main() // Position - 0x0
 	
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_85) && !ENTITY::IS_ENTITY_DEAD(pedLocal_85, false))
 		{
-			uLocal_87 = { ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) };
+			uLocal_87 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true));
 			fLocal_93 = SYSTEM::VDIST2(uLocal_87, uScriptParam_303.f_1[0]);
 			fLocal_93 = fLocal_93;
-			uLocal_111 = { uLocal_87 };
-			uLocal_114 = { uScriptParam_303.f_1[0] };
+			uLocal_111 = Vector3(uLocal_87);
+			uLocal_114 = Vector3(uScriptParam_303.f_1[0]);
 			uLocal_111.f_2 = 0f;
 			uLocal_114.f_2 = 0f;
 			fLocal_110 = SYSTEM::VDIST2(uLocal_111, uLocal_114);
@@ -496,7 +496,7 @@ void main() // Position - 0x0
 						
 							if (MISC::ARE_STRINGS_EQUAL(&(Global_100681.f_3), &uLocal_69))
 							{
-								uLocal_69 = { uLocal_53 };
+								uLocal_69 = Vector3(uLocal_53);
 								flag2 = false;
 							}
 						
@@ -532,7 +532,7 @@ void main() // Position - 0x0
 					}
 					else
 					{
-						uLocal_69 = { uLocal_53 };
+						uLocal_69 = Vector3(uLocal_53);
 						flag3 = !func_134(iLocal_94, 64);
 						func_141(&iLocal_94, 128);
 					
@@ -1231,8 +1231,8 @@ void func_27(BOOL bParam0) // Position - 0xF0C
 	float unk4;
 	BOOL unk5;
 
-	num = { func_72(iLocal_122) };
-	num = { func_71(SYSTEM::COS(num.f_2), SYSTEM::SIN(num.f_2), MISC::TAN(num)) };
+	num = Vector3(func_72(iLocal_122));
+	num = Vector3(func_71(SYSTEM::COS(num.f_2), SYSTEM::SIN(num.f_2), MISC::TAN(num)));
 	STREAMING::NEW_LOAD_SCENE_START(func_70(iLocal_122), num, 5000f, 0);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, SPC_LEAVE_CAMERA_CONTROL_ON);
 	HUD::DISPLAY_HUD(false);
@@ -1259,15 +1259,15 @@ void func_27(BOOL bParam0) // Position - 0xF0C
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obLocal_297))
 		{
-			vector = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - ENTITY::GET_ENTITY_COORDS(obLocal_297, false) };
+			vector = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - ENTITY::GET_ENTITY_COORDS(obLocal_297, false));
 			vector.f_2 = 0f;
 			num2 = SYSTEM::VMAG(vector);
 			TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 		
 			if (num2 > 0.8f)
 			{
-				vector = { vector * { 0.78f / num2, 0.78f / num2, 0.78f / num2 } };
-				vector2 = { ENTITY::GET_ENTITY_COORDS(obLocal_297, false) + vector };
+				vector = { vector * Vector3(0.78f / num2, 0.78f / num2, 0.78f / num2) };
+				vector2 = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_297, false) + vector);
 			
 				if (iLocal_122 == 12)
 					TASK::TASK_FOLLOW_NAV_MESH_TO_COORD(0, vector2, 1f, 20000, 1048576000, 0, func_67(vector2, ENTITY::GET_ENTITY_COORDS(obLocal_297, false)));
@@ -1624,7 +1624,7 @@ void func_43() // Position - 0x1774
 	obLocal_297 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("p_parachute_s"), func_50(iLocal_122), true, true, false);
 	ENTITY::SET_ENTITY_ROTATION(obLocal_297, func_49(iLocal_122), 2, true);
 	func_44(&vector, &unk3);
-	vector2 = { 0f, 0f, unk3 };
+	vector2 = Vector3(0f, 0f, unk3);
 	syncedScene = PED::CREATE_SYNCHRONIZED_SCENE(vector, vector2, 2);
 	ENTITY::PLAY_SYNCHRONIZED_ENTITY_ANIM(obLocal_297, syncedScene, "puton_parachute_bag", "oddjobs@basejump@ig_15", 1000f, -1000f, 1, 1148846080);
 
@@ -1651,7 +1651,7 @@ void func_43() // Position - 0x1774
 
 void func_44(var uParam0, var uParam1) // Position - 0x18A2
 {
-	*uParam0 = { func_48(iLocal_122) };
+	*uParam0 = Vector3(func_48(iLocal_122));
 
 	switch (iLocal_122)
 	{
@@ -2048,14 +2048,14 @@ void func_64(BOOL bParam0, BOOL bParam1) // Position - 0x2052
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -2175,7 +2175,7 @@ Vector3 func_71(float fParam0, float fParam1, float fParam2) // Position - 0x22D
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -2553,7 +2553,7 @@ void func_87() // Position - 0x291D
 
 	if (ENTITY::DOES_ENTITY_EXIST(obLocal_297))
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(obLocal_297, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_297, true));
 	
 		if (SYSTEM::VDIST2(entityCoords, uLocal_90) > 25f)
 			func_88(0);
@@ -3041,7 +3041,7 @@ void func_118() // Position - 0x36E5
 				obLocal_297 = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("p_parachute_s"), func_50(iLocal_122), true, true, false);
 				ENTITY::SET_ENTITY_ROTATION(obLocal_297, func_49(iLocal_122), 2, true);
 				OBJECT::PLACE_OBJECT_ON_GROUND_PROPERLY(obLocal_297);
-				vector = { func_120(iLocal_122) };
+				vector = Vector3(func_120(iLocal_122));
 			
 				if (!_IS_NULL_VECTOR(vector))
 				{

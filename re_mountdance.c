@@ -157,7 +157,7 @@ void main() // Position - 0x0
 	hLocal_90 = joaat("U_M_O_TapHillBilly");
 	sLocal_98 = "SPECIAL_PED@MOUNTAIN_DANCER@MONOLOGUE_1@MONOLOGUE_1A";
 	iLocal_101 = -1;
-	uLocal_91 = { uScriptParam_102.f_1[0] };
+	uLocal_91 = Vector3(uScriptParam_102.f_1[0]);
 	fLocal_94 = uScriptParam_102.f_17[0];
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
@@ -201,7 +201,7 @@ void main() // Position - 0x0
 				break;
 		
 			case 1:
-				iLocal_101 = PED::CREATE_SYNCHRONIZED_SCENE(uLocal_91 + { 1f, 0f, 0f }, 0f, 0f, fLocal_94, 2);
+				iLocal_101 = PED::CREATE_SYNCHRONIZED_SCENE(uLocal_91 + Vector3(1f, 0f, 0f), 0f, 0f, fLocal_94, 2);
 				TASK::TASK_SYNCHRONIZED_SCENE(pedLocal_95, iLocal_101, sLocal_98, "MTN_DNC_if_you_want_to_get_to_heaven", 2f, -2f, 1, 0, 1148846080, 0);
 				AUDIO::INIT_SYNCH_SCENE_AUDIO_WITH_ENTITY("MNT_DNC", pedLocal_95);
 				iLocal_99 = 2;
@@ -216,7 +216,7 @@ void main() // Position - 0x0
 				break;
 		
 			case 3:
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_95, true) };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_95, true));
 				PED::SET_PED_LOD_MULTIPLIER(pedLocal_95, 3f);
 			
 				if (func_10(PLAYER::PLAYER_PED_ID(), pedLocal_95) < 10f)
@@ -307,15 +307,15 @@ BOOL func_1(Ped pedParam0, Ped pedParam1, int iParam2, int iParam3) // Position 
 	var unk2;
 	float unk3;
 
-	unk = { func_3(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true)) };
+	unk = Vector3(func_3(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true)));
 
 	if (iParam2 < 0.1f || iParam2 > 360f)
 		return true;
 
 	if (iParam3 == 0)
-		entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0) };
+		entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0));
 	else
-		entityForwardVector = { func_3(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)) };
+		entityForwardVector = Vector3(func_3(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)));
 
 	num = func_2(entityForwardVector, unk);
 
@@ -340,7 +340,7 @@ Vector3 func_3(float fParam0, var uParam1, var uParam2) // Position - 0x546
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -436,14 +436,14 @@ float func_9(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x6E6
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -801,10 +801,10 @@ void func_15(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4, 
 {
 	uParam0->f_4 = iParam5;
 	*uParam0 = sParam1;
-	uParam0->f_1 = { uParam2 };
+	uParam0->f_1 = Vector3(uParam2);
 	uParam0->f_3 = iParam4;
 	uParam0->f_5 = iParam6;
-	uParam0->f_6 = { fParam7 };
+	uParam0->f_6 = Vector3(fParam7);
 	uParam0->f_9 = iParam10;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_10), sParam11, 16);
 	uParam0->f_14 = iParam12;
@@ -1029,7 +1029,7 @@ struct<2> func_17(int iParam0) // Position - 0x1E0E
 	var unk2;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "", 8);
-	unk3 = { func_18(iParam0) };
+	unk3 = Vector3(func_18(iParam0));
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(&unk3))
 	{

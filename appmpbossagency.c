@@ -330,14 +330,14 @@ void func_9(BOOL bParam0, BOOL bParam1) // Position - 0x364
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -413,7 +413,7 @@ void func_13(int iParam0) // Position - 0x44C
 	
 		for (i = iParam0; i <= 8; i = i + 1)
 		{
-			Global_1890001.f_7[i] = { Global_1890001.f_7[i + 1] };
+			Global_1890001.f_7[i] = Vector3(Global_1890001.f_7[i + 1]);
 		}
 	
 		Global_1890001.f_7[9].f_1 = 0;
@@ -1224,7 +1224,7 @@ void func_49() // Position - 0x12A4
 
 	if (_NETWORK_IS_PLAYER_VALID(player, false, true))
 	{
-		text = { func_82(player) };
+		text = Vector3(func_82(player));
 		GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("STRING");
 		HUD::SET_COLOUR_OF_NEXT_TEXT_COMPONENT(func_76(player));
 		HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&text);
@@ -1287,7 +1287,7 @@ void func_49() // Position - 0x12A4
 			
 				for (i = 0; i < num3; i = i + 1)
 				{
-					text2 = { func_82(unk16[i]) };
+					text2 = Vector3(func_82(unk16[i]));
 					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&text2);
 				}
 			
@@ -1528,7 +1528,7 @@ void func_59(int iParam0) // Position - 0x18BA
 
 	for (i = num + 1; i < Global_1666829; i = i + 1)
 	{
-		Global_1666668[num] = { Global_1666668[i] };
+		Global_1666668[num] = Vector3(Global_1666668[i]);
 		num = num + 1;
 	}
 
@@ -1607,7 +1607,7 @@ BOOL func_64(Player plParam0) // Position - 0x1ADD
 {
 	var gamerHandle;
 
-	gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (IS_XBOX_PLATFORM())
 		if (plParam0 == PLAYER::PLAYER_ID())
@@ -1633,7 +1633,7 @@ BOOL func_66(Player plParam0) // Position - 0x1B34
 
 	if (plParam0 != _INVALID_PLAYER_INDEX())
 	{
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 	
 		if (MISC::IS_ORBIS_VERSION() && !MISC::IS_PROSPERO_VERSION() || MISC::IS_PC_VERSION())
 			if (NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0))
@@ -1974,7 +1974,7 @@ BOOL func_88(int iParam0, int iParam1) // Position - 0x20EB
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(25);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam1);
-	unk = { func_82(Global_1890001.f_7[iParam0].f_2) };
+	unk = Vector3(func_82(Global_1890001.f_7[iParam0].f_2));
 	func_89(&unk);
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("BA_APP_BODY_DM1" /*Has challenged you to an Executive Deathmatch.*/);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
@@ -2011,7 +2011,7 @@ BOOL func_90(int iParam0, int iParam1) // Position - 0x21A8
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(25);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam1);
-	unk = { func_82(Global_1890001.f_7[iParam0].f_2) };
+	unk = Vector3(func_82(Global_1890001.f_7[iParam0].f_2));
 	func_89(&unk);
 	flag = func_75(Global_1890001.f_7[iParam0].f_2);
 	value = func_74(Global_1890001.f_7[iParam0].f_2);

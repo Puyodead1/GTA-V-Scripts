@@ -312,7 +312,7 @@ void func_2() // Position - 0xEF
 
 	if (caLocal_160.f_61 != Global_2764874)
 	{
-		caLocal_160.f_61 = { Global_2764874 };
+		caLocal_160.f_61 = Vector3(Global_2764874);
 	}
 	else
 	{
@@ -348,7 +348,7 @@ void func_3(var uParam0, var uParam1) // Position - 0x1B3
 	float unk2;
 
 	func_9();
-	finalRenderedCamCoord = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
+	finalRenderedCamCoord = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
 
 	if (HUD::IS_PAUSE_MENU_ACTIVE() || func_8() || PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE) || PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE) || PAD::IS_CONTROL_JUST_RELEASED(FRONTEND_CONTROL, INPUT_FRONTEND_PAUSE))
 	{
@@ -370,8 +370,8 @@ void func_3(var uParam0, var uParam1) // Position - 0x1B3
 	if (CAM::DOES_CAM_EXIST(renderingCam))
 		CAM::SET_CAM_CONTROLS_MINI_MAP_HEADING(renderingCam, true);
 
-	finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(0) };
-	finalRenderedCamRot = { func_7(finalRenderedCamRot) };
+	finalRenderedCamRot = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(0));
+	finalRenderedCamRot = Vector3(func_7(finalRenderedCamRot));
 
 	if (!HUD::DOES_BLIP_EXIST(*uParam0))
 	{
@@ -1010,7 +1010,7 @@ BOOL func_21() // Position - 0xDB4
 
 	if (func_22())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3(0f, -500f, 0f);
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)
@@ -1359,7 +1359,7 @@ void func_37() // Position - 0x143D
 		return;
 	}
 
-	camRot = { CAM::GET_CAM_ROT(caLocal_160, 2) };
+	camRot = Vector3(CAM::GET_CAM_ROT(caLocal_160, 2));
 
 	switch (uLocal_64.f_17)
 	{
@@ -1423,16 +1423,16 @@ void func_41() // Position - 0x1582
 
 	if (uLocal_64.f_94 != 0)
 	{
-		caLocal_160.f_4 = { ENTITY::GET_ENTITY_COORDS(uLocal_64.f_95, true) };
-		caLocal_160.f_4.f_3 = { ENTITY::GET_ENTITY_ROTATION(uLocal_64.f_95, 2) };
+		caLocal_160.f_4 = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_64.f_95, true));
+		caLocal_160.f_4.f_3 = Vector3(ENTITY::GET_ENTITY_ROTATION(uLocal_64.f_95, 2));
 	}
 
 	if (!IS_BIT_SET(caLocal_160.f_60, 2))
-		num = { func_46(caLocal_160, &(caLocal_160.f_1), uLocal_64, uLocal_64.f_6.f_1, uLocal_64.f_6) };
+		num = Vector3(func_46(caLocal_160, &(caLocal_160.f_1), uLocal_64, uLocal_64.f_6.f_1, uLocal_64.f_6));
 
-	unk4 = { uLocal_64.f_91 + caLocal_160.f_1 };
-	unk7 = { func_45(uLocal_64.f_71, unk4.f_2) };
-	unk10 = { uLocal_64.f_88 + unk7 };
+	unk4 = Vector3(uLocal_64.f_91 + caLocal_160.f_1);
+	unk7 = Vector3(func_45(uLocal_64.f_71, unk4.f_2));
+	unk10 = Vector3(uLocal_64.f_88 + unk7);
 
 	switch (uLocal_64.f_94)
 	{
@@ -1446,8 +1446,8 @@ void func_41() // Position - 0x1582
 	}
 
 	func_42(caLocal_160.f_40, caLocal_160.f_40.f_2, caLocal_160.f_40.f_8, caLocal_160.f_40.f_3, caLocal_160.f_40.f_9, caLocal_160.f_40.f_4, caLocal_160.f_40.f_10, caLocal_160.f_40.f_5, caLocal_160.f_40.f_11, caLocal_160.f_40.f_6, caLocal_160.f_40.f_12, caLocal_160.f_40.f_7, num, num.f_1, caLocal_160.f_61.f_1, caLocal_160.f_61.f_2 > 0);
-	caLocal_160.f_4.f_6 = { CAM::GET_CAM_COORD(caLocal_160) };
-	caLocal_160.f_4.f_9 = { CAM::GET_CAM_ROT(caLocal_160, 2) };
+	caLocal_160.f_4.f_6 = Vector3(CAM::GET_CAM_COORD(caLocal_160));
+	caLocal_160.f_4.f_9 = Vector3(CAM::GET_CAM_ROT(caLocal_160, 2));
 	return;
 }
 
@@ -1582,9 +1582,9 @@ struct<4> func_46(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 
 	camFov = CAM::GET_CAM_FOV(caParam0);
 	num = -camFov;
-	num.f_1 = { -*uParam1 };
+	num.f_1 = Vector3(-*uParam1);
 	disabledControlNormal = PAD::GET_DISABLED_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SNIPER_ZOOM);
-	vector = { -{ PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD) } };
+	vector = { -Vector3(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD)) };
 
 	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 	{
@@ -1596,7 +1596,7 @@ struct<4> func_46(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 			disabledControlNormal = 0f;
 	
 		if (SYSTEM::VMAG(vector) < 0.06f)
-			vector = { 0f, 0f, 0f };
+			vector = Vector3(0f, 0f, 0f);
 	}
 
 	frameTime = MISC::GET_FRAME_TIME();
@@ -1613,10 +1613,10 @@ struct<4> func_46(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 	num4.f_1 = 0f;
 	num4.f_2 = uParam2.f_1;
 	num5 = frameTime * fieldOfView * fParam8 * (1f + ((fieldOfView - uParam2.f_4) / (uParam2.f_5 - uParam2.f_4)));
-	num6 = { vector };
+	num6 = Vector3(vector);
 	num6.f_2 = num6.f_2 * num5;
 	num6 = num6 * num5;
-	*uParam1 = { *uParam1 + num6 };
+	*uParam1 = Vector3(*uParam1 + num6);
 	flag = num3.f_2 > num4.f_2;
 
 	if (flag)
@@ -1627,11 +1627,11 @@ struct<4> func_46(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 	}
 	else
 	{
-		*uParam1 = { func_47(*uParam1, num3, num4) };
+		*uParam1 = Vector3(func_47(*uParam1, num3, num4));
 	}
 
 	num = num + fieldOfView;
-	num.f_1 = { num.f_1 + *uParam1 };
+	num.f_1 = Vector3(num.f_1 + *uParam1);
 	return num;
 }
 
@@ -1808,9 +1808,9 @@ void func_55(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 {
 	if (!func_56(Global_1962996.f_13, uParam0, false))
 	{
-		Global_1962996.f_13 = { uParam0 };
-		uParam3 = { uParam3 + { 0f, -180f, 180f } };
-		Global_1962996.f_16 = { uParam3 };
+		Global_1962996.f_13 = Vector3(uParam0);
+		uParam3 = { uParam3 + Vector3(0f, -180f, 180f) };
+		Global_1962996.f_16 = Vector3(uParam3);
 	}
 
 	return;
@@ -1855,39 +1855,39 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 
 	if (uLocal_64.f_74 == 0)
 	{
-		*uParam5 = { CAM::GET_CAM_ROT(caLocal_160, 2) };
-		*uParam4 = { func_7(*uParam5) };
-		*uParam2 = { caLocal_160.f_4.f_6 + ({ fParam0, fParam0, fParam0 } * *uParam4) };
-		*uParam3 = { func_60(*uParam2, fParam1) };
+		*uParam5 = Vector3(CAM::GET_CAM_ROT(caLocal_160, 2));
+		*uParam4 = Vector3(func_7(*uParam5));
+		*uParam2 = { caLocal_160.f_4.f_6 + (Vector3(fParam0, fParam0, fParam0) * *uParam4) };
+		*uParam3 = Vector3(func_60(*uParam2, fParam1));
 	}
 	else
 	{
-		unk = { func_7(CAM::GET_CAM_ROT(caLocal_160, 2)) };
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uLocal_64.f_95, uLocal_64.f_88) };
-		entityBonePostion = { ENTITY::GET_ENTITY_BONE_POSTION(uLocal_64.f_95, uLocal_64.f_74.f_1[0]) };
-		unk8 = { entityBonePostion - offsetFromEntityInWorldCoords };
-		*uParam2 = { entityBonePostion };
+		unk = Vector3(func_7(CAM::GET_CAM_ROT(caLocal_160, 2)));
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uLocal_64.f_95, uLocal_64.f_88));
+		entityBonePostion = Vector3(ENTITY::GET_ENTITY_BONE_POSTION(uLocal_64.f_95, uLocal_64.f_74.f_1[0]));
+		unk8 = Vector3(entityBonePostion - offsetFromEntityInWorldCoords);
+		*uParam2 = Vector3(entityBonePostion);
 		num = 0;
 		num2 = func_59(unk8, unk);
 	
 		for (i = 1; i <= uLocal_64.f_74 - 1; i = i + 1)
 		{
-			entityBonePostion = { ENTITY::GET_ENTITY_BONE_POSTION(uLocal_64.f_95, uLocal_64.f_74.f_1[i]) };
-			unk8 = { entityBonePostion - offsetFromEntityInWorldCoords };
+			entityBonePostion = Vector3(ENTITY::GET_ENTITY_BONE_POSTION(uLocal_64.f_95, uLocal_64.f_74.f_1[i]));
+			unk8 = Vector3(entityBonePostion - offsetFromEntityInWorldCoords);
 			num3 = func_59(unk8, unk);
 		
 			if (num3 > num2)
 			{
 				num2 = num3;
 				num = i;
-				*uParam2 = { entityBonePostion };
+				*uParam2 = Vector3(entityBonePostion);
 			}
 		}
 	
-		*uParam5 = { ENTITY::GET_ENTITY_BONE_ROTATION(uLocal_64.f_95, uLocal_64.f_74.f_1[num]) };
-		*uParam4 = { func_7(*uParam5) };
-		*uParam2 = { *uParam2 + ({ fParam0, fParam0, fParam0 } * *uParam4) };
-		*uParam3 = { *uParam2 + ({ fParam1, fParam1, fParam1 } * *uParam4) };
+		*uParam5 = Vector3(ENTITY::GET_ENTITY_BONE_ROTATION(uLocal_64.f_95, uLocal_64.f_74.f_1[num]));
+		*uParam4 = Vector3(func_7(*uParam5));
+		*uParam2 = { *uParam2 + (Vector3(fParam0, fParam0, fParam0) * *uParam4) };
+		*uParam3 = { *uParam2 + (Vector3(fParam1, fParam1, fParam1) * *uParam4) };
 	}
 
 	return;
@@ -1903,9 +1903,9 @@ Vector3 func_60(var uParam0, var uParam1, var uParam2, float fParam3) // Positio
 	var finalRenderedCamRot;
 	var unk;
 
-	finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-	unk3 = { func_7(finalRenderedCamRot) };
-	return uParam0 + ({ fParam3, fParam3, fParam3 } * unk3);
+	finalRenderedCamRot = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(2));
+	unk3 = Vector3(func_7(finalRenderedCamRot));
+	return uParam0 + (Vector3(fParam3, fParam3, fParam3) * unk3);
 }
 
 void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x2010
@@ -1964,9 +1964,9 @@ BOOL func_65(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 	{
 		instance_id.f_1 = -1;
 		instance_id = 0;
-		instance_id.f_2 = { fParam1 };
-		instance_id.f_5 = { uParam4 };
-		instance_id.f_8 = { fParam7 };
+		instance_id.f_2 = Vector3(fParam1);
+		instance_id.f_5 = Vector3(uParam4);
+		instance_id.f_8 = Vector3(fParam7);
 		instance_id.f_1 = iParam0;
 	
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("am_mp_drone")) < 1)
@@ -2108,7 +2108,7 @@ void func_72(Entity eParam0, BOOL bParam1, eHudColour ehcParam2) // Position - 0
 		return;
 
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
 	GRAPHICS::SET_DRAW_ORIGIN(entityCoords, false);
 	width = func_74(eParam0, caLocal_160, 0.5f);
 	width = func_49(width, 0.015f, width);
@@ -2138,8 +2138,8 @@ float func_74(Entity eParam0, Cam caParam1, float fParam2) // Position - 0x2460
 	float unk4;
 	float distanceBetweenCoords;
 
-	camCoord = { CAM::GET_CAM_COORD(caParam1) };
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, true) };
+	camCoord = Vector3(CAM::GET_CAM_COORD(caParam1));
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
 	distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(camCoord, entityCoords, true);
 	camFov = CAM::GET_CAM_FOV(caParam1);
 	num = 1f;
@@ -2211,12 +2211,12 @@ float func_78(Ped pedParam0) // Position - 0x25DC
 {
 	Vector3 entityCoords;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 
 	if (!GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(entityCoords, &entityCoords, &(entityCoords.f_1)))
 		return 1f;
 
-	entityCoords = { entityCoords - { 0f, 0.5f, 0.5f } };
+	entityCoords = { entityCoords - Vector3(0f, 0.5f, 0.5f) };
 	entityCoords.f_2 = 0f;
 	return SYSTEM::VMAG2(entityCoords);
 }
@@ -2226,9 +2226,9 @@ void func_79(Entity eParam0) // Position - 0x2626
 	Vector3 camCoord;
 	Vector3 unk;
 
-	camCoord = { CAM::GET_CAM_COORD(caLocal_160) };
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(eParam0, true) };
-	entityCoords = { entityCoords + ({ 2f, 2f, 2f } * func_80(entityCoords - camCoord)) };
+	camCoord = Vector3(CAM::GET_CAM_COORD(caLocal_160));
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
+	entityCoords = { entityCoords + (Vector3(2f, 2f, 2f) * func_80(entityCoords - camCoord)) };
 	caLocal_160.f_22.f_1 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(camCoord, entityCoords, 511, 0, 4);
 	caLocal_160.f_22.f_1 == 0;
 	return;
@@ -2244,7 +2244,7 @@ Vector3 func_80(float fParam0, var uParam1, var uParam2) // Position - 0x267D
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -2450,10 +2450,10 @@ void func_85() // Position - 0x28CA
 			}
 		
 			func_58(0f, uLocal_64.f_8.f_4, &vector, &vector2, &unk5, &unk8);
-			unk11 = { { uLocal_64.f_13, uLocal_64.f_13, uLocal_64.f_13 } * func_86(0f, 0f, 0f, 1f) };
+			unk11 = { Vector3(uLocal_64.f_13, uLocal_64.f_13, uLocal_64.f_13) * func_86(0f, 0f, 0f, 1f) };
 			unk11.f_1 = 0f;
-			unk8 = { unk8 + unk11 };
-			vector2 = { vector + (F2V(SYSTEM::VMAG(vector2 - vector)) * func_7(unk8)) };
+			unk8 = Vector3(unk8 + unk11);
+			vector2 = Vector3(vector + (F2V(SYSTEM::VMAG(vector2 - vector)) * func_7(unk8)));
 			vector.f_2 = vector.f_2 - 1f;
 			MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS_IGNORE_ENTITY_NEW(vector, vector2, uLocal_64.f_8.f_3, false, uLocal_64.f_8, PLAYER::PLAYER_PED_ID(), true, true, -1082130432, uLocal_64.f_95, false, false, 0, true, 0, uLocal_64.f_94 != 0, 0);
 		
@@ -2479,7 +2479,7 @@ Vector3 func_86(float fParam0, float fParam1, float fParam2, float fParam3) // P
 
 	for (i = 0; i < 20; i = i + 1)
 	{
-		vector = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3) };
+		vector = Vector3(MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3), MISC::GET_RANDOM_FLOAT_IN_RANGE(-fParam3, fParam3));
 	
 		if (SYSTEM::VDIST2(vector, 0f, 0f, 0f) <= num)
 			return fParam0 + vector;
@@ -2492,7 +2492,7 @@ Vector3 func_87(var uParam0, var uParam1, var uParam2, float fParam3) // Positio
 {
 	var unk;
 
-	unk = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f) };
+	unk = Vector3(MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f));
 	return uParam0 + func_88(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, fParam3));
 }
 
@@ -2506,7 +2506,7 @@ Vector3 func_88(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Pos
 	num = SYSTEM::VMAG(vParam0);
 
 	if (num != 0f)
-		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
+		return vParam0 * Vector3(fParam3 / num, fParam3 / num, fParam3 / num);
 
 	return 0f, 0f, 0f;
 }
@@ -2621,20 +2621,20 @@ void func_96(int iParam0) // Position - 0x2F35
 	if (func_102(&num, 2))
 	{
 		_STOPWATCH_RESET(&(caLocal_160.f_17), false, false);
-		uLocal_64.f_8 = { Global_2764656.f_8 };
+		uLocal_64.f_8 = Vector3(Global_2764656.f_8);
 	}
 
 	if (func_102(&num, 6))
 		uLocal_64.f_19 = Global_2764656.f_19;
 
 	if (func_102(&num, 10))
-		uLocal_64.f_74 = { Global_2764656.f_74 };
+		uLocal_64.f_74 = Vector3(Global_2764656.f_74);
 
 	if (func_102(&num, 8))
-		uLocal_64.f_67 = { Global_2764656.f_67 };
+		uLocal_64.f_67 = Vector3(Global_2764656.f_67);
 
 	if (func_102(&num, 12))
-		uLocal_64.f_20 = { Global_2764656.f_20 };
+		uLocal_64.f_20 = Vector3(Global_2764656.f_20);
 
 	func_97(iParam0);
 	return;
@@ -2650,7 +2650,7 @@ void func_97(int iParam0) // Position - 0x2FCE
 
 	if (func_102(&num, 2))
 	{
-		uLocal_64.f_8 = { Global_2764656.f_8 };
+		uLocal_64.f_8 = Vector3(Global_2764656.f_8);
 	
 		switch (uLocal_64.f_8.f_1)
 		{
@@ -3167,14 +3167,14 @@ void func_112(BOOL bParam0, BOOL bParam1) // Position - 0x39DA
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -3474,8 +3474,8 @@ void func_135(var uParam0) // Position - 0x3E96
 	Ped ped;
 	Vehicle vehiclePedIsIn;
 
-	uLocal_64.f_88 = { *uParam0 };
-	uLocal_64.f_91 = { uParam0->f_3 };
+	uLocal_64.f_88 = Vector3(*uParam0);
+	uLocal_64.f_91 = Vector3(uParam0->f_3);
 	uLocal_64.f_94 = uParam0->f_6;
 	uLocal_64.f_95 = uParam0->f_7;
 	caLocal_160.f_22.f_4 = -1;
@@ -3549,7 +3549,7 @@ void func_136() // Position - 0x3F1F
 	if (!IS_BIT_SET(Global_2764742, 12))
 		func_137(1, 3, 3, 3);
 
-	uLocal_64 = { Global_2764656 };
+	uLocal_64 = Vector3(Global_2764656);
 	func_97(Global_2764742);
 	func_107(0);
 	return;
@@ -3575,7 +3575,7 @@ void func_138(char* sParam0) // Position - 0x4088
 void func_139(float fParam0, float fParam1, float fParam2) // Position - 0x40A4
 {
 	MISC::SET_BIT(&Global_2764742, 9);
-	Global_2764656.f_71 = { fParam0 };
+	Global_2764656.f_71 = Vector3(fParam0);
 	return;
 }
 

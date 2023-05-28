@@ -184,7 +184,7 @@ void main() // Position - 0x0
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
 	iLocal_35 = 3;
-	iLocal_79 = { uScriptParam_146 };
+	iLocal_79 = Vector3(uScriptParam_146);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 		func_20();
@@ -206,7 +206,7 @@ void main() // Position - 0x0
 		{
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 			{
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 			
 				if (func_8(iLocal_79[num]))
 				{
@@ -472,7 +472,7 @@ void func_7(Blip* pblParam0) // Position - 0x52E
 	}
 
 	if (flag)
-		*pblParam0 = { unk };
+		*pblParam0 = Vector3(unk);
 
 	return;
 }
@@ -732,7 +732,7 @@ void func_19() // Position - 0x9A3
 		if (func_3(iLocal_79.f_5[i]))
 		{
 			ENTITY::SET_ENTITY_AS_MISSION_ENTITY(iLocal_79.f_5[i], true, true);
-			uLocal_88[i] = { ENTITY::GET_ENTITY_COORDS(iLocal_79.f_5[i], false) };
+			uLocal_88[i] = Vector3(ENTITY::GET_ENTITY_COORDS(iLocal_79.f_5[i], false));
 		}
 	}
 

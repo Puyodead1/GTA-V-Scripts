@@ -25,8 +25,8 @@ void main() // Position - 0x0
 	if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_10))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(obScriptParam_10, true);
-		uLocal_4 = { ENTITY::GET_ENTITY_COORDS(obScriptParam_10, true) };
-		uLocal_7 = { ENTITY::GET_ENTITY_ROTATION(obScriptParam_10, 2) };
+		uLocal_4 = Vector3(ENTITY::GET_ENTITY_COORDS(obScriptParam_10, true));
+		uLocal_7 = Vector3(ENTITY::GET_ENTITY_ROTATION(obScriptParam_10, 2));
 	}
 
 	while (true)
@@ -88,16 +88,16 @@ void main() // Position - 0x0
 				
 					case 3:
 						num = 0.35f;
-						unk = { uLocal_4 + { 3.45f, 0f, 0f } };
+						unk = { uLocal_4 + Vector3(3.45f, 0f, 0f) };
 					
 						if (ENTITY::DOES_ENTITY_EXIST(obLocal_3))
 						{
-							entityCoords = { ENTITY::GET_ENTITY_COORDS(obLocal_3, true) };
+							entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_3, true));
 						
 							if (!func_2(entityCoords, unk, 0.1f, false))
 							{
-								unk6 = { unk - entityCoords };
-								ENTITY::SET_ENTITY_COORDS(obLocal_3, entityCoords + (func_1(unk6) * F2V(MISC::GET_FRAME_TIME()) * { num, num, num }), true, false, false, true);
+								unk6 = Vector3(unk - entityCoords);
+								ENTITY::SET_ENTITY_COORDS(obLocal_3, entityCoords + (func_1(unk6) * F2V(MISC::GET_FRAME_TIME()) * Vector3(num, num, num)), true, false, false, true);
 							}
 							else
 							{
@@ -135,7 +135,7 @@ Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{

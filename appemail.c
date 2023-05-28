@@ -132,8 +132,8 @@ void main() // Position - 0x0
 	}
 
 	SYSTEM::SETTIMERB(0);
-	uLocal_47 = { Global_20336[Global_20328] };
-	fLocal_50 = { uLocal_47 };
+	uLocal_47 = Vector3(Global_20336[Global_20328]);
+	fLocal_50 = Vector3(uLocal_47);
 	fLocal_50 = fLocal_50 - 10f;
 	fLocal_50.f_1 = fLocal_50.f_1 + 20f;
 
@@ -1825,7 +1825,7 @@ void func_27(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	
 		num5 = Global_47790[iParam1].f_32[num4];
 		num3 = num5;
-		unk = { func_32(Global_44465[num5].f_1) };
+		unk = Vector3(func_32(Global_44465[num5].f_1));
 	
 		if (Global_44465[num5].f_2 == iParam0 && !(Global_44465[num5].f_3 == iParam0))
 			return;
@@ -1938,9 +1938,9 @@ void func_27(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 		num2 = Global_44465[num8].f_2;
 	
 		if (Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_1)
-			TEXT_LABEL_COPY(&unk, { Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2 }, 16);
+			TEXT_LABEL_COPY(&unk, Vector3(Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2), 16);
 		else
-			unk = { func_32(Global_44465[num8].f_1) };
+			unk = Vector3(func_32(Global_44465[num8].f_1));
 	}
 
 	if (!bParam4)
@@ -2673,8 +2673,8 @@ void func_40(int iParam0, eCharacter echParam1, int iParam2) // Position - 0x320
 		for (j = 0; j < num6; j = j + 1)
 		{
 			num7 = Global_44465[num5].f_5[j].f_1;
-			unk = { func_32(Global_44465[num7].f_1) };
-			unk17 = { func_32(Global_44465[num7].f_1) };
+			unk = Vector3(func_32(Global_44465[num7].f_1));
+			unk17 = Vector3(func_32(Global_44465[num7].f_1));
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(9);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
@@ -3578,8 +3578,8 @@ void func_56(int iParam0, eCharacter echParam1, int iParam2) // Position - 0x426
 	if (!flag2)
 	{
 		num5 = Global_47790[num2].f_32[num3];
-		unk = { func_32(Global_44465[num5]) };
-		unk17 = { func_32(Global_44465[num5].f_1) };
+		unk = Vector3(func_32(Global_44465[num5]));
+		unk17 = Vector3(func_32(Global_44465[num5].f_1));
 		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(9);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
@@ -3607,8 +3607,8 @@ void func_56(int iParam0, eCharacter echParam1, int iParam2) // Position - 0x426
 			for (i = 0; i < num6; i = i + 1)
 			{
 				num5 = Global_47790[num2].f_32[num7];
-				unk = { func_32(Global_44465[num5]) };
-				unk17 = { func_32(Global_44465[num5].f_1) };
+				unk = Vector3(func_32(Global_44465[num5]));
+				unk17 = Vector3(func_32(Global_44465[num5].f_1));
 				num8 = func_58(echParam1, Global_44465[num5].f_3);
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(9);
@@ -3643,11 +3643,11 @@ void func_56(int iParam0, eCharacter echParam1, int iParam2) // Position - 0x426
 		{
 			num10 = Global_53765[num9].f_10[num3];
 			num11 = Global_53765[num9].f_10[num3];
-			unk33 = { func_32(Global_44465[num10]) };
-			componentType = { func_32(Global_44465[num10].f_1) };
+			unk33 = Vector3(func_32(Global_44465[num10]));
+			componentType = Vector3(func_32(Global_44465[num10].f_1));
 		
 			if (Global_53765[num9].f_10[num3].f_1)
-				TEXT_LABEL_COPY(&componentType, { Global_53765[num9].f_10[num3].f_2 }, 16);
+				TEXT_LABEL_COPY(&componentType, Vector3(Global_53765[num9].f_10[num3].f_2), 16);
 		
 			if (Global_44465[num10].f_4 == 0)
 				func_78(false);
@@ -3714,7 +3714,7 @@ BOOL func_57(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 	value = 0;
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT_EMPTY");
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-	unk = { func_32(Global_44465[iParam3]) };
+	unk = Vector3(func_32(Global_44465[iParam3]));
 
 	switch (iParam3)
 	{
@@ -4363,7 +4363,7 @@ int func_66(int iParam0, eCharacter echParam1) // Position - 0x4FC3
 					if (Global_53403[num].f_35[i] == 0)
 						value = 2;
 		
-			TEXT_LABEL_COPY(&unk, { func_32(Global_44465[num5]) }, 4);
+			TEXT_LABEL_COPY(&unk, Vector3(func_32(Global_44465[num5])), 4);
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(8);
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(j);
@@ -4404,7 +4404,7 @@ int func_66(int iParam0, eCharacter echParam1) // Position - 0x4FC3
 						if (Global_53403[num].f_35[i] == 0)
 							value2 = 2;
 			
-				unk5 = { func_32(Global_44465[num9]) };
+				unk5 = Vector3(func_32(Global_44465[num9]));
 				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(8);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(j);
@@ -4605,13 +4605,13 @@ float func_69(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			num2 = SYSTEM::SIN(num * 90f);
 		}
 	
-		Global_20311 = { func_70(uParam0, uParam3, num2) };
-		Global_20314 = { func_70(fParam6, fParam9, num2) };
+		Global_20311 = Vector3(func_70(uParam0, uParam3, num2));
+		Global_20314 = Vector3(func_70(fParam6, fParam9, num2));
 	}
 	else
 	{
-		Global_20311 = { uParam3 };
-		Global_20314 = { fParam9 };
+		Global_20311 = Vector3(uParam3);
+		Global_20314 = Vector3(fParam9);
 	}
 
 	MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
@@ -4621,7 +4621,7 @@ float func_69(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 Vector3 func_70(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6) // Position - 0x565B
 {
-	return uParam0 + ((uParam3 - uParam0) * { fParam6, fParam6, fParam6 });
+	return uParam0 + ((uParam3 - uParam0) * Vector3(fParam6, fParam6, fParam6));
 }
 
 float func_71(float fParam0, float fParam1, float fParam2) // Position - 0x5675

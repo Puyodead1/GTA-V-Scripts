@@ -218,7 +218,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_45 = { 500f, 500f, 500f };
+	uLocal_45 = Vector3(500f, 500f, 500f);
 	iLocal_96 = -1;
 	essLocal_97 = FRIEND;
 	iLocal_98 = -1;
@@ -230,10 +230,10 @@ void main() // Position - 0x0
 	fLocal_117 = 4f;
 	bLocal_118 = true;
 	bLocal_133 = true;
-	uLocal_90 = { uScriptParam_163.f_1[0] };
-	uLocal_90 = { uLocal_90 };
+	uLocal_90 = Vector3(uScriptParam_163.f_1[0]);
+	uLocal_90 = Vector3(uLocal_90);
 	uLocal_86 = uLocal_86;
-	uLocal_69 = { uLocal_69 };
+	uLocal_69 = Vector3(uLocal_69);
 	flag = false;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(82))
@@ -292,11 +292,11 @@ void main() // Position - 0x0
 	
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_85) && !ENTITY::IS_ENTITY_DEAD(pedLocal_85, false))
 		{
-			uLocal_87 = { ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) };
+			uLocal_87 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true));
 			fLocal_93 = SYSTEM::VDIST2(uLocal_87, uScriptParam_163.f_1[0]);
 			fLocal_93 = fLocal_93;
-			uLocal_111 = { uLocal_87 };
-			uLocal_114 = { uScriptParam_163.f_1[0] };
+			uLocal_111 = Vector3(uLocal_87);
+			uLocal_114 = Vector3(uScriptParam_163.f_1[0]);
 			uLocal_111.f_2 = 0f;
 			uLocal_114.f_2 = 0f;
 			fLocal_110 = SYSTEM::VDIST2(uLocal_111, uLocal_114);
@@ -354,7 +354,7 @@ void main() // Position - 0x0
 						
 							if (MISC::ARE_STRINGS_EQUAL(&(Global_100681.f_3), &uLocal_69))
 							{
-								uLocal_69 = { uLocal_53 };
+								uLocal_69 = Vector3(uLocal_53);
 								flag2 = false;
 							}
 						
@@ -390,7 +390,7 @@ void main() // Position - 0x0
 					}
 					else
 					{
-						uLocal_69 = { uLocal_53 };
+						uLocal_69 = Vector3(uLocal_53);
 						flag3 = !func_100(iLocal_94, 64);
 						func_104(&iLocal_94, 128);
 					
@@ -1511,7 +1511,7 @@ void func_40() // Position - 0x15F8
 		}
 	
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 	
 		num = SYSTEM::VDIST2(entityCoords, uLocal_90);
 	
@@ -1525,9 +1525,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_123, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - { 0.75f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.75f, 0f, 0f) };
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - { 0.77f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.77f, 0f, 0f) };
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 3000, false, false);
@@ -1548,9 +1548,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_124, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - { 0.7f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f) };
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - { 0.7f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f) };
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 4000, false, false);
@@ -1571,9 +1571,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_125, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - { 0.8f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.8f, 0f, 0f) };
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - { 0.68f, 0f, 0f } };
+						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.68f, 0f, 0f) };
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 2000, false, false);
@@ -2521,7 +2521,7 @@ void func_87() // Position - 0x2F27
 
 	if (bLocal_133)
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		num = SYSTEM::VDIST2(entityCoords, uLocal_90);
 	
 		if (num > 225f)
@@ -2639,38 +2639,38 @@ void func_88(int iParam0) // Position - 0x31FB
 		num4 = -0.5f;
 		num5 = -0.2f;
 		num6 = 0.5f;
-		unk6 = { { 31.58f, -1081.5134f, 16.475f } - { 31.58f, -1092.35f, 12.617f } };
-		unk9 = { { 31.58f, -1094.09f, 17.325f } - { 31.58f, -1092.35f, 12.617f } };
-		unk12 = { { 31.58f, -1092.35f, 12.617f } + (unk9 * { num4, num4, num4 }) };
-		unk15 = { { 31.58f, -1092.35f, 12.617f } + (unk9 * { num5, num5, num5 }) };
-		unk18 = { { 31.58f, -1092.35f, 12.617f } + (unk9 * { num6, num6, num6 }) };
+		unk6 = { Vector3(31.58f, -1081.5134f, 16.475f) - Vector3(31.58f, -1092.35f, 12.617f) };
+		unk9 = { Vector3(31.58f, -1094.09f, 17.325f) - Vector3(31.58f, -1092.35f, 12.617f) };
+		unk12 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num4, num4, num4)) };
+		unk15 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num5, num5, num5)) };
+		unk18 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num6, num6, num6)) };
 	}
 	else
 	{
 		num4 = 1.35f;
 		num5 = 1.05f;
 		num6 = 0.5f;
-		unk6 = { { 31.347f, -2179.7732f, 824.3217f } - { 31.347f, -2168.0388f, 824.2375f } };
-		unk9 = { { 32.3f, -2168.0083f, 819.2051f } - { 32.3f, -2168.0388f, 824.2375f } };
-		unk12 = { { 31.347f, -2168.0388f, 824.2375f } + (unk9 * { num4, num4, num4 }) };
-		unk15 = { { 31.347f, -2168.0388f, 824.2375f } + (unk9 * { num5, num5, num5 }) };
-		unk18 = { { 31.347f, -2168.0388f, 824.2375f } + (unk9 * { num6, num6, num6 }) };
+		unk6 = { Vector3(31.347f, -2179.7732f, 824.3217f) - Vector3(31.347f, -2168.0388f, 824.2375f) };
+		unk9 = { Vector3(32.3f, -2168.0083f, 819.2051f) - Vector3(32.3f, -2168.0388f, 824.2375f) };
+		unk12 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num4, num4, num4)) };
+		unk15 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num5, num5, num5)) };
+		unk18 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num6, num6, num6)) };
 	}
 
 	if (iParam0 == 0)
 	{
-		unk = { unk6 * { num, num, num } };
-		vector = { unk12 + unk };
+		unk = { unk6 * Vector3(num, num, num) };
+		vector = Vector3(unk12 + unk);
 	}
 	else if (iParam0 == 1)
 	{
-		unk = { unk6 * { num2, num2, num2 } };
-		vector = { unk15 + unk };
+		unk = { unk6 * Vector3(num2, num2, num2) };
+		vector = Vector3(unk15 + unk);
 	}
 	else
 	{
-		unk = { unk6 * { num3, num3, num3 } };
-		vector = { unk18 + unk };
+		unk = { unk6 * Vector3(num3, num3, num3) };
+		vector = Vector3(unk18 + unk);
 	}
 
 	uLocal_140[iParam0] = OBJECT::CREATE_OBJECT_NO_OFFSET(joaat("prop_target_backboard_b"), vector, true, true, false);

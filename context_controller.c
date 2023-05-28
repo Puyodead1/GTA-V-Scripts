@@ -666,8 +666,8 @@ int func_15() // Position - 0x813
 
 void func_16(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, int iParam20, BOOL bParam21) // Position - 0x85F
 {
-	uLocal_96 = { uParam0 };
-	uLocal_100 = { uParam4 };
+	uLocal_96 = Vector3(uParam0);
+	uLocal_100 = Vector3(uParam4);
 	bLocal_93 = true;
 	bLocal_94 = true;
 	iLocal_116 = iParam20;
@@ -677,7 +677,7 @@ void func_16(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 
 void func_17(var uParam0, var uParam1, var uParam2, var uParam3, int iParam4) // Position - 0x887
 {
-	uLocal_96 = { uParam0 };
+	uLocal_96 = Vector3(uParam0);
 	bLocal_93 = true;
 	bLocal_94 = false;
 	iLocal_116 = iParam4;
@@ -1157,7 +1157,7 @@ void func_35() // Position - 0xE9A
 								break;
 						
 							case 0:
-								TEXT_LABEL_COPY(&Global_2359296[func_39()].f_5391.f_18[Global_1835457], { unk15[0] }, 6);
+								TEXT_LABEL_COPY(&Global_2359296[func_39()].f_5391.f_18[Global_1835457], Vector3(unk15[0]), 6);
 								func_38();
 								break;
 						

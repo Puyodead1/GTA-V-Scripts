@@ -402,9 +402,9 @@ void func_1() // Position - 0xD6
 				{
 					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 					{
-						uLocal_236 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+						uLocal_236 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 						distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_217, uLocal_236, true);
-						uLocal_217 = { uLocal_236 };
+						uLocal_217 = Vector3(uLocal_236);
 					}
 				}
 			
@@ -496,7 +496,7 @@ void func_1() // Position - 0xD6
 							{
 								HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("EPSDES_OUT" /*Now outside the Epsilonism pilgrimage zone.*/);
 								HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-								uLocal_221 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+								uLocal_221 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 								iLocal_224 = 0;
 							}
 						}
@@ -505,7 +505,7 @@ void func_1() // Position - 0xD6
 					{
 						HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("EPSDES_OUT" /*Now outside the Epsilonism pilgrimage zone.*/);
 						HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-						uLocal_221 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+						uLocal_221 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 						iLocal_224 = 0;
 					}
 				}
@@ -517,7 +517,7 @@ void func_1() // Position - 0xD6
 						{
 							HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("EPSDES_OUT" /*Now outside the Epsilonism pilgrimage zone.*/);
 							HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-							uLocal_221 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+							uLocal_221 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 							iLocal_224 = 0;
 						}
 					}
@@ -532,7 +532,7 @@ void func_1() // Position - 0xD6
 				{
 					HUD::BEGIN_TEXT_COMMAND_THEFEED_POST("EPSDES_OUT" /*Now outside the Epsilonism pilgrimage zone.*/);
 					HUD::END_TEXT_COMMAND_THEFEED_POST_TICKER(false, true);
-					uLocal_221 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+					uLocal_221 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 					iLocal_224 = 0;
 				}
 			
@@ -560,7 +560,7 @@ void func_1() // Position - 0xD6
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-						uLocal_217 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+						uLocal_217 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 			
 				!PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID());
 			}
@@ -746,7 +746,7 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 
 	if (iParam5 == 0)
 	{
-		Global_78341[1] = { func_63(entityModel, iParam1, iParam2, -1) };
+		Global_78341[1] = Vector3(func_63(entityModel, iParam1, iParam2, -1));
 	
 		if (!func_62(iParam3))
 		{
@@ -820,15 +820,15 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		unk = 15;
 	
 		if (iParam5 == 1)
-			unk = { Global_78384 };
+			unk = Vector3(Global_78384);
 		else
-			unk = { func_44(entityModel, iParam2) };
+			unk = Vector3(func_44(entityModel, iParam2));
 	
 		for (i = 0; i <= 14; i = i + 1)
 		{
 			if (unk[i] != -99)
 			{
-				Global_78341[1] = { func_63(entityModel, i, unk[i], -1) };
+				Global_78341[1] = Vector3(func_63(entityModel, i, unk[i], -1));
 			
 				if (IS_BIT_SET(Global_78341[1].f_6, 0))
 				{
@@ -837,13 +837,13 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 						unk18 = 9;
 					
 						if (iParam5 == 1)
-							unk18 = { Global_78401 };
+							unk18 = Vector3(Global_78401);
 						else
-							unk18 = { func_41(entityModel, unk[i]) };
+							unk18 = Vector3(func_41(entityModel, unk[i]));
 					
 						for (j = 0; j <= 8; j = j + 1)
 						{
-							Global_78341[1] = { func_63(entityModel, 14, unk18[j], -1) };
+							Global_78341[1] = Vector3(func_63(entityModel, 14, unk18[j], -1));
 							func_31(pedParam0, Global_78341[1].f_12, Global_78341[1].f_3, Global_78341[1].f_4);
 							func_54(14);
 						
@@ -886,7 +886,7 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 			}
 			else if (i != 12 && i != 14)
 			{
-				Global_78341[1] = { func_63(entityModel, i, func_20(pedParam0, i, PV_COMP_INVALID), -1) };
+				Global_78341[1] = Vector3(func_63(entityModel, i, func_20(pedParam0, i, PV_COMP_INVALID), -1));
 			
 				if (IS_BIT_SET(Global_78341[1].f_6, 3))
 				{
@@ -898,7 +898,7 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 					}
 					else
 					{
-						unk28 = { func_44(entityModel, 0) };
+						unk28 = Vector3(func_44(entityModel, 0));
 						func_11(pedParam0, i, unk28[i], 0, -1, 0, 0, 0, -1, -1, -1, 0, 0, 0);
 					}
 				}
@@ -907,31 +907,31 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	
 		if (iParam7 == 1)
 		{
-			unk45 = { func_63(entityModel, 8, num3, -1) };
+			unk45 = Vector3(func_63(entityModel, 8, num3, -1));
 		
 			if (num3 != -99)
 				if (func_17(entityModel, iParam2, 8, num3, &unk, &unk45))
 					func_11(pedParam0, 8, num3, iParam3, iParam4, iParam5, iParam6, iParam7, -1, -1, -1, 0, 0, 0);
 		
-			unk45 = { func_63(entityModel, 9, num4, -1) };
+			unk45 = Vector3(func_63(entityModel, 9, num4, -1));
 		
 			if (num4 != -99)
 				if (func_17(entityModel, iParam2, 9, num4, &unk, &unk45))
 					func_11(pedParam0, 9, num4, iParam3, iParam4, iParam5, iParam6, iParam7, -1, -1, -1, 0, 0, 0);
 		
-			unk45 = { func_63(entityModel, 14, num5, -1) };
+			unk45 = Vector3(func_63(entityModel, 14, num5, -1));
 		
 			if (num5 != -99)
 				if (func_17(entityModel, iParam2, 14, num5, &unk, &unk45))
 					func_11(pedParam0, 14, num5, iParam3, iParam4, iParam5, iParam6, iParam7, -1, -1, -1, 0, 0, 0);
 		
-			unk45 = { func_63(entityModel, 14, num6, -1) };
+			unk45 = Vector3(func_63(entityModel, 14, num6, -1));
 		
 			if (num6 != -99)
 				if (func_17(entityModel, iParam2, 14, num6, &unk, &unk45))
 					func_11(pedParam0, 14, num6, iParam3, iParam4, iParam5, iParam6, iParam7, -1, -1, -1, 0, 0, 0);
 		
-			unk45 = { func_63(entityModel, 14, num7, -1) };
+			unk45 = Vector3(func_63(entityModel, 14, num7, -1));
 		
 			if (num7 != -99)
 				if (func_17(entityModel, iParam2, 14, num7, &unk, &unk45))
@@ -940,11 +940,11 @@ int func_11(Ped pedParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 	}
 	else if (iParam1 == 13)
 	{
-		unk59 = { func_41(entityModel, iParam2) };
+		unk59 = Vector3(func_41(entityModel, iParam2));
 	
 		for (j = 0; j <= 8; j = j + 1)
 		{
-			Global_78341[1] = { func_63(entityModel, 14, unk59[j], -1) };
+			Global_78341[1] = Vector3(func_63(entityModel, 14, unk59[j], -1));
 			func_31(pedParam0, Global_78341[1].f_12, Global_78341[1].f_3, Global_78341[1].f_4);
 			func_54(14);
 		
@@ -1108,7 +1108,7 @@ BOOL func_15(Hash hParam0, int iParam1, int iParam2) // Position - 0x1391
 
 BOOL func_16(Hash hParam0, int iParam1, int iParam2) // Position - 0x146F
 {
-	Global_78341[1] = { func_63(hParam0, iParam1, iParam2, -1) };
+	Global_78341[1] = Vector3(func_63(hParam0, iParam1, iParam2, -1));
 	return IS_BIT_SET(Global_78341[1].f_6, 2);
 }
 
@@ -1132,7 +1132,7 @@ BOOL func_17(Hash hParam0, int iParam1, int iParam2, int iParam3, var uParam4, i
 
 	if (iParam2 == 14)
 	{
-		unk = { func_41(hParam0, uParam4->[13]) };
+		unk = Vector3(func_41(hParam0, uParam4->[13]));
 	
 		for (i = 0; i <= 8; i = i + 1)
 		{
@@ -28766,7 +28766,7 @@ BOOL func_127(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 		else if (iParam1 == 0)
 			MISC::SET_BIT(&(num.f_1), 10);
 	
-		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = { num };
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 	
 		for (i = CHAR_MICHAEL; i < CHAR_MULTIPLAYER; i = i + 1)
@@ -29062,14 +29062,14 @@ BOOL func_139(Ped pedParam0, int iParam1, int iParam2) // Position - 0x1F0B7
 		return false;
 
 	entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
-	Global_78341[1] = { func_63(entityModel, iParam1, iParam2, -1) };
+	Global_78341[1] = Vector3(func_63(entityModel, iParam1, iParam2, -1));
 
 	if (!IS_BIT_SET(Global_78341[1].f_6, 0))
 		return false;
 
 	if (iParam1 == 12)
 	{
-		unk = { func_44(entityModel, iParam2) };
+		unk = Vector3(func_44(entityModel, iParam2));
 	
 		for (i = 0; i <= 14; i = i + 1)
 		{
@@ -29079,7 +29079,7 @@ BOOL func_139(Ped pedParam0, int iParam1, int iParam2) // Position - 0x1F0B7
 				{
 					if (i == 13)
 					{
-						unk18 = { func_41(entityModel, unk[i]) };
+						unk18 = Vector3(func_41(entityModel, unk[i]));
 					
 						for (j = 0; j <= 8; j = j + 1)
 						{
@@ -29087,7 +29087,7 @@ BOOL func_139(Ped pedParam0, int iParam1, int iParam2) // Position - 0x1F0B7
 							{
 								for (k = 0; k <= 19; k = k + 1)
 								{
-									Global_78341[2] = { func_63(entityModel, 14, k, -1) };
+									Global_78341[2] = Vector3(func_63(entityModel, 14, k, -1));
 								
 									if (Global_78341[2].f_12 == j)
 										if (func_139(pedParam0, 14, k))
@@ -29100,7 +29100,7 @@ BOOL func_139(Ped pedParam0, int iParam1, int iParam2) // Position - 0x1F0B7
 					else
 					{
 						num = func_52(pedParam0, i);
-						Global_78341[2] = { func_63(entityModel, i, num, -1) };
+						Global_78341[2] = Vector3(func_63(entityModel, i, num, -1));
 					
 						if (!func_17(entityModel, iParam2, i, num, &unk, &Global_78341[2]))
 							return false;
@@ -29113,7 +29113,7 @@ BOOL func_139(Ped pedParam0, int iParam1, int iParam2) // Position - 0x1F0B7
 	}
 	else if (iParam1 == 13)
 	{
-		unk28 = { func_41(entityModel, iParam2) };
+		unk28 = Vector3(func_41(entityModel, iParam2));
 	
 		for (l = 0; l <= 8; l = l + 1)
 		{
@@ -29269,16 +29269,16 @@ BOOL func_144(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1F499
 		if (func_156(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_155();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -29415,7 +29415,7 @@ void func_145() // Position - 0x1F767
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -29479,18 +29479,18 @@ void func_151() // Position - 0x1F864
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -29622,7 +29622,7 @@ void func_157() // Position - 0x1FAEB
 
 void func_158(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1FB42
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -29658,14 +29658,14 @@ float func_159(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x1FB98
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -29757,7 +29757,7 @@ void func_168() // Position - 0x1FCF6
 		{
 			if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 				if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-					uLocal_217 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+					uLocal_217 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		
 			fLocal_220 = Global_113648.f_10051.f_107 / 160.9f;
 			fLocal_210 = 1609f * 5f;

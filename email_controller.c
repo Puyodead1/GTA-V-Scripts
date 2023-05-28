@@ -282,11 +282,11 @@ void func_1(int iParam0) // Position - 0x439
 	if (!Global_53765[num].f_10[num3].f_1)
 	{
 		num4 = Global_53765[num].f_10[num3];
-		TEXT_LABEL_COPY(&unk, { func_13(Global_44465[num4].f_1) }, 4);
+		TEXT_LABEL_COPY(&unk, Vector3(func_13(Global_44465[num4].f_1)), 4);
 	}
 	else
 	{
-		unk = { Global_53765[num].f_10[num3].f_2 };
+		unk = Vector3(Global_53765[num].f_10[num3].f_2);
 	}
 
 	if (iParam0 == 28)
@@ -1103,7 +1103,7 @@ void func_18(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	
 		num5 = Global_47790[iParam1].f_32[num4];
 		num3 = num5;
-		unk = { func_13(Global_44465[num5].f_1) };
+		unk = Vector3(func_13(Global_44465[num5].f_1));
 	
 		if (Global_44465[num5].f_2 == iParam0 && !(Global_44465[num5].f_3 == iParam0))
 			return;
@@ -1216,9 +1216,9 @@ void func_18(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 		num2 = Global_44465[num8].f_2;
 	
 		if (Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_1)
-			TEXT_LABEL_COPY(&unk, { Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2 }, 16);
+			TEXT_LABEL_COPY(&unk, Vector3(Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2), 16);
 		else
-			unk = { func_13(Global_44465[num8].f_1) };
+			unk = Vector3(func_13(Global_44465[num8].f_1));
 	}
 
 	if (!bParam4)
@@ -2006,7 +2006,7 @@ BOOL func_36(Ped pedParam0, int iParam1, int iParam2) // Position - 0x2A2C
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
 	{
-		vector = { Global_43258[iParam1] };
+		vector = Vector3(Global_43258[iParam1]);
 		num = vector.f_3;
 	
 		if (iParam2 > 0f)
@@ -2525,10 +2525,10 @@ void func_48(var uParam0, char* sParam1, var uParam2, var uParam3, int iParam4, 
 {
 	uParam0->f_4 = iParam5;
 	*uParam0 = sParam1;
-	uParam0->f_1 = { uParam2 };
+	uParam0->f_1 = Vector3(uParam2);
 	uParam0->f_3 = iParam4;
 	uParam0->f_5 = iParam6;
-	uParam0->f_6 = { fParam7 };
+	uParam0->f_6 = Vector3(fParam7);
 	uParam0->f_9 = iParam10;
 	TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_10), sParam11, 16);
 	uParam0->f_14 = iParam12;
@@ -2753,7 +2753,7 @@ struct<2> func_50(int iParam0) // Position - 0x4445
 	var unk2;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "", 8);
-	unk3 = { func_51(iParam0) };
+	unk3 = Vector3(func_51(iParam0));
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(&unk3))
 	{
@@ -3269,12 +3269,12 @@ void func_68() // Position - 0x4C32
 		{
 			Global_53765[i].f_10[j] = Global_113648.f_21039.f_311[i].f_10[j];
 			Global_53765[i].f_10[j].f_1 = Global_113648.f_21039.f_311[i].f_10[j].f_1;
-			Global_53765[i].f_10[j].f_2 = { Global_113648.f_21039.f_311[i].f_10[j].f_2 };
+			Global_53765[i].f_10[j].f_2 = Vector3(Global_113648.f_21039.f_311[i].f_10[j].f_2);
 			Global_53765[i].f_10[j].f_6 = Global_113648.f_21039.f_311[i].f_10[j].f_6;
 		
 			for (k = 0; k < 10; k = k + 1)
 			{
-				Global_53765[i].f_10[j].f_7[k] = { Global_113648.f_21039.f_311[i].f_10[j].f_7[k] };
+				Global_53765[i].f_10[j].f_7[k] = Vector3(Global_113648.f_21039.f_311[i].f_10[j].f_7[k]);
 			}
 		}
 	}
@@ -3304,12 +3304,12 @@ void func_68() // Position - 0x4C32
 		Global_55188[i].f_1 = Global_113648.f_21039.f_3442[i].f_1;
 		Global_55188[i].f_2 = Global_113648.f_21039.f_3442[i].f_2;
 		Global_55188[i].f_5 = Global_113648.f_21039.f_3442[i].f_5;
-		Global_55188[i].f_6 = { Global_113648.f_21039.f_3442[i].f_6 };
+		Global_55188[i].f_6 = Vector3(Global_113648.f_21039.f_3442[i].f_6);
 		Global_55188[i].f_10 = Global_113648.f_21039.f_3442[i].f_10;
 	
 		for (j = 0; j < 10; j = j + 1)
 		{
-			Global_55188[i].f_11[j] = { Global_113648.f_21039.f_3442[i].f_11[j] };
+			Global_55188[i].f_11[j] = Vector3(Global_113648.f_21039.f_3442[i].f_11[j]);
 		}
 	
 		Global_55188[i].f_52 = Global_113648.f_21039.f_3442[i].f_52;

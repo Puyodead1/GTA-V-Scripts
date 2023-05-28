@@ -444,8 +444,8 @@ int func_1(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, floa
 	if (func_14(fParam5, 0f, 0f, 0f, false))
 		fParam5 = Vector3( 50f, 50f, 50f );
 
-	unk = { uParam2 - fParam5 };
-	unk4 = { uParam2 + fParam5 };
+	unk = Vector3(uParam2 - fParam5);
+	unk4 = Vector3(uParam2 + fParam5);
 	func_13(unk, unk4);
 	func_12(unk, unk4, &(uParam1->f_1));
 	func_10(iParam0, uParam8);
@@ -726,7 +726,7 @@ BOOL func_2(int iParam0, int iParam1, int iParam2, eCharacter echParam3, eCharac
 		else if (iParam1 == 0)
 			MISC::SET_BIT(&(num.f_1), 10);
 	
-		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = { num };
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 	
 		for (i = 0; i < 3; i = i + 1)
@@ -854,7 +854,7 @@ BOOL func_6(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, eCh
 		num.f_11 = iParam2;
 		num.f_13 = iParam12;
 		MISC::CLEAR_BIT(&(num.f_1), 0);
-		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = { num };
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 + 1;
 		func_3(0);
 		func_3(1);
@@ -1433,7 +1433,7 @@ void func_36(var uParam0, int* piParam1, var uParam2, var uParam3, Vector3 vPara
 		}
 		else if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam7))
 		{
-			offsetFromInteriorInWorldCoords = { INTERIOR::GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS(*uParam2, 0f, 0f, 0f) };
+			offsetFromInteriorInWorldCoords = Vector3(INTERIOR::GET_OFFSET_FROM_INTERIOR_IN_WORLD_COORDS(*uParam2, 0f, 0f, 0f));
 		
 			if (SYSTEM::VDIST2(vParam4, offsetFromInteriorInWorldCoords) < 5f * 5f)
 				if (!INTERIOR::IS_VALID_INTERIOR(*uParam3))
@@ -1759,7 +1759,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 
 void func_53(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x19EB
 {
-	uLocal_82 = { uParam0 };
+	uLocal_82 = Vector3(uParam0);
 	uLocal_85 = uParam0.f_3;
 	return;
 }
@@ -2077,13 +2077,13 @@ void func_62(int iParam0) // Position - 0x203C
 	{
 		for (i = iParam0; i <= G_SomeGlobalState.MessageCallStates.f_866 - 2; i = i + 1)
 		{
-			G_SomeGlobalState.MessageCallStates.f_765[i] = { G_SomeGlobalState.MessageCallStates.f_765[i + 1] };
+			G_SomeGlobalState.MessageCallStates.f_765[i] = Vector3(G_SomeGlobalState.MessageCallStates.f_765[i + 1]);
 		}
 	}
 
 	if (G_SomeGlobalState.MessageCallStates.f_866 > 0)
 	{
-		G_SomeGlobalState.MessageCallStates.f_765[G_SomeGlobalState.MessageCallStates.f_866 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_765[G_SomeGlobalState.MessageCallStates.f_866 - 1] = Vector3(unk);
 		G_SomeGlobalState.MessageCallStates.f_866 = G_SomeGlobalState.MessageCallStates.f_866 - 1;
 	}
 
@@ -2102,13 +2102,13 @@ void func_63(int iParam0) // Position - 0x20F5
 	{
 		for (i = iParam0; i <= G_SomeGlobalState.MessageCallStates.f_764 - 2; i = i + 1)
 		{
-			G_SomeGlobalState.MessageCallStates.f_651[i] = { G_SomeGlobalState.MessageCallStates.f_651[i + 1] };
+			G_SomeGlobalState.MessageCallStates.f_651[i] = Vector3(G_SomeGlobalState.MessageCallStates.f_651[i + 1]);
 		}
 	}
 
 	if (G_SomeGlobalState.MessageCallStates.f_764 > 0)
 	{
-		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates.f_651[G_SomeGlobalState.MessageCallStates.f_764 - 1] = Vector3(unk);
 		G_SomeGlobalState.MessageCallStates.f_764 = G_SomeGlobalState.MessageCallStates.f_764 - 1;
 	}
 
@@ -2130,10 +2130,10 @@ void func_64(int iParam0) // Position - 0x21BD
 		{
 			for (j = i; j <= G_SomeGlobalState.MessageCallStates.f_650 - 2; j = j + 1)
 			{
-				G_SomeGlobalState.MessageCallStates.f_199[j] = { G_SomeGlobalState.MessageCallStates.f_199[j + 1] };
+				G_SomeGlobalState.MessageCallStates.f_199[j] = Vector3(G_SomeGlobalState.MessageCallStates.f_199[j + 1]);
 			}
 		
-			G_SomeGlobalState.MessageCallStates.f_199[G_SomeGlobalState.MessageCallStates.f_650 - 1] = { unk };
+			G_SomeGlobalState.MessageCallStates.f_199[G_SomeGlobalState.MessageCallStates.f_650 - 1] = Vector3(unk);
 			G_SomeGlobalState.MessageCallStates.f_650 = G_SomeGlobalState.MessageCallStates.f_650 - 1;
 			return;
 		}
@@ -2156,10 +2156,10 @@ void func_65(int iParam0) // Position - 0x226A
 		
 			for (j = i; j <= G_SomeGlobalState.MessageCallStates.f_198 - 2; j = j + 1)
 			{
-				G_SomeGlobalState.MessageCallStates.f_137[j] = { G_SomeGlobalState.MessageCallStates.f_137[j + 1] };
+				G_SomeGlobalState.MessageCallStates.f_137[j] = Vector3(G_SomeGlobalState.MessageCallStates.f_137[j + 1]);
 			}
 		
-			G_SomeGlobalState.MessageCallStates.f_137[G_SomeGlobalState.MessageCallStates.f_198 - 1] = { unk };
+			G_SomeGlobalState.MessageCallStates.f_137[G_SomeGlobalState.MessageCallStates.f_198 - 1] = Vector3(unk);
 			G_SomeGlobalState.MessageCallStates.f_198 = G_SomeGlobalState.MessageCallStates.f_198 - 1;
 			return;
 		}
@@ -2282,13 +2282,13 @@ void func_73(int iParam0) // Position - 0x24C0
 	{
 		for (i = iParam0; i <= G_SomeGlobalState.MessageCallStates.f_136 - 2; i = i + 1)
 		{
-			G_SomeGlobalState.MessageCallStates[i] = { G_SomeGlobalState.MessageCallStates[i + 1] };
+			G_SomeGlobalState.MessageCallStates[i] = Vector3(G_SomeGlobalState.MessageCallStates[i + 1]);
 		}
 	}
 
 	if (G_SomeGlobalState.MessageCallStates.f_136 > 0)
 	{
-		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136 - 1] = { unk };
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136 - 1] = Vector3(unk);
 		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 - 1;
 	}
 
@@ -2417,7 +2417,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	{
 		case 0:
 			*uParam1 = joaat("v_ilev_mm_doorson");
-			*uParam2 = { -806.8f, 174f, 76.9f };
+			*uParam2 = Vector3(-806.8f, 174f, 76.9f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_1_Son", 64);
 			*uParam3 = 226;
 			*uParam4 = 1850241841;
@@ -2426,7 +2426,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 1:
 			*uParam1 = joaat("v_ilev_mm_doordaughter");
-			*uParam2 = { -802.7f, 176.2f, 76.9f };
+			*uParam2 = Vector3(-802.7f, 176.2f, 76.9f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_1_Daught", 64);
 			*uParam3 = 226;
 			*uParam4 = -378388578;
@@ -2435,7 +2435,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 2:
 			*uParam1 = joaat("v_ilev_mm_doorw");
-			*uParam2 = { -805f, 171.9f, 76.9f };
+			*uParam2 = Vector3(-805f, 171.9f, 76.9f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_1_WC", 64);
 			*uParam3 = 226;
 			*uParam4 = -1223666875;
@@ -2444,7 +2444,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 3:
 			*uParam1 = joaat("v_ilev_mm_doorw");
-			*uParam2 = { -809.281f, 177.855f, 76.89f };
+			*uParam2 = Vector3(-809.281f, 177.855f, 76.89f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_1_WC", 64);
 			*uParam3 = 226;
 			*uParam4 = 1893421006;
@@ -2453,7 +2453,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 4:
 			*uParam1 = joaat("v_ilev_mm_fridge_l");
-			*uParam2 = { -804.1f, 185.8f, 72.7f };
+			*uParam2 = Vector3(-804.1f, 185.8f, 72.7f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Kitche", 64);
 			*uParam3 = 226;
 			*uParam4 = 825812850;
@@ -2462,7 +2462,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 5:
 			*uParam1 = joaat("v_ilev_mm_fridge_r");
-			*uParam2 = { -802.8f, 186.3f, 72.7f };
+			*uParam2 = Vector3(-802.8f, 186.3f, 72.7f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Kitche", 64);
 			*uParam3 = 226;
 			*uParam4 = 825812850;
@@ -2471,7 +2471,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 6:
 			*uParam1 = joaat("prop_bh1_48_backdoor_l");
-			*uParam2 = { -796.5657f, 177.2214f, 73.0405f };
+			*uParam2 = Vector3(-796.5657f, 177.2214f, 73.0405f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Kitche", 64);
 			*uParam3 = 41;
 			*uParam4 = 776026812;
@@ -2480,7 +2480,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 7:
 			*uParam1 = joaat("prop_bh1_48_backdoor_r");
-			*uParam2 = { -794.5051f, 178.0124f, 73.0405f };
+			*uParam2 = Vector3(-794.5051f, 178.0124f, 73.0405f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "V_Michael_G_Kitche", 64);
 			*uParam3 = 42;
 			*uParam4 = 698422331;
@@ -2507,7 +2507,7 @@ void func_80(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, ch
 	
 		case 10:
 			*uParam1 = joaat("v_ilev_trev_doorbath");
-			*uParam2 = { -1150.158f, -1518.768f, 10.781f };
+			*uParam2 = Vector3(-1150.158f, -1518.768f, 10.781f);
 			TEXT_LABEL_ASSIGN_STRING(sParam5, "rm_bathroom", 64);
 			*uParam3 = 226;
 			*uParam4 = 2007032394;

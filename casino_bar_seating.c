@@ -721,8 +721,8 @@ void func_1(var uParam0) // Position - 0xB3
 			}
 		
 			PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_NEXT_CAMERA, true);
-			animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2) };
-			animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2) };
+			animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2));
+			animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2));
 			targetHeading = animInitialOffsetRotation.f_2;
 			distanceToSlide = 0.05f;
 		
@@ -739,7 +739,7 @@ void func_1(var uParam0) // Position - 0xB3
 			func_35(uParam0, &animDict);
 			func_34(uParam0, &animName);
 			scriptTaskStatus = TASK::GET_SCRIPT_TASK_STATUS(PLAYER::PLAYER_PED_ID(), SCRIPT_TASK_GO_STRAIGHT_TO_COORD);
-			animInitialOffsetRotation2 = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2) };
+			animInitialOffsetRotation2 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_31(uParam0), func_30(uParam0), 0, 2));
 			num = animInitialOffsetRotation2.f_2;
 		
 			if (scriptTaskStatus != 1 && scriptTaskStatus != 0 || func_16(ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()), num, 5f))
@@ -989,7 +989,7 @@ void func_8(var uParam0) // Position - 0x92C
 
 	if (uParam0->f_13 == 6)
 	{
-		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
+		vector = Vector3(PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f);
 		num = SYSTEM::VMAG(vector);
 	
 		if (uParam0->f_13 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), MISC::GET_HASH_KEY("BLOCK_INTERRUPT")) && !func_33(&(uParam0->f_7), 12))
@@ -1302,14 +1302,14 @@ void func_25(BOOL bParam0, BOOL bParam1) // Position - 0x1034
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -1361,7 +1361,7 @@ Vector3 func_30(var uParam0) // Position - 0x113A
 {
 	var unk;
 
-	unk = { uParam0->f_16[uParam0->f_9].f_3 };
+	unk = Vector3(uParam0->f_16[uParam0->f_9].f_3);
 
 	if (func_4() && uParam0->f_1.f_1 == 0)
 		unk.f_2 = unk.f_2 - 4f;
@@ -2861,10 +2861,10 @@ void func_87() // Position - 0x2B31
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -3097,10 +3097,10 @@ void func_100(int iParam0, var uParam1, int iParam2, int iParam3) // Position - 
 
 	func_105(iParam0, &unk, &num);
 	uParam1->f_16[iParam2].f_13 = iParam3;
-	uParam1->f_16[iParam2] = { unk };
-	uParam1->f_16[iParam2].f_3 = { 0f, 0f, num };
-	uParam1->f_16[iParam2].f_6.f_1 = { func_102(func_104(), func_103(iParam3, num)) + unk };
-	uParam1->f_16[iParam2].f_6.f_4 = { func_102(func_101(), func_103(iParam3, num)) + unk };
+	uParam1->f_16[iParam2] = Vector3(unk);
+	uParam1->f_16[iParam2].f_3 = Vector3(0f, 0f, num);
+	uParam1->f_16[iParam2].f_6.f_1 = Vector3(func_102(func_104(), func_103(iParam3, num)) + unk);
+	uParam1->f_16[iParam2].f_6.f_4 = Vector3(func_102(func_101(), func_103(iParam3, num)) + unk);
 	uParam1->f_16[iParam2].f_6 = 1.25f;
 	return;
 }
@@ -3155,157 +3155,157 @@ void func_105(int iParam0, var uParam1, var uParam2) // Position - 0x30B7
 		switch (iParam0)
 		{
 			case 0:
-				*uParam1 = { 1120.862f, 212.423f, -50.4401f };
+				*uParam1 = Vector3(1120.862f, 212.423f, -50.4401f);
 				*uParam2 = -124.25f;
 				break;
 		
 			case 1:
-				*uParam1 = { 1120.2f, 211.123f, -50.4401f };
+				*uParam1 = Vector3(1120.2f, 211.123f, -50.4401f);
 				*uParam2 = -115.25f;
 				break;
 		
 			case 2:
-				*uParam1 = { 1119.816f, 209.848f, -50.4401f };
+				*uParam1 = Vector3(1119.816f, 209.848f, -50.4401f);
 				*uParam2 = -106.5f;
 				break;
 		
 			case 3:
-				*uParam1 = { 1119.618f, 208.511f, -50.4401f };
+				*uParam1 = Vector3(1119.618f, 208.511f, -50.4401f);
 				*uParam2 = -96.25f;
 				break;
 		
 			case 4:
-				*uParam1 = { 1119.54f, 207.185f, -50.4401f };
+				*uParam1 = Vector3(1119.54f, 207.185f, -50.4401f);
 				*uParam2 = -99.5f;
 				break;
 		
 			case 5:
-				*uParam1 = { 1118.818f, 204.723f, -50.4401f };
+				*uParam1 = Vector3(1118.818f, 204.723f, -50.4401f);
 				*uParam2 = -117.25f;
 				break;
 		
 			case 6:
-				*uParam1 = { 1118.193f, 203.635f, -50.4401f };
+				*uParam1 = Vector3(1118.193f, 203.635f, -50.4401f);
 				*uParam2 = -127.75f;
 				break;
 		
 			case 7:
-				*uParam1 = { 1117.355f, 202.623f, -50.4401f };
+				*uParam1 = Vector3(1117.355f, 202.623f, -50.4401f);
 				*uParam2 = -137.25f;
 				break;
 		
 			case 8:
-				*uParam1 = { 1116.384f, 201.823f, -50.4401f };
+				*uParam1 = Vector3(1116.384f, 201.823f, -50.4401f);
 				*uParam2 = -147.5f;
 				break;
 		
 			case 9:
-				*uParam1 = { 1115.254f, 201.136f, -50.4401f };
+				*uParam1 = Vector3(1115.254f, 201.136f, -50.4401f);
 				*uParam2 = -157.75f;
 				break;
 		
 			case 10:
-				*uParam1 = { 1114.046f, 200.698f, -50.4401f };
+				*uParam1 = Vector3(1114.046f, 200.698f, -50.4401f);
 				*uParam2 = -167.75f;
 				break;
 		
 			case 11:
-				*uParam1 = { 1112.791f, 200.235f, -50.4401f };
+				*uParam1 = Vector3(1112.791f, 200.235f, -50.4401f);
 				*uParam2 = -158f;
 				break;
 		
 			case 12:
-				*uParam1 = { 1111.561f, 199.51f, -50.4401f };
+				*uParam1 = Vector3(1111.561f, 199.51f, -50.4401f);
 				*uParam2 = -148f;
 				break;
 		
 			case 13:
-				*uParam1 = { 1130.482f, 239.144f, -51.0408f };
+				*uParam1 = Vector3(1130.482f, 239.144f, -51.0408f);
 				*uParam2 = 152.93f;
 				break;
 		
 			case 14:
-				*uParam1 = { 1129.412f, 239.844f, -51.0408f };
+				*uParam1 = Vector3(1129.412f, 239.844f, -51.0408f);
 				*uParam2 = 130.68f;
 				break;
 		
 			case 15:
-				*uParam1 = { 1128.693f, 240.931f, -51.0408f };
+				*uParam1 = Vector3(1128.693f, 240.931f, -51.0408f);
 				*uParam2 = 109.18f;
 				break;
 		
 			case 16:
-				*uParam1 = { 1128.732f, 243.531f, -51.0408f };
+				*uParam1 = Vector3(1128.732f, 243.531f, -51.0408f);
 				*uParam2 = 66.43f;
 				break;
 		
 			case 17:
-				*uParam1 = { 1129.494f, 244.656f, -51.0408f };
+				*uParam1 = Vector3(1129.494f, 244.656f, -51.0408f);
 				*uParam2 = 44.43f;
 				break;
 		
 			case 18:
-				*uParam1 = { 1130.592f, 245.344f, -51.0408f };
+				*uParam1 = Vector3(1130.592f, 245.344f, -51.0408f);
 				*uParam2 = 20.43f;
 				break;
 		
 			case 19:
-				*uParam1 = { 1133.189f, 245.344f, -51.0408f };
+				*uParam1 = Vector3(1133.189f, 245.344f, -51.0408f);
 				*uParam2 = -25.32f;
 				break;
 		
 			case 20:
-				*uParam1 = { 1134.295f, 244.606f, -51.0408f };
+				*uParam1 = Vector3(1134.295f, 244.606f, -51.0408f);
 				*uParam2 = -48.07f;
 				break;
 		
 			case 21:
-				*uParam1 = { 1135.011f, 243.469f, -51.0408f };
+				*uParam1 = Vector3(1135.011f, 243.469f, -51.0408f);
 				*uParam2 = -68.32f;
 				break;
 		
 			case 22:
-				*uParam1 = { 1125.608f, 252.885f, -51.0408f };
+				*uParam1 = Vector3(1125.608f, 252.885f, -51.0408f);
 				*uParam2 = -27.82f;
 				break;
 		
 			case 23:
-				*uParam1 = { 1126.656f, 252.185f, -51.0408f };
+				*uParam1 = Vector3(1126.656f, 252.185f, -51.0408f);
 				*uParam2 = -48.32f;
 				break;
 		
 			case 24:
-				*uParam1 = { 1127.391f, 251.06f, -51.0408f };
+				*uParam1 = Vector3(1127.391f, 251.06f, -51.0408f);
 				*uParam2 = -69.57f;
 				break;
 		
 			case 25:
-				*uParam1 = { 1127.354f, 248.448f, -51.0408f };
+				*uParam1 = Vector3(1127.354f, 248.448f, -51.0408f);
 				*uParam2 = -116.07f;
 				break;
 		
 			case 26:
-				*uParam1 = { 1126.609f, 247.36f, -51.0408f };
+				*uParam1 = Vector3(1126.609f, 247.36f, -51.0408f);
 				*uParam2 = -136.82f;
 				break;
 		
 			case 27:
-				*uParam1 = { 1125.499f, 246.623f, -51.0408f };
+				*uParam1 = Vector3(1125.499f, 246.623f, -51.0408f);
 				*uParam2 = -159.32f;
 				break;
 		
 			case 28:
-				*uParam1 = { 1122.905f, 246.673f, -51.0408f };
+				*uParam1 = Vector3(1122.905f, 246.673f, -51.0408f);
 				*uParam2 = 153.5f;
 				break;
 		
 			case 29:
-				*uParam1 = { 1121.809f, 247.398f, -51.0408f };
+				*uParam1 = Vector3(1121.809f, 247.398f, -51.0408f);
 				*uParam2 = 131.75f;
 				break;
 		
 			case 30:
-				*uParam1 = { 1121.087f, 248.548f, -51.0408f };
+				*uParam1 = Vector3(1121.087f, 248.548f, -51.0408f);
 				*uParam2 = 111.75f;
 				break;
 		}
@@ -3315,157 +3315,157 @@ void func_105(int iParam0, var uParam1, var uParam2) // Position - 0x30B7
 		switch (iParam0)
 		{
 			case 0:
-				*uParam1 = { 1120.862f, 212.423f, -50.4401f };
+				*uParam1 = Vector3(1120.862f, 212.423f, -50.4401f);
 				*uParam2 = -124.25f;
 				break;
 		
 			case 1:
-				*uParam1 = { 1120.2f, 211.123f, -50.4401f };
+				*uParam1 = Vector3(1120.2f, 211.123f, -50.4401f);
 				*uParam2 = -115.25f;
 				break;
 		
 			case 2:
-				*uParam1 = { 1119.816f, 209.848f, -50.4401f };
+				*uParam1 = Vector3(1119.816f, 209.848f, -50.4401f);
 				*uParam2 = -106.5f;
 				break;
 		
 			case 3:
-				*uParam1 = { 1119.618f, 208.511f, -50.4401f };
+				*uParam1 = Vector3(1119.618f, 208.511f, -50.4401f);
 				*uParam2 = -96.25f;
 				break;
 		
 			case 4:
-				*uParam1 = { 1119.54f, 207.185f, -50.4401f };
+				*uParam1 = Vector3(1119.54f, 207.185f, -50.4401f);
 				*uParam2 = -99.5f;
 				break;
 		
 			case 5:
-				*uParam1 = { 1118.818f, 204.723f, -50.4401f };
+				*uParam1 = Vector3(1118.818f, 204.723f, -50.4401f);
 				*uParam2 = -117.25f;
 				break;
 		
 			case 6:
-				*uParam1 = { 1118.193f, 203.635f, -50.4401f };
+				*uParam1 = Vector3(1118.193f, 203.635f, -50.4401f);
 				*uParam2 = -127.75f;
 				break;
 		
 			case 7:
-				*uParam1 = { 1117.355f, 202.623f, -50.4401f };
+				*uParam1 = Vector3(1117.355f, 202.623f, -50.4401f);
 				*uParam2 = -137.25f;
 				break;
 		
 			case 8:
-				*uParam1 = { 1116.384f, 201.823f, -50.4401f };
+				*uParam1 = Vector3(1116.384f, 201.823f, -50.4401f);
 				*uParam2 = -147.5f;
 				break;
 		
 			case 9:
-				*uParam1 = { 1115.254f, 201.136f, -50.4401f };
+				*uParam1 = Vector3(1115.254f, 201.136f, -50.4401f);
 				*uParam2 = -157.75f;
 				break;
 		
 			case 10:
-				*uParam1 = { 1114.046f, 200.698f, -50.4401f };
+				*uParam1 = Vector3(1114.046f, 200.698f, -50.4401f);
 				*uParam2 = -167.75f;
 				break;
 		
 			case 11:
-				*uParam1 = { 1112.791f, 200.235f, -50.4401f };
+				*uParam1 = Vector3(1112.791f, 200.235f, -50.4401f);
 				*uParam2 = -158f;
 				break;
 		
 			case 12:
-				*uParam1 = { 1111.561f, 199.51f, -50.4401f };
+				*uParam1 = Vector3(1111.561f, 199.51f, -50.4401f);
 				*uParam2 = -148f;
 				break;
 		
 			case 13:
-				*uParam1 = { 1130.482f, 239.144f, -51.0408f };
+				*uParam1 = Vector3(1130.482f, 239.144f, -51.0408f);
 				*uParam2 = 152.93f;
 				break;
 		
 			case 14:
-				*uParam1 = { 1129.412f, 239.844f, -51.0408f };
+				*uParam1 = Vector3(1129.412f, 239.844f, -51.0408f);
 				*uParam2 = 130.68f;
 				break;
 		
 			case 15:
-				*uParam1 = { 1128.693f, 240.931f, -51.0408f };
+				*uParam1 = Vector3(1128.693f, 240.931f, -51.0408f);
 				*uParam2 = 109.18f;
 				break;
 		
 			case 16:
-				*uParam1 = { 1128.732f, 243.531f, -51.0408f };
+				*uParam1 = Vector3(1128.732f, 243.531f, -51.0408f);
 				*uParam2 = 66.43f;
 				break;
 		
 			case 17:
-				*uParam1 = { 1129.494f, 244.656f, -51.0408f };
+				*uParam1 = Vector3(1129.494f, 244.656f, -51.0408f);
 				*uParam2 = 44.43f;
 				break;
 		
 			case 18:
-				*uParam1 = { 1130.592f, 245.344f, -51.0408f };
+				*uParam1 = Vector3(1130.592f, 245.344f, -51.0408f);
 				*uParam2 = 20.43f;
 				break;
 		
 			case 19:
-				*uParam1 = { 1133.189f, 245.344f, -51.0408f };
+				*uParam1 = Vector3(1133.189f, 245.344f, -51.0408f);
 				*uParam2 = -25.32f;
 				break;
 		
 			case 20:
-				*uParam1 = { 1134.295f, 244.606f, -51.0408f };
+				*uParam1 = Vector3(1134.295f, 244.606f, -51.0408f);
 				*uParam2 = -48.07f;
 				break;
 		
 			case 21:
-				*uParam1 = { 1135.011f, 243.469f, -51.0408f };
+				*uParam1 = Vector3(1135.011f, 243.469f, -51.0408f);
 				*uParam2 = -68.32f;
 				break;
 		
 			case 22:
-				*uParam1 = { 1125.608f, 252.885f, -51.0408f };
+				*uParam1 = Vector3(1125.608f, 252.885f, -51.0408f);
 				*uParam2 = -27.82f;
 				break;
 		
 			case 23:
-				*uParam1 = { 1126.656f, 252.185f, -51.0408f };
+				*uParam1 = Vector3(1126.656f, 252.185f, -51.0408f);
 				*uParam2 = -48.32f;
 				break;
 		
 			case 24:
-				*uParam1 = { 1127.391f, 251.06f, -51.0408f };
+				*uParam1 = Vector3(1127.391f, 251.06f, -51.0408f);
 				*uParam2 = -69.57f;
 				break;
 		
 			case 25:
-				*uParam1 = { 1127.354f, 248.448f, -51.0408f };
+				*uParam1 = Vector3(1127.354f, 248.448f, -51.0408f);
 				*uParam2 = -116.07f;
 				break;
 		
 			case 26:
-				*uParam1 = { 1126.609f, 247.36f, -51.0408f };
+				*uParam1 = Vector3(1126.609f, 247.36f, -51.0408f);
 				*uParam2 = -136.82f;
 				break;
 		
 			case 27:
-				*uParam1 = { 1125.499f, 246.623f, -51.0408f };
+				*uParam1 = Vector3(1125.499f, 246.623f, -51.0408f);
 				*uParam2 = -159.32f;
 				break;
 		
 			case 28:
-				*uParam1 = { 1122.905f, 246.673f, -51.0408f };
+				*uParam1 = Vector3(1122.905f, 246.673f, -51.0408f);
 				*uParam2 = 153.5f;
 				break;
 		
 			case 29:
-				*uParam1 = { 1121.809f, 247.398f, -51.0408f };
+				*uParam1 = Vector3(1121.809f, 247.398f, -51.0408f);
 				*uParam2 = 131.75f;
 				break;
 		
 			case 30:
-				*uParam1 = { 1121.087f, 248.548f, -51.0408f };
+				*uParam1 = Vector3(1121.087f, 248.548f, -51.0408f);
 				*uParam2 = 111.75f;
 				break;
 		}

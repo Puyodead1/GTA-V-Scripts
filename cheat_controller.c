@@ -258,7 +258,7 @@ void func_4(Hash hParam0) // Position - 0x1F6
 				{
 					if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), veLocal_68, false))
 					{
-						entityCoords = { ENTITY::GET_ENTITY_COORDS(veLocal_68, true) };
+						entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_68, true));
 						entityHeading = ENTITY::GET_ENTITY_HEADING(veLocal_68);
 						ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), entityCoords, entityCoords.f_1, entityCoords.f_2 + 4f, true, false, false, true);
 						flag = true;
@@ -271,11 +271,11 @@ void func_4(Hash hParam0) // Position - 0x1F6
 			if (!flag)
 			{
 				if (hParam0 == joaat("duster") || hParam0 == joaat("stunt"))
-					entityCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), -1.5f, 3.5f, 1f) };
+					entityCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), -1.5f, 3.5f, 1f));
 				else if (hParam0 == joaat("buzzard"))
-					entityCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 6f, 2f) };
+					entityCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 6f, 2f));
 				else
-					entityCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 3.5f, 1f) };
+					entityCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 3.5f, 1f));
 			
 				entityHeading = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID()) + 90f;
 			}
@@ -500,15 +500,15 @@ BOOL func_18(Hash hParam0, Vector3 vParam1, var uParam2, var uParam3, float fPar
 	xOffset = MISC::ABSF(maximum - minimum) / 2f;
 	xOffset.f_1 = MISC::ABSF(maximum.f_1 - minimum.f_1) / 2f;
 	xOffset.f_2 = MISC::ABSF(maximum.f_2 - minimum.f_2) / 2f;
-	unk[0] = { vParam1 };
-	unk[1] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, -xOffset.f_1, -xOffset.f_2) };
-	unk[2] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, -xOffset.f_1, -xOffset.f_2) };
-	unk[3] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, xOffset.f_1, -xOffset.f_2) };
-	unk[4] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, xOffset.f_1, -xOffset.f_2) };
-	unk[5] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, -xOffset.f_1, xOffset.f_2) };
-	unk[6] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, -xOffset.f_1, xOffset.f_2) };
-	unk[7] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, xOffset.f_1, xOffset.f_2) };
-	unk[8] = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, xOffset.f_1, xOffset.f_2) };
+	unk[0] = Vector3(vParam1);
+	unk[1] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, -xOffset.f_1, -xOffset.f_2));
+	unk[2] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, -xOffset.f_1, -xOffset.f_2));
+	unk[3] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, xOffset.f_1, -xOffset.f_2));
+	unk[4] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, xOffset.f_1, -xOffset.f_2));
+	unk[5] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, -xOffset.f_1, xOffset.f_2));
+	unk[6] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, -xOffset.f_1, xOffset.f_2));
+	unk[7] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, xOffset, xOffset.f_1, xOffset.f_2));
+	unk[8] = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam1, fParam4, -xOffset, xOffset.f_1, xOffset.f_2));
 
 	if (!INTERIOR::IS_COLLISION_MARKED_OUTSIDE(vParam1))
 		return false;
@@ -856,7 +856,7 @@ void func_36() // Position - 0xD99
 			PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::PLAYER_ID(), true);
 			ENTITY::SET_ENTITY_PROOFS(PLAYER::PLAYER_PED_ID(), true, true, true, true, true, false, false, false);
 			WEAPON::GIVE_WEAPON_TO_PED(PLAYER::PLAYER_PED_ID(), joaat("GADGET_PARACHUTE"), 1, false, true);
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 			entityHeading = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 			MISC::GET_GROUND_Z_FOR_3D_COORD(entityCoords, &groundZ, false, false);
 			groundZ = groundZ + 500f;
@@ -987,7 +987,7 @@ void func_39() // Position - 0xFFF
 				return;
 			}
 		
-			unk = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
+			unk = Vector3(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()));
 		
 			if (func_28() || func_34() || func_27(23) || func_27(21) || func_27(15) || unk.f_2 <= -170f)
 			{
@@ -2834,7 +2834,7 @@ void func_93() // Position - 0x35F3
 {
 	var unk;
 
-	unk = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
+	unk = Vector3(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()));
 
 	if (func_28())
 	{

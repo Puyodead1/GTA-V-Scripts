@@ -589,7 +589,7 @@ void main() // Position - 0x0
 	iLocal_453 = 65;
 	iLocal_454 = 49;
 	iLocal_455 = 64;
-	uLocal_242 = { uScriptParam_507.f_1[0] };
+	uLocal_242 = Vector3(uScriptParam_507.f_1[0]);
 	func_118();
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
@@ -659,9 +659,9 @@ void main() // Position - 0x0
 	uLocal_444 = uLocal_444;
 	uLocal_445 = uLocal_445;
 	uLocal_446 = uLocal_446;
-	TEXT_LABEL_COPY(&uLocal_304, { uLocal_234 }, 4);
+	TEXT_LABEL_COPY(&uLocal_304, Vector3(uLocal_234), 4);
 	TEXT_LABEL_APPEND_STRING(&uLocal_304, "AUD", 16);
-	TEXT_LABEL_COPY(&uLocal_308, { uLocal_234 }, 4);
+	TEXT_LABEL_COPY(&uLocal_308, Vector3(uLocal_234), 4);
 	TEXT_LABEL_APPEND_STRING(&uLocal_308, "_RAND_", 16);
 	iLocal_250 = 0;
 	iLocal_298 = -1;
@@ -729,7 +729,7 @@ void main() // Position - 0x0
 			GRAPHICS::DRAW_DEBUG_TEXT_2D(&text, 0.02f, 0.83f, 0f, 0, 0, 255, 255);
 		}
 	
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedLocal_240, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_240, true));
 	
 		if (ENTITY::HAS_ENTITY_COLLIDED_WITH_ANYTHING(pedLocal_240) && !(iLocal_250 == 25) && !(iLocal_250 == 5) && !(iLocal_250 == 6))
 		{
@@ -1078,7 +1078,7 @@ void main() // Position - 0x0
 			case 12:
 				GRAPHICS::DRAW_DEBUG_TEXT_2D("START_CONVERSATION", 0.02f, 0.1f, 0f, 0, 0, 255, 255);
 				iLocal_246 = iLocal_246 + 1;
-				uLocal_420 = { uLocal_404 };
+				uLocal_420 = Vector3(uLocal_404);
 			
 				if (!(iLocal_246 < func_15()) || num6 > 10f)
 				{
@@ -1620,7 +1620,7 @@ void func_23(char* sParam0) // Position - 0x17D1
 	var unk;
 
 	func_24(&unk);
-	*sParam0 = { unk };
+	*sParam0 = Vector3(unk);
 	TEXT_LABEL_APPEND_STRING(sParam0, "_", 64);
 	TEXT_LABEL_APPEND_INT(sParam0, iLocal_246, 64);
 	return;
@@ -1647,7 +1647,7 @@ void func_25(char* sParam0) // Position - 0x1835
 	int num;
 
 	num = iLocal_254 + 1;
-	*sParam0 = { uLocal_202 };
+	*sParam0 = Vector3(uLocal_202);
 	TEXT_LABEL_APPEND_STRING(sParam0, "@", 64);
 	TEXT_LABEL_APPEND_STRING(sParam0, "CONVO_", 64);
 	TEXT_LABEL_APPEND_INT(sParam0, num, 64);
@@ -1773,7 +1773,7 @@ void func_27(char* sParam0) // Position - 0x1A42
 {
 	var unk;
 
-	*sParam0 = { uLocal_202 };
+	*sParam0 = Vector3(uLocal_202);
 	TEXT_LABEL_APPEND_STRING(sParam0, "@", 64);
 	func_28(&unk);
 	TEXT_LABEL_APPEND_STRING(sParam0, &unk, 64);
@@ -1787,7 +1787,7 @@ void func_28(char* sParam0) // Position - 0x1A76
 	var unk;
 
 	func_50(&unk);
-	*sParam0 = { unk };
+	*sParam0 = Vector3(unk);
 	TEXT_LABEL_APPEND_STRING(sParam0, "_", 16);
 	TEXT_LABEL_APPEND_INT(sParam0, uLocal_299[_GET_CURRENT_PLAYER_CHARACTER()], 16);
 	return;
@@ -1795,7 +1795,7 @@ void func_28(char* sParam0) // Position - 0x1A76
 
 void func_29(char* sParam0) // Position - 0x1AA1
 {
-	TEXT_LABEL_COPY(sParam0, { uLocal_234 }, 4);
+	TEXT_LABEL_COPY(sParam0, Vector3(uLocal_234), 4);
 	TEXT_LABEL_APPEND_STRING(sParam0, "_CONV_", 16);
 	TEXT_LABEL_APPEND_INT(sParam0, iLocal_254 + 1, 16);
 	return;
@@ -1811,7 +1811,7 @@ void func_31(char* sParam0) // Position - 0x1AD3
 {
 	eCharacter character;
 
-	TEXT_LABEL_COPY(sParam0, { uLocal_234 }, 4);
+	TEXT_LABEL_COPY(sParam0, Vector3(uLocal_234), 4);
 	TEXT_LABEL_APPEND_STRING(sParam0, "_CONV_", 16);
 	character = _GET_CURRENT_PLAYER_CHARACTER();
 
@@ -1893,16 +1893,16 @@ int func_34(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1B8D
 		if (func_46(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_45();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -2039,7 +2039,7 @@ void func_35() // Position - 0x1E5B
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -2103,18 +2103,18 @@ void func_41() // Position - 0x1F56
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -2204,7 +2204,7 @@ void func_45() // Position - 0x214D
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -2223,7 +2223,7 @@ BOOL func_46(int iParam0, int iParam1) // Position - 0x21A3
 
 void func_47(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x21DB
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -2260,11 +2260,11 @@ void func_48(var uParam0) // Position - 0x2231
 	character = _GET_CURRENT_PLAYER_CHARACTER();
 
 	if (character == CHAR_TREVOR)
-		*uParam0 = { uLocal_316 };
+		*uParam0 = Vector3(uLocal_316);
 	else if (character == CHAR_MICHAEL)
-		*uParam0 = { uLocal_312 };
+		*uParam0 = Vector3(uLocal_312);
 	else
-		*uParam0 = { uLocal_320 };
+		*uParam0 = Vector3(uLocal_320);
 
 	return;
 }
@@ -2336,8 +2336,8 @@ void func_54() // Position - 0x235E
 	func_57(Global_113593[iLocal_251] + 1, &unk, &animationName);
 	TEXT_LABEL_APPEND_STRING(&animationName, "_", 64);
 	TEXT_LABEL_APPEND_INT(&animationName, iLocal_297, 64);
-	uLocal_356 = { animationName };
-	uLocal_372 = { uLocal_388 };
+	uLocal_356 = Vector3(animationName);
+	uLocal_372 = Vector3(uLocal_388);
 	func_56(&uLocal_356);
 	TASK::TASK_PLAY_ANIM(pedLocal_240, &uLocal_388, &animationName, 1000f, -8f, -1, 0, 0, false, false, false);
 	PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(pedLocal_240, false, false);
@@ -2403,7 +2403,7 @@ int func_58() // Position - 0x248E
 	var unk;
 	int unk2;
 
-	unk = { uLocal_308 };
+	unk = Vector3(uLocal_308);
 	TEXT_LABEL_APPEND_INT(&unk, Global_113593[iLocal_251] + 1, 16);
 	_CONVERSATION_INITIALIZE_ACTOR(&uLocal_37, 3, pedLocal_240, &uLocal_236, 0, 1);
 
@@ -2412,7 +2412,7 @@ int func_58() // Position - 0x248E
 	else
 		num = _CONVERSATION_ADD_LINE(&uLocal_37, &uLocal_304, &unk, 3, 0, 0, 0);
 
-	uLocal_499 = { unk };
+	uLocal_499 = Vector3(unk);
 	return num;
 }
 
@@ -2451,7 +2451,7 @@ void func_63() // Position - 0x2557
 
 	func_64(&animDict);
 	STREAMING::REQUEST_ANIM_DICT(&animDict);
-	uLocal_388 = { animDict };
+	uLocal_388 = Vector3(animDict);
 	return;
 }
 
@@ -2459,7 +2459,7 @@ void func_64(char* sParam0) // Position - 0x2576
 {
 	var unk;
 
-	*sParam0 = { uLocal_202 };
+	*sParam0 = Vector3(uLocal_202);
 	TEXT_LABEL_APPEND_STRING(sParam0, "@", 64);
 	func_66(&unk);
 	TEXT_LABEL_APPEND_STRING(sParam0, &unk, 64);
@@ -2848,14 +2848,14 @@ float func_84(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x2D79
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -2866,15 +2866,15 @@ BOOL func_85(Ped pedParam0, Ped pedParam1, int iParam2, int iParam3) // Position
 	var unk2;
 	float unk3;
 
-	unk = { func_87(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true)) };
+	unk = Vector3(func_87(ENTITY::GET_ENTITY_COORDS(pedParam1, true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true)));
 
 	if (iParam2 < 0.1f || iParam2 > 360f)
 		return true;
 
 	if (iParam3 == 0)
-		entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0) };
+		entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(pedParam0));
 	else
-		entityForwardVector = { func_87(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)) };
+		entityForwardVector = Vector3(func_87(PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 5f, 0f) - PED::GET_PED_BONE_COORDS(pedParam0, 31086, 0f, 0f, 0f)));
 
 	num = func_86(entityForwardVector, unk);
 
@@ -2899,7 +2899,7 @@ Vector3 func_87(float fParam0, var uParam1, var uParam2) // Position - 0x2E89
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -3077,7 +3077,7 @@ void func_101(int iParam0, BOOL bParam1) // Position - 0x309E
 	else
 		TASK::TASK_PLAY_ANIM(pedLocal_240, &uLocal_324, &uLocal_218, 1000f, 1000f, -1, 0, 0, false, false, false);
 
-	uLocal_356 = { uLocal_218 };
+	uLocal_356 = Vector3(uLocal_218);
 
 	if (bParam1)
 		if (!PED::IS_PED_INJURED(pedLocal_240) && !PED::IS_PED_DEAD_OR_DYING(pedLocal_240, true))
@@ -3222,7 +3222,7 @@ void func_113(int iParam0) // Position - 0x33F6
 
 	if (bLocal_241)
 	{
-		TEXT_LABEL_COPY(&string1, { func_115() }, 4);
+		TEXT_LABEL_COPY(&string1, Vector3(func_115()), 4);
 	
 		if (MISC::ARE_STRINGS_EQUAL(&string1, &uLocal_499))
 			func_13();

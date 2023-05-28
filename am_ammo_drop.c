@@ -740,8 +740,8 @@ void func_14(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 
 	if (_NETSHOPPING_SHOULD_USE_TRANSACTION_SYSTEM())
 	{
 		_NETSHOPPING_PROCESS_TRANSACTION(num, iParam0, &num2, bParam3, bParam3, false);
-		Global_4535172[num2].f_14.f_40 = { unk };
-		Global_4535172[num2].f_14.f_44 = { reason };
+		Global_4535172[num2].f_14.f_40 = Vector3(unk);
+		Global_4535172[num2].f_14.f_44 = Vector3(reason);
 	}
 	else
 	{
@@ -1388,7 +1388,7 @@ void func_24(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -1710,7 +1710,7 @@ void func_40(int iParam0, eHudColour ehcParam1) // Position - 0x1833
 	if (num <= num3 + 0.1f)
 		num = num3 + 0.4f;
 
-	GRAPHICS::DRAW_MARKER(2, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iParam0), true) + { ((maximum.f_2 - minimum.f_2) / 2f) + num, 0f, 0f }, 0f, 0f, 0f, 180f, 0f, 0f, 0.5f, 0.5f, 0.5f, r, g, b, 100, true, true, 2, false, 0, 0, false);
+	GRAPHICS::DRAW_MARKER(2, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iParam0), true) + Vector3(((maximum.f_2 - minimum.f_2) / 2f) + num, 0f, 0f), 0f, 0f, 0f, 180f, 0f, 0f, 0.5f, 0.5f, 0.5f, r, g, b, 100, true, true, 2, false, 0, 0, false);
 	return;
 }
 
@@ -1764,7 +1764,7 @@ BOOL func_43() // Position - 0x19AF
 		{
 			if (NETWORK::CAN_REGISTER_MISSION_OBJECTS(1))
 			{
-				if (func_44(&(iLocal_60.f_19), iLocal_60.f_19.f_1, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_60.f_4), true) - { 5f, 0f, 0f }, true, true, true, false, false, false, false))
+				if (func_44(&(iLocal_60.f_19), iLocal_60.f_19.f_1, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_60.f_4), true) - Vector3(5f, 0f, 0f), true, true, true, false, false, false, false))
 				{
 					NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(iLocal_60.f_19, true);
 					ENTITY::SET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(iLocal_60.f_19), ENTITY::GET_ENTITY_HEADING(NETWORK::NET_TO_OBJ(iLocal_60.f_4)));
@@ -1852,7 +1852,7 @@ BOOL func_45() // Position - 0x1B5B
 					else
 						MISC::SET_BIT(&address, 12);
 				
-					iLocal_60.f_4 = NETWORK::OBJ_TO_NET(OBJECT::CREATE_AMBIENT_PICKUP(pickupHash, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_60.f_2), true) - { 3f, 0f, 0f }, address, value, model, true, true));
+					iLocal_60.f_4 = NETWORK::OBJ_TO_NET(OBJECT::CREATE_AMBIENT_PICKUP(pickupHash, ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_60.f_2), true) - Vector3(3f, 0f, 0f), address, value, model, true, true));
 				
 					if (iLocal_60.f_18 == 1)
 					{
@@ -1873,7 +1873,7 @@ BOOL func_45() // Position - 0x1B5B
 			
 				if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_60.f_4) && !NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(iLocal_60.f_5))
 				{
-					if (func_44(&(iLocal_60.f_5), joaat("p_cargo_chute_s"), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_60.f_2), true) - { 2f, 0f, 0f }, true, true, false, true, false, false, false))
+					if (func_44(&(iLocal_60.f_5), joaat("p_cargo_chute_s"), ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_VEH(iLocal_60.f_2), true) - Vector3(2f, 0f, 0f), true, true, false, true, false, false, false))
 					{
 						NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(iLocal_60.f_5, true);
 						ENTITY::ATTACH_ENTITY_TO_ENTITY(NETWORK::NET_TO_OBJ(iLocal_60.f_5), NETWORK::NET_TO_OBJ(iLocal_60.f_4), 0, 0f, 0f, 0.1f, 0f, 0f, 0f, false, false, false, false, 2, true, 0);
@@ -1965,16 +1965,16 @@ int func_47(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1E28
 		if (func_64(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_63();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -2111,7 +2111,7 @@ void func_48() // Position - 0x20F6
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -2165,18 +2165,18 @@ void func_52() // Position - 0x21C9
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -2349,7 +2349,7 @@ void func_63() // Position - 0x2561
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -2391,7 +2391,7 @@ void func_65() // Position - 0x25EF
 
 void func_66(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x2646
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -2816,10 +2816,10 @@ void func_83(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Hash hPar
 		for (i = 0; i < 2; i = i + 1)
 		{
 			if (i < 1)
-				Global_2635559.f_2921[i] = { Global_2635559.f_2921[i + 1] };
+				Global_2635559.f_2921[i] = Vector3(Global_2635559.f_2921[i + 1]);
 		}
 	
-		Global_2635559.f_2921[1] = { vParam0 };
+		Global_2635559.f_2921[1] = Vector3(vParam0);
 		Global_2635559.f_2921[1].f_3 = fParam3;
 		Global_2635559.f_2921[1].f_4 = hParam4;
 		Global_2635559.f_2921[1].f_5 = veParam5;
@@ -2842,7 +2842,7 @@ int func_84(Player plParam0, var uParam1, var uParam2, var uParam3, Hash hParam4
 		{
 			if (Global_2648605.f_461[player][i].f_4 == hParam4)
 			{
-				vector = { uParam1 };
+				vector = Vector3(uParam1);
 			
 				if (MISC::ABSF(Global_2648605.f_461[player][i].f_2 - vector.f_2) < 2f)
 					vector.f_2 = Global_2648605.f_461[player][i].f_2;
@@ -3076,7 +3076,7 @@ BOOL func_95(Player plParam0) // Position - 0x34A2
 	if (func_99(PLAYER::PLAYER_ID(), plParam0))
 		return true;
 
-	Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
+	Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
 
 	if (NETWORK::NETWORK_IS_FRIEND(&Global_2764203))
 		return true;
@@ -3120,8 +3120,8 @@ BOOL func_99(Player plParam0, Player plParam1) // Position - 0x354E
 {
 	if (NETWORK::NETWORK_CLAN_SERVICE_IS_VALID())
 	{
-		Global_2764203 = { GET_GAMER_HANDLE_PLAYER(plParam0) };
-		Global_2764216 = { GET_GAMER_HANDLE_PLAYER(plParam1) };
+		Global_2764203 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam0));
+		Global_2764216 = Vector3(GET_GAMER_HANDLE_PLAYER(plParam1));
 	
 		if (NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&Global_2764203))
 		{
@@ -3143,7 +3143,7 @@ void func_100(var uParam0, var uParam1) // Position - 0x35BB
 {
 	float approxHeightForArea;
 
-	*uParam0 = { func_101(iLocal_60.f_6 + { 200f, 0f, 0f }, 400f / 2f, 400f, 200f / 2f) };
+	*uParam0 = { func_101(iLocal_60.f_6 + Vector3(200f, 0f, 0f), 400f / 2f, 400f, 200f / 2f) };
 	*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(iLocal_60.f_6 - *uParam0, iLocal_60.f_6.f_1 - uParam0->f_1);
 	approxHeightForArea = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(*uParam0 - 400f, uParam0->f_1 - 400f, *uParam0 + 400f, uParam0->f_1 + 400f);
 
@@ -3158,9 +3158,9 @@ Vector3 func_101(var uParam0, var uParam1, var uParam2, float fParam3, float fPa
 	var unk;
 	float unk2;
 
-	unk = { MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f };
+	unk = Vector3(MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), 0f);
 	endRange = fParam5 / 2f;
-	unk = { func_102(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(fParam3, fParam4)) };
+	unk = Vector3(func_102(unk, MISC::GET_RANDOM_FLOAT_IN_RANGE(fParam3, fParam4)));
 	unk.f_2 = MISC::GET_RANDOM_FLOAT_IN_RANGE(-endRange, endRange);
 	return uParam0 + unk;
 }
@@ -3175,7 +3175,7 @@ Vector3 func_102(Vector3 vParam0, var uParam1, var uParam2, float fParam3) // Po
 	num = SYSTEM::VMAG(vParam0);
 
 	if (num != 0f)
-		return vParam0 * { fParam3 / num, fParam3 / num, fParam3 / num };
+		return vParam0 * Vector3(fParam3 / num, fParam3 / num, fParam3 / num);
 
 	return 0f, 0f, 0f;
 }
@@ -3451,7 +3451,7 @@ void func_113() // Position - 0x3AF4
 				}
 			}
 		
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_60.f_4), true) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(NETWORK::NET_TO_OBJ(iLocal_60.f_4), true));
 		
 			if (entityCoords.f_2 < -50f && !ENTITY::IS_ENTITY_IN_WATER(NETWORK::NET_TO_OBJ(iLocal_60.f_4)))
 			{
@@ -3731,7 +3731,7 @@ void func_126() // Position - 0x42D2
 		if (func_35(iLocal_60.f_2))
 		{
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_182);
-			TASK::TASK_VEHICLE_DRIVE_TO_COORD(0, NETWORK::NET_TO_VEH(iLocal_60.f_2), iLocal_60.f_6 + { 50f, 0f, 0f }, 60f, 0, joaat("cuban800"), 262144, 15f, -1f);
+			TASK::TASK_VEHICLE_DRIVE_TO_COORD(0, NETWORK::NET_TO_VEH(iLocal_60.f_2), iLocal_60.f_6 + Vector3(50f, 0f, 0f), 60f, 0, joaat("cuban800"), 262144, 15f, -1f);
 			TASK::TASK_VEHICLE_DRIVE_TO_COORD(0, NETWORK::NET_TO_VEH(iLocal_60.f_2), iLocal_60.f_9, 60f, 0, joaat("cuban800"), 262144, -1f, -1f);
 			TASK::CLOSE_SEQUENCE_TASK(iLocal_182);
 			MISC::SET_BIT(&iLocal_180, 10);
@@ -4050,11 +4050,11 @@ BOOL func_146(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 	{
 		iLocal_60.f_17 = PLAYER::PLAYER_ID();
-		iLocal_60.f_6 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 5f * 1.5f, 0f) };
+		iLocal_60.f_6 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(PLAYER::PLAYER_PED_ID(), 0f, 5f * 1.5f, 0f));
 		iLocal_60.f_13 = 1;
 		iLocal_60.f_14 = 1;
 		iLocal_60.f_15 = 3;
-		iLocal_60.f_9 = { 0f, 0f, 500f };
+		iLocal_60.f_9 = Vector3(0f, 0f, 500f);
 	
 		if (uParam0.f_20 == 3)
 			iLocal_60.f_18 = 1;
@@ -4074,7 +4074,7 @@ BOOL func_146(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			iLocal_60.f_9.f_1 = -9000f;
 	
 		if (iLocal_60.f_9 == 0f && iLocal_60.f_9.f_1 == 0f)
-			iLocal_60.f_9 = { -9000f, 5000f, 500f };
+			iLocal_60.f_9 = Vector3(-9000f, 5000f, 500f);
 	}
 
 	bLocal_184 = NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION();

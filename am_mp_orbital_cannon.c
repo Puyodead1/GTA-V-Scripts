@@ -1361,10 +1361,10 @@ void func_15() // Position - 0x8BB
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -1654,14 +1654,14 @@ void func_33(BOOL bParam0, BOOL bParam1) // Position - 0xD36
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -2114,7 +2114,7 @@ BOOL func_60(var uParam0) // Position - 0x139B
 			{
 				if (!IS_BIT_SET(uParam0->f_5, 8))
 				{
-					camCoord = { CAM::GET_CAM_COORD(uParam0->f_4) };
+					camCoord = Vector3(CAM::GET_CAM_COORD(uParam0->f_4));
 					AUDIO::SET_VARIABLE_ON_SOUND(uParam0->f_6, "Firing", 1f);
 					func_70(camCoord);
 					PAD::SET_CONTROL_SHAKE(PLAYER_CONTROL, 500, 256);
@@ -2224,7 +2224,7 @@ void func_61(var uParam0) // Position - 0x1754
 		value = 35f + func_68(uParam0->f_7);
 		controlNormal2 = PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X);
 		controlNormal3 = PAD::GET_CONTROL_NORMAL(FRONTEND_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y);
-		camCoord = { CAM::GET_CAM_COORD(uParam0->f_4) };
+		camCoord = Vector3(CAM::GET_CAM_COORD(uParam0->f_4));
 	
 		if (uParam0->f_1)
 			value = 50f;
@@ -2341,7 +2341,7 @@ void func_61(var uParam0) // Position - 0x1754
 	
 		num2 = 0f;
 		num3 = 0f;
-		camCoord2 = { CAM::GET_CAM_COORD(uParam0->f_4) };
+		camCoord2 = Vector3(CAM::GET_CAM_COORD(uParam0->f_4));
 	
 		if (camCoord2 < camCoord)
 			num2 = 50f;
@@ -2657,7 +2657,7 @@ void func_70(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2073
 			
 				if (ENTITY::DOES_ENTITY_EXIST(playerPed))
 				{
-					entityCoords = { ENTITY::GET_ENTITY_COORDS(playerPed, false) };
+					entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(playerPed, false));
 				
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(vParam0, entityCoords, false) < 15f && entityCoords.f_2 >= vParam0.f_2 - 15f)
 						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), entityCoords, 59, 1f, true, false, 1065353216);
@@ -2673,7 +2673,7 @@ void func_70(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2073
 			{
 				if (func_74(Global_1578029[j], false) || func_73(Global_1578029[j], false) || func_72(Global_1578029[j], false) || func_71(Global_1578029[j], false))
 				{
-					entityCoords2 = { ENTITY::GET_ENTITY_COORDS(Global_1578029[j], false) };
+					entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(Global_1578029[j], false));
 				
 					if (MISC::GET_DISTANCE_BETWEEN_COORDS(vParam0, entityCoords2, false) < 15f && entityCoords2.f_2 >= vParam0.f_2 - 15f)
 						FIRE::ADD_OWNED_EXPLOSION(PLAYER::PLAYER_PED_ID(), entityCoords2, 59, 1f, true, false, 1065353216);
@@ -4617,8 +4617,8 @@ BOOL func_125(var uParam0) // Position - 0x424E
 				MISC::SET_BIT(&(uParam0->f_10), 0);
 				MISC::CLEAR_BIT(&(uParam0->f_5), 4);
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&(uParam0->f_22));
-				uParam0->f_736 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
-				uParam0->f_733 = { CAM::GET_GAMEPLAY_CAM_ROT(2) };
+				uParam0->f_736 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
+				uParam0->f_733 = Vector3(CAM::GET_GAMEPLAY_CAM_ROT(2));
 				flag = true;
 			}
 			else
@@ -4631,7 +4631,7 @@ BOOL func_125(var uParam0) // Position - 0x424E
 			
 				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(uParam0->f_22))
 				{
-					fieldOfView = { func_150() };
+					fieldOfView = Vector3(func_150());
 					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(uParam0->f_22, "SET_ZOOM_LEVEL");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
@@ -4644,7 +4644,7 @@ BOOL func_125(var uParam0) // Position - 0x424E
 						MISC::SET_BIT(&(uParam0->f_10), 0);
 						MISC::SET_BIT(&(uParam0->f_5), 4);
 						uParam0->f_4 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
-						uParam0->f_736 = { fieldOfView.f_1 };
+						uParam0->f_736 = Vector3(fieldOfView.f_1);
 						CAM::SET_CAM_COORD(uParam0->f_4, fieldOfView.f_1);
 						CAM::SET_CAM_ROT(uParam0->f_4, fieldOfView.f_4, 2);
 						CAM::SET_CAM_FOV(uParam0->f_4, fieldOfView);
@@ -4705,8 +4705,8 @@ BOOL func_125(var uParam0) // Position - 0x424E
 		case 6:
 			MISC::CLEAR_BIT(&(uParam0->f_10), 0);
 			MISC::CLEAR_BIT(&(uParam0->f_5), 14);
-			uParam0->f_736 = { 0f, 0f, 0f };
-			uParam0->f_733 = { 0f, 0f, 0f };
+			uParam0->f_736 = Vector3(0f, 0f, 0f);
+			uParam0->f_733 = Vector3(0f, 0f, 0f);
 			GRAPHICS::RESET_ADAPTATION(6);
 		
 			if (!IS_BIT_SET(uParam0->f_10, 3))
@@ -4735,8 +4735,8 @@ BOOL func_125(var uParam0) // Position - 0x424E
 	
 		case 9:
 			MISC::CLEAR_BIT(&(uParam0->f_10), 0);
-			uParam0->f_736 = { 0f, 0f, 0f };
-			uParam0->f_733 = { 0f, 0f, 0f };
+			uParam0->f_736 = Vector3(0f, 0f, 0f);
+			uParam0->f_733 = Vector3(0f, 0f, 0f);
 			MISC::SET_BIT(&(uParam0->f_5), 13);
 			func_7(uParam0, 10);
 			break;
@@ -4876,7 +4876,7 @@ BOOL func_125(var uParam0) // Position - 0x424E
 					MISC::CLEAR_BIT(&(uParam0->f_5), 13);
 				}
 			
-				unk7 = { func_136() };
+				unk7 = Vector3(func_136());
 				func_135(&(uParam0->f_23), 1f);
 				func_127(&(uParam0->f_21), &unk7, &(uParam0->f_23), func_134(&(uParam0->f_23)));
 				func_126(1);
@@ -5316,8 +5316,8 @@ struct<7> func_150() // Position - 0x5230
 {
 	float num;
 
-	num.f_1 = { -8.8511f, 6835.0034f, 400f };
-	num.f_4 = { -90f, 0f, 0f };
+	num.f_1 = Vector3(-8.8511f, 6835.0034f, 400f);
+	num.f_4 = Vector3(-90f, 0f, 0f);
 	num = 100f;
 
 	if (Global_2764567 > -1)
@@ -5835,7 +5835,7 @@ void func_187(BOOL bParam0) // Position - 0x5956
 
 	for (j = 0; j <= 31; j = j + 1)
 	{
-		Global_2684801.f_1.f_845[j] = { unk };
+		Global_2684801.f_1.f_845[j] = Vector3(unk);
 	}
 
 	Global_2680249.f_33 = -1;
@@ -5856,7 +5856,7 @@ void func_189() // Position - 0x5A61
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		Global_2681617[i] = { unk };
+		Global_2681617[i] = Vector3(unk);
 		TEXT_LABEL_ASSIGN_STRING(&(Global_2681617[i].f_13), "", 64);
 		TEXT_LABEL_ASSIGN_STRING(&(Global_2681617[i].f_29), "", 16);
 		Global_2681617[i].f_33 = 0;
@@ -6277,37 +6277,37 @@ BOOL func_231(var uParam0) // Position - 0x619A
 	Player unk4;
 
 	width = 0f;
-	vector = { 0f, 0f, 0f };
-	vector2 = { 0f, 0f, 0f };
+	vector = Vector3(0f, 0f, 0f);
+	vector2 = Vector3(0f, 0f, 0f);
 
 	switch (uParam0->f_17)
 	{
 		case 0:
 			width = 1.5f;
-			vector = { 252.03207f, 6126.4194f, -160.37057f };
-			vector2 = { 253.11754f, 6126.4194f, -158.36903f };
+			vector = Vector3(252.03207f, 6126.4194f, -160.37057f);
+			vector2 = Vector3(253.11754f, 6126.4194f, -158.36903f);
 			break;
 	
 		case 1:
 			width = 1.5f;
-			vector = { 254.35748f, 6126.4194f, -160.38939f };
-			vector2 = { 255.52345f, 6126.4194f, -158.3873f };
+			vector = Vector3(254.35748f, 6126.4194f, -160.38939f);
+			vector2 = Vector3(255.52345f, 6126.4194f, -158.3873f);
 			break;
 	
 		case 2:
 			width = 1.5f;
-			vector = { 260.65747f, 6126.4194f, -160.37361f };
-			vector2 = { 262.07504f, 6126.4194f, -158.38272f };
+			vector = Vector3(260.65747f, 6126.4194f, -160.37361f);
+			vector2 = Vector3(262.07504f, 6126.4194f, -158.38272f);
 			break;
 	
 		case 3:
 			width = 1.5f;
-			vector = { 263.20764f, 6126.4194f, -160.39838f };
-			vector2 = { 264.53976f, 6126.4194f, -158.37231f };
+			vector = Vector3(263.20764f, 6126.4194f, -160.39838f);
+			vector2 = Vector3(264.53976f, 6126.4194f, -158.37231f);
 			break;
 	}
 
-	vector3 = { func_233(&unk5) };
+	vector3 = Vector3(func_233(&unk5));
 
 	for (i = 0; i < 32; i = i + 1)
 	{
@@ -6441,7 +6441,7 @@ BOOL func_237(var uParam0, var uParam1, var uParam2, float fParam3, var uParam4,
 	var offsetFromCoordAndHeadingInWorldCoords;
 	float unk;
 
-	offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(0f, 0f, 0f, fParam3, 0f, 1f, 0f) };
+	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(0f, 0f, 0f, fParam3, 0f, 1f, 0f));
 	num = func_238(func_239(offsetFromCoordAndHeadingInWorldCoords), func_239(uParam4 - uParam0));
 	return MISC::ACOS(num) <= fParam7;
 }
@@ -6461,7 +6461,7 @@ Vector3 func_239(float fParam0, var uParam1, var uParam2) // Position - 0x6602
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{

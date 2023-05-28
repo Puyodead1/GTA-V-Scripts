@@ -167,7 +167,7 @@ int func_6(var uParam0) // Position - 0x194
 {
 	if (Global_32442.f_61 < 20)
 	{
-		Global_32442[Global_32442.f_61] = { *uParam0 };
+		Global_32442[Global_32442.f_61] = Vector3(*uParam0);
 		Global_32442.f_61 = Global_32442.f_61 + 1;
 		return 1;
 	}

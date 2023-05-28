@@ -13,7 +13,7 @@
 
 void main() // Position - 0x0
 {
-	uLocal_1 = { 613f, 6438f, 31f };
+	uLocal_1 = Vector3(613f, 6438f, 31f);
 	fLocal_5 = 5f;
 	bLocal_6 = true;
 	MISC::SET_MISSION_FLAG(true);
@@ -61,7 +61,7 @@ void main() // Position - 0x0
 		
 			if (bLocal_9)
 			{
-				uLocal_1 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
+				uLocal_1 = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
 				bLocal_9 = false;
 			}
 		

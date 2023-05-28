@@ -5721,7 +5721,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				case 0:
 					if (!bParam32)
 					{
-						uParam30->f_13 = { 2732.426f, -387.6855f, -49.02532f };
+						uParam30->f_13 = Vector3(2732.426f, -387.6855f, -49.02532f);
 						uParam30->f_12 = 17.28f;
 						uParam30->f_16 = 0;
 						uParam30->f_8 = 7;
@@ -5729,7 +5729,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					}
 					else if (!bParam33)
 					{
-						uParam30->f_13 = { 2724.772f, -383.15f, -48.9625f };
+						uParam30->f_13 = Vector3(2724.772f, -383.15f, -48.9625f);
 						uParam30->f_12 = -90f;
 						uParam30->f_16 = 0;
 						uParam30->f_8 = 8;
@@ -5740,7 +5740,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						switch (uParam0.f_6)
 						{
 							case 0:
-								uParam30->f_13 = { 2737.947f, -381.5125f, -48.56255f };
+								uParam30->f_13 = Vector3(2737.947f, -381.5125f, -48.56255f);
 								uParam30->f_12 = 1.25f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 11;
@@ -5748,7 +5748,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 1:
-								uParam30->f_13 = { 2738.195f, -380.763f, -49.43f };
+								uParam30->f_13 = Vector3(2738.195f, -380.763f, -49.43f);
 								uParam30->f_12 = 95f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 12;
@@ -5756,7 +5756,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 2:
-								uParam30->f_13 = { 2723.006f, -389.275f, -49.0089f };
+								uParam30->f_13 = Vector3(2723.006f, -389.275f, -49.0089f);
 								uParam30->f_12 = -74.5f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 13;
@@ -5764,7 +5764,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 3:
-								uParam30->f_13 = { 2735.208f, -380.53f, -49.345f };
+								uParam30->f_13 = Vector3(2735.208f, -380.53f, -49.345f);
 								uParam30->f_12 = 38.16f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 14;
@@ -5772,7 +5772,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 4:
-								uParam30->f_13 = { 2722.576f, -382.3125f, -49.005f };
+								uParam30->f_13 = Vector3(2722.576f, -382.3125f, -49.005f);
 								uParam30->f_12 = -43f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 15;
@@ -5780,7 +5780,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 5:
-								uParam30->f_13 = { 2728.902f, -389.2875f, -49.99f };
+								uParam30->f_13 = Vector3(2728.902f, -389.2875f, -49.99f);
 								uParam30->f_12 = 88.75f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 16;
@@ -5793,7 +5793,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				case 1:
 					if (!bParam32)
 					{
-						uParam30->f_13 = { 2723.778f, -384.875f, -49.02532f };
+						uParam30->f_13 = Vector3(2723.778f, -384.875f, -49.02532f);
 						uParam30->f_12 = -57f;
 						uParam30->f_16 = 1;
 						uParam30->f_8 = 9;
@@ -5801,7 +5801,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					}
 					else if (!bParam33)
 					{
-						uParam30->f_13 = { 2731.507f, -381.1375f, -49.02532f };
+						uParam30->f_13 = Vector3(2731.507f, -381.1375f, -49.02532f);
 						uParam30->f_12 = 141.75f;
 						uParam30->f_16 = 1;
 						uParam30->f_8 = 10;
@@ -5819,7 +5819,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						switch (uParam0.f_7)
 						{
 							case 0:
-								uParam30->f_13 = { 2710.603f, -354.328f, -56.162f };
+								uParam30->f_13 = Vector3(2710.603f, -354.328f, -56.162f);
 								uParam30->f_12 = 104.5f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 18;
@@ -5828,7 +5828,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 1:
-								uParam30->f_13 = { 2710.709f, -355.79f, -56.162f };
+								uParam30->f_13 = Vector3(2710.709f, -355.79f, -56.162f);
 								uParam30->f_12 = -128f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 19;
@@ -5837,7 +5837,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 2:
-								uParam30->f_13 = { 2709.916f, -357.1025f, -55.16993f };
+								uParam30->f_13 = Vector3(2709.916f, -357.1025f, -55.16993f);
 								uParam30->f_12 = -90f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 17;
@@ -5846,7 +5846,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 3:
-								uParam30->f_13 = { 2694.033f, -358.24f, -55.18243f };
+								uParam30->f_13 = Vector3(2694.033f, -358.24f, -55.18243f);
 								uParam30->f_12 = -68.5f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 20;
@@ -5867,7 +5867,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						switch (uParam0.f_8)
 						{
 							case 0:
-								uParam30->f_13 = { 2712.357f, -352.9247f, -55.65743f };
+								uParam30->f_13 = Vector3(2712.357f, -352.9247f, -55.65743f);
 								uParam30->f_12 = 0f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 21;
@@ -5876,7 +5876,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 1:
-								uParam30->f_13 = { 2711.475f, -352.9872f, -55.19493f };
+								uParam30->f_13 = Vector3(2711.475f, -352.9872f, -55.19493f);
 								uParam30->f_12 = -19.25f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 15;
@@ -5885,7 +5885,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 2:
-								uParam30->f_13 = { 2713.429f, -352.94f, -55.19493f };
+								uParam30->f_13 = Vector3(2713.429f, -352.94f, -55.19493f);
 								uParam30->f_12 = 180f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 22;
@@ -5894,7 +5894,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 3:
-								uParam30->f_13 = { 2716.49f, -359.0622f, -54.59493f };
+								uParam30->f_13 = Vector3(2716.49f, -359.0622f, -54.59493f);
 								uParam30->f_12 = 180f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 23;
@@ -5915,7 +5915,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 						switch (uParam0.f_9)
 						{
 							case 0:
-								uParam30->f_13 = { 2712.863f, -356.7349f, -55.82305f };
+								uParam30->f_13 = Vector3(2712.863f, -356.7349f, -55.82305f);
 								uParam30->f_12 = -150.5f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 24;
@@ -5924,7 +5924,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 1:
-								uParam30->f_13 = { 2714.122f, -355.6775f, -56.15743f };
+								uParam30->f_13 = Vector3(2714.122f, -355.6775f, -56.15743f);
 								uParam30->f_12 = -99.25f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 25;
@@ -5933,7 +5933,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 								break;
 						
 							case 2:
-								uParam30->f_13 = { 2715.202f, -357.2525f, -55.20743f };
+								uParam30->f_13 = Vector3(2715.202f, -357.2525f, -55.20743f);
 								uParam30->f_12 = 90f;
 								uParam30->f_16 = 0;
 								uParam30->f_8 = 26;
@@ -5949,7 +5949,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 5:
-					uParam30->f_13 = { 2725.3936f, -382.9775f, -49.9124f };
+					uParam30->f_13 = Vector3(2725.3936f, -382.9775f, -49.9124f);
 					uParam30->f_12 = 34.9f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 4608;
@@ -5960,7 +5960,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 6:
-					uParam30->f_13 = { 2724.9746f, -382.305f, -49.9999f };
+					uParam30->f_13 = Vector3(2724.9746f, -382.305f, -49.9999f);
 					uParam30->f_12 = 217.665f;
 					uParam30->f_16 = 1;
 					uParam30->f_6 = 65;
@@ -5971,7 +5971,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 7:
-					uParam30->f_13 = { 2729.8884f, -388.92f, -49.3124f };
+					uParam30->f_13 = Vector3(2729.8884f, -388.92f, -49.3124f);
 					uParam30->f_12 = 300f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 37377;
@@ -5982,7 +5982,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 8:
-					uParam30->f_13 = { 2725.3784f, -386.4875f, -49.2124f };
+					uParam30->f_13 = Vector3(2725.3784f, -386.4875f, -49.2124f);
 					uParam30->f_12 = 90f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 16781313;
@@ -5993,7 +5993,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 9:
-					uParam30->f_13 = { 2734.2324f, -387.2575f, -49.3799f };
+					uParam30->f_13 = Vector3(2734.2324f, -387.2575f, -49.3799f);
 					uParam30->f_12 = 134.565f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 4160;
@@ -6007,7 +6007,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 10:
-					uParam30->f_13 = { 2733.6694f, -387.7975f, -49.3624f };
+					uParam30->f_13 = Vector3(2733.6694f, -387.7975f, -49.3624f);
 					uParam30->f_12 = -47.575f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 134218241;
@@ -6021,7 +6021,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 11:
-					uParam30->f_13 = { 2725.3135f, -387.165f, -49.9525f };
+					uParam30->f_13 = Vector3(2725.3135f, -387.165f, -49.9525f);
 					uParam30->f_12 = 38.64f;
 					uParam30->f_16 = 1;
 					uParam30->f_6 = 4673;
@@ -6032,7 +6032,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 12:
-					uParam30->f_13 = { 2728.1426f, -387.5425f, -49.1974f };
+					uParam30->f_13 = Vector3(2728.1426f, -387.5425f, -49.1974f);
 					uParam30->f_12 = 180f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 1;
@@ -6043,7 +6043,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 13:
-					uParam30->f_13 = { 2736.2815f, -374.2325f, -49.9999f };
+					uParam30->f_13 = Vector3(2736.2815f, -374.2325f, -49.9999f);
 					uParam30->f_12 = 6.48f;
 					uParam30->f_16 = 1;
 					uParam30->f_6 = 16777216;
@@ -6054,7 +6054,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 14:
-					uParam30->f_13 = { 2736.2366f, -373.4775f, -50.0024f };
+					uParam30->f_13 = Vector3(2736.2366f, -373.4775f, -50.0024f);
 					uParam30->f_12 = 190.165f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 16777857;
@@ -6065,7 +6065,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 15:
-					uParam30->f_13 = { 2736.4185f, -379.0775f, -49.3649f };
+					uParam30->f_13 = Vector3(2736.4185f, -379.0775f, -49.3649f);
 					uParam30->f_12 = 100.64f;
 					uParam30->f_16 = 0;
 					uParam30->f_6 = 65;
@@ -6076,7 +6076,7 @@ void func_162(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 					break;
 			
 				case 16:
-					uParam30->f_13 = { 2735.6836f, -379.1575f, -49.3649f };
+					uParam30->f_13 = Vector3(2735.6836f, -379.1575f, -49.3649f);
 					uParam30->f_12 = 280.63f;
 					uParam30->f_16 = 1;
 					uParam30->f_6 = 4097;

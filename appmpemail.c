@@ -1723,7 +1723,7 @@ void main() // Position - 0x0
 	iLocal_43 = MISC::GET_GAME_TIMER();
 	Global_20387 = 0;
 	MOBILE::GET_MOBILE_PHONE_POSITION(&uLocal_1366);
-	fLocal_1363 = { uLocal_1366 };
+	fLocal_1363 = Vector3(uLocal_1366);
 	fLocal_1363 = fLocal_1363 - 10f;
 	fLocal_1363.f_1 = fLocal_1363.f_1 + 20f;
 	Global_22758 = 0;
@@ -3267,12 +3267,12 @@ void func_37() // Position - 0x1D3E
 				Global_4541032[iLocal_36].f_28 = 1;
 				iLocal_38 = 0;
 				TEXT_LABEL_ASSIGN_STRING(&Global_22766, "NO_HYPERLINK", 64);
-				gxt = { Global_4541032[iLocal_36] };
+				gxt = Vector3(Global_4541032[iLocal_36]);
 				TEXT_LABEL_APPEND_STRING(&gxt, "_LINK", 64);
 			
 				if (HUD::DOES_TEXT_LABEL_EXIST(&gxt))
 				{
-					Global_22766 = { gxt };
+					Global_22766 = Vector3(gxt);
 					iLocal_38 = 1;
 				
 					if (Global_20371)
@@ -3692,7 +3692,7 @@ void func_42() // Position - 0x2B62
 				}
 				else
 				{
-					uLocal_46 = { uLocal_417[i] };
+					uLocal_46 = Vector3(uLocal_417[i]);
 				}
 			
 				bLocal_1362 = true;
@@ -3857,13 +3857,13 @@ float func_46(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			num2 = SYSTEM::SIN(num * 90f);
 		}
 	
-		Global_20311 = { func_47(uParam0, uParam3, num2) };
-		Global_20314 = { func_47(fParam6, fParam9, num2) };
+		Global_20311 = Vector3(func_47(uParam0, uParam3, num2));
+		Global_20314 = Vector3(func_47(fParam6, fParam9, num2));
 	}
 	else
 	{
-		Global_20311 = { uParam3 };
-		Global_20314 = { fParam9 };
+		Global_20311 = Vector3(uParam3);
+		Global_20314 = Vector3(fParam9);
 	}
 
 	MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
@@ -3873,7 +3873,7 @@ float func_46(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 
 Vector3 func_47(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6) // Position - 0x2E97
 {
-	return uParam0 + ((uParam3 - uParam0) * { fParam6, fParam6, fParam6 });
+	return uParam0 + ((uParam3 - uParam0) * Vector3(fParam6, fParam6, fParam6));
 }
 
 float func_48(float fParam0, float fParam1, float fParam2) // Position - 0x2EB1
@@ -4123,7 +4123,7 @@ void func_53() // Position - 0x3302
 					func_16(&(Global_2028[Global_4541032[num3].f_17].f_3));
 				}
 			
-				unk14 = { Global_4541032[num3] };
+				unk14 = Vector3(Global_4541032[num3]);
 			
 				if (func_43(&Global_4541032[num3]))
 				{
@@ -4596,14 +4596,14 @@ void func_62(BOOL bParam0, BOOL bParam1) // Position - 0x401C
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

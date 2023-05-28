@@ -2039,10 +2039,10 @@ void func_34() // Position - 0x168C
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -2566,8 +2566,8 @@ void func_66(int iParam0) // Position - 0x2096
 	var unk;
 	var unk2;
 
-	unk = { func_69(iParam0) };
-	unk17 = { func_67(iParam0) };
+	unk = Vector3(func_69(iParam0));
+	unk17 = Vector3(func_67(iParam0));
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_TEXTURE_NAME_STRING(&unk17);
 	func_58(&unk);
 	return;
@@ -2583,7 +2583,7 @@ struct<16> func_67(int iParam0) // Position - 0x20C0
 	for (i = 0; i < 4; i = i + 1)
 	{
 		if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(i)) && iLocal_382[i] == iParam0)
-			unk = { uLocal_239[i] };
+			unk = Vector3(uLocal_239[i]);
 	}
 
 	return unk;
@@ -2606,7 +2606,7 @@ struct<16> func_69(int iParam0) // Position - 0x211B
 	for (i = 0; i < 4; i = i + 1)
 	{
 		if (NETWORK::NETWORK_IS_PARTICIPANT_ACTIVE(PLAYER::INT_TO_PARTICIPANTINDEX(i)) && iLocal_382[i] == iParam0)
-			unk = { iLocal_304.f_12[i] };
+			unk = Vector3(iLocal_304.f_12[i]);
 	}
 
 	return unk;
@@ -2751,7 +2751,7 @@ void func_75(int iParam0) // Position - 0x2366
 
 	for (i = num + 1; i < Global_1666829; i = i + 1)
 	{
-		Global_1666668[num] = { Global_1666668[i] };
+		Global_1666668[num] = Vector3(Global_1666668[i]);
 		num = num + 1;
 	}
 
@@ -5274,7 +5274,7 @@ void func_125(var uParam0) // Position - 0x55A9
 	{
 		if (!IS_BIT_SET(uParam0->f_2, 11))
 		{
-			unk = { func_69(iLocal_382[iLocal_304.f_1]) };
+			unk = Vector3(func_69(iLocal_382[iLocal_304.f_1]));
 			color = func_127(iLocal_382[iLocal_304.f_1]);
 			func_126(uParam0, "DCTL_WINNERV2", &unk, 0, 1, color);
 			MISC::SET_BIT(&(uParam0->f_2), 11);
@@ -6187,8 +6187,8 @@ void func_149(int iParam0) // Position - 0x6CA8
 	var unk2;
 	int unk3;
 
-	unk = { func_69(iParam0) };
-	unk17 = { func_67(iParam0) };
+	unk = Vector3(func_69(iParam0));
+	unk17 = Vector3(func_67(iParam0));
 	value = func_150(iParam0);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_TEXTURE_NAME_STRING(&unk17);
@@ -6599,7 +6599,7 @@ void func_159(var uParam0) // Position - 0x71DA
 					{
 						if (num < 16)
 						{
-							unk10[num] = { eventData };
+							unk10[num] = Vector3(eventData);
 						
 							if (!IS_BIT_SET(iLocal_235, 7 + eventData.f_4))
 								MISC::SET_BIT(&iLocal_235, 7 + eventData.f_4);
@@ -6630,8 +6630,8 @@ void func_159(var uParam0) // Position - 0x71DA
 	{
 		if (uLocal_132[j].f_5 < 99999 && uLocal_132[j].f_5 > -1)
 		{
-			unk10[num + j] = { uLocal_132[j] };
-			uLocal_132[j] = { unk203 };
+			unk10[num + j] = Vector3(uLocal_132[j]);
+			uLocal_132[j] = Vector3(unk203);
 			num5 = num5 + 1;
 		}
 	}
@@ -6664,7 +6664,7 @@ void func_159(var uParam0) // Position - 0x71DA
 					num6 = 0;
 				
 					if (func_161(&num6))
-						uLocal_132[num6] = { unk10[i] };
+						uLocal_132[num6] = Vector3(unk10[i]);
 				
 					if (unk10[i].f_5 > uLocal_229[unk10[i].f_4] + 4)
 						uLocal_229[unk10[i].f_4] = uLocal_229[unk10[i].f_4] + 1;
@@ -6925,9 +6925,9 @@ int func_163(var uParam0, int iParam1, int iParam2) // Position - 0x7B6C
 	
 		if (num <= num2)
 		{
-			unk = { uParam0->[num] };
-			uParam0->[num] = { uParam0->[num2] };
-			uParam0->[num2] = { unk };
+			unk = Vector3(uParam0->[num]);
+			uParam0->[num] = Vector3(uParam0->[num2]);
+			uParam0->[num2] = Vector3(unk);
 			num = num + 1;
 			num2 = num2 - 1;
 		}
@@ -7001,7 +7001,7 @@ void func_166() // Position - 0x7D5B
 
 	for (i = 0; i <= 15; i = i + 1)
 	{
-		uLocal_132[i] = { unk };
+		uLocal_132[i] = Vector3(unk);
 	}
 
 	return;
@@ -7684,14 +7684,14 @@ void func_193(BOOL bParam0, BOOL bParam1) // Position - 0x8B66
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

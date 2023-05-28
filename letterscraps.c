@@ -913,14 +913,14 @@ void func_9(BOOL bParam0, BOOL bParam1) // Position - 0x4B2
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -1094,7 +1094,7 @@ BOOL func_23(var uParam0, var uParam1) // Position - 0x7DA
 
 	flag2 = !func_20() && !func_20();
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	for (i = 0; i < 1; i = i + 1)
 	{
@@ -1967,67 +1967,67 @@ void func_62() // Position - 0x196F
 
 	for (i = 0; i < 50; i = i + 1)
 	{
-		iLocal_57[i].f_3 = { func_63(i, 0) };
+		iLocal_57[i].f_3 = Vector3(func_63(i, 0));
 		iLocal_57[i].f_10 = 0;
 	}
 
 	iLocal_610 = 0;
 	iLocal_57[0].f_9 = 179.4746f;
-	iLocal_57[1].f_6 = { 0f, 0f, 198f };
+	iLocal_57[1].f_6 = Vector3(0f, 0f, 198f);
 	iLocal_57[2].f_9 = 104f;
 	iLocal_57[3].f_9 = 321.5f;
-	iLocal_57[4].f_6 = { 0f, 0f, 49f };
-	iLocal_57[5].f_6 = { 0f, 0f, 286.5f };
+	iLocal_57[4].f_6 = Vector3(0f, 0f, 49f);
+	iLocal_57[5].f_6 = Vector3(0f, 0f, 286.5f);
 	iLocal_57[6].f_9 = 278.0092f;
-	iLocal_57[7].f_6 = { 5.3f, -1801.4f, 15.57f };
+	iLocal_57[7].f_6 = Vector3(5.3f, -1801.4f, 15.57f);
 	iLocal_57[8].f_9 = 80.5f;
 	iLocal_57[9].f_9 = 116f;
 	iLocal_57[10].f_9 = 15f;
 	iLocal_57[11].f_9 = 305.5f;
 	iLocal_57[12].f_9 = 0f;
 	iLocal_57[13].f_9 = 95f;
-	iLocal_57[13].f_6 = { -0.91f, -0.03f, -0.81f };
+	iLocal_57[13].f_6 = Vector3(-0.91f, -0.03f, -0.81f);
 	iLocal_57[14].f_9 = 40f;
 	iLocal_57[15].f_9 = 40f;
 	iLocal_57[16].f_9 = 40f;
 	iLocal_57[17].f_9 = 90f;
-	iLocal_57[17].f_6 = { -0.55f, 0f, 0.78f };
-	iLocal_57[18].f_6 = { 0f, 0f, 0f };
+	iLocal_57[17].f_6 = Vector3(-0.55f, 0f, 0.78f);
+	iLocal_57[18].f_6 = Vector3(0f, 0f, 0f);
 	iLocal_57[19].f_9 = 40f;
-	iLocal_57[20].f_6 = { 0f, 2f, 15f };
+	iLocal_57[20].f_6 = Vector3(0f, 2f, 15f);
 	iLocal_57[21].f_9 = 40f;
 	iLocal_57[22].f_9 = 40f;
 	iLocal_57[23].f_9 = 40f;
 	iLocal_57[24].f_9 = 40f;
 	iLocal_57[25].f_9 = 40f;
 	iLocal_57[26].f_9 = 40f;
-	iLocal_57[26].f_6 = { -6f, 10f, 0f };
+	iLocal_57[26].f_6 = Vector3(-6f, 10f, 0f);
 	iLocal_57[27].f_9 = 40f;
-	iLocal_57[27].f_6 = { -4.66f, 8.7f, 67.03f };
+	iLocal_57[27].f_6 = Vector3(-4.66f, 8.7f, 67.03f);
 	iLocal_57[28].f_9 = 40f;
-	iLocal_57[28].f_6 = { 1.54f, -8.31f, -19.94f };
+	iLocal_57[28].f_6 = Vector3(1.54f, -8.31f, -19.94f);
 	iLocal_57[29].f_9 = 40f;
 	iLocal_57[30].f_9 = 40f;
-	iLocal_57[30].f_6 = { 27.21f, -3.11f, -2.09f };
+	iLocal_57[30].f_6 = Vector3(27.21f, -3.11f, -2.09f);
 	iLocal_57[31].f_9 = 40f;
 	iLocal_57[32].f_9 = 40f;
 	iLocal_57[33].f_9 = 40f;
-	iLocal_57[33].f_6 = { -9.89f, 0.3f, -0.01f };
+	iLocal_57[33].f_6 = Vector3(-9.89f, 0.3f, -0.01f);
 	iLocal_57[34].f_9 = 40f;
 	iLocal_57[35].f_9 = 40f;
 	iLocal_57[36].f_9 = 40f;
-	iLocal_57[36].f_6 = { 6.5f, -4.41f, -0.62f };
-	iLocal_57[37].f_6 = { -9f, 5.3f, -2f };
+	iLocal_57[36].f_6 = Vector3(6.5f, -4.41f, -0.62f);
+	iLocal_57[37].f_6 = Vector3(-9f, 5.3f, -2f);
 	iLocal_57[38].f_9 = 40f;
-	iLocal_57[38].f_6 = { -13.32f, -0.57f, -0.15f };
+	iLocal_57[38].f_6 = Vector3(-13.32f, -0.57f, -0.15f);
 	iLocal_57[39].f_9 = 40f;
-	iLocal_57[39].f_6 = { 4.71f, -21.26f, -0.06f };
+	iLocal_57[39].f_6 = Vector3(4.71f, -21.26f, -0.06f);
 	iLocal_57[40].f_9 = 40f;
 	iLocal_57[41].f_9 = 80f;
-	iLocal_57[42].f_6 = { -2f, 9f, 1f };
+	iLocal_57[42].f_6 = Vector3(-2f, 9f, 1f);
 	iLocal_57[43].f_9 = 198f;
 	iLocal_57[44].f_9 = 198f;
-	iLocal_57[44].f_6 = { 0f, -20f, 0f };
+	iLocal_57[44].f_6 = Vector3(0f, -20f, 0f);
 	iLocal_57[45].f_9 = 198f;
 	iLocal_57[46].f_9 = 198f;
 	iLocal_57[47].f_9 = 198f;

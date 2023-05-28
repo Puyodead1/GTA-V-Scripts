@@ -673,7 +673,7 @@ void main() // Position - 0x0
 	PLAYER::CLEAR_PLAYER_HAS_DAMAGED_AT_LEAST_ONE_PED(PLAYER::GET_PLAYER_INDEX());
 	MISC::CLEAR_AREA_OF_PEDS(130.8067f, -1299.1659f, 28.2327f, 2f, 0);
 	MISC::CLEAR_AREA_OF_PEDS(128.12639f, -1299.6909f, 28.23271f, 2f, 0);
-	iLocal_341 = PED::ADD_SCENARIO_BLOCKING_AREA({ 28.23271f, -1299.6909f, 128.12639f } - { 2f, 1f, 1f }, { 28.23271f, -1299.6909f, 128.12639f } + { 2f, 1f, 1f }, false, true, true, true);
+	iLocal_341 = PED::ADD_SCENARIO_BLOCKING_AREA(Vector3(28.23271f, -1299.6909f, 128.12639f) - Vector3(2f, 1f, 1f), Vector3(28.23271f, -1299.6909f, 128.12639f) + Vector3(2f, 1f, 1f), false, true, true, true);
 	func_118(false);
 
 	while (true)
@@ -1174,8 +1174,8 @@ BOOL func_32() // Position - 0x9F8
 			}
 		}
 	
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedLocal_69, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_69, true));
 		num = SYSTEM::VDIST2(entityCoords, entityCoords2);
 	
 		if (num > 15f * 15f)
@@ -1367,7 +1367,7 @@ void func_36() // Position - 0xF05
 	if (!func_43(&uLocal_343))
 		return;
 
-	vector = { func_34() };
+	vector = Vector3(func_34());
 	targetHeading = func_42();
 
 	if (SYSTEM::VDIST(ENTITY::GET_ENTITY_COORDS(pedLocal_69, true), vector) > 2f && TASK::GET_SCRIPT_TASK_STATUS(pedLocal_69, SCRIPT_TASK_FOLLOW_NAV_MESH_TO_COORD) != 1)
@@ -2086,16 +2086,16 @@ int func_70(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1B07
 		if (func_82(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_81();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -2232,7 +2232,7 @@ void func_71() // Position - 0x1DD5
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -2296,18 +2296,18 @@ void func_77() // Position - 0x1ED2
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -2397,7 +2397,7 @@ void func_81() // Position - 0x20C9
 	}
 
 	Global_21014.f_161 = -99;
-	Global_21014.f_162 = { 0f, 0f, 0f };
+	Global_21014.f_162 = Vector3(0f, 0f, 0f);
 	return;
 }
 
@@ -2439,7 +2439,7 @@ void func_83() // Position - 0x2159
 
 void func_84(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x21B0
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -2608,7 +2608,7 @@ BOOL func_94() // Position - 0x240C
 
 	if (func_44(&uLocal_343))
 	{
-		pedLocal_69 = PED::CREATE_PED(PED_TYPE_MISSION, joaat("S_M_M_Bouncer_01"), func_34() - { 1f, 0f, 0f }, func_42(), true, true);
+		pedLocal_69 = PED::CREATE_PED(PED_TYPE_MISSION, joaat("S_M_M_Bouncer_01"), func_34() - Vector3(1f, 0f, 0f), func_42(), true, true);
 		func_95(true);
 		WEAPON::GIVE_WEAPON_TO_PED(pedLocal_69, joaat("WEAPON_PISTOL"), -1, false, true);
 		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(pedLocal_69, true);
@@ -2722,7 +2722,7 @@ void func_100(var uParam0, var uParam1) // Position - 0x2681
 {
 	*uParam1 = *uParam0;
 	uParam1->f_1 = uParam0->f_1;
-	uParam1->f_2 = { uParam0->f_2 };
+	uParam1->f_2 = Vector3(uParam0->f_2);
 	return;
 }
 

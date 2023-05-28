@@ -614,7 +614,7 @@ void func_12() // Position - 0x895
 				
 					if (Global_4542574 == 0)
 					{
-						gamerHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+						gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 						num2 = 0;
 						NETWORK::NETWORK_HAVE_USER_CONTENT_PRIVILEGES(0) == false;
 					
@@ -662,7 +662,7 @@ void func_12() // Position - 0x895
 		
 			if (iLocal_43 == 1)
 			{
-				Global_113648.f_14053[Global_20383].f_11 = { Global_9058[Global_20383][1].f_144[Global_9058[Global_20383][1].f_259] };
+				Global_113648.f_14053[Global_20383].f_11 = Vector3(Global_9058[Global_20383][1].f_144[Global_9058[Global_20383][1].f_259]);
 			
 				if (Global_78558)
 					_MPCHAR_STAT_SET_INT(MP_STAT_FM_CELLPHONE_RINGTONE, Global_9058[3][1].f_259, -1, true, false);
@@ -1155,7 +1155,7 @@ void func_27() // Position - 0x16EF
 	if (Global_78558)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_9058[3][4].f_7[0], "CELL_CREWEMB" /*Crew Emblem*/, 16);
-		gamerHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+		gamerHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 	
 		if (!NETWORK::NETWORK_CLAN_PLAYER_IS_ACTIVE(&gamerHandle))
 			TEXT_LABEL_ASSIGN_STRING(&Global_9058[3][4].f_7[0], "CELL_840" /*Default*/, 16);

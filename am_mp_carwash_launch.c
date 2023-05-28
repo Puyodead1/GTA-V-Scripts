@@ -108,7 +108,7 @@ void main() // Position - 0x0
 	iLocal_46 = 64;
 	hashKey = joaat("carwash1");
 	scriptName = "carwash1";
-	vector = { uScriptParam_50.f_1[0] };
+	vector = Vector3(uScriptParam_50.f_1[0]);
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("am_mp_carwash_launch")) > 1)
 		SCRIPT::TERMINATE_THIS_THREAD();

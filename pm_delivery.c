@@ -895,7 +895,7 @@ BOOL func_22(Blip* pblParam0, Vector3 vParam1, var uParam2, var uParam3, Vector3
 	int includeZ;
 	int p10;
 
-	vector = { vParam1 + { 1f, 0f, 0f } };
+	vector = { vParam1 + Vector3(1f, 0f, 0f) };
 	pblParam0->f_17[0] = iParam15;
 	pblParam0->f_17[1] = iParam16;
 	pblParam0->f_17[2] = iParam17;
@@ -2020,7 +2020,7 @@ BOOL func_44(Blip* pblParam0, var uParam1, var uParam2, var uParam3, var uParam4
 							{
 								if (ENTITY::IS_ENTITY_IN_WATER(vehiclePedIsIn) && !VEHICLE::IS_VEHICLE_ON_ALL_WHEELS(vehiclePedIsIn))
 								{
-									entityCoords = { ENTITY::GET_ENTITY_COORDS(vehiclePedIsIn, true) };
+									entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(vehiclePedIsIn, true));
 								
 									if (entityCoords.f_2 < -1f)
 										TASK::TASK_LEAVE_VEHICLE(pblParam0->f_17[i], vehiclePedIsIn, 64);
@@ -3427,9 +3427,9 @@ void func_88(var uParam0, Vehicle veParam1, Vector3 vParam2, var uParam3, var uP
 			if (!PED::IS_PED_IN_ANY_VEHICLE(pedIndexFromEntityIndex, false))
 				if (PED::IS_PED_A_PLAYER(pedIndexFromEntityIndex))
 					if (!func_89())
-						vParam2 = { 0f, 0f, 1f };
+						vParam2 = Vector3(0f, 0f, 1f);
 				else if (PED::IS_PED_MALE(pedIndexFromEntityIndex))
-					vParam2 = { 0f, 0f, 1f };
+					vParam2 = Vector3(0f, 0f, 1f);
 		}
 	}
 
@@ -3935,7 +3935,7 @@ void func_107() // Position - 0x513F
 {
 	float distanceBetweenCoords;
 
-	uLocal_64 = { func_109(func_111(), iLocal_36) };
+	uLocal_64 = Vector3(func_109(func_111(), iLocal_36));
 	fLocal_73 = func_108(func_111(), iLocal_36);
 
 	if (iLocal_36 > 6)
@@ -3949,7 +3949,7 @@ void func_107() // Position - 0x513F
 
 	if (func_111() == 10)
 	{
-		uLocal_67 = { -1161.2133f, -1567.0677f, 3.4234f };
+		uLocal_67 = Vector3(-1161.2133f, -1567.0677f, 3.4234f);
 		hLocal_88 = joaat("pony2");
 	
 		if (iLocal_36 == 0)
@@ -3972,14 +3972,14 @@ void func_107() // Position - 0x513F
 		}
 		else if (iLocal_36 == 3)
 		{
-			uLocal_70 = { -3121.2615f, 1152.92f, 19.4047f };
+			uLocal_70 = Vector3(-3121.2615f, 1152.92f, 19.4047f);
 			fLocal_74 = 176.4887f;
 			hLocal_89 = joaat("police4");
 			hLocal_87 = joaat("S_M_Y_Cop_01");
 		}
 		else if (iLocal_36 == 4)
 		{
-			uLocal_70 = { 1543.1453f, 2184.3706f, 77.8114f };
+			uLocal_70 = Vector3(1543.1453f, 2184.3706f, 77.8114f);
 			fLocal_74 = 45.3499f;
 			hLocal_89 = joaat("police4");
 			hLocal_87 = joaat("S_M_Y_Cop_01");
@@ -3991,25 +3991,25 @@ void func_107() // Position - 0x513F
 	}
 	else if (func_111() == 14)
 	{
-		uLocal_67 = { -2169.8284f, 4277.365f, 47.9568f };
+		uLocal_67 = Vector3(-2169.8284f, 4277.365f, 47.9568f);
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_64, uLocal_67, true);
 		iLocal_83 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
 	}
 	else if (func_111() == 13)
 	{
-		uLocal_67 = { -323.356f, 6264.4307f, 30.4463f };
+		uLocal_67 = Vector3(-323.356f, 6264.4307f, 30.4463f);
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_64, uLocal_67, true);
 		iLocal_83 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 40f) / 2f);
 	}
 	else if (func_111() == 12)
 	{
-		uLocal_67 = { 198.5282f, 342.2399f, 104.9566f };
+		uLocal_67 = Vector3(198.5282f, 342.2399f, 104.9566f);
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_64, uLocal_67, true);
 		iLocal_83 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
 	}
 	else if (func_111() == 11)
 	{
-		uLocal_67 = { -560.0195f, 301.1481f, 82.1436f };
+		uLocal_67 = Vector3(-560.0195f, 301.1481f, 82.1436f);
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(uLocal_64, uLocal_67, true);
 		iLocal_83 = SYSTEM::ROUND(((distanceBetweenCoords / 16.5f) + 15f) / 2f);
 	}

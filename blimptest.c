@@ -119,7 +119,7 @@ void func_1() // Position - 0x116
 		
 			if (iLocal_47 == 1)
 			{
-				entityCoords = { ENTITY::GET_ENTITY_COORDS(veLocal_40, false) };
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_40, false));
 				func_8(entityCoords);
 			}
 		
@@ -263,18 +263,18 @@ void func_8(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x366
 
 	num = 12;
 	unk = 12;
-	unk[0] = { 5f, 0f, 0f };
-	unk[1] = { 0f, 5f, 0f };
-	unk[2] = { 0f, 0f, 5f };
-	unk[3] = { 5f, 5f, 0f };
-	unk[4] = { 5f, 0f, 5f };
-	unk[5] = { 0f, 5f, 5f };
-	unk[6] = { 20f, 0f, 0f };
-	unk[7] = { 0f, 20f, 0f };
-	unk[8] = { 0f, 0f, 20f };
-	unk[9] = { 20f, 20f, 0f };
-	unk[10] = { 20f, 0f, 20f };
-	unk[11] = { 0f, 20f, 20f };
+	unk[0] = Vector3(5f, 0f, 0f);
+	unk[1] = Vector3(0f, 5f, 0f);
+	unk[2] = Vector3(0f, 0f, 5f);
+	unk[3] = Vector3(5f, 5f, 0f);
+	unk[4] = Vector3(5f, 0f, 5f);
+	unk[5] = Vector3(0f, 5f, 5f);
+	unk[6] = Vector3(20f, 0f, 0f);
+	unk[7] = Vector3(0f, 20f, 0f);
+	unk[8] = Vector3(0f, 0f, 20f);
+	unk[9] = Vector3(20f, 20f, 0f);
+	unk[10] = Vector3(20f, 0f, 20f);
+	unk[11] = Vector3(0f, 20f, 20f);
 	FIRE::ADD_EXPLOSION(vParam0, 8, 1f, true, false, 1065353216, false);
 
 	for (i = 0; i <= num - 1; i = i + 1)
@@ -442,7 +442,7 @@ void func_17() // Position - 0x68C
 		SYSTEM::WAIT(0);
 	}
 
-	rotationOfVehicleRecordingIdAtTime = { VEHICLE::GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME(VEHICLE::GET_VEHICLE_RECORDING_ID(1, "Blimp_City"), 0f) };
+	rotationOfVehicleRecordingIdAtTime = Vector3(VEHICLE::GET_ROTATION_OF_VEHICLE_RECORDING_ID_AT_TIME(VEHICLE::GET_VEHICLE_RECORDING_ID(1, "Blimp_City"), 0f));
 	veLocal_40 = VEHICLE::CREATE_VEHICLE(hLocal_41, VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_ID_AT_TIME(VEHICLE::GET_VEHICLE_RECORDING_ID(1, "Blimp_City"), 0f), rotationOfVehicleRecordingIdAtTime.f_2, true, true, false);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(hLocal_41);
 	return;

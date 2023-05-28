@@ -30,7 +30,7 @@ void main() // Position - 0x0
 	Global_1837313 = -2;
 	Global_1837314 = -2;
 	Global_1837350 = -1;
-	Global_1853490 = { -1.9252f, -0.826065f, 0.309731f };
+	Global_1853490 = Vector3(-1.9252f, -0.826065f, 0.309731f);
 	Global_1853750 = 1;
 	Global_1853762 = -1;
 	Global_1889704 = -1;
@@ -54,10 +54,10 @@ void main() // Position - 0x0
 	Global_1934457 = -1f;
 	Global_1934458 = -1;
 	Global_1935021 = -1;
-	Global_1935129 = { 1973.696f, 3814.861f, 32.4259f };
-	Global_1935133 = { 1274.7963f, -1721.3986f, 53.655f };
-	Global_1935137 = { 1204.2096f, -3107.2524f, 4.5502f };
-	Global_1935141 = { 718.0308f, -976.4414f, 23.9148f };
+	Global_1935129 = Vector3(1973.696f, 3814.861f, 32.4259f);
+	Global_1935133 = Vector3(1274.7963f, -1721.3986f, 53.655f);
+	Global_1935137 = Vector3(1204.2096f, -3107.2524f, 4.5502f);
+	Global_1935141 = Vector3(718.0308f, -976.4414f, 23.9148f);
 	Global_1944412 = 1;
 	Global_1945398 = joaat("WEAPON_VEHICLE_ROCKET");
 	Global_1949767 = -1;
@@ -72,9 +72,9 @@ void main() // Position - 0x0
 	Global_1949961 = -1;
 	Global_1949967 = 33345;
 	Global_1949970 = 1;
-	Global_1950024 = { 0f, 0f, 0f };
-	Global_1950027 = { 0f, 0f, 0f };
-	Global_1950030 = { 0f, 0f, 0f };
+	Global_1950024 = Vector3(0f, 0f, 0f);
+	Global_1950027 = Vector3(0f, 0f, 0f);
+	Global_1950030 = Vector3(0f, 0f, 0f);
 	Global_1950033 = 0f;
 	Global_1950042 = -1;
 	Global_1950078 = 1;
@@ -94,7 +94,7 @@ void main() // Position - 0x0
 	Global_1956096 = 1;
 	Global_1956097 = 1;
 	Global_1956102 = 1;
-	Global_1961982 = { 0f, 0f, 0f };
+	Global_1961982 = Vector3(0f, 0f, 0f);
 	Global_1961998 = 1;
 	Global_1961999 = 50000;
 	Global_1962005 = -1;
@@ -109,8 +109,8 @@ void main() // Position - 0x0
 	Global_1962824 = 1;
 	Global_1962825 = 8;
 	Global_1962827 = 25.4375f;
-	Global_1962828 = { -578.43f, -794.01874f, 22.197163f };
-	Global_1962831 = { -615.1322f, -794.2707f, 45.310726f };
+	Global_1962828 = Vector3(-578.43f, -794.01874f, 22.197163f);
+	Global_1962831 = Vector3(-615.1322f, -794.2707f, 45.310726f);
 	Global_1962836 = -1;
 	Global_1962837 = -1;
 	Global_1962838 = -1;
@@ -150,8 +150,8 @@ void main() // Position - 0x0
 	Global_1970209 = -1;
 	Global_1970406 = -1;
 	Global_1970466 = -1;
-	Global_1970473 = { 947.5f, 16.843f, 117.239f };
-	Global_1970476 = { 0f, 0f, 195.9f };
+	Global_1970473 = Vector3(947.5f, 16.843f, 117.239f);
+	Global_1970476 = Vector3(0f, 0f, 195.9f);
 	Global_1970479 = -1;
 	Global_1970480 = -1;
 	Global_1970481 = -1;

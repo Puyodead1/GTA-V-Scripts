@@ -412,7 +412,7 @@ void main() // Position - 0x0
 		}
 		else if (iLocal_117 != -1 && iLocal_117 <= 130)
 		{
-			uLocal_136 = { func_1() };
+			uLocal_136 = Vector3(func_1());
 			MISC::GET_FRAME_COUNT() % 4 == 0;
 		
 			if (iLocal_117 == 126)
@@ -424,10 +424,10 @@ void main() // Position - 0x0
 		
 			if (ENTITY::DOES_ENTITY_EXIST(obLocal_112))
 			{
-				uLocal_140 = { ENTITY::GET_ENTITY_COORDS(obLocal_112, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obLocal_112) * { 0.6f, 0.6f, 0.6f }) };
+				uLocal_140 = { ENTITY::GET_ENTITY_COORDS(obLocal_112, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obLocal_112) * Vector3(0.6f, 0.6f, 0.6f)) };
 				uLocal_140.f_2 = uLocal_140.f_2 + 0.5f;
 				fLocal_139 = ENTITY::GET_ENTITY_HEADING(obLocal_112);
-				uLocal_143 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_112, 0f, -0.12f, -0.0315f) };
+				uLocal_143 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_112, 0f, -0.12f, -0.0315f));
 			}
 		}
 		else
@@ -2643,14 +2643,14 @@ void func_55(BOOL bParam0, BOOL bParam1) // Position - 0x2C04
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -3150,7 +3150,7 @@ void func_65(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 				}
 			
 				func_86(Global_23267, num28 + 0f, iParam5, 0.034722f, r, g, b, a);
-				textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
+				textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown"));
 				textureResolution = textureResolution * (0.5f / num31);
 				textureResolution.f_1 = textureResolution.f_1 * (0.5f / num31);
 			
@@ -5048,7 +5048,7 @@ BOOL func_79() // Position - 0x6BD5
 
 	if (func_80())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3(0f, -500f, 0f);
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)
@@ -5225,7 +5225,7 @@ char* func_87(int iParam0, BOOL bParam1) // Position - 0x6EFB
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_7488[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		
 			if (NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName))
 				return func_88(&txdName);
@@ -5487,7 +5487,7 @@ char* func_90(int iParam0) // Position - 0x7446
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_6463[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 			NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName);
 			return func_88(&txdName);
 		}
@@ -5675,9 +5675,9 @@ BOOL func_97(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 	{
 		num3 = 1f;
 		func_95(bParam5, &num, &num2, &num3);
-		textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName) };
+		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_98(iParam0) / num3;
-		textureResolution = { textureResolution * { num4, num4, num4 } };
+		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
 	
 		if (!bParam2)
 		{
@@ -7276,7 +7276,7 @@ void func_135(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -7910,8 +7910,8 @@ void func_159(char* sParam0, int iParam1, float fParam2, float fParam3, float fP
 	Vector3 vector;
 	Vector3 unk;
 
-	vector = { uLocal_143 };
-	entityRotation = { ENTITY::GET_ENTITY_ROTATION(obLocal_112, 2) };
+	vector = Vector3(uLocal_143);
+	entityRotation = Vector3(ENTITY::GET_ENTITY_ROTATION(obLocal_112, 2));
 	iLocal_121 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(vector, entityRotation, 2, true, false, 1f, 0f, fParam6);
 	NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), iLocal_121, sLocal_127, sParam0, fParam2, fParam3, iParam1, 16, fParam4, iParam5);
 	NETWORK::NETWORK_START_SYNCHRONISED_SCENE(iLocal_121);
@@ -7997,11 +7997,11 @@ void func_164(var uParam0, var uParam1) // Position - 0xA7DA
 	Vector3 unk2;
 	char* vector;
 
-	vector = { uLocal_143 };
-	entityRotation = { ENTITY::GET_ENTITY_ROTATION(obLocal_112, 2) };
+	vector = Vector3(uLocal_143);
+	entityRotation = Vector3(ENTITY::GET_ENTITY_ROTATION(obLocal_112, 2));
 	animName = "ENTER";
-	*uParam0 = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_127, animName, vector, entityRotation, 0, 2) };
-	animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_127, animName, vector, entityRotation, 0, 2) };
+	*uParam0 = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sLocal_127, animName, vector, entityRotation, 0, 2));
+	animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(sLocal_127, animName, vector, entityRotation, 0, 2));
 	*uParam1 = animInitialOffsetRotation.f_2;
 	return;
 }
@@ -8307,10 +8307,10 @@ void func_172() // Position - 0xAD37
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -9289,7 +9289,7 @@ BOOL IS_GAMER_HANDLE_VALID(var uParam0, var uParam1, var uParam2, var uParam3, v
 
 void func_221(Player plParam0, var uParam1) // Position - 0xC052
 {
-	*uParam1 = { Global_1853910[plParam0].f_267.f_70 };
+	*uParam1 = Vector3(Global_1853910[plParam0].f_267.f_70);
 	return;
 }
 

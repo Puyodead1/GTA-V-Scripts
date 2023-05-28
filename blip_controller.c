@@ -106,8 +106,8 @@ void main() // Position - 0x0
 	sLocal_21 = "CHECKPOINT_NORMAL";
 	sLocal_22 = "CHECKPOINT_MISSED";
 	sLocal_23 = "CHECKPOINT_PERFECT";
-	uLocal_24 = { 1694.7395f, 3276.5024f, 41.2796f };
-	uLocal_27 = { 8.79494f, 0.59893f, 154.8464f };
+	uLocal_24 = Vector3(1694.7395f, 3276.5024f, 41.2796f);
+	uLocal_27 = Vector3(8.79494f, 0.59893f, 154.8464f);
 	iLocal_30 = 3;
 	fLocal_31 = 0f;
 	fLocal_35 = -0.0375f;
@@ -651,7 +651,7 @@ void func_11() // Position - 0xAEE
 	if (PLAYER::IS_PLAYER_DEAD(PLAYER::GET_PLAYER_INDEX()))
 		return;
 
-	vector = { _GET_PLAYER_COORDS(PLAYER::GET_PLAYER_INDEX()) };
+	vector = Vector3(_GET_PLAYER_COORDS(PLAYER::GET_PLAYER_INDEX()));
 	num = -1;
 	num2 = 1000000f;
 	i = 0;

@@ -188,7 +188,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	uLocal_45 = { 500f, 500f, 500f };
+	uLocal_45 = Vector3(500f, 500f, 500f);
 	iLocal_96 = -1;
 	essLocal_97 = FRIEND;
 	iLocal_98 = -1;
@@ -199,10 +199,10 @@ void main() // Position - 0x0
 	iLocal_105 = 263;
 	fLocal_117 = 4f;
 	echLocal_118 = -1;
-	uLocal_90 = { uScriptParam_132.f_1[0] };
-	uLocal_90 = { uLocal_90 };
+	uLocal_90 = Vector3(uScriptParam_132.f_1[0]);
+	uLocal_90 = Vector3(uLocal_90);
 	uLocal_86 = uLocal_86;
-	uLocal_69 = { uLocal_69 };
+	uLocal_69 = Vector3(uLocal_69);
 	flag = false;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(82))
@@ -275,11 +275,11 @@ void main() // Position - 0x0
 	
 		if (ENTITY::DOES_ENTITY_EXIST(pedLocal_85) && !ENTITY::IS_ENTITY_DEAD(pedLocal_85, false))
 		{
-			uLocal_87 = { ENTITY::GET_ENTITY_COORDS(pedLocal_85, true) };
+			uLocal_87 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_85, true));
 			fLocal_93 = SYSTEM::VDIST2(uLocal_87, uScriptParam_132.f_1[0]);
 			fLocal_93 = fLocal_93;
-			uLocal_111 = { uLocal_87 };
-			uLocal_114 = { uScriptParam_132.f_1[0] };
+			uLocal_111 = Vector3(uLocal_87);
+			uLocal_114 = Vector3(uScriptParam_132.f_1[0]);
 			uLocal_111.f_2 = 0f;
 			uLocal_114.f_2 = 0f;
 			fLocal_110 = SYSTEM::VDIST2(uLocal_111, uLocal_114);
@@ -337,7 +337,7 @@ void main() // Position - 0x0
 						
 							if (MISC::ARE_STRINGS_EQUAL(&(Global_100681.f_3), &uLocal_69))
 							{
-								uLocal_69 = { uLocal_53 };
+								uLocal_69 = Vector3(uLocal_53);
 								flag2 = false;
 							}
 						
@@ -373,7 +373,7 @@ void main() // Position - 0x0
 					}
 					else
 					{
-						uLocal_69 = { uLocal_53 };
+						uLocal_69 = Vector3(uLocal_53);
 						flag3 = !func_86(iLocal_94, 64);
 						func_89(&iLocal_94, 128);
 					
@@ -534,7 +534,7 @@ void main() // Position - 0x0
 							PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), true, SPC_REMOVE_FIRES | 16 | 32);
 							iLocal_52 = SYSTEM::START_NEW_SCRIPT(&uLocal_69, essLocal_97);
 							SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED(&uLocal_69);
-							uLocal_53 = { uLocal_69 };
+							uLocal_53 = Vector3(uLocal_69);
 							TEXT_LABEL_ASSIGN_STRING(&uLocal_69, "", 64);
 							func_89(&iLocal_94, 4);
 							func_25();
@@ -2131,15 +2131,15 @@ void func_87() // Position - 0x270A
 	if (iLocal_119 == 0)
 	{
 		iLocal_105 = 110;
-		obLocal_120.f_2 = { -791.0036f, 186.3552f, 71.8295f };
-		obLocal_120.f_5 = { 0f, 0f, -87.1403f };
+		obLocal_120.f_2 = Vector3(-791.0036f, 186.3552f, 71.8295f);
+		obLocal_120.f_5 = Vector3(0f, 0f, -87.1403f);
 		obLocal_120.f_1 = joaat("prop_yoga_mat_03");
 	}
 	else if (iLocal_119 == 1)
 	{
 		iLocal_105 = 111;
-		obLocal_120.f_2 = { 2861.47f, 5945.9f, 357.06f };
-		obLocal_120.f_5 = { 0f, -0.5f, 70f };
+		obLocal_120.f_2 = Vector3(2861.47f, 5945.9f, 357.06f);
+		obLocal_120.f_5 = Vector3(0f, -0.5f, 70f);
 		obLocal_120.f_1 = joaat("prop_yoga_mat_03");
 	}
 
@@ -2155,10 +2155,10 @@ int func_88() // Position - 0x27B3
 
 	if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 	{
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(PLAYER::PLAYER_ID()), true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(PLAYER::PLAYER_ID()), true));
 		unk3 = 2;
-		unk3[0] = { -790.906f, 186.293f, 71.835f };
-		unk3[1] = { 2862.15f, 5945.49f, 357.11f };
+		unk3[0] = Vector3(-790.906f, 186.293f, 71.835f);
+		unk3[1] = Vector3(2862.15f, 5945.49f, 357.11f);
 		unk10 = 2;
 		unk10[0] = SYSTEM::VDIST2(entityCoords, unk3[0]);
 		unk10[1] = SYSTEM::VDIST2(entityCoords, unk3[1]);

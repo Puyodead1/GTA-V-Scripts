@@ -407,7 +407,7 @@ void func_6(var uParam0) // Position - 0x3AF
 	var unk;
 
 	unk.f_41 = 1;
-	*uParam0 = { unk };
+	*uParam0 = Vector3(unk);
 	return;
 }
 
@@ -955,7 +955,7 @@ void func_25(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	eventData.f_2 = 2147483647;
 	eventData = 45913685;
 	eventData.f_1 = PLAYER::PLAYER_ID();
-	eventData.f_2 = { uParam0.f_66 };
+	eventData.f_2 = Vector3(uParam0.f_66);
 	eventData.f_2.f_33 = iParam85;
 	playerBits = _GET_PLAYER_SCRIPT_EVENT_BITS(eventData.f_1);
 
@@ -2413,7 +2413,7 @@ int func_36(int iParam0, var uParam1) // Position - 0x446D
 	{
 		if (Global_4535172[i].f_66 == iParam0)
 		{
-			*uParam1 = { Global_4535172[i] };
+			*uParam1 = Vector3(Global_4535172[i]);
 			return i;
 		}
 	}
@@ -2579,9 +2579,9 @@ void func_51(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	if (Global_262145.f_24076)
 		func_49();
 
-	uLocal_22.f_66 = { uParam0 };
-	uLocal_22 = { uParam0.f_19 };
-	uLocal_22.f_14 = { Global_4535172[uParam0.f_33].f_14 };
+	uLocal_22.f_66 = Vector3(uParam0);
+	uLocal_22 = Vector3(uParam0.f_19);
+	uLocal_22.f_14 = Vector3(Global_4535172[uParam0.f_33].f_14);
 	iLocal_21 = uParam0.f_33;
 
 	if (uParam0.f_33 < 0)

@@ -5,10 +5,10 @@ void main() // Position - 0x0
 	Global_1574461 = 4000;
 	Global_1574462 = 100f;
 	Global_1574464 = -1;
-	Global_1574465 = { 5511.55f, -6014.775f, -200f };
-	Global_1574468 = { 4139.8f, -4199.3f, 200f };
+	Global_1574465 = Vector3(5511.55f, -6014.775f, -200f);
+	Global_1574468 = Vector3(4139.8f, -4199.3f, 200f);
 	Global_1574471 = 1308.55f;
-	Global_1574472 = { 6000f, 8000f, 0f };
+	Global_1574472 = Vector3(6000f, 8000f, 0f);
 	Global_1574475 = -160f;
 	Global_1574476 = 1;
 	Global_1574477 = 1;
@@ -24,9 +24,9 @@ void main() // Position - 0x0
 	Global_1574685 = -1;
 	Global_1574689 = -1;
 	Global_1574690 = -1;
-	Global_1574725 = { 754.22f, 1226.83f, 356.51f };
-	Global_1574728 = { -199.194f, 305.1888f, 95.9458f };
-	Global_1574731 = { 355.7f, 277.5f, 102.249f };
+	Global_1574725 = Vector3(754.22f, 1226.83f, 356.51f);
+	Global_1574728 = Vector3(-199.194f, 305.1888f, 95.9458f);
+	Global_1574731 = Vector3(355.7f, 277.5f, 102.249f);
 	Global_1574838 = 1;
 	Global_1575010 = -1;
 	Global_1575011 = -1;

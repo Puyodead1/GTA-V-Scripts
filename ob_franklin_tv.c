@@ -381,12 +381,12 @@ void main() // Position - 0x0
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	iLocal_52 = 1;
-	uLocal_301 = { 0f, 0f, 0f };
-	uLocal_304 = { 0f, 0f, 0f };
-	uLocal_312 = { 1.3376f, 525.3682f, 174.5992f };
+	uLocal_301 = Vector3(0f, 0f, 0f);
+	uLocal_304 = Vector3(0f, 0f, 0f);
+	uLocal_312 = Vector3(1.3376f, 525.3682f, 174.5992f);
 	sLocal_322 = "safe@franklin@ig_14";
-	uLocal_323 = { 2.58f, 527.82f, 173.65f };
-	uLocal_326 = { 0f, 0f, 13f };
+	uLocal_323 = Vector3(2.58f, 527.82f, 173.65f);
+	uLocal_326 = Vector3(0f, 0f, 13f);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
 		func_56();
@@ -397,8 +397,8 @@ void main() // Position - 0x0
 	if (func_46(9) || func_45() && !func_44() || AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		func_56();
 
-	uLocal_309 = { uScriptParam_330.f_1[0] };
-	uLocal_309 = { 2.1801f, 526.4401f, 173.6278f };
+	uLocal_309 = Vector3(uScriptParam_330.f_1[0]);
+	uLocal_309 = Vector3(2.1801f, 526.4401f, 173.6278f);
 
 	while (true)
 	{
@@ -441,7 +441,7 @@ void func_1() // Position - 0x1D4
 	float unk3;
 	float synchronizedScenePhase;
 
-	unk = { 1.5f, 1.5f, 1.5f };
+	unk = Vector3(1.5f, 1.5f, 1.5f);
 	synchronizedScenePhase = 0f;
 
 	switch (iLocal_308)

@@ -107,7 +107,7 @@ void main() // Position - 0x0
 	iLocal_41 = 49;
 	iLocal_42 = 64;
 	SYSTEM::WAIT(0);
-	fLocal_45 = { uScriptParam_56.f_1[0] };
+	fLocal_45 = Vector3(uScriptParam_56.f_1[0]);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
 		func_23();
@@ -158,7 +158,7 @@ void func_1() // Position - 0xEC
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_52, 10f, 10f, 10f, false, true, 0) && iLocal_54 == 0)
 			{
 				SYSTEM::SETTIMERB(0);
-				uLocal_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+				uLocal_48 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_55);
 				TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_48, 0);
 				TASK::TASK_PLAY_ANIM(0, "amb@PREACHER", "PREACH", 8f, -8f, -1, 1, 0, false, false, false);
@@ -173,7 +173,7 @@ void func_1() // Position - 0xEC
 		
 			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_52, 3f, 3f, 3f, false, true, 0) && iLocal_53 == 0)
 			{
-				uLocal_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+				uLocal_48 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 				SYSTEM::SETTIMERB(0);
 				TASK::OPEN_SEQUENCE_TASK(&iLocal_55);
 				TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_48, 0);

@@ -80,8 +80,8 @@ void main() // Position - 0x0
 	iLocal_38 = 3;
 	sLocal_44 = "RCMBarryLeadInOut";
 	sLocal_45 = "idle";
-	uLocal_49 = { 189.5964f, -956.0344f, 29.5771f };
-	uLocal_52 = { 190.2424f, -956.379f, 28.63f };
+	uLocal_49 = Vector3(189.5964f, -956.0344f, 29.5771f);
+	uLocal_52 = Vector3(190.2424f, -956.379f, 28.63f);
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_LOOK_BEHIND, true);
 
 	if (func_25(PLAYER::PLAYER_PED_ID()))
@@ -166,9 +166,9 @@ float func_2(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL bPar
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -205,7 +205,7 @@ void _CONVERSATION_ADD_LINE_NO_SUBTITLE(var uParam0, char* sParam1, char* sParam
 
 void func_5(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x319
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -303,14 +303,14 @@ float func_8(Ped pedParam0, Object obParam1, BOOL bParam2) // Position - 0x470
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(obParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(obParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(obParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(obParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(obParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -474,7 +474,7 @@ void func_19() // Position - 0x738
 			if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(obLocal_41))
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(obLocal_41, true, false);
 		
-			uLocal_49 = { 189.5964f, -956.0344f, 29.54f };
+			uLocal_49 = Vector3(189.5964f, -956.0344f, 29.54f);
 			ENTITY::SET_ENTITY_COORDS(obLocal_41, uLocal_49, true, false, false, true);
 			ENTITY::SET_ENTITY_HEADING(obLocal_41, func_18(-2.01f));
 			ENTITY::FREEZE_ENTITY_POSITION(obLocal_41, true);
@@ -490,7 +490,7 @@ void func_19() // Position - 0x738
 			if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(obLocal_40))
 				ENTITY::SET_ENTITY_AS_MISSION_ENTITY(obLocal_40, true, false);
 		
-			uLocal_49 = { 190.2574f, -956.3513f, 29.621f };
+			uLocal_49 = Vector3(190.2574f, -956.3513f, 29.621f);
 			ENTITY::SET_ENTITY_COORDS(obLocal_40, uLocal_49, true, false, false, true);
 			ENTITY::SET_ENTITY_HEADING(obLocal_40, func_18(-1.68f));
 			ENTITY::FREEZE_ENTITY_POSITION(obLocal_40, true);
@@ -498,14 +498,14 @@ void func_19() // Position - 0x738
 	}
 	else
 	{
-		uLocal_49 = { 190.2574f, -956.3513f, 29.621f };
+		uLocal_49 = Vector3(190.2574f, -956.3513f, 29.621f);
 		func_20(&obLocal_40, joaat("prop_chair_08"), uLocal_49, func_18(-1.68f));
 		ENTITY::SET_ENTITY_COORDS(obLocal_40, uLocal_49, true, false, false, true);
 		ENTITY::SET_ENTITY_HEADING(obLocal_40, func_18(-1.68f));
 		ENTITY::FREEZE_ENTITY_POSITION(obLocal_40, true);
 	}
 
-	uLocal_49 = { 192.4462f, -953.5946f, 29.0919f };
+	uLocal_49 = Vector3(192.4462f, -953.5946f, 29.0919f);
 
 	if (OBJECT::DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(uLocal_49, 25f, joaat("prop_protest_sign_01"), false))
 	{

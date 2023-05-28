@@ -100,8 +100,8 @@ void main() // Position - 0x0
 												if (Global_113648.f_20412[iLocal_37].f_13 != 0)
 													func_9(Global_113648.f_20412[iLocal_37].f_13, 0);
 											
-												uLocal_20 = { Global_113648.f_20412[iLocal_37] };
-												uLocal_20.f_4 = { Global_113648.f_20412[iLocal_37].f_4 };
+												uLocal_20 = Vector3(Global_113648.f_20412[iLocal_37]);
+												uLocal_20.f_4 = Vector3(Global_113648.f_20412[iLocal_37].f_4);
 												uLocal_20.f_8 = Global_113648.f_20412[iLocal_37].f_8;
 												uLocal_20.f_10 = Global_113648.f_20412[iLocal_37].f_10;
 												uLocal_20.f_9 = Global_113648.f_20412[iLocal_37].f_9;
@@ -111,7 +111,7 @@ void main() // Position - 0x0
 												uLocal_20.f_14 = Global_113648.f_20412[iLocal_37].f_14;
 												uLocal_20.f_15 = Global_113648.f_20412[iLocal_37].f_15;
 												uLocal_20.f_16 = 0;
-												Global_112291 = { Global_113648.f_20412[iLocal_37] };
+												Global_112291 = Vector3(Global_113648.f_20412[iLocal_37]);
 												Global_112289 = MISC::GET_GAME_TIMER();
 											
 												for (i = iLocal_37; i <= Global_113648.f_20412.f_145 - 2; i = i + 1)
@@ -360,8 +360,8 @@ void func_7(int iParam0) // Position - 0x830
 
 void func_8(int iParam0, int iParam1) // Position - 0x8C8
 {
-	Global_113648.f_20412[iParam0] = { Global_113648.f_20412[iParam1] };
-	Global_113648.f_20412[iParam0].f_4 = { Global_113648.f_20412[iParam1].f_4 };
+	Global_113648.f_20412[iParam0] = Vector3(Global_113648.f_20412[iParam1]);
+	Global_113648.f_20412[iParam0].f_4 = Vector3(Global_113648.f_20412[iParam1].f_4);
 	Global_113648.f_20412[iParam0].f_8 = Global_113648.f_20412[iParam1].f_8;
 	Global_113648.f_20412[iParam0].f_10 = Global_113648.f_20412[iParam1].f_10;
 	Global_113648.f_20412[iParam0].f_9 = Global_113648.f_20412[iParam1].f_9;

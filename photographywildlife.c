@@ -282,9 +282,9 @@ void main() // Position - 0x0
 	fLocal_31 = 140f;
 	fLocal_32 = 180f;
 	iLocal_35 = 3;
-	uLocal_239 = { 0f, 0f, 0f };
-	uLocal_242 = { uLocal_239 };
-	uLocal_245 = { uLocal_239 };
+	uLocal_239 = Vector3(0f, 0f, 0f);
+	uLocal_242 = Vector3(uLocal_239);
+	uLocal_245 = Vector3(uLocal_239);
 	iLocal_250 = 3;
 	iLocal_255 = 24818;
 	iLocal_258 = 24816;
@@ -448,11 +448,11 @@ void func_7(int iParam0) // Position - 0x2D7
 	if (!Global_53765[num].f_10[num3].f_1)
 	{
 		num4 = Global_53765[num].f_10[num3];
-		TEXT_LABEL_COPY(&unk, { func_12(Global_44465[num4].f_1) }, 4);
+		TEXT_LABEL_COPY(&unk, Vector3(func_12(Global_44465[num4].f_1)), 4);
 	}
 	else
 	{
-		unk = { Global_53765[num].f_10[num3].f_2 };
+		unk = Vector3(Global_53765[num].f_10[num3].f_2);
 	}
 
 	if (iParam0 == 28)
@@ -1137,7 +1137,7 @@ void func_15(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 	
 		num5 = Global_47790[iParam1].f_32[num4];
 		num3 = num5;
-		unk = { func_12(Global_44465[num5].f_1) };
+		unk = Vector3(func_12(Global_44465[num5].f_1));
 	
 		if (Global_44465[num5].f_2 == iParam0 && !(Global_44465[num5].f_3 == iParam0))
 			return;
@@ -1250,9 +1250,9 @@ void func_15(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4)
 		num2 = Global_44465[num8].f_2;
 	
 		if (Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_1)
-			TEXT_LABEL_COPY(&unk, { Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2 }, 16);
+			TEXT_LABEL_COPY(&unk, Vector3(Global_53765[num6].f_10[Global_53765[num6].f_9 - 1].f_2), 16);
 		else
-			unk = { func_12(Global_44465[num8].f_1) };
+			unk = Vector3(func_12(Global_44465[num8].f_1));
 	}
 
 	if (!bParam4)
@@ -1749,14 +1749,14 @@ void func_39(BOOL bParam0, BOOL bParam1) // Position - 0x1E04
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -2108,8 +2108,8 @@ void func_47() // Position - 0x2952
 	pedLocal_233 = 0;
 	iLocal_234 = 0;
 	bLocal_236 = false;
-	uLocal_242 = { uLocal_239 };
-	uLocal_245 = { uLocal_239 };
+	uLocal_242 = Vector3(uLocal_239);
+	uLocal_245 = Vector3(uLocal_239);
 	func_63(false);
 	func_57(99);
 
@@ -2843,14 +2843,14 @@ float func_68(Ped pedParam0, Ped pedParam1, BOOL bParam2) // Position - 0x3582
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(pedParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -2866,12 +2866,12 @@ BOOL func_69(Ped pedParam0, int iParam1) // Position - 0x35E0
 	screenY = 0f;
 	screenX2 = 0f;
 	screenY2 = 0f;
-	uLocal_245 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, iParam1)) };
+	uLocal_245 = Vector3(ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, iParam1)));
 
 	if (iLocal_234 == joaat("A_C_Rabbit_01") || iLocal_234 == joaat("A_C_Rat"))
-		uLocal_242 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, 24816)) };
+		uLocal_242 = Vector3(ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, 24816)));
 	else
-		uLocal_242 = { ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, 24818)) };
+		uLocal_242 = Vector3(ENTITY::GET_WORLD_POSITION_OF_ENTITY_BONE(pedParam0, PED::GET_PED_BONE_INDEX(pedParam0, 24818)));
 
 	GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(uLocal_242, &screenX, &screenY);
 	GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(uLocal_245, &screenX2, &screenY2);

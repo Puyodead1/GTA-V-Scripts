@@ -188,10 +188,10 @@ void main() // Position - 0x0
 	iLocal_41 = 65;
 	iLocal_42 = 49;
 	iLocal_43 = 64;
-	uLocal_60 = { -1124.3922f, -514.70013f, 33.21493f };
+	uLocal_60 = Vector3(-1124.3922f, -514.70013f, 33.21493f);
 	fLocal_63 = 200f;
-	uLocal_64 = { 2490f, 3777f, 2402.879f };
-	uLocal_67 = { -2052f, 3237f, 1450.078f };
+	uLocal_64 = Vector3(2490f, 3777f, 2402.879f);
+	uLocal_67 = Vector3(-2052f, 3237f, 1450.078f);
 	bLocal_159 = true;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
@@ -842,7 +842,7 @@ void func_24() // Position - 0xB06
 {
 	var unk;
 
-	unk = { func_26() };
+	unk = Vector3(func_26());
 
 	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3) && _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("CRACECAR"))
 		HUD::CLEAR_HELP(true);
@@ -929,7 +929,7 @@ void func_32() // Position - 0xC5E
 
 	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 	{
-		unk = { func_26() };
+		unk = Vector3(func_26());
 	
 		if (!_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("appinternet")) == 0)
 		{
@@ -1629,9 +1629,9 @@ float func_55(Vehicle veParam0, Vector3 vParam1, var uParam2, var uParam3, BOOL 
 	Vector3 entityCoords;
 
 	if (!ENTITY::IS_ENTITY_DEAD(veParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(veParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(veParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veParam0, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, vParam1, bParam4);
 }
@@ -1780,7 +1780,7 @@ void func_62(BOOL bParam0) // Position - 0x1EAB
 		CAM::STOP_GAMEPLAY_HINT(false);
 
 	bLocal_159 = true;
-	unk = { func_26() };
+	unk = Vector3(func_26());
 
 	if (HUD::HAS_THIS_ADDITIONAL_TEXT_LOADED("C_RACE", 3))
 		if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("CRACEDISRUPT") || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("CRACECAR") || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED(&unk))

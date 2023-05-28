@@ -321,9 +321,9 @@ void func_10(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x42E
 				PATHFIND::GET_CLOSEST_ROAD(*pvParam1, 1f, 1, &unk3, &unk6, &unk, &unk2, &num, false);
 			
 				if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -3044.66f, 596.43f, 6.58f, true) < 25f)
-					*pvParam1 = { -3031.38f, 605.32f, 6.86f };
+					*pvParam1 = Vector3(-3031.38f, 605.32f, 6.86f);
 			
-				dx = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+				dx = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 				headingFromVector2d = MISC::GET_HEADING_FROM_VECTOR_2D(dx, dx.f_1);
 				num2 = outHeading + 180f;
 			
@@ -364,8 +364,8 @@ void func_10(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x42E
 				if (SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, -xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
 					xOffset = -xOffset;
 			
-				*pvParam1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f) };
-				shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(*pvParam1 + { pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f }, *pvParam1 + { 4.5f, 0.5f, 0.5f }, 2.5f, 1, 0, 4);
+				*pvParam1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f));
+				shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(*pvParam1 + Vector3(pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f), *pvParam1 + Vector3(4.5f, 0.5f, 0.5f), 2.5f, 1, 0, 4);
 				num4 = num4 + 1;
 				break;
 		
@@ -479,14 +479,14 @@ void func_14(BOOL bParam0, BOOL bParam1) // Position - 0x7FA
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);

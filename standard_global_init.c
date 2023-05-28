@@ -87,8 +87,8 @@ void main() // Position - 0x0
 	sLocal_47 = "CHECKPOINT_NORMAL";
 	sLocal_48 = "CHECKPOINT_MISSED";
 	sLocal_49 = "CHECKPOINT_PERFECT";
-	uLocal_50 = { 1694.7395f, 3276.5024f, 41.2796f };
-	uLocal_53 = { 8.79494f, 0.59893f, 154.8464f };
+	uLocal_50 = Vector3(1694.7395f, 3276.5024f, 41.2796f);
+	uLocal_53 = Vector3(8.79494f, 0.59893f, 154.8464f);
 	Global_0 = 0f;
 	Global_19 = Vector3( 6f, 6f, 2f );
 	Global_22 = Vector3( 4f, 4f, 2f );
@@ -104,9 +104,9 @@ void main() // Position - 0x0
 	Global_20310 = 0.06f;
 	Global_20311 = Vector3( -30f, 3f, -90f );
 	Global_20314 = Vector3( 0f, 0f, 0f );
-	Global_20317 = { -89.8f, -14.7f, 0f };
+	Global_20317 = Vector3(-89.8f, -14.7f, 0f);
 	Global_20343 = Vector3( -90f, 0f, 0f );
-	Global_20346 = { -90f, -100.4f, 0f };
+	Global_20346 = Vector3(-90f, -100.4f, 0f);
 	Global_20350 = 27;
 	Global_20351 = 177;
 	Global_20352 = 176;
@@ -370,8 +370,8 @@ void func_4(float fParam0, float fParam1, float fParam2, float fParam3, float fP
 
 	Global_95884[iParam7].f_8 = MISC::ADD_HOSPITAL_RESTART(fParam3, fParam6, 0);
 	MISC::DISABLE_HOSPITAL_RESTART(Global_95884[iParam7].f_8, false);
-	Global_95884[iParam7] = { fParam0 };
-	Global_95884[iParam7].f_3 = { fParam3 };
+	Global_95884[iParam7] = Vector3(fParam0);
+	Global_95884[iParam7].f_3 = Vector3(fParam3);
 	Global_95884[iParam7].f_6 = fParam6;
 	Global_95884[iParam7].f_7 = iParam8;
 	func_12(iParam8, false, false);
@@ -455,7 +455,7 @@ void func_7(int iParam0, float fParam1, var uParam2, var uParam3) // Position - 
 
 	Global_32540 = 1;
 	MISC::SET_BIT(&(Global_32543[num].f_11), 18);
-	Global_32543[num][0] = { fParam1 };
+	Global_32543[num][0] = Vector3(fParam1);
 	Global_38593 = 1;
 	return;
 }
@@ -667,8 +667,8 @@ void func_16(float fParam0, float fParam1, float fParam2, float fParam3, float f
 
 	Global_95820[iParam7].f_8 = MISC::ADD_POLICE_RESTART(fParam3, fParam6, 0);
 	MISC::DISABLE_POLICE_RESTART(Global_95820[iParam7].f_8, false);
-	Global_95820[iParam7] = { fParam0 };
-	Global_95820[iParam7].f_3 = { fParam3 };
+	Global_95820[iParam7] = Vector3(fParam0);
+	Global_95820[iParam7].f_3 = Vector3(fParam3);
 	Global_95820[iParam7].f_6 = fParam6;
 	Global_95820[iParam7].f_7 = iParam8;
 	func_12(iParam8, false, false);
@@ -882,7 +882,7 @@ void func_22(int iParam0, float fParam1, float fParam2, float fParam3, float fPa
 	if (iParam5 == 76)
 		return;
 
-	Global_43258[iParam0] = { fParam1 };
+	Global_43258[iParam0] = Vector3(fParam1);
 	Global_43258[iParam0].f_3 = fParam4;
 	Global_43258[iParam0].f_4 = iParam5;
 	return;
@@ -1042,11 +1042,11 @@ void func_31(int iParam0, char* sParam1, char* sParam2, char* sParam3, char* sPa
 	TEXT_LABEL_ASSIGN_STRING(&unk5, sParam3, 8);
 	TEXT_LABEL_ASSIGN_STRING(&unk7, sParam4, 8);
 	TEXT_LABEL_ASSIGN_STRING(&unk9, sParam5, 8);
-	Global_96710[iParam0].f_7[0] = { unk };
-	Global_96710[iParam0].f_7[1] = { unk3 };
-	Global_96710[iParam0].f_7[2] = { unk5 };
-	Global_96710[iParam0].f_7[3] = { unk7 };
-	Global_96710[iParam0].f_7[4] = { unk9 };
+	Global_96710[iParam0].f_7[0] = Vector3(unk);
+	Global_96710[iParam0].f_7[1] = Vector3(unk3);
+	Global_96710[iParam0].f_7[2] = Vector3(unk5);
+	Global_96710[iParam0].f_7[3] = Vector3(unk7);
+	Global_96710[iParam0].f_7[4] = Vector3(unk9);
 	return;
 }
 
@@ -1085,8 +1085,8 @@ void func_33() // Position - 0x1E5B
 
 void func_34(int iParam0, float fParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7, char* sParam8) // Position - 0x1F10
 {
-	Global_96627[iParam0] = { fParam1 };
-	Global_96627[iParam0].f_3 = { fParam4 };
+	Global_96627[iParam0] = Vector3(fParam1);
+	Global_96627[iParam0].f_3 = Vector3(fParam4);
 	Global_96627[iParam0].f_6 = fParam7;
 	TEXT_LABEL_ASSIGN_STRING(&(Global_96627[iParam0].f_7), sParam8, 32);
 	return;
@@ -1911,11 +1911,11 @@ void func_69(int iParam0, var uParam1, var uParam2, var uParam3, int iParam4, va
 	Global_32540 = 1;
 	MISC::SET_BIT(&(Global_32543[num].f_11), 18);
 	MISC::SET_BIT(&(Global_32543[num].f_11), 19);
-	Global_32543[num][0] = { uParam1 };
+	Global_32543[num][0] = Vector3(uParam1);
 	Global_32543[num].f_12[0] = iParam4;
-	Global_32543[num][1] = { uParam5 };
+	Global_32543[num][1] = Vector3(uParam5);
 	Global_32543[num].f_12[1] = iParam8;
-	Global_32543[num][2] = { uParam9 };
+	Global_32543[num][2] = Vector3(uParam9);
 	Global_32543[num].f_12[2] = iParam12;
 	Global_38593 = 1;
 	return;

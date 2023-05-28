@@ -753,7 +753,7 @@ void func_19(var uParam0) // Position - 0x428
 	func_62(uParam0);
 	func_60(uParam0);
 	num.f_1.f_6 = 1061158912;
-	num = { uParam0->[uParam0->f_421.f_2] };
+	num = Vector3(uParam0->[uParam0->f_421.f_2]);
 
 	switch (uParam0->f_421.f_4)
 	{
@@ -811,8 +811,8 @@ void func_19(var uParam0) // Position - 0x428
 		
 			if (num != 3)
 			{
-				animInitialOffsetPosition = { PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_45(uParam0), func_44(uParam0), 0, 2) };
-				animInitialOffsetRotation = { PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_45(uParam0), func_44(uParam0), 0, 2) };
+				animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(&animDict, &animName, func_45(uParam0), func_44(uParam0), 0, 2));
+				animInitialOffsetRotation = Vector3(PED::GET_ANIM_INITIAL_OFFSET_ROTATION(&animDict, &animName, func_45(uParam0), func_44(uParam0), 0, 2));
 				targetHeading = animInitialOffsetRotation.f_2;
 				TASK::TASK_GO_STRAIGHT_TO_COORD(PLAYER::PLAYER_PED_ID(), animInitialOffsetPosition, 1f, 500, targetHeading, 0.15f);
 			}
@@ -1025,7 +1025,7 @@ void func_26(var uParam0) // Position - 0xA57
 
 	if (uParam0->f_421.f_4 == 6)
 	{
-		vector = { PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f };
+		vector = Vector3(PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_X), PAD::GET_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SCRIPT_LEFT_AXIS_Y), 0f);
 		num = SYSTEM::VMAG(vector);
 	
 		if (uParam0->f_421.f_4 == 6 && !ENTITY::HAS_ANIM_EVENT_FIRED(PLAYER::PLAYER_PED_ID(), joaat("block_interrupt")) && !func_8(&(uParam0->f_421), 12))
@@ -1285,14 +1285,14 @@ void func_41(BOOL bParam0, BOOL bParam1) // Position - 0x104A
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -1317,7 +1317,7 @@ Vector3 func_44(var uParam0) // Position - 0x10DB
 {
 	var unk;
 
-	unk = { uParam0->[uParam0->f_421.f_2].f_8.f_3 };
+	unk = Vector3(uParam0->[uParam0->f_421.f_2].f_8.f_3);
 
 	if (func_24() && uParam0->f_421.f_8 == 0)
 		unk.f_2 = unk.f_2 - 4f;
@@ -1870,8 +1870,8 @@ void func_76() // Position - 0x1A50
 	var unk;
 	var unk2;
 
-	unk = { func_86() };
-	unk4 = { func_85() };
+	unk = Vector3(func_86());
+	unk4 = Vector3(func_85());
 	func_82(0, func_84(343.93f, 4875.389f, -60.44f, -90f), -90f, unk, unk4);
 	func_82(1, func_84(344.08f, 4874.239f, -60.44f, -86f), -86f, unk, unk4);
 	func_82(2, func_84(344.33f, 4873.189f, -60.44f, -78f), -78f, unk, unk4);
@@ -1931,12 +1931,12 @@ BOOL func_78(var uParam0, int iParam1) // Position - 0x1F7F
 	if (func_81(PLAYER::PLAYER_ID()) || IS_BIT_SET(iLocal_484, 0))
 		return false;
 
-	unk = { uParam0->f_1 };
-	unk4 = { uParam0->f_1.f_3 };
+	unk = Vector3(uParam0->f_1);
+	unk4 = Vector3(uParam0->f_1.f_3);
 	unk.f_2 = 0f;
 	unk4.f_2 = 0f;
-	unk7 = { func_80(unk - unk4) };
-	entityForwardVector = { ENTITY::GET_ENTITY_FORWARD_VECTOR(PLAYER::PLAYER_PED_ID()) };
+	unk7 = Vector3(func_80(unk - unk4));
+	entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(PLAYER::PLAYER_PED_ID()));
 	num = func_79(unk7, entityForwardVector);
 	flag = num > 0.36f;
 	return flag;
@@ -1957,7 +1957,7 @@ Vector3 func_80(float fParam0, var uParam1, var uParam2) // Position - 0x2043
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * { num2, num2, num2 } };
+		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
 	}
 	else
 	{
@@ -1982,11 +1982,11 @@ BOOL func_81(Player plParam0) // Position - 0x2082
 void func_82(int iParam0, var uParam1, var uParam2, var uParam3, float fParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10) // Position - 0x20B4
 {
 	uLocal_47[iParam0] = 3;
-	uLocal_47[iParam0].f_1 = { uParam1 + func_83(uParam5, fParam4 - 180f) };
-	uLocal_47[iParam0].f_1.f_3 = { uParam1 + func_83(uParam8, fParam4 - 180f) };
+	uLocal_47[iParam0].f_1 = Vector3(uParam1 + func_83(uParam5, fParam4 - 180f));
+	uLocal_47[iParam0].f_1.f_3 = Vector3(uParam1 + func_83(uParam8, fParam4 - 180f));
 	uLocal_47[iParam0].f_1.f_6 = 1f;
-	uLocal_47[iParam0].f_8 = { uParam1 };
-	uLocal_47[iParam0].f_8.f_3 = { 0f, 0f, fParam4 };
+	uLocal_47[iParam0].f_8 = Vector3(uParam1);
+	uLocal_47[iParam0].f_8.f_3 = Vector3(0f, 0f, fParam4);
 	return;
 }
 

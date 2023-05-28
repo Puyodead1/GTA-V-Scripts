@@ -105,7 +105,7 @@ void main() // Position - 0x0
 	iLocal_40 = 65;
 	iLocal_41 = 49;
 	iLocal_42 = 64;
-	fLocal_45 = { uScriptParam_55.f_1[0] };
+	fLocal_45 = Vector3(uScriptParam_55.f_1[0]);
 	func_23();
 	PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11);
 
@@ -153,7 +153,7 @@ void func_1() // Position - 0xE7
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_45, 10f, 10f, 10f, false, true, 0) && !ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_45, 3f, 3f, 3f, false, true, 0))
 		{
 			SYSTEM::SETTIMERB(0);
-			uLocal_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			uLocal_48 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_54);
 			TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_48, 0);
 			TASK::TASK_PLAY_ANIM(0, "amb@BUSKER", "SAX_loop_B", 8f, -8f, -1, 0, 0, false, false, false);
@@ -167,7 +167,7 @@ void func_1() // Position - 0xE7
 	
 		if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), fLocal_45, 3f, 3f, 3f, false, true, 0))
 		{
-			uLocal_48 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			uLocal_48 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 			SYSTEM::SETTIMERB(0);
 			TASK::OPEN_SEQUENCE_TASK(&iLocal_54);
 			TASK::TASK_TURN_PED_TO_FACE_COORD(0, uLocal_48, 0);
@@ -220,7 +220,7 @@ void func_2() // Position - 0x1FD
 	
 		if (iLocal_51 == 1)
 		{
-			uLocal_48 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_52, 3.8f, 0.8f, 0f) };
+			uLocal_48 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedLocal_52, 3.8f, 0.8f, 0f));
 			pedLocal_53 = PED::CREATE_PED(PED_TYPE_CIVFEMALE, joaat("A_F_M_BevHills_02"), uLocal_48, 0f, true, true);
 		
 			if (!ENTITY::IS_ENTITY_DEAD(pedLocal_53, false))

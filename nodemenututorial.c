@@ -380,7 +380,7 @@ int func_18(int* piParam0, int iParam1) // Position - 0x2A6
 		return 0;
 
 	piParam0->f_1 = iParam1;
-	src = { func_29(piParam0) };
+	src = Vector3(func_29(piParam0));
 	MISC::COPY_SCRIPT_STRUCT(&(piParam0->f_72), &src, 33);
 
 	if (!func_28(&(piParam0->f_6), iParam1, &(piParam0->f_72)))
@@ -995,10 +995,10 @@ BOOL func_55(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam4
 				
 					maxInputLength2 = 60;
 					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
-					defaultText = { Global_4718592.f_166947[iParam30] };
+					defaultText = Vector3(Global_4718592.f_166947[iParam30]);
 				
 					if (iParam31 > -1)
-						defaultText = { Global_4718592.f_167028[iParam30][iParam31] };
+						defaultText = Vector3(Global_4718592.f_167028[iParam30][iParam31]);
 				
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
@@ -1959,7 +1959,7 @@ void func_78(int* piParam0, int iParam1) // Position - 0x1EB1
 
 	for (i = 0; i < num2; i = i + 1)
 	{
-		unk = { func_29(piParam0) };
+		unk = Vector3(func_29(piParam0));
 		num = num + iParam1;
 		num = func_79(num, num2);
 	
@@ -2112,7 +2112,7 @@ void func_93() // Position - 0x20DE
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	unk.f_8 = -1;
 	func_245(&unk);
-	uLocal_45 = { func_104(&unk, 0) };
+	uLocal_45 = Vector3(func_104(&unk, 0));
 	iLocal_160 = 35995;
 	iLocal_161 = 8465;
 	return;
@@ -2872,7 +2872,7 @@ void func_134(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0x2E91
 	if (bParam2)
 		func_139(&(piParam0->f_72));
 
-	unk = { func_29(piParam0) };
+	unk = Vector3(func_29(piParam0));
 
 	if (!func_137(piParam0, &unk))
 	{
@@ -3060,7 +3060,7 @@ int func_146(int* piParam0) // Position - 0x3157
 	if (!func_14(&(piParam0->f_6.f_7), 2))
 		return 0;
 
-	unk = { func_29(piParam0) };
+	unk = Vector3(func_29(piParam0));
 
 	if (!func_138(&(piParam0->f_6), &unk))
 		return 0;
@@ -3569,9 +3569,9 @@ BOOL func_173(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 	{
 		num3 = 1f;
 		func_175(bParam5, &num, &num2, &num3);
-		textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName) };
+		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_174(iParam0) / num3;
-		textureResolution = { textureResolution * { num4, num4, num4 } };
+		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
 	
 		if (!bParam2)
 		{
@@ -3702,7 +3702,7 @@ char* func_177(int iParam0, BOOL bParam1) // Position - 0x3D95
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_7488[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 		
 			if (NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName))
 				return func_178(&txdName);
@@ -3964,7 +3964,7 @@ char* func_180(int iParam0) // Position - 0x42DD
 	{
 		if (MISC::GET_HASH_KEY(&Global_23270.f_6463[iParam0]) == joaat("CREW_LOGO"))
 		{
-			netHandle = { GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()) };
+			netHandle = Vector3(GET_GAMER_HANDLE_PLAYER(PLAYER::PLAYER_ID()));
 			NETWORK::NETWORK_CLAN_GET_EMBLEM_TXD_NAME(&netHandle, &txdName);
 			return func_178(&txdName);
 		}
@@ -4679,7 +4679,7 @@ void func_194(BOOL bParam0, int iParam1, BOOL bParam2, BOOL bParam3, BOOL bParam
 				}
 			
 				func_166(Global_23267, num28 + 0f, iParam5, 0.034722f, r, g, b, a);
-				textureResolution = { GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown") };
+				textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION("CommonMenu", "shop_arrows_upANDdown"));
 				textureResolution = textureResolution * (0.5f / num31);
 				textureResolution.f_1 = textureResolution.f_1 * (0.5f / num31);
 			
@@ -6018,14 +6018,14 @@ void func_199(BOOL bParam0, BOOL bParam1) // Position - 0x7C82
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -6422,7 +6422,7 @@ BOOL func_213() // Position - 0x841A
 
 	if (func_214())
 	{
-		position = { 0f, -500f, 0f };
+		position = Vector3(0f, -500f, 0f);
 		MOBILE::GET_MOBILE_PHONE_POSITION(&position);
 	
 		if (Global_20328 == 0)
@@ -6718,7 +6718,7 @@ void func_232(int* piParam0) // Position - 0x890E
 
 	while (num3 != 2)
 	{
-		unk = { func_29(piParam0) };
+		unk = Vector3(func_29(piParam0));
 		func(num, &unk);
 		num3 = StackVal;
 	

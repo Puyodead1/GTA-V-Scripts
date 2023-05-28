@@ -743,14 +743,14 @@ void func_19(BOOL bParam0, BOOL bParam1) // Position - 0xC5B
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -1185,7 +1185,7 @@ BOOL func_38(int iParam0) // Position - 0x13CF
 {
 	var unk;
 
-	unk = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
+	unk = Vector3(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()));
 
 	switch (iParam0)
 	{
@@ -1784,7 +1784,7 @@ BOOL func_58(int iParam0) // Position - 0x1F66
 
 void func_59() // Position - 0x1F92
 {
-	uLocal_31 = { ENTITY::GET_ENTITY_COORDS(obLocal_37, true) };
+	uLocal_31 = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_37, true));
 	fLocal_34 = ENTITY::GET_ENTITY_HEADING(obLocal_37);
 	func_61();
 
@@ -1793,9 +1793,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, -9.541955f, -1440.9166f, 31.346916f) < 3f)
 		{
 			iLocal_43 = 0;
-			uLocal_79 = { -9.8135f, -1440.9128f, 31.3654f };
-			uLocal_82 = { 0f, 0f, -134.3211f };
-			uLocal_88 = { -9.3078f, -1440.931f, 30.1015f };
+			uLocal_79 = Vector3(-9.8135f, -1440.9128f, 31.3654f);
+			uLocal_82 = Vector3(0f, 0f, -134.3211f);
+			uLocal_88 = Vector3(-9.3078f, -1440.931f, 30.1015f);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "SE_FRANKLIN_AUNT_HOUSE_RADIO_01", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_FRANKLINS_HOUSE_SOCEN", 64);
 		}
@@ -1805,9 +1805,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, 1978.425f, 3819.6572f, 34.26763f) < 3f)
 		{
 			iLocal_43 = 2;
-			uLocal_79 = { 1978.2303f, 3819.6504f, 34.2724f };
-			uLocal_82 = { 0f, 0f, -105.15f };
-			uLocal_88 = { 1978.3303f, 3819.717f, 32.4501f };
+			uLocal_79 = Vector3(1978.2303f, 3819.6504f, 34.2724f);
+			uLocal_82 = Vector3(0f, 0f, -105.15f);
+			uLocal_88 = Vector3(1978.3303f, 3819.717f, 32.4501f);
 			func_60();
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "SE_TREVOR_TRAILER_RADIO_01", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_TREVORS_TRAILER", 64);
@@ -1818,9 +1818,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, 3.6654f, 529.8486f, 173.6281f) < 3f)
 		{
 			iLocal_43 = 1;
-			uLocal_79 = { 2.5724f, 527.9989f, 176.1619f };
-			uLocal_82 = { 0f, 0f, -29.9488f };
-			uLocal_88 = { 3.6654f, 529.8486f, 173.6281f };
+			uLocal_79 = Vector3(2.5724f, 527.9989f, 176.1619f);
+			uLocal_82 = Vector3(0f, 0f, -29.9488f);
+			uLocal_88 = Vector3(3.6654f, 529.8486f, 173.6281f);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "SE_FRANKLIN_HILLS_HOUSE_RADIO_01", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_FRANKLINS_HOUSE_VINEWOOD", 64);
 		}
@@ -1830,9 +1830,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, -1160.6947f, -1520.7448f, 10.49168f) < 3f)
 		{
 			iLocal_43 = 3;
-			uLocal_79 = { -1160.5024f, -1520.7598f, 10.7393f };
-			uLocal_82 = { 0f, 0f, 60.061f };
-			uLocal_88 = { -1160.143f, -1520.4946f, 9.6555f };
+			uLocal_79 = Vector3(-1160.5024f, -1520.7598f, 10.7393f);
+			uLocal_82 = Vector3(0f, 0f, 60.061f);
+			uLocal_88 = Vector3(-1160.143f, -1520.4946f, 9.6555f);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "TREVOR_APARTMENT_RADIO", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_FLOYDS_APARTMENT", 64);
 		}
@@ -1842,9 +1842,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, -802.25275f, 173.03743f, 74.35708f) < 3f)
 		{
 			iLocal_43 = 4;
-			uLocal_79 = { -802.8972f, 172.537f, 74.5801f };
-			uLocal_82 = { 0f, 0f, -69.0273f };
-			uLocal_88 = { -800.7292f, 173.2194f, 71.8348f };
+			uLocal_79 = Vector3(-802.8972f, 172.537f, 74.5801f);
+			uLocal_82 = Vector3(0f, 0f, -69.0273f);
+			uLocal_88 = Vector3(-800.7292f, 173.2194f, 71.8348f);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "SE_MICHAELS_HOUSE_RADIO", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_MICHAELS_HOUSE", 64);
 		}
@@ -1854,9 +1854,9 @@ void func_59() // Position - 0x1F92
 		if (SYSTEM::VDIST(uLocal_31, -809.962f, 170.919f, 75.7407f) < 3f)
 		{
 			iLocal_43 = 5;
-			uLocal_79 = { -808.3051f, 171.2623f, 77.2822f };
-			uLocal_82 = { 1.8886f, 0f, 110.9232f };
-			uLocal_88 = { -809.962f, 170.919f, 75.7407f };
+			uLocal_79 = Vector3(-808.3051f, 171.2623f, 77.2822f);
+			uLocal_82 = Vector3(1.8886f, 0f, 110.9232f);
+			uLocal_88 = Vector3(-809.962f, 170.919f, 75.7407f);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_46, "SE_MICHAELS_HOUSE_RADIO", 64);
 			TEXT_LABEL_ASSIGN_STRING(&uLocal_62, "TV_MICHAELS_HOUSE", 64);
 		}

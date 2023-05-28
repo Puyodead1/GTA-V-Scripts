@@ -21,7 +21,7 @@ void main() // Position - 0x0
 	if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_10))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(obScriptParam_10, true);
-		fLocal_2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_10, 0f, 0f, 0f) };
+		fLocal_2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_10, 0f, 0f, 0f));
 		fLocal_5 = ENTITY::GET_ENTITY_HEADING(obScriptParam_10);
 		ENTITY::SET_ENTITY_COLLISION(obScriptParam_10, false, false);
 	}
@@ -95,7 +95,7 @@ BOOL func_2() // Position - 0x10D
 {
 	Vector3 vector;
 
-	vector = { 2f, 2f, 0.5f };
+	vector = Vector3(2f, 2f, 0.5f);
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{

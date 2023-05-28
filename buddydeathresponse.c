@@ -63,7 +63,7 @@ void func_1() // Position - 0x4F
 			if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_20, SCRIPT_TASK_ANY) != 7)
 				TASK::CLEAR_PED_TASKS(pedLocal_20);
 		
-			entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) };
+			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 			PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(pedLocal_20, true);
 			TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 		

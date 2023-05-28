@@ -1881,10 +1881,10 @@ void func_24() // Position - 0xB35
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -2435,8 +2435,8 @@ void func_50() // Position - 0x14A2
 	{
 		if (uLocal_919[i].f_25)
 		{
-			uLocal_817[i] = { uLocal_919[i] };
-			uLocal_854[i] = { uLocal_919[i].f_9 };
+			uLocal_817[i] = Vector3(uLocal_919[i]);
+			uLocal_854[i] = Vector3(uLocal_919[i].f_9);
 		}
 	}
 
@@ -4132,20 +4132,20 @@ void func_105(int iParam0) // Position - 0x3CDD
 	if (!uLocal_1068[iParam0])
 		return;
 
-	num = { func_116() };
+	num = Vector3(func_116());
 	num2.f_3 = 255;
 
 	if (uLocal_1068[iParam0].f_3)
 		num = -num;
 
-	unk2 = { func_115() };
+	unk2 = Vector3(func_115());
 
 	if (!uLocal_1068[iParam0].f_2)
 	{
 		if (uLocal_1068[iParam0].f_4 > 0)
 		{
 			unk2.f_1 = unk2.f_1 - ((num.f_1 * ((float)uLocal_1068[iParam0].f_4 % ((float)uLocal_1068[iParam0].f_6 * 1f))) / ((float)uLocal_1068[iParam0].f_6 * 1f));
-			unk4 = { unk2 };
+			unk4 = Vector3(unk2);
 			unk4.f_1 = unk4.f_1 + num.f_1;
 		}
 		else if (uLocal_1068[iParam0].f_7 > 0)
@@ -4173,7 +4173,7 @@ void func_105(int iParam0) // Position - 0x3CDD
 	}
 	else
 	{
-		num2 = { uLocal_1068[iParam0].f_9 };
+		num2 = Vector3(uLocal_1068[iParam0].f_9);
 	}
 
 	if (MISC::IS_STRING_NULL_OR_EMPTY(func_113(iParam0)))
@@ -4202,8 +4202,8 @@ void func_105(int iParam0) // Position - 0x3CDD
 
 void func_106(char* sParam0, char* sParam1, float fParam2, var uParam3, float fParam4, var uParam5, float fParam6, var uParam7, var uParam8, var uParam9, var uParam10) // Position - 0x3FAC
 {
-	fParam2 = { func_107(fParam2) };
-	fParam4 = { func_107(fParam4) };
+	fParam2 = Vector3(func_107(fParam2));
+	fParam4 = Vector3(func_107(fParam4));
 	func_123(sParam0, sParam1, fParam2, fParam2.f_1, fParam4, fParam4.f_1, fParam6, uParam7);
 	return;
 }
@@ -4256,15 +4256,15 @@ char* func_109(int iParam0) // Position - 0x401F
 
 void func_110(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7) // Position - 0x40B2
 {
-	uParam0 = { func_107(uParam0) };
-	uParam2 = { func_107(uParam2) };
+	uParam0 = Vector3(func_107(uParam0));
+	uParam2 = Vector3(func_107(uParam2));
 	func_111(uParam0, uParam2, uParam4);
 	return;
 }
 
 void func_111(float fParam0, var uParam1, float fParam2, var uParam3, int iParam4, var uParam5, var uParam6, var uParam7) // Position - 0x40E2
 {
-	fParam0 = { func_112(fParam0) };
+	fParam0 = Vector3(func_112(fParam0));
 	fParam2 = fParam2 * fLocal_133;
 	GRAPHICS::DRAW_RECT(fParam0, fParam0.f_1, fParam2, fParam2.f_1, iParam4, iParam4.f_1, iParam4.f_2, iParam4.f_3, false);
 	return;
@@ -4821,7 +4821,7 @@ void func_137() // Position - 0x4A30
 		}
 		else
 		{
-			num = { func_138(i) };
+			num = Vector3(func_138(i));
 			num2 = func_130(uLocal_158.f_149[i]);
 			HUD::SET_TEXT_SCALE(1.1f, 1.1f);
 			HUD::SET_TEXT_COLOUR(0, 0, 0, 255);
@@ -4961,18 +4961,18 @@ void func_139(int iParam0, BOOL bParam1) // Position - 0x4F19
 	float unk4;
 	var unk5;
 
-	num = { func_138(iParam0) };
-	num2 = { func_146() };
+	num = Vector3(func_138(iParam0));
+	num2 = Vector3(func_146());
 	func_123(func_145(iParam0), func_144(iParam0), num, num.f_1, num2, num2.f_1, 0f, uLocal_158.f_107.f_17);
 
 	if (uLocal_158.f_149[iParam0] == uLocal_158.f_178)
 	{
-		unk3 = { uLocal_158.f_107[iParam0] };
+		unk3 = Vector3(uLocal_158.f_107[iParam0]);
 	
 		if (uLocal_817[uLocal_158.f_178] != 1)
 			unk3.f_3 = SYSTEM::ROUND(MISC::TAN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER()) * 0.25f)) * 255;
 	
-		num3 = { func_143(iParam0) };
+		num3 = Vector3(func_143(iParam0));
 		func_123("MPArcadeCabinetGridHUD", "gang_lobby_player_highlight", num3, num3.f_1, 0.1625f, 0.051851854f, 0f, unk3);
 	}
 
@@ -5039,7 +5039,7 @@ void func_139(int iParam0, BOOL bParam1) // Position - 0x4F19
 	if (uLocal_158.f_154[iParam0] != -2147483647 && NETWORK::GET_NETWORK_TIME() - uLocal_158.f_154[iParam0] <= 1000)
 	{
 		num4 = SYSTEM::TO_FLOAT(NETWORK::GET_NETWORK_TIME() - uLocal_158.f_154[iParam0]) / 1000f;
-		unk11 = { uLocal_158.f_107[iParam0] };
+		unk11 = Vector3(uLocal_158.f_107[iParam0]);
 		unk11.f_3 = SYSTEM::ROUND(func_140(125f, 0f, num4, 1));
 		num2.f_1 = num2.f_1 - 0.05f;
 		num.f_1 = num.f_1 + (0.05f / 2f);
@@ -5926,7 +5926,7 @@ void func_180() // Position - 0x643B
 	func_181(uLocal_158.f_107[uLocal_817[uLocal_611.f_130].f_6], 102);
 	flag = false;
 	flag2 = true;
-	num = { func_108(0.5f, 0.5f + -0.005f) };
+	num = Vector3(func_108(0.5f, 0.5f + -0.005f));
 	num2 = 255;
 	TEXT_LABEL_ASSIGN_STRING(&unk2, "text_gang_", 64);
 	TEXT_LABEL_APPEND_STRING(&unk2, uLocal_158.f_422[uLocal_817[uLocal_611.f_130].f_6], 64);
@@ -5960,7 +5960,7 @@ void func_180() // Position - 0x643B
 
 	if (flag)
 	{
-		unk18 = { uLocal_158.f_107.f_17 };
+		unk18 = Vector3(uLocal_158.f_107.f_17);
 		unk18.f_3 = num2;
 		func_123("MPArcadeCabinetGridHUD", "text_bkgd_blur", num, num.f_1, 0.3125f, 0.14814815f, 0f, unk18);
 	}
@@ -6020,7 +6020,7 @@ void func_182() // Position - 0x6650
 				{
 					if (func_81(&uLocal_611.f_85[k][1], num))
 					{
-						num3 = { func_185(func_186(func_187(num), func_187(num2)), 2f) };
+						num3 = Vector3(func_185(func_186(func_187(num), func_187(num2)), 2f));
 						func_123("MPArcadeCabinetGrid", "player_trail", num3, num3.f_1, 0.052083332f, 0.02962963f, 0f, uLocal_158.f_107[k]);
 						break;
 					}
@@ -6035,7 +6035,7 @@ void func_182() // Position - 0x6650
 				{
 					if (func_81(&uLocal_611.f_85[k][0], num))
 					{
-						num5 = { func_185(func_186(func_187(num), func_187(num4)), 2f) };
+						num5 = Vector3(func_185(func_186(func_187(num), func_187(num4)), 2f));
 						func_123("MPArcadeCabinetGrid", "player_trail", num5, num5.f_1, 0.052083332f, 0.02962963f, 90f, uLocal_158.f_107[k]);
 						break;
 					}
@@ -6063,7 +6063,7 @@ void func_182() // Position - 0x6650
 			func_184(uLocal_854[l], &num6, &num7);
 			func_184(uLocal_854[l].f_1, &num8, &num9);
 			num10 = -1;
-			unk3 = { uLocal_158.f_107[uLocal_817[l].f_6] };
+			unk3 = Vector3(uLocal_158.f_107[uLocal_817[l].f_6]);
 			num11 = SYSTEM::TO_FLOAT(NETWORK::GET_NETWORK_TIME() - uLocal_854[l].f_2) / SYSTEM::TO_FLOAT(func_183(l));
 		
 			if (num11 > 1.2f)
@@ -6085,7 +6085,7 @@ void func_182() // Position - 0x6650
 					}
 					else
 					{
-						num12 = { func_185(func_186(func_187(uLocal_854[l].f_1), func_187(uLocal_854[l])), 2f) };
+						num12 = Vector3(func_185(func_186(func_187(uLocal_854[l].f_1), func_187(uLocal_854[l])), 2f));
 						func_123("MPArcadeCabinetGrid", "player_trail", num12, num12.f_1, 0.052083332f, 0.02962963f, 0f, unk3);
 						goto 0x324;
 					}
@@ -6103,7 +6103,7 @@ void func_182() // Position - 0x6650
 					}
 					else
 					{
-						num13 = { func_185(func_186(func_187(uLocal_854[l].f_1), func_187(uLocal_854[l])), 2f) };
+						num13 = Vector3(func_185(func_186(func_187(uLocal_854[l].f_1), func_187(uLocal_854[l])), 2f));
 						func_123("MPArcadeCabinetGrid", "player_trail", num13, num13.f_1, 0.052083332f, 0.02962963f, 90f, unk3);
 					}
 				}
@@ -6175,7 +6175,7 @@ void func_188() // Position - 0x6A3D
 			TEXT_LABEL_ASSIGN_STRING(&unk, "top_down_tile_", 64);
 			num = uLocal_611.f_31[i][j] + 1;
 			TEXT_LABEL_APPEND_INT(&unk, num, 64);
-			num2 = { func_191(i, j) };
+			num2 = Vector3(func_191(i, j));
 			func_123("MPArcadeCabinetGridTiles", &unk, num2, num2.f_1, 0.104167f, 0.185185f, 0f, uLocal_158.f_107.f_17);
 			func_189(i, j);
 		}
@@ -6183,17 +6183,17 @@ void func_188() // Position - 0x6A3D
 
 	for (i = -1; i <= 6; i = i + 1)
 	{
-		num3 = { func_191(i, -1) };
+		num3 = Vector3(func_191(i, -1));
 		func_123("MPArcadeCabinetGridTiles", "top_down_tile_1", num3, num3.f_1, 0.104167f, 0.185185f, 0f, uLocal_158.f_107.f_17);
-		num4 = { func_191(i, 4) };
+		num4 = Vector3(func_191(i, 4));
 		func_123("MPArcadeCabinetGridTiles", "top_down_tile_1", num4, num4.f_1, 0.104167f, 0.185185f, 0f, uLocal_158.f_107.f_17);
 	}
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
-		num5 = { func_191(-1, i) };
+		num5 = Vector3(func_191(-1, i));
 		func_123("MPArcadeCabinetGridTiles", "top_down_tile_1", num5, num5.f_1, 0.104167f, 0.185185f, 0f, uLocal_158.f_107.f_17);
-		num6 = { func_191(6, i) };
+		num6 = Vector3(func_191(6, i));
 		func_123("MPArcadeCabinetGridTiles", "top_down_tile_1", num6, num6.f_1, 0.104167f, 0.185185f, 0f, uLocal_158.f_107.f_17);
 	}
 
@@ -6233,7 +6233,7 @@ void func_189(int iParam0, int iParam1) // Position - 0x6B9E
 		}
 		else
 		{
-			num2 = { func_108(0.070833f, 0.125926f) };
+			num2 = Vector3(func_108(0.070833f, 0.125926f));
 		}
 	}
 	else if (NETWORK::GET_NETWORK_TIME() - uLocal_158.f_380[iParam0][iParam1] < 300)
@@ -6250,14 +6250,14 @@ void func_189(int iParam0, int iParam1) // Position - 0x6B9E
 	else
 	{
 		num = uLocal_611[iParam0][iParam1];
-		num2 = { func_108(0.070833f, 0.125926f) };
+		num2 = Vector3(func_108(0.070833f, 0.125926f));
 	}
 
 	if (num > -1)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "gang_logo_", 64);
 		TEXT_LABEL_APPEND_STRING(&unk, uLocal_158.f_422[num], 64);
-		num4 = { func_191(iParam0, iParam1) };
+		num4 = Vector3(func_191(iParam0, iParam1));
 		func_123("MPArcadeCabinetGrid", &unk, num4, num4.f_1, num2, num2.f_1, 0f, uLocal_158.f_107[num]);
 	}
 
@@ -6312,7 +6312,7 @@ void func_193() // Position - 0x6E25
 		return;
 
 	func_181(uLocal_158.f_107[uLocal_817[uLocal_611.f_131[uLocal_611.f_137 - 1]].f_6], 102);
-	num = { func_108(0.5f, 0.5f + -0.016f) };
+	num = Vector3(func_108(0.5f, 0.5f + -0.016f));
 	func_123("MPArcadeCabinetGridHUD", "text_round_winner", 0.5f, 0.5f + -0.016f, 0.3125f, 0.24074075f, 0f, uLocal_158.f_107.f_17);
 	TEXT_LABEL_ASSIGN_STRING(&unk2, "text_gang_", 64);
 	TEXT_LABEL_APPEND_STRING(&unk2, uLocal_158.f_422[uLocal_817[uLocal_611.f_131[uLocal_611.f_137 - 1]].f_6], 64);
@@ -6466,7 +6466,7 @@ void func_197() // Position - 0x7228
 	if (_STOPWATCH_HAS_TIME_PASSED(&(uLocal_158.f_316), 2250, false))
 		return;
 
-	num = { func_108(0.5f, 0.5f + -0.005f) };
+	num = Vector3(func_108(0.5f, 0.5f + -0.005f));
 	func_123("MPArcadeCabinetGridHUD", "TEXT_SUDDEN", num, num.f_1, 0.26666668f, 0.14814815f, 0f, uLocal_158.f_107.f_17);
 	func_123("MPArcadeCabinetGridHUD", "TEXT_DEATH", num, num.f_1 + 0.074074075f, 0.26666668f, 0.11481482f, 0f, uLocal_158.f_107.f_17);
 	return;
@@ -6676,7 +6676,7 @@ void func_202() // Position - 0x7804
 {
 	float num;
 
-	num = { func_205(uLocal_158.f_438) };
+	num = Vector3(func_205(uLocal_158.f_438));
 
 	if (func_204(uLocal_158.f_439, num))
 		return;
@@ -6770,7 +6770,7 @@ void func_206() // Position - 0x7963
 		{
 			TEXT_LABEL_ASSIGN_STRING(&unk, "fire_ball", 64);
 			TEXT_LABEL_APPEND_INT(&unk, uLocal_158.f_159[i] + 1, 64);
-			num = { func_108(0.066667f / 2f, 0.118519f / 2f) };
+			num = Vector3(func_108(0.066667f / 2f, 0.118519f / 2f));
 			func_123("MPArcadeCabinetGrid", &unk, uLocal_158.f_159[i].f_1, uLocal_158.f_159[i].f_1.f_1, num, num.f_1, 0f, uLocal_158.f_107.f_17);
 			uLocal_158.f_159[i] = uLocal_158.f_159[i] + uLocal_158.f_412;
 		
@@ -6883,22 +6883,22 @@ void func_210(int iParam0) // Position - 0x7C49
 
 	if (uLocal_611.f_148[iParam0].f_2 == 1)
 	{
-		num3 = { func_187(func_71(num, 0)) };
+		num3 = Vector3(func_187(func_71(num, 0)));
 		func_123("MPArcadeCabinetGridHUD", "vehicle_alert", num3, num3.f_1 + -0.011f, 0.020833332f, 0.018518519f, 180f, func_212(uLocal_611.f_148[iParam0].f_3));
 	}
 	else if (uLocal_611.f_148[iParam0].f_2 == 0)
 	{
-		num3 = { func_187(func_71(num, 8)) };
+		num3 = Vector3(func_187(func_71(num, 8)));
 		func_123("MPArcadeCabinetGridHUD", "vehicle_alert", num3, num3.f_1 + 0.023f, 0.020833332f, 0.018518519f, 0f, func_212(uLocal_611.f_148[iParam0].f_3));
 	}
 	else if (uLocal_611.f_148[iParam0].f_2 == 3)
 	{
-		num3 = { func_187(func_71(0, num2)) };
+		num3 = Vector3(func_187(func_71(0, num2)));
 		func_123("MPArcadeCabinetGridHUD", "vehicle_alert", num3 + func_211(num2, true), num3.f_1, 0.020833332f, 0.018518519f, 90f, func_212(uLocal_611.f_148[iParam0].f_3));
 	}
 	else if (uLocal_611.f_148[iParam0].f_2 == 2)
 	{
-		num3 = { func_187(func_71(12, num2)) };
+		num3 = Vector3(func_187(func_71(12, num2)));
 		func_123("MPArcadeCabinetGridHUD", "vehicle_alert", num3 + func_211(num2, false), num3.f_1, 0.020833332f, 0.018518519f, -90f, func_212(uLocal_611.f_148[iParam0].f_3));
 	}
 
@@ -6952,7 +6952,7 @@ struct<4> func_212(int iParam0) // Position - 0x7E52
 	var unk;
 
 	value = SYSTEM::SIN((float)MISC::GET_GAME_TIMER() * 0.5f);
-	unk = { uLocal_158.f_107.f_17 };
+	unk = Vector3(uLocal_158.f_107.f_17);
 
 	switch (iParam0)
 	{
@@ -6970,19 +6970,19 @@ struct<4> func_212(int iParam0) // Position - 0x7E52
 			break;
 	
 		case 5:
-			unk = { uLocal_158.f_107[0] };
+			unk = Vector3(uLocal_158.f_107[0]);
 			break;
 	
 		case 6:
-			unk = { uLocal_158.f_107[1] };
+			unk = Vector3(uLocal_158.f_107[1]);
 			break;
 	
 		case 7:
-			unk = { uLocal_158.f_107[2] };
+			unk = Vector3(uLocal_158.f_107[2]);
 			break;
 	
 		case 8:
-			unk = { uLocal_158.f_107[3] };
+			unk = Vector3(uLocal_158.f_107[3]);
 			break;
 	}
 
@@ -7050,7 +7050,7 @@ void func_215(int iParam0) // Position - 0x7FBC
 		return;
 	}
 
-	unk33 = { uLocal_158.f_107.f_17 };
+	unk33 = Vector3(uLocal_158.f_107.f_17);
 
 	if (uLocal_854[iParam0].f_2 + func_183(iParam0) > NETWORK::GET_NETWORK_TIME())
 	{
@@ -7080,12 +7080,12 @@ void func_215(int iParam0) // Position - 0x7FBC
 	{
 		num2 = unk33.f_3;
 		unk33.f_3 = num2 / 2;
-		num3 = { uLocal_158.f_204[iParam0] };
+		num3 = Vector3(uLocal_158.f_204[iParam0]);
 	
 		if (_GET_RANDOM_BOOL())
-			num3 = { func_186(num3, func_108(0.002604167f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())), 0.00462963f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())))) };
+			num3 = Vector3(func_186(num3, func_108(0.002604167f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())), 0.00462963f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())))));
 		else
-			num3 = { func_186(num3, func_108(0.002604167f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())), 0.00462963f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())))) };
+			num3 = Vector3(func_186(num3, func_108(0.002604167f * SYSTEM::COS(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())), 0.00462963f * SYSTEM::SIN(SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER())))));
 	
 		func_123(&unk, &unk37, num3, num3.f_1, 0.033333f, 0.059259f, num, unk33);
 		unk33.f_3 = num2;
@@ -7097,7 +7097,7 @@ void func_215(int iParam0) // Position - 0x7FBC
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk54, "muzzle_flare_", 64);
 		TEXT_LABEL_APPEND_INT(&unk54, uLocal_158.f_204[iParam0].f_5 + 1, 64);
-		num4 = { func_216(iParam0, num) };
+		num4 = Vector3(func_216(iParam0, num));
 		func_123("MPArcadeCabinetGrid", &unk54, num4, num4.f_1, 0.016666668f, 0.02962963f, num, unk33);
 		uLocal_158.f_204[iParam0].f_5 = uLocal_158.f_204[iParam0].f_5 + uLocal_158.f_412;
 	
@@ -7112,24 +7112,24 @@ struct<2> func_216(int iParam0, float fParam1) // Position - 0x82CB
 {
 	var unk;
 
-	unk = { func_218(uLocal_158.f_204[iParam0]) };
+	unk = Vector3(func_218(uLocal_158.f_204[iParam0]));
 
 	switch (uLocal_817[iParam0].f_5)
 	{
 		case 1:
 		case 2:
-			unk = { func_186(unk, func_108(7f, -36f)) };
+			unk = Vector3(func_186(unk, func_108(7f, -36f)));
 			break;
 	
 		case 3:
 		case 4:
 		case 5:
-			unk = { func_186(unk, func_108(5f, -40f)) };
+			unk = Vector3(func_186(unk, func_108(5f, -40f)));
 			break;
 	}
 
-	unk = { func_217(func_218(uLocal_158.f_204[iParam0]), unk, fParam1) };
-	unk = { func_107(unk) };
+	unk = Vector3(func_217(func_218(uLocal_158.f_204[iParam0]), unk, fParam1));
+	unk = Vector3(func_107(unk));
 	return unk;
 }
 
@@ -7204,7 +7204,7 @@ void func_220() // Position - 0x8431
 		}
 		else
 		{
-			num3 = { func_187(uLocal_611.f_62[i]) };
+			num3 = Vector3(func_187(uLocal_611.f_62[i]));
 			MISC::SET_BIT(&address, i);
 		
 			if (!IS_BIT_SET(uLocal_158.f_310, i) && !flag)
@@ -7218,7 +7218,7 @@ void func_220() // Position - 0x8431
 			if (uLocal_158.f_90[uLocal_611.f_62[i].f_1].f_1 > 0)
 				TEXT_LABEL_APPEND_INT(&unk3, (uLocal_158.f_311 % uLocal_158.f_90[uLocal_611.f_62[i].f_1].f_1) + 1, 64);
 		
-			num2 = { func_108(0.033333f, 0.059259f) };
+			num2 = Vector3(func_108(0.033333f, 0.059259f));
 		
 			if (!(uLocal_611.f_62[i].f_1 == 0 || uLocal_611.f_62[i].f_1 == 2 || uLocal_611.f_62[i].f_1 == 1))
 			{
@@ -7226,7 +7226,7 @@ void func_220() // Position - 0x8431
 				num2.f_1 = num2.f_1 - (num2.f_1 * 0.15f * num);
 			}
 		
-			unk19 = { uLocal_158.f_107.f_17 };
+			unk19 = Vector3(uLocal_158.f_107.f_17);
 		
 			if (NETWORK::GET_NETWORK_TIME() - uLocal_611.f_62[i].f_2 < 1250)
 				unk19.f_3 = SYSTEM::ROUND(num * 255f);
@@ -7756,11 +7756,11 @@ void func_240() // Position - 0x909E
 	{
 		case 0:
 		case 1:
-			uLocal_158.f_439 = { func_108(1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0f), 1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f)) };
+			uLocal_158.f_439 = Vector3(func_108(1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0f), 1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f)));
 			break;
 	
 		case 2:
-			uLocal_158.f_439 = { func_108(0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f), 1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f)) };
+			uLocal_158.f_439 = Vector3(func_108(0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f), 1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 0.5f)));
 			break;
 	}
 
@@ -7833,32 +7833,32 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 			}
 		
 			num2 = 0f;
-			num3 = { uLocal_919[iParam0].f_9.f_5[i].f_1 };
+			num3 = Vector3(uLocal_919[iParam0].f_9.f_5[i].f_1);
 		
 			switch (uLocal_919[iParam0].f_9.f_5[i].f_3)
 			{
 				case 0:
 					num2 = -((float)uLocal_158.f_59[uLocal_919[iParam0].f_9.f_5[i].f_4].f_2 * 0.185185f);
 					num3.f_1 = num3.f_1 + num2;
-					unk8 = { func_108(0f, 0.014814815f) };
+					unk8 = Vector3(func_108(0f, 0.014814815f));
 					break;
 			
 				case 1:
 					num2 = (float)uLocal_158.f_59[uLocal_919[iParam0].f_9.f_5[i].f_4].f_2 * 0.185185f;
 					num3.f_1 = num3.f_1 + num2;
-					unk8 = { func_108(0f, -0.014814815f) };
+					unk8 = Vector3(func_108(0f, -0.014814815f));
 					break;
 			
 				case 2:
 					num2 = -((float)uLocal_158.f_59[uLocal_919[iParam0].f_9.f_5[i].f_4].f_2 * 0.104167f);
 					num3 = num3 + num2;
-					unk8 = { func_108(0.008333333f, 0f) };
+					unk8 = Vector3(func_108(0.008333333f, 0f));
 					break;
 			
 				case 3:
 					num2 = (float)uLocal_158.f_59[uLocal_919[iParam0].f_9.f_5[i].f_4].f_2 * 0.104167f;
 					num3 = num3 + num2;
-					unk8 = { func_108(-0.008333333f, 0f) };
+					unk8 = Vector3(func_108(-0.008333333f, 0f));
 					break;
 			}
 		
@@ -7868,7 +7868,7 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 			{
 				if (num4 > 1f)
 				{
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { func_108(-1f, -1f) };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(func_108(-1f, -1f));
 					uLocal_919[iParam0].f_9.f_5[i] = -2147483647;
 					uLocal_919[iParam0].f_9.f_5[i].f_1 = -1f;
 					uLocal_919[iParam0].f_9.f_5[i].f_1.f_1 = -1f;
@@ -7878,19 +7878,19 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 			}
 			else
 			{
-				unk11 = { uLocal_919[iParam0].f_9.f_5[i].f_1 };
-				unk13 = { num3 };
+				unk11 = Vector3(uLocal_919[iParam0].f_9.f_5[i].f_1);
+				unk13 = Vector3(num3);
 			
 				if (func_258(uLocal_158.f_204[iParam0].f_10[i].f_2, -1f - 0.0001f, -1f + 0.0001f) && func_258(uLocal_158.f_204[iParam0].f_10[i].f_2.f_1, -1f - 0.0001f, -1f + 0.0001f))
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { unk11 };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(unk11);
 				else
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { uLocal_158.f_204[iParam0].f_10[i] };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(uLocal_158.f_204[iParam0].f_10[i]);
 			
-				uLocal_158.f_204[iParam0].f_10[i] = { func_256(unk11, unk13, num4) };
+				uLocal_158.f_204[iParam0].f_10[i] = Vector3(func_256(unk11, unk13, num4));
 				j = 0;
 				flag = false;
-				unk4 = { uLocal_158.f_204[iParam0].f_10[i] };
-				unk6 = { func_186(uLocal_158.f_204[iParam0].f_10[i].f_2, unk8) };
+				unk4 = Vector3(uLocal_158.f_204[iParam0].f_10[i]);
+				unk6 = Vector3(func_186(uLocal_158.f_204[iParam0].f_10[i].f_2, unk8));
 			
 				for (j = 0; j <= 3; j = j + 1)
 				{
@@ -7908,8 +7908,8 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 					}
 					else
 					{
-						num = { uLocal_158.f_204[j] };
-						unk2 = { uLocal_158.f_204[j].f_2 };
+						num = Vector3(uLocal_158.f_204[j]);
+						unk2 = Vector3(uLocal_158.f_204[j].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -7940,8 +7940,8 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 					}
 					else
 					{
-						num = { uLocal_158.f_204[k] };
-						unk2 = { uLocal_158.f_204[k].f_2 };
+						num = Vector3(uLocal_158.f_204[k]);
+						unk2 = Vector3(uLocal_158.f_204[k].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -7974,7 +7974,7 @@ void func_242(int iParam0, int* piParam1) // Position - 0x915D
 void func_243(var uParam0, var uParam1) // Position - 0x96B3
 {
 	uLocal_158.f_159[uLocal_158.f_308] = 0;
-	uLocal_158.f_159[uLocal_158.f_308].f_1 = { uParam0 };
+	uLocal_158.f_159[uLocal_158.f_308].f_1 = Vector3(uParam0);
 
 	if (func_244(uParam0, uLocal_158.f_204[uLocal_158.f_178]) < SYSTEM::POW(0.185185f * 2f, 2f))
 		PAD::SET_CONTROL_SHAKE(PLAYER_CONTROL, 1000, 100);
@@ -7995,7 +7995,7 @@ float func_244(var uParam0, var uParam1, float fParam2, var uParam3) // Position
 
 void func_245(int iParam0, int iParam1, int iParam2) // Position - 0x9751
 {
-	uLocal_158.f_204[iParam2].f_10[iParam0] = { uLocal_158.f_204[iParam1] };
+	uLocal_158.f_204[iParam2].f_10[iParam0] = Vector3(uLocal_158.f_204[iParam1]);
 	func_246(iParam1, -uLocal_158.f_59[uLocal_919[iParam2].f_9.f_5[iParam0].f_4].f_4, 0);
 	PAD::SET_CONTROL_SHAKE(PLAYER_CONTROL, 250, 200);
 	uLocal_919[iParam1].f_3 = NETWORK::GET_NETWORK_TIME();
@@ -8073,7 +8073,7 @@ BOOL func_248(int iParam0) // Position - 0x98A5
 
 void func_249(int iParam0, int iParam1, int iParam2) // Position - 0x98CC
 {
-	uLocal_158.f_204[iParam2].f_10[iParam0] = { uLocal_158.f_204[iParam1] };
+	uLocal_158.f_204[iParam2].f_10[iParam0] = Vector3(uLocal_158.f_204[iParam1]);
 
 	if (iParam1 == uLocal_158.f_178)
 	{
@@ -8133,10 +8133,10 @@ BOOL func_251(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	var unk4;
 	var unk5;
 
-	unk = { uParam0 };
-	unk3 = { uParam2 };
-	unk5 = { uParam4 };
-	unk7 = { uParam6 };
+	unk = Vector3(uParam0);
+	unk3 = Vector3(uParam2);
+	unk5 = Vector3(uParam4);
+	unk7 = Vector3(uParam6);
 	func_255(&uParam0, &uParam2);
 	func_255(&uParam4, &uParam6);
 	func_255(&unk3, &unk);
@@ -8173,16 +8173,16 @@ BOOL func_252(float fParam0, var uParam1, float fParam2, var uParam3, float fPar
 	{
 		num8 = ((num5 * num3) - (num2 * num6)) / num7;
 		num9 = ((num * num6) - (num4 * num3)) / num7;
-		num10 = { func_108(num8, num9) };
+		num10 = Vector3(func_108(num8, num9));
 	
 		if (func_254(fParam0 - 0.001f, fParam2 - 0.001f) <= num10 && num10 <= func_253(fParam0 + 0.001f, fParam2 + 0.001f) && func_254(fParam0.f_1 - 0.001f, fParam2.f_1 - 0.001f) <= num10.f_1 && num10.f_1 <= func_253(fParam0.f_1 + 0.001f, fParam2.f_1 + 0.001f) && func_254(fParam4 - 0.001f, fParam6 - 0.001f) <= num10 && num10 <= func_253(fParam4 + 0.001f, fParam6 + 0.001f) && func_254(fParam4.f_1 - 0.001f, fParam6.f_1 - 0.001f) <= num10.f_1 && num10.f_1 <= func_253(fParam4.f_1 + 0.001f, fParam6.f_1 + 0.001f))
 		{
-			*uParam8 = { num10 };
+			*uParam8 = Vector3(num10);
 			return true;
 		}
 	}
 
-	*uParam8 = { func_108(3.402823E+38f, 3.402823E+38f) };
+	*uParam8 = Vector3(func_108(3.402823E+38f, 3.402823E+38f));
 	return false;
 }
 
@@ -8355,32 +8355,32 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 			}
 		
 			num2 = 0f;
-			num3 = { uLocal_854[iParam0].f_5[i].f_1 };
+			num3 = Vector3(uLocal_854[iParam0].f_5[i].f_1);
 		
 			switch (uLocal_854[iParam0].f_5[i].f_3)
 			{
 				case 0:
 					num2 = -((float)uLocal_158.f_59[uLocal_854[iParam0].f_5[i].f_4].f_2 * 0.185185f);
 					num3.f_1 = num3.f_1 + num2;
-					unk8 = { func_108(0f, 0.014814815f) };
+					unk8 = Vector3(func_108(0f, 0.014814815f));
 					break;
 			
 				case 1:
 					num2 = (float)uLocal_158.f_59[uLocal_854[iParam0].f_5[i].f_4].f_2 * 0.185185f;
 					num3.f_1 = num3.f_1 + num2;
-					unk8 = { func_108(0f, -0.014814815f) };
+					unk8 = Vector3(func_108(0f, -0.014814815f));
 					break;
 			
 				case 2:
 					num2 = -((float)uLocal_158.f_59[uLocal_854[iParam0].f_5[i].f_4].f_2 * 0.104167f);
 					num3 = num3 + num2;
-					unk8 = { func_108(0.008333333f, 0f) };
+					unk8 = Vector3(func_108(0.008333333f, 0f));
 					break;
 			
 				case 3:
 					num2 = (float)uLocal_158.f_59[uLocal_854[iParam0].f_5[i].f_4].f_2 * 0.104167f;
 					num3 = num3 + num2;
-					unk8 = { func_108(-0.008333333f, 0f) };
+					unk8 = Vector3(func_108(-0.008333333f, 0f));
 					break;
 			}
 		
@@ -8390,7 +8390,7 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 			{
 				if (num4 > 1f)
 				{
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { func_108(-1f, -1f) };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(func_108(-1f, -1f));
 				
 					if (iParam0 == uLocal_158.f_178)
 					{
@@ -8404,19 +8404,19 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 			}
 			else
 			{
-				unk11 = { uLocal_854[iParam0].f_5[i].f_1 };
-				unk13 = { num3 };
+				unk11 = Vector3(uLocal_854[iParam0].f_5[i].f_1);
+				unk13 = Vector3(num3);
 			
 				if (func_258(uLocal_158.f_204[iParam0].f_10[i].f_2, -1f - 0.0001f, -1f + 0.0001f) && func_258(uLocal_158.f_204[iParam0].f_10[i].f_2.f_1, -1f - 0.0001f, -1f + 0.0001f))
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { unk11 };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(unk11);
 				else
-					uLocal_158.f_204[iParam0].f_10[i].f_2 = { uLocal_158.f_204[iParam0].f_10[i] };
+					uLocal_158.f_204[iParam0].f_10[i].f_2 = Vector3(uLocal_158.f_204[iParam0].f_10[i]);
 			
-				uLocal_158.f_204[iParam0].f_10[i] = { func_256(unk11, unk13, num4) };
+				uLocal_158.f_204[iParam0].f_10[i] = Vector3(func_256(unk11, unk13, num4));
 				j = 0;
 				flag = false;
-				unk4 = { uLocal_158.f_204[iParam0].f_10[i] };
-				unk6 = { func_186(uLocal_158.f_204[iParam0].f_10[i].f_2, unk8) };
+				unk4 = Vector3(uLocal_158.f_204[iParam0].f_10[i]);
+				unk6 = Vector3(func_186(uLocal_158.f_204[iParam0].f_10[i].f_2, unk8));
 			
 				for (j = 0; j <= 3; j = j + 1)
 				{
@@ -8434,8 +8434,8 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 					}
 					else
 					{
-						num = { uLocal_158.f_204[j] };
-						unk2 = { uLocal_158.f_204[j].f_2 };
+						num = Vector3(uLocal_158.f_204[j]);
+						unk2 = Vector3(uLocal_158.f_204[j].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -8466,8 +8466,8 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 					}
 					else
 					{
-						num = { uLocal_158.f_204[k] };
-						unk2 = { uLocal_158.f_204[k].f_2 };
+						num = Vector3(uLocal_158.f_204[k]);
+						unk2 = Vector3(uLocal_158.f_204[k].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -8499,7 +8499,7 @@ void func_262(int iParam0, int* piParam1) // Position - 0x9ECA
 
 void func_263(int iParam0, int iParam1, int iParam2) // Position - 0xA411
 {
-	uLocal_158.f_204[iParam2].f_10[iParam0] = { uLocal_158.f_204[iParam1] };
+	uLocal_158.f_204[iParam2].f_10[iParam0] = Vector3(uLocal_158.f_204[iParam1]);
 	func_246(iParam1, -uLocal_158.f_59[uLocal_854[iParam2].f_5[iParam0].f_4].f_4, 0);
 	PAD::SET_CONTROL_SHAKE(PLAYER_CONTROL, 250, 200);
 	uLocal_919[iParam1].f_3 = NETWORK::GET_NETWORK_TIME();
@@ -8518,7 +8518,7 @@ void func_263(int iParam0, int iParam1, int iParam2) // Position - 0xA411
 
 void func_264(int iParam0, int iParam1, int iParam2) // Position - 0xA4A7
 {
-	uLocal_158.f_204[iParam2].f_10[iParam0] = { uLocal_158.f_204[iParam1] };
+	uLocal_158.f_204[iParam2].f_10[iParam0] = Vector3(uLocal_158.f_204[iParam1]);
 
 	if (iParam1 == uLocal_158.f_178)
 	{
@@ -8623,30 +8623,30 @@ void func_266() // Position - 0xA617
 					case 0:
 						num4 = num2;
 						num5 = 0;
-						unk8 = { func_108(0f, -(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2.f_1 / 2f)) };
+						unk8 = Vector3(func_108(0f, -(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2.f_1 / 2f)));
 						break;
 				
 					case 1:
 						num4 = num2;
 						num5 = 8;
-						unk8 = { func_108(0f, uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2.f_1 / 2f) };
+						unk8 = Vector3(func_108(0f, uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2.f_1 / 2f));
 						break;
 				
 					case 2:
 						num4 = 0;
 						num5 = num3;
-						unk8 = { func_108(-(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2 / 2f), 0f) };
+						unk8 = Vector3(func_108(-(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2 / 2f), 0f));
 						break;
 				
 					case 3:
 						num4 = 12;
 						num5 = num3;
-						unk8 = { func_108(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2 / 2f, 0f) };
+						unk8 = Vector3(func_108(uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2 / 2f, 0f));
 						break;
 				}
 			
-				num7 = { func_187(uLocal_611.f_148[i].f_1) };
-				num8 = { func_187(func_71(num4, num5)) };
+				num7 = Vector3(func_187(uLocal_611.f_148[i].f_1));
+				num8 = Vector3(func_187(func_71(num4, num5)));
 			
 				switch (uLocal_611.f_148[i].f_2)
 				{
@@ -8671,8 +8671,8 @@ void func_266() // Position - 0xA617
 						break;
 				}
 			
-				uLocal_158.f_281[i].f_2 = { uLocal_158.f_281[i] };
-				uLocal_158.f_281[i] = { func_256(num7, num8, num6) };
+				uLocal_158.f_281[i].f_2 = Vector3(uLocal_158.f_281[i]);
+				uLocal_158.f_281[i] = Vector3(func_256(num7, num8, num6));
 			
 				if (!func_204(uLocal_158.f_281[i], uLocal_158.f_22[uLocal_611.f_148[i].f_3].f_2))
 				{
@@ -8691,10 +8691,10 @@ void func_266() // Position - 0xA617
 					
 						if (i != 2)
 						{
-							unk12 = { uLocal_158.f_281[i] };
+							unk12 = Vector3(uLocal_158.f_281[i]);
 						
 							if (i == 1 && uLocal_611.f_148[i].f_2 != uLocal_611.f_148[2].f_2)
-								unk12 = { func_108(0.5f, 0.5f) };
+								unk12 = Vector3(func_108(0.5f, 0.5f));
 						
 							if (uLocal_611.f_148[i].f_3 >= 5)
 							{
@@ -8713,8 +8713,8 @@ void func_266() // Position - 0xA617
 					func_170(&(uLocal_158.f_281[i].f_5));
 				}
 			
-				unk4 = { func_186(uLocal_158.f_281[i], unk8) };
-				unk6 = { func_269(uLocal_158.f_281[i].f_2, unk8) };
+				unk4 = Vector3(func_186(uLocal_158.f_281[i], unk8));
+				unk6 = Vector3(func_269(uLocal_158.f_281[i].f_2, unk8));
 				j = 0;
 			
 				for (j = 0; j <= 3; j = j + 1)
@@ -8730,8 +8730,8 @@ void func_266() // Position - 0xA617
 					}
 					else
 					{
-						num = { uLocal_158.f_204[j] };
-						unk2 = { uLocal_158.f_204[j].f_2 };
+						num = Vector3(uLocal_158.f_204[j]);
+						unk2 = Vector3(uLocal_158.f_204[j].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -8758,8 +8758,8 @@ void func_266() // Position - 0xA617
 					}
 					else
 					{
-						num = { uLocal_158.f_204[k] };
-						unk2 = { uLocal_158.f_204[k].f_2 };
+						num = Vector3(uLocal_158.f_204[k]);
+						unk2 = Vector3(uLocal_158.f_204[k].f_2);
 					
 						if (MISC::ABSF(num - unk4) > 0.104167f || MISC::ABSF(num.f_1 - unk4.f_1) > 0.185185f)
 						{
@@ -8778,7 +8778,7 @@ void func_266() // Position - 0xA617
 		if (uLocal_158.f_281[i].f_5 != -1)
 			func_170(&(uLocal_158.f_281[i].f_5));
 	
-		uLocal_158.f_281[i] = { func_187(uLocal_611.f_148[i].f_1) };
+		uLocal_158.f_281[i] = Vector3(func_187(uLocal_611.f_148[i].f_1));
 	
 		switch (uLocal_611.f_148[i].f_2)
 		{
@@ -8799,7 +8799,7 @@ void func_266() // Position - 0xA617
 				break;
 		}
 	
-		uLocal_158.f_281[i].f_2 = { uLocal_158.f_281[i] };
+		uLocal_158.f_281[i].f_2 = Vector3(uLocal_158.f_281[i]);
 	}
 
 	if (!flag)
@@ -8933,7 +8933,7 @@ void func_273() // Position - 0xAE2B
 		}
 		else if (func_68(i))
 		{
-			uLocal_158.f_204[i].f_2 = { func_108(-1f, -1f) };
+			uLocal_158.f_204[i].f_2 = Vector3(func_108(-1f, -1f));
 		}
 		else
 		{
@@ -8960,8 +8960,8 @@ void func_274(int iParam0) // Position - 0xAE8C
 
 	func_184(uLocal_919[iParam0].f_9, &num, &num2);
 	func_184(uLocal_919[iParam0].f_9.f_1, &num3, &num4);
-	unk = { func_187(uLocal_919[iParam0].f_9) };
-	unk3 = { func_187(uLocal_919[iParam0].f_9.f_1) };
+	unk = Vector3(func_187(uLocal_919[iParam0].f_9));
+	unk3 = Vector3(func_187(uLocal_919[iParam0].f_9.f_1));
 	num5 = SYSTEM::TO_FLOAT(NETWORK::GET_NETWORK_TIME() - uLocal_919[iParam0].f_9.f_2) / SYSTEM::TO_FLOAT(func_280(iParam0));
 
 	if (num5 < 0f)
@@ -9041,20 +9041,20 @@ void func_274(int iParam0) // Position - 0xAE8C
 	if (num5 < 1f)
 	{
 		if (uLocal_158.f_204[iParam0].f_2 < 0f && uLocal_158.f_204[iParam0].f_2.f_1 < 0f)
-			uLocal_158.f_204[iParam0].f_2 = { func_256(unk3, unk, num5) };
+			uLocal_158.f_204[iParam0].f_2 = Vector3(func_256(unk3, unk, num5));
 		else
-			uLocal_158.f_204[iParam0].f_2 = { uLocal_158.f_204[iParam0] };
+			uLocal_158.f_204[iParam0].f_2 = Vector3(uLocal_158.f_204[iParam0]);
 	
-		uLocal_158.f_204[iParam0] = { func_256(unk3, unk, num5) };
+		uLocal_158.f_204[iParam0] = Vector3(func_256(unk3, unk, num5));
 		return;
 	}
 
 	if (uLocal_158.f_204[iParam0].f_2 < 0f && uLocal_158.f_204[iParam0].f_2.f_1 < 0f)
-		uLocal_158.f_204[iParam0].f_2 = { unk };
+		uLocal_158.f_204[iParam0].f_2 = Vector3(unk);
 	else
-		uLocal_158.f_204[iParam0].f_2 = { uLocal_158.f_204[iParam0] };
+		uLocal_158.f_204[iParam0].f_2 = Vector3(uLocal_158.f_204[iParam0]);
 
-	uLocal_158.f_204[iParam0] = { unk };
+	uLocal_158.f_204[iParam0] = Vector3(unk);
 	uLocal_158.f_204[iParam0].f_4 = 0;
 	return;
 }
@@ -9216,7 +9216,7 @@ void func_281() // Position - 0xB43B
 		}
 		else if (func_68(i))
 		{
-			uLocal_158.f_204[i].f_2 = { func_108(-1f, -1f) };
+			uLocal_158.f_204[i].f_2 = Vector3(func_108(-1f, -1f));
 		}
 		else
 		{
@@ -9243,8 +9243,8 @@ void func_282(int iParam0) // Position - 0xB49D
 
 	func_184(uLocal_854[iParam0], &num, &num2);
 	func_184(uLocal_854[iParam0].f_1, &num3, &num4);
-	unk = { func_187(uLocal_854[iParam0]) };
-	unk3 = { func_187(uLocal_854[iParam0].f_1) };
+	unk = Vector3(func_187(uLocal_854[iParam0]));
+	unk3 = Vector3(func_187(uLocal_854[iParam0].f_1));
 	num5 = SYSTEM::TO_FLOAT(NETWORK::GET_NETWORK_TIME() - uLocal_854[iParam0].f_2) / SYSTEM::TO_FLOAT(func_183(iParam0));
 
 	if (num5 < 0f)
@@ -9328,20 +9328,20 @@ void func_282(int iParam0) // Position - 0xB49D
 	if (num5 < 1f)
 	{
 		if (uLocal_158.f_204[iParam0].f_2 < 0f && uLocal_158.f_204[iParam0].f_2.f_1 < 0f)
-			uLocal_158.f_204[iParam0].f_2 = { func_256(unk3, unk, num5) };
+			uLocal_158.f_204[iParam0].f_2 = Vector3(func_256(unk3, unk, num5));
 		else
-			uLocal_158.f_204[iParam0].f_2 = { uLocal_158.f_204[iParam0] };
+			uLocal_158.f_204[iParam0].f_2 = Vector3(uLocal_158.f_204[iParam0]);
 	
-		uLocal_158.f_204[iParam0] = { func_256(unk3, unk, num5) };
+		uLocal_158.f_204[iParam0] = Vector3(func_256(unk3, unk, num5));
 		return;
 	}
 
 	if (uLocal_158.f_204[iParam0].f_2 < 0f && uLocal_158.f_204[iParam0].f_2.f_1 < 0f)
-		uLocal_158.f_204[iParam0].f_2 = { unk };
+		uLocal_158.f_204[iParam0].f_2 = Vector3(unk);
 	else
-		uLocal_158.f_204[iParam0].f_2 = { uLocal_158.f_204[iParam0] };
+		uLocal_158.f_204[iParam0].f_2 = Vector3(uLocal_158.f_204[iParam0]);
 
-	uLocal_158.f_204[iParam0] = { unk };
+	uLocal_158.f_204[iParam0] = Vector3(unk);
 	uLocal_158.f_204[iParam0].f_4 = 0;
 	return;
 }
@@ -9350,7 +9350,7 @@ void func_283(int iParam0) // Position - 0xB7BA
 {
 	var unk;
 
-	unk = { func_187(uLocal_611.f_62[iParam0]) };
+	unk = Vector3(func_187(uLocal_611.f_62[iParam0]));
 	uLocal_136.f_17 = uLocal_136.f_17 + 1;
 
 	switch (uLocal_611.f_62[iParam0].f_1)
@@ -9480,7 +9480,7 @@ void func_286(int iParam0) // Position - 0xBA2A
 		uLocal_919[iParam0].f_9.f_5[uLocal_158.f_307] = NETWORK::GET_NETWORK_TIME();
 		uLocal_919[iParam0].f_9.f_5[uLocal_158.f_307].f_3 = unk;
 		uLocal_919[iParam0].f_9.f_5[uLocal_158.f_307].f_4 = uLocal_919[iParam0].f_5;
-		uLocal_919[iParam0].f_9.f_5[uLocal_158.f_307].f_1 = { uLocal_158.f_204[iParam0] };
+		uLocal_919[iParam0].f_9.f_5[uLocal_158.f_307].f_1 = Vector3(uLocal_158.f_204[iParam0]);
 		uLocal_919[iParam0].f_9.f_4 = unk;
 		uLocal_158.f_183[iParam0].f_3 = NETWORK::GET_NETWORK_TIME();
 		uLocal_158.f_307 = uLocal_158.f_307 + 1;
@@ -9503,8 +9503,8 @@ BOOL func_287(int iParam0, int iParam1) // Position - 0xBB45
 	var unk3;
 	var unk4;
 
-	num = { func_187(func_71(12, 8)) };
-	num2 = { func_187(func_71(0, 0)) };
+	num = Vector3(func_187(func_71(12, 8)));
+	num2 = Vector3(func_187(func_71(0, 0)));
 
 	switch (iParam1)
 	{
@@ -10368,7 +10368,7 @@ void func_310() // Position - 0xD04F
 		uLocal_854[uLocal_158.f_178].f_5[uLocal_158.f_307] = NETWORK::GET_NETWORK_TIME();
 		uLocal_854[uLocal_158.f_178].f_5[uLocal_158.f_307].f_3 = unk;
 		uLocal_854[uLocal_158.f_178].f_5[uLocal_158.f_307].f_4 = uLocal_817[uLocal_158.f_178].f_5;
-		uLocal_854[uLocal_158.f_178].f_5[uLocal_158.f_307].f_1 = { uLocal_158.f_204[uLocal_158.f_178] };
+		uLocal_854[uLocal_158.f_178].f_5[uLocal_158.f_307].f_1 = Vector3(uLocal_158.f_204[uLocal_158.f_178]);
 		uLocal_854[uLocal_158.f_178].f_4 = unk;
 		uLocal_158.f_178.f_3 = NETWORK::GET_NETWORK_TIME();
 		uLocal_158.f_307 = uLocal_158.f_307 + 1;
@@ -10391,8 +10391,8 @@ BOOL func_311(int iParam0) // Position - 0xD166
 	var unk3;
 	var unk4;
 
-	num = { func_187(func_71(12, 8)) };
-	num2 = { func_187(func_71(0, 0)) };
+	num = Vector3(func_187(func_71(12, 8)));
+	num2 = Vector3(func_187(func_71(0, 0)));
 
 	switch (iParam0)
 	{
@@ -10824,7 +10824,7 @@ void func_322(int iParam0) // Position - 0xDA78
 	
 		for (j = 0; j <= 3; j = j + 1)
 		{
-			uLocal_158.f_204[j].f_10[i].f_2 = { func_108(-1f, -1f) };
+			uLocal_158.f_204[j].f_10[i].f_2 = Vector3(func_108(-1f, -1f));
 		}
 	}
 
@@ -10844,7 +10844,7 @@ void func_322(int iParam0) // Position - 0xDA78
 	}
 
 	uLocal_158.f_437 = -2147483647;
-	uLocal_158.f_439 = { func_108(0f, 0f) };
+	uLocal_158.f_439 = Vector3(func_108(0f, 0f));
 	MISC::SET_BIT(&uLocal_158.f_142[iParam0], 1);
 	MISC::SET_BIT(&uLocal_158.f_142[iParam0], 0);
 	MISC::CLEAR_BIT(&uLocal_158.f_142[iParam0], 2);
@@ -10893,7 +10893,7 @@ void func_324() // Position - 0xDCAF
 	
 		for (j = 0; j <= 3; j = j + 1)
 		{
-			uLocal_158.f_204[j].f_10[i].f_2 = { func_108(-1f, -1f) };
+			uLocal_158.f_204[j].f_10[i].f_2 = Vector3(func_108(-1f, -1f));
 		}
 	}
 
@@ -10913,7 +10913,7 @@ void func_324() // Position - 0xDCAF
 	}
 
 	uLocal_158.f_437 = -2147483647;
-	uLocal_158.f_439 = { func_108(0f, 0f) };
+	uLocal_158.f_439 = Vector3(func_108(0f, 0f));
 	MISC::SET_BIT(&(uLocal_158.f_141), 1);
 	MISC::SET_BIT(&(uLocal_158.f_141), 0);
 	MISC::CLEAR_BIT(&(uLocal_158.f_141), 2);
@@ -11434,10 +11434,10 @@ void func_342() // Position - 0xE9D9
 
 void func_343() // Position - 0xEA64
 {
-	uLocal_158[0] = { func_108(0.170833f, 0.909259f - 0.019444f) };
-	uLocal_158[1] = { func_108(0.170833f, 0.109259f + 0.019444f) };
-	uLocal_158[2] = { func_108(0.829167f, 0.109259f + 0.019444f) };
-	uLocal_158[3] = { func_108(0.829167f, 0.909259f - 0.019444f) };
+	uLocal_158[0] = Vector3(func_108(0.170833f, 0.909259f - 0.019444f));
+	uLocal_158[1] = Vector3(func_108(0.170833f, 0.109259f + 0.019444f));
+	uLocal_158[2] = Vector3(func_108(0.829167f, 0.109259f + 0.019444f));
+	uLocal_158[3] = Vector3(func_108(0.829167f, 0.909259f - 0.019444f));
 	uLocal_158.f_9[0][0] = 1;
 	uLocal_158.f_9[0][1] = 2;
 	uLocal_158.f_9[1][0] = 11;
@@ -11959,14 +11959,14 @@ void func_362(BOOL bParam0, BOOL bParam1) // Position - 0xF785
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -13150,7 +13150,7 @@ void func_399() // Position - 0x106ED
 	for (i = 0; i <= 3; i = i + 1)
 	{
 		if (uLocal_919[i].f_25)
-			uLocal_817[i] = { uLocal_919[i] };
+			uLocal_817[i] = Vector3(uLocal_919[i]);
 	}
 
 	return;

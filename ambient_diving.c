@@ -576,7 +576,7 @@ BOOL func_3(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int
 		else if (iParam1 == 0)
 			MISC::SET_BIT(&(num.f_1), 10);
 	
-		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = { num };
+		G_SomeGlobalState.MessageCallStates[G_SomeGlobalState.MessageCallStates.f_136] = Vector3(num);
 		G_SomeGlobalState.MessageCallStates.f_136 = G_SomeGlobalState.MessageCallStates.f_136 + 1;
 	
 		for (i = 0; i < 3; i = i + 1)
@@ -964,7 +964,7 @@ BOOL func_18(var uParam0, var uParam1) // Position - 0xB49
 	int unk2;
 
 	PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID());
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	for (i = 0; i < 1; i = i + 1)
 	{
@@ -992,7 +992,7 @@ BOOL func_18(var uParam0, var uParam1) // Position - 0xB49
 	
 		if (!func_25(44))
 		{
-			entityCoords2 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+			entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 		
 			if (func_24(&uLocal_42, &iLocal_55, entityCoords2, &num))
 			{
@@ -2001,14 +2001,14 @@ float func_58(Ped pedParam0, Vehicle veParam1, BOOL bParam2) // Position - 0x216
 	Vector3 unk;
 
 	if (!ENTITY::IS_ENTITY_DEAD(pedParam0, false))
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, true));
 	else
-		entityCoords = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) };
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false));
 
 	if (!ENTITY::IS_ENTITY_DEAD(veParam1, false))
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(veParam1, true) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(veParam1, true));
 	else
-		entityCoords2 = { ENTITY::GET_ENTITY_COORDS(veParam1, false) };
+		entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(veParam1, false));
 
 	return MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, bParam2);
 }
@@ -2071,11 +2071,11 @@ void func_62() // Position - 0x22A1
 	float unk2;
 	int vector;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
 
 	if (func_24(&uLocal_42, &iLocal_55, entityCoords, &iLocal_388))
 	{
-		vector = { func_23(iLocal_388) };
+		vector = Vector3(func_23(iLocal_388));
 		distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(vector, entityCoords, false);
 	
 		if (distanceBetweenCoords > 200f)
@@ -2324,40 +2324,40 @@ void func_69() // Position - 0x278C
 
 	for (i = 0; i < 30; i = i + 1)
 	{
-		iLocal_55[i].f_3 = { func_23(i) };
+		iLocal_55[i].f_3 = Vector3(func_23(i));
 		iLocal_55[i].f_10 = 0;
 	}
 
-	iLocal_55[0].f_6 = { -16.4f, 78.53f, -146.67f };
-	iLocal_55[1].f_6 = { 0f, 45f, 10f };
-	iLocal_55[2].f_6 = { 0.72f, 65.2f, -50.26f };
-	iLocal_55[3].f_6 = { 0f, 15f, -132.16f };
-	iLocal_55[4].f_6 = { 166.37f, -40f, 168.81f };
-	iLocal_55[5].f_6 = { 90f, 56.2f, 90f };
-	iLocal_55[6].f_6 = { -20f, 0f, 89.95f };
-	iLocal_55[7].f_6 = { 4.08f, 54.9f, -65.35f };
-	iLocal_55[8].f_6 = { 174.15f, -58.2f, -144.66f };
-	iLocal_55[9].f_6 = { -28.22f, 36.11f, -90.22f };
-	iLocal_55[10].f_6 = { -5f, 44f, 65f };
-	iLocal_55[11].f_6 = { 0f, -108f, 45.36f };
-	iLocal_55[12].f_6 = { -10.9f, 43.12f, 131.52f };
-	iLocal_55[13].f_6 = { 12.37f, 49.66f, 126.88f };
-	iLocal_55[14].f_6 = { 4.35f, 10.22f, 27.51f };
-	iLocal_55[15].f_6 = { 0f, 10f, 60.73f };
-	iLocal_55[16].f_6 = { 150.56f, -78.67f, -174.35f };
-	iLocal_55[17].f_6 = { 0f, 50f, 46.41f };
-	iLocal_55[18].f_6 = { 6.26f, 44.65f, 8.88f };
-	iLocal_55[19].f_6 = { 90f, 78.5f, 16.04f };
-	iLocal_55[20].f_6 = { -1.36f, 6.53f, -70.94f };
-	iLocal_55[21].f_6 = { -61.86f, 78.61f, 126.5f };
-	iLocal_55[22].f_6 = { -10f, -80.71f, 69.7f };
-	iLocal_55[23].f_6 = { -76.43f, -70.02f, 29.74f };
-	iLocal_55[24].f_6 = { -28f, -70f, 107.53f };
-	iLocal_55[25].f_6 = { 4.19f, 6.46f, 110.43f };
-	iLocal_55[26].f_6 = { -3.19f, 60.6f, 25f };
-	iLocal_55[27].f_6 = { 0f, -81.68f, -20.16f };
-	iLocal_55[28].f_6 = { 7.39f, 44.52f, 19.65f };
-	iLocal_55[29].f_6 = { 89.74f, 80.95f, 151.74f };
+	iLocal_55[0].f_6 = Vector3(-16.4f, 78.53f, -146.67f);
+	iLocal_55[1].f_6 = Vector3(0f, 45f, 10f);
+	iLocal_55[2].f_6 = Vector3(0.72f, 65.2f, -50.26f);
+	iLocal_55[3].f_6 = Vector3(0f, 15f, -132.16f);
+	iLocal_55[4].f_6 = Vector3(166.37f, -40f, 168.81f);
+	iLocal_55[5].f_6 = Vector3(90f, 56.2f, 90f);
+	iLocal_55[6].f_6 = Vector3(-20f, 0f, 89.95f);
+	iLocal_55[7].f_6 = Vector3(4.08f, 54.9f, -65.35f);
+	iLocal_55[8].f_6 = Vector3(174.15f, -58.2f, -144.66f);
+	iLocal_55[9].f_6 = Vector3(-28.22f, 36.11f, -90.22f);
+	iLocal_55[10].f_6 = Vector3(-5f, 44f, 65f);
+	iLocal_55[11].f_6 = Vector3(0f, -108f, 45.36f);
+	iLocal_55[12].f_6 = Vector3(-10.9f, 43.12f, 131.52f);
+	iLocal_55[13].f_6 = Vector3(12.37f, 49.66f, 126.88f);
+	iLocal_55[14].f_6 = Vector3(4.35f, 10.22f, 27.51f);
+	iLocal_55[15].f_6 = Vector3(0f, 10f, 60.73f);
+	iLocal_55[16].f_6 = Vector3(150.56f, -78.67f, -174.35f);
+	iLocal_55[17].f_6 = Vector3(0f, 50f, 46.41f);
+	iLocal_55[18].f_6 = Vector3(6.26f, 44.65f, 8.88f);
+	iLocal_55[19].f_6 = Vector3(90f, 78.5f, 16.04f);
+	iLocal_55[20].f_6 = Vector3(-1.36f, 6.53f, -70.94f);
+	iLocal_55[21].f_6 = Vector3(-61.86f, 78.61f, 126.5f);
+	iLocal_55[22].f_6 = Vector3(-10f, -80.71f, 69.7f);
+	iLocal_55[23].f_6 = Vector3(-76.43f, -70.02f, 29.74f);
+	iLocal_55[24].f_6 = Vector3(-28f, -70f, 107.53f);
+	iLocal_55[25].f_6 = Vector3(4.19f, 6.46f, 110.43f);
+	iLocal_55[26].f_6 = Vector3(-3.19f, 60.6f, 25f);
+	iLocal_55[27].f_6 = Vector3(0f, -81.68f, -20.16f);
+	iLocal_55[28].f_6 = Vector3(7.39f, 44.52f, 19.65f);
+	iLocal_55[29].f_6 = Vector3(89.74f, 80.95f, 151.74f);
 	return;
 }
 

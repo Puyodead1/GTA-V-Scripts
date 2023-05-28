@@ -108,7 +108,7 @@ void main() // Position - 0x0
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 		func_178();
 
-	uLocal_43 = { uScriptParam_66 };
+	uLocal_43 = Vector3(uScriptParam_66);
 	func_177();
 	func_176();
 	func_171(iLocal_48, 0, 0);
@@ -394,8 +394,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVEM_Default@";
 			str2.f_1 = "M_GetOut_R";
 			str2.f_2 = "M_GetOut_R_CAM";
-			str2.f_5 = { -814.181f, 181.1f, 75.74f };
-			str2.f_8 = { 0f, 0f, 21.1994f };
+			str2.f_5 = Vector3(-814.181f, 181.1f, 75.74f);
+			str2.f_8 = Vector3(0f, 0f, 21.1994f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -404,8 +404,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVECountryside@";
 			str2.f_1 = "M_GetOut_countryside";
 			str2.f_2 = "M_GetOut_countryside_CAM";
-			str2.f_5 = { 1968.14f, 3816.79f, 32.4287f };
-			str2.f_8 = { 0f, 0f, 29.7938f };
+			str2.f_5 = Vector3(1968.14f, 3816.79f, 32.4287f);
+			str2.f_8 = Vector3(0f, 0f, 29.7938f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -414,8 +414,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SWITCH@FRANKLIN@BED";
 			str2.f_1 = "Sleep_GetUp_RubEyes";
 			str2.f_2 = "Sleep_GetUp_RubEyes_CAM";
-			str2.f_5 = { -17.2168f, -1441.224f, 30.1015f };
-			str2.f_8 = { 0f, 0f, -179.653f };
+			str2.f_5 = Vector3(-17.2168f, -1441.224f, 30.1015f);
+			str2.f_8 = Vector3(0f, 0f, -179.653f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -424,7 +424,7 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVEBighouse@";
 			str2.f_1 = "F_GetOut_r_bighouse";
 			str2.f_2 = "F_GetOut_r_bighouse_CAM";
-			str2.f_5 = { -1.049f, 524.283f, 170.064f };
+			str2.f_5 = Vector3(-1.049f, 524.283f, 170.064f);
 			str2.f_8 = Vector3( 0f, 0f, 24f );
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
@@ -434,8 +434,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVECountryside@";
 			str2.f_1 = "T_GetOut_countryside";
 			str2.f_2 = "T_GetOut_countryside_CAM";
-			str2.f_5 = { 1968.14f, 3816.79f, 32.4287f };
-			str2.f_8 = { 0f, 0f, 29.7938f };
+			str2.f_5 = Vector3(1968.14f, 3816.79f, 32.4287f);
+			str2.f_8 = Vector3(0f, 0f, 29.7938f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -444,8 +444,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVEVeniceB@";
 			str2.f_1 = "T_GetOut_r_veniceB";
 			str2.f_2 = "T_GetOut_r_veniceB_CAM";
-			str2.f_5 = { -1148.438f, -1512.246f, 9.689f };
-			str2.f_8 = { 0f, 0f, 36.25f };
+			str2.f_5 = Vector3(-1148.438f, -1512.246f, 9.689f);
+			str2.f_8 = Vector3(0f, 0f, 36.25f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	
@@ -454,8 +454,8 @@ void func_10() // Position - 0x2D9
 			str2 = "SAVECouch@";
 			str2.f_1 = "T_GetOut_couch";
 			str2.f_2 = "T_GetOut_couch_CAM";
-			str2.f_5 = { 94.53f, -1289.86f, 28.27f };
-			str2.f_8 = { 0f, 0f, 29.7938f };
+			str2.f_5 = Vector3(94.53f, -1289.86f, 28.27f);
+			str2.f_8 = Vector3(0f, 0f, 29.7938f);
 			str2.f_4 = joaat("MotionState_Idle");
 			break;
 	}
@@ -792,8 +792,8 @@ void func_12(char* sParam0, var uParam1, char* sParam2) // Position - 0x7BD
 					if (!uParam1->f_32)
 					{
 						num7 = 1.5f;
-						finalRenderedCamCoord = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
-						pedBoneCoords = { PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 31086, 0f, 0f, 0f) };
+						finalRenderedCamCoord = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
+						pedBoneCoords = Vector3(PED::GET_PED_BONE_COORDS(PLAYER::PLAYER_PED_ID(), 31086, 0f, 0f, 0f));
 						distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(finalRenderedCamCoord, pedBoneCoords, true);
 						num7 = func_21(num7, 0.001f, distanceBetweenCoords - 0.75f);
 					
@@ -816,7 +816,7 @@ void func_12(char* sParam0, var uParam1, char* sParam2) // Position - 0x7BD
 					
 						if (uParam1->f_57 == 999f)
 						{
-							finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
+							finalRenderedCamRot = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(2));
 							entityHeading = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 							num8 = finalRenderedCamRot.f_2;
 							num9 = entityHeading;
@@ -835,8 +835,8 @@ void func_12(char* sParam0, var uParam1, char* sParam2) // Position - 0x7BD
 						CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(heading);
 						CAM::SET_FIRST_PERSON_SHOOTER_CAMERA_PITCH(angle);
 						CAM::SET_FIRST_PERSON_SHOOTER_CAMERA_HEADING(heading);
-						finalRenderedCamCoord2 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
-						gameplayCamCoord = { CAM::GET_GAMEPLAY_CAM_COORD() };
+						finalRenderedCamCoord2 = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
+						gameplayCamCoord = Vector3(CAM::GET_GAMEPLAY_CAM_COORD());
 						distanceBetweenCoords2 = MISC::GET_DISTANCE_BETWEEN_COORDS(finalRenderedCamCoord2, gameplayCamCoord, true);
 						num10 = SYSTEM::ROUND(distanceBetweenCoords2 * 1000f);
 						uParam1->f_32 = 1;
@@ -874,7 +874,7 @@ void func_12(char* sParam0, var uParam1, char* sParam2) // Position - 0x7BD
 							
 								if (uParam1->f_31 == 999f)
 								{
-									finalRenderedCamRot2 = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
+									finalRenderedCamRot2 = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(2));
 									entityHeading2 = ENTITY::GET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID());
 									num11 = finalRenderedCamRot2.f_2;
 									num12 = entityHeading2;
@@ -891,8 +891,8 @@ void func_12(char* sParam0, var uParam1, char* sParam2) // Position - 0x7BD
 								heading2 = uParam1->f_31;
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_PITCH(angle2, 1065353216);
 								CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(heading2);
-								finalRenderedCamCoord3 = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
-								gameplayCamCoord2 = { CAM::GET_GAMEPLAY_CAM_COORD() };
+								finalRenderedCamCoord3 = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
+								gameplayCamCoord2 = Vector3(CAM::GET_GAMEPLAY_CAM_COORD());
 								distanceBetweenCoords3 = MISC::GET_DISTANCE_BETWEEN_COORDS(finalRenderedCamCoord3, gameplayCamCoord2, true);
 								easeTime = SYSTEM::ROUND(distanceBetweenCoords3 * 1000f);
 								CAM::RENDER_SCRIPT_CAMS(false, true, easeTime, false, false, 0);
@@ -1034,17 +1034,17 @@ BOOL func_16(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 			if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_5, false))
 			{
 				func_14(uParam0);
-				finalRenderedCamCoord = { CAM::GET_FINAL_RENDERED_CAM_COORD() };
+				finalRenderedCamCoord = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
 			
 				if (bParam1)
-					finalRenderedCamCoord = { finalRenderedCamCoord + (ENTITY::GET_ENTITY_VELOCITY(uParam0->f_5) * F2V(MISC::GET_FRAME_TIME())) };
+					finalRenderedCamCoord = Vector3(finalRenderedCamCoord + (ENTITY::GET_ENTITY_VELOCITY(uParam0->f_5) * F2V(MISC::GET_FRAME_TIME())));
 			
-				offsetFromEntityGivenWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(uParam0->f_5, finalRenderedCamCoord) };
-				finalRenderedCamRot = { CAM::GET_FINAL_RENDERED_CAM_ROT(2) };
-				value = { finalRenderedCamRot + uParam0->f_9 };
-				value2 = { value - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2) };
-				unk11 = { -SYSTEM::SIN(value.f_2) * SYSTEM::COS(value), SYSTEM::COS(value.f_2) * SYSTEM::COS(value), SYSTEM::SIN(value) };
-				unk14 = { -SYSTEM::SIN(value2.f_2) * SYSTEM::COS(value2), SYSTEM::COS(value2.f_2) * SYSTEM::COS(value2), SYSTEM::SIN(value2) };
+				offsetFromEntityGivenWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(uParam0->f_5, finalRenderedCamCoord));
+				finalRenderedCamRot = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(2));
+				value = Vector3(finalRenderedCamRot + uParam0->f_9);
+				value2 = Vector3(value - ENTITY::GET_ENTITY_ROTATION(uParam0->f_5, 2));
+				unk11 = Vector3(-SYSTEM::SIN(value.f_2) * SYSTEM::COS(value), SYSTEM::COS(value.f_2) * SYSTEM::COS(value), SYSTEM::SIN(value));
+				unk14 = Vector3(-SYSTEM::SIN(value2.f_2) * SYSTEM::COS(value2), SYSTEM::COS(value2.f_2) * SYSTEM::COS(value2), SYSTEM::SIN(value2));
 				finalRenderedCamFov = CAM::GET_FINAL_RENDERED_CAM_FOV();
 			
 				if (uParam0->f_17 > 0 || iParam6 != 0)
@@ -1062,9 +1062,9 @@ BOOL func_16(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 				uParam0->f_2 = CAM::CREATE_CAMERA(joaat("DEFAULT_SCRIPTED_CAMERA"), true);
 			
 				if (bParam1 && !bParam4)
-					CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_2, uParam0->f_5, offsetFromEntityGivenWorldCoords + (unk14 * { uParam0->f_12, uParam0->f_12, uParam0->f_12 }), true);
+					CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_2, uParam0->f_5, offsetFromEntityGivenWorldCoords + (unk14 * Vector3(uParam0->f_12, uParam0->f_12, uParam0->f_12)), true);
 				else
-					CAM::SET_CAM_COORD(uParam0->f_2, finalRenderedCamCoord + (unk11 * { uParam0->f_12, uParam0->f_12, uParam0->f_12 }));
+					CAM::SET_CAM_COORD(uParam0->f_2, finalRenderedCamCoord + (unk11 * Vector3(uParam0->f_12, uParam0->f_12, uParam0->f_12)));
 			
 				CAM::SET_CAM_ROT(uParam0->f_2, finalRenderedCamRot, 2);
 				CAM::SET_CAM_FOV(uParam0->f_2, finalRenderedCamFov);
@@ -1074,9 +1074,9 @@ BOOL func_16(var uParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 					uParam0->f_4 = CAM::CREATE_CAMERA(joaat("DEFAULT_SCRIPTED_CAMERA"), true);
 				
 					if (bParam1 && !bParam4)
-						CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_5, offsetFromEntityGivenWorldCoords + (unk14 * { uParam0->f_12, uParam0->f_12, uParam0->f_12 } * { uParam0->f_13, uParam0->f_13, uParam0->f_13 }), true);
+						CAM::ATTACH_CAM_TO_ENTITY(uParam0->f_4, uParam0->f_5, offsetFromEntityGivenWorldCoords + (unk14 * Vector3(uParam0->f_12, uParam0->f_12, uParam0->f_12) * Vector3(uParam0->f_13, uParam0->f_13, uParam0->f_13)), true);
 					else
-						CAM::SET_CAM_COORD(uParam0->f_4, finalRenderedCamCoord + (unk11 * { uParam0->f_12, uParam0->f_12, uParam0->f_12 } * { uParam0->f_13, uParam0->f_13, uParam0->f_13 }));
+						CAM::SET_CAM_COORD(uParam0->f_4, finalRenderedCamCoord + (unk11 * Vector3(uParam0->f_12, uParam0->f_12, uParam0->f_12) * Vector3(uParam0->f_13, uParam0->f_13, uParam0->f_13)));
 				
 					CAM::SET_CAM_ROT(uParam0->f_4, finalRenderedCamRot, 2);
 					CAM::SET_CAM_FOV(uParam0->f_4, finalRenderedCamFov);
@@ -1180,7 +1180,7 @@ void func_18() // Position - 0x1638
 
 void func_19(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0x1646
 {
-	uParam0->f_9 = { uParam1 };
+	uParam0->f_9 = Vector3(uParam1);
 	return;
 }
 
@@ -1266,16 +1266,16 @@ BOOL func_23(char* sParam0, int iParam1, BOOL bParam2) // Position - 0x1705
 		if (func_36(8, -1))
 			return 0;
 	
-		Global_21801 = { Global_21795 };
+		Global_21801 = Vector3(Global_21795);
 		func_35();
-		Global_21014 = { Global_21179 };
+		Global_21014 = Vector3(Global_21179);
 		Global_21731 = Global_21732;
 		Global_21738 = Global_21739;
 		Global_2883586 = Global_2883585;
-		Global_21740 = { Global_21756 };
+		Global_21740 = Vector3(Global_21756);
 		Global_21733 = Global_21734;
 		Global_22715 = Global_22716;
-		Global_22723 = { Global_22729 };
+		Global_22723 = Vector3(Global_22729);
 		Global_22717 = Global_22718;
 		Global_22719 = Global_22720;
 		Global_22721 = Global_22722;
@@ -1412,7 +1412,7 @@ void func_24() // Position - 0x19D3
 
 	if (Global_21731)
 	{
-		TEXT_LABEL_COPY(&(Global_1977511.f_1), { Global_21344 }, 4);
+		TEXT_LABEL_COPY(&(Global_1977511.f_1), Vector3(Global_21344), 4);
 		Global_1977511 = Global_7568;
 		Global_1977511.f_6 = Global_21735;
 	}
@@ -1476,18 +1476,18 @@ void func_30() // Position - 0x1ACE
 {
 	Global_21778 = Global_21777;
 	Global_21772 = Global_21773;
-	Global_21819 = { Global_21807 };
-	Global_21825 = { Global_21813 };
+	Global_21819 = Vector3(Global_21807);
+	Global_21825 = Vector3(Global_21813);
 	Global_21780 = Global_21779;
-	Global_21849 = { Global_21831 };
-	Global_21855 = { Global_21837 };
-	Global_21861 = { Global_21843 };
-	Global_21867 = { Global_21873 };
+	Global_21849 = Vector3(Global_21831);
+	Global_21855 = Vector3(Global_21837);
+	Global_21861 = Vector3(Global_21843);
+	Global_21867 = Vector3(Global_21873);
 	Global_7568 = Global_7569;
 	Global_7570 = Global_7571;
 	Global_21736 = Global_21737;
 	Global_21738 = Global_21739;
-	Global_21740 = { Global_21756 };
+	Global_21740 = Vector3(Global_21756);
 	Global_21729 = Global_21730;
 	Global_22741 = 0;
 	Global_21774 = 0;
@@ -1624,7 +1624,7 @@ void func_37() // Position - 0x1D61
 
 void func_38(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1DB8
 {
-	Global_21179 = { *uParam0 };
+	Global_21179 = Vector3(*uParam0);
 	Global_7569 = iParam1;
 	TEXT_LABEL_ASSIGN_STRING(&Global_21795, sParam2, 24);
 	Global_22714 = iParam5;
@@ -1717,14 +1717,14 @@ void func_42(BOOL bParam0, BOOL bParam1) // Position - 0x1EDD
 			if (bParam1)
 				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
 		
-			Global_20311 = { Global_20329[Global_20328] };
+			Global_20311 = Vector3(Global_20329[Global_20328]);
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
 		}
 	}
 	else if (Global_20584 == true)
 	{
 		Global_20584 = false;
-		Global_20311 = { Global_20336[Global_20328] };
+		Global_20311 = Vector3(Global_20336[Global_20328]);
 	
 		if (bParam1)
 			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
@@ -2798,10 +2798,10 @@ void func_93() // Position - 0x32BC
 
 	Global_2672505.f_1024 = 0;
 	Global_2672505.f_1025 = 0;
-	Global_2672505.f_1026 = { 9999.9f, 9999.9f, 9999.9f };
+	Global_2672505.f_1026 = Vector3(9999.9f, 9999.9f, 9999.9f);
 	Global_2672505.f_1031 = -1;
 	Global_2672505.f_1032 = 0;
-	Global_2635559.f_2692 = { unk };
+	Global_2635559.f_2692 = Vector3(unk);
 	return;
 }
 
@@ -3209,7 +3209,7 @@ BOOL func_110(Ped pedParam0) // Position - 0x3923
 			return false;
 	}
 
-	entityVelocity = { ENTITY::GET_ENTITY_VELOCITY(pedParam0) };
+	entityVelocity = Vector3(ENTITY::GET_ENTITY_VELOCITY(pedParam0));
 
 	if (SYSTEM::VMAG2(entityVelocity) >= 1f * 1f)
 		return false;
@@ -3363,8 +3363,8 @@ BOOL func_120() // Position - 0x3BF2
 	if (ENTITY::IS_ENTITY_DEAD(uLocal_43.f_4, false))
 		return false;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(uLocal_43.f_1, true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(uLocal_43.f_4, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_43.f_1, true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_43.f_4, true));
 	distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, true);
 	return distanceBetweenCoords < 7f;
 }
@@ -4002,9 +4002,9 @@ void func_139() // Position - 0x48FC
 	if (entitySpeed < 5f)
 		return;
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
-	vector = { entityCoords - Vector3( 3f, 30f, 30f ) };
-	vector2 = { entityCoords + Vector3( 3f, 30f, 30f ) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
+	vector = Vector3(entityCoords - Vector3( 3f, 30f, 30f ));
+	vector2 = Vector3(entityCoords + Vector3( 3f, 30f, 30f ));
 
 	if (!VEHICLE::IS_COP_VEHICLE_IN_AREA_3D(vector, vector2) && !PED::IS_COP_PED_IN_AREA_3D(vector, vector2))
 		return;
@@ -4362,8 +4362,8 @@ void func_148() // Position - 0x4F0B
 		return;
 	}
 
-	entityCoords = { ENTITY::GET_ENTITY_COORDS(uLocal_43.f_1, true) };
-	entityCoords2 = { ENTITY::GET_ENTITY_COORDS(uLocal_43.f_4, true) };
+	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_43.f_1, true));
+	entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_43.f_4, true));
 	distanceBetweenCoords = MISC::GET_DISTANCE_BETWEEN_COORDS(entityCoords, entityCoords2, true);
 
 	if (distanceBetweenCoords > 3f)
