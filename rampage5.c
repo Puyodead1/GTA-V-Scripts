@@ -2756,7 +2756,7 @@ void func_4(var uParam0) // Position - 0x38C
 	uParam0->f_14 = MISC::GET_RATIO_OF_CLOSEST_POINT_ON_LINE(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), uParam0->f_5[0], uParam0->f_5[1], true);
 	randomIntInRange = MISC::GET_RANDOM_INT_IN_RANGE(0, uParam0->f_214);
 	ratioOfClosestPointOnLine = MISC::GET_RATIO_OF_CLOSEST_POINT_ON_LINE(uParam0->f_15[randomIntInRange].f_2, uParam0->f_5[0], uParam0->f_5[1], true);
-	entityCoords = { uParam0->f_5[0] + (Vector3(ratioOfClosestPointOnLine, ratioOfClosestPointOnLine, ratioOfClosestPointOnLine) * (uParam0->f_5[1] - uParam0->f_5[0])) };
+	entityCoords = Vector3(uParam0->f_5[0] + (Vector3(ratioOfClosestPointOnLine, ratioOfClosestPointOnLine, ratioOfClosestPointOnLine) * (uParam0->f_5[1] - uParam0->f_5[0])));
 
 	if (ratioOfClosestPointOnLine < uParam0->f_14 + uParam0->f_13)
 		return;
@@ -3456,7 +3456,7 @@ Vector3 func_34(float fParam0, var uParam1, var uParam2) // Position - 0x1334
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -3473,7 +3473,7 @@ Vector3 func_35(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4,
 	var unk;
 
 	unk = Vector3(uParam0.f_1[0] + (uParam0.f_9 * F2V(MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, uParam0.f_15))));
-	unk = { unk + (uParam0.f_12 * F2V(MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) * Vector3(uParam0.f_8, uParam0.f_8, uParam0.f_8)) };
+	unk = Vector3(unk + (uParam0.f_12 * F2V(MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) * Vector3(uParam0.f_8, uParam0.f_8, uParam0.f_8)));
 	unk.f_2 = uParam0.f_1[0].f_2 + ((uParam0.f_1[1].f_2 - uParam0.f_1[0].f_2) * MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 1.5f));
 
 	if (unk.f_2 > uParam0.f_1[1].f_2)
@@ -5229,7 +5229,7 @@ Vector3 func_77(Ped* ppedParam0) // Position - 0x42E6
 	num2 = SYSTEM::COS(randomFloatInRange);
 	num2.f_1 = SYSTEM::SIN(randomFloatInRange);
 	num2.f_2 = 0f;
-	unk11 = { Vector3(randomFloatInRange2, randomFloatInRange2, randomFloatInRange2) * num2 };
+	unk11 = Vector3(Vector3(randomFloatInRange2, randomFloatInRange2, randomFloatInRange2) * num2);
 	vector = Vector3(entityCoords + unk11);
 
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(vector, &groundZ, false, false))
@@ -5784,7 +5784,7 @@ void func_101(Ped* ppedParam0, BOOL bParam1) // Position - 0x4CA2
 		{
 			if (bParam1)
 			{
-				vector = { ENTITY::GET_ENTITY_COORDS(ppedParam0->f_2, true) + (func_34(ENTITY::GET_ENTITY_COORDS(ppedParam0->f_2, true) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) * Vector3(500f, 500f, 500f)) };
+				vector = Vector3(ENTITY::GET_ENTITY_COORDS(ppedParam0->f_2, true) + (func_34(ENTITY::GET_ENTITY_COORDS(ppedParam0->f_2, true) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) * Vector3(500f, 500f, 500f)));
 			
 				if (!PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(vector, 0, &outPosition, 1, 1077936128, 0))
 					outPosition = Vector3(vector);
@@ -8139,7 +8139,7 @@ int func_148(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_150(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_149(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -9651,7 +9651,7 @@ void func_202(Vehicle* pveParam0, BOOL bParam1) // Position - 0xA0F0
 	{
 		if (bParam1)
 		{
-			vector = { ENTITY::GET_ENTITY_COORDS(*pveParam0, true) + (func_34(ENTITY::GET_ENTITY_COORDS(*pveParam0, true) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) * Vector3(500f, 500f, 500f)) };
+			vector = Vector3(ENTITY::GET_ENTITY_COORDS(*pveParam0, true) + (func_34(ENTITY::GET_ENTITY_COORDS(*pveParam0, true) - ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) * Vector3(500f, 500f, 500f)));
 		
 			if (!PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(vector, 0, &outPosition, 1, 1077936128, 0))
 				outPosition = Vector3(vector);
@@ -44454,9 +44454,9 @@ void func_438(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -44564,10 +44564,10 @@ BOOL func_439(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));
@@ -54261,10 +54261,10 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "", 32);
 			uParam0->f_33 = 0;
 			*uParam0 = Vector3(139.57953f, -3092.9624f, 8.64631f);
-			uParam0->f_79 = { Vector3(8.64631f, -3092.9624f, 139.57953f) - Vector3(4.1875f, 24f, 33.3125f) };
-			uParam0->f_82 = { Vector3(8.64631f, -3092.9624f, 139.57953f) + Vector3(4.1875f, 24f, 33.3125f) };
-			uParam0->f_85 = { Vector3(8.64631f, -3092.9624f, 139.57953f) - Vector3(4.1875f, 24f, 33.3125f) };
-			uParam0->f_88 = { Vector3(8.64631f, -3092.9624f, 139.57953f) + Vector3(4.1875f, 24f, 33.3125f) };
+			uParam0->f_79 = Vector3(Vector3(8.64631f, -3092.9624f, 139.57953f) - Vector3(4.1875f, 24f, 33.3125f));
+			uParam0->f_82 = Vector3(Vector3(8.64631f, -3092.9624f, 139.57953f) + Vector3(4.1875f, 24f, 33.3125f));
+			uParam0->f_85 = Vector3(Vector3(8.64631f, -3092.9624f, 139.57953f) - Vector3(4.1875f, 24f, 33.3125f));
+			uParam0->f_88 = Vector3(Vector3(8.64631f, -3092.9624f, 139.57953f) + Vector3(4.1875f, 24f, 33.3125f));
 			uParam0->f_91[0] = 0;
 			uParam0->f_91[1] = 1;
 			uParam0->f_91[2] = 1;
@@ -54277,8 +54277,8 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "", 32);
 			uParam0->f_33 = 0;
 			*uParam0 = Vector3(203.77838f, -3131.767f, 7.041344f);
-			uParam0->f_79 = { Vector3(7.041344f, -3131.767f, 203.77838f) - Vector3(2.5625f, 2.75f, 4.875f) };
-			uParam0->f_82 = { Vector3(7.041344f, -3131.767f, 203.77838f) + Vector3(2.5625f, 2.75f, 4.875f) };
+			uParam0->f_79 = Vector3(Vector3(7.041344f, -3131.767f, 203.77838f) - Vector3(2.5625f, 2.75f, 4.875f));
+			uParam0->f_82 = Vector3(Vector3(7.041344f, -3131.767f, 203.77838f) + Vector3(2.5625f, 2.75f, 4.875f));
 			break;
 	
 		case 184:
@@ -54288,8 +54288,8 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 			TEXT_LABEL_ASSIGN_STRING(&uParam0->f_8[2], "", 32);
 			uParam0->f_33 = 0;
 			*uParam0 = Vector3(144.77055f, -2982.6594f, 7.952507f);
-			uParam0->f_79 = { Vector3(7.952507f, -2982.6594f, 144.77055f) - Vector3(3.125f, 3.4375f, 5.3125f) };
-			uParam0->f_82 = { Vector3(7.952507f, -2982.6594f, 144.77055f) + Vector3(3.125f, 3.4375f, 5.3125f) };
+			uParam0->f_79 = Vector3(Vector3(7.952507f, -2982.6594f, 144.77055f) - Vector3(3.125f, 3.4375f, 5.3125f));
+			uParam0->f_82 = Vector3(Vector3(7.952507f, -2982.6594f, 144.77055f) + Vector3(3.125f, 3.4375f, 5.3125f));
 			break;
 	
 		case 185:
@@ -54403,8 +54403,8 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 		case 191:
 			uParam0->f_3 = 1;
 			*uParam0 = Vector3(-1096.3812f, -836.17f, 36.6755f);
-			uParam0->f_85 = { *uParam0 - Vector3(25f, 25f, 15f) };
-			uParam0->f_88 = { *uParam0 + Vector3(25f, 25f, 15f) };
+			uParam0->f_85 = Vector3(*uParam0 - Vector3(25f, 25f, 15f));
+			uParam0->f_88 = Vector3(*uParam0 + Vector3(25f, 25f, 15f));
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -54412,8 +54412,8 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 		case 192:
 			uParam0->f_3 = 1;
 			*uParam0 = Vector3(449.6558f, -980.1375f, 42.6918f);
-			uParam0->f_85 = { *uParam0 - Vector3(25f, 25f, 15f) };
-			uParam0->f_88 = { *uParam0 + Vector3(25f, 25f, 15f) };
+			uParam0->f_85 = Vector3(*uParam0 - Vector3(25f, 25f, 15f));
+			uParam0->f_88 = Vector3(*uParam0 + Vector3(25f, 25f, 15f));
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -54421,8 +54421,8 @@ int func_664(var uParam0, int iParam1) // Position - 0x40521
 		case 193:
 			uParam0->f_3 = 1;
 			*uParam0 = Vector3(363.0175f, -1598.0793f, 35.9502f);
-			uParam0->f_85 = { *uParam0 - Vector3(25f, 25f, 15f) };
-			uParam0->f_88 = { *uParam0 + Vector3(25f, 25f, 15f) };
+			uParam0->f_85 = Vector3(*uParam0 - Vector3(25f, 25f, 15f));
+			uParam0->f_88 = Vector3(*uParam0 + Vector3(25f, 25f, 15f));
 			uParam0->f_91[0] = 1;
 			uParam0->f_91[1] = 0;
 			break;
@@ -57732,7 +57732,7 @@ struct<17> func_728(var uParam0, var uParam1, var uParam2, var uParam3, var uPar
 	float unk5;
 
 	unk.f_1 = 2;
-	unk18 = { func_34(uParam0.f_1[1] - uParam0.f_1[0]) * Vector3(fParam17, fParam17, fParam17) };
+	unk18 = Vector3(func_34(uParam0.f_1[1] - uParam0.f_1[0]) * Vector3(fParam17, fParam17, fParam17));
 	unk21 = Vector3(uParam0.f_1[0] - unk18);
 	unk24 = Vector3(uParam0.f_1[1] + unk18);
 	num = uParam0.f_8 + (fParam17 * 2f);

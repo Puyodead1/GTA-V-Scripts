@@ -1525,9 +1525,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_123, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.75f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.75f, 0f, 0f));
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.77f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[0].f_1, true) - Vector3(0.77f, 0f, 0f));
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 3000, false, false);
@@ -1548,9 +1548,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_124, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f));
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[1].f_1, true) - Vector3(0.7f, 0f, 0f));
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 4000, false, false);
@@ -1571,9 +1571,9 @@ void func_40() // Position - 0x15F8
 					PED::SET_PED_STRAFE_CLIPSET(pedLocal_125, "move_ped_strafing");
 				
 					if (iLocal_138 == 0)
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.8f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.8f, 0f, 0f));
 					else
-						vector = { ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.68f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_140[2].f_1, true) - Vector3(0.68f, 0f, 0f));
 				
 					TASK::OPEN_SEQUENCE_TASK(&taskSequenceId);
 					TASK::TASK_AIM_GUN_AT_COORD(0, vector, 2000, false, false);
@@ -2639,37 +2639,37 @@ void func_88(int iParam0) // Position - 0x31FB
 		num4 = -0.5f;
 		num5 = -0.2f;
 		num6 = 0.5f;
-		unk6 = { Vector3(31.58f, -1081.5134f, 16.475f) - Vector3(31.58f, -1092.35f, 12.617f) };
-		unk9 = { Vector3(31.58f, -1094.09f, 17.325f) - Vector3(31.58f, -1092.35f, 12.617f) };
-		unk12 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num4, num4, num4)) };
-		unk15 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num5, num5, num5)) };
-		unk18 = { Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num6, num6, num6)) };
+		unk6 = Vector3(Vector3(31.58f, -1081.5134f, 16.475f) - Vector3(31.58f, -1092.35f, 12.617f));
+		unk9 = Vector3(Vector3(31.58f, -1094.09f, 17.325f) - Vector3(31.58f, -1092.35f, 12.617f));
+		unk12 = Vector3(Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num4, num4, num4)));
+		unk15 = Vector3(Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num5, num5, num5)));
+		unk18 = Vector3(Vector3(31.58f, -1092.35f, 12.617f) + (unk9 * Vector3(num6, num6, num6)));
 	}
 	else
 	{
 		num4 = 1.35f;
 		num5 = 1.05f;
 		num6 = 0.5f;
-		unk6 = { Vector3(31.347f, -2179.7732f, 824.3217f) - Vector3(31.347f, -2168.0388f, 824.2375f) };
-		unk9 = { Vector3(32.3f, -2168.0083f, 819.2051f) - Vector3(32.3f, -2168.0388f, 824.2375f) };
-		unk12 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num4, num4, num4)) };
-		unk15 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num5, num5, num5)) };
-		unk18 = { Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num6, num6, num6)) };
+		unk6 = Vector3(Vector3(31.347f, -2179.7732f, 824.3217f) - Vector3(31.347f, -2168.0388f, 824.2375f));
+		unk9 = Vector3(Vector3(32.3f, -2168.0083f, 819.2051f) - Vector3(32.3f, -2168.0388f, 824.2375f));
+		unk12 = Vector3(Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num4, num4, num4)));
+		unk15 = Vector3(Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num5, num5, num5)));
+		unk18 = Vector3(Vector3(31.347f, -2168.0388f, 824.2375f) + (unk9 * Vector3(num6, num6, num6)));
 	}
 
 	if (iParam0 == 0)
 	{
-		unk = { unk6 * Vector3(num, num, num) };
+		unk = Vector3(unk6 * Vector3(num, num, num));
 		vector = Vector3(unk12 + unk);
 	}
 	else if (iParam0 == 1)
 	{
-		unk = { unk6 * Vector3(num2, num2, num2) };
+		unk = Vector3(unk6 * Vector3(num2, num2, num2));
 		vector = Vector3(unk15 + unk);
 	}
 	else
 	{
-		unk = { unk6 * Vector3(num3, num3, num3) };
+		unk = Vector3(unk6 * Vector3(num3, num3, num3));
 		vector = Vector3(unk18 + unk);
 	}
 

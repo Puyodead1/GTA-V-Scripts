@@ -994,7 +994,7 @@ BOOL func_12(int iParam0, var uParam1, var uParam2) // Position - 0x67E
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	
@@ -6010,7 +6010,7 @@ Vector3 func_192(float fParam0, var uParam1, var uParam2) // Position - 0x6C83
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -40312,7 +40312,7 @@ void func_467(var uParam0, var uParam1, float fParam2) // Position - 0x2F2DE
 		if (func_468(uParam1, uParam1->[num2] + num6))
 			num6 = Vector3(-num6);
 	
-		uParam0->[num2] = { uParam1->[num2] + (num6 * Vector3(fParam2, fParam2, fParam2)) };
+		uParam0->[num2] = Vector3(uParam1->[num2] + (num6 * Vector3(fParam2, fParam2, fParam2)));
 		num = num2;
 		num2 = num2 + 1;
 		num3 = (num3 + 1) % uParam1->f_46;

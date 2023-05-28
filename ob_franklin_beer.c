@@ -1700,7 +1700,7 @@ void func_28(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num4 = num.f_2 - camRot.f_2;
 			num5 = func_29(num4, -180f, 180f);
-			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
+			vector = Vector3(camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)));
 			vector.f_2 = camRot.f_2 + (num5 * 0.25f);
 		}
 		else
@@ -1755,7 +1755,7 @@ void func_28(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num8 = num.f_2 - camRot.f_2;
 			num9 = func_29(num8, -180f, 180f);
-			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
+			vector = Vector3(camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)));
 			vector.f_2 = camRot.f_2 + (num9 * 0.25f);
 		}
 	
@@ -85745,7 +85745,7 @@ void func_418(var uParam0, int iParam1) // Position - 0x66FAA
 			uParam0->f_146.f_82[2].f_32 = Vector3(-0.1925f, -1.5516f, 18.2611f);
 			uParam0->f_146.f_82[2].f_59 = Vector3(342.347f, -1003.1187f, -97.9876f);
 			uParam0->f_146.f_82[2].f_62 = Vector3(-27.0125f, -1.6193f, -66.8063f);
-			uParam0->f_146.f_82[2].f_7 = { Vector3(-99.095f, -1002.38f, 344.482f) + Vector3(0.0058f, 0.066f, 0.0651f) };
+			uParam0->f_146.f_82[2].f_7 = Vector3(Vector3(-99.095f, -1002.38f, 344.482f) + Vector3(0.0058f, 0.066f, 0.0651f));
 			uParam0->f_146.f_82[2].f_10 = Vector3(0f, 0f, -129.96f);
 			uParam0->f_146.f_82[2].f_16 = Vector3(344.6f, -1002.3f, -100.1962f);
 			uParam0->f_146.f_82[2].f_19 = Vector3(343.5f, -1002.3f, -98.1962f);
@@ -85790,7 +85790,7 @@ void func_418(var uParam0, int iParam1) // Position - 0x66FAA
 			uParam0->f_146.f_82[4].f_93 = Vector3(348.16153f, -993.47345f, -100.69622f);
 			uParam0->f_146.f_82[6] = Vector3(342.6041f, -1001.5839f, -100.1962f);
 			uParam0->f_146.f_82[6].f_3 = 88.0775f;
-			uParam0->f_146.f_82[6].f_7 = { Vector3(-99.25f, -1001.646f, 341.9f) + Vector3(-0.0027f, -0.0238f, 0.0066f) };
+			uParam0->f_146.f_82[6].f_7 = Vector3(Vector3(-99.25f, -1001.646f, 341.9f) + Vector3(-0.0027f, -0.0238f, 0.0066f));
 			uParam0->f_146.f_82[6].f_10 = Vector3(0f, 0f, 90f);
 			uParam0->f_146.f_82[6].f_22 = Vector3(341.3749f, -1002.8832f, -98.9319f);
 			uParam0->f_146.f_82[6].f_25 = Vector3(-2.0018f, -0.0676f, -25.1089f);
@@ -85841,7 +85841,7 @@ void func_418(var uParam0, int iParam1) // Position - 0x66FAA
 			uParam0->f_146.f_82[1].f_3 = 280.6086f;
 			uParam0->f_146.f_82[2] = Vector3(265.6066f, -996.4553f, -99.0039f);
 			uParam0->f_146.f_82[2].f_3 = 264.6031f;
-			uParam0->f_146.f_82[2].f_7 = { Vector3(-98.9f, -996.94f, 266.2f) - Vector3(0.0016f, -0.2399f, -0.0237f) };
+			uParam0->f_146.f_82[2].f_7 = Vector3(Vector3(-98.9f, -996.94f, 266.2f) - Vector3(0.0016f, -0.2399f, -0.0237f));
 			uParam0->f_146.f_82[2].f_10 = Vector3(0f, 0f, -146.16f);
 			uParam0->f_146.f_82[2].f_22 = Vector3(266.522f, -995.2286f, -98.7813f);
 			uParam0->f_146.f_82[2].f_25 = Vector3(1.4963f, 0.0565f, 169.5309f);

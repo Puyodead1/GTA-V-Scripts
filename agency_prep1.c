@@ -2119,7 +2119,7 @@ BOOL func_25(int iParam0, var uParam1, var uParam2) // Position - 0x11C8
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

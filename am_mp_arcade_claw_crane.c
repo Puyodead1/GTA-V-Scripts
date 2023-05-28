@@ -73935,7 +73935,7 @@ void func_496(int* piParam0, Ped pedParam1) // Position - 0x5E709
 		piParam0->f_31 = 0f;
 		piParam0->f_32 = 0f;
 		vector = Vector3(0.8808f, -0.5966f, 0.5838f);
-		vector = { vector * Vector3(1.15f, 1.15f, 1.15f) };
+		vector = Vector3(vector * Vector3(1.15f, 1.15f, 1.15f));
 		piParam0->f_44 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam1, vector));
 		piParam0->f_41 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam1, 0.1376f, 0.4819f, 0.4162f));
 		piParam0->f_28 = 0.1f;
@@ -78768,15 +78768,15 @@ void func_580(BOOL bParam0) // Position - 0x63C4C
 	offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_257.f_24, -0.29f, -0.097f, 1.68f));
 	num4 = num3 * num2 * num;
 	unk9 = Vector3(func_584(offsetFromEntityInWorldCoords - entityCoords));
-	vector = { (unk9 * Vector3(num4, num4, num4)) + entityCoords };
+	vector = Vector3((unk9 * Vector3(num4, num4, num4)) + entityCoords);
 	offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_257.f_24, -0.29f, -0.097f, 1.723f));
 	num5 = num3 * num2 * num;
 	unk16 = Vector3(func_584(offsetFromEntityInWorldCoords2 - entityCoords2));
-	vector2 = { (unk16 * Vector3(num5, num5, num5)) + entityCoords2 };
+	vector2 = Vector3((unk16 * Vector3(num5, num5, num5)) + entityCoords2);
 	offsetFromEntityInWorldCoords3 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_257.f_24, 0.004f, -0.1f, 1.785f));
 	num6 = num3 * num2 * num;
 	unk23 = Vector3(func_584(offsetFromEntityInWorldCoords3 - entityCoords3));
-	vector3 = { (unk23 * Vector3(num6, num6, num6)) + entityCoords3 };
+	vector3 = Vector3((unk23 * Vector3(num6, num6, num6)) + entityCoords3);
 	func_583();
 	iLocal_257.f_12 = 1f;
 	offsetFromEntityInWorldCoords4 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_257.f_24, -0.29f, -0.097f, 1.68f));
@@ -78872,7 +78872,7 @@ Vector3 func_584(float fParam0, var uParam1, var uParam2) // Position - 0x6404A
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -78914,9 +78914,9 @@ void func_585(BOOL bParam0) // Position - 0x64089
 	offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(iLocal_257.f_24, -0.29f, offsetFromEntityGivenWorldCoords2.f_1, 1.68f));
 	num4 = -(num3 * num2 * num);
 	unk9 = Vector3(func_584(offsetFromEntityInWorldCoords - entityCoords));
-	vector = { (unk9 * Vector3(num4, num4, num4)) + entityCoords };
+	vector = Vector3((unk9 * Vector3(num4, num4, num4)) + entityCoords);
 	unk16 = Vector3(func_584(offsetFromEntityInWorldCoords2 - entityCoords2));
-	vector2 = { (unk16 * Vector3(num4, num4, num4)) + entityCoords2 };
+	vector2 = Vector3((unk16 * Vector3(num4, num4, num4)) + entityCoords2);
 	num5 = (float)SYSTEM::ROUND(offsetFromEntityGivenWorldCoords * 100f) / 100f;
 	num6 = (float)SYSTEM::ROUND(offsetFromEntityGivenWorldCoords2 * 100f) / 100f;
 
@@ -80104,9 +80104,9 @@ void func_636() // Position - 0x6593E
 		}
 	
 		unk11 = Vector3(func_584(offsetFromEntityInWorldCoords - entityCoords2));
-		vector = { (unk11 * Vector3(num6, num6, num6)) + entityCoords2 };
+		vector = Vector3((unk11 * Vector3(num6, num6, num6)) + entityCoords2);
 		unk18 = Vector3(func_584(offsetFromEntityInWorldCoords2 - entityCoords));
-		vector2 = { (unk18 * Vector3(num7, num7, num7)) + entityCoords };
+		vector2 = Vector3((unk18 * Vector3(num7, num7, num7)) + entityCoords);
 	
 		if (func_18(iLocal_257.f_25[0]))
 			ENTITY::SET_ENTITY_COORDS(iLocal_257.f_25[0], vector2, true, false, false, true);
@@ -80217,11 +80217,11 @@ void func_637() // Position - 0x65BA3
 		}
 	
 		unk15 = Vector3(func_584(offsetFromEntityInWorldCoords - entityCoords));
-		vector = { (unk15 * Vector3(num7, num7, num7)) + entityCoords };
+		vector = Vector3((unk15 * Vector3(num7, num7, num7)) + entityCoords);
 		unk22 = Vector3(func_584(offsetFromEntityInWorldCoords2 - entityCoords2));
-		vector2 = { (unk22 * Vector3(num8, num8, num8)) + entityCoords2 };
+		vector2 = Vector3((unk22 * Vector3(num8, num8, num8)) + entityCoords2);
 		unk29 = Vector3(func_584(offsetFromEntityInWorldCoords3 - entityCoords3));
-		vector3 = { (unk29 * Vector3(num9, num9, num9)) + entityCoords3 };
+		vector3 = Vector3((unk29 * Vector3(num9, num9, num9)) + entityCoords3);
 	
 		if (func_18(iLocal_257.f_25[0]))
 			ENTITY::SET_ENTITY_COORDS(iLocal_257.f_25[0], vector2, true, false, false, true);

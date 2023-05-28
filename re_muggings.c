@@ -4868,7 +4868,7 @@ void func_103(Ped pedParam0, var uParam1, var uParam2, char* sParam3, char* sPar
 	if (STREAMING::HAS_ANIM_DICT_LOADED(sParam3))
 		animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sParam3, sParam4, *uParam1, *uParam2, 0, 2));
 	else
-		animInitialOffsetPosition = { *uParam1 + Vector3(0f, 5f, 5f) };
+		animInitialOffsetPosition = Vector3(*uParam1 + Vector3(0f, 5f, 5f));
 
 	while (num < 2)
 	{
@@ -6594,7 +6594,7 @@ void func_167() // Position - 0x7186
 				switch (iLocal_667)
 				{
 					case 0:
-						uLocal_670 = { OBJECT::GET_PICKUP_COORDS(pkLocal_191) - Vector3(0f, 0f, 0.75f) };
+						uLocal_670 = Vector3(OBJECT::GET_PICKUP_COORDS(pkLocal_191) - Vector3(0f, 0f, 0.75f));
 					
 						if (OBJECT::DOES_PICKUP_OBJECT_EXIST(pkLocal_191))
 						{
@@ -6613,7 +6613,7 @@ void func_167() // Position - 0x7186
 					case 1:
 						if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_63, SCRIPT_TASK_PERFORM_SEQUENCE) == 7)
 						{
-							uLocal_670 = { OBJECT::GET_PICKUP_COORDS(pkLocal_191) - Vector3(0f, 0f, 0.75f) };
+							uLocal_670 = Vector3(OBJECT::GET_PICKUP_COORDS(pkLocal_191) - Vector3(0f, 0f, 0.75f));
 						
 							if (OBJECT::DOES_PICKUP_OBJECT_EXIST(pkLocal_191))
 							{

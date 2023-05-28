@@ -721,7 +721,7 @@ void main() // Position - 0x0
 						}
 					
 						unk33 = Vector3(uLocal_414 + uLocal_417);
-						uLocal_438 = { unk33 * Vector3(0.5f, 0.5f, 0.5f) };
+						uLocal_438 = Vector3(unk33 * Vector3(0.5f, 0.5f, 0.5f));
 					
 						if (iLocal_444 == 2)
 							iLocal_411 = 11;

@@ -5382,7 +5382,7 @@ BOOL func_17(int iParam0, var uParam1, var uParam2) // Position - 0xDEF
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	
@@ -6962,7 +6962,7 @@ BOOL func_44(Blip* pblParam0, Vector3 vParam1, var uParam2, var uParam3, Vector3
 	int includeZ;
 	int p10;
 
-	vector = { vParam1 + Vector3(1f, 0f, 0f) };
+	vector = Vector3(vParam1 + Vector3(1f, 0f, 0f));
 	pblParam0->f_17[0] = pedParam15;
 	pblParam0->f_17[1] = pedParam16;
 	pblParam0->f_17[2] = iParam17;
@@ -115859,7 +115859,7 @@ Object func_761(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iPar
 		}
 	}
 
-	vector = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f) };
+	vector = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f));
 
 	if (bParam3)
 		vector = Vector3(iParam4, iParam5, iParam6);

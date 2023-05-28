@@ -68848,7 +68848,7 @@ void func_316() // Position - 0x58328
 				}
 			
 				vector = Vector3(uLocal_85);
-				vector = { vector + Vector3(fLocal_99, 0f, fLocal_98) };
+				vector = Vector3(vector + Vector3(fLocal_99, 0f, fLocal_98));
 				CAM::SET_CAM_ROT(caLocal_80, vector, 2);
 				fLocal_97 = fLocal_94 / fLocal_96;
 			

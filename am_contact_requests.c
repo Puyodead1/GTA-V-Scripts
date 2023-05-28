@@ -3652,7 +3652,7 @@ BOOL func_64(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_66(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_65(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{

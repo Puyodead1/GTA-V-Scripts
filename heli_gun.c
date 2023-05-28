@@ -3112,7 +3112,7 @@ Vector3 func_60() // Position - 0x38F9
 				break;
 		
 			case 4:
-				vector = { Vector3(1.7578f, 9.3693f, -1.3829f) + Vector3(0f, 0.2053f, 1.3666f) };
+				vector = Vector3(Vector3(1.7578f, 9.3693f, -1.3829f) + Vector3(0f, 0.2053f, 1.3666f));
 				break;
 		}
 	
@@ -4100,7 +4100,7 @@ void func_86(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 										{
 											case 0:
 												entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(uParam0->f_8, true));
-												vector = { ENTITY::GET_ENTITY_COORDS(uParam0->f_175[i], true) + Vector3(0.5f, 0f, 0f) };
+												vector = Vector3(ENTITY::GET_ENTITY_COORDS(uParam0->f_175[i], true) + Vector3(0.5f, 0f, 0f));
 												uParam0->f_175[i].f_9 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(entityCoords2, vector, 1, 0, 7);
 												break;
 										
@@ -4581,7 +4581,7 @@ void func_89(var uParam0, Ped pedParam1, float fParam2, float fParam3) // Positi
 		if (!PED::IS_PED_INJURED(pedParam1))
 		{
 			pedBoneCoords = Vector3(PED::GET_PED_BONE_COORDS(pedParam1, 31086, vector));
-			pedBoneCoords2 = { pedBoneCoords + ((pedBoneCoords - PED::GET_PED_BONE_COORDS(pedParam1, 39317, vector)) * Vector3(3f, 3f, 3f)) };
+			pedBoneCoords2 = Vector3(pedBoneCoords + ((pedBoneCoords - PED::GET_PED_BONE_COORDS(pedParam1, 39317, vector)) * Vector3(3f, 3f, 3f)));
 			GRAPHICS::SET_DRAW_ORIGIN(pedBoneCoords, false);
 			GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(pedBoneCoords, &screenX, &screenY);
 			GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(pedBoneCoords2, &screenX2, &screenY2);
@@ -5469,7 +5469,7 @@ void func_100(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								else
 								{
 									iLocal_70 = iLocal_70 + 1;
-									uParam0->f_42 = { uParam0->f_42 + Vector3(-uParam0->f_57, 0f, uParam0->f_56) };
+									uParam0->f_42 = Vector3(uParam0->f_42 + Vector3(-uParam0->f_57, 0f, uParam0->f_56));
 								
 									if (uParam0->f_42 < num3)
 										uParam0->f_42 = num3;
@@ -5607,14 +5607,14 @@ void func_100(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 									switch (Global_1581966)
 									{
 										case 0:
-											vector4 = { Vector3(2.43f, -4.26f, -3.42f) + Vector3(0f, -1.25f, 2.82f) };
+											vector4 = Vector3(Vector3(2.43f, -4.26f, -3.42f) + Vector3(0f, -1.25f, 2.82f));
 											unk32 = Vector3(0f, 0f, 0f);
 											break;
 									
 										case 1:
 											if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_8, false) && VEHICLE::GET_VEHICLE_MOD(uParam0->f_8, 10) == 0)
 											{
-												vector4 = { Vector3(-1.5f, -0.22f, -5.2f) + Vector3(-0.4f, 0f, 0.2f) };
+												vector4 = Vector3(Vector3(-1.5f, -0.22f, -5.2f) + Vector3(-0.4f, 0f, 0.2f));
 												unk32 = Vector3(0f, 0f, 90f);
 											}
 											else
@@ -6485,7 +6485,7 @@ void func_134() // Position - 0x8CAB
 		if (Global_1581961 != -1 || func_194(veLocal_340) || Global_1581967 != -1)
 			return;
 	
-		uLocal_73.f_42 = { ENTITY::GET_ENTITY_ROTATION(veLocal_340, 2) - Vector3(0f, 0f, 3f) };
+		uLocal_73.f_42 = Vector3(ENTITY::GET_ENTITY_ROTATION(veLocal_340, 2) - Vector3(0f, 0f, 3f));
 	}
 
 	return;

@@ -1266,7 +1266,7 @@ void func_27(BOOL bParam0) // Position - 0xF0C
 		
 			if (num2 > 0.8f)
 			{
-				vector = { vector * Vector3(0.78f / num2, 0.78f / num2, 0.78f / num2) };
+				vector = Vector3(vector * Vector3(0.78f / num2, 0.78f / num2, 0.78f / num2));
 				vector2 = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_297, false) + vector);
 			
 				if (iLocal_122 == 12)
@@ -2175,7 +2175,7 @@ Vector3 func_71(float fParam0, float fParam1, float fParam2) // Position - 0x22D
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

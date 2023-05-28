@@ -4028,7 +4028,7 @@ BOOL func_64(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_62(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_65(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -10548,8 +10548,8 @@ void func_304() // Position - 0xD297
 	iLocal_227.f_6 = func_307(num);
 	PED::SET_RELATIONSHIP_BETWEEN_GROUPS(1, joaat("PLAYER"), joaat("PLAYER"));
 	unk = Vector3(func_306(iLocal_227.f_5));
-	iLocal_227.f_43 = { iLocal_227.f_2 + (unk * Vector3(0.25f, 0.25f, 0.25f)) };
-	iLocal_227.f_46 = { iLocal_227.f_43 + Vector3(2f, 0f, 0f) + (unk * Vector3(2f, 2f, 2f)) };
+	iLocal_227.f_43 = Vector3(iLocal_227.f_2 + (unk * Vector3(0.25f, 0.25f, 0.25f)));
+	iLocal_227.f_46 = Vector3(iLocal_227.f_43 + Vector3(2f, 0f, 0f) + (unk * Vector3(2f, 2f, 2f)));
 	num2 = Global_2793046.f_6750.f_32;
 	iLocal_227.f_12.f_7 = Global_2793046.f_6750[num2].f_1;
 	iLocal_227.f_12.f_13 = Global_2793046.f_6750[num2].f_2;

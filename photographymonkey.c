@@ -26464,10 +26464,10 @@ void func_100(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4) /
 	num5 = num2 / 2f;
 	unk9 = Vector3(func_101(func_102(unk6, 0f, 0f, -1f)));
 	unk12 = Vector3(func_101(func_102(unk6, unk9)));
-	*uParam1 = { unk3 + (Vector3(num4, num4, num4) * unk9) + (Vector3(num5, num5, num5) * unk12) + (unk6 * Vector3(num3, num3, num3)) };
-	*uParam2 = { unk3 + (Vector3(num4, num4, num4) * -unk9) + (Vector3(num5, num5, num5) * unk12) + (unk6 * Vector3(num3, num3, num3)) };
-	*uParam3 = { unk3 + (Vector3(num4, num4, num4) * unk9) + (Vector3(num5, num5, num5) * -unk12) + (unk6 * Vector3(num3, num3, num3)) };
-	*uParam4 = { unk3 + (Vector3(num4, num4, num4) * -unk9) + (Vector3(num5, num5, num5) * -unk12) + (unk6 * Vector3(num3, num3, num3)) };
+	*uParam1 = Vector3(unk3 + (Vector3(num4, num4, num4) * unk9) + (Vector3(num5, num5, num5) * unk12) + (unk6 * Vector3(num3, num3, num3)));
+	*uParam2 = Vector3(unk3 + (Vector3(num4, num4, num4) * -unk9) + (Vector3(num5, num5, num5) * unk12) + (unk6 * Vector3(num3, num3, num3)));
+	*uParam3 = Vector3(unk3 + (Vector3(num4, num4, num4) * unk9) + (Vector3(num5, num5, num5) * -unk12) + (unk6 * Vector3(num3, num3, num3)));
+	*uParam4 = Vector3(unk3 + (Vector3(num4, num4, num4) * -unk9) + (Vector3(num5, num5, num5) * -unk12) + (unk6 * Vector3(num3, num3, num3)));
 	return;
 }
 

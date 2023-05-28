@@ -7930,7 +7930,7 @@ BOOL func_138(int* piParam0, var uParam1, var uParam2, BOOL bParam3, BOOL bParam
 	
 		if (MISC::ABSF(value) > 0.5f)
 		{
-			unk21 = { entityVelocity / Vector3(value, value, value) };
+			unk21 = Vector3(entityVelocity / Vector3(value, value, value));
 			vector3 = Vector3(offsetFromEntityInWorldCoords + unk21);
 		}
 	
@@ -8246,7 +8246,7 @@ BOOL func_139(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 1)
 		{
 			*uParam5 = Vector3(0.2657f, 1.3743f, 0.364f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6768f, 0.9824f + uParam1, 0.1864f + fParam2);
 			*uParam7 = Vector3(-1.3043f, -1.0657f + uParam1, 1.1243f + fParam2);
 			*uParam8 = 34.3832f;
@@ -8264,7 +8264,7 @@ BOOL func_139(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 3)
 		{
 			*uParam5 = Vector3(0.4529f, 1.0868f, 0.365f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6216f, 0.9493f + uParam1, 0.4129f + fParam2);
 			*uParam7 = Vector3(-1.4273f, -1.1768f + uParam1, 0.9439f + fParam2);
 			*uParam8 = 34.3832f;
@@ -8274,7 +8274,7 @@ BOOL func_139(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 4)
 		{
 			*uParam5 = Vector3(1.3811f, 1.7491f, 0.296f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(1.7091f, 1.1087f + uParam1, 0.3014f + fParam2);
 			*uParam7 = Vector3(-1.0311f, -0.1093f + uParam1, 0.3918f + fParam2);
 			*uParam8 = 34.3832f;
@@ -58142,8 +58142,8 @@ Vector3 func_708(var uParam0, float fParam1, var uParam2, var uParam3) // Positi
 {
 	var unk;
 
-	unk = { func_552(uParam0) + (func_710(uParam0) * Vector3(fParam1, fParam1, fParam1)) };
-	unk = { unk + (func_709(uParam0) * Vector3(fParam1.f_1, fParam1.f_1, fParam1.f_1)) };
+	unk = Vector3(func_552(uParam0) + (func_710(uParam0) * Vector3(fParam1, fParam1, fParam1)));
+	unk = Vector3(unk + (func_709(uParam0) * Vector3(fParam1.f_1, fParam1.f_1, fParam1.f_1)));
 	unk.f_2 = unk.f_2 + fParam1.f_2;
 	return unk;
 }

@@ -4668,9 +4668,9 @@ void func_91(var uParam0, var uParam1, var uParam2, int iParam3, Hash hParam4, v
 	func_97(&vector, 0f, 0f, iParam3);
 	vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
 	func_92(hParam4, &unk3, &num, 1086324736, 1080033280, 1077936128);
-	unk8 = { uParam0 + (vector * Vector3(num.f_1 + iParam8, num.f_1 + iParam8, num.f_1 + iParam8)) };
+	unk8 = Vector3(uParam0 + (vector * Vector3(num.f_1 + iParam8, num.f_1 + iParam8, num.f_1 + iParam8)));
 	unk8.f_2 = unk8.f_2 - ((0.5f * MISC::ABSF(num.f_2 - unk3.f_2)) + iParam8);
-	unk11 = { uParam0 - (vector * Vector3((unk3.f_1 * -1f) + iParam8, (unk3.f_1 * -1f) + iParam8, (unk3.f_1 * -1f) + iParam8)) };
+	unk11 = Vector3(uParam0 - (vector * Vector3((unk3.f_1 * -1f) + iParam8, (unk3.f_1 * -1f) + iParam8, (unk3.f_1 * -1f) + iParam8)));
 	unk11.f_2 = unk11.f_2 + (0.5f * MISC::ABSF(num.f_2 - unk3.f_2)) + iParam8;
 	*uParam5 = Vector3(unk8);
 	*uParam6 = Vector3(unk11);
@@ -6475,7 +6475,7 @@ Vector3 func_141(Vector3 vParam0, var uParam1, var uParam2, float* pfParam3, int
 				else
 					num2 = func_142(hParam11, 1.5f);
 			
-				unk10 = { unk10 * Vector3(num2 * 0.5f, num2 * 0.5f, num2 * 0.5f) };
+				unk10 = Vector3(unk10 * Vector3(num2 * 0.5f, num2 * 0.5f, num2 * 0.5f));
 				vector = Vector3(vector - unk10);
 				outPosition = Vector3(vParam0 + vector);
 			}
@@ -6713,7 +6713,7 @@ void func_154(var uParam0, var uParam1, var uParam2, var uParam3, float fParam4,
 			func_97(&vector, 0f, 0f, fParam7);
 	}
 
-	vector = { vector * Vector3(fParam4 + iParam5, fParam4 + iParam5, fParam4 + iParam5) };
+	vector = Vector3(vector * Vector3(fParam4 + iParam5, fParam4 + iParam5, fParam4 + iParam5));
 
 	if (!bParam6)
 		unk3 = Vector3(uParam1 + vector);
@@ -6847,21 +6847,21 @@ void func_158(var uParam0, float fParam1, var uParam2, var uParam3, float fParam
 	{
 		if (!bParam9)
 			if (func_145(vector, x2) >= 0f)
-				vector = { vector * Vector3(((fParam7 * 0.5f) - num) + iParam8, ((fParam7 * 0.5f) - num) + iParam8, ((fParam7 * 0.5f) - num) + iParam8) };
+				vector = Vector3(vector * Vector3(((fParam7 * 0.5f) - num) + iParam8, ((fParam7 * 0.5f) - num) + iParam8, ((fParam7 * 0.5f) - num) + iParam8));
 			else
-				vector = { vector * Vector3((((fParam7 * 0.5f) - num) + iParam8) * -1f, (((fParam7 * 0.5f) - num) + iParam8) * -1f, (((fParam7 * 0.5f) - num) + iParam8) * -1f) };
+				vector = Vector3(vector * Vector3((((fParam7 * 0.5f) - num) + iParam8) * -1f, (((fParam7 * 0.5f) - num) + iParam8) * -1f, (((fParam7 * 0.5f) - num) + iParam8) * -1f));
 		else if (func_145(vector, x2) >= 0f)
-			vector = { vector * Vector3(((fParam7 * 0.5f) + num + iParam8) * -1f, ((fParam7 * 0.5f) + num + iParam8) * -1f, ((fParam7 * 0.5f) + num + iParam8) * -1f) };
+			vector = Vector3(vector * Vector3(((fParam7 * 0.5f) + num + iParam8) * -1f, ((fParam7 * 0.5f) + num + iParam8) * -1f, ((fParam7 * 0.5f) + num + iParam8) * -1f));
 		else
-			vector = { vector * Vector3((fParam7 * 0.5f) + num + iParam8, (fParam7 * 0.5f) + num + iParam8, (fParam7 * 0.5f) + num + iParam8) };
+			vector = Vector3(vector * Vector3((fParam7 * 0.5f) + num + iParam8, (fParam7 * 0.5f) + num + iParam8, (fParam7 * 0.5f) + num + iParam8));
 	
 		vector2 = Vector3(*uParam0 + vector);
 		num2 = SYSTEM::VDIST(fParam1, fParam1.f_1, 0f, fParam4, fParam4.f_1, 0f);
-		unk11 = { (fParam1 + fParam4) / Vector3(2f, 2f, 2f) };
+		unk11 = Vector3((fParam1 + fParam4) / Vector3(2f, 2f, 2f));
 		unk11.f_2 = 0f;
 		vector = Vector3(func_159(0f, 0f, 1f, x1));
 		vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
-		vector = { vector * Vector3(fParam7 * 0.5f, fParam7 * 0.5f, fParam7 * 0.5f) };
+		vector = Vector3(vector * Vector3(fParam7 * 0.5f, fParam7 * 0.5f, fParam7 * 0.5f));
 		unk14 = Vector3(unk11 - vector);
 		unk17 = Vector3(unk11 + vector);
 		x12 = Vector3(unk17 - unk14);
@@ -6874,13 +6874,13 @@ void func_158(var uParam0, float fParam1, var uParam2, var uParam3, float fParam
 	
 		if (!bParam9)
 			if (func_145(vector, x22) >= 0f)
-				vector = { vector * Vector3(((num2 * 0.5f) - num) + iParam8, ((num2 * 0.5f) - num) + iParam8, ((num2 * 0.5f) - num) + iParam8) };
+				vector = Vector3(vector * Vector3(((num2 * 0.5f) - num) + iParam8, ((num2 * 0.5f) - num) + iParam8, ((num2 * 0.5f) - num) + iParam8));
 			else
-				vector = { vector * Vector3((((num2 * 0.5f) - num) + iParam8) * -1f, (((num2 * 0.5f) - num) + iParam8) * -1f, (((num2 * 0.5f) - num) + iParam8) * -1f) };
+				vector = Vector3(vector * Vector3((((num2 * 0.5f) - num) + iParam8) * -1f, (((num2 * 0.5f) - num) + iParam8) * -1f, (((num2 * 0.5f) - num) + iParam8) * -1f));
 		else if (func_145(vector, x22) >= 0f)
-			vector = { vector * Vector3(((num2 * 0.5f) + num + iParam8) * -1f, ((num2 * 0.5f) + num + iParam8) * -1f, ((num2 * 0.5f) + num + iParam8) * -1f) };
+			vector = Vector3(vector * Vector3(((num2 * 0.5f) + num + iParam8) * -1f, ((num2 * 0.5f) + num + iParam8) * -1f, ((num2 * 0.5f) + num + iParam8) * -1f));
 		else
-			vector = { vector * Vector3((num2 * 0.5f) + num + iParam8, (num2 * 0.5f) + num + iParam8, (num2 * 0.5f) + num + iParam8) };
+			vector = Vector3(vector * Vector3((num2 * 0.5f) + num + iParam8, (num2 * 0.5f) + num + iParam8, (num2 * 0.5f) + num + iParam8));
 	
 		vector3 = Vector3(*uParam0 + vector);
 	
@@ -29673,15 +29673,15 @@ void func_506(var uParam0) // Position - 0x252D4
 		{
 			case 1:
 			case 2:
-				*uParam0 = { *uParam0 + Vector3(10f, 0f, 0f) };
+				*uParam0 = Vector3(*uParam0 + Vector3(10f, 0f, 0f));
 				break;
 		
 			case 3:
-				*uParam0 = { *uParam0 - Vector3(30f, 0f, 0f) };
+				*uParam0 = Vector3(*uParam0 - Vector3(30f, 0f, 0f));
 				break;
 		
 			case 4:
-				*uParam0 = { *uParam0 - Vector3(10f, 0f, 0f) };
+				*uParam0 = Vector3(*uParam0 - Vector3(10f, 0f, 0f));
 				break;
 		}
 	
@@ -29691,7 +29691,7 @@ void func_506(var uParam0) // Position - 0x252D4
 	else
 	{
 		iLocal_698.f_860.f_12 = 0;
-		*uParam0 = { *uParam0 + Vector3(20f, 0f, 0f) };
+		*uParam0 = Vector3(*uParam0 + Vector3(20f, 0f, 0f));
 	}
 
 	return;
@@ -30460,7 +30460,7 @@ Vector3 func_531(int iParam0, BOOL bParam1) // Position - 0x26171
 		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(func_67(iParam0), true));
 
 	if (bParam1)
-		entityCoords = { entityCoords + Vector3(0f, 5f, 5f) };
+		entityCoords = Vector3(entityCoords + Vector3(0f, 5f, 5f));
 
 	return entityCoords;
 }
@@ -149547,8 +149547,8 @@ void func_1986(int iParam0, var uParam1, var uParam2) // Position - 0xBB6E2
 	unk = Vector3(func_1988(iParam0, false));
 	num = func_1987(iParam0);
 	num = num + 1f;
-	*uParam1 = { unk - Vector3(1f, num, num) };
-	*uParam2 = { unk + Vector3(3f, num, num) };
+	*uParam1 = Vector3(unk - Vector3(1f, num, num));
+	*uParam2 = Vector3(unk + Vector3(3f, num, num));
 	return;
 }
 

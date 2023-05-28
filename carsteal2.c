@@ -5424,7 +5424,7 @@ BOOL func_8(int iParam0, var uParam1, var uParam2) // Position - 0x92B
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ));
 			*uParam2 = 90f;
 			return true;
 	
@@ -13686,7 +13686,7 @@ void func_167() // Position - 0xCCC6
 								{
 									if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(iLocal_3346[i].f_1))
 									{
-										uLocal_2758 = { ENTITY::GET_ENTITY_COORDS(iLocal_3346[i].f_1, true) + Vector3(0.0054f, -0.1f, -0.01f) };
+										uLocal_2758 = Vector3(ENTITY::GET_ENTITY_COORDS(iLocal_3346[i].f_1, true) + Vector3(0.0054f, -0.1f, -0.01f));
 										uLocal_2761 = Vector3(ENTITY::GET_ENTITY_ROTATION(iLocal_3346[i].f_1, 2));
 										VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(iLocal_3346[i].f_1);
 										iLocal_3346[i - 1].f_5 = 0;
@@ -13755,16 +13755,16 @@ void func_167() // Position - 0xCCC6
 										
 											if (fLocal_2770 < 1f)
 											{
-												vector = { uLocal_2758 + ((uLocal_2764 - uLocal_2758) * Vector3(num, num, num)) };
-												vector2 = { uLocal_2761 + ((uLocal_2767 - uLocal_2761) * Vector3(num, num, num)) };
+												vector = Vector3(uLocal_2758 + ((uLocal_2764 - uLocal_2758) * Vector3(num, num, num)));
+												vector2 = Vector3(uLocal_2761 + ((uLocal_2767 - uLocal_2761) * Vector3(num, num, num)));
 												ENTITY::FREEZE_ENTITY_POSITION(iLocal_3346[i].f_1, true);
 												ENTITY::SET_ENTITY_COORDS(iLocal_3346[i].f_1, vector, true, false, false, true);
 												ENTITY::SET_ENTITY_ROTATION(iLocal_3346[i].f_1, vector2, 2, true);
 											}
 											else
 											{
-												vector = { uLocal_2758 + ((uLocal_2764 - uLocal_2758) * Vector3(num, num, num)) };
-												vector2 = { uLocal_2761 + ((uLocal_2767 - uLocal_2761) * Vector3(num, num, num)) };
+												vector = Vector3(uLocal_2758 + ((uLocal_2764 - uLocal_2758) * Vector3(num, num, num)));
+												vector2 = Vector3(uLocal_2761 + ((uLocal_2767 - uLocal_2761) * Vector3(num, num, num)));
 												ENTITY::SET_ENTITY_COORDS_NO_OFFSET(iLocal_3346[i].f_1, vector, false, false, true);
 												ENTITY::SET_ENTITY_ROTATION(iLocal_3346[i].f_1, vector2, 2, true);
 												ENTITY::FREEZE_ENTITY_POSITION(iLocal_3346[i].f_1, false);
@@ -13806,7 +13806,7 @@ void func_167() // Position - 0xCCC6
 								
 									if (iLocal_3346[i].f_6 == 1)
 									{
-										uLocal_2758 = { ENTITY::GET_ENTITY_COORDS(iLocal_3346[i].f_1, true) + Vector3(0.0054f, -0.1f, -0.01f) };
+										uLocal_2758 = Vector3(ENTITY::GET_ENTITY_COORDS(iLocal_3346[i].f_1, true) + Vector3(0.0054f, -0.1f, -0.01f));
 										uLocal_2761 = Vector3(ENTITY::GET_ENTITY_ROTATION(iLocal_3346[i].f_1, 2));
 									}
 								
@@ -21378,7 +21378,7 @@ void func_291(var uParam0, int iParam1) // Position - 0x19BDD
 				ENTITY::GET_ENTITY_MATRIX(func_288(uParam0, iParam1 - 1, -1), &forwardVector, &rightVector, &upVector, &position);
 			
 				if (uParam0->f_10[iParam1].f_20)
-					gameplayCamCoord = { position + (forwardVector * Vector3(uParam0->f_10[iParam1 - 1].f_6.f_1, uParam0->f_10[iParam1 - 1].f_6.f_1, uParam0->f_10[iParam1 - 1].f_6.f_1)) + (rightVector * Vector3(uParam0->f_10[iParam1 - 1].f_6, uParam0->f_10[iParam1 - 1].f_6, uParam0->f_10[iParam1 - 1].f_6)) + (upVector * Vector3(uParam0->f_10[iParam1 - 1].f_6.f_2, uParam0->f_10[iParam1 - 1].f_6.f_2, uParam0->f_10[iParam1 - 1].f_6.f_2)) };
+					gameplayCamCoord = Vector3(position + (forwardVector * Vector3(uParam0->f_10[iParam1 - 1].f_6.f_1, uParam0->f_10[iParam1 - 1].f_6.f_1, uParam0->f_10[iParam1 - 1].f_6.f_1)) + (rightVector * Vector3(uParam0->f_10[iParam1 - 1].f_6, uParam0->f_10[iParam1 - 1].f_6, uParam0->f_10[iParam1 - 1].f_6)) + (upVector * Vector3(uParam0->f_10[iParam1 - 1].f_6.f_2, uParam0->f_10[iParam1 - 1].f_6.f_2, uParam0->f_10[iParam1 - 1].f_6.f_2)));
 				else
 					gameplayCamCoord = Vector3(position + uParam0->f_10[iParam1 - 1].f_6);
 			}
@@ -21387,7 +21387,7 @@ void func_291(var uParam0, int iParam1) // Position - 0x19BDD
 		vector = Vector3(unk - gameplayCamCoord);
 		num = SYSTEM::VMAG(vector) - uParam0->f_10[iParam1].f_12;
 		vector = Vector3(func_295(vector));
-		vector = { vector * Vector3(num, num, num) };
+		vector = Vector3(vector * Vector3(num, num, num));
 		uParam0->f_10[iParam1].f_6 = Vector3(gameplayCamCoord + vector);
 	
 		if (uParam0->f_10[iParam1].f_3 > -1)
@@ -21413,12 +21413,12 @@ void func_291(var uParam0, int iParam1) // Position - 0x19BDD
 	
 		num3 = SYSTEM::VMAG(vector2) - num2;
 		vector2 = Vector3(func_294(gameplayCamRot));
-		gameplayCamCoord2 = { gameplayCamCoord2 + (vector2 * Vector3(num2, num2, num2)) };
+		gameplayCamCoord2 = Vector3(gameplayCamCoord2 + (vector2 * Vector3(num2, num2, num2)));
 	
 		if (iParam1 < uParam0->f_1218)
 			uParam0->f_10[iParam1].f_6 = Vector3(gameplayCamCoord2);
 		else
-			uParam0->f_10[iParam1].f_6 = { gameplayCamCoord2 + (vector2 * Vector3(num3 - uParam0->f_10[iParam1].f_12, num3 - uParam0->f_10[iParam1].f_12, num3 - uParam0->f_10[iParam1].f_12)) };
+			uParam0->f_10[iParam1].f_6 = Vector3(gameplayCamCoord2 + (vector2 * Vector3(num3 - uParam0->f_10[iParam1].f_12, num3 - uParam0->f_10[iParam1].f_12, num3 - uParam0->f_10[iParam1].f_12)));
 	
 		uParam0->f_10[iParam1].f_9 = Vector3(gameplayCamRot);
 	}
@@ -21430,7 +21430,7 @@ void func_291(var uParam0, int iParam1) // Position - 0x19BDD
 		num4 = 0f;
 		num4 = uParam0->f_10[iParam1].f_12;
 		unk29 = Vector3(func_295(unk29));
-		unk32 = { entityCoords2 + (unk29 * Vector3(num4, num4, num4)) };
+		unk32 = Vector3(entityCoords2 + (unk29 * Vector3(num4, num4, num4)));
 		unk32.f_2 = unk32.f_2 + uParam0->f_10[iParam1].f_16;
 		uParam0->f_10[iParam1].f_6 = Vector3(unk32);
 	}
@@ -21553,7 +21553,7 @@ Vector3 func_295(float fParam0, var uParam1, var uParam2) // Position - 0x1A447
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -56236,7 +56236,7 @@ void func_513(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 
 										{
 											case 0:
 												entityCoords2 = Vector3(ENTITY::GET_ENTITY_COORDS(uParam0->f_8, true));
-												vector = { ENTITY::GET_ENTITY_COORDS(uParam0->f_298[i], true) + Vector3(0.5f, 0f, 0f) };
+												vector = Vector3(ENTITY::GET_ENTITY_COORDS(uParam0->f_298[i], true) + Vector3(0.5f, 0f, 0f));
 												uParam0->f_298[i].f_10 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(entityCoords2, vector, 1, 0, 7);
 												break;
 										
@@ -57023,7 +57023,7 @@ BOOL func_527(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		return false;
 
 	num2 = num / value;
-	*uParam0 = { uParam1 + (Vector3(num2, num2, num2) * unk) };
+	*uParam0 = Vector3(uParam1 + (Vector3(num2, num2, num2) * unk));
 
 	if (num2 < 0f || num2 > 1f)
 		return false;
@@ -57361,9 +57361,9 @@ void func_543(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -57471,10 +57471,10 @@ BOOL func_544(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));
@@ -123539,7 +123539,7 @@ void func_956(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 								else
 								{
 									iLocal_66 = iLocal_66 + 1;
-									uParam0->f_121 = { uParam0->f_121 + Vector3(-uParam0->f_136, 0f, uParam0->f_135) };
+									uParam0->f_121 = Vector3(uParam0->f_121 + Vector3(-uParam0->f_136, 0f, uParam0->f_135));
 								
 									if (uParam0->f_121 < num3)
 										uParam0->f_121 = num3;
@@ -123677,14 +123677,14 @@ void func_956(var uParam0, int iParam1, int iParam2, int iParam3, int iParam4, i
 									switch (Global_1581966)
 									{
 										case 0:
-											vector4 = { Vector3(2.43f, -4.26f, -3.42f) + Vector3(0f, -1.25f, 2.82f) };
+											vector4 = Vector3(Vector3(2.43f, -4.26f, -3.42f) + Vector3(0f, -1.25f, 2.82f));
 											unk32 = Vector3( 0f, 0f, 0f );
 											break;
 									
 										case 1:
 											if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_8, false) && VEHICLE::GET_VEHICLE_MOD(uParam0->f_8, 10) == 0)
 											{
-												vector4 = { Vector3(-1.5f, -0.22f, -5.2f) + Vector3(-0.4f, 0f, 0.2f) };
+												vector4 = Vector3(Vector3(-1.5f, -0.22f, -5.2f) + Vector3(-0.4f, 0f, 0.2f));
 												unk32 = Vector3( 0f, 0f, 90f );
 											}
 											else
@@ -123918,7 +123918,7 @@ void func_961(var uParam0) // Position - 0xA1734
 		if (uParam0->f_47 == 1)
 		{
 			if (_IS_NULL_VECTOR(uParam0->f_61))
-				uParam0->f_61 = { uParam0->f_74 + Vector3(0f, SYSTEM::COS(MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f)) * uParam0->f_77, SYSTEM::SIN(MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f)) * uParam0->f_77) };
+				uParam0->f_61 = Vector3(uParam0->f_74 + Vector3(0f, SYSTEM::COS(MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f)) * uParam0->f_77, SYSTEM::SIN(MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f)) * uParam0->f_77));
 		
 			if (func_964(uParam0, uParam0->f_61, uParam0->f_69, -1f, -1, 1, 1))
 			{
@@ -124004,8 +124004,8 @@ void func_962(var uParam0) // Position - 0xA180B
 				num4 = func_533(entityCoords, uParam0->f_55, 0);
 				value2 = num4 + 160f;
 				value3 = num4 - 160f;
-				num5 = { uParam0->f_55 + Vector3(0f, uParam0->f_67 * SYSTEM::COS(value2), uParam0->f_67 * SYSTEM::SIN(value2)) };
-				num6 = { uParam0->f_55 + Vector3(0f, uParam0->f_67 * SYSTEM::COS(value3), uParam0->f_67 * SYSTEM::SIN(value3)) };
+				num5 = Vector3(uParam0->f_55 + Vector3(0f, uParam0->f_67 * SYSTEM::COS(value2), uParam0->f_67 * SYSTEM::SIN(value2)));
+				num6 = Vector3(uParam0->f_55 + Vector3(0f, uParam0->f_67 * SYSTEM::COS(value3), uParam0->f_67 * SYSTEM::SIN(value3)));
 				value4 = MISC::ATAN((num5 - entityCoords) / (num5.f_1 - entityCoords.f_1));
 			
 				if (num5.f_1 - entityCoords.f_1 < 0f)

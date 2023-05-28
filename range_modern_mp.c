@@ -1633,7 +1633,7 @@ Vector3 func_7(var uParam0, int iParam1) // Position - 0x1BB6
 		case 2:
 		case 3:
 		case 4:
-			unk6 = { vector * Vector3(0.2f, 0.2f, 0.2f) };
+			unk6 = Vector3(vector * Vector3(0.2f, 0.2f, 0.2f));
 			break;
 	
 		case 5:
@@ -1641,7 +1641,7 @@ Vector3 func_7(var uParam0, int iParam1) // Position - 0x1BB6
 		case 7:
 		case 8:
 		case 9:
-			unk6 = { vector * Vector3(0.4f, 0.4f, 0.4f) };
+			unk6 = Vector3(vector * Vector3(0.4f, 0.4f, 0.4f));
 			break;
 	
 		case 10:
@@ -1649,7 +1649,7 @@ Vector3 func_7(var uParam0, int iParam1) // Position - 0x1BB6
 		case 12:
 		case 13:
 		case 14:
-			unk6 = { vector * Vector3(0.6f, 0.6f, 0.6f) };
+			unk6 = Vector3(vector * Vector3(0.6f, 0.6f, 0.6f));
 			break;
 	
 		case 15:
@@ -1657,7 +1657,7 @@ Vector3 func_7(var uParam0, int iParam1) // Position - 0x1BB6
 		case 17:
 		case 18:
 		case 19:
-			unk6 = { vector * Vector3(0.8f, 0.8f, 0.8f) };
+			unk6 = Vector3(vector * Vector3(0.8f, 0.8f, 0.8f));
 			break;
 	}
 
@@ -89345,7 +89345,7 @@ BOOL func_570(int* piParam0, var uParam1, var uParam2, BOOL bParam3, BOOL bParam
 	
 		if (MISC::ABSF(value) > 0.5f)
 		{
-			unk21 = { entityVelocity / Vector3(value, value, value) };
+			unk21 = Vector3(entityVelocity / Vector3(value, value, value));
 			vector3 = Vector3(offsetFromEntityInWorldCoords + unk21);
 		}
 	
@@ -89661,7 +89661,7 @@ BOOL func_571(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 1)
 		{
 			*uParam5 = Vector3(0.2657f, 1.3743f, 0.364f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6768f, 0.9824f + uParam1, 0.1864f + fParam2);
 			*uParam7 = Vector3(-1.3043f, -1.0657f + uParam1, 1.1243f + fParam2);
 			*uParam8 = 34.3832f;
@@ -89679,7 +89679,7 @@ BOOL func_571(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 3)
 		{
 			*uParam5 = Vector3(0.4529f, 1.0868f, 0.365f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6216f, 0.9493f + uParam1, 0.4129f + fParam2);
 			*uParam7 = Vector3(-1.4273f, -1.1768f + uParam1, 0.9439f + fParam2);
 			*uParam8 = 34.3832f;
@@ -89689,7 +89689,7 @@ BOOL func_571(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 4)
 		{
 			*uParam5 = Vector3(1.3811f, 1.7491f, 0.296f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(1.7091f, 1.1087f + uParam1, 0.3014f + fParam2);
 			*uParam7 = Vector3(-1.0311f, -0.1093f + uParam1, 0.3918f + fParam2);
 			*uParam8 = 34.3832f;
@@ -105602,7 +105602,7 @@ int func_907(var uParam0) // Position - 0x87D63
 	{
 		unk = Vector3(uParam0->f_230.f_6);
 		unk4 = Vector3(uParam0->f_230.f_9);
-		vector = { unk + ((unk4 - unk) * Vector3(num, num, num)) };
+		vector = Vector3(unk + ((unk4 - unk) * Vector3(num, num, num)));
 		ENTITY::SET_ENTITY_ROTATION(*uParam0, vector, 2, true);
 		return 0;
 	}
@@ -118569,7 +118569,7 @@ void func_1187(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4) 
 	{
 		uParam0->f_3 = 0;
 		uParam0->f_8 = Vector3(7.39f, -1098.5f, 28.8f);
-		uParam0->f_11 = { Vector3(28.8f, -1099.78f, 6.97f) - uParam0->f_8 };
+		uParam0->f_11 = Vector3(Vector3(28.8f, -1099.78f, 6.97f) - uParam0->f_8);
 		uParam0->f_14 = Vector3(13.4784f, -1097.4746f, 28.8347f);
 		uParam0->f_17 = Vector3(17.7f, -1085.9f, 28.7f);
 		uParam0->f_4 = Vector3(18.375f, -1101.7654f, 28.797f);
@@ -118653,7 +118653,7 @@ void func_1187(var uParam0, var uParam1, var uParam2, int iParam3, var uParam4) 
 	{
 		uParam0->f_3 = 1;
 		uParam0->f_8 = Vector3(826.84f, -2160.31f, 28.62f);
-		uParam0->f_11 = { Vector3(28.62f, -2159.08f, 826.86f) - uParam0->f_8 };
+		uParam0->f_11 = Vector3(Vector3(28.62f, -2159.08f, 826.86f) - uParam0->f_8);
 		uParam0->f_14 = Vector3(823.7017f, -2162.8562f, 29.871f);
 		uParam0->f_17 = Vector3(823.7017f, -2162.8562f, 29.871f);
 		uParam0->f_4 = Vector3(824.8112f, -2167.2612f, 28.6568f);

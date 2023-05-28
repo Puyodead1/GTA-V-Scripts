@@ -2387,7 +2387,7 @@ BOOL func_73() // Position - 0x2BE9
 				{
 					num = (1f / (0.349f - 0.161f)) * SYSTEM::TO_FLOAT(900);
 					iLocal_59 = SYSTEM::ROUND((fLocal_58 - 0.161f) * num);
-					uLocal_61 = { ENTITY::GET_ENTITY_COORDS(pedLocal_50, false) - Vector3(1f, 0f, 0f) };
+					uLocal_61 = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_50, false) - Vector3(1f, 0f, 0f));
 					iLocal_60 = 1;
 				}
 				else

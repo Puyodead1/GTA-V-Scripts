@@ -961,7 +961,7 @@ void func_11(var uParam0) // Position - 0xCB9
 			return;
 	
 		vector = Vector3(func_14(&uLocal_74[uParam0->f_15], 0, &num));
-		vector = { vector + Vector3(-0.2f, 0f, 0f) };
+		vector = Vector3(vector + Vector3(-0.2f, 0f, 0f));
 	
 		if (CAM::IS_SPHERE_VISIBLE(vector, 30f))
 			return;
@@ -32278,7 +32278,7 @@ struct<8> func_238(var uParam0, var uParam1, var uParam2, var uParam3, var uPara
 	var unk2;
 
 	unk = 2;
-	unk9 = { func_239(uParam0[1] - uParam0[0]) * Vector3(fParam8, fParam8, fParam8) };
+	unk9 = Vector3(func_239(uParam0[1] - uParam0[0]) * Vector3(fParam8, fParam8, fParam8));
 	unk[0] = Vector3(uParam0[0] - unk9);
 	unk[1] = Vector3(uParam0[1] + unk9);
 	unk.f_7 = uParam0.f_7 + (fParam8 * 2f);
@@ -32295,7 +32295,7 @@ Vector3 func_239(float fParam0, var uParam1, var uParam2) // Position - 0x23202
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -32333,10 +32333,10 @@ void func_241(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	unk7 = Vector3(uParam0);
 	unk10 = Vector3(uParam3);
 	unk10.f_2 = uParam0.f_2;
-	unk13[0] = { unk7 - (unk4 * Vector3(num, num, num)) };
-	unk13[1] = { unk7 + (unk4 * Vector3(num, num, num)) };
-	unk13[2] = { unk10 + (unk4 * Vector3(num, num, num)) };
-	unk13[3] = { unk10 - (unk4 * Vector3(num, num, num)) };
+	unk13[0] = Vector3(unk7 - (unk4 * Vector3(num, num, num)));
+	unk13[1] = Vector3(unk7 + (unk4 * Vector3(num, num, num)));
+	unk13[2] = Vector3(unk10 + (unk4 * Vector3(num, num, num)));
+	unk13[3] = Vector3(unk10 - (unk4 * Vector3(num, num, num)));
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[0], unk13[1], iParam7, iParam8, iParam9, iParam10);
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[1], unk13[2], iParam7, iParam8, iParam9, iParam10);
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[2], unk13[3], iParam7, iParam8, iParam9, iParam10);
@@ -34210,7 +34210,7 @@ void func_302(BOOL bParam0) // Position - 0x26292
 			}
 			else
 			{
-				vector = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(5f, 0f, 0f) };
+				vector = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(5f, 0f, 0f));
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), vector, true, false, false, true);
 				vector.f_2 = -200f;
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), vector, true, false, false, true);

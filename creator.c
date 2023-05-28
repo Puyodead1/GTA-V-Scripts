@@ -113297,7 +113297,7 @@ BOOL func_786(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_784(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_787(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -121619,7 +121619,7 @@ int func_1016(var uParam0) // Position - 0x90E23
 	unk.f_2 = 0f;
 	vector = Vector3(func_1018(0f, 0f, 1f, unk));
 	vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
-	vector = { vector * Vector3(uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f) };
+	vector = Vector3(vector * Vector3(uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f));
 	unk6[0] = Vector3(*uParam0 + vector);
 	unk6[1] = Vector3(*uParam0 - vector);
 	unk6[2] = Vector3(uParam0->f_3 + vector);

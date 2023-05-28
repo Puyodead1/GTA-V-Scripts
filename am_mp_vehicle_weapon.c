@@ -2099,7 +2099,7 @@ void func_61() // Position - 0x22BF
 		unk7 = Vector3(-SYSTEM::SIN(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::COS(finalRenderedCamRot.f_2) * SYSTEM::COS(finalRenderedCamRot), SYSTEM::SIN(finalRenderedCamRot));
 		unk10 = Vector3(300f, 300f, 300f);
 		vector = Vector3(finalRenderedCamCoord + (unk7 * unk10));
-		vector2 = { finalRenderedCamCoord + (unk7 * Vector3(1f, 1f, 1f)) };
+		vector2 = Vector3(finalRenderedCamCoord + (unk7 * Vector3(1f, 1f, 1f)));
 	
 		switch (uLocal_130.f_27)
 		{
@@ -3217,7 +3217,7 @@ void func_90() // Position - 0x34ED
 					AUDIO::STOP_SOUND(uLocal_130.f_29);
 			}
 		
-			vector2 = { -Vector3(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD)) };
+			vector2 = Vector3(-Vector3(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD)));
 		
 			if (SYSTEM::VMAG(vector2) > 0f)
 			{

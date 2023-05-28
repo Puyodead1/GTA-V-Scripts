@@ -88,7 +88,7 @@ void main() // Position - 0x0
 				
 					case 3:
 						num = 0.35f;
-						unk = { uLocal_4 + Vector3(3.45f, 0f, 0f) };
+						unk = Vector3(uLocal_4 + Vector3(3.45f, 0f, 0f));
 					
 						if (ENTITY::DOES_ENTITY_EXIST(obLocal_3))
 						{
@@ -135,7 +135,7 @@ Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

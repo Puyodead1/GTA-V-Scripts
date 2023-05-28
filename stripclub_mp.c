@@ -6569,7 +6569,7 @@ void func_130() // Position - 0x715A
 				uLocal_307 = Vector3(func_666(uLocal_307, unk7, 0.1f));
 				caLocal_196.f_4 = Vector3(caLocal_196.f_4 + caLocal_196.f_14);
 				caLocal_196.f_14 = Vector3(0f, 0f, 0f);
-				caLocal_196.f_1 = { uLocal_307 + (Vector3(synchronizedScenePhase, synchronizedScenePhase, synchronizedScenePhase) * Vector3(0.066f, 0.0107f, -0.1052f)) };
+				caLocal_196.f_1 = Vector3(uLocal_307 + (Vector3(synchronizedScenePhase, synchronizedScenePhase, synchronizedScenePhase) * Vector3(0.066f, 0.0107f, -0.1052f)));
 				caLocal_196.f_4 = func_665(caLocal_196.f_4, 15f * synchronizedScenePhase, 0.1f);
 			
 				if (MISC::ABSF(caLocal_196.f_4.f_2 - num) > 180f)
@@ -6753,7 +6753,7 @@ void func_130() // Position - 0x715A
 				num = func_667(caLocal_196.f_1, ENTITY::GET_ENTITY_COORDS(iLocal_89[iLocal_231], true));
 				caLocal_196.f_4 = Vector3(caLocal_196.f_4 + caLocal_196.f_14);
 				caLocal_196.f_14 = Vector3(0f, 0f, 0f);
-				caLocal_196.f_1 = { uLocal_307 + (Vector3(1f - synchronizedScenePhase, 1f - synchronizedScenePhase, 1f - synchronizedScenePhase) * Vector3(0.066f, 0.0107f, -0.1052f)) };
+				caLocal_196.f_1 = Vector3(uLocal_307 + (Vector3(1f - synchronizedScenePhase, 1f - synchronizedScenePhase, 1f - synchronizedScenePhase) * Vector3(0.066f, 0.0107f, -0.1052f)));
 				caLocal_196.f_4 = func_665(caLocal_196.f_4, 15f * (1f - synchronizedScenePhase), 0.5f);
 			
 				if (MISC::ABSF(caLocal_196.f_4.f_2 - num) > 180f)
@@ -100997,7 +100997,7 @@ void func_694() // Position - 0x7BBC4
 	if (CAM::DOES_CAM_EXIST(caLocal_196))
 	{
 		CAM::DETACH_CAM(caLocal_196);
-		caLocal_196.f_1 = { uLocal_307 + Vector3(0.066f, 0.0107f, -0.1052f) };
+		caLocal_196.f_1 = Vector3(uLocal_307 + Vector3(0.066f, 0.0107f, -0.1052f));
 		caLocal_196.f_4 = 15f;
 		caLocal_196.f_4.f_2 = func_667(CAM::GET_CAM_COORD(caLocal_196), ENTITY::GET_ENTITY_COORDS(iLocal_89[iLocal_231], true));
 	}
@@ -105915,7 +105915,7 @@ void func_904(int iParam0) // Position - 0x8256E
 			func_175(iParam0, 13, false);
 	
 		unk3 = Vector3(112.6f, -1287.03f, 29.35f);
-		unk6 = { unk3 + Vector3(-0.093f, -5.399f, -9.106f) };
+		unk6 = Vector3(unk3 + Vector3(-0.093f, -5.399f, -9.106f));
 		vector2 = Vector3(102.1886f, -1297.0215f, 28.7704f);
 		num3 = 0;
 		num4 = ((iParam0 + func_934()) % 3) + 1;
@@ -107599,7 +107599,7 @@ Vector3 func_963(float fParam0, var uParam1, var uParam2) // Position - 0x84F31
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -108178,7 +108178,7 @@ void func_976() // Position - 0x85D1B
 		if (func_978(i))
 		{
 			num = SYSTEM::TO_FLOAT(i) / 100f;
-			vector = { uLocal_310 + Vector3(num, num, num) };
+			vector = Vector3(uLocal_310 + Vector3(num, num, num));
 			uLocal_170[i] = OBJECT::CREATE_OBJECT(func_1011(), vector, true, false, false);
 		}
 	}

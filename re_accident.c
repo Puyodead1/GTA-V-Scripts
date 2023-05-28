@@ -2363,11 +2363,11 @@ void func_52() // Position - 0x222B
 						if (VEHICLE::IS_ENTRY_POINT_FOR_SEAT_CLEAR(pedLocal_317, veLocal_319, -1, false, false))
 						{
 							bLocal_344 = true;
-							uLocal_314 = { ENTITY::GET_ENTITY_COORDS(veLocal_319, false) + Vector3(0f, -1f, -3f) };
+							uLocal_314 = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_319, false) + Vector3(0f, -1f, -3f));
 						}
 						else
 						{
-							uLocal_314 = { ENTITY::GET_ENTITY_COORDS(veLocal_319, false) + Vector3(0f, 1.5f, -3f) };
+							uLocal_314 = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_319, false) + Vector3(0f, 1.5f, -3f));
 						}
 					
 						if (ENTITY::IS_ENTITY_AT_COORD(PLAYER::GET_PLAYERS_LAST_VEHICLE(), uLocal_314, 4.2f, 4f, 5f, false, true, 0))
@@ -4713,18 +4713,18 @@ void func_115() // Position - 0x5493
 		ENTITY::SET_ENTITY_PROOFS(uLocal_327[0], true, true, true, true, false, false, false, false);
 		ENTITY::SET_ENTITY_LOD_DIST(uLocal_327[0], 10000000);
 		iLocal_229[0] = Vector3(fLocal_526);
-		iLocal_229[1] = { fLocal_526 + Vector3(0f, 0.5f, 0f) };
-		iLocal_229[2] = { fLocal_526 + Vector3(0f, 1f, 0f) };
-		iLocal_229[3] = { fLocal_526 + Vector3(0f, 2.5f, 0f) };
-		iLocal_229[4] = { fLocal_526 + Vector3(0f, 3f, 0f) };
-		iLocal_229[5] = { fLocal_526 + Vector3(0f, 3.5f, 0f) };
-		iLocal_229[6] = { fLocal_526 + Vector3(0f, 4f, 0f) };
-		iLocal_229[7] = { fLocal_526 + Vector3(0f, 4.5f, 0f) };
-		iLocal_229[8] = { fLocal_526 + Vector3(0f, 5f, 0f) };
-		iLocal_229[9] = { fLocal_526 + Vector3(0f, 5.5f, 0f) };
-		iLocal_229[10] = { fLocal_526 + Vector3(0f, 6f, 0f) };
-		iLocal_229[11] = { fLocal_526 + Vector3(0f, 6.5f, 0f) };
-		iLocal_229[12] = { fLocal_526 + Vector3(0f, 7f, 0f) };
+		iLocal_229[1] = Vector3(fLocal_526 + Vector3(0f, 0.5f, 0f));
+		iLocal_229[2] = Vector3(fLocal_526 + Vector3(0f, 1f, 0f));
+		iLocal_229[3] = Vector3(fLocal_526 + Vector3(0f, 2.5f, 0f));
+		iLocal_229[4] = Vector3(fLocal_526 + Vector3(0f, 3f, 0f));
+		iLocal_229[5] = Vector3(fLocal_526 + Vector3(0f, 3.5f, 0f));
+		iLocal_229[6] = Vector3(fLocal_526 + Vector3(0f, 4f, 0f));
+		iLocal_229[7] = Vector3(fLocal_526 + Vector3(0f, 4.5f, 0f));
+		iLocal_229[8] = Vector3(fLocal_526 + Vector3(0f, 5f, 0f));
+		iLocal_229[9] = Vector3(fLocal_526 + Vector3(0f, 5.5f, 0f));
+		iLocal_229[10] = Vector3(fLocal_526 + Vector3(0f, 6f, 0f));
+		iLocal_229[11] = Vector3(fLocal_526 + Vector3(0f, 6.5f, 0f));
+		iLocal_229[12] = Vector3(fLocal_526 + Vector3(0f, 7f, 0f));
 		iLocal_229[13] = Vector3(uLocal_523);
 	
 		for (i = 0; i < iLocal_229; i = i + 1)

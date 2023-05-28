@@ -1436,7 +1436,7 @@ void func_14(Ped pedParam0, eCharacter echParam1, int iParam2) // Position - 0x8
 			else
 				unk3 = Vector3(func_35(num, CHAR_MICHAEL));
 		
-			vector = { unk3 + (func_34(ENTITY::GET_ENTITY_COORDS(pedParam0, true) - unk3) * Vector3(50f, 50f, 50f)) };
+			vector = Vector3(unk3 + (func_34(ENTITY::GET_ENTITY_COORDS(pedParam0, true) - unk3) * Vector3(50f, 50f, 50f)));
 		
 			if (func_15(vector, &vector, &unk6, &unk7, 1, false, true))
 				flag = true;
@@ -1816,7 +1816,7 @@ Vector3 func_34(float fParam0, var uParam1, var uParam2) // Position - 0x10B3
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -2776,8 +2776,8 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, Pe
 		if (*uParam1 == 2)
 			*uParam1 = 1;
 	
-		vector = { uParam0->f_109 - Vector3(50f, 150f, 150f) };
-		vector2 = { uParam0->f_109 + Vector3(50f, 150f, 150f) };
+		vector = Vector3(uParam0->f_109 - Vector3(50f, 150f, 150f));
+		vector2 = Vector3(uParam0->f_109 + Vector3(50f, 150f, 150f));
 		MISC::CLEAR_AREA_OF_VEHICLES(uParam0->f_109, 150f, false, false, false, false, false, false, 0);
 		MISC::CLEAR_AREA_OF_PEDS(uParam0->f_109, 150f, 0);
 		PATHFIND::SET_PED_PATHS_IN_AREA(vector, vector2, false, 0);
@@ -2821,14 +2821,14 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, Pe
 			}
 		
 			MISC::CLEAR_AREA(uParam0->f_109, 15f, true, false, false, false);
-			vector3 = { uParam0->f_109 + Vector3(1f, 0f, 0f) };
+			vector3 = Vector3(uParam0->f_109 + Vector3(1f, 0f, 0f));
 			MISC::GET_GROUND_Z_FOR_3D_COORD(vector3, &(vector3.f_2), false, false);
 			ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), vector3, true, false, false, true);
 			func_153(PLAYER::PLAYER_PED_ID(), (uParam0->f_112[0] + uParam0->f_112[1]) * Vector3(0.5f, 0.5f, 0.5f));
 		
 			if (func_154(pedParam5))
 			{
-				vector3 = { uParam0->f_112[0] + Vector3(1f, 0f, 0f) };
+				vector3 = Vector3(uParam0->f_112[0] + Vector3(1f, 0f, 0f));
 				MISC::GET_GROUND_Z_FOR_3D_COORD(vector3, &(vector3.f_2), false, false);
 				TASK::CLEAR_PED_TASKS_IMMEDIATELY(pedParam5);
 				ENTITY::SET_ENTITY_COORDS(pedParam5, vector3, true, false, false, true);
@@ -2837,7 +2837,7 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, Pe
 		
 			if (func_154(pedParam6))
 			{
-				vector3 = { uParam0->f_112[1] + Vector3(1f, 0f, 0f) };
+				vector3 = Vector3(uParam0->f_112[1] + Vector3(1f, 0f, 0f));
 				MISC::GET_GROUND_Z_FOR_3D_COORD(vector3, &(vector3.f_2), false, false);
 				TASK::CLEAR_PED_TASKS_IMMEDIATELY(pedParam6);
 				ENTITY::SET_ENTITY_COORDS(pedParam6, vector3, true, false, false, true);
@@ -3353,8 +3353,8 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, Pe
 			PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 240, false);
 		}
 	
-		vector4 = { uParam0->f_109 - Vector3(50f, 150f, 150f) };
-		vector5 = { uParam0->f_109 + Vector3(50f, 150f, 150f) };
+		vector4 = Vector3(uParam0->f_109 - Vector3(50f, 150f, 150f));
+		vector5 = Vector3(uParam0->f_109 + Vector3(50f, 150f, 150f));
 		PATHFIND::SET_PED_PATHS_BACK_TO_ORIGINAL(vector4, vector5, 0);
 		PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(vector4, vector5, 1);
 	
@@ -43341,7 +43341,7 @@ int func_473(var uParam0, int iParam1, int iParam2, int iParam3) // Position - 0
 				else
 					unk7 = Vector3(func_35(num, CHAR_MICHAEL));
 			
-				vector = { unk7 + (func_34(ENTITY::GET_ENTITY_COORDS(uParam0->f_3, true) - unk7) * Vector3(50f, 50f, 50f)) };
+				vector = Vector3(unk7 + (func_34(ENTITY::GET_ENTITY_COORDS(uParam0->f_3, true) - unk7) * Vector3(50f, 50f, 50f)));
 			
 				if (func_15(vector, &vector, &unk10, &unk11, 1, false, true))
 					flag = true;
@@ -44551,8 +44551,8 @@ BOOL func_504(var uParam0) // Position - 0x3652D
 					if (PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
 					{
 						entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
-						vector = { entityCoords - Vector3(50f, 50f, 50f) };
-						vector2 = { entityCoords + Vector3(50f, 50f, 50f) };
+						vector = Vector3(entityCoords - Vector3(50f, 50f, 50f));
+						vector2 = Vector3(entityCoords + Vector3(50f, 50f, 50f));
 					
 						if (PED::IS_COP_PED_IN_AREA_3D(vector, vector2))
 							return true;
@@ -106860,8 +106860,8 @@ BOOL func_812(var uParam0, BOOL bParam1) // Position - 0x89E3F
 		if (PLAYER::IS_PLAYER_WANTED_LEVEL_GREATER(PLAYER::PLAYER_ID(), 0))
 		{
 			entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true));
-			vector = { entityCoords - Vector3(50f, 50f, 50f) };
-			vector2 = { entityCoords + Vector3(50f, 50f, 50f) };
+			vector = Vector3(entityCoords - Vector3(50f, 50f, 50f));
+			vector2 = Vector3(entityCoords + Vector3(50f, 50f, 50f));
 		
 			if (PED::IS_COP_PED_IN_AREA_3D(vector, vector2))
 				return true;
@@ -109365,8 +109365,8 @@ BOOL func_871(var uParam0) // Position - 0x8D727
 					return false;
 		
 			MISC::CLEAR_AREA_OF_VEHICLES(vector, 10f, false, false, false, false, false, false, 0);
-			unk104 = { vector - Vector3(3f, 3f, 3f) };
-			unk107 = { vector + Vector3(3f, 3f, 3f) };
+			unk104 = Vector3(vector - Vector3(3f, 3f, 3f));
+			unk107 = Vector3(vector + Vector3(3f, 3f, 3f));
 		
 			if (MISC::IS_AREA_OCCUPIED(unk104, unk107, false, true, false, false, false, 0, false))
 				return false;
@@ -109663,10 +109663,10 @@ Vector3 func_874(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var
 	positionBySideOfRoad2 = PATHFIND::GET_POSITION_BY_SIDE_OF_ROAD(vParam3, 1, &outPosition2);
 
 	if (positionBySideOfRoad)
-		outPosition = { outPosition + (func_34(vParam3 - outPosition) * Vector3(3.5f, 3.5f, 3.5f)) };
+		outPosition = Vector3(outPosition + (func_34(vParam3 - outPosition) * Vector3(3.5f, 3.5f, 3.5f)));
 
 	if (positionBySideOfRoad2)
-		outPosition2 = { outPosition2 + (func_34(vParam3 - outPosition2) * Vector3(3.5f, 3.5f, 3.5f)) };
+		outPosition2 = Vector3(outPosition2 + (func_34(vParam3 - outPosition2) * Vector3(3.5f, 3.5f, 3.5f)));
 
 	if (positionBySideOfRoad && positionBySideOfRoad2)
 		if (SYSTEM::VDIST2(vParam0, outPosition) < SYSTEM::VDIST2(vParam0, outPosition2))
@@ -111588,8 +111588,8 @@ void func_921(var uParam0, var uParam1, var uParam2) // Position - 0x91207
 		}
 	}
 
-	*uParam1 = { *uParam1 - Vector3(2.5f, 0.5f, 0.5f) };
-	*uParam2 = { *uParam2 + Vector3(2.5f, 0.5f, 0.5f) };
+	*uParam1 = Vector3(*uParam1 - Vector3(2.5f, 0.5f, 0.5f));
+	*uParam2 = Vector3(*uParam2 + Vector3(2.5f, 0.5f, 0.5f));
 	return;
 }
 

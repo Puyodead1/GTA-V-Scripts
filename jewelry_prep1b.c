@@ -2520,7 +2520,7 @@ BOOL func_45(Blip* pblParam0, Vector3 vParam1, var uParam2, var uParam3, Vector3
 	int includeZ;
 	int p10;
 
-	vector = { vParam1 + Vector3(1f, 0f, 0f) };
+	vector = Vector3(vParam1 + Vector3(1f, 0f, 0f));
 	pblParam0->f_17[0] = iParam15;
 	pblParam0->f_17[1] = iParam16;
 	pblParam0->f_17[2] = iParam17;
@@ -9238,7 +9238,7 @@ BOOL func_174(int iParam0, var uParam1, var uParam2) // Position - 0xC0BF
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

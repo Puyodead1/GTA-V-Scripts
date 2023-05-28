@@ -3642,9 +3642,9 @@ void func_29(BOOL bParam0) // Position - 0xE88
 					unk6 = Vector3(func_30(unk3));
 				
 					if (!NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
-						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166) * Vector3(fLocal_2767, fLocal_2767, fLocal_2767)) };
+						vector2 = Vector3(uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166) * Vector3(fLocal_2767, fLocal_2767, fLocal_2767)));
 					else
-						vector2 = { uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166)) };
+						vector2 = Vector3(uLocal_572 + (unk6 * F2V(MISC::GET_FRAME_TIME()) * Vector3(iLocal_93.f_166, iLocal_93.f_166, iLocal_93.f_166)));
 				
 					num3 = SYSTEM::VDIST2(uLocal_572, vector2);
 				
@@ -3750,7 +3750,7 @@ Vector3 func_30(float fParam0, var uParam1, var uParam2) // Position - 0x11B6
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

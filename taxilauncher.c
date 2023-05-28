@@ -2649,7 +2649,7 @@ BOOL func_70(var uParam0, var uParam1, var uParam2, var uParam3) // Position - 0
 
 	if (func_71(unk, uParam1))
 	{
-		unk4 = { (uParam1 - unk) / Vector3(5f, 5f, 5f) };
+		unk4 = Vector3((uParam1 - unk) / Vector3(5f, 5f, 5f));
 	
 		for (i = 1; i <= 5; i = i + 1)
 		{
@@ -4394,8 +4394,8 @@ void func_97(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4
 		num2.f_1 = fParam3.f_1;
 	}
 
-	num = { num - Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
-	num2 = { num2 + Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
+	num = Vector3(num - Vector3((float)iParam8, (float)iParam8, (float)iParam8));
+	num2 = Vector3(num2 + Vector3((float)iParam8, (float)iParam8, (float)iParam8));
 
 	if (!func_98(num, *uParam6, 1056964608, false) || !func_98(num, *uParam6, 1056964608, false))
 	{

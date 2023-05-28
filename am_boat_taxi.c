@@ -1190,7 +1190,7 @@ void main() // Position - 0x0
 						{
 							iLocal_63.f_4 = PLAYER::PLAYER_ID();
 							iLocal_63.f_5 = func_67();
-							iLocal_63.f_10 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) + Vector3(0f, 5f, 0f) };
+							iLocal_63.f_10 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) + Vector3(0f, 5f, 0f));
 							iLocal_63.f_7 = Vector3(func_65(iLocal_63.f_5));
 							MISC::SET_BIT(&iLocal_63, 12);
 						}
@@ -2907,7 +2907,7 @@ int func_41() // Position - 0x2672
 				{
 					if (func_45(uLocal_891, 6f, 1f, 1f, 5f, true, true, true, 1123024896, false, -1, true, 0, false, 0, false, false))
 					{
-						vector = { uLocal_891 + Vector3(12f, 0f, 0f) };
+						vector = Vector3(uLocal_891 + Vector3(12f, 0f, 0f));
 						iLocal_889 = SHAPETEST::START_SHAPE_TEST_BOX(vector, 10f, 10f, 25f, 0f, 0f, -1f, 2, 1, 0, 4);
 					
 						if (iLocal_889 == 0)
@@ -5580,7 +5580,7 @@ BOOL func_150(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	{
 		iLocal_63.f_4 = PLAYER::PLAYER_ID();
 		iLocal_63.f_5 = func_67();
-		iLocal_63.f_10 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) + Vector3(0f, 5f, 0f) };
+		iLocal_63.f_10 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false) + Vector3(0f, 5f, 0f));
 		iLocal_63.f_7 = Vector3(func_65(iLocal_63.f_5));
 	}
 

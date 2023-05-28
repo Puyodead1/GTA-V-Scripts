@@ -10512,7 +10512,7 @@ Vector3 func_242(float fParam0, var uParam1, var uParam2) // Position - 0xF460
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

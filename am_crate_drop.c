@@ -4075,8 +4075,8 @@ BOOL func_110(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	float unk3;
 
 	num = fParam9 * 0.70710677f;
-	unk = { uParam6 - Vector3(num, num, num) };
-	unk4 = { uParam6 + Vector3(num, num, num) };
+	unk = Vector3(uParam6 - Vector3(num, num, num));
+	unk4 = Vector3(uParam6 + Vector3(num, num, num));
 	return func_111(uParam0, uParam3, unk, unk4);
 }
 

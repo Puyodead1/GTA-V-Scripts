@@ -16164,7 +16164,7 @@ BOOL func_377(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_375(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_378(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -18896,8 +18896,8 @@ void func_433(int iParam0, var uParam1, var uParam2, var uParam3) // Position - 
 
 	if (iParam0 == 8)
 	{
-		*uParam1 = { Vector3(28.493917f, -1348.5073f, 27.033585f) + Vector3(0f, -0.4f, 2f) };
-		*uParam2 = { (Vector3(33.03834f, -1341.3823f, 27.056143f) - Vector3(0.2f, 0.2f, 0.2f)) + Vector3(0f, -0.4f, 2f) };
+		*uParam1 = Vector3(Vector3(28.493917f, -1348.5073f, 27.033585f) + Vector3(0f, -0.4f, 2f));
+		*uParam2 = Vector3((Vector3(33.03834f, -1341.3823f, 27.056143f) - Vector3(0.2f, 0.2f, 0.2f)) + Vector3(0f, -0.4f, 2f));
 		*uParam3 = 11f;
 	}
 
@@ -19088,8 +19088,8 @@ void func_435(int iParam0, var uParam1, var uParam2) // Position - 0x1A72D
 			break;
 	
 		case 8:
-			*uParam1 = { Vector3(28.5036f, -1348.8127f, 27.0641f) + Vector3(0f, -0.4f, 2f) };
-			*uParam2 = { Vector3(28.493917f, -1348.5073f, 27.033585f) + Vector3(0f, -0.4f, 2f) };
+			*uParam1 = Vector3(Vector3(28.5036f, -1348.8127f, 27.0641f) + Vector3(0f, -0.4f, 2f));
+			*uParam2 = Vector3(Vector3(28.493917f, -1348.5073f, 27.033585f) + Vector3(0f, -0.4f, 2f));
 			break;
 	
 		case 9:
@@ -19098,7 +19098,7 @@ void func_435(int iParam0, var uParam1, var uParam2) // Position - 0x1A72D
 			break;
 	
 		case 10:
-			*uParam1 = { Vector3(37.1573f, 2703.1143f, 1195.432f) + Vector3(0f, 0.39f, -29.04f) };
+			*uParam1 = Vector3(Vector3(37.1573f, 2703.1143f, 1195.432f) + Vector3(0f, 0.39f, -29.04f));
 			*uParam2 = Vector3(1166.4972f, 2703.756f, 37.063072f);
 			break;
 	

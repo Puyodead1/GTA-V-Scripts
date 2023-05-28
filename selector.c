@@ -2637,7 +2637,7 @@ Vector3 func_66(float fParam0, float fParam1, float fParam2) // Position - 0x37D
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -100101,7 +100101,7 @@ void func_885(Ped pedParam0, Ped pedParam1, BOOL bParam2, int iParam3, int iPara
 			ENTITY::IS_ENTITY_DEAD(pedParam0, false);
 			pedBoneCoords = Vector3(PED::GET_PED_BONE_COORDS(pedParam1, 57005, 0f, 0f, 0f));
 			pedBoneCoords2 = Vector3(PED::GET_PED_BONE_COORDS(pedParam1, 28252, 0f, 0f, 0f));
-			vector = { func_66(pedBoneCoords - pedBoneCoords2) * Vector3(iParam3 / 2f, iParam3 / 2f, iParam3 / 2f) };
+			vector = Vector3(func_66(pedBoneCoords - pedBoneCoords2) * Vector3(iParam3 / 2f, iParam3 / 2f, iParam3 / 2f));
 			coords = Vector3(0f, 0f, 0f);
 			WEAPON::GET_PED_LAST_WEAPON_IMPACT_COORD(pedParam0, &coords);
 		

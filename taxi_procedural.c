@@ -9688,8 +9688,8 @@ BOOL func_281(Entity eParam0) // Position - 0xA524
 	PATHFIND::GET_POSITION_BY_SIDE_OF_ROAD(outPosition, -1, &outPosition3);
 	num = SYSTEM::VMAG(outPosition3 - outPosition);
 	unk7 = Vector3(func_285(outPosition2 - outPosition, outPosition2.f_1 - outPosition.f_1, 0f));
-	unk10 = { func_284(unk7, 0) * Vector3(num, num, num) };
-	unk7 = { unk7 * Vector3(2f, 2f, 2f) };
+	unk10 = Vector3(func_284(unk7, 0) * Vector3(num, num, num));
+	unk7 = Vector3(unk7 * Vector3(2f, 2f, 2f));
 	unk13 = Vector3((outPosition - unk7) + unk10);
 	unk16 = Vector3(outPosition - unk7 - unk10);
 	unk19 = Vector3(outPosition2 + unk7 + unk10);
@@ -9788,7 +9788,7 @@ Vector3 func_285(float fParam0, float fParam1, float fParam2) // Position - 0xA7
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

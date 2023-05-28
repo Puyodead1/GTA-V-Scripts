@@ -20700,8 +20700,8 @@ void func_266(var uParam0, var uParam1, int iParam2, var uParam3, BOOL bParam4) 
 				uParam0->f_6 = 4f;
 				uParam0->f_7 = 5.5f;
 				uParam0->f_8 = 7f;
-				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(64.72798f, -749.761f, -1008.6142f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
-				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(66.58668f, -749.9338f, -1001.2277f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
+				uParam0->f_9 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(64.72798f, -749.761f, -1008.6142f) - Vector3(60.89419f, -759.604f, -1003.911f)));
+				uParam0->f_12 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(66.58668f, -749.9338f, -1001.2277f) - Vector3(60.89419f, -759.604f, -1003.911f)));
 				uParam0->f_15 = 6.75f;
 				uParam3->[uParam0->f_2] = iParam2;
 				func_39(uParam0, 2);
@@ -20713,8 +20713,8 @@ void func_266(var uParam0, var uParam1, int iParam2, var uParam3, BOOL bParam4) 
 				uParam0->f_6 = 4.3f;
 				uParam0->f_7 = 5f;
 				uParam0->f_8 = 7f;
-				uParam0->f_9 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(69.49414f, -747.81433f, -1012.00116f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
-				uParam0->f_12 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(71.26809f, -752.7428f, -1011.83325f) - Vector3(60.89419f, -759.604f, -1003.911f)) };
+				uParam0->f_9 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(69.49414f, -747.81433f, -1012.00116f) - Vector3(60.89419f, -759.604f, -1003.911f)));
+				uParam0->f_12 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_268(func_108(PLAYER::PLAYER_ID()), func_269()), func_267(func_108(PLAYER::PLAYER_ID()), func_269()), Vector3(71.26809f, -752.7428f, -1011.83325f) - Vector3(60.89419f, -759.604f, -1003.911f)));
 				uParam0->f_15 = 5.75f;
 				uParam3->[uParam0->f_2] = iParam2;
 				func_39(uParam0, 2);
@@ -26937,7 +26937,7 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { Vector3(-100.0031f, -53.6589f, -1004.9483f) - func_355(-1) };
+					uParam0->f_28 = Vector3(Vector3(-100.0031f, -53.6589f, -1004.9483f) - func_355(-1));
 					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 8);
@@ -26968,7 +26968,7 @@ void func_383(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 					uParam0->f_21[0] = 0;
 					uParam0->f_21[1] = 0;
 					uParam0->f_21[2] = 0;
-					uParam0->f_28 = { Vector3(-100.4031f, -83.3802f, -1009.9588f) - func_355(-1) };
+					uParam0->f_28 = Vector3(Vector3(-100.4031f, -83.3802f, -1009.9588f) - func_355(-1));
 					uParam0->f_31 = Vector3(0f, 0f, 0f);
 					func_44(&(uParam0->f_11));
 					func_39(&(uParam0->f_11), 8);
@@ -115759,7 +115759,7 @@ Vector3 func_1447(float fParam0, var uParam1, var uParam2) // Position - 0x7F04E
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

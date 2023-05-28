@@ -5503,7 +5503,7 @@ Vector3 func_218() // Position - 0x66AB
 void func_219() // Position - 0x6802
 {
 	iLocal_85.f_6 = Vector3(func_215(MISC::GET_RANDOM_INT_IN_RANGE(0, 3)));
-	iLocal_85.f_6 = { iLocal_85.f_6 + Vector3(120f, 0f, 0f) };
+	iLocal_85.f_6 = Vector3(iLocal_85.f_6 + Vector3(120f, 0f, 0f));
 	return;
 }
 

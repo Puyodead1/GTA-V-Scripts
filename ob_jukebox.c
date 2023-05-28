@@ -424,7 +424,7 @@ void main() // Position - 0x0
 		
 			if (ENTITY::DOES_ENTITY_EXIST(obLocal_112))
 			{
-				uLocal_140 = { ENTITY::GET_ENTITY_COORDS(obLocal_112, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obLocal_112) * Vector3(0.6f, 0.6f, 0.6f)) };
+				uLocal_140 = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_112, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obLocal_112) * Vector3(0.6f, 0.6f, 0.6f)));
 				uLocal_140.f_2 = uLocal_140.f_2 + 0.5f;
 				fLocal_139 = ENTITY::GET_ENTITY_HEADING(obLocal_112);
 				uLocal_143 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obLocal_112, 0f, -0.12f, -0.0315f));
@@ -5677,7 +5677,7 @@ BOOL func_97(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_95(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_98(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{

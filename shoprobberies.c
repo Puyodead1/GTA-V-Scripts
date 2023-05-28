@@ -734,7 +734,7 @@ void main() // Position - 0x0
 	unk7 = Vector3(unk4 - unk);
 	num = 147.297f;
 	unk10 = Vector3(-1228.4434f, -905.3416f, 13.523f);
-	unk7 = { unk10 - Vector3(12.31f, -907.82336f, -1222.3306f) };
+	unk7 = Vector3(unk10 - Vector3(12.31f, -907.82336f, -1222.3306f));
 	unk7 = Vector3(func_305(unk7, num));
 
 	if (func_304() && !func_303() || Global_113592 || Global_32166 || Global_113637 != -1)
@@ -7743,7 +7743,7 @@ BOOL func_149(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_147(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_150(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{

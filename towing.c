@@ -8311,7 +8311,7 @@ BOOL func_136(var uParam0, var uParam1, var uParam2, float fParam3, var uParam4,
 	VEHICLE::SET_VEHICLE_DOOR_OPEN(uLocal_2996[*uParam4].f_6, 4, false, false);
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(uLocal_2996[*uParam4].f_6), &minimum, &maximum);
 	unk7 = Vector3(maximum - minimum);
-	unk7 = { unk7 / Vector3(2f, 2f, 2f) };
+	unk7 = Vector3(unk7 / Vector3(2f, 2f, 2f));
 	bLocal_2950 = true;
 	offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(uLocal_2996[*uParam4].f_6, 1.5f, 0f, 0f));
 	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(uLocal_2996[*uParam4].f_6, true));
@@ -9885,7 +9885,7 @@ Vector3 func_188(float fParam0, float fParam1, float fParam2) // Position - 0x92
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

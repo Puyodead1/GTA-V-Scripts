@@ -2194,7 +2194,7 @@ void main() // Position - 0x0
 	fLocal_429 = 0f;
 	uLocal_433 = Vector3(-0.005f, -22.139f, 32.825f);
 	uLocal_436 = Vector3(0f, 0f, 0.68f);
-	uLocal_440 = { Vector3(-1.499111f, 1.993344f, -9.107174f) - Vector3(-2.452997f, 0.364908f, -9.052903f) };
+	uLocal_440 = Vector3(Vector3(-1.499111f, 1.993344f, -9.107174f) - Vector3(-2.452997f, 0.364908f, -9.052903f));
 	fLocal_2139 = 3f;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
@@ -5837,7 +5837,7 @@ BOOL func_103(int iParam0, var uParam1, var uParam2) // Position - 0x4802
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ));
 			*uParam2 = 90f;
 			return true;
 	

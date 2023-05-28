@@ -88908,7 +88908,7 @@ void func_413(var uParam0) // Position - 0x66642
 	
 		if (!PED::IS_PED_INJURED(pedInVehicleSeat))
 		{
-			forwardVector = { Vector3(10f, 10f, 10f) * forwardVector };
+			forwardVector = Vector3(Vector3(10f, 10f, 10f) * forwardVector);
 			TASK::TASK_VEHICLE_DRIVE_TO_COORD(pedInVehicleSeat, veLocal_4594, position + forwardVector, ENTITY::GET_ENTITY_SPEED(veLocal_4594), 0, ENTITY::GET_ENTITY_MODEL(veLocal_4594), 786469, 2f, 2f);
 		}
 	
@@ -91418,7 +91418,7 @@ Vector3 func_489(float fParam0, var uParam1, var uParam2) // Position - 0x69B60
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -95484,9 +95484,9 @@ void func_618(Cam caParam0) // Position - 0x6EC24
 	uLocal_4762 = Vector3(func_489(func_617(camRot)));
 	unk5 = Vector3(func_620(uLocal_4762, 2));
 	unk8 = Vector3(-func_619(uLocal_4762, unk5));
-	uLocal_4762 = { uLocal_4762 * Vector3(10f, 10f, 10f) };
-	uLocal_4756 = { unk8 * Vector3(10f, 10f, 10f) };
-	uLocal_4759 = { unk5 * Vector3(10f, 10f, 10f) };
+	uLocal_4762 = Vector3(uLocal_4762 * Vector3(10f, 10f, 10f));
+	uLocal_4756 = Vector3(unk8 * Vector3(10f, 10f, 10f));
+	uLocal_4759 = Vector3(unk5 * Vector3(10f, 10f, 10f));
 	fLocal_4749 = 0.2f;
 	fLocal_4750 = 0.5f;
 	unk17 = Vector3(CAM::GET_CAM_COORD(caParam0) - position);
@@ -95708,22 +95708,22 @@ Vector3 func_626(var uParam0, var uParam1, var uParam2, float fParam3) // Positi
 		case 2:
 		case 3:
 		case 4:
-			unk = { Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 180f) };
+			unk = Vector3(Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 180f));
 		
 			if (func_627(uParam0, unk))
 				break;
 		
-			unk = { Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 135f) };
+			unk = Vector3(Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 135f));
 		
 			if (func_627(uParam0, unk))
 				break;
 		
-			unk = { Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 225f) };
+			unk = Vector3(Vector3(fParam3, fParam3, fParam3) * func_617(45f, 0f, 225f));
 		
 			if (func_627(uParam0, unk))
 				break;
 		
-			unk = { Vector3(fParam3, fParam3, fParam3) * func_617(-45f, 0f, 0f) };
+			unk = Vector3(Vector3(fParam3, fParam3, fParam3) * func_617(-45f, 0f, 0f));
 		
 			if (func_627(uParam0, unk))
 				break;
@@ -98151,7 +98151,7 @@ void func_715() // Position - 0x72630
 	func_716();
 	HUD::SET_MINIMAP_COMPONENT(0, false, -1);
 	veLocal_870.f_482.f_3 = Vector3(10.2986f, 0f, 8.909f);
-	veLocal_870.f_482.f_9 = { Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + fLocal_830), SYSTEM::SIN(-97.4239f + fLocal_830)) };
+	veLocal_870.f_482.f_9 = Vector3(Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + fLocal_830), SYSTEM::SIN(-97.4239f + fLocal_830)));
 	veLocal_870.f_482.f_6 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_870, 1.12046f, -0.317773f, 1.3385f));
 	unk3 = Vector3(func_503(veLocal_870.f_482.f_9, veLocal_870.f_482.f_3.f_2));
 	veLocal_870.f_482.f_15 = Vector3(-33f + veLocal_870.f_482.f_3, 0f, -88.515f + fLocal_830);
@@ -98705,7 +98705,7 @@ void func_737() // Position - 0x734E5
 	uLocal_824 = Vector3(-846.7234f, -3697.9106f, 1248.2856f);
 	fLocal_830 = 102.2189f;
 	uLocal_1436 = Vector3(-1929.2f, -2791.4f, 616.3f);
-	uLocal_1439 = { func_489(Vector3(614.9f, -2793.5f, -1925.6f) - uLocal_1436) };
+	uLocal_1439 = Vector3(func_489(Vector3(614.9f, -2793.5f, -1925.6f) - uLocal_1436));
 	func_778(1.5f);
 	func_740();
 	uLocal_1430 = Vector3(fLocal_80);
@@ -100036,7 +100036,7 @@ void func_785() // Position - 0x7545B
 	func_786();
 	HUD::SET_MINIMAP_COMPONENT(0, false, -1);
 	veLocal_870.f_482.f_3 = Vector3(10.2986f, 0f, 8.909f);
-	veLocal_870.f_482.f_9 = { Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + fLocal_830), SYSTEM::SIN(-97.4239f + fLocal_830)) };
+	veLocal_870.f_482.f_9 = Vector3(Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + fLocal_830), SYSTEM::SIN(-97.4239f + fLocal_830)));
 	veLocal_870.f_482.f_6 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_870, 1.12046f, -0.317773f, 1.3385f));
 	unk3 = Vector3(func_503(veLocal_870.f_482.f_9, veLocal_870.f_482.f_3.f_2));
 	veLocal_870.f_482.f_15 = Vector3(-33f + veLocal_870.f_482.f_3, 0f, -88.515f + fLocal_830);
@@ -100168,7 +100168,7 @@ void func_789() // Position - 0x759D5
 	uLocal_824 = Vector3(-2064.2603f, -2995.904f, 1105.6519f);
 	fLocal_830 = 14.6945f;
 	uLocal_1436 = Vector3(-1087.4f, -3330f, 604.6f);
-	uLocal_1439 = { func_489(Vector3(599.7f, -3326.1f, -1090.4f) - uLocal_1436) };
+	uLocal_1439 = Vector3(func_489(Vector3(599.7f, -3326.1f, -1090.4f) - uLocal_1436));
 	func_778(1.5f);
 	func_740();
 	uLocal_821 = Vector3(uLocal_824);
@@ -103246,8 +103246,8 @@ void func_872() // Position - 0x79801
 	func_369(true);
 	VEHICLE::REMOVE_VEHICLE_RECORDING(iLocal_1469, "PilotSchool");
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(hLocal_800);
-	vector = { Vector3(26.694818f, -3203.5464f, -1514.9275f) - Vector3(20f, 200f, 200f) };
-	vector2 = { Vector3(26.694818f, -3203.5464f, -1514.9275f) + Vector3(20f, 200f, 200f) };
+	vector = Vector3(Vector3(26.694818f, -3203.5464f, -1514.9275f) - Vector3(20f, 200f, 200f));
+	vector2 = Vector3(Vector3(26.694818f, -3203.5464f, -1514.9275f) + Vector3(20f, 200f, 200f));
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(vector, vector2, true, true);
 	return;
 }
@@ -103588,8 +103588,8 @@ void func_879() // Position - 0x79E62
 
 	func_880();
 	HUD::SET_MINIMAP_COMPONENT(0, false, -1);
-	vector = { Vector3(26.694818f, -3203.5464f, -1514.9275f) - Vector3(20f, 200f, 200f) };
-	vector2 = { Vector3(26.694818f, -3203.5464f, -1514.9275f) + Vector3(20f, 200f, 200f) };
+	vector = Vector3(Vector3(26.694818f, -3203.5464f, -1514.9275f) - Vector3(20f, 200f, 200f));
+	vector2 = Vector3(Vector3(26.694818f, -3203.5464f, -1514.9275f) + Vector3(20f, 200f, 200f));
 	VEHICLE::SET_ALL_VEHICLE_GENERATORS_ACTIVE_IN_AREA(vector, vector2, false, true);
 	STREAMING::NEW_LOAD_SCENE_START(-1618.1404f, -2980.8284f, 17.4172f, func_489(Vector3(17.0217f, -2983.094f, -1614.2157f) - Vector3(17.4172f, -2980.8284f, -1618.1404f)), 5000f, 0);
 	return;
@@ -108002,7 +108002,7 @@ void func_956() // Position - 0x7F331
 	fLocal_827 = Vector3(-2f, 0f, 150f);
 	fLocal_830 = 150f;
 	uLocal_1436 = Vector3(-1312.8f, -2168.9f, 67.7f);
-	uLocal_1439 = { func_489(Vector3(65f, -2173.6f, -1318.1f) - uLocal_1436) };
+	uLocal_1439 = Vector3(func_489(Vector3(65f, -2173.6f, -1318.1f) - uLocal_1436));
 	uLocal_4577 = Vector3(-1375.5485f, -2278.7483f, 12.9444f);
 	uLocal_4580 = Vector3(-1531.9657f, -2549.5588f, 12.9444f);
 	uLocal_4583 = Vector3(-1617.374f, -2698.5027f, 14.5794f);

@@ -3200,7 +3200,7 @@ void func_79() // Position - 0x3374
 			{
 				if (PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(uLocal_243, iLocal_132, &uLocal_439[0], 1, 1077936128, 0))
 				{
-					uLocal_439[1] = { uLocal_439[0] + Vector3(0f, 5f, 0f) };
+					uLocal_439[1] = Vector3(uLocal_439[0] + Vector3(0f, 5f, 0f));
 				
 					if (!CAM::IS_SPHERE_VISIBLE(uLocal_439[0], 7f) && !CAM::IS_SPHERE_VISIBLE(uLocal_439[1], 7f))
 					{
@@ -3239,7 +3239,7 @@ void func_79() // Position - 0x3374
 			{
 				if (PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(uLocal_243, iLocal_132, &uLocal_439[0], 1, 1077936128, 0))
 				{
-					uLocal_439[1] = { uLocal_439[0] + Vector3(0f, 5f, 0f) };
+					uLocal_439[1] = Vector3(uLocal_439[0] + Vector3(0f, 5f, 0f));
 				
 					if (!CAM::IS_SPHERE_VISIBLE(uLocal_439[0], 7f) && !CAM::IS_SPHERE_VISIBLE(uLocal_439[1], 7f))
 					{
@@ -3276,7 +3276,7 @@ void func_79() // Position - 0x3374
 		
 			if (PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE(uLocal_243, iLocal_132, &uLocal_439[0], 1, 1077936128, 0))
 			{
-				uLocal_439[1] = { uLocal_439[0] + Vector3(0f, 5f, 0f) };
+				uLocal_439[1] = Vector3(uLocal_439[0] + Vector3(0f, 5f, 0f));
 			
 				if (!CAM::IS_SPHERE_VISIBLE(uLocal_439[0], 7f) && !CAM::IS_SPHERE_VISIBLE(uLocal_439[1], 7f))
 				{
@@ -4994,7 +4994,7 @@ Vector3 func_117(float fParam0, float fParam1, float fParam2) // Position - 0x69
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

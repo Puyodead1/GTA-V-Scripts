@@ -95398,7 +95398,7 @@ BOOL func_514(int iParam0, var uParam1, var uParam2) // Position - 0x745BD
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	
@@ -96157,7 +96157,7 @@ int func_544(Blip* pblParam0, Vector3 vParam1, var uParam2, var uParam3, Vector3
 	int includeZ;
 	int p10;
 
-	vector = { vParam1 + Vector3(1f, 0f, 0f) };
+	vector = Vector3(vParam1 + Vector3(1f, 0f, 0f));
 	pblParam0->f_17[0] = pedParam15;
 	pblParam0->f_17[1] = iParam16;
 	pblParam0->f_17[2] = iParam17;
@@ -115964,12 +115964,12 @@ void func_835() // Position - 0x99214
 						
 							if (bLocal_124 && !PED::IS_PED_INJURED(iLocal_1430[0]))
 							{
-								uLocal_91 = { ENTITY::GET_ENTITY_COORDS(iLocal_1430[0], false) + Vector3(3f, 0f, -1f) };
+								uLocal_91 = Vector3(ENTITY::GET_ENTITY_COORDS(iLocal_1430[0], false) + Vector3(3f, 0f, -1f));
 								TASK::TASK_AIM_GUN_AT_COORD(uLocal_388[0], uLocal_91, -1, true, false);
 							}
 							else if (bLocal_125 && !PED::IS_PED_INJURED(iLocal_1408[0]))
 							{
-								uLocal_91 = { ENTITY::GET_ENTITY_COORDS(iLocal_1408[0], false) + Vector3(-3f, 0f, 1f) };
+								uLocal_91 = Vector3(ENTITY::GET_ENTITY_COORDS(iLocal_1408[0], false) + Vector3(-3f, 0f, 1f));
 								TASK::TASK_AIM_GUN_AT_COORD(uLocal_388[0], uLocal_91, -1, true, false);
 							}
 							else
@@ -119521,9 +119521,9 @@ void func_888(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -119631,10 +119631,10 @@ BOOL func_889(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));
@@ -119696,7 +119696,7 @@ Vector3 func_891(float fParam0, var uParam1, var uParam2) // Position - 0x9FF19
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -119778,7 +119778,7 @@ Object func_895(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iPar
 		}
 	}
 
-	vector = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f) };
+	vector = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f));
 
 	if (bParam3)
 		vector = Vector3(iParam4, iParam5, iParam6);

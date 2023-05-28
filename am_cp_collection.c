@@ -16283,7 +16283,7 @@ void func_365(var uParam0) // Position - 0x115F3
 
 	if (!_IS_NULL_VECTOR(*uParam0))
 	{
-		*uParam0 = { *uParam0 + Vector3(1.7f, 1.7f, 1.7f) };
+		*uParam0 = Vector3(*uParam0 + Vector3(1.7f, 1.7f, 1.7f));
 		GRAPHICS::DRAW_LIGHT_WITH_RANGEEX(*uParam0, r, g, b, range, intensity, shadow);
 	}
 
@@ -17745,8 +17745,8 @@ BOOL func_440(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	float unk3;
 
 	num = fParam9 * 0.70710677f;
-	unk = { uParam6 - Vector3(num, num, num) };
-	unk4 = { uParam6 + Vector3(num, num, num) };
+	unk = Vector3(uParam6 - Vector3(num, num, num));
+	unk4 = Vector3(uParam6 + Vector3(num, num, num));
 	return func_441(uParam0, uParam3, unk, unk4);
 }
 

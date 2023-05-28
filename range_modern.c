@@ -90105,7 +90105,7 @@ BOOL func_450(var uParam0, var uParam1) // Position - 0x71710
 	{
 		unk = Vector3(uParam0->f_29);
 		unk4 = Vector3(uParam1->[uParam0->f_1]);
-		uParam0->f_2 = { unk + ((unk4 - unk) * Vector3(num, num, num)) };
+		uParam0->f_2 = Vector3(unk + ((unk4 - unk) * Vector3(num, num, num)));
 		return false;
 	}
 	else
@@ -90279,7 +90279,7 @@ BOOL func_459(var uParam0, var uParam1, BOOL bParam2) // Position - 0x719EF
 			unk4 = Vector3(-90f, 0f, uParam1->f_160);
 		}
 	
-		uParam0->f_2.f_6 = { unk + ((unk4 - unk) * Vector3(num, num, num)) };
+		uParam0->f_2.f_6 = Vector3(unk + ((unk4 - unk) * Vector3(num, num, num)));
 		return false;
 	}
 	else
@@ -93151,24 +93151,24 @@ void func_564(var uParam0, var uParam1) // Position - 0x761C3
 		uParam0->f_84 = Vector3(uParam0->f_87[6] - uParam0->f_87[4]);
 	}
 
-	unk4 = { uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num5, num5, num5)) };
-	unk7 = { uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num6, num6, num6)) };
-	unk10 = { uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num7, num7, num7)) };
-	unk13 = { uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num8, num8, num8)) };
-	unk16 = { uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num9, num9, num9)) };
+	unk4 = Vector3(uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num5, num5, num5)));
+	unk7 = Vector3(uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num6, num6, num6)));
+	unk10 = Vector3(uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num7, num7, num7)));
+	unk13 = Vector3(uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num8, num8, num8)));
+	unk16 = Vector3(uParam0->f_87[num10] + (uParam0->f_84 * Vector3(num9, num9, num9)));
 
 	for (i = 0; i <= 19; i = i + 1)
 	{
 		num11 = i % 5;
 	
 		if (i < 5)
-			unk = { uParam0->f_81 * Vector3(num, num, num) };
+			unk = Vector3(uParam0->f_81 * Vector3(num, num, num));
 		else if (i < 10)
-			unk = { uParam0->f_81 * Vector3(num2, num2, num2) };
+			unk = Vector3(uParam0->f_81 * Vector3(num2, num2, num2));
 		else if (i < 15)
-			unk = { uParam0->f_81 * Vector3(num3, num3, num3) };
+			unk = Vector3(uParam0->f_81 * Vector3(num3, num3, num3));
 		else
-			unk = { uParam0->f_81 * Vector3(num4, num4, num4) };
+			unk = Vector3(uParam0->f_81 * Vector3(num4, num4, num4));
 	
 		if (num11 == 0)
 			uParam0->[i] = Vector3(unk4 + unk);
@@ -108421,7 +108421,7 @@ BOOL func_890(int iParam0, var uParam1, var uParam2) // Position - 0x8E50E
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

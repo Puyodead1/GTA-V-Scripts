@@ -4635,7 +4635,7 @@ Vector3 func_90(float fParam0, var uParam1, var uParam2) // Position - 0x48AD
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -10779,7 +10779,7 @@ BOOL func_183(int iParam0, var uParam1, var uParam2) // Position - 0xD2D9
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	
@@ -11633,7 +11633,7 @@ void func_190() // Position - 0xDE24
 								{
 									if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(veLocal_67, -85.30544f, 6422.3833f, 30.48431f, -102.25669f, 6405.2075f, 34.740208f, 7.5f, false, true, 0))
 									{
-										x1 = { Vector3(30.48431f, 6422.3833f, -85.30544f) - Vector3(34.740208f, 6405.2075f, -102.25669f) };
+										x1 = Vector3(Vector3(30.48431f, 6422.3833f, -85.30544f) - Vector3(34.740208f, 6405.2075f, -102.25669f));
 										x1.f_2 = 0f;
 										entityForwardVector = Vector3(ENTITY::GET_ENTITY_FORWARD_VECTOR(veLocal_67));
 									
@@ -19703,7 +19703,7 @@ void func_343() // Position - 0x1C57C
 				{
 					if (!VEHICLE::IS_PLAYBACK_USING_AI_GOING_ON_FOR_VEHICLE(veLocal_358))
 					{
-						vector = { ENTITY::GET_ENTITY_COORDS(veLocal_358, true) - Vector3(2f, 0f, 0f) };
+						vector = Vector3(ENTITY::GET_ENTITY_COORDS(veLocal_358, true) - Vector3(2f, 0f, 0f));
 						offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_358, 0f, func_250((ENTITY::GET_ENTITY_SPEED(veLocal_358) / 10f) + 12f, 12f, 25f), 2f));
 					
 						if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), vector, offsetFromEntityInWorldCoords, 3.5f, false, true, 0))
@@ -20121,7 +20121,7 @@ int func_355() // Position - 0x1E128
 
 void func_356() // Position - 0x1E1B6
 {
-	uLocal_167 = { uLocal_167 + ((uLocal_164 - uLocal_167) * Vector3(fLocal_250, fLocal_250, fLocal_250)) };
+	uLocal_167 = Vector3(uLocal_167 + ((uLocal_164 - uLocal_167) * Vector3(fLocal_250, fLocal_250, fLocal_250)));
 
 	if (!ENTITY::DOES_ENTITY_EXIST(obLocal_64))
 	{
@@ -21250,33 +21250,33 @@ void func_391(int iParam0, BOOL bParam1) // Position - 0x1FB85
 		switch (iParam0)
 		{
 			case 0:
-				vector = { Vector3(146.0607f, 4927.5376f, -491.5252f) - Vector3(20f, 50f, 50f) };
-				vector2 = { Vector3(146.0607f, 4927.5376f, -491.5252f) + Vector3(20f, 50f, 50f) };
+				vector = Vector3(Vector3(146.0607f, 4927.5376f, -491.5252f) - Vector3(20f, 50f, 50f));
+				vector2 = Vector3(Vector3(146.0607f, 4927.5376f, -491.5252f) + Vector3(20f, 50f, 50f));
 				break;
 		
 			case 1:
-				vector = { uLocal_152 - Vector3(10f, 20f, 20f) };
-				vector2 = { uLocal_152 + Vector3(20f, 20f, 20f) };
+				vector = Vector3(uLocal_152 - Vector3(10f, 20f, 20f));
+				vector2 = Vector3(uLocal_152 + Vector3(20f, 20f, 20f));
 				break;
 		
 			case 2:
-				vector = { Vector3(28.283587f, 6508.6714f, -120.00731f) - Vector3(1.75f, 32.5f, 19.75f) };
-				vector2 = { Vector3(28.283587f, 6508.6714f, -120.00731f) + Vector3(1.75f, 32.5f, 19.75f) };
+				vector = Vector3(Vector3(28.283587f, 6508.6714f, -120.00731f) - Vector3(1.75f, 32.5f, 19.75f));
+				vector2 = Vector3(Vector3(28.283587f, 6508.6714f, -120.00731f) + Vector3(1.75f, 32.5f, 19.75f));
 				break;
 		
 			case 3:
-				vector = { fLocal_123 - Vector3(100f, 50f, 50f) };
-				vector2 = { fLocal_123 + Vector3(100f, 50f, 50f) };
+				vector = Vector3(fLocal_123 - Vector3(100f, 50f, 50f));
+				vector2 = Vector3(fLocal_123 + Vector3(100f, 50f, 50f));
 				break;
 		
 			case 4:
-				vector = { uLocal_119 - Vector3(15f, 35f, 35f) };
-				vector2 = { uLocal_119 + Vector3(15f, 35f, 35f) };
+				vector = Vector3(uLocal_119 - Vector3(15f, 35f, 35f));
+				vector2 = Vector3(uLocal_119 + Vector3(15f, 35f, 35f));
 				break;
 		
 			case 5:
-				vector = { uLocal_108 - Vector3(10f, 10f, 10f) };
-				vector = { uLocal_108 + Vector3(10f, 10f, 10f) };
+				vector = Vector3(uLocal_108 - Vector3(10f, 10f, 10f));
+				vector = Vector3(uLocal_108 + Vector3(10f, 10f, 10f));
 				break;
 		}
 	

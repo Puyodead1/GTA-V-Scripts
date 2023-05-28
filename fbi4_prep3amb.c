@@ -9204,8 +9204,8 @@ BOOL func_184(Vehicle veParam0) // Position - 0xB801
 		if (func_87(veParam0))
 		{
 			MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
-			minimum = { minimum + Vector3(-1f, -1f, -2f) };
-			maximum = { maximum + Vector3(1f, 1f, 2f) };
+			minimum = Vector3(minimum + Vector3(-1f, -1f, -2f));
+			maximum = Vector3(maximum + Vector3(1f, 1f, 2f));
 		
 			if (!MISC::IS_AREA_OCCUPIED(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum), ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, maximum), false, true, false, false, false, veParam0, false))
 				num = num + 1;
@@ -9232,7 +9232,7 @@ BOOL func_185(Vector3 vParam0, var uParam1, var uParam2) // Position - 0xB8B6
 	var groundZ2;
 	Vector3 vector;
 
-	vector = { vParam0 + Vector3(3.2f, 0f, 0f) };
+	vector = Vector3(vParam0 + Vector3(3.2f, 0f, 0f));
 
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(vector, &groundZ, false, false) && MISC::GET_GROUND_Z_FOR_3D_COORD(vParam0, &groundZ2, false, false))
 		if (MISC::ABSF(groundZ - groundZ2) < 0.9f)

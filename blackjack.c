@@ -18342,7 +18342,7 @@ BOOL func_281(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_279(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_282(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -19827,7 +19827,7 @@ Vector3 func_354(float fParam0, var uParam1, var uParam2) // Position - 0x1B4DB
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

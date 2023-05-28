@@ -92371,7 +92371,7 @@ Object func_450(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iPar
 		}
 	}
 
-	vector = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f) };
+	vector = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f));
 
 	if (bParam3)
 		vector = Vector3(iParam4, iParam5, iParam6);
@@ -98307,7 +98307,7 @@ void func_559(var uParam0, var uParam1, var uParam2, Ped pedParam3, var uParam4,
 		{
 			if (func_560(pedParam3, false))
 			{
-				vector = { uParam0 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(iParam11, iParam12), MISC::GET_RANDOM_FLOAT_IN_RANGE(iParam9, iParam10)) };
+				vector = Vector3(uParam0 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(iParam11, iParam12), MISC::GET_RANDOM_FLOAT_IN_RANGE(iParam9, iParam10)));
 				offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam3, fParam5));
 				MISC::GET_GROUND_Z_FOR_3D_COORD(vector, &(vector.f_2), false, false);
 				MISC::SHOOT_SINGLE_BULLET_BETWEEN_COORDS(offsetFromEntityInWorldCoords, vector, 1, false, joaat("WEAPON_ASSAULTRIFLE"), pedParam3, true, true, -1082130432);
@@ -105551,7 +105551,7 @@ Vector3 func_656(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4
 	num3 = (-2f * func_657(num, 3)) + (3f * func_657(num, 2));
 	num4 = (func_657(num, 3) - (2f * func_657(num, 2))) + num;
 	num5 = func_657(num, 3) - func_657(num, 2);
-	unk = { (Vector3(num2, num2, num2) * uParam0) + (Vector3(num3, num3, num3) * uParam6) + (Vector3(num4, num4, num4) * uParam3) + (Vector3(num5, num5, num5) * uParam9) };
+	unk = Vector3((Vector3(num2, num2, num2) * uParam0) + (Vector3(num3, num3, num3) * uParam6) + (Vector3(num4, num4, num4) * uParam3) + (Vector3(num5, num5, num5) * uParam9));
 	return unk;
 }
 
@@ -111993,7 +111993,7 @@ BOOL func_736(int iParam0, var uParam1, var uParam2) // Position - 0x96CA6
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

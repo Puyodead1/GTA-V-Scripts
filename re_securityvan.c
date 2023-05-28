@@ -1979,12 +1979,12 @@ void func_34() // Position - 0x2001
 								ENTITY::SET_ENTITY_COLLISION(obLocal_56, true, false);
 								PHYSICS::ACTIVATE_PHYSICS(obLocal_56);
 								OBJECT::SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(obLocal_56, true);
-								uLocal_477 = { ENTITY::GET_ENTITY_COORDS(obLocal_56, true) - (ENTITY::GET_ENTITY_COORDS(veLocal_54, true) * Vector3(1.5f, 1.5f, 1.5f)) };
+								uLocal_477 = Vector3(ENTITY::GET_ENTITY_COORDS(obLocal_56, true) - (ENTITY::GET_ENTITY_COORDS(veLocal_54, true) * Vector3(1.5f, 1.5f, 1.5f)));
 							
 								if (SYSTEM::VMAG(uLocal_477) > 10f)
 								{
 									uLocal_477 = Vector3(func_35(uLocal_477));
-									uLocal_477 = { uLocal_477 * Vector3(10f, 10f, 10f) };
+									uLocal_477 = Vector3(uLocal_477 * Vector3(10f, 10f, 10f));
 								}
 							
 								if (iLocal_133 < 100)
@@ -2047,7 +2047,7 @@ Vector3 func_35(float fParam0, var uParam1, var uParam2) // Position - 0x22B2
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

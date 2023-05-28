@@ -83123,7 +83123,7 @@ BOOL func_682(var uParam0, var uParam1, var uParam2, BOOL bParam3, BOOL bParam4)
 	
 		if (MISC::ABSF(value) > 0.5f)
 		{
-			unk21 = { entityVelocity / Vector3(value, value, value) };
+			unk21 = Vector3(entityVelocity / Vector3(value, value, value));
 			vector3 = Vector3(offsetFromEntityInWorldCoords + unk21);
 		}
 	
@@ -83454,7 +83454,7 @@ BOOL func_684(var uParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bParam
 		else if (uParam0->f_422 == 1)
 		{
 			*uParam5 = Vector3(0.2657f, 1.3743f, 0.364f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6768f, 0.9824f + uParam1, 0.1864f + fParam2);
 			*uParam7 = Vector3(-1.3043f, -1.0657f + uParam1, 1.1243f + fParam2);
 			*uParam8 = 34.3832f;
@@ -83472,7 +83472,7 @@ BOOL func_684(var uParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bParam
 		else if (uParam0->f_422 == 3)
 		{
 			*uParam5 = Vector3(0.4529f, 1.0868f, 0.365f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6216f, 0.9493f + uParam1, 0.4129f + fParam2);
 			*uParam7 = Vector3(-1.4273f, -1.1768f + uParam1, 0.9439f + fParam2);
 			*uParam8 = 34.3832f;
@@ -83482,7 +83482,7 @@ BOOL func_684(var uParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bParam
 		else if (uParam0->f_422 == 4)
 		{
 			*uParam5 = Vector3(1.3811f, 1.7491f, 0.296f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(1.7091f, 1.1087f + uParam1, 0.3014f + fParam2);
 			*uParam7 = Vector3(-1.0311f, -0.1093f + uParam1, 0.3918f + fParam2);
 			*uParam8 = 34.3832f;
@@ -96324,7 +96324,7 @@ BOOL func_953(Vector3 vParam0, var uParam1, var uParam2, float fParam3, Vector3 
 	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam0, fParam3, vParam4));
 	unk3 = Vector3(vParam0 - offsetFromCoordAndHeadingInWorldCoords);
 	unk6 = Vector3(func_954(unk3));
-	unk3 = { unk3 * Vector3(0.75f, 0.75f, 0.75f) };
+	unk3 = Vector3(unk3 * Vector3(0.75f, 0.75f, 0.75f));
 	vParam0 = Vector3(offsetFromCoordAndHeadingInWorldCoords + unk3);
 	GRAPHICS::DRAW_DEBUG_LINE(offsetFromCoordAndHeadingInWorldCoords, vParam0, 255, 0, 0, 255);
 	num = SYSTEM::VDIST(offsetFromCoordAndHeadingInWorldCoords, vParam0);
@@ -96356,7 +96356,7 @@ Vector3 func_954(float fParam0, float fParam1, float fParam2) // Position - 0x70
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -98701,7 +98701,7 @@ void func_1073(var uParam0, var uParam1) // Position - 0x73D3B
 {
 	Vector3 vector;
 
-	vector = { func_28(uParam1, func_31(uParam0)) - Vector3(0.017f, 0f, 0f) };
+	vector = Vector3(func_28(uParam1, func_31(uParam0)) - Vector3(0.017f, 0f, 0f));
 
 	if (!ENTITY::DOES_ENTITY_EXIST(uParam0->f_463))
 	{
@@ -98739,7 +98739,7 @@ void func_1074(Ped pedParam0, Object obParam1) // Position - 0x73DCD
 		entityVelocity = Vector3(0f, 0f, 1f);
 
 	if (SYSTEM::VMAG2(entityVelocity) > num * num)
-		entityVelocity = { func_954(entityVelocity) * Vector3(num, num, num) };
+		entityVelocity = Vector3(func_954(entityVelocity) * Vector3(num, num, num));
 
 	ENTITY::FREEZE_ENTITY_POSITION(pedParam0, false);
 	TASK::TASK_PLAY_ANIM(pedParam0, "reaction@shove", "shoved_front", 1090519040, -1056964608, -1, 0, 0, false, false, false);
@@ -101838,7 +101838,7 @@ int func_1191(int* piParam0) // Position - 0x78283
 			gameplayCamFov = CAM::GET_CAM_FOV(renderingCam);
 		}
 	
-		vector2 = { gameplayCamRot + Vector3(0f, 0f, 45f) };
+		vector2 = Vector3(gameplayCamRot + Vector3(0f, 0f, 45f));
 		vector = Vector3(gameplayCamCoord);
 		vector.f_2 = 91.6584f;
 		CAM::SET_CAM_COORD(piParam0->f_542, gameplayCamCoord);
@@ -103623,7 +103623,7 @@ BOOL func_1229(int* piParam0, var uParam1, var uParam2, const char* sParam3) // 
 		if (func_907())
 		{
 			if (!flag)
-				vector = { vector - Vector3(1f, 0f, 0f) };
+				vector = Vector3(vector - Vector3(1f, 0f, 0f));
 		
 			CAM::PLAY_CAM_ANIM(piParam0->f_540, &animName, &animDictionary, vector, 0f, 0f, zRot, false, 2);
 		}
@@ -104080,7 +104080,7 @@ BOOL func_1245(var uParam0, var uParam1, Vector3 vParam2, var uParam3, var uPara
 
 	if (func_1246(uParam1, uParam0, vParam2) || num2 == 9 || num2 == 3 || num2 == 1 || num2 == -1)
 	{
-		vParam2 = { vParam2 + (Vector3(0.5f, 0.5f, 0.5f) * func_954(vector - vParam2)) };
+		vParam2 = Vector3(vParam2 + (Vector3(0.5f, 0.5f, 0.5f) * func_954(vector - vParam2)));
 		return func_1245(uParam0, uParam1, vParam2, iParam5 + 1);
 	}
 
@@ -104114,19 +104114,19 @@ BOOL func_1246(var uParam0, var uParam1, Vector3 vParam2, var uParam3, var uPara
 
 	heading = func_957(func_30(uParam0, func_31(uParam1)), vParam2);
 	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam2, heading, 1f, 0f, 1f));
-	unk3 = { func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f) };
+	unk3 = Vector3(func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f));
 
 	if (func_1247(vParam2 + unk3, offsetFromCoordAndHeadingInWorldCoords, true, 0))
 		return true;
 
 	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam2, heading + 80f, 1f, 0f, 1f));
-	unk3 = { func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f) };
+	unk3 = Vector3(func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f));
 
 	if (func_1247(vParam2 + unk3, offsetFromCoordAndHeadingInWorldCoords, true, 0))
 		return true;
 
 	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(vParam2, heading - 80f, 1f, 0f, 1f));
-	unk3 = { func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f) };
+	unk3 = Vector3(func_954(offsetFromCoordAndHeadingInWorldCoords - vParam2) * Vector3(0.5f, 0.5f, 0.5f));
 
 	if (func_1247(vParam2 + unk3, offsetFromCoordAndHeadingInWorldCoords, true, 0))
 		return true;
@@ -104649,7 +104649,7 @@ BOOL func_1268(var uParam0, int* piParam1, var uParam2, var uParam3) // Position
 
 	if (flag2 && !flag)
 	{
-		entityCoords2 = { entityCoords2 - Vector3(1f, 0f, 0f) };
+		entityCoords2 = Vector3(entityCoords2 - Vector3(1f, 0f, 0f));
 		entityHeading = entityHeading - 90f;
 	}
 	else if (flag)
@@ -104657,7 +104657,7 @@ BOOL func_1268(var uParam0, int* piParam1, var uParam2, var uParam3) // Position
 	}
 	else
 	{
-		entityCoords2 = { entityCoords2 - Vector3(1f, 0f, 0f) };
+		entityCoords2 = Vector3(entityCoords2 - Vector3(1f, 0f, 0f));
 	}
 
 	num4 = 0;
@@ -105188,7 +105188,7 @@ void func_1291(var uParam0, var uParam1, int* piParam2) // Position - 0x7E48E
 	Vector3 unk2;
 
 	vector = Vector3(func_1292(&uParam1->f_15[func_1653(uParam1)], &heading));
-	offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_30(uParam0, func_31(uParam1)) + Vector3(0.13f, 0f, 0f), heading, vector) };
+	offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_30(uParam0, func_31(uParam1)) + Vector3(0.13f, 0f, 0f), heading, vector));
 
 	if (!CAM::DOES_CAM_EXIST(piParam2->f_535))
 		piParam2->f_535 = CAM::CREATE_CAMERA_WITH_PARAMS(joaat("DEFAULT_SCRIPTED_CAMERA"), offsetFromCoordAndHeadingInWorldCoords, 0f, 0f, 0f, 40f, true, 2);
@@ -105380,7 +105380,7 @@ void func_1294(Object obParam0, float fParam1, var uParam2, var uParam3, float f
 {
 	Vector3 vector;
 
-	vector = { func_954(Vector3(0f, fParam4.f_1, fParam4) - Vector3(0f, fParam1.f_1, fParam1)) * Vector3(9f, 9f, 9f) };
+	vector = Vector3(func_954(Vector3(0f, fParam4.f_1, fParam4) - Vector3(0f, fParam1.f_1, fParam1)) * Vector3(9f, 9f, 9f));
 	ENTITY::APPLY_FORCE_TO_ENTITY(obParam0, 0, vector, 0f, 0f, 0f, 0, false, false, true, false, true);
 	return;
 }
@@ -105652,7 +105652,7 @@ void func_1305(var uParam0, var uParam1, var uParam2, int* piParam3, var uParam4
 				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(func_955(uParam4), true));
 				offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(entityCoords, entityHeading, vector));
 				CAM::SET_CAM_COORD(piParam3->f_535, offsetFromCoordAndHeadingInWorldCoords);
-				unk12 = { func_954(offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(2f, 2f, 2f) };
+				unk12 = Vector3(func_954(offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(2f, 2f, 2f));
 			
 				if (func_1247(entityCoords + unk12, offsetFromCoordAndHeadingInWorldCoords, false, func_1906(uParam2, func_31(uParam1))) || func_1321(offsetFromCoordAndHeadingInWorldCoords))
 				{
@@ -105678,7 +105678,7 @@ void func_1305(var uParam0, var uParam1, var uParam2, int* piParam3, var uParam4
 	{
 		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(func_955(uParam4), true));
 		camCoord = Vector3(CAM::GET_CAM_COORD(piParam3->f_535));
-		unk17 = { func_954(camCoord - entityCoords) * Vector3(2f, 2f, 2f) };
+		unk17 = Vector3(func_954(camCoord - entityCoords) * Vector3(2f, 2f, 2f));
 	
 		if (func_172(uParam0, 536870912) && func_918(uParam1, 2) || func_1247(entityCoords + unk17, camCoord, false, func_1906(uParam2, func_31(uParam1))) || func_1321(camCoord))
 		{
@@ -105698,7 +105698,7 @@ void func_1305(var uParam0, var uParam1, var uParam2, int* piParam3, var uParam4
 			vector = Vector3(4f, 0.5f, 1f);
 			offsetFromCoordAndHeadingInWorldCoords2 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(ENTITY::GET_ENTITY_COORDS(func_955(uParam4), true), heading, vector));
 			unk9 = Vector3(offsetFromCoordAndHeadingInWorldCoords2 - CAM::GET_CAM_COORD(piParam3->f_535));
-			unk9 = { unk9 * Vector3(1f, 1f, 1f) };
+			unk9 = Vector3(unk9 * Vector3(1f, 1f, 1f));
 			offsetFromCoordAndHeadingInWorldCoords = Vector3(CAM::GET_CAM_COORD(piParam3->f_535) + unk9);
 			CAM::SET_CAM_COORD(piParam3->f_535, offsetFromCoordAndHeadingInWorldCoords);
 		}
@@ -105712,7 +105712,7 @@ void func_1305(var uParam0, var uParam1, var uParam2, int* piParam3, var uParam4
 	
 		if (SYSTEM::VDIST2(offsetFromCoordAndHeadingInWorldCoords, entityCoords) < 10f * 10f && !func_918(uParam1, 2))
 		{
-			piParam3->f_558 = { piParam3->f_558 + (func_954(piParam3->f_558, piParam3->f_558.f_1, 0f) * Vector3(0.25f, 0.25f, 0.25f)) };
+			piParam3->f_558 = Vector3(piParam3->f_558 + (func_954(piParam3->f_558, piParam3->f_558.f_1, 0f) * Vector3(0.25f, 0.25f, 0.25f)));
 			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(entityCoords, heading2, piParam3->f_558));
 		}
 	
@@ -105727,7 +105727,7 @@ void func_1305(var uParam0, var uParam1, var uParam2, int* piParam3, var uParam4
 			offsetFromCoordAndHeadingInWorldCoords.f_2 = offsetFromCoordAndHeadingInWorldCoords.f_2 + 3f;
 		}
 	
-		unk20 = { func_954(offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(2f, 2f, 2f) };
+		unk20 = Vector3(func_954(offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(2f, 2f, 2f));
 	
 		if (func_1247(entityCoords + unk20, offsetFromCoordAndHeadingInWorldCoords, false, 0) || func_1321(offsetFromCoordAndHeadingInWorldCoords))
 		{
@@ -105768,7 +105768,7 @@ void func_1307(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position 
 
 	camRot = Vector3(CAM::GET_CAM_ROT(caParam0, 2));
 	func_1308(CAM::GET_CAM_COORD(caParam0), uParam1, &vector);
-	unk3 = { Vector3(0.05f, 0.05f, 0.05f) * (vector - camRot) };
+	unk3 = Vector3(Vector3(0.05f, 0.05f, 0.05f) * (vector - camRot));
 	vector2 = Vector3(camRot + unk3);
 	vector2 = vector;
 	vector2.f_1 = vector.f_1;
@@ -106871,7 +106871,7 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 	value = func_960(uParam2);
 	unk5 = Vector3(func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 	unk8 = Vector3(func_1363(unk5, 0));
-	vector = { (unk5 * Vector3(-num3, -num3, -num3) * Vector3(0.05f, 0.05f, 0.05f)) + (unk8 * Vector3(num3.f_1, num3.f_1, num3.f_1) * Vector3(0.2f, 0.2f, 0.2f)) };
+	vector = Vector3((unk5 * Vector3(-num3, -num3, -num3) * Vector3(0.05f, 0.05f, 0.05f)) + (unk8 * Vector3(num3.f_1, num3.f_1, num3.f_1) * Vector3(0.2f, 0.2f, 0.2f)));
 	GRAPHICS::DRAW_DEBUG_LINE(ENTITY::GET_ENTITY_COORDS(object, true), ENTITY::GET_ENTITY_COORDS(object, true) + func_954(vector), 0, 0, 0, 255);
 
 	if (func_1300(uParam0, uParam1, uParam2, piParam3))
@@ -106949,8 +106949,8 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 	
 		if (!bLocal_251)
 		{
-			vector = { (unk5 * Vector3(-num3, -num3, -num3) * Vector3(0.2f, 0.2f, 0.2f)) + (unk8 * Vector3(num3.f_1, num3.f_1, num3.f_1) * Vector3(0.2f, 0.2f, 0.2f)) };
-			vector = { vector * Vector3(num6, num6, num6) };
+			vector = Vector3((unk5 * Vector3(-num3, -num3, -num3) * Vector3(0.2f, 0.2f, 0.2f)) + (unk8 * Vector3(num3.f_1, num3.f_1, num3.f_1) * Vector3(0.2f, 0.2f, 0.2f)));
+			vector = Vector3(vector * Vector3(num6, num6, num6));
 			ENTITY::APPLY_FORCE_TO_ENTITY(object, 0, vector, 0f, 0f, 0f, 0, false, false, true, false, true);
 		}
 	
@@ -106962,9 +106962,9 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 			{
 				MISC::GET_GROUND_Z_AND_NORMAL_FOR_3D_COORD(ENTITY::GET_ENTITY_COORDS(object, true) + Vector3(1f, 0f, 0f), &groundZ, &normal);
 				unk17 = Vector3(F2V(func_1361(uLocal_717, normal)) * normal);
-				vector2 = { (Vector3(-(1f + num5), -(1f + num5), -(1f + num5)) * unk17) + uLocal_717 };
+				vector2 = Vector3((Vector3(-(1f + num5), -(1f + num5), -(1f + num5)) * unk17) + uLocal_717);
 				unk20 = Vector3(uLocal_717 - unk17);
-				vector2 = { vector2 - (unk20 * Vector3(num7, num7, num7)) };
+				vector2 = Vector3(vector2 - (unk20 * Vector3(num7, num7, num7)));
 				ENTITY::SET_ENTITY_VELOCITY(object, vector2);
 				GRAPHICS::DRAW_DEBUG_LINE(ENTITY::GET_ENTITY_COORDS(object, true), ENTITY::GET_ENTITY_COORDS(object, true) + vector2, 0, 0, 255, 255);
 			}
@@ -106978,7 +106978,7 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 		
 			if (num4 != 1f)
 			{
-				entityVelocity2 = { entityVelocity2 * Vector3(num4, num4, num4) };
+				entityVelocity2 = Vector3(entityVelocity2 * Vector3(num4, num4, num4));
 				ENTITY::SET_ENTITY_VELOCITY(object, entityVelocity2);
 			}
 		}
@@ -106990,7 +106990,7 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 	
 		if (!bLocal_250 && !func_1378(uParam2))
 		{
-			vector3 = { func_954(uParam0->f_16, uParam0->f_16.f_1, 0f) * Vector3(uParam0->f_20, uParam0->f_20, uParam0->f_20) * Vector3(0.5f, 0.5f, 0.5f) };
+			vector3 = Vector3(func_954(uParam0->f_16, uParam0->f_16.f_1, 0f) * Vector3(uParam0->f_20, uParam0->f_20, uParam0->f_20) * Vector3(0.5f, 0.5f, 0.5f));
 			ENTITY::APPLY_FORCE_TO_ENTITY(object, 0, vector3, 0f, 0f, 0f, 0, false, false, true, false, true);
 		}
 	
@@ -107001,7 +107001,7 @@ void func_1354(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 		{
 			entityVelocity3 = Vector3(ENTITY::GET_ENTITY_VELOCITY(object));
 			entityVelocity3.f_2 = 0f;
-			entityVelocity3 = { entityVelocity3 * Vector3(-1f * (1f - -5f), -1f * (1f - -5f), -1f * (1f - -5f)) };
+			entityVelocity3 = Vector3(entityVelocity3 * Vector3(-1f * (1f - -5f), -1f * (1f - -5f), -1f * (1f - -5f)));
 			ENTITY::APPLY_FORCE_TO_ENTITY(object, 0, entityVelocity3, 0f, 0f, 0f, 0, false, false, true, false, true);
 			func_1359(uParam2);
 			func_979(uParam0, 536870912);
@@ -107177,7 +107177,7 @@ void func_1362(var uParam0) // Position - 0x814D8
 	if (uParam0->f_5 == 0f && uParam0->f_6 == 0f)
 		return;
 
-	value = { func_954(uParam0->f_5, uParam0->f_6, 0f) * Vector3(25f, 25f, 25f) * F2V(MISC::GET_FRAME_TIME()) };
+	value = Vector3(func_954(uParam0->f_5, uParam0->f_6, 0f) * Vector3(25f, 25f, 25f) * F2V(MISC::GET_FRAME_TIME()));
 	unk3 = Vector3(-value);
 
 	if (MISC::ABSF(uParam0->f_5) < MISC::ABSF(value))
@@ -107373,7 +107373,7 @@ BOOL func_1368(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 			unk3 = Vector3(func_1355(uParam2));
 			num5 = Vector3(func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 			num = num * func_1369(uParam2, unk3, &num5, func_1105(uParam1, uParam2, false));
-			vector = { Vector3(num, num, num) * num5 };
+			vector = Vector3(Vector3(num, num, num) * num5);
 		}
 	}
 	else
@@ -107384,8 +107384,8 @@ BOOL func_1368(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 		unk3 = Vector3(func_1403(func_1638(uParam2) == 4, 0f, 0f, 1f, -func_1355(uParam2)));
 		num5 = Vector3(func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 		unk8 = Vector3(-func_954(num5 - (F2V(func_1361(num5, unk3)) * unk3)));
-		num6 = { func_954((-num5 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))) };
-		num10 = { func_954((unk8 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))) };
+		num6 = Vector3(func_954((-num5 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))));
+		num10 = Vector3(func_954((unk8 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))));
 		value2 = func_1361(num5, func_954(num10, num10.f_1, 0f));
 		num11 = (num5 * num10.f_1) - (num5.f_1 * num10) < 0f ? -1f : 1f;
 	
@@ -107404,7 +107404,7 @@ BOOL func_1368(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 				num = num * 0.9f;
 		}
 	
-		vector = { Vector3(-1f * num, -1f * num, -1f * num) * num6 };
+		vector = Vector3(Vector3(-1f * num, -1f * num, -1f * num) * num6);
 	}
 
 	if (bLocal_0)
@@ -108574,7 +108574,7 @@ void func_1405(int* piParam0, var uParam1) // Position - 0x8360C
 
 	num2 = (distanceBetweenCoords - 0.1f) / num;
 	unk3 = Vector3(0.01f, 0.025f, 0.01f);
-	num3 = { unk3 + ((piParam0->f_124.f_11 - unk3) * Vector3(num2, num2, num2)) };
+	num3 = Vector3(unk3 + ((piParam0->f_124.f_11 - unk3) * Vector3(num2, num2, num2)));
 	GRAPHICS::GOLF_TRAIL_SET_RADIUS(num3, num3.f_1, num3.f_2);
 	piParam0->f_124.f_6 = Vector3(visualControlPoint);
 	func_1555(uParam1, piParam0->f_124.f_6);
@@ -109184,7 +109184,7 @@ void func_1423(var uParam0, float fParam1, var uParam2, var uParam3, var uParam4
 	uParam2 = Vector3(func_954(uParam2));
 	num = SYSTEM::COS(fParam1);
 	num2 = SYSTEM::SIN(fParam1);
-	*uParam0 = { (func_1426(*uParam0, uParam2) * Vector3(num, num, num)) + (func_1425(uParam2, *uParam0) * Vector3(num2, num2, num2)) + func_1424(*uParam0, uParam2) };
+	*uParam0 = Vector3((func_1426(*uParam0, uParam2) * Vector3(num, num, num)) + (func_1425(uParam2, *uParam0) * Vector3(num2, num2, num2)) + func_1424(*uParam0, uParam2));
 	return;
 }
 
@@ -109520,7 +109520,7 @@ void func_1430(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 			{
 				ENTITY::SET_ENTITY_COORDS(func_982(uParam1), vector2 + Vector3(0.05f, 0f, 0f), false, false, false, true);
 				ENTITY::APPLY_FORCE_TO_ENTITY(func_982(uParam1), 1, 0.001f, 0.001f, 0f, 0f, 0f, 0f, 0, false, false, true, false, true);
-				piParam3->f_562 = { vector2 + Vector3(0.05f, 0f, 0f) };
+				piParam3->f_562 = Vector3(vector2 + Vector3(0.05f, 0f, 0f));
 			}
 			else if (func_990(uParam1))
 			{
@@ -111126,7 +111126,7 @@ void func_1478(var uParam0, int* piParam1, float fParam2, Vector3 vParam3, var u
 	num2 = Vector3(6f, 0f, 3.5f);
 	unk12 = Vector3(0f, 1.5f, 0f);
 	num3 = 1f + (MISC::ABSF(MISC::ABSF(piParam1->f_568) - 1f) * 25f);
-	unk12 = { Vector3(0f, 1.5f, 0f) * Vector3(num3, num3, num3) };
+	unk12 = Vector3(Vector3(0f, 1.5f, 0f) * Vector3(num3, num3, num3));
 
 	if (!func_1233(uParam0))
 	{
@@ -111149,13 +111149,13 @@ void func_1478(var uParam0, int* piParam1, float fParam2, Vector3 vParam3, var u
 			
 				if (num < 3f)
 				{
-					offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam2, (num2 * Vector3(num, num, num)) + unk12) };
-					unk3 = { Vector3(0.75f, 0f, 0f) * Vector3(num, num, num) };
+					offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam2, (num2 * Vector3(num, num, num)) + unk12));
+					unk3 = Vector3(Vector3(0.75f, 0f, 0f) * Vector3(num, num, num));
 				}
 				else
 				{
-					offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam2, (num2 * Vector3(3f, 3f, 3f)) + unk12) };
-					unk3 = { Vector3(0.75f, 0f, 0f) * Vector3(3f, 3f, 3f) };
+					offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam2, (num2 * Vector3(3f, 3f, 3f)) + unk12));
+					unk3 = Vector3(Vector3(0.75f, 0f, 0f) * Vector3(3f, 3f, 3f));
 				}
 			}
 		}
@@ -111190,7 +111190,7 @@ void func_1478(var uParam0, int* piParam1, float fParam2, Vector3 vParam3, var u
 		}
 		else
 		{
-			vector = { Vector3(0.3f, 0.3f, 0.3f) * (offsetFromCoordAndHeadingInWorldCoords - CAM::GET_CAM_COORD(piParam1->f_537)) };
+			vector = Vector3(Vector3(0.3f, 0.3f, 0.3f) * (offsetFromCoordAndHeadingInWorldCoords - CAM::GET_CAM_COORD(piParam1->f_537)));
 		
 			if (SYSTEM::VMAG2(vector) < 1000000f)
 			{
@@ -111204,7 +111204,7 @@ void func_1478(var uParam0, int* piParam1, float fParam2, Vector3 vParam3, var u
 				vector = Vector3(MISC::ATAN(num4 / num5), 0f, func_957(offsetFromCoordAndHeadingInWorldCoords, visualControlPoint + unk3));
 				vector = Vector3(vector - CAM::GET_CAM_ROT(piParam1->f_537, 2));
 				vector.f_2 = func_1479(vector.f_2, -180f, 180f);
-				vector = { vector * Vector3(0.3f, 0.3f, 0.3f) };
+				vector = Vector3(vector * Vector3(0.3f, 0.3f, 0.3f));
 				CAM::SET_CAM_ROT(piParam1->f_537, camRot + vector, 2);
 			}
 		}
@@ -111253,7 +111253,7 @@ void func_1480(var uParam0, int* piParam1, var uParam2, float fParam3) // Positi
 
 	unk11 = Vector3(0f, 1.5f, 0f);
 	num6 = 1f + (MISC::ABSF(MISC::ABSF(piParam1->f_568) - 1f) * 25f);
-	unk11 = { Vector3(0f, 1.5f, 0f) * Vector3(num6, num6, num6) };
+	unk11 = Vector3(Vector3(0f, 1.5f, 0f) * Vector3(num6, num6, num6));
 	num4 = 1.85f * func_1219(SYSTEM::VDIST2(func_950(uParam0), GRAPHICS::GOLF_TRAIL_GET_VISUAL_CONTROL_POINT(piParam1->f_124.f_26 - 1)));
 	num5 = num4 / 2500f;
 
@@ -111281,23 +111281,23 @@ void func_1480(var uParam0, int* piParam1, var uParam2, float fParam3) // Positi
 	
 		if (num < piParam1->f_124.f_26 - 1)
 		{
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, Vector3(1.25f, 0f, 3.5f) + (unk11 * Vector3(0.33f, 0.33f, 0.33f))) };
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, Vector3(1.25f, 0f, 3.5f) + (unk11 * Vector3(0.33f, 0.33f, 0.33f))));
 			unk3 = Vector3(0f, 0f, 0.75f);
 		}
 		else if (num4 < 2500f)
 		{
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, Vector3(3.5f, 0f, 6f) + unk11) };
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, Vector3(3.5f, 0f, 6f) + unk11));
 			unk3 = Vector3(0f, 0f, 0.75f);
 		}
 		else if (num5 < 3f)
 		{
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, (Vector3(3.5f, 0f, 6f) * Vector3(num5, num5, num5)) + unk11) };
-			unk3 = { Vector3(0.75f, 0f, 0f) * Vector3(num5, num5, num5) };
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, (Vector3(3.5f, 0f, 6f) * Vector3(num5, num5, num5)) + unk11));
+			unk3 = Vector3(Vector3(0.75f, 0f, 0f) * Vector3(num5, num5, num5));
 		}
 		else
 		{
-			offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, (Vector3(3.5f, 0f, 6f) * Vector3(3f, 3f, 3f)) + unk11) };
-			unk3 = { Vector3(0.75f, 0f, 0f) * Vector3(3f, 3f, 3f) };
+			offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(visualControlPoint, fParam3, (Vector3(3.5f, 0f, 6f) * Vector3(3f, 3f, 3f)) + unk11));
+			unk3 = Vector3(Vector3(0.75f, 0f, 0f) * Vector3(3f, 3f, 3f));
 		}
 	
 		if (!CAM::DOES_CAM_EXIST(*uParam2))
@@ -111404,7 +111404,7 @@ void func_1484(int iParam0, var uParam1, var uParam2) // Position - 0x87EDE
 
 	if (SYSTEM::VDIST2(vector, vector2) < 0.15f * 0.15f)
 	{
-		vector = { vector + Vector3(1f, 0.5f, 0.5f) };
+		vector = Vector3(vector + Vector3(1f, 0.5f, 0.5f));
 		MISC::GET_GROUND_Z_FOR_3D_COORD(vector, &(vector.f_2), false, false);
 	}
 
@@ -112000,7 +112000,7 @@ int func_1513(var uParam0, int* piParam1, var uParam2, int iParam3) // Position 
 	flag = true;
 	num3 = Vector3(func_1640(uParam0));
 	num5 = Vector3(func_30(uParam2, func_31(uParam0)));
-	unk7 = { func_954(Vector3(0f, num5.f_1, num5) - Vector3(0f, num3.f_1, num3)) };
+	unk7 = Vector3(func_954(Vector3(0f, num5.f_1, num5) - Vector3(0f, num3.f_1, num3)));
 
 	if (func_945(uParam2, uParam0))
 	{
@@ -112025,7 +112025,7 @@ int func_1513(var uParam0, int* piParam1, var uParam2, int iParam3) // Position 
 	else
 	{
 		num6 = func_907() ? 5.5f : 4.5f;
-		vector = { num3 - (Vector3(num6, num6, num6) * unk7) };
+		vector = Vector3(num3 - (Vector3(num6, num6, num6) * unk7));
 		num = func_1515(iParam3);
 		vector = Vector3(func_1250(vector - num3, num));
 		vector = Vector3(vector + num3);
@@ -113145,19 +113145,19 @@ BOOL func_1528(var uParam0, var uParam1, var uParam2, int* piParam3) // Position
 		else if (randomIntInRange == 1)
 		{
 			func_1308(vector2, unk3 + Vector3(1f, 0f, 0f), &vector);
-			vector2 = { vector2 + (Vector3(-2f, -2f, -2f) * func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f)) };
+			vector2 = Vector3(vector2 + (Vector3(-2f, -2f, -2f) * func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f)));
 			vector2.f_2 = vector2.f_2 + 2f;
 		}
 		else if (randomIntInRange == 2)
 		{
 			func_1308(vector2, unk3 + Vector3(1f, 0f, 0f), &vector);
-			vector2 = { vector2 + (Vector3(-3f, -3f, -3f) * func_954(SYSTEM::COS(value - 15f), SYSTEM::SIN(value - 15f), 0f)) };
+			vector2 = Vector3(vector2 + (Vector3(-3f, -3f, -3f) * func_954(SYSTEM::COS(value - 15f), SYSTEM::SIN(value - 15f), 0f)));
 		}
 		else
 		{
 			num3 = Vector3(func_954(SYSTEM::COS(value + 90f), SYSTEM::SIN(value + 90f), 0f));
 			func_1308(vector2, unk3 + Vector3(1f, num3.f_1, num3), &vector);
-			vector2 = { vector2 + (Vector3(-2.5f, -2.5f, -2.5f) * func_954(SYSTEM::COS(value - 15f), SYSTEM::SIN(value - 15f), 0f)) };
+			vector2 = Vector3(vector2 + (Vector3(-2.5f, -2.5f, -2.5f) * func_954(SYSTEM::COS(value - 15f), SYSTEM::SIN(value - 15f), 0f)));
 			vector2.f_2 = vector2.f_2 + 1f;
 		}
 	
@@ -113368,8 +113368,8 @@ void func_1534(var uParam0, var uParam1, int* piParam2, BOOL bParam3) // Positio
 	num12 = (2f * num) - (num * num);
 	num8 = Vector3(func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 	unk10 = Vector3(-func_954(num8 - (F2V(func_1361(num8, unk)) * unk)));
-	num9 = { func_954((-num8 * Vector3(num11, num11, num11)) + (unk * Vector3(num12, num12, num12))) };
-	num13 = { func_954((unk10 * Vector3(num11, num11, num11)) + (unk * Vector3(num12, num12, num12))) };
+	num9 = Vector3(func_954((-num8 * Vector3(num11, num11, num11)) + (unk * Vector3(num12, num12, num12))));
+	num13 = Vector3(func_954((unk10 * Vector3(num11, num11, num11)) + (unk * Vector3(num12, num12, num12))));
 	value2 = func_1361(num8, func_954(num13, num13.f_1, 0f));
 	piParam2->f_568 = value2;
 	num14 = (num8 * num13.f_1) - (num8.f_1 * num13) < 0f ? -1f : 1f;
@@ -113463,7 +113463,7 @@ float func_1535(int* piParam0, var uParam1, var uParam2, var uParam3) // Positio
 	{
 		func_1544(true);
 		piParam0->f_124.f_28 = 0;
-		piParam0->f_124.f_3 = { piParam0->f_124.f_3 * Vector3(0.98f, 0.98f, 0.98f) };
+		piParam0->f_124.f_3 = Vector3(piParam0->f_124.f_3 * Vector3(0.98f, 0.98f, 0.98f));
 		visualControlPoint = Vector3(GRAPHICS::GOLF_TRAIL_GET_VISUAL_CONTROL_POINT(piParam0->f_124.f_26 - 1));
 		num = visualControlPoint.f_2;
 		num2 = 30f;
@@ -113565,7 +113565,7 @@ BOOL func_1539(int* piParam0, int iParam1, var uParam2, var uParam3) // Position
 	}
 	else if (iParam1 == 0)
 	{
-		visualControlPoint = { visualControlPoint + (func_954(unk5) * Vector3(0.15f, 0.15f, 0.15f)) };
+		visualControlPoint = Vector3(visualControlPoint + (func_954(unk5) * Vector3(0.15f, 0.15f, 0.15f)));
 	}
 
 	vector = Vector3(0f, 0f, 0f);
@@ -113957,7 +113957,7 @@ Vector3 func_1557(var uParam0, var uParam1) // Position - 0x8C657
 	else if (func_1647(uParam0) != 3)
 		offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_1640(uParam0), func_960(uParam0), -func_1374(uParam1, func_985(uParam0)) * func_1339(func_991(uParam0)) * func_1340(func_24(&uParam0->f_15[func_1653(uParam0)])) * (func_1324(uParam0, true) / 100f), 0f, 0f));
 	else
-		offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_1640(uParam0), func_960(uParam0), Vector3(-uParam0->f_1.f_1, -uParam0->f_1.f_1, -uParam0->f_1.f_1) * Vector3(0f, 0f, func_1324(uParam0, true) / 100f)) };
+		offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_1640(uParam0), func_960(uParam0), Vector3(-uParam0->f_1.f_1, -uParam0->f_1.f_1, -uParam0->f_1.f_1) * Vector3(0f, 0f, func_1324(uParam0, true) / 100f)));
 
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(offsetFromCoordAndHeadingInWorldCoords, &groundZ, false, false))
 	{
@@ -114155,7 +114155,7 @@ void func_1567(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	iParam6 = iParam6;
 	num = Vector3(func_30(uParam1, func_31(uParam0)));
 	num2 = Vector3(func_1640(uParam0));
-	unk7 = { func_954(Vector3(0f, num.f_1, num) - Vector3(0f, num2.f_1, num2)) };
+	unk7 = Vector3(func_954(Vector3(0f, num.f_1, num) - Vector3(0f, num2.f_1, num2)));
 
 	if (func_1568(num2, uParam2, &vector, &heading, unk7, num2, true))
 	{
@@ -114172,7 +114172,7 @@ void func_1567(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 			entityForwardVector.f_2 = 0f;
 			entityForwardVector = Vector3(func_954(entityForwardVector));
 			entityForwardVector = Vector3(func_1363(entityForwardVector, 2));
-			vector = { vector + (entityForwardVector * Vector3(0.5f, 0.5f, 0.5f)) };
+			vector = Vector3(vector + (entityForwardVector * Vector3(0.5f, 0.5f, 0.5f)));
 		
 			if (!func_1298(&vector, 1073741824, 1065353216))
 				return;
@@ -114202,7 +114202,7 @@ BOOL func_1568(Vector3 vParam0, var uParam1, var uParam2, float fParam3, var uPa
 		}
 		else if (SYSTEM::VDIST2(vParam0, *pvParam6) > 100f && !VEHICLE::IS_ANY_VEHICLE_NEAR_POINT(*pvParam6, 5f))
 		{
-			unk = { func_954(Vector3(0f, pvParam6->f_1, *pvParam6) - Vector3(0f, fParam11.f_1, fParam11)) };
+			unk = Vector3(func_954(Vector3(0f, pvParam6->f_1, *pvParam6) - Vector3(0f, fParam11.f_1, fParam11)));
 		
 			if (!bParam14 || func_1518(fParam8, unk) < 0.75f)
 				flag = true;
@@ -114241,7 +114241,7 @@ BOOL func_1570(var uParam0, var uParam1, Vehicle veParam2) // Position - 0x8CF4F
 
 	num = Vector3(func_30(uParam1, func_31(uParam0)));
 	num2 = Vector3(func_1640(uParam0));
-	unk5 = { func_954(Vector3(0f, num.f_1, num) - Vector3(0f, num2.f_1, num2)) };
+	unk5 = Vector3(func_954(Vector3(0f, num.f_1, num) - Vector3(0f, num2.f_1, num2)));
 	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(veParam2, false));
 
 	if (func_1518(unk5, func_954(entityCoords - num2)) < 0.75f && SYSTEM::VDIST2(num2, entityCoords) > 5f * 5f)
@@ -114702,18 +114702,18 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 	var unk;
 	float unk2;
 
-	unk = { func_954(Vector3(51.66f, 61.69f, -1405.69f) - Vector3(51.76f, 61.61f, -1403.44f)) };
+	unk = Vector3(func_954(Vector3(51.66f, 61.69f, -1405.69f) - Vector3(51.76f, 61.61f, -1403.44f)));
 	num = func_1361(unk, -1405.69f, 61.69f, 51.66f);
 
 	if (func_1361(vParam0, unk) > num)
 		return true;
 
-	unk = { func_954(Vector3(0f, -85.86f, -1167.9f) - Vector3(0f, -89.1f, -1162.01f)) };
+	unk = Vector3(func_954(Vector3(0f, -85.86f, -1167.9f) - Vector3(0f, -89.1f, -1162.01f)));
 	num = func_1361(unk, Vector3(0f, -89.1f, -1162.01f) - (Vector3(9.92f, 9.92f, 9.92f) * unk));
 
 	if (func_1361(vParam0, unk) > num)
 	{
-		unk = { func_954(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)) };
+		unk = Vector3(func_954(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)));
 		num = func_1361(unk, Vector3(39.97f, -89.76f, -1193.7f) - (Vector3(2.778f, 2.778f, 2.778f) * unk));
 	
 		if (func_1361(vParam0, unk) > num)
@@ -114724,19 +114724,19 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 	}
 	else
 	{
-		unk = { func_954(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)) };
+		unk = Vector3(func_954(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)));
 		num = func_1361(unk, Vector3(39.97f, -89.76f, -1193.7f) - (Vector3(1.03f, 1.03f, 1.03f) * unk));
 	
 		if (func_1361(vParam0, unk) > num)
 			return true;
 	}
 
-	unk = { func_954(Vector3(0f, -113.24f, -970.31f) - Vector3(0f, -115.19f, -973.91f)) };
+	unk = Vector3(func_954(Vector3(0f, -113.24f, -970.31f) - Vector3(0f, -115.19f, -973.91f)));
 	num = func_1361(unk, -970.31f, -113.24f, 38.28f);
 
 	if (func_1361(vParam0, unk) > num)
 	{
-		unk = { func_954(Vector3(0f, -106.46f, -948.52f) - Vector3(0f, -102.2f, -951.06f)) };
+		unk = Vector3(func_954(Vector3(0f, -106.46f, -948.52f) - Vector3(0f, -102.2f, -951.06f)));
 		num = func_1361(unk, -948.52f, -106.46f, 42.39f);
 	
 		if (func_1361(vParam0, unk) > num)
@@ -114744,12 +114744,12 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 	}
 	else
 	{
-		unk = { func_954(Vector3(0f, -127.38f, -1028.62f) - Vector3(0f, -129.55f, -1034.37f)) };
+		unk = Vector3(func_954(Vector3(0f, -127.38f, -1028.62f) - Vector3(0f, -129.55f, -1034.37f)));
 		num = func_1361(unk, -1028.62f, -127.38f, 39.51f);
 	
 		if (func_1361(vParam0, unk) > num)
 		{
-			unk = { func_954(Vector3(0f, -125.95f, -994.29f) - Vector3(0f, -94.44f, -1001.81f)) };
+			unk = Vector3(func_954(Vector3(0f, -125.95f, -994.29f) - Vector3(0f, -94.44f, -1001.81f)));
 			num = func_1361(unk, -994.29f, -125.95f, 40.12f);
 		
 			if (func_1361(vParam0, unk) > num)
@@ -114757,7 +114757,7 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 		}
 		else
 		{
-			unk = { func_954(Vector3(0f, -140.83f, -1037.99f) - Vector3(0f, -131.81f, -1043.54f)) };
+			unk = Vector3(func_954(Vector3(0f, -140.83f, -1037.99f) - Vector3(0f, -131.81f, -1043.54f)));
 			num = func_1361(unk, -1037.99f, -140.83f, 42.99f);
 		
 			if (func_1361(vParam0, unk) > num)
@@ -114765,17 +114765,17 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 		}
 	}
 
-	unk = { func_954(Vector3(0f, 96.74f, -1047.59f) - Vector3(0f, 87.45f, -1041.82f)) };
+	unk = Vector3(func_954(Vector3(0f, 96.74f, -1047.59f) - Vector3(0f, 87.45f, -1041.82f)));
 	num = func_1361(unk, -1047.59f, 96.74f, 52.25f);
 
 	if (func_1361(vParam0, unk) > num)
 	{
-		unk = { func_954(Vector3(0f, 180.44f, -1094.08f) - Vector3(0f, 167.17f, -1086.17f)) };
+		unk = Vector3(func_954(Vector3(0f, 180.44f, -1094.08f) - Vector3(0f, 167.17f, -1086.17f)));
 		num = func_1361(unk, -1094.08f, 180.44f, 61.49f);
 	
 		if (func_1361(vParam0, unk) > num)
 		{
-			unk = { func_954(Vector3(0f, 196.78f, -1092f) - Vector3(0f, 179.38f, -1163.07f)) };
+			unk = Vector3(func_954(Vector3(0f, 196.78f, -1092f) - Vector3(0f, 179.38f, -1163.07f)));
 			num = func_1361(unk, Vector3(60.09f, 196.78f, -1092f) - (Vector3(3.75f, 3.75f, 3.75f) * unk));
 		
 			if (func_1361(vParam0, unk) > num)
@@ -114783,7 +114783,7 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 		}
 		else
 		{
-			unk = { func_954(Vector3(0f, 145.22f, -1069.28f) - Vector3(0f, 98.02f, -1152.37f)) };
+			unk = Vector3(func_954(Vector3(0f, 145.22f, -1069.28f) - Vector3(0f, 98.02f, -1152.37f)));
 			num = func_1361(unk, -1069.28f, 145.22f, 61.6f);
 		
 			if (func_1361(vParam0, unk) > num)
@@ -114792,19 +114792,19 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 	}
 	else
 	{
-		unk = { func_954(Vector3(0f, -19.35f, -967.03f) - Vector3(0f, -63.01f, -1035.28f)) };
+		unk = Vector3(func_954(Vector3(0f, -19.35f, -967.03f) - Vector3(0f, -63.01f, -1035.28f)));
 		num = func_1361(unk, -967.03f, -19.35f, 48.28f);
 	
 		if (func_1361(vParam0, unk) > num)
 			return true;
 	}
 
-	unk = { func_954(Vector3(0f, 186.79f, -1274.15f) - Vector3(0f, 185.87f, -1255.38f)) };
+	unk = Vector3(func_954(Vector3(0f, 186.79f, -1274.15f) - Vector3(0f, 185.87f, -1255.38f)));
 	num = func_1361(unk, -1274.15f, 186.79f, 61.97f);
 
 	if (func_1361(vParam0, unk) > num)
 	{
-		unk = { func_954(Vector3(0f, 192.648f, -1326.063f) - Vector3(0f, 183.78f, -1325.44f)) };
+		unk = Vector3(func_954(Vector3(0f, 192.648f, -1326.063f) - Vector3(0f, 183.78f, -1325.44f)));
 		num = func_1361(unk, -1326.063f, 192.648f, 61.76f);
 	
 		if (func_1361(vParam0, unk) > num)
@@ -114812,7 +114812,7 @@ BOOL func_1596(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x8DAF9
 	}
 	else
 	{
-		unk = { func_954(Vector3(0f, 226.63f, -1159.35f) - Vector3(0f, 203.93f, -1152.92f)) };
+		unk = Vector3(func_954(Vector3(0f, 226.63f, -1159.35f) - Vector3(0f, 203.93f, -1152.92f)));
 		num = func_1361(unk, -1159.35f, 226.63f, 70f);
 	
 		if (func_1361(vParam0, unk) > num)
@@ -115570,7 +115570,7 @@ void func_1615(var uParam0, var uParam1, int* piParam2) // Position - 0x8F685
 	value = func_957(func_1640(uParam1), func_30(uParam0, func_31(uParam1))) + 90f;
 	vector = Vector3(func_1640(uParam1));
 	unk3 = Vector3(func_954(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
-	unk6 = { Vector3(50f, 50f, 50f) * unk3 };
+	unk6 = Vector3(Vector3(50f, 50f, 50f) * unk3);
 	GRAPHICS::DRAW_DEBUG_SPHERE(vector, 0.25f, 255, 0, 0, 255);
 	GRAPHICS::DRAW_DEBUG_SPHERE(vector + unk6, 0.25f, 255, 255, 255, 255);
 	GRAPHICS::DRAW_DEBUG_LINE(vector, vector + unk6, 0, 255, 0, 255);

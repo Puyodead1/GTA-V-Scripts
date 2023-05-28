@@ -699,8 +699,8 @@ void func_6(var uParam0) // Position - 0x721
 		uParam0->f_78 = 0;
 	}
 
-	vector = { uParam0->f_79 - Vector3(10f, 10f, 10f) };
-	vector2 = { uParam0->f_79 + Vector3(10f, 10f, 10f) };
+	vector = Vector3(uParam0->f_79 - Vector3(10f, 10f, 10f));
+	vector2 = Vector3(uParam0->f_79 + Vector3(10f, 10f, 10f));
 	PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(vector, vector2, 1);
 	PATHFIND::SET_PED_PATHS_BACK_TO_ORIGINAL(vector, vector2, 0);
 
@@ -1831,8 +1831,8 @@ BOOL func_45() // Position - 0x1EF8
 		{
 			if (func_46(5))
 			{
-				vector = { Vector3(35.043587f, -1459.3705f, -31.631046f) - Vector3(9f, 50.25f, 84.5f) };
-				vector2 = { Vector3(35.043587f, -1459.3705f, -31.631046f) + Vector3(9f, 50.25f, 84.5f) };
+				vector = Vector3(Vector3(35.043587f, -1459.3705f, -31.631046f) - Vector3(9f, 50.25f, 84.5f));
+				vector2 = Vector3(Vector3(35.043587f, -1459.3705f, -31.631046f) + Vector3(9f, 50.25f, 84.5f));
 			
 				if (ENTITY::IS_ENTITY_IN_AREA(PLAYER::PLAYER_PED_ID(), vector, vector2, false, true, 0))
 					return true;
@@ -1840,8 +1840,8 @@ BOOL func_45() // Position - 0x1EF8
 		
 			if (func_46(6))
 			{
-				vector3 = { Vector3(158.11504f, 528.39514f, 4.53609f) - Vector3(28.5f, 74.75f, 152.5f) };
-				vector4 = { Vector3(158.11504f, 528.39514f, 4.53609f) + Vector3(28.5f, 74.75f, 152.5f) };
+				vector3 = Vector3(Vector3(158.11504f, 528.39514f, 4.53609f) - Vector3(28.5f, 74.75f, 152.5f));
+				vector4 = Vector3(Vector3(158.11504f, 528.39514f, 4.53609f) + Vector3(28.5f, 74.75f, 152.5f));
 			
 				if (ENTITY::IS_ENTITY_IN_AREA(PLAYER::PLAYER_PED_ID(), vector3, vector4, false, true, 0))
 					return true;
@@ -3721,8 +3721,8 @@ BOOL func_102(var uParam0, var uParam1) // Position - 0x41B2
 					PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(uParam1->f_2, true, false);
 					WEAPON::SET_CURRENT_PED_WEAPON(PLAYER::PLAYER_PED_ID(), joaat("WEAPON_UNARMED"), true);
 					WEAPON::SET_CURRENT_PED_WEAPON(uParam1->f_2, joaat("WEAPON_UNARMED"), true);
-					vector2 = { uParam0->f_79 - Vector3(10f, 10f, 10f) };
-					vector3 = { uParam0->f_79 + Vector3(10f, 10f, 10f) };
+					vector2 = Vector3(uParam0->f_79 - Vector3(10f, 10f, 10f));
+					vector3 = Vector3(uParam0->f_79 + Vector3(10f, 10f, 10f));
 					PATHFIND::SET_ROADS_IN_AREA(vector2, vector3, false, true);
 					PATHFIND::SET_PED_PATHS_IN_AREA(vector2, vector3, false, 0);
 					uParam0->f_76 = PED::CREATE_SYNCHRONIZED_SCENE(entityCoords, vector, 2);
@@ -32811,7 +32811,7 @@ BOOL func_233(var uParam0, var uParam1) // Position - 0x23ED5
 				flags = 338;
 			
 				if (i == 0)
-					offsetFromCoordAndHeadingInWorldCoords = { offsetFromCoordAndHeadingInWorldCoords + Vector3(0.1f, 0f, 0f) };
+					offsetFromCoordAndHeadingInWorldCoords = Vector3(offsetFromCoordAndHeadingInWorldCoords + Vector3(0.1f, 0f, 0f));
 			
 				uParam0->f_61[i] = SHAPETEST::START_SHAPE_TEST_BOX(offsetFromCoordAndHeadingInWorldCoords, unk19[i], 0f, 0f, headingFromVector2d, 2, flags, vehiclePedIsIn, 7);
 			}
@@ -33605,7 +33605,7 @@ Vector3 func_265(float fParam0, var uParam1, var uParam2) // Position - 0x2502B
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -40116,9 +40116,9 @@ BOOL func_441(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2CB21
 					unk7 = Vector3(offsetFromCoordAndHeadingInWorldCoords2);
 			
 				unk14 = Vector3(-unk7.f_1, unk7, 0f);
-				vector2 = { vector - (unk7 * Vector3(4f, 4f, 4f)) };
-				outPosition3 = { (vector + (unk7 * Vector3(1f, 1f, 1f))) - (unk14 * Vector3(2f, 2f, 2f)) };
-				outPosition4 = { vector + (unk7 * Vector3(1f, 1f, 1f)) + (unk14 * Vector3(2f, 2f, 2f)) };
+				vector2 = Vector3(vector - (unk7 * Vector3(4f, 4f, 4f)));
+				outPosition3 = Vector3((vector + (unk7 * Vector3(1f, 1f, 1f))) - (unk14 * Vector3(2f, 2f, 2f)));
+				outPosition4 = Vector3(vector + (unk7 * Vector3(1f, 1f, 1f)) + (unk14 * Vector3(2f, 2f, 2f)));
 			
 				if (PATHFIND::GET_SAFE_COORD_FOR_PED(vector + (unk7 * Vector3(1f, 1f, 1f)), true, &outPosition3, 0) && MISC::GET_DISTANCE_BETWEEN_COORDS(vector, outPosition3, true) < 10f && MISC::GET_DISTANCE_BETWEEN_COORDS(vector2, outPosition3, true) > 2f)
 					outPosition3 = Vector3(outPosition3);

@@ -2735,8 +2735,8 @@ BOOL func_50(Entity eParam0, Vehicle veParam1, Object obParam2, Vector3 vParam3,
 		unk13.f_2 = unk13.f_2 + (minimum2.f_2 - minimum.f_2);
 		ENTITY::SET_ENTITY_COORDS(obParam2, vParam3, true, false, false, true);
 		ENTITY::SET_ENTITY_ROTATION(obParam2, vParam6, 2, true);
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (num4 / 2f) - (radius * 0.75f), 0f) + unk13) };
-		offsetFromEntityInWorldCoords2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (-num4 / 2f) + (radius * 0.75f), 0f) + unk13) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (num4 / 2f) - (radius * 0.75f), 0f) + unk13));
+		offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (-num4 / 2f) + (radius * 0.75f), 0f) + unk13));
 		shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(offsetFromEntityInWorldCoords2, offsetFromEntityInWorldCoords, radius, 19, PLAYER::PLAYER_PED_ID(), 4);
 		SHAPETEST::GET_SHAPE_TEST_RESULT(shapeTestHandle, &hit, &endCoords, &surfaceNormal, &entityHit) != 2;
 	

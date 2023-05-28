@@ -4525,9 +4525,9 @@ Vector3 func_54(float fParam0, int iParam1) // Position - 0x1F33
 	unk4 = Vector3(func_55(num2) - func_55(num));
 
 	if (Global_2800921 >= 0f)
-		unk = { func_55(num) + (unk4 * Vector3(num5, num5, num5)) };
+		unk = Vector3(func_55(num) + (unk4 * Vector3(num5, num5, num5)));
 	else
-		unk = { func_55(num) - (unk4 * Vector3(num5, num5, num5)) };
+		unk = Vector3(func_55(num) - (unk4 * Vector3(num5, num5, num5)));
 
 	return unk;
 }
@@ -7115,7 +7115,7 @@ Vector3 func_144(float fParam0, var uParam1, var uParam2) // Position - 0x55EA
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

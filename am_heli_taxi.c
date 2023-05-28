@@ -6913,7 +6913,7 @@ BOOL func_174(var uParam0) // Position - 0x6CC0
 				return false;
 			}
 		
-			vector = { iLocal_147.f_6 + Vector3(50f / 2f, 0f, 0f) };
+			vector = Vector3(iLocal_147.f_6 + Vector3(50f / 2f, 0f, 0f));
 			iLocal_988 = SHAPETEST::START_SHAPE_TEST_BOX(vector, 15f, 15f, 50f, 0f, 0f, -1f, 2, 131, PLAYER::PLAYER_PED_ID(), 4);
 		
 			if (iLocal_988 == 0)
@@ -10408,13 +10408,13 @@ void func_281() // Position - 0xC40D
 								if (iLocal_119 == -1)
 								{
 									num = func_258(Global_1853910[playerIndex].f_267[5]);
-									iLocal_147.f_29 = { func_256(num) + Vector3(15f, 0f, 0f) };
+									iLocal_147.f_29 = Vector3(func_256(num) + Vector3(15f, 0f, 0f));
 								}
 								else
 								{
 									num2 = iLocal_119;
 									func_283(func_284(num2), &(iLocal_147.f_29));
-									iLocal_147.f_29 = { iLocal_147.f_29 + Vector3(40f, 0f, 0f) };
+									iLocal_147.f_29 = Vector3(iLocal_147.f_29 + Vector3(40f, 0f, 0f));
 								}
 							
 								iLocal_147.f_24 = 5;
@@ -16245,7 +16245,7 @@ BOOL func_418(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_416(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_419(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{

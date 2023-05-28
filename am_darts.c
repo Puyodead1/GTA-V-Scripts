@@ -89737,7 +89737,7 @@ BOOL func_431(int* piParam0, var uParam1, var uParam2, BOOL bParam3, BOOL bParam
 	
 		if (MISC::ABSF(value) > 0.5f)
 		{
-			unk21 = { entityVelocity / Vector3(value, value, value) };
+			unk21 = Vector3(entityVelocity / Vector3(value, value, value));
 			vector3 = Vector3(offsetFromEntityInWorldCoords + unk21);
 		}
 	
@@ -90053,7 +90053,7 @@ BOOL func_432(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 1)
 		{
 			*uParam5 = Vector3(0.2657f, 1.3743f, 0.364f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6768f, 0.9824f + uParam1, 0.1864f + fParam2);
 			*uParam7 = Vector3(-1.3043f, -1.0657f + uParam1, 1.1243f + fParam2);
 			*uParam8 = 34.3832f;
@@ -90071,7 +90071,7 @@ BOOL func_432(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 3)
 		{
 			*uParam5 = Vector3(0.4529f, 1.0868f, 0.365f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(0.6216f, 0.9493f + uParam1, 0.4129f + fParam2);
 			*uParam7 = Vector3(-1.4273f, -1.1768f + uParam1, 0.9439f + fParam2);
 			*uParam8 = 34.3832f;
@@ -90081,7 +90081,7 @@ BOOL func_432(int* piParam0, var uParam1, float fParam2, BOOL bParam3, BOOL bPar
 		else if (piParam0->f_422 == 4)
 		{
 			*uParam5 = Vector3(1.3811f, 1.7491f, 0.296f);
-			*uParam5 = { (*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f) };
+			*uParam5 = Vector3((*uParam5 / F2V(SYSTEM::VMAG(*uParam5))) * Vector3(5f, 5f, 5f));
 			*uParam6 = Vector3(1.7091f, 1.1087f + uParam1, 0.3014f + fParam2);
 			*uParam7 = Vector3(-1.0311f, -0.1093f + uParam1, 0.3918f + fParam2);
 			*uParam8 = 34.3832f;
@@ -98773,7 +98773,7 @@ BOOL func_598(var uParam0, var uParam1, float fParam2, float fParam3, float fPar
 
 	unk6 = Vector3(fParam2 - uParam1->f_1);
 	frameTime = MISC::GET_FRAME_TIME();
-	unk3 = { uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f) };
+	unk3 = Vector3(uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f));
 	uParam0->f_2 = Vector3(uParam0->f_2 - unk3);
 
 	if (uParam0->f_2.f_1 > unk6.f_1 - 0.04f)
@@ -99465,7 +99465,7 @@ void func_619(var uParam0) // Position - 0x7CB42
 	uParam0->f_8.f_1 = -0.213f;
 	vector = Vector3(uLocal_215 - uParam0->f_8);
 	num = SYSTEM::VMAG(vector);
-	uParam0->f_5 = { vector / Vector3(num, num, num) };
+	uParam0->f_5 = Vector3(vector / Vector3(num, num, num));
 	headingFromVector2d = MISC::GET_HEADING_FROM_VECTOR_2D(uParam0->f_5, uParam0->f_5.f_1);
 	uParam0->f_17.f_2 = headingFromVector2d - 180f;
 	num2 = MISC::TAN(uParam0->f_17.f_2) * num3;
@@ -99473,7 +99473,7 @@ void func_619(var uParam0) // Position - 0x7CB42
 	uParam0->f_11 = uParam0->f_11 + num2;
 	vector = Vector3(uLocal_215 - uParam0->f_11);
 	num = SYSTEM::VMAG(vector);
-	uParam0->f_5 = { vector / Vector3(num, num, num) };
+	uParam0->f_5 = Vector3(vector / Vector3(num, num, num));
 	return;
 }
 
@@ -115851,7 +115851,7 @@ BOOL func_1014(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position 
 		func_605("Darts", "Dart_Reticules", &fLocal_203, 1, 0, 4, false);
 
 	frameTime = MISC::GET_FRAME_TIME();
-	unk3 = { uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f) };
+	unk3 = Vector3(uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f));
 	uParam0->f_2 = Vector3(uParam0->f_2 - unk3);
 
 	if (uParam0->f_2.f_1 > uParam0->f_8.f_1 - 0.04f)

@@ -1097,7 +1097,7 @@ void main() // Position - 0x0
 					}
 					else if (func_465(func_466(num4)))
 					{
-						vector3 = { Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(&unk15)), SYSTEM::SIN(-97.4239f + func_464(&unk15))) };
+						vector3 = Vector3(Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(&unk15)), SYSTEM::SIN(-97.4239f + func_464(&unk15))));
 						offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(entity2, 1.12046f, -0.317773f, 1.3385f));
 						vector3 = Vector3(func_463(vector3, 8.909f));
 					
@@ -1191,7 +1191,7 @@ void main() // Position - 0x0
 					
 						if (func_465(func_466(num4)))
 						{
-							vector3 = { Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(&unk15)), SYSTEM::SIN(-97.4239f + func_464(&unk15))) };
+							vector3 = Vector3(Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(&unk15)), SYSTEM::SIN(-97.4239f + func_464(&unk15))));
 							offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(entity2, 1.12046f, -0.317773f, 1.3385f));
 							vector3 = Vector3(func_463(vector3, 8.909f));
 						
@@ -4260,7 +4260,7 @@ int func_54(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, B
 		func_56(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_55(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -20733,7 +20733,7 @@ void func_362(var uParam0, BOOL bParam1) // Position - 0x1FD9B
 		TASK::TASK_VEHICLE_MISSION_COORS_TARGET(0, *uParam0, ENTITY::GET_ENTITY_COORDS(*uParam0, true), 4, 0f, 786469, 2f, 0f, true);
 
 	TASK::TASK_VEHICLE_MISSION_COORS_TARGET(0, *uParam0, entityCoords + (Vector3(5f, 5f, 5f) * ENTITY::GET_ENTITY_FORWARD_VECTOR(*uParam0)) + Vector3(20f, 0f, 0f), 4, 0.3f * vehicleEstimatedMaxSpeed, 786469, 5f, 10f, true);
-	unk3 = { Vector3(1000f, 1000f, 1000f) * ENTITY::GET_ENTITY_FORWARD_VECTOR(*uParam0) };
+	unk3 = Vector3(Vector3(1000f, 1000f, 1000f) * ENTITY::GET_ENTITY_FORWARD_VECTOR(*uParam0));
 	unk3.f_2 = 200f;
 	TASK::TASK_VEHICLE_MISSION_COORS_TARGET(0, *uParam0, entityCoords + unk3, 4, vehicleEstimatedMaxSpeed, 262144, 15f, 10f, true);
 	TASK::CLOSE_SEQUENCE_TASK(taskSequenceId);
@@ -22450,7 +22450,7 @@ void func_417(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, V
 	if (ENTITY::DOES_ENTITY_EXIST(veParam5) && !ENTITY::IS_ENTITY_DEAD(veParam5, false))
 	{
 		*uParam2 = Vector3(10.2986f, 0f, 8.909f);
-		*uParam4 = { Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(uParam1)), SYSTEM::SIN(-97.4239f + func_464(uParam1))) };
+		*uParam4 = Vector3(Vector3(1.2f, 1.2f, 1.2f) * Vector3(0f, -SYSTEM::COS(-97.4239f + func_464(uParam1)), SYSTEM::SIN(-97.4239f + func_464(uParam1))));
 		*uParam3 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam5, 1.12046f, -0.317773f, 1.3385f));
 		unk = Vector3(func_463(*uParam4, uParam2->f_2));
 		vector2 = Vector3(*uParam3 + unk);
@@ -23995,7 +23995,7 @@ Vector3 func_475(float fParam0, float fParam1, float fParam2) // Position - 0x23
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

@@ -1584,7 +1584,7 @@ struct<4> func_46(Cam caParam0, var uParam1, var uParam2, var uParam3, var uPara
 	num = -camFov;
 	num.f_1 = Vector3(-*uParam1);
 	disabledControlNormal = PAD::GET_DISABLED_CONTROL_NORMAL(PLAYER_CONTROL, INPUT_SNIPER_ZOOM);
-	vector = { -Vector3(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD)) };
+	vector = Vector3(-Vector3(PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_LR), 0f, PAD::GET_DISABLED_CONTROL_UNBOUND_NORMAL(PLAYER_CONTROL, INPUT_SCALED_LOOK_UD)));
 
 	if (PAD::IS_USING_KEYBOARD_AND_MOUSE(FRONTEND_CONTROL))
 	{
@@ -1809,7 +1809,7 @@ void func_55(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	if (!func_56(Global_1962996.f_13, uParam0, false))
 	{
 		Global_1962996.f_13 = Vector3(uParam0);
-		uParam3 = { uParam3 + Vector3(0f, -180f, 180f) };
+		uParam3 = Vector3(uParam3 + Vector3(0f, -180f, 180f));
 		Global_1962996.f_16 = Vector3(uParam3);
 	}
 
@@ -1857,7 +1857,7 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 	{
 		*uParam5 = Vector3(CAM::GET_CAM_ROT(caLocal_160, 2));
 		*uParam4 = Vector3(func_7(*uParam5));
-		*uParam2 = { caLocal_160.f_4.f_6 + (Vector3(fParam0, fParam0, fParam0) * *uParam4) };
+		*uParam2 = Vector3(caLocal_160.f_4.f_6 + (Vector3(fParam0, fParam0, fParam0) * *uParam4));
 		*uParam3 = Vector3(func_60(*uParam2, fParam1));
 	}
 	else
@@ -1886,8 +1886,8 @@ void func_58(float fParam0, float fParam1, var uParam2, var uParam3, var uParam4
 	
 		*uParam5 = Vector3(ENTITY::GET_ENTITY_BONE_ROTATION(uLocal_64.f_95, uLocal_64.f_74.f_1[num]));
 		*uParam4 = Vector3(func_7(*uParam5));
-		*uParam2 = { *uParam2 + (Vector3(fParam0, fParam0, fParam0) * *uParam4) };
-		*uParam3 = { *uParam2 + (Vector3(fParam1, fParam1, fParam1) * *uParam4) };
+		*uParam2 = Vector3(*uParam2 + (Vector3(fParam0, fParam0, fParam0) * *uParam4));
+		*uParam3 = Vector3(*uParam2 + (Vector3(fParam1, fParam1, fParam1) * *uParam4));
 	}
 
 	return;
@@ -2216,7 +2216,7 @@ float func_78(Ped pedParam0) // Position - 0x25DC
 	if (!GRAPHICS::GET_SCREEN_COORD_FROM_WORLD_COORD(entityCoords, &entityCoords, &(entityCoords.f_1)))
 		return 1f;
 
-	entityCoords = { entityCoords - Vector3(0f, 0.5f, 0.5f) };
+	entityCoords = Vector3(entityCoords - Vector3(0f, 0.5f, 0.5f));
 	entityCoords.f_2 = 0f;
 	return SYSTEM::VMAG2(entityCoords);
 }
@@ -2228,7 +2228,7 @@ void func_79(Entity eParam0) // Position - 0x2626
 
 	camCoord = Vector3(CAM::GET_CAM_COORD(caLocal_160));
 	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true));
-	entityCoords = { entityCoords + (Vector3(2f, 2f, 2f) * func_80(entityCoords - camCoord)) };
+	entityCoords = Vector3(entityCoords + (Vector3(2f, 2f, 2f) * func_80(entityCoords - camCoord)));
 	caLocal_160.f_22.f_1 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(camCoord, entityCoords, 511, 0, 4);
 	caLocal_160.f_22.f_1 == 0;
 	return;
@@ -2244,7 +2244,7 @@ Vector3 func_80(float fParam0, var uParam1, var uParam2) // Position - 0x267D
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -2450,7 +2450,7 @@ void func_85() // Position - 0x28CA
 			}
 		
 			func_58(0f, uLocal_64.f_8.f_4, &vector, &vector2, &unk5, &unk8);
-			unk11 = { Vector3(uLocal_64.f_13, uLocal_64.f_13, uLocal_64.f_13) * func_86(0f, 0f, 0f, 1f) };
+			unk11 = Vector3(Vector3(uLocal_64.f_13, uLocal_64.f_13, uLocal_64.f_13) * func_86(0f, 0f, 0f, 1f));
 			unk11.f_1 = 0f;
 			unk8 = Vector3(unk8 + unk11);
 			vector2 = Vector3(vector + (F2V(SYSTEM::VMAG(vector2 - vector)) * func_7(unk8)));

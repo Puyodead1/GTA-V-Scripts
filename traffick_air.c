@@ -11128,7 +11128,7 @@ int func_123(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_125(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_124(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -14621,7 +14621,7 @@ BOOL func_217(var uParam0, Entity eParam1, int iParam2) // Position - 0xAA04
 	forwardVector.f_2 = 0f;
 	forwardVector = Vector3(func_218(forwardVector));
 	rotZ = -MISC::ATAN2(forwardVector, forwardVector.f_1);
-	vector = { position + (forwardVector * Vector3(iParam2, iParam2, iParam2)) };
+	vector = Vector3(position + (forwardVector * Vector3(iParam2, iParam2, iParam2)));
 	uParam0->f_1 = SHAPETEST::START_SHAPE_TEST_BOX(vector, 12f, 140f, 12f, 0f, 0f, rotZ, 0, 1, 0, 4);
 
 	while (SHAPETEST::GET_SHAPE_TEST_RESULT(uParam0->f_1, &(uParam0->f_9), &(uParam0->f_3), &(uParam0->f_6), &(uParam0->f_11)) == 1)
@@ -14644,7 +14644,7 @@ Vector3 func_218(float fParam0, var uParam1, var uParam2) // Position - 0xAAA6
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -15351,7 +15351,7 @@ void func_237(var uParam0, Entity eParam1, var uParam2, BOOL bParam3, float fPar
 	}
 
 	upVector = Vector3(func_218(upVector));
-	fLocal_4677 = { fLocal_4677 + Vector3(upVector.f_2 * fParam4, upVector.f_1 * fParam4, upVector * fParam4) };
+	fLocal_4677 = Vector3(fLocal_4677 + Vector3(upVector.f_2 * fParam4, upVector.f_1 * fParam4, upVector * fParam4));
 
 	if (fLocal_4677.f_2 <= -70f)
 		fLocal_4677.f_2 = -70f;
@@ -16964,7 +16964,7 @@ void func_264(var uParam0, Entity eParam1, int iParam2) // Position - 0xE5DB
 	}
 
 	upVector = Vector3(func_218(upVector));
-	fLocal_4677 = { fLocal_4677 + Vector3(upVector.f_2 * iParam2, upVector.f_1 * iParam2, upVector * iParam2) };
+	fLocal_4677 = Vector3(fLocal_4677 + Vector3(upVector.f_2 * iParam2, upVector.f_1 * iParam2, upVector * iParam2));
 
 	if (fLocal_4677.f_2 <= num)
 		fLocal_4677.f_2 = num;
@@ -17411,7 +17411,7 @@ void func_272(Entity eParam0, var uParam1, var uParam2) // Position - 0xEFAC
 	if (!ENTITY::DOES_ENTITY_EXIST(eParam0))
 		return;
 
-	*uParam1 = { ENTITY::GET_ENTITY_COORDS(eParam0, true) + (Vector3(0.5f, 0.5f, 0.5f) * fLocal_4677) };
+	*uParam1 = Vector3(ENTITY::GET_ENTITY_COORDS(eParam0, true) + (Vector3(0.5f, 0.5f, 0.5f) * fLocal_4677));
 	STREAMING::SET_FOCUS_POS_AND_VEL(*uParam1, fLocal_4677);
 	*uParam2 = Vector3(-80f, 0f, ENTITY::GET_ENTITY_HEADING(eParam0) + 180f);
 	*uParam2 = Vector3(-SYSTEM::SIN(uParam2->f_2) * SYSTEM::COS(*uParam2), SYSTEM::COS(uParam2->f_2) * SYSTEM::COS(*uParam2), SYSTEM::SIN(*uParam2));
@@ -18295,9 +18295,9 @@ void func_296(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -18485,10 +18485,10 @@ BOOL func_299(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));

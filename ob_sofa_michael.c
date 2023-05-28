@@ -2593,7 +2593,7 @@ void func_52(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num4 = num.f_2 - camRot.f_2;
 			num5 = func_53(num4, -180f, 180f);
-			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
+			vector = Vector3(camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)));
 			vector.f_2 = camRot.f_2 + (num5 * 0.25f);
 		}
 		else
@@ -2648,7 +2648,7 @@ void func_52(Cam caParam0, var uParam1, var uParam2, var uParam3) // Position - 
 		
 			num8 = num.f_2 - camRot.f_2;
 			num9 = func_53(num8, -180f, 180f);
-			vector = { camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)) };
+			vector = Vector3(camRot + ((num - camRot) * Vector3(0.25f, 0.25f, 0.25f)));
 			vector.f_2 = camRot.f_2 + (num9 * 0.25f);
 		}
 	

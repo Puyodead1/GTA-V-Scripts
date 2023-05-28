@@ -6665,8 +6665,8 @@ void func_210() // Position - 0x730F
 		fLocal_967.f_1 = num2.f_1;
 	}
 
-	fLocal_964 = { fLocal_964 - Vector3(20f, 20f, 20f) };
-	fLocal_967 = { fLocal_967 + Vector3(20f, 20f, 20f) };
+	fLocal_964 = Vector3(fLocal_964 - Vector3(20f, 20f, 20f));
+	fLocal_967 = Vector3(fLocal_967 + Vector3(20f, 20f, 20f));
 	PATHFIND::REQUEST_PATH_NODES_IN_AREA_THIS_FRAME(fLocal_964, fLocal_964.f_1, fLocal_967, fLocal_967.f_1);
 	return;
 }
@@ -10315,8 +10315,8 @@ BOOL func_328(Entity eParam0) // Position - 0xC687
 	PATHFIND::GET_POSITION_BY_SIDE_OF_ROAD(outPosition, -1, &outPosition3);
 	num = SYSTEM::VMAG(outPosition3 - outPosition);
 	unk7 = Vector3(func_332(outPosition2 - outPosition, outPosition2.f_1 - outPosition.f_1, 0f));
-	unk10 = { func_331(unk7, 0) * Vector3(num, num, num) };
-	unk7 = { unk7 * Vector3(2f, 2f, 2f) };
+	unk10 = Vector3(func_331(unk7, 0) * Vector3(num, num, num));
+	unk7 = Vector3(unk7 * Vector3(2f, 2f, 2f));
 	unk13 = Vector3((outPosition - unk7) + unk10);
 	unk16 = Vector3(outPosition - unk7 - unk10);
 	unk19 = Vector3(outPosition2 + unk7 + unk10);
@@ -10415,7 +10415,7 @@ Vector3 func_332(float fParam0, float fParam1, float fParam2) // Position - 0xC8
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

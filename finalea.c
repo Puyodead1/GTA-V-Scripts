@@ -44973,7 +44973,7 @@ BOOL func_345(int iParam0, var uParam1, var uParam2) // Position - 0x31B7E
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	
@@ -48612,8 +48612,8 @@ void func_418(Vehicle veParam0, float fParam1) // Position - 0x37241
 						fLocal_2518.f_2 = num;
 					}
 				
-					fLocal_2515 = { fLocal_2515 - Vector3(fLocal_1222, fLocal_1222, fLocal_1222) };
-					fLocal_2518 = { fLocal_2518 + Vector3(fLocal_1222, fLocal_1222, fLocal_1222) };
+					fLocal_2515 = Vector3(fLocal_2515 - Vector3(fLocal_1222, fLocal_1222, fLocal_1222));
+					fLocal_2518 = Vector3(fLocal_2518 + Vector3(fLocal_1222, fLocal_1222, fLocal_1222));
 					PATHFIND::SET_ROADS_IN_AREA(fLocal_2515, fLocal_2518, false, false);
 					fLocal_1218 = time;
 					iLocal_1815 = 0;
@@ -48658,8 +48658,8 @@ void func_418(Vehicle veParam0, float fParam1) // Position - 0x37241
 					fLocal_2524.f_2 = num;
 				}
 			
-				fLocal_2521 = { fLocal_2521 - Vector3(fLocal_1222, fLocal_1222, fLocal_1222) };
-				fLocal_2524 = { fLocal_2524 + Vector3(fLocal_1222, fLocal_1222, fLocal_1222) };
+				fLocal_2521 = Vector3(fLocal_2521 - Vector3(fLocal_1222, fLocal_1222, fLocal_1222));
+				fLocal_2524 = Vector3(fLocal_2524 + Vector3(fLocal_1222, fLocal_1222, fLocal_1222));
 				PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(fLocal_2521, fLocal_2524, 1);
 				fLocal_1219 = time2;
 				iLocal_1818 = 0;
@@ -51892,7 +51892,7 @@ Object func_470(Ped pedParam0, Hash hParam1, int iParam2, BOOL bParam3, int iPar
 		}
 	}
 
-	vector = { ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f) };
+	vector = Vector3(ENTITY::GET_ENTITY_COORDS(pedParam0, false) - Vector3(10f, 0f, 0f));
 
 	if (bParam3)
 		vector = Vector3(iParam4, iParam5, iParam6);

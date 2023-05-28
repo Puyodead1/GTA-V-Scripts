@@ -3300,8 +3300,8 @@ void func_85(float fParam0, var uParam1, var uParam2, float fParam3, var uParam4
 			uParam7->f_1 = fParam3.f_1;
 		}
 	
-		*uParam6 = { *uParam6 - Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
-		*uParam7 = { *uParam7 + Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
+		*uParam6 = Vector3(*uParam6 - Vector3((float)iParam8, (float)iParam8, (float)iParam8));
+		*uParam7 = Vector3(*uParam7 + Vector3((float)iParam8, (float)iParam8, (float)iParam8));
 		bLocal_318 = true;
 	}
 

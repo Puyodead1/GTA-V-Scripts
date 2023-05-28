@@ -12510,7 +12510,7 @@ void func_351(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
 	unk3 = Vector3(vector);
 	func_39(&unk3, 0f, 0f, fParam7);
-	unk3 = { unk3 * Vector3(fParam6, fParam6, fParam6) };
+	unk3 = Vector3(unk3 * Vector3(fParam6, fParam6, fParam6));
 	*uParam9 = Vector3(uParam0 + unk3);
 	uParam9->f_2 = uParam0.f_2;
 	*uParam10 = Vector3(uParam3);
@@ -13563,7 +13563,7 @@ int func_355(var uParam0) // Position - 0x21804
 	unk.f_2 = 0f;
 	vector = Vector3(func_357(0f, 0f, 1f, unk));
 	vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
-	vector = { vector * Vector3(uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f) };
+	vector = Vector3(vector * Vector3(uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f, uParam0->f_6 * 0.5f));
 	unk6[0] = Vector3(*uParam0 + vector);
 	unk6[1] = Vector3(*uParam0 - vector);
 	unk6[2] = Vector3(uParam0->f_3 + vector);
@@ -13645,12 +13645,12 @@ void func_358(int iParam0, var uParam1, var uParam2, var uParam3) // Position - 
 
 	func_359(iParam0, &unk2, &unk5, &unk8, &unk, false);
 	unk9 = Vector3(unk2 + unk5);
-	unk9 = { unk9 / Vector3(2f, 2f, 2f) };
+	unk9 = Vector3(unk9 / Vector3(2f, 2f, 2f));
 	unk12 = Vector3(unk5 - unk2);
 	vector = Vector3(func_357(unk12, 0f, 0f, 1f));
 	vector = Vector3(vector / F2V(SYSTEM::VMAG(vector)));
-	unk17 = { unk9 - (vector * Vector3(38f, 38f, 38f)) };
-	unk20 = { unk9 + (vector * Vector3(3f, 3f, 3f)) };
+	unk17 = Vector3(unk9 - (vector * Vector3(38f, 38f, 38f)));
+	unk20 = Vector3(unk9 + (vector * Vector3(3f, 3f, 3f)));
 	*uParam1 = Vector3(unk17);
 	uParam1->f_2 = uParam1->f_2 + -10f;
 	*uParam2 = Vector3(unk20);

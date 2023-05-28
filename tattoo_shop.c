@@ -47075,11 +47075,11 @@ void func_273() // Position - 0x34274
 	switch (num)
 	{
 		case 4:
-			vector = { vector + Vector3(-0.8058f, 0f, 0f) };
+			vector = Vector3(vector + Vector3(-0.8058f, 0f, 0f));
 			break;
 	
 		case 5:
-			vector = { vector + Vector3(-0.8058f, 0f, 0f) };
+			vector = Vector3(vector + Vector3(-0.8058f, 0f, 0f));
 			break;
 	}
 
@@ -47088,11 +47088,11 @@ void func_273() // Position - 0x34274
 	switch (num)
 	{
 		case 4:
-			unk3 = { unk3 + Vector3(-0.8058f, 0f, 0f) };
+			unk3 = Vector3(unk3 + Vector3(-0.8058f, 0f, 0f));
 			break;
 	
 		case 5:
-			unk3 = { unk3 + Vector3(-0.8058f, 0f, 0f) };
+			unk3 = Vector3(unk3 + Vector3(-0.8058f, 0f, 0f));
 			break;
 	}
 
@@ -47125,12 +47125,12 @@ void func_273() // Position - 0x34274
 		fLocal_785 = iLocal_103.f_54[0].f_4.f_2;
 		iLocal_103.f_54[0].f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uLocal_772, iLocal_103.f_54[0].f_4.f_2, vector));
 		iLocal_103.f_54[0].f_11 = 0;
-		uLocal_775 = { uLocal_772 + Vector3(0.25f, 0f, 0f) };
+		uLocal_775 = Vector3(uLocal_772 + Vector3(0.25f, 0f, 0f));
 		uLocal_778 = Vector3(uLocal_775);
 	}
 	else
 	{
-		uLocal_778 = { uLocal_778 + ((unk3 - uLocal_778) * Vector3(0.25f, 0.25f, 0.25f)) };
+		uLocal_778 = Vector3(uLocal_778 + ((unk3 - uLocal_778) * Vector3(0.25f, 0.25f, 0.25f)));
 	}
 
 	if (fLocal_782 == 0f || fLocal_782 == 1f)
@@ -48874,7 +48874,7 @@ BOOL func_281(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_283(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_282(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -124534,7 +124534,7 @@ Vector3 func_900(float fParam0, var uParam1, var uParam2) // Position - 0x9CACF
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

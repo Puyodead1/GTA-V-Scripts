@@ -30320,13 +30320,13 @@ void func_180() // Position - 0x20E2F
 			{
 				if (iLocal_52 == 1)
 				{
-					uLocal_59 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(-1f, 8.8f, 0f) };
+					uLocal_59 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(-1f, 8.8f, 0f));
 					PATHFIND::GET_SAFE_COORD_FOR_PED(uLocal_59, false, &uLocal_59, 0);
-					uLocal_62 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector3(-1f, 0f, 8.8f) };
+					uLocal_62 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector3(-1f, 0f, 8.8f));
 					PATHFIND::GET_SAFE_COORD_FOR_PED(uLocal_62, false, &uLocal_62, 0);
-					uLocal_65 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector3(-1f, 8.8f, 0f) };
+					uLocal_65 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) + Vector3(-1f, 8.8f, 0f));
 					PATHFIND::GET_SAFE_COORD_FOR_PED(uLocal_65, false, &uLocal_65, 0);
-					uLocal_68 = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(-1f, 0f, 8.8f) };
+					uLocal_68 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - Vector3(-1f, 0f, 8.8f));
 					PATHFIND::GET_SAFE_COORD_FOR_PED(uLocal_68, false, &uLocal_68, 0);
 				
 					if (!CAM::IS_SPHERE_VISIBLE(uLocal_59, 2f))

@@ -211,7 +211,7 @@ void main() // Position - 0x0
 	name = "tvscreen";
 	sizeAndPeds = 25;
 	flag2 = true;
-	vector = { ENTITY::GET_ENTITY_COORDS(obScriptParam_135, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obScriptParam_135) * Vector3(0.6f, 0.6f, 0.6f)) };
+	vector = Vector3(ENTITY::GET_ENTITY_COORDS(obScriptParam_135, true) - (ENTITY::GET_ENTITY_FORWARD_VECTOR(obScriptParam_135) * Vector3(0.6f, 0.6f, 0.6f)));
 	vector.f_2 = vector.f_2 + 0.5f;
 	uLocal_128 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_135, uLocal_125));
 	Global_1949969 = 0;

@@ -4052,7 +4052,7 @@ Vector3 func_95(int iParam0) // Position - 0x42FC
 			break;
 	
 		case 1:
-			unk = { Vector3(28.5036f, -1348.8127f, 27.0641f) + Vector3(0f, -0.4f, 2f) };
+			unk = Vector3(Vector3(28.5036f, -1348.8127f, 27.0641f) + Vector3(0f, -0.4f, 2f));
 			break;
 	
 		case 2:
@@ -4104,7 +4104,7 @@ Vector3 func_95(int iParam0) // Position - 0x42FC
 			break;
 	
 		case 14:
-			unk = { Vector3(37.1573f, 2703.1143f, 1195.432f) + Vector3(0f, 0.39f, -29.04f) };
+			unk = Vector3(Vector3(37.1573f, 2703.1143f, 1195.432f) + Vector3(0f, 0.39f, -29.04f));
 			break;
 	
 		case 15:

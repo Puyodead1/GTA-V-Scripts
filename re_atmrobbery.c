@@ -3944,7 +3944,7 @@ void func_68(Ped pedParam0, var uParam1, var uParam2, char* sParam3, char* sPara
 	if (STREAMING::HAS_ANIM_DICT_LOADED(sParam3))
 		animInitialOffsetPosition = Vector3(PED::GET_ANIM_INITIAL_OFFSET_POSITION(sParam3, sParam4, *uParam1, *uParam2, 0, 2));
 	else
-		animInitialOffsetPosition = { *uParam1 + Vector3(0f, 5f, 5f) };
+		animInitialOffsetPosition = Vector3(*uParam1 + Vector3(0f, 5f, 5f));
 
 	while (num < 2)
 	{
@@ -6013,7 +6013,7 @@ Vector3 func_140(float fParam0, var uParam1, var uParam2) // Position - 0x7A7C
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

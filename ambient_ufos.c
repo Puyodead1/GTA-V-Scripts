@@ -424,7 +424,7 @@ void func_8() // Position - 0x525
 	if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_78[iLocal_76], fLocal_88, true))
 		return;
 
-	vector = { func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - iLocal_78[iLocal_76]) * Vector3(fLocal_89, fLocal_89, fLocal_89) };
+	vector = Vector3(func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - iLocal_78[iLocal_76]) * Vector3(fLocal_89, fLocal_89, fLocal_89));
 	ENTITY::APPLY_FORCE_TO_ENTITY(PLAYER::PLAYER_PED_ID(), 2, vector, 0f, 0f, 0f, 0, false, true, true, false, true);
 	return;
 }
@@ -439,7 +439,7 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

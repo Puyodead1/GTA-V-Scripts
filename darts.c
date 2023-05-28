@@ -2613,7 +2613,7 @@ BOOL func_19(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, 
 		func_21(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_20(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -15665,7 +15665,7 @@ BOOL func_279(var uParam0, var uParam1, int iParam2, BOOL bParam3) // Position -
 		func_280("Darts", "Dart_Reticules", &fLocal_70, 1, 0, 4, false);
 
 	frameTime = MISC::GET_FRAME_TIME();
-	unk3 = { uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f) };
+	unk3 = Vector3(uParam0->f_5 * Vector3(frameTime, frameTime, frameTime) * Vector3(8.5f, 8.5f, 8.5f));
 	uParam0->f_2 = Vector3(uParam0->f_2 - unk3);
 
 	if (uParam0->f_2.f_1 > uParam0->f_8.f_1 - 0.04f)
@@ -15974,7 +15974,7 @@ void func_293(var uParam0) // Position - 0x18270
 	uParam0->f_8.f_1 = -0.213f;
 	vector = Vector3(uLocal_82 - uParam0->f_8);
 	num = SYSTEM::VMAG(vector);
-	uParam0->f_5 = { vector / Vector3(num, num, num) };
+	uParam0->f_5 = Vector3(vector / Vector3(num, num, num));
 	headingFromVector2d = MISC::GET_HEADING_FROM_VECTOR_2D(uParam0->f_5, uParam0->f_5.f_1);
 	uParam0->f_17.f_2 = headingFromVector2d - 180f;
 	num2 = MISC::TAN(uParam0->f_17.f_2) * num3;
@@ -15982,7 +15982,7 @@ void func_293(var uParam0) // Position - 0x18270
 	uParam0->f_11 = uParam0->f_11 + num2;
 	vector = Vector3(uLocal_82 - uParam0->f_11);
 	num = SYSTEM::VMAG(vector);
-	uParam0->f_5 = { vector / Vector3(num, num, num) };
+	uParam0->f_5 = Vector3(vector / Vector3(num, num, num));
 	return;
 }
 
@@ -23893,7 +23893,7 @@ BOOL func_498(int iParam0, var uParam1, var uParam2) // Position - 0x23387
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ));
 			*uParam2 = 90f;
 			return true;
 	

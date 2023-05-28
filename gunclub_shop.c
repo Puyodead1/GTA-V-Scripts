@@ -28632,15 +28632,15 @@ BOOL func_216(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		}
 	
 		if (iParam3 == 11)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num)));
 		else if (iParam3 == 12)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num2)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num2)));
 		else if (iParam3 == 13)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num3)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num3)));
 		else if (iParam3 == 14)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num4)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num4)));
 		else if (iParam3 == 15)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num5)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num5)));
 	}
 
 	if (hashKey11 == hashKey2 && iParam6 == 0)
@@ -29309,15 +29309,15 @@ BOOL func_216(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, B
 		}
 	
 		if (iParam3 == 11)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num)));
 		else if (iParam3 == 12)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num2)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num2)));
 		else if (iParam3 == 13)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num3)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num3)));
 		else if (iParam3 == 14)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num4)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num4)));
 		else if (iParam3 == 15)
-			uParam2->f_1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num5)) };
+			uParam2->f_1 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(uParam2->f_1, uParam2->f_4.f_2, Vector3(0f, 0f, -0.4f) + Vector3(0f, 0f, num5)));
 	}
 
 	if (hashKey11 == hashKey3 && iParam6 == 0)
@@ -31498,7 +31498,7 @@ BOOL func_224(Hash hParam0, var uParam1, int iParam2, int iParam3) // Position -
 	unk = Vector3(func_234());
 	unk4 = Vector3(func_233());
 	unk7 = Vector3(func_232());
-	unk10 = { unk + unk7 + Vector3(2f, 0f, 0f) };
+	unk10 = Vector3(unk + unk7 + Vector3(2f, 0f, 0f));
 
 	if (hParam0 == 0)
 		return false;
@@ -56822,7 +56822,7 @@ BOOL func_502(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_500(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_503(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -77358,12 +77358,12 @@ void func_607() // Position - 0x6CAF8
 		finalRenderedCamCoord = Vector3(CAM::GET_FINAL_RENDERED_CAM_COORD());
 		finalRenderedCamRot = Vector3(CAM::GET_FINAL_RENDERED_CAM_ROT(2));
 		finalRenderedCamFov = CAM::GET_FINAL_RENDERED_CAM_FOV();
-		vector = { finalRenderedCamCoord + ((iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 - finalRenderedCamCoord) * Vector3(0.2f, 0.2f, 0.2f)) };
+		vector = Vector3(finalRenderedCamCoord + ((iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 - finalRenderedCamCoord) * Vector3(0.2f, 0.2f, 0.2f)));
 		fieldOfView = finalRenderedCamFov + ((iLocal_143.f_54[iLocal_143.f_119.f_4].f_7 - finalRenderedCamFov) * 0.2f);
 	
 		if (bLocal_1266)
 		{
-			vector = { finalRenderedCamCoord + ((iLocal_143.f_187.f_42 - finalRenderedCamCoord) * Vector3(0.2f, 0.2f, 0.2f)) };
+			vector = Vector3(finalRenderedCamCoord + ((iLocal_143.f_187.f_42 - finalRenderedCamCoord) * Vector3(0.2f, 0.2f, 0.2f)));
 		
 			for (i = iLocal_143.f_187.f_45.f_2 - finalRenderedCamRot.f_2; i < -180f; i = i + 360f)
 			{
@@ -77698,7 +77698,7 @@ void func_609() // Position - 0x6D343
 							}
 						
 							unk26 = Vector3(iLocal_143.f_54[iLocal_143.f_119.f_4].f_1);
-							iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 = { iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 + ((offsetFromCoordAndHeadingInWorldCoords - unk26) * Vector3(num6, num6, num6)) };
+							iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 = Vector3(iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 + ((offsetFromCoordAndHeadingInWorldCoords - unk26) * Vector3(num6, num6, num6)));
 						}
 						else if (unk31.f_4 != joaat("gun_root") && !(func_93(hash, joaat("gun_root")) && func_177(hash)))
 						{
@@ -78159,7 +78159,7 @@ void func_617(var uParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) 
 			}
 		
 			num = Vector3(entityCoords);
-			num = { num + ((offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(0.25f, 0.25f, 0.25f)) };
+			num = Vector3(num + ((offsetFromCoordAndHeadingInWorldCoords - entityCoords) * Vector3(0.25f, 0.25f, 0.25f)));
 		
 			if (num > offsetFromCoordAndHeadingInWorldCoords - 0.01f && num < offsetFromCoordAndHeadingInWorldCoords + 0.01f && num.f_1 > offsetFromCoordAndHeadingInWorldCoords.f_1 - 0.01f && num.f_1 < offsetFromCoordAndHeadingInWorldCoords.f_1 + 0.01f)
 			{
@@ -78336,11 +78336,11 @@ void func_617(var uParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) 
 					num6 = Vector3(func_234());
 				
 					if (!(num6 == 0f || num6.f_1 == 0f))
-						num2 = { num2 + Vector3(90f, -90f, 0f) };
+						num2 = Vector3(num2 + Vector3(90f, -90f, 0f));
 				}
 			
 				num7 = Vector3(*uParam1);
-				num7 = { num7 + ((num2 - *uParam1) * Vector3(0.25f, 0.25f, 0.25f)) };
+				num7 = Vector3(num7 + ((num2 - *uParam1) * Vector3(0.25f, 0.25f, 0.25f)));
 			
 				if (*uParam3 == joaat("WEAPON_PUMPSHOTGUN_MK2"))
 				{
@@ -78360,11 +78360,11 @@ void func_617(var uParam0, var uParam1, var uParam2, var uParam3, BOOL bParam4) 
 		{
 			unk18 = Vector3(uParam3->f_1);
 			vector = Vector3(entityCoords);
-			vector = { vector + ((unk18 - entityCoords) * Vector3(0.35f, 0.35f, 0.35f)) };
+			vector = Vector3(vector + ((unk18 - entityCoords) * Vector3(0.35f, 0.35f, 0.35f)));
 			ENTITY::SET_ENTITY_COORDS(*uParam0, vector, true, false, false, true);
 			unk23 = Vector3(uParam3->f_4);
 			vector2 = Vector3(*uParam1);
-			vector2 = { vector2 + ((unk23 - *uParam1) * Vector3(0.3f, 0.3f, 0.3f)) };
+			vector2 = Vector3(vector2 + ((unk23 - *uParam1) * Vector3(0.3f, 0.3f, 0.3f)));
 			ENTITY::SET_ENTITY_ROTATION(*uParam0, vector2, 2, true);
 			*uParam1 = Vector3(vector2);
 		
@@ -82936,7 +82936,7 @@ void func_620() // Position - 0x6E6EF
 						unk82 = Vector3(iLocal_143.f_54[iLocal_143.f_119.f_4].f_1);
 						num53 = 0.4f;
 						func_725(weaponHash, &num53, flag);
-						iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 = { iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 + ((offsetFromCoordAndHeadingInWorldCoords - unk82) * Vector3(num53, num53, num53)) };
+						iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 = Vector3(iLocal_143.f_54[iLocal_143.f_119.f_4].f_1 + ((offsetFromCoordAndHeadingInWorldCoords - unk82) * Vector3(num53, num53, num53)));
 						iLocal_143.f_119.f_17 = 1;
 					}
 				}
@@ -130990,7 +130990,7 @@ Vector3 func_850(float fParam0, var uParam1, var uParam2) // Position - 0xAC5F5
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -139725,7 +139725,7 @@ struct<12> func_1002() // Position - 0xB7487
 	{
 	}
 
-	unk20.f_4 = { unk3 + Vector3(i, 0f, 0f) };
+	unk20.f_4 = Vector3(unk3 + Vector3(i, 0f, 0f));
 	unk20.f_1 = Vector3(entityCoords + num);
 	unk20.f_7 = 25f;
 	return unk20;
@@ -154338,7 +154338,7 @@ BOOL func_1215(var uParam0, int iParam1, int iParam2) // Position - 0xCBD05
 				TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_7), "GS_BROWSE_W" /*Press ~a~ to browse weapons.*/, 16);
 				uParam0->f_1 = Vector3(func_16(2, 2));
 				uParam0->f_13[0] = Vector3(func_16(2, 2));
-				uParam0->f_13[1] = { func_16(2, 2) + Vector3(2.5f, 2f, 0f) };
+				uParam0->f_13[1] = Vector3(func_16(2, 2) + Vector3(2.5f, 2f, 0f));
 				uParam0->f_26[0] = 1.75f;
 			}
 			else if (func_258(3, &unk))
@@ -154347,7 +154347,7 @@ BOOL func_1215(var uParam0, int iParam1, int iParam2) // Position - 0xCBD05
 				TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_7), "GS_BROWSE_W" /*Press ~a~ to browse weapons.*/, 16);
 				uParam0->f_1 = Vector3(func_16(45, 3));
 				uParam0->f_13[0] = Vector3(func_16(45, 3));
-				uParam0->f_13[1] = { func_16(45, 3) + Vector3(2.5f, 2.25f, 0f) };
+				uParam0->f_13[1] = Vector3(func_16(45, 3) + Vector3(2.5f, 2.25f, 0f));
 				uParam0->f_26[0] = 1.75f;
 			}
 		}

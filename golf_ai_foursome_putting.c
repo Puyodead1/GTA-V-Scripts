@@ -1742,18 +1742,18 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 	var unk;
 	float unk2;
 
-	unk = { func_64(Vector3(51.66f, 61.69f, -1405.69f) - Vector3(51.76f, 61.61f, -1403.44f)) };
+	unk = Vector3(func_64(Vector3(51.66f, 61.69f, -1405.69f) - Vector3(51.76f, 61.61f, -1403.44f)));
 	num = func_63(unk, -1405.69f, 61.69f, 51.66f);
 
 	if (func_63(vParam0, unk) > num)
 		return true;
 
-	unk = { func_64(Vector3(0f, -85.86f, -1167.9f) - Vector3(0f, -89.1f, -1162.01f)) };
+	unk = Vector3(func_64(Vector3(0f, -85.86f, -1167.9f) - Vector3(0f, -89.1f, -1162.01f)));
 	num = func_63(unk, Vector3(0f, -89.1f, -1162.01f) - (Vector3(9.92f, 9.92f, 9.92f) * unk));
 
 	if (func_63(vParam0, unk) > num)
 	{
-		unk = { func_64(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)) };
+		unk = Vector3(func_64(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)));
 		num = func_63(unk, Vector3(39.97f, -89.76f, -1193.7f) - (Vector3(2.778f, 2.778f, 2.778f) * unk));
 	
 		if (func_63(vParam0, unk) > num)
@@ -1764,19 +1764,19 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 	}
 	else
 	{
-		unk = { func_64(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)) };
+		unk = Vector3(func_64(Vector3(0f, -89.76f, -1193.7f) - Vector3(0f, -87.41f, -1192.45f)));
 		num = func_63(unk, Vector3(39.97f, -89.76f, -1193.7f) - (Vector3(1.03f, 1.03f, 1.03f) * unk));
 	
 		if (func_63(vParam0, unk) > num)
 			return true;
 	}
 
-	unk = { func_64(Vector3(0f, -113.24f, -970.31f) - Vector3(0f, -115.19f, -973.91f)) };
+	unk = Vector3(func_64(Vector3(0f, -113.24f, -970.31f) - Vector3(0f, -115.19f, -973.91f)));
 	num = func_63(unk, -970.31f, -113.24f, 38.28f);
 
 	if (func_63(vParam0, unk) > num)
 	{
-		unk = { func_64(Vector3(0f, -106.46f, -948.52f) - Vector3(0f, -102.2f, -951.06f)) };
+		unk = Vector3(func_64(Vector3(0f, -106.46f, -948.52f) - Vector3(0f, -102.2f, -951.06f)));
 		num = func_63(unk, -948.52f, -106.46f, 42.39f);
 	
 		if (func_63(vParam0, unk) > num)
@@ -1784,12 +1784,12 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 	}
 	else
 	{
-		unk = { func_64(Vector3(0f, -127.38f, -1028.62f) - Vector3(0f, -129.55f, -1034.37f)) };
+		unk = Vector3(func_64(Vector3(0f, -127.38f, -1028.62f) - Vector3(0f, -129.55f, -1034.37f)));
 		num = func_63(unk, -1028.62f, -127.38f, 39.51f);
 	
 		if (func_63(vParam0, unk) > num)
 		{
-			unk = { func_64(Vector3(0f, -125.95f, -994.29f) - Vector3(0f, -94.44f, -1001.81f)) };
+			unk = Vector3(func_64(Vector3(0f, -125.95f, -994.29f) - Vector3(0f, -94.44f, -1001.81f)));
 			num = func_63(unk, -994.29f, -125.95f, 40.12f);
 		
 			if (func_63(vParam0, unk) > num)
@@ -1797,7 +1797,7 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 		}
 		else
 		{
-			unk = { func_64(Vector3(0f, -140.83f, -1037.99f) - Vector3(0f, -131.81f, -1043.54f)) };
+			unk = Vector3(func_64(Vector3(0f, -140.83f, -1037.99f) - Vector3(0f, -131.81f, -1043.54f)));
 			num = func_63(unk, -1037.99f, -140.83f, 42.99f);
 		
 			if (func_63(vParam0, unk) > num)
@@ -1805,17 +1805,17 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 		}
 	}
 
-	unk = { func_64(Vector3(0f, 96.74f, -1047.59f) - Vector3(0f, 87.45f, -1041.82f)) };
+	unk = Vector3(func_64(Vector3(0f, 96.74f, -1047.59f) - Vector3(0f, 87.45f, -1041.82f)));
 	num = func_63(unk, -1047.59f, 96.74f, 52.25f);
 
 	if (func_63(vParam0, unk) > num)
 	{
-		unk = { func_64(Vector3(0f, 180.44f, -1094.08f) - Vector3(0f, 167.17f, -1086.17f)) };
+		unk = Vector3(func_64(Vector3(0f, 180.44f, -1094.08f) - Vector3(0f, 167.17f, -1086.17f)));
 		num = func_63(unk, -1094.08f, 180.44f, 61.49f);
 	
 		if (func_63(vParam0, unk) > num)
 		{
-			unk = { func_64(Vector3(0f, 196.78f, -1092f) - Vector3(0f, 179.38f, -1163.07f)) };
+			unk = Vector3(func_64(Vector3(0f, 196.78f, -1092f) - Vector3(0f, 179.38f, -1163.07f)));
 			num = func_63(unk, Vector3(60.09f, 196.78f, -1092f) - (Vector3(3.75f, 3.75f, 3.75f) * unk));
 		
 			if (func_63(vParam0, unk) > num)
@@ -1823,7 +1823,7 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 		}
 		else
 		{
-			unk = { func_64(Vector3(0f, 145.22f, -1069.28f) - Vector3(0f, 98.02f, -1152.37f)) };
+			unk = Vector3(func_64(Vector3(0f, 145.22f, -1069.28f) - Vector3(0f, 98.02f, -1152.37f)));
 			num = func_63(unk, -1069.28f, 145.22f, 61.6f);
 		
 			if (func_63(vParam0, unk) > num)
@@ -1832,19 +1832,19 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 	}
 	else
 	{
-		unk = { func_64(Vector3(0f, -19.35f, -967.03f) - Vector3(0f, -63.01f, -1035.28f)) };
+		unk = Vector3(func_64(Vector3(0f, -19.35f, -967.03f) - Vector3(0f, -63.01f, -1035.28f)));
 		num = func_63(unk, -967.03f, -19.35f, 48.28f);
 	
 		if (func_63(vParam0, unk) > num)
 			return true;
 	}
 
-	unk = { func_64(Vector3(0f, 186.79f, -1274.15f) - Vector3(0f, 185.87f, -1255.38f)) };
+	unk = Vector3(func_64(Vector3(0f, 186.79f, -1274.15f) - Vector3(0f, 185.87f, -1255.38f)));
 	num = func_63(unk, -1274.15f, 186.79f, 61.97f);
 
 	if (func_63(vParam0, unk) > num)
 	{
-		unk = { func_64(Vector3(0f, 192.648f, -1326.063f) - Vector3(0f, 183.78f, -1325.44f)) };
+		unk = Vector3(func_64(Vector3(0f, 192.648f, -1326.063f) - Vector3(0f, 183.78f, -1325.44f)));
 		num = func_63(unk, -1326.063f, 192.648f, 61.76f);
 	
 		if (func_63(vParam0, unk) > num)
@@ -1852,7 +1852,7 @@ BOOL func_62(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x2637
 	}
 	else
 	{
-		unk = { func_64(Vector3(0f, 226.63f, -1159.35f) - Vector3(0f, 203.93f, -1152.92f)) };
+		unk = Vector3(func_64(Vector3(0f, 226.63f, -1159.35f) - Vector3(0f, 203.93f, -1152.92f)));
 		num = func_63(unk, -1159.35f, 226.63f, 70f);
 	
 		if (func_63(vParam0, unk) > num)
@@ -1877,7 +1877,7 @@ Vector3 func_64(float fParam0, float fParam1, float fParam2) // Position - 0x2BF
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -2023,7 +2023,7 @@ void func_70(Object obParam0, float fParam1, var uParam2, var uParam3, float fPa
 {
 	Vector3 vector;
 
-	vector = { func_64(Vector3(0f, fParam4.f_1, fParam4) - Vector3(0f, fParam1.f_1, fParam1)) * Vector3(9f, 9f, 9f) };
+	vector = Vector3(func_64(Vector3(0f, fParam4.f_1, fParam4) - Vector3(0f, fParam1.f_1, fParam1)) * Vector3(9f, 9f, 9f));
 	ENTITY::APPLY_FORCE_TO_ENTITY(obParam0, 0, vector, 0f, 0f, 0f, 0, false, false, true, false, true);
 	return;
 }
@@ -2242,7 +2242,7 @@ void func_83(var uParam0, var uParam1, var uParam2) // Position - 0x330B
 	value = func_98(uParam2);
 	unk5 = Vector3(func_64(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 	unk8 = Vector3(func_97(unk5, 0));
-	vector = { (unk5 * Vector3(-num2, -num2, -num2) * Vector3(0.05f, 0.05f, 0.05f)) + (unk8 * Vector3(num2.f_1, num2.f_1, num2.f_1) * Vector3(0.2f, 0.2f, 0.2f)) };
+	vector = Vector3((unk5 * Vector3(-num2, -num2, -num2) * Vector3(0.05f, 0.05f, 0.05f)) + (unk8 * Vector3(num2.f_1, num2.f_1, num2.f_1) * Vector3(0.2f, 0.2f, 0.2f)));
 	GRAPHICS::DRAW_DEBUG_LINE(ENTITY::GET_ENTITY_COORDS(object, true), ENTITY::GET_ENTITY_COORDS(object, true) + func_64(vector), 0, 0, 0, 255);
 
 	if (func_78(uParam0, uParam1, uParam2))
@@ -2318,8 +2318,8 @@ void func_83(var uParam0, var uParam1, var uParam2) // Position - 0x330B
 	
 		if (!bLocal_229)
 		{
-			vector = { (unk5 * Vector3(-num2, -num2, -num2) * Vector3(0.2f, 0.2f, 0.2f)) + (unk8 * Vector3(num2.f_1, num2.f_1, num2.f_1) * Vector3(0.2f, 0.2f, 0.2f)) };
-			vector = { vector * Vector3(num5, num5, num5) };
+			vector = Vector3((unk5 * Vector3(-num2, -num2, -num2) * Vector3(0.2f, 0.2f, 0.2f)) + (unk8 * Vector3(num2.f_1, num2.f_1, num2.f_1) * Vector3(0.2f, 0.2f, 0.2f)));
+			vector = Vector3(vector * Vector3(num5, num5, num5));
 			ENTITY::APPLY_FORCE_TO_ENTITY(object, 0, vector, 0f, 0f, 0f, 0, false, false, true, false, true);
 		}
 	
@@ -2331,9 +2331,9 @@ void func_83(var uParam0, var uParam1, var uParam2) // Position - 0x330B
 			{
 				MISC::GET_GROUND_Z_AND_NORMAL_FOR_3D_COORD(ENTITY::GET_ENTITY_COORDS(object, true) + Vector3(1f, 0f, 0f), &groundZ, &normal);
 				unk17 = Vector3(F2V(func_63(uLocal_236, normal)) * normal);
-				vector2 = { (Vector3(-(1f + num4), -(1f + num4), -(1f + num4)) * unk17) + uLocal_236 };
+				vector2 = Vector3((Vector3(-(1f + num4), -(1f + num4), -(1f + num4)) * unk17) + uLocal_236);
 				unk20 = Vector3(uLocal_236 - unk17);
-				vector2 = { vector2 - (unk20 * Vector3(num6, num6, num6)) };
+				vector2 = Vector3(vector2 - (unk20 * Vector3(num6, num6, num6)));
 				ENTITY::SET_ENTITY_VELOCITY(object, vector2);
 			}
 		
@@ -2346,7 +2346,7 @@ void func_83(var uParam0, var uParam1, var uParam2) // Position - 0x330B
 		
 			if (num3 != 1f)
 			{
-				entityVelocity2 = { entityVelocity2 * Vector3(num3, num3, num3) };
+				entityVelocity2 = Vector3(entityVelocity2 * Vector3(num3, num3, num3));
 				ENTITY::SET_ENTITY_VELOCITY(object, entityVelocity2);
 			}
 		}
@@ -2358,7 +2358,7 @@ void func_83(var uParam0, var uParam1, var uParam2) // Position - 0x330B
 	
 		if (!bLocal_228 && !func_93(uParam2))
 		{
-			vector3 = { func_64(uParam0->f_16, uParam0->f_16.f_1, 0f) * Vector3(uParam0->f_20, uParam0->f_20, uParam0->f_20) * Vector3(0.5f, 0.5f, 0.5f) };
+			vector3 = Vector3(func_64(uParam0->f_16, uParam0->f_16.f_1, 0f) * Vector3(uParam0->f_20, uParam0->f_20, uParam0->f_20) * Vector3(0.5f, 0.5f, 0.5f));
 			ENTITY::APPLY_FORCE_TO_ENTITY(object, 0, vector3, 0f, 0f, 0f, 0, false, false, true, false, true);
 		}
 	
@@ -2626,7 +2626,7 @@ void func_96(var uParam0) // Position - 0x3CA0
 	if (uParam0->f_5 == 0f && uParam0->f_6 == 0f)
 		return;
 
-	value = { func_64(uParam0->f_5, uParam0->f_6, 0f) * Vector3(25f, 25f, 25f) * F2V(MISC::GET_FRAME_TIME()) };
+	value = Vector3(func_64(uParam0->f_5, uParam0->f_6, 0f) * Vector3(25f, 25f, 25f) * F2V(MISC::GET_FRAME_TIME()));
 	unk3 = Vector3(-value);
 
 	if (MISC::ABSF(uParam0->f_5) < MISC::ABSF(value))
@@ -2912,8 +2912,8 @@ BOOL func_108(var uParam0, var uParam1, var uParam2) // Position - 0x4092
 		unk3 = Vector3(func_115(func_60(uParam2) == 4, 0f, 0f, 1f, -func_116(uParam2)));
 		num5 = Vector3(func_64(SYSTEM::COS(value), SYSTEM::SIN(value), 0f));
 		unk8 = Vector3(-func_64(num5 - (F2V(func_63(num5, unk3)) * unk3)));
-		num6 = { func_64((-num5 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))) };
-		num10 = { func_64((unk8 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))) };
+		num6 = Vector3(func_64((-num5 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))));
+		num10 = Vector3(func_64((unk8 * Vector3(num8, num8, num8)) + (unk3 * Vector3(num9, num9, num9))));
 		value2 = func_63(num5, func_64(num10, num10.f_1, 0f));
 		num11 = (num5 * num10.f_1) - (num5.f_1 * num10) < 0f ? -1f : 1f;
 	
@@ -2922,7 +2922,7 @@ BOOL func_108(var uParam0, var uParam1, var uParam2) // Position - 0x4092
 	
 		num6.f_1 = (num10.f_1 / MISC::ABSF(num10.f_1)) * SYSTEM::SQRT(MISC::ABSF(((num6.f_2 * num6.f_2) - 1f) / (((num10 * num10) / (num10.f_1 * num10.f_1)) + 1f)));
 		num6 = (num10 * num6.f_1) / num10.f_1;
-		vector = { Vector3(-1f * num, -1f * num, -1f * num) * num6 };
+		vector = Vector3(Vector3(-1f * num, -1f * num, -1f * num) * num6);
 	}
 
 	if (bLocal_0)
@@ -4363,7 +4363,7 @@ void func_165(var uParam0, float fParam1, var uParam2, var uParam3, var uParam4)
 	uParam2 = Vector3(func_64(uParam2));
 	num = SYSTEM::COS(fParam1);
 	num2 = SYSTEM::SIN(fParam1);
-	*uParam0 = { (func_168(*uParam0, uParam2) * Vector3(num, num, num)) + (func_167(uParam2, *uParam0) * Vector3(num2, num2, num2)) + func_166(*uParam0, uParam2) };
+	*uParam0 = Vector3((func_168(*uParam0, uParam2) * Vector3(num, num, num)) + (func_167(uParam2, *uParam0) * Vector3(num2, num2, num2)) + func_166(*uParam0, uParam2));
 	return;
 }
 
@@ -4700,7 +4700,7 @@ BOOL func_181(Vector3 vParam0, var uParam1, var uParam2, float fParam3, var uPar
 		}
 		else if (SYSTEM::VDIST2(vParam0, *pvParam6) > 100f && !VEHICLE::IS_ANY_VEHICLE_NEAR_POINT(*pvParam6, 5f) && !func_62(*pvParam6))
 		{
-			unk = { func_64(Vector3(0f, pvParam6->f_1, *pvParam6) - Vector3(0f, fParam11.f_1, fParam11)) };
+			unk = Vector3(func_64(Vector3(0f, pvParam6->f_1, *pvParam6) - Vector3(0f, fParam11.f_1, fParam11)));
 		
 			if (!bParam14 || func_182(fParam8, unk) < 0.75f)
 				flag = true;
@@ -4808,7 +4808,7 @@ Vector3 func_190(var uParam0, var uParam1) // Position - 0x6D8C
 	else if (func_31(uParam0) != 3)
 		offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_245(uParam0), func_98(uParam0), -func_126(uParam1, func_122(uParam0)) * func_191(func_118(uParam0)) * func_125(func_32(&uParam0->f_15[func_261(uParam0)])) * (func_149(uParam0, true) / 100f), 0f, 0f));
 	else
-		offsetFromCoordAndHeadingInWorldCoords = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_245(uParam0), func_98(uParam0), Vector3(-uParam0->f_1.f_1, -uParam0->f_1.f_1, -uParam0->f_1.f_1) * Vector3(0f, 0f, func_149(uParam0, true) / 100f)) };
+		offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(func_245(uParam0), func_98(uParam0), Vector3(-uParam0->f_1.f_1, -uParam0->f_1.f_1, -uParam0->f_1.f_1) * Vector3(0f, 0f, func_149(uParam0, true) / 100f)));
 
 	if (MISC::GET_GROUND_Z_FOR_3D_COORD(offsetFromCoordAndHeadingInWorldCoords, &groundZ, false, false))
 	{
@@ -6418,7 +6418,7 @@ void func_260(var uParam0, Ped pedParam1, var uParam2, int iParam3, var uParam4)
 			{
 				if (!ENTITY::IS_ENTITY_DEAD(uParam0->f_3, false))
 				{
-					vector = { uParam0->f_7 + Vector3(50f, 0f, 0f) };
+					vector = Vector3(uParam0->f_7 + Vector3(50f, 0f, 0f));
 				
 					if (MISC::GET_GROUND_Z_FOR_3D_COORD(vector, &groundZ, false, false))
 					{
@@ -6438,7 +6438,7 @@ void func_260(var uParam0, Ped pedParam1, var uParam2, int iParam3, var uParam4)
 		{
 			num = SYSTEM::VDIST(entityCoords2, xPos);
 			unk9 = Vector3(func_64(xPos - entityCoords2));
-			unk12 = { entityCoords2 + (unk9 * Vector3(num, num, num) * Vector3(0.5f, 0.5f, 0.5f)) };
+			unk12 = Vector3(entityCoords2 + (unk9 * Vector3(num, num, num) * Vector3(0.5f, 0.5f, 0.5f)));
 			func_180(uParam2, iParam3, unk12, uParam4, true, true);
 		
 			if (TASK::GET_SCRIPT_TASK_STATUS(func_172(uParam0), SCRIPT_TASK_ANY) == 1)
@@ -6907,7 +6907,7 @@ void func_285(var uParam0, var uParam1, int iParam2, int iParam3) // Position - 
 		if (!ENTITY::DOES_ENTITY_EXIST(func_36(uParam1, i)))
 		{
 			if (i == 1)
-				unk3 = { Vector3(10f, 10f, 10f) * ENTITY::GET_ENTITY_FORWARD_VECTOR(func_36(uParam1, 0)) };
+				unk3 = Vector3(Vector3(10f, 10f, 10f) * ENTITY::GET_ENTITY_FORWARD_VECTOR(func_36(uParam1, 0)));
 		
 			if (func_183(func_298(uParam0, iParam2) + unk3, func_43(uParam0, func_299(uParam1)), &vector, &heading))
 			{

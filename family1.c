@@ -6878,7 +6878,7 @@ BOOL func_14(int iParam0, var uParam1, var uParam2) // Position - 0xF05
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ));
 			*uParam2 = 90f;
 			return true;
 	
@@ -8618,7 +8618,7 @@ Vector3 func_82(float fParam0, var uParam1, var uParam2) // Position - 0x34B1
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -24584,8 +24584,8 @@ void func_375(Vehicle veParam0, float fParam1) // Position - 0x1B1E3
 						fLocal_2421.f_2 = num;
 					}
 				
-					fLocal_2418 = { fLocal_2418 - Vector3(fLocal_1203, fLocal_1203, fLocal_1203) };
-					fLocal_2421 = { fLocal_2421 + Vector3(fLocal_1203, fLocal_1203, fLocal_1203) };
+					fLocal_2418 = Vector3(fLocal_2418 - Vector3(fLocal_1203, fLocal_1203, fLocal_1203));
+					fLocal_2421 = Vector3(fLocal_2421 + Vector3(fLocal_1203, fLocal_1203, fLocal_1203));
 					PATHFIND::SET_ROADS_IN_AREA(fLocal_2418, fLocal_2421, false, false);
 					fLocal_1199 = time;
 					iLocal_1772 = 0;
@@ -24630,8 +24630,8 @@ void func_375(Vehicle veParam0, float fParam1) // Position - 0x1B1E3
 					fLocal_2427.f_2 = num;
 				}
 			
-				fLocal_2424 = { fLocal_2424 - Vector3(fLocal_1203, fLocal_1203, fLocal_1203) };
-				fLocal_2427 = { fLocal_2427 + Vector3(fLocal_1203, fLocal_1203, fLocal_1203) };
+				fLocal_2424 = Vector3(fLocal_2424 - Vector3(fLocal_1203, fLocal_1203, fLocal_1203));
+				fLocal_2427 = Vector3(fLocal_2427 + Vector3(fLocal_1203, fLocal_1203, fLocal_1203));
 				PATHFIND::SET_ROADS_BACK_TO_ORIGINAL(fLocal_2424, fLocal_2427, 1);
 				fLocal_1200 = time2;
 				iLocal_1775 = 0;
@@ -25303,7 +25303,7 @@ void func_382() // Position - 0x1BB45
 				SYSTEM::VDIST(uLocal_2914, uLocal_2914) > 0f;
 				uLocal_2917 = Vector3(PED::GET_PED_BONE_COORDS(func_2(), 11816, 0f, 0f, 0f));
 				fLocal_2920 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_GIVEN_WORLD_COORDS(veLocal_3031, uLocal_2917));
-				fLocal_2920 = { fLocal_2920 - Vector3(0f, -5.64535f, 0f) };
+				fLocal_2920 = Vector3(fLocal_2920 - Vector3(0f, -5.64535f, 0f));
 				iLocal_3226 = func_449(func_2(), 0, veLocal_3031, "chassis", false, "MISSFAM1_YachtBattleincar01_", "franklinonYacht_clingIntro", "", true, true, 4);
 				CAM::ATTACH_CAM_TO_ENTITY(caLocal_3005, veLocal_3031, -0.1273f, -5.4712f, 3.1607f, true);
 				CAM::POINT_CAM_AT_ENTITY(caLocal_3005, veLocal_3031, 0.1256f, -8.0088f, 1.5807f, true);
@@ -28332,7 +28332,7 @@ BOOL func_421(int iParam0) // Position - 0x217C9
 	else
 		flag = true;
 
-	vector = { Vector3(1.75f, 2f, 2f) * Vector3(iParam0, iParam0, iParam0) };
+	vector = Vector3(Vector3(1.75f, 2f, 2f) * Vector3(iParam0, iParam0, iParam0));
 	offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_3031, fLocal_3250, fLocal_3250.f_1, 0.2f));
 	MISC::GET_GROUND_Z_FOR_3D_COORD(offsetFromEntityInWorldCoords, &(offsetFromEntityInWorldCoords.f_2), false, false);
 	return ENTITY::IS_ENTITY_AT_COORD(veLocal_3027, offsetFromEntityInWorldCoords, vector, flag, flag, 0);
@@ -117140,9 +117140,9 @@ void func_845(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -117250,10 +117250,10 @@ BOOL func_846(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));

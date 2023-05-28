@@ -4529,7 +4529,7 @@ int func_62(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4, B
 		func_64(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_63(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -93036,9 +93036,9 @@ void func_519(Vector3 vParam0, var uParam1, var uParam2, Vector3 vParam3, var uP
 						}
 					
 						if (entityModel == joaat("zentorno") || entityModel == joaat("btype") || entityModel == joaat("dubsta3") || entityModel == joaat("monster"))
-							fParam11 = { fParam11 * Vector3(1.1f, 1.1f, 1.1f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.1f, 1.1f, 1.1f));
 						else if (entityModel == joaat("t20") || entityModel == joaat("virgo"))
-							fParam11 = { fParam11 * Vector3(1.2f, 1.2f, 1.2f) };
+							fParam11 = Vector3(fParam11 * Vector3(1.2f, 1.2f, 1.2f));
 					
 						if (out2 - out1 > fParam11)
 							flag2 = false;
@@ -93234,10 +93234,10 @@ BOOL func_523(Vehicle veParam0, var uParam1, var uParam2, var uParam3, var uPara
 		num = -unk3.f_1;
 		num.f_1 = unk3;
 		num.f_2 = 0f;
-		unk6 = { uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk9 = { uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk12 = { uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
-		unk15 = { uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)) };
+		unk6 = Vector3(uParam1 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk9 = Vector3(uParam1 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk12 = Vector3(uParam4 - (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
+		unk15 = Vector3(uParam4 + (num * Vector3(fParam7 / 2f, fParam7 / 2f, fParam7 / 2f)));
 		MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veParam0), &minimum, &maximum);
 		unk18[0] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, minimum.f_1, 0f));
 		unk18[1] = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veParam0, minimum, maximum.f_1, 0f));
@@ -93299,7 +93299,7 @@ Vector3 func_525(float fParam0, var uParam1, var uParam2) // Position - 0x709BF
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -98068,7 +98068,7 @@ void func_613(Ped* ppedParam0) // Position - 0x79121
 			if (MISC::GET_GAME_TIMER() > ppedParam0->f_28)
 			{
 				radius = distanceBetweenCoords * 0.5f;
-				vector = { entityCoords + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f)) };
+				vector = Vector3(entityCoords + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f)));
 				ppedParam0->f_1 = HUD::ADD_BLIP_FOR_RADIUS(vector, radius);
 				HUD::SET_BLIP_ALPHA(ppedParam0->f_1, 100);
 				HUD::SET_BLIP_COLOUR(ppedParam0->f_1, 1);
@@ -98136,7 +98136,7 @@ int func_614(Ped* ppedParam0, Vector3 vParam1, var uParam2, var uParam3, float f
 
 	if (iLocal_2110 == 0)
 	{
-		vector = { fLocal_1805 + Vector3(0.75f, 0f, 0f) };
+		vector = Vector3(fLocal_1805 + Vector3(0.75f, 0f, 0f));
 		iLocal_2110 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(vector, vParam1, 1, 0, 7);
 	}
 	else
@@ -98435,7 +98435,7 @@ void func_619(Ped* ppedParam0, int iParam1) // Position - 0x7982A
 		if (ppedParam0->f_10 < MISC::GET_GAME_TIMER())
 		{
 			radius = distanceBetweenCoords * 0.5f;
-			vector = { entityCoords + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f)) };
+			vector = Vector3(entityCoords + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-3f, 3f)));
 			ppedParam0->f_1 = HUD::ADD_BLIP_FOR_RADIUS(vector, radius);
 			HUD::SET_BLIP_ALPHA(ppedParam0->f_1, 100);
 			HUD::SET_BLIP_COLOUR(ppedParam0->f_1, 1);
@@ -103279,9 +103279,9 @@ BOOL func_748() // Position - 0x7FE58
 	{
 		if (func_680(i) && !iLocal_95[i].f_9)
 		{
-			unk = { func_525(((iLocal_95[i].f_20 + Vector3(45f, 0f, 0f)) - iLocal_95[i].f_17) + Vector3(-45f, 0f, 0f)) };
-			vector = { iLocal_95[i].f_17 + Vector3(45f, 0f, 0f) };
-			vector2 = { iLocal_95[i].f_20 + Vector3(-45f, 0f, 0f) + (unk * Vector3(45f, 45f, 45f)) };
+			unk = Vector3(func_525(((iLocal_95[i].f_20 + Vector3(45f, 0f, 0f)) - iLocal_95[i].f_17) + Vector3(-45f, 0f, 0f)));
+			vector = Vector3(iLocal_95[i].f_17 + Vector3(45f, 0f, 0f));
+			vector2 = Vector3(iLocal_95[i].f_20 + Vector3(-45f, 0f, 0f) + (unk * Vector3(45f, 45f, 45f)));
 		
 			if (ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::PLAYER_PED_ID(), vector, vector2, 10f + 20f, false, false, 0))
 			{
@@ -104227,7 +104227,7 @@ int func_766(var uParam0, Vector3 vParam1, var uParam2, var uParam3, float fPara
 
 	if (iLocal_1823 == 0)
 	{
-		vector = { fLocal_1805 + Vector3(0.75f, 0f, 0f) };
+		vector = Vector3(fLocal_1805 + Vector3(0.75f, 0f, 0f));
 		iLocal_1823 = SHAPETEST::START_SHAPE_TEST_LOS_PROBE(vector, vParam1, 1, 0, 7);
 	}
 	else
@@ -105270,8 +105270,8 @@ void func_791(var uParam0) // Position - 0x8299A
 				func_799();
 				func_39();
 				func_31(&(sLocal_676.f_678), 0);
-				vector = { uLocal_1835.f_47 - Vector3(200f, 700f, 700f) };
-				vector2 = { uLocal_1835.f_47 + Vector3(200f, 700f, 700f) };
+				vector = Vector3(uLocal_1835.f_47 - Vector3(200f, 700f, 700f));
+				vector2 = Vector3(uLocal_1835.f_47 + Vector3(200f, 700f, 700f));
 				iLocal_2461 = PED::ADD_SCENARIO_BLOCKING_AREA(vector, vector2, false, true, true, true);
 				PED::SET_PED_NON_CREATION_AREA(vector, vector2);
 				func_798("CHI2_U");
@@ -107629,7 +107629,7 @@ void func_849(var uParam0, var uParam1, float fParam2) // Position - 0x86304
 		if (func_678(uParam1, uParam1->[num2] + num6))
 			num6 = Vector3(-num6);
 	
-		uParam0->[num2] = { uParam1->[num2] + (num6 * Vector3(fParam2, fParam2, fParam2)) };
+		uParam0->[num2] = Vector3(uParam1->[num2] + (num6 * Vector3(fParam2, fParam2, fParam2)));
 		num = num2;
 		num2 = num2 + 1;
 		num3 = (num3 + 1) % uParam1->f_46;

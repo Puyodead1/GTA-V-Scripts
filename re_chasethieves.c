@@ -32404,8 +32404,8 @@ void func_247() // Position - 0x22777
 	else if (bLocal_69 == false && OBJECT::DOES_PICKUP_EXIST(pkLocal_588) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_87) && ENTITY::IS_ENTITY_AT_COORD(pedLocal_87, OBJECT::GET_PICKUP_COORDS(pkLocal_588), 15f, 15f, 2f, false, true, 0) && !ENTITY::IS_ENTITY_PLAYING_ANIM(pedLocal_87, sLocal_583, sLocal_584, 3))
 	{
 		STREAMING::REQUEST_ANIM_DICT(sLocal_589);
-		vector = { OBJECT::GET_PICKUP_COORDS(pkLocal_588) - Vector3(15f, 15f, 15f) };
-		vector2 = { OBJECT::GET_PICKUP_COORDS(pkLocal_588) + Vector3(15f, 15f, 15f) };
+		vector = Vector3(OBJECT::GET_PICKUP_COORDS(pkLocal_588) - Vector3(15f, 15f, 15f));
+		vector2 = Vector3(OBJECT::GET_PICKUP_COORDS(pkLocal_588) + Vector3(15f, 15f, 15f));
 	
 		if (STREAMING::HAS_ANIM_DICT_LOADED(sLocal_589) && !PED::IS_ANY_PED_SHOOTING_IN_AREA(vector, vector2, false, true))
 		{

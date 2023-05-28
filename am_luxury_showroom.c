@@ -76252,7 +76252,7 @@ BOOL func_549(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_547(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_550(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -86628,8 +86628,8 @@ void func_709(Ped pedParam0) // Position - 0x742D4
 			offsetFromCoordAndHeadingInWorldCoords.f_2 = groundZ + iLocal_166.f_560.f_5;
 			unk11 = Vector3(func_713(func_714(offsetFromEntityInWorldCoords - offsetFromCoordAndHeadingInWorldCoords), 0f, 0f, 1f));
 			unk14 = Vector3(func_713(func_714(offsetFromEntityInWorldCoords - offsetFromCoordAndHeadingInWorldCoords), unk11));
-			offsetFromEntityInWorldCoords = { offsetFromEntityInWorldCoords + (unk11 * Vector3(num, num, num)) };
-			offsetFromEntityInWorldCoords = { offsetFromEntityInWorldCoords + (unk14 * Vector3(num.f_2, num.f_2, num.f_2)) };
+			offsetFromEntityInWorldCoords = Vector3(offsetFromEntityInWorldCoords + (unk11 * Vector3(num, num, num)));
+			offsetFromEntityInWorldCoords = Vector3(offsetFromEntityInWorldCoords + (unk14 * Vector3(num.f_2, num.f_2, num.f_2)));
 			CAM::SET_CAM_COORD(iLocal_166.f_560, offsetFromCoordAndHeadingInWorldCoords);
 			CAM::POINT_CAM_AT_COORD(iLocal_166.f_560, OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromEntityInWorldCoords, ENTITY::GET_ENTITY_HEADING(pedParam0), func_717()));
 		
@@ -86721,7 +86721,7 @@ Vector3 func_714(float fParam0, var uParam1, var uParam2) // Position - 0x74888
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{

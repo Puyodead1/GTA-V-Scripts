@@ -4149,7 +4149,7 @@ Vector3 func_82(float fParam0, var uParam1, var uParam2) // Position - 0x3EE9
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -5922,8 +5922,8 @@ void func_130(float fParam0, var uParam1, var uParam2, float fParam3, var uParam
 		num2.f_1 = fParam3.f_1;
 	}
 
-	num = { num - Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
-	num2 = { num2 + Vector3((float)iParam8, (float)iParam8, (float)iParam8) };
+	num = Vector3(num - Vector3((float)iParam8, (float)iParam8, (float)iParam8));
+	num2 = Vector3(num2 + Vector3((float)iParam8, (float)iParam8, (float)iParam8));
 
 	if (!func_131(num, *uParam6, 1056964608, false) || !func_131(num, *uParam6, 1056964608, false))
 	{

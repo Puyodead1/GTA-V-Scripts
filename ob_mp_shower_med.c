@@ -695,7 +695,7 @@ void main() // Position - 0x0
 					Global_2756028.f_19 = Global_4196263[num].f_146.f_82[iLocal_383].f_86;
 					Global_2756028.f_101 = Vector3(Global_4196263[num].f_146.f_82[iLocal_383].f_77);
 					unk3 = Vector3(Global_2756028.f_95 + Global_2756028.f_98);
-					Global_2756028.f_28 = { unk3 * Vector3(0.5f, 0.5f, 0.5f) };
+					Global_2756028.f_28 = Vector3(unk3 * Vector3(0.5f, 0.5f, 0.5f));
 				
 					if (iLocal_383 == 13)
 					{
@@ -977,7 +977,7 @@ void main() // Position - 0x0
 					Global_2756028.f_101 = Vector3(Global_2756028.f_101);
 					Global_2756028.f_104 = Global_2756028.f_104;
 					unk12 = Vector3(Global_2756028.f_95 + Global_2756028.f_98);
-					Global_2756028.f_28 = { unk12 * Vector3(0.5f, 0.5f, 0.5f) };
+					Global_2756028.f_28 = Vector3(unk12 * Vector3(0.5f, 0.5f, 0.5f));
 					bLocal_435 = true;
 				}
 			}

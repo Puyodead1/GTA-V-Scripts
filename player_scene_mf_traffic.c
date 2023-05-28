@@ -1127,39 +1127,39 @@ void func_38(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			func_48(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_47(uParam1, uParam2, uParam5, uParam8, uParam11);
 			func_49(iParam0, &unk, &unk4, &unk5);
-			uParam12->[0] = { Vector3(38.0807f, -1565.9159f, -453.6f) - unk };
+			uParam12->[0] = Vector3(Vector3(38.0807f, -1565.9159f, -453.6f) - unk);
 			uParam13->[0] = 171.8581f - unk4;
-			uParam12->[1] = { Vector3(38.094f, -1599.4768f, -467.9528f) - unk };
+			uParam12->[1] = Vector3(Vector3(38.094f, -1599.4768f, -467.9528f) - unk);
 			uParam13->[1] = 151.2346f - unk4;
-			uParam12->[2] = { Vector3(38.1786f, -1566.7344f, -442.0422f) - unk };
+			uParam12->[2] = Vector3(Vector3(38.1786f, -1566.7344f, -442.0422f) - unk);
 			uParam13->[2] = 170.751f - unk4;
-			uParam12->[3] = { Vector3(32.4872f, -1614.5006f, -486.7076f) - unk };
+			uParam12->[3] = Vector3(Vector3(32.4872f, -1614.5006f, -486.7076f) - unk);
 			uParam13->[3] = 146.9473f - unk4;
 			break;
 	
 		case 106:
 			func_46(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_47(uParam1, uParam2, uParam5, uParam8, uParam11);
-			uParam12->[0] = { Vector3(0f, 0f, -7.5f) + func_45(-1090519040, 1056964608) };
+			uParam12->[0] = Vector3(Vector3(0f, 0f, -7.5f) + func_45(-1090519040, 1056964608));
 			uParam13->[0] = 0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[1] = { Vector3(12f, -21.6f, 0f) + func_45(-1090519040, 1056964608) };
+			uParam12->[1] = Vector3(Vector3(12f, -21.6f, 0f) + func_45(-1090519040, 1056964608));
 			uParam13->[1] = -8.1f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[2] = { Vector3(0f, -6.3f, 2.4f) + func_45(-1090519040, 1056964608) };
+			uParam12->[2] = Vector3(Vector3(0f, -6.3f, 2.4f) + func_45(-1090519040, 1056964608));
 			uParam13->[2] = 0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[3] = { Vector3(0f, -5.4f, 9.3f) + func_45(-1090519040, 1056964608) };
+			uParam12->[3] = Vector3(Vector3(0f, -5.4f, 9.3f) + func_45(-1090519040, 1056964608));
 			uParam13->[3] = 0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
 			break;
 	
 		case 107:
 			func_44(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_43(uParam1, uParam2, uParam5, uParam8, uParam11);
-			uParam12->[0] = { Vector3(0f, -18.7658f, 17.4294f) + func_45(-1090519040, 1056964608) };
+			uParam12->[0] = Vector3(Vector3(0f, -18.7658f, 17.4294f) + func_45(-1090519040, 1056964608));
 			uParam13->[0] = -82.86f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[1] = { Vector3(0f, -0.2185f, -8.4f) + func_45(-1090519040, 1056964608) };
+			uParam12->[1] = Vector3(Vector3(0f, -0.2185f, -8.4f) + func_45(-1090519040, 1056964608));
 			uParam13->[1] = 326.88f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[2] = { Vector3(0f, 11.1031f, -1.0773f) + func_45(-1090519040, 1056964608) };
+			uParam12->[2] = Vector3(Vector3(0f, 11.1031f, -1.0773f) + func_45(-1090519040, 1056964608));
 			uParam13->[2] = -16.56f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[3] = { Vector3(0f, 6.6924f, 3.6826f) + func_45(-1090519040, 1056964608) };
+			uParam12->[3] = Vector3(Vector3(0f, 6.6924f, 3.6826f) + func_45(-1090519040, 1056964608));
 			uParam13->[3] = -21.4898f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
 			break;
 	
@@ -1168,39 +1168,39 @@ void func_38(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			func_48(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_47(uParam1, uParam2, uParam5, uParam8, uParam11);
 			func_49(iParam0, &unk13, &unk16, &unk17);
-			uParam12->[0] = { Vector3(38.0807f, -1565.9159f, -453.6f) - unk13 };
+			uParam12->[0] = Vector3(Vector3(38.0807f, -1565.9159f, -453.6f) - unk13);
 			uParam13->[0] = 171.8581f - unk16;
-			uParam12->[1] = { Vector3(38.094f, -1599.4768f, -467.9528f) - unk13 };
+			uParam12->[1] = Vector3(Vector3(38.094f, -1599.4768f, -467.9528f) - unk13);
 			uParam13->[1] = 151.2346f - unk16;
-			uParam12->[2] = { Vector3(38.1786f, -1566.7344f, -442.0422f) - unk13 };
+			uParam12->[2] = Vector3(Vector3(38.1786f, -1566.7344f, -442.0422f) - unk13);
 			uParam13->[2] = 170.751f - unk16;
-			uParam12->[3] = { Vector3(32.4872f, -1614.5006f, -486.7076f) - unk13 };
+			uParam12->[3] = Vector3(Vector3(32.4872f, -1614.5006f, -486.7076f) - unk13);
 			uParam13->[3] = 146.9473f - unk16;
 			break;
 	
 		case 209:
 			func_42(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_41(uParam1, uParam2, uParam5, uParam8, uParam11);
-			uParam12->[0] = { Vector3(0f, -18.4198f, 12.4248f) + func_45(-1090519040, 1056964608) };
+			uParam12->[0] = Vector3(Vector3(0f, -18.4198f, 12.4248f) + func_45(-1090519040, 1056964608));
 			uParam13->[0] = -42.9526f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[1] = { Vector3(0f, 6.1436f, -6.4904f) + func_45(-1090519040, 1056964608) };
+			uParam12->[1] = Vector3(Vector3(0f, 6.1436f, -6.4904f) + func_45(-1090519040, 1056964608));
 			uParam13->[1] = 0f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[2] = { Vector3(0f, -46.6f, 15.2f) + func_45(-1090519040, 1056964608) };
+			uParam12->[2] = Vector3(Vector3(0f, -46.6f, 15.2f) + func_45(-1090519040, 1056964608));
 			uParam13->[2] = 74.0878f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[3] = { Vector3(0f, -43.7f, 9f) + func_45(-1090519040, 1056964608) };
+			uParam12->[3] = Vector3(Vector3(0f, -43.7f, 9f) + func_45(-1090519040, 1056964608));
 			uParam13->[3] = -102.24f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
 			break;
 	
 		case 210:
 			func_40(uParam3, uParam4, uParam6, uParam7, uParam9, uParam10);
 			func_39(uParam1, uParam2, uParam5, uParam8, uParam11);
-			uParam12->[0] = { Vector3(0f, -8.466f, -3.4877f) + func_45(-1090519040, 1056964608) };
+			uParam12->[0] = Vector3(Vector3(0f, -8.466f, -3.4877f) + func_45(-1090519040, 1056964608));
 			uParam13->[0] = -10.26f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[1] = { Vector3(0f, 5.6192f, -2.7229f) + func_45(-1090519040, 1056964608) };
+			uParam12->[1] = Vector3(Vector3(0f, 5.6192f, -2.7229f) + func_45(-1090519040, 1056964608));
 			uParam13->[1] = 2.3194f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[2] = { Vector3(0f, 5.1081f, 6.8717f) + func_45(-1090519040, 1056964608) };
+			uParam12->[2] = Vector3(Vector3(0f, 5.1081f, 6.8717f) + func_45(-1090519040, 1056964608));
 			uParam13->[2] = 350.1767f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
-			uParam12->[3] = { Vector3(0f, -9.6576f, 0.997f) + func_45(-1090519040, 1056964608) };
+			uParam12->[3] = Vector3(Vector3(0f, -9.6576f, 0.997f) + func_45(-1090519040, 1056964608));
 			uParam13->[3] = 349.0776f + MISC::GET_RANDOM_FLOAT_IN_RANGE(-5f, 5f);
 			break;
 	
@@ -1624,14 +1624,14 @@ void func_48(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	var unk;
 	int unk2;
 
-	unk = { Vector3(0f, 7f, 5f) * Vector3(0.7f, 0.7f, 0.7f) };
-	uParam0->[0] = { Vector3(0f, -22.7769f, -9.2247f) + func_45(-1090519040, 1056964608) };
-	uParam0->[1] = { Vector3(0f, -21.4697f, -0.889f) + func_45(-1090519040, 1056964608) };
+	unk = Vector3(Vector3(0f, 7f, 5f) * Vector3(0.7f, 0.7f, 0.7f));
+	uParam0->[0] = Vector3(Vector3(0f, -22.7769f, -9.2247f) + func_45(-1090519040, 1056964608));
+	uParam0->[1] = Vector3(Vector3(0f, -21.4697f, -0.889f) + func_45(-1090519040, 1056964608));
 
 	for (i = 2; i <= *uParam0 - 1; i = i + 1)
 	{
 		uParam0->[i] = Vector3(uParam0->[i - 2]);
-		uParam0->[i] = { uParam0->[i] + (unk * Vector3(1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)), 1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)), 1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)))) };
+		uParam0->[i] = Vector3(uParam0->[i] + (unk * Vector3(1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)), 1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)), 1f + (SYSTEM::TO_FLOAT(i) / SYSTEM::TO_FLOAT((*uParam0 + 1) - 2)))));
 		uParam0->[i] = Vector3(uParam0->[i] + func_45(-1090519040, 1056964608));
 		uParam1->[i] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-22f, -15f);
 	}
@@ -1640,10 +1640,10 @@ void func_48(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	uParam2->[1] = Vector3(-11.7179f, -35.5764f, 0f);
 	uParam2->[2] = Vector3(uParam2->[0] + unk);
 	uParam2->[3] = Vector3(uParam2->[1] + unk);
-	uParam4->[0] = { Vector3(0f, 8.1f, 2.1f) + func_45(-1090519040, 1056964608) };
-	uParam4->[1] = { Vector3(0f, 15.3f, 4.4f) + func_45(-1090519040, 1056964608) };
-	uParam4->[2] = { Vector3(-11.4f, -15.3f, -23.7f) + func_45(-1090519040, 1056964608) };
-	uParam4->[3] = { Vector3(-12.7f, -10.9f, -13.4f) + func_45(-1090519040, 1056964608) };
+	uParam4->[0] = Vector3(Vector3(0f, 8.1f, 2.1f) + func_45(-1090519040, 1056964608));
+	uParam4->[1] = Vector3(Vector3(0f, 15.3f, 4.4f) + func_45(-1090519040, 1056964608));
+	uParam4->[2] = Vector3(Vector3(-11.4f, -15.3f, -23.7f) + func_45(-1090519040, 1056964608));
+	uParam4->[3] = Vector3(Vector3(-12.7f, -10.9f, -13.4f) + func_45(-1090519040, 1056964608));
 	uParam1->[0] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-22f, -15f);
 	uParam1->[1] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-22f, -15f);
 	uParam1->[2] = MISC::GET_RANDOM_FLOAT_IN_RANGE(-22f, -15f);
@@ -1711,19 +1711,19 @@ int func_49(int iParam0, var uParam1, var uParam2, char* sParam3) // Position - 
 				return 1;
 		
 			case 5:
-				*uParam1 = { Global_113648.f_2365.f_539.f_2300[0] + Vector3(-1f, 0f, 0f) };
+				*uParam1 = Vector3(Global_113648.f_2365.f_539.f_2300[0] + Vector3(-1f, 0f, 0f));
 				*uParam2 = Global_113648.f_2365.f_539.f_2310[0];
 				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
 		
 			case 6:
-				*uParam1 = { Global_113648.f_2365.f_539.f_2300[1] + Vector3(-1f, 0f, 0f) };
+				*uParam1 = Vector3(Global_113648.f_2365.f_539.f_2300[1] + Vector3(-1f, 0f, 0f));
 				*uParam2 = Global_113648.f_2365.f_539.f_2310[1];
 				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
 		
 			case 7:
-				*uParam1 = { Global_113648.f_2365.f_539.f_2300[2] + Vector3(-1f, 0f, 0f) };
+				*uParam1 = Vector3(Global_113648.f_2365.f_539.f_2300[2] + Vector3(-1f, 0f, 0f));
 				*uParam2 = Global_113648.f_2365.f_539.f_2310[2];
 				TEXT_LABEL_ASSIGN_STRING(sParam3, "", 32);
 				return 1;
@@ -3550,14 +3550,14 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 1:
 					if (func_53(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, -1.1731f, 0.809f) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, -1.1731f, 0.809f));
 						*uParam3 = *uParam3 + (456.7661f - 360f);
 						return true;
 					}
 					break;
 			
 				case 2:
-					*uParam2 = { Vector3(71.8356f, 180.5483f, -796.9911f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(71.8356f, 180.5483f, -796.9911f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (16f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3575,7 +3575,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 1:
 					if (func_53(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, 0.25f, -0.6f) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, 0.25f, -0.6f));
 						*uParam3 = *uParam3 + 0f;
 						return true;
 					}
@@ -3584,7 +3584,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 2:
 					if (func_53(0, iParam1, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, -0.5f, -1.2f) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, -0.5f, -1.2f));
 						*uParam3 = *uParam3 + 0f;
 						return true;
 					}
@@ -3599,7 +3599,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 0:
 				case 1:
 				case 2:
-					*uParam2 = { Vector3(71.835f, 180.548f, -796.991f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(71.835f, 180.548f, -796.991f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = ((16f + 90f) - 222.8314f) + 360f;
 					return true;
 			}
@@ -3653,7 +3653,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 0:
 					if (func_53(0, 5, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, 0f, 0f) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, 0f, 0f));
 						*uParam3 = *uParam3 + 0f;
 						return true;
 					}
@@ -3738,7 +3738,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector3(76.89f, 176.176f, -802.702f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(76.89f, 176.176f, -802.702f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (-159.23f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3749,7 +3749,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector3(76.89f, 176.176f, -802.702f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(76.89f, 176.176f, -802.702f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (-159.23f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3789,7 +3789,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector3(0f, -11.0022f, -0.4395f) + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)) };
+					*uParam2 = Vector3(Vector3(0f, -11.0022f, -0.4395f) + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-0.5f, 0.5f)));
 					*uParam3 = 306f + MISC::GET_RANDOM_FLOAT_IN_RANGE(10f, 10f);
 					return true;
 			}
@@ -3799,8 +3799,8 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector3(60.2063f, 141.5129f, -863.5425f) - Vector3(71.1531f, 179.5117f, -812.0607f) - Vector3(1f, 0f, 0f) };
-					*uParam2 = { *uParam2 * Vector3(0.95f, 0.95f, 0.95f) };
+					*uParam2 = Vector3(Vector3(60.2063f, 141.5129f, -863.5425f) - Vector3(71.1531f, 179.5117f, -812.0607f) - Vector3(1f, 0f, 0f));
+					*uParam2 = Vector3(*uParam2 * Vector3(0.95f, 0.95f, 0.95f));
 					*uParam3 = MISC::GET_HEADING_FROM_VECTOR_2D(*uParam2, uParam2->f_1);
 					return true;
 			}
@@ -3810,7 +3810,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector3(71.8266f, 180.4725f, -796.7593f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(71.8266f, 180.4725f, -796.7593f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (26.087f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3820,7 +3820,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 0:
-					*uParam2 = { Vector3(72.6876f, 173.987f, -805.173f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(72.6876f, 173.987f, -805.173f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (13f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3831,7 +3831,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			{
 				case 0:
 				case 1:
-					*uParam2 = { Vector3(72.8447f, 172.4196f, -803.1823f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(72.8447f, 172.4196f, -803.1823f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (-28.7112f - 222.8314f) + 360f;
 					return true;
 			}
@@ -3851,7 +3851,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 1:
-					*uParam2 = { Vector3(0.6f, -6.5f, 10.3f) + Vector3(0.1f, 0f, 0f) };
+					*uParam2 = Vector3(Vector3(0.6f, -6.5f, 10.3f) + Vector3(0.1f, 0f, 0f));
 					*uParam3 = 78f;
 					return true;
 			}
@@ -3883,7 +3883,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 1:
 					if (func_53(1, 32, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, 0f, 0f) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, 0f, 0f));
 						*uParam3 = *uParam3 + 0f;
 						return true;
 					}
@@ -4116,7 +4116,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector3(1.1936f, -9.0107f, 9.0567f) + Vector3(0.03f - 0.02f, 0f, 0f) };
+					*uParam2 = Vector3(Vector3(1.1936f, -9.0107f, 9.0567f) + Vector3(0.03f - 0.02f, 0f, 0f));
 					*uParam3 = 94.2086f;
 					return true;
 			}
@@ -4126,7 +4126,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector3(5.2891f, 2.0403f, -2.8213f) + Vector3(0.03f - 0.05f, 0f, 0f) };
+					*uParam2 = Vector3(Vector3(5.2891f, 2.0403f, -2.8213f) + Vector3(0.03f - 0.05f, 0f, 0f));
 					*uParam3 = 336f;
 					return true;
 			}
@@ -4179,7 +4179,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 		case 60:
 			if (func_53(iParam0, 59, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+				*uParam2 = Vector3(*uParam2 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)));
 				*uParam3 = *uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f);
 				return true;
 			}
@@ -4201,7 +4201,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector3(75.7407f, 181.264f, -814.246f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(75.7407f, 181.264f, -814.246f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (-158f - 222.8314f) + 360f;
 					return true;
 			}
@@ -4211,7 +4211,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 2:
-					*uParam2 = { Vector3(76.7233f, 181.114f, -812.896f) - Vector3(71.1531f, 179.5117f, -812.0607f) };
+					*uParam2 = Vector3(Vector3(76.7233f, 181.114f, -812.896f) - Vector3(71.1531f, 179.5117f, -812.0607f));
 					*uParam3 = (-164f - 222.8314f) + 360f;
 					return true;
 			}
@@ -4264,7 +4264,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 		case 77:
 			if (func_53(iParam0, 47, uParam2, uParam3))
 			{
-				*uParam2 = { *uParam2 + Vector3(0f, 0f, 0f) };
+				*uParam2 = Vector3(*uParam2 + Vector3(0f, 0f, 0f));
 				*uParam3 = *uParam3 + 0f;
 				return true;
 			}
@@ -4427,12 +4427,12 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 6:
-					*uParam2 = { Vector3(30.7131f, -1454.6757f, -42.2059f) - Vector3(30.116f, -1435.9974f, -14.3064f) };
+					*uParam2 = Vector3(Vector3(30.7131f, -1454.6757f, -42.2059f) - Vector3(30.116f, -1435.9974f, -14.3064f));
 					*uParam3 = 84.7009f - 188.5817f;
 					return true;
 			
 				case 7:
-					*uParam2 = { Vector3(30.6803f, -1455.8477f, -40.7478f) - Vector3(30.116f, -1435.9974f, -14.3064f) };
+					*uParam2 = Vector3(Vector3(30.6803f, -1455.8477f, -40.7478f) - Vector3(30.116f, -1435.9974f, -14.3064f));
 					*uParam3 = 90.6417f - 188.5817f;
 					return true;
 			}
@@ -4596,7 +4596,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 9:
-					*uParam2 = { Vector3(0.15f, -1.9326f, -6.013f) + Vector3(1f, 0f, 0f) };
+					*uParam2 = Vector3(Vector3(0.15f, -1.9326f, -6.013f) + Vector3(1f, 0f, 0f));
 					*uParam3 = 121.6591f;
 					return true;
 			}
@@ -4709,26 +4709,26 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 13:
 					if (Global_113648.f_18535[2] == 299)
 					{
-						*uParam2 = { Vector3(9.6327f, -1521.394f, -1158.133f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+						*uParam2 = Vector3(Vector3(9.6327f, -1521.394f, -1158.133f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 						*uParam3 = 34.661f - 90.6729f;
 						return true;
 					}
 					else if (Global_113648.f_18535[2] == 300 || Global_113648.f_18535[2] == 301 || Global_113648.f_18535[2] == 302 || Global_113648.f_18535[2] == 303)
 					{
-						*uParam2 = { Vector3(9.6327f, -1521.334f, -1157.803f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+						*uParam2 = Vector3(Vector3(9.6327f, -1521.334f, -1157.803f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 						*uParam3 = 32f - 90.6729f;
 						return true;
 					}
 				
 					if (_GET_RANDOM_BOOL())
 					{
-						*uParam2 = { Vector3(9.6327f, -1521.394f, -1158.133f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+						*uParam2 = Vector3(Vector3(9.6327f, -1521.394f, -1158.133f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 						*uParam3 = 34.661f - 90.6729f;
 						return true;
 					}
 					else
 					{
-						*uParam2 = { Vector3(9.6327f, -1521.334f, -1157.803f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+						*uParam2 = Vector3(Vector3(9.6327f, -1521.334f, -1157.803f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 						*uParam3 = 32f - 90.6729f;
 						return true;
 					}
@@ -4740,7 +4740,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { Vector3(10.6327f, -1519.561f, -1156.422f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+					*uParam2 = Vector3(Vector3(10.6327f, -1519.561f, -1156.422f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 					*uParam3 = 102f - 90.6729f;
 					return true;
 			}
@@ -4762,7 +4762,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 				case 13:
 					if (func_53(iParam0, 130, uParam2, uParam3))
 					{
-						*uParam2 = { *uParam2 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)) };
+						*uParam2 = Vector3(*uParam2 + Vector3(0f, MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f), MISC::GET_RANDOM_FLOAT_IN_RANGE(-1f, 1f)));
 						*uParam3 = *uParam3 + MISC::GET_RANDOM_FLOAT_IN_RANGE(-10f, 10f);
 						return true;
 					}
@@ -4784,7 +4784,7 @@ BOOL func_53(int iParam0, int iParam1, var uParam2, var uParam3) // Position - 0
 			switch (iParam0)
 			{
 				case 13:
-					*uParam2 = { Vector3(9.6327f + 1f, -1518.7363f, -1148.4664f) - Vector3(9.6346f, -1517.601f, -1152.5707f) };
+					*uParam2 = Vector3(Vector3(9.6327f + 1f, -1518.7363f, -1148.4664f) - Vector3(9.6346f, -1517.601f, -1152.5707f));
 					*uParam3 = MISC::GET_RANDOM_FLOAT_IN_RANGE(0f, 360f);
 					return true;
 			}
@@ -5044,7 +5044,7 @@ BOOL func_54(int iParam0, var uParam1, var uParam2) // Position - 0x6E96
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

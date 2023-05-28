@@ -6459,7 +6459,7 @@ BOOL func_236() // Position - 0x7F43
 
 	if (!CAM::IS_SCREEN_FADED_OUT())
 	{
-		vector = { Vector3(-3.801932f, -1039.8674f, -2016.5997f) + Vector3(0f, 7773.9673f, 654.731f) };
+		vector = Vector3(Vector3(-3.801932f, -1039.8674f, -2016.5997f) + Vector3(0f, 7773.9673f, 654.731f));
 	
 		if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), vector) <= 25600f)
 			if (CAM::IS_SPHERE_VISIBLE(vector, 50f))
@@ -6814,7 +6814,7 @@ void func_249() // Position - 0x82AE
 					num10 = 0f;
 				}
 			
-				num11 = { Vector3(num9, num10, num8) + entityRotation };
+				num11 = Vector3(Vector3(num9, num10, num8) + entityRotation);
 			
 				if (entityRoll != 0f)
 					if (uLocal_194[0] == 0)
@@ -6894,7 +6894,7 @@ void func_249() // Position - 0x82AE
 					}
 				}
 			
-				num17 = { Vector3(0f, num16, num15) + entityRotation2 };
+				num17 = Vector3(Vector3(0f, num16, num15) + entityRotation2);
 			
 				if (num17.f_1 > num2)
 					num17.f_1 = num2;
@@ -6952,7 +6952,7 @@ void func_249() // Position - 0x82AE
 				
 					num20 = func_250(-(num19 * 0.05f * num5 * (num - 25f)));
 					num21 = func_250(-(num18 * 0.05f * num5 * (num - 25f)));
-					num22 = { Vector3(0f, num21, num20) + entityRotation3 };
+					num22 = Vector3(Vector3(0f, num21, num20) + entityRotation3);
 				
 					if (IS_BIT_SET(uLocal_194.f_5, 12))
 						num22 = entityRotation3;
@@ -7462,7 +7462,7 @@ void func_267() // Position - 0x90CC
 					num12 = 0f;
 				}
 			
-				num13 = { Vector3(num11, num12, num10) + entityRotation };
+				num13 = Vector3(Vector3(num11, num12, num10) + entityRotation);
 			
 				if (entityRoll != 0f)
 					if (uLocal_194[2] == 0 && uLocal_194[0] == 0)
@@ -7533,7 +7533,7 @@ void func_267() // Position - 0x90CC
 					}
 				}
 			
-				num19 = { Vector3(0f, num18, num17) + entityRotation2 };
+				num19 = Vector3(Vector3(0f, num18, num17) + entityRotation2);
 			
 				if (num19.f_1 > num2)
 					num19.f_1 = num2;
@@ -7590,7 +7590,7 @@ void func_267() // Position - 0x90CC
 				
 					num22 = func_250(-(num21 * 0.05f * num5 * (num - 25f)));
 					num23 = func_250(-(num20 * 0.05f * num5 * (num - 25f)));
-					num24 = { Vector3(0f, num23, num22) + entityRotation3 };
+					num24 = Vector3(Vector3(0f, num23, num22) + entityRotation3);
 				
 					if (IS_BIT_SET(uLocal_194.f_5, 12))
 						num24 = entityRotation3;
@@ -9770,7 +9770,7 @@ Vector3 func_349(float fParam0, var uParam1, var uParam2) // Position - 0xC2B7
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -10057,7 +10057,7 @@ void func_352() // Position - 0xC3D8
 				else
 					num4 = (num6 + num5) / 1f / PAD::GET_CONTROL_UNBOUND_NORMAL(FRONTEND_CONTROL, INPUT_FRONTEND_LS);
 			
-				vector2 = { unk6 * Vector3(num4, num4, num4) };
+				vector2 = Vector3(unk6 * Vector3(num4, num4, num4));
 			
 				if (vector2.f_2 > 149f)
 					vector2.f_2 = 149f;
@@ -10531,7 +10531,7 @@ void func_372(float fParam0, float fParam1, float fParam2, float fParam3, float 
 	if (!func_373(Global_1962996.f_13, fParam0, false))
 	{
 		Global_1962996.f_13 = Vector3(fParam0);
-		fParam3 = { fParam3 + Vector3(0f, -180f, 180f) };
+		fParam3 = Vector3(fParam3 + Vector3(0f, -180f, 180f));
 		Global_1962996.f_16 = Vector3(fParam3);
 	}
 

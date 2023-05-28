@@ -29843,7 +29843,7 @@ BOOL func_137(int iParam0, var uParam1, var uParam2) // Position - 0x1F514
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3( 1f, 0f, 0f ));
 			*uParam2 = 90f;
 			return true;
 	
@@ -34456,8 +34456,8 @@ void func_232() // Position - 0x262C1
 				{
 					if (!ENTITY::IS_ENTITY_AT_COORD(iLocal_127[1], vector, 2.5f, 2.5f, 2f, false, true, 0))
 					{
-						x2 = { Vector3(-1.599754f, -1082.671f, -1114.9523f) + Vector3(17.75f, 133.25f, 81.25f) };
-						x1 = { Vector3(-1.599754f, -1082.671f, -1114.9523f) - Vector3(17.75f, 133.25f, 81.25f) };
+						x2 = Vector3(Vector3(-1.599754f, -1082.671f, -1114.9523f) + Vector3(17.75f, 133.25f, 81.25f));
+						x1 = Vector3(Vector3(-1.599754f, -1082.671f, -1114.9523f) - Vector3(17.75f, 133.25f, 81.25f));
 					
 						if (PATHFIND::REQUEST_PATH_NODES_IN_AREA_THIS_FRAME(x1, x1.f_1, x2, x2.f_1))
 							if (TASK::GET_SCRIPT_TASK_STATUS(iLocal_130[1], SCRIPT_TASK_VEHICLE_DRIVE_TO_COORD) != 1)
@@ -34697,7 +34697,7 @@ Vector3 func_239(float fParam0, var uParam1, var uParam2) // Position - 0x26DC0
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -35117,8 +35117,8 @@ BOOL func_249(Entity eParam0, Vehicle veParam1, Object obParam2, Vector3 vParam3
 		unk13.f_2 = unk13.f_2 + (minimum2.f_2 - minimum.f_2);
 		ENTITY::SET_ENTITY_COORDS(obParam2, vParam3, true, false, false, true);
 		ENTITY::SET_ENTITY_ROTATION(obParam2, vParam6, 2, true);
-		offsetFromEntityInWorldCoords = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (num4 / 2f) - (radius * 0.75f), 0f) + unk13) };
-		offsetFromEntityInWorldCoords2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (-num4 / 2f) + (radius * 0.75f), 0f) + unk13) };
+		offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (num4 / 2f) - (radius * 0.75f), 0f) + unk13));
+		offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obParam2, Vector3(num5 * 1.25f, (-num4 / 2f) + (radius * 0.75f), 0f) + unk13));
 		shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(offsetFromEntityInWorldCoords2, offsetFromEntityInWorldCoords, radius, 19, PLAYER::PLAYER_PED_ID(), 4);
 		SHAPETEST::GET_SHAPE_TEST_RESULT(shapeTestHandle, &hit, &endCoords, &surfaceNormal, &entityHit) != 2;
 	

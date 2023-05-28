@@ -5066,7 +5066,7 @@ void func_99() // Position - 0x6B19
 			sLocal_46.f_4 = joaat("MotionState_Walk");
 			sLocal_46.f_30 = 999f;
 			sLocal_46.f_31 = 999f;
-			sLocal_46.f_19 = { Vector3(27.9336f, -958.3694f, 486.8887f) - sLocal_46.f_5 };
+			sLocal_46.f_19 = Vector3(Vector3(27.9336f, -958.3694f, 486.8887f) - sLocal_46.f_5);
 			sLocal_46.f_22 = Vector3(10f, 10f, 5f);
 			sLocal_46.f_52 = 0.75f;
 			sLocal_46.f_53 = Vector3(20f, 0f, 0f);
@@ -9859,7 +9859,7 @@ BOOL func_200(int iParam0, var uParam1, var uParam2) // Position - 0xC8C5
 			return true;
 	
 		case 42:
-			*uParam1 = { Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f) };
+			*uParam1 = Vector3(Vector3(4.0205f, -2975.3408f, 798.4536f) + Vector3(1f, 0f, 0f));
 			*uParam2 = 90f;
 			return true;
 	

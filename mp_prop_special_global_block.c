@@ -3140,7 +3140,7 @@ void func_16() // Position - 0x5704
 
 	for (i = 0; i < 13; i = i + 1)
 	{
-		Global_4282900[i] = { Global_4282900[i] * Vector3(0.333333f, 0.333333f, 0.333333f) };
+		Global_4282900[i] = Vector3(Global_4282900[i] * Vector3(0.333333f, 0.333333f, 0.333333f));
 	}
 
 	Global_4282940[0] = Vector3(7.87f, -54.898f, -10.9966f);

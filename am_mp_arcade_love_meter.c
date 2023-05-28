@@ -71409,7 +71409,7 @@ void func_427(int* piParam0, Ped pedParam1) // Position - 0x5B1FB
 		piParam0->f_31 = 0f;
 		piParam0->f_32 = 0f;
 		vector = Vector3(0.8808f, -0.5966f, 0.5838f);
-		vector = { vector * Vector3(1.15f, 1.15f, 1.15f) };
+		vector = Vector3(vector * Vector3(1.15f, 1.15f, 1.15f));
 		piParam0->f_44 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam1, vector));
 		piParam0->f_41 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(pedParam1, 0.1376f, 0.4819f, 0.4162f));
 		piParam0->f_28 = 0.1f;

@@ -829,7 +829,7 @@ struct<8> func_19(var uParam0, var uParam1, var uParam2, var uParam3, var uParam
 	var unk2;
 
 	unk = 2;
-	unk9 = { func_20(uParam0[1] - uParam0[0]) * Vector3(fParam8, fParam8, fParam8) };
+	unk9 = Vector3(func_20(uParam0[1] - uParam0[0]) * Vector3(fParam8, fParam8, fParam8));
 	unk[0] = Vector3(uParam0[0] - unk9);
 	unk[1] = Vector3(uParam0[1] + unk9);
 	unk.f_7 = uParam0.f_7 + (fParam8 * 2f);
@@ -846,7 +846,7 @@ Vector3 func_20(float fParam0, var uParam1, var uParam2) // Position - 0xEAD
 	if (num != 0f)
 	{
 		num2 = 1f / num;
-		fParam0 = { fParam0 * Vector3(num2, num2, num2) };
+		fParam0 = Vector3(fParam0 * Vector3(num2, num2, num2));
 	}
 	else
 	{
@@ -1342,10 +1342,10 @@ void func_55(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	unk7 = Vector3(uParam0);
 	unk10 = Vector3(uParam3);
 	unk10.f_2 = uParam0.f_2;
-	unk13[0] = { unk7 - (unk4 * Vector3(num, num, num)) };
-	unk13[1] = { unk7 + (unk4 * Vector3(num, num, num)) };
-	unk13[2] = { unk10 + (unk4 * Vector3(num, num, num)) };
-	unk13[3] = { unk10 - (unk4 * Vector3(num, num, num)) };
+	unk13[0] = Vector3(unk7 - (unk4 * Vector3(num, num, num)));
+	unk13[1] = Vector3(unk7 + (unk4 * Vector3(num, num, num)));
+	unk13[2] = Vector3(unk10 + (unk4 * Vector3(num, num, num)));
+	unk13[3] = Vector3(unk10 - (unk4 * Vector3(num, num, num)));
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[0], unk13[1], iParam7, iParam8, iParam9, iParam10);
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[1], unk13[2], iParam7, iParam8, iParam9, iParam10);
 	GRAPHICS::DRAW_DEBUG_LINE(unk13[2], unk13[3], iParam7, iParam8, iParam9, iParam10);
@@ -1763,7 +1763,7 @@ BOOL IS_PLAYSTATION_PLATFORM() // Position - 0x2232
 
 void func_69(var uParam0, float fParam1, float fParam2, float fParam3, float fParam4) // Position - 0x2248
 {
-	uParam0->f_12 = { func_20(fParam1 * Vector3(5f, 5f, 5f)) };
+	uParam0->f_12 = Vector3(func_20(fParam1 * Vector3(5f, 5f, 5f)));
 	uParam0->f_15 = func_70(fParam4, 0f, 360f);
 	return;
 }

@@ -3143,7 +3143,7 @@ void func_100(var uParam0, var uParam1) // Position - 0x35BB
 {
 	float approxHeightForArea;
 
-	*uParam0 = { func_101(iLocal_60.f_6 + Vector3(200f, 0f, 0f), 400f / 2f, 400f, 200f / 2f) };
+	*uParam0 = Vector3(func_101(iLocal_60.f_6 + Vector3(200f, 0f, 0f), 400f / 2f, 400f, 200f / 2f));
 	*uParam1 = MISC::GET_HEADING_FROM_VECTOR_2D(iLocal_60.f_6 - *uParam0, iLocal_60.f_6.f_1 - uParam0->f_1);
 	approxHeightForArea = PATHFIND::GET_APPROX_HEIGHT_FOR_AREA(*uParam0 - 400f, uParam0->f_1 - 400f, *uParam0 + 400f, uParam0->f_1 + 400f);
 

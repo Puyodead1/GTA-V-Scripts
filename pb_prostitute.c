@@ -3286,7 +3286,7 @@ void func_88() // Position - 0x2E66
 				{
 					MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veLocal_98), &minimum, &maximum);
 					unk5 = Vector3(maximum - minimum);
-					unk5 = { unk5 / Vector3(2f, 2f, 2f) };
+					unk5 = Vector3(unk5 / Vector3(2f, 2f, 2f));
 					offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_98, 0.2f, 0.2f, 0f));
 					offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_98, 0.2f, 0.2f, 0f));
 					entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_96, true));
@@ -12832,7 +12832,7 @@ BOOL func_326(int iParam0, BOOL bParam1, BOOL bParam2, var uParam3, var uParam4,
 		func_324(bParam5, &num, &num2, &num3);
 		textureResolution = Vector3(GRAPHICS::GET_TEXTURE_RESOLUTION(&textureDict, &textureName));
 		num4 = func_327(iParam0) / num3;
-		textureResolution = { textureResolution * Vector3(num4, num4, num4) };
+		textureResolution = Vector3(textureResolution * Vector3(num4, num4, num4));
 	
 		if (!bParam2)
 		{
@@ -16156,7 +16156,7 @@ void func_443(var uParam0) // Position - 0x147EB
 
 	MISC::GET_MODEL_DIMENSIONS(ENTITY::GET_ENTITY_MODEL(veLocal_99), &minimum, &maximum);
 	num = Vector3(maximum - minimum);
-	num = { num / Vector3(2f, 2f, 2f) };
+	num = Vector3(num / Vector3(2f, 2f, 2f));
 	offsetFromEntityInWorldCoords = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_99, -(num + 0.2f), 0f, 0f));
 	offsetFromEntityInWorldCoords2 = Vector3(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(veLocal_99, num + 0.2f, 0f, 0f));
 	entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(pedLocal_96, true));
