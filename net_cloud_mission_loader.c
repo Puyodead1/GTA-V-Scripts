@@ -5968,7 +5968,7 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
 	dict2 = DATAFILE::DATADICT_GET_DICT(dict, "gen");
 	dict3 = DATAFILE::DATADICT_GET_DICT(dict, "endcon");
-	Global_4718592.f_114152 = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
+	Global_4718592.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
 
 	if (!bParam2 || iParam3 == 0)
 	{
@@ -6346,23 +6346,23 @@ void func_204() // Position - 0x89EF
 		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_108), 18);
 		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_108), 19);
 		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_52[0] = 89;
-		Global_4980736.missionPedCount = *Global_4980736.missionPedCount + 1;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_27 = joaat("IG_Agatha");
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1] = Vector3(-1879.785f, 2047.555f, 140.983f);
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_3 = 165f;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_92 = 0;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_91 = 0;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_609 = 0;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_608 = 4;
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_538), 11);
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_538), 12);
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_28 = joaat("WEAPON_UNARMED");
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_56 = 173;
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_558), 19);
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_30[0] = 2;
-		MISC::SET_BIT(&Global_4718592.f_95997[0][func_206(*Global_4980736.missionPedCount - 1)], func_205(*Global_4980736.missionPedCount - 1));
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_492 = 2;
-		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_913[0] = 89;
+		Global_4980736.missionEnemyCount = *Global_4980736.missionEnemyCount + 1;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_27 = joaat("IG_Agatha");
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1] = Vector3(-1879.785f, 2047.555f, 140.983f);
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_3 = 165f;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_92 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_91 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_609 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_608 = 4;
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_538), 11);
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_538), 12);
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_28 = joaat("WEAPON_UNARMED");
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_56 = 173;
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_558), 19);
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_30[0] = 2;
+		MISC::SET_BIT(&Global_4718592.f_95997[0][func_206(*Global_4980736.missionEnemyCount - 1)], func_205(*Global_4980736.missionEnemyCount - 1));
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_492 = 2;
+		Global_4980736.f_102388[*Global_4980736.missionEnemyCount - 1].f_913[0] = 89;
 		Global_4718592.missionDdtrigCount = *Global_4718592.missionDdtrigCount + 1;
 		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_72), "EMPTY", 24);
 		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_11 = Vector3(1f, 1f, 1f);
@@ -6371,7 +6371,7 @@ void func_204() // Position - 0x89EF
 		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_7 = 0;
 		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_14 = 0f;
 		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_146 = 0;
-		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_147 = *Global_4980736.missionPedCount - 1;
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_147 = *Global_4980736.missionEnemyCount - 1;
 		Global_4718592.f_96024[0] = 0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_96024[0].f_6[0], "I'll meet you there.", 64);
 		Global_4718592.f_96024[0].f_1 = *Global_4718592.missionDdtrigCount - 1;
@@ -8366,7 +8366,7 @@ void func_228(int iParam0) // Position - 0xBE5A
 		return;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ene");
-	Global_4980736.missionPedCount = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionEnemyCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	unk10 = 12;
 	unk10.f_13 = 12;
 	unk10.f_30.f_2 = 4;
@@ -8426,7 +8426,7 @@ void func_228(int iParam0) // Position - 0xBE5A
 	unk195.f_275 = 12;
 	unk195.f_288 = 12;
 
-	for (i = 0; i <= *Global_4980736.missionPedCount - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionEnemyCount - 1; i = i + 1)
 	{
 		if (i < 80)
 		{
@@ -10634,7 +10634,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 	int array180;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ene");
-	Global_4980736.missionPedCount = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionEnemyCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict, "spcap") == 2 && DATAFILE::DATADICT_GET_INT(dict, "spcap") != 0)
 		Global_4980736.f_102384 = DATAFILE::DATADICT_GET_INT(dict, "spcap");
@@ -10955,7 +10955,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 		}
 	}
 
-	for (i = 0; i <= *Global_4980736.missionPedCount - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionEnemyCount - 1; i = i + 1)
 	{
 		if (i < 80)
 		{
@@ -13056,7 +13056,7 @@ void func_291(int iParam0) // Position - 0x1788E
 	var unk28;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "prop");
-	Global_4980736.f_39172 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionPropCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "loc");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "vRot");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "head");
@@ -13145,8 +13145,8 @@ void func_291(int iParam0) // Position - 0x1788E
 
 	array68 = DATAFILE::DATADICT_GET_ARRAY(dict, "pdip");
 
-	if (*Global_4980736.f_39172 > func_290())
-		Global_4980736.f_39172 = func_290();
+	if (*Global_4980736.missionPropCount > func_290())
+		Global_4980736.missionPropCount = func_290();
 
 	if (array64 != 0)
 	{
@@ -13170,7 +13170,7 @@ void func_291(int iParam0) // Position - 0x1788E
 
 	num = 0;
 
-	for (i = 0; i <= *Global_4980736.f_39172 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionPropCount - 1; i = i + 1)
 	{
 		Global_4980736.f_39173[i] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array, i));
 		Global_4980736.f_39173[i].f_3 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array2, i));
@@ -13928,8 +13928,8 @@ void func_296(int iParam0) // Position - 0x19223
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "veh");
 	Global_4980736.missionVehicleCount = DATAFILE::DATADICT_GET_INT(dict, "no");
-	Global_4980736.f_84916 = DATAFILE::DATADICT_GET_INT(dict, "time");
-	Global_4980736.f_84917 = DATAFILE::DATADICT_GET_INT(dict, "pal");
+	Global_4980736.missionVehicleTime = DATAFILE::DATADICT_GET_INT(dict, "time");
+	Global_4980736.missionVehiclePal = DATAFILE::DATADICT_GET_INT(dict, "pal");
 	dict2 = DATAFILE::DATADICT_GET_DICT(iParam0, "vhrls");
 
 	if (dict2 != 0)
@@ -18833,13 +18833,13 @@ void func_308(int iParam0) // Position - 0x21AC2
 	int unk22;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "weap");
-	Global_4980736.f_75693 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionWeaponCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 
 	if (Global_4718592 == 0)
-		if (*Global_4980736.f_75693 > 60)
-			Global_4980736.f_75693 = 60;
-	else if (*Global_4980736.f_75693 > 60)
-		Global_4980736.f_75693 = 60;
+		if (*Global_4980736.missionWeaponCount > 60)
+			Global_4980736.missionWeaponCount = 60;
+	else if (*Global_4980736.missionWeaponCount > 60)
+		Global_4980736.missionWeaponCount = 60;
 
 	Global_4980736.f_75695 = DATAFILE::DATADICT_GET_INT(dict, "time");
 	Global_4980736.f_75696 = DATAFILE::DATADICT_GET_INT(dict, "pal");
@@ -18892,7 +18892,7 @@ void func_308(int iParam0) // Position - 0x21AC2
 	unk40.f_35 = 4;
 	Global_4980736.f_84914 = DATAFILE::DATADICT_GET_BOOL(dict, "randtyp");
 
-	for (i = 0; i <= *Global_4980736.f_75693 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionWeaponCount - 1; i = i + 1)
 	{
 		if (i < 60)
 		{
@@ -38324,7 +38324,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_104432 = 0;
 	Global_4718592.f_104433 = 0;
 	Global_4718592.f_107471 = 0f;
-	Global_4980736.f_39172 = 0;
+	Global_4980736.missionPropCount = 0;
 
 	for (i = 0; i <= func_290() - 1; i = i + 1)
 	{
@@ -38683,7 +38683,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_160137[i].f_17 = -1;
 	}
 
-	Global_4980736.f_75693 = 0;
+	Global_4980736.missionWeaponCount = 0;
 	Global_4980736.f_75694 = 0;
 
 	if (bParam0)
@@ -38798,8 +38798,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_104430 = -1;
 	}
 
-	Global_4980736.f_84916 = 0;
-	Global_4980736.f_84917 = 0;
+	Global_4980736.missionVehicleTime = 0;
+	Global_4980736.missionVehiclePal = 0;
 	Global_4980736.f_84918 = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
@@ -38888,7 +38888,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		}
 	}
 
-	Global_4980736.missionPedCount = 0;
+	Global_4980736.missionEnemyCount = 0;
 	Global_4980736.f_102386 = 0;
 	Global_4980736.f_102387 = 0;
 	Global_4980736.f_102384 = 50;

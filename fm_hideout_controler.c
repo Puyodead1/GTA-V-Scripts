@@ -3380,7 +3380,7 @@ void func_34() // Position - 0x12B4
 
 	MISC::SET_BIT(&(iLocal_180.f_3), 5);
 
-	for (i = 0; i < *Global_4980736.missionPedCount; i = i + 1)
+	for (i = 0; i < *Global_4980736.missionEnemyCount; i = i + 1)
 	{
 		switch (iLocal_180.f_232[i])
 		{
@@ -3451,7 +3451,7 @@ void func_34() // Position - 0x12B4
 
 	iLocal_1069 = iLocal_1069 + 1;
 
-	if (iLocal_1069 >= *Global_4980736.missionPedCount)
+	if (iLocal_1069 >= *Global_4980736.missionEnemyCount)
 		iLocal_1069 = 0;
 
 	return;
@@ -5882,9 +5882,9 @@ BOOL func_78(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0
 
 	if (func_87(PLAYER::PLAYER_ID(), true, false))
 	{
-		if (*Global_4980736.f_39172 > 0)
+		if (*Global_4980736.missionPropCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_39172; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionPropCount; i = i + 1)
 			{
 				if (Global_4980736.f_39173[i].f_7 != 0)
 					if (func_79(uParam0, Global_4980736.f_39173[i], Global_4980736.f_39173[i].f_6, Global_4980736.f_39173[i].f_7, iParam3))
@@ -28895,7 +28895,7 @@ int func_420(var uParam0) // Position - 0x2656D
 	unk4.f_32 = -1082130432;
 	unk4.f_34 = 1;
 
-	for (i = 0; i < *Global_4980736.missionPedCount; i = i + 1)
+	for (i = 0; i < *Global_4980736.missionEnemyCount; i = i + 1)
 	{
 		if (!NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(uParam0->[i]))
 		{
@@ -28942,7 +28942,7 @@ int func_420(var uParam0) // Position - 0x2656D
 		uLocal_2417[i] = 0;
 	}
 
-	for (i = 0; i < *Global_4980736.missionPedCount; i = i + 1)
+	for (i = 0; i < *Global_4980736.missionEnemyCount; i = i + 1)
 	{
 		if (!NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(uParam0->[i]))
 			return 0;
@@ -48895,7 +48895,7 @@ void func_885() // Position - 0x3EBB2
 
 	flag = func_902();
 
-	for (i = 0; i < *Global_4980736.missionPedCount; i = i + 1)
+	for (i = 0; i < *Global_4980736.missionEnemyCount; i = i + 1)
 	{
 		func_890(i);
 		func_886(i, flag);
@@ -140820,7 +140820,7 @@ void func_1664() // Position - 0xBED96
 {
 	iLocal_1070 = iLocal_1070 + 1;
 
-	if (iLocal_1070 >= *Global_4980736.missionPedCount)
+	if (iLocal_1070 >= *Global_4980736.missionEnemyCount)
 		iLocal_1070 = 0;
 
 	return;
@@ -141223,8 +141223,8 @@ BOOL func_1682() // Position - 0xBF7C2
 {
 	int i;
 
-	if (*Global_4980736.f_39172 > 10)
-		Global_4980736.f_39172 = 10;
+	if (*Global_4980736.missionPropCount > 10)
+		Global_4980736.missionPropCount = 10;
 
 	if (Global_4980736.f_39173[i].f_7 != 0)
 	{
@@ -141232,7 +141232,7 @@ BOOL func_1682() // Position - 0xBF7C2
 	
 		if (STREAMING::HAS_MODEL_LOADED(Global_4980736.f_39173[i].f_7))
 		{
-			for (i = 0; i < *Global_4980736.f_39172; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionPropCount; i = i + 1)
 			{
 				if (!ENTITY::DOES_ENTITY_EXIST(uLocal_1134[i]))
 				{
@@ -141241,7 +141241,7 @@ BOOL func_1682() // Position - 0xBF7C2
 				}
 			}
 		
-			for (i = 0; i < *Global_4980736.f_39172; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionPropCount; i = i + 1)
 			{
 				if (!ENTITY::DOES_ENTITY_EXIST(uLocal_1134[i]) && Global_4980736.f_39173[i].f_7 != 0)
 					return false;
@@ -152731,8 +152731,8 @@ BOOL func_2026(var uParam0) // Position - 0xCF4C3
 	func_2036(uParam0, &(iLocal_180.f_5.f_223), &(iLocal_180.f_5.f_224), 32, true, true, true, 0);
 	Global_1853910[PLAYER::PLAYER_ID()] = 6;
 
-	if (*Global_4980736.missionPedCount > 6)
-		Global_4980736.missionPedCount = 6;
+	if (*Global_4980736.missionEnemyCount > 6)
+		Global_4980736.missionEnemyCount = 6;
 
 	func_2024(2, -1, false);
 	func_1678(0);
@@ -153117,14 +153117,14 @@ void func_2036(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 		
 			if (bParam4)
 			{
-				if (*Global_4980736.missionPedCount > 0 || *Global_4980736.f_214764 > 0)
+				if (*Global_4980736.missionEnemyCount > 0 || *Global_4980736.f_214764 > 0)
 				{
 					if (Global_4718592 == 1)
 					{
 					}
 					else
 					{
-						amount2 = *Global_4980736.missionPedCount;
+						amount2 = *Global_4980736.missionEnemyCount;
 					
 						if (*Global_4718592.f_114188 != 0)
 							amount2 = amount2 + 1;

@@ -10061,7 +10061,7 @@ void func_241(var uParam0) // Position - 0xC336
 
 	fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
 	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
-	Global_4718592.f_114152 = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
+	Global_4718592.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
 	func_242(&dict, uParam0, false, &unk);
 	return;
 }

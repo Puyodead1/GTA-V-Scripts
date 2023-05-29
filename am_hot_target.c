@@ -91787,9 +91787,9 @@ BOOL func_751(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 
 	if (func_258(PLAYER::PLAYER_ID(), true, false))
 	{
-		if (*Global_4980736.f_39172 > 0)
+		if (*Global_4980736.missionPropCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_39172; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionPropCount; i = i + 1)
 			{
 				if (Global_4980736.f_39173[i].f_7 != 0)
 					if (func_327(uParam0, Global_4980736.f_39173[i], Global_4980736.f_39173[i].f_6, Global_4980736.f_39173[i].f_7, iParam3))

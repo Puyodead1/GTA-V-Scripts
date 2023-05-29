@@ -104391,7 +104391,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_104432 = 0;
 	Global_4718592.f_104433 = 0;
 	Global_4718592.f_107471 = 0f;
-	Global_4980736.f_39172 = 0;
+	Global_4980736.missionPropCount = 0;
 
 	for (i = 0; i <= func_678() - 1; i = i + 1)
 	{
@@ -104750,7 +104750,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_160137[i].f_17 = -1;
 	}
 
-	Global_4980736.f_75693 = 0;
+	Global_4980736.missionWeaponCount = 0;
 	Global_4980736.f_75694 = 0;
 
 	if (bParam0)
@@ -104865,8 +104865,8 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_104430 = -1;
 	}
 
-	Global_4980736.f_84916 = 0;
-	Global_4980736.f_84917 = 0;
+	Global_4980736.missionVehicleTime = 0;
+	Global_4980736.missionVehiclePal = 0;
 	Global_4980736.f_84918 = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
@@ -104955,7 +104955,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		}
 	}
 
-	Global_4980736.missionPedCount = 0;
+	Global_4980736.missionEnemyCount = 0;
 	Global_4980736.f_102386 = 0;
 	Global_4980736.f_102387 = 0;
 	Global_4980736.f_102384 = 50;

@@ -152033,14 +152033,14 @@ void func_2134(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 		
 			if (bParam4)
 			{
-				if (*Global_4980736.missionPedCount > 0 || *Global_4980736.f_214764 > 0)
+				if (*Global_4980736.missionEnemyCount > 0 || *Global_4980736.f_214764 > 0)
 				{
 					if (Global_4718592 == 1)
 					{
 					}
 					else
 					{
-						amount2 = *Global_4980736.missionPedCount;
+						amount2 = *Global_4980736.missionEnemyCount;
 					
 						if (*Global_4718592.f_114188 != 0)
 							amount2 = amount2 + 1;

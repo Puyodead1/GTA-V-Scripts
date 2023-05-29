@@ -39085,7 +39085,7 @@ void func_311() // Position - 0x28DD6
 	int i;
 	eBlipSprite spriteId;
 
-	for (i = 0; i <= *Global_4980736.f_75693 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionWeaponCount - 1; i = i + 1)
 	{
 		if (!_IS_NULL_VECTOR(Global_4980736.f_75702[i]))
 		{
@@ -41546,7 +41546,7 @@ int func_352(int iParam0) // Position - 0x2BCB2
 		case 1:
 		case 0:
 		case 3:
-			return *Global_4980736.f_75693;
+			return *Global_4980736.missionWeaponCount;
 	
 		default:
 		
@@ -43041,7 +43041,7 @@ BOOL func_445() // Position - 0x2D960
 {
 	int i;
 
-	for (i = 0; i <= *Global_4980736.f_39172 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionPropCount - 1; i = i + 1)
 	{
 		if (IS_BIT_SET(Global_4980736.f_39173[i].f_22, 13))
 			return true;

@@ -677,7 +677,7 @@ void func_16(var uParam0) // Position - 0x77A
 		Global_4718592.f_1226 = uParam0->f_8[1][11];
 		Global_4718592.f_1228 = uParam0->f_8[1][12];
 		Global_4718592.f_1227 = uParam0->f_8[1][13];
-		Global_4980736.f_84917 = uParam0->f_8[1][14];
+		Global_4980736.missionVehiclePal = uParam0->f_8[1][14];
 	}
 	else if (Global_4718592 == 2)
 	{

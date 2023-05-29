@@ -18270,9 +18270,9 @@ BOOL func_351(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 
 	if (func_340(PLAYER::PLAYER_ID(), true, false))
 	{
-		if (*Global_4980736.f_39172 > 0)
+		if (*Global_4980736.missionPropCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_39172; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionPropCount; i = i + 1)
 			{
 				if (Global_4980736.f_39173[i].f_7 != 0)
 					if (func_308(uParam0, Global_4980736.f_39173[i], Global_4980736.f_39173[i].f_6, Global_4980736.f_39173[i].f_7, iParam3))
@@ -23692,7 +23692,7 @@ void func_536(var uParam0) // Position - 0x22B8A
 
 	fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
 	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
-	Global_4718592.f_114152 = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
+	Global_4718592.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
 	func_537(&dict, uParam0, false, &unk);
 	return;
 }
