@@ -103521,7 +103521,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	Global_4718592.missionGenMenubs40184[0] = 0;
 	Global_4718592.missionGenMenubs40184[1] = 0;
-	Global_4718592.missionGenMenubs40189 = 0;
+	Global_4718592.missionDdtrigCount = 0;
 
 	for (i = 0; i <= 14; i = i + 1)
 	{
@@ -103533,7 +103533,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (bParam3)
 		Global_4718592.f_2 = 0;
 
-	Global_4718592.missionGenMenubs40201 = 0;
+	Global_4718592.missionGenTestComplete = 0;
 	Global_4718592.f_114129 = 0;
 	Global_4718592.f_160488 = 0;
 
@@ -104406,7 +104406,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_673(&Global_4718592.f_163766[i]);
 	}
 
-	Global_4718592.f_166247 = 0;
+	Global_4718592.missionPtempCount = 0;
 	Global_4980736.missionDynamicPropCount = 0;
 	Global_4980736.f_68926 = 0;
 	func_672(&(Global_4980736.f_75488.f_83));
@@ -104543,7 +104543,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_107562 = -1;
 	Global_4980736.missionObjectCount = 0;
 	Global_4980736.missionObjectPal = 0;
-	Global_4980736.f_5993 = 0;
+	Global_4718592.missionObjRtm = 0;
 	func_672(&(Global_4980736.f_21739.f_242));
 	func_671(&(Global_4980736.f_75488.f_143));
 
@@ -104881,7 +104881,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_644(i);
 	}
 
-	Global_4718592.f_112511 = 0;
+	Global_4718592.missionUsgCount = 0;
 
 	for (i = 0; i <= 9; i = i + 1)
 	{
@@ -107756,7 +107756,7 @@ void func_650() // Position - 0x7B89F
 {
 	int i;
 
-	Global_4980736.f_208096 = 0;
+	Global_4718592.missionZoneCount = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
 	{

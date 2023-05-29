@@ -42151,7 +42151,7 @@ BOOL func_402(var uParam0, var uParam1, var uParam2) // Position - 0x2C8AE
 {
 	int i;
 
-	for (i = 0; i <= *Global_4980736.f_208096 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4718592.missionZoneCount - 1; i = i + 1)
 	{
 		if (Global_4980736.f_208097[i].f_11 == 3)
 			if (!_IS_NULL_VECTOR(Global_4980736.f_208097[i][0]) && !_IS_NULL_VECTOR(Global_4980736.f_208097[i][1]))

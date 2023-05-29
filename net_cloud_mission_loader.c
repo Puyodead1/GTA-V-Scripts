@@ -6363,18 +6363,18 @@ void func_204() // Position - 0x89EF
 		MISC::SET_BIT(&Global_4718592.f_95997[0][func_206(*Global_4980736.missionPedCount - 1)], func_205(*Global_4980736.missionPedCount - 1));
 		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_492 = 2;
 		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_913[0] = 89;
-		Global_4718592.missionGenMenubs40189 = *Global_4718592.missionGenMenubs40189 + 1;
-		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_72), "EMPTY", 24);
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_11 = Vector3(1f, 1f, 1f);
-		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_78), "EMPTY", 24);
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_8 = 0;
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_7 = 0;
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_14 = 0f;
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_146 = 0;
-		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_147 = *Global_4980736.missionPedCount - 1;
+		Global_4718592.missionDdtrigCount = *Global_4718592.missionDdtrigCount + 1;
+		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_72), "EMPTY", 24);
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_11 = Vector3(1f, 1f, 1f);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_78), "EMPTY", 24);
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_8 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_7 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_14 = 0f;
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_146 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionDdtrigCount - 1].f_147 = *Global_4980736.missionPedCount - 1;
 		Global_4718592.f_96024[0] = 0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_96024[0].f_6[0], "I'll meet you there.", 64);
-		Global_4718592.f_96024[0].f_1 = *Global_4718592.missionGenMenubs40189 - 1;
+		Global_4718592.f_96024[0].f_1 = *Global_4718592.missionDdtrigCount - 1;
 	}
 
 	return;
@@ -19640,13 +19640,13 @@ void func_312(int iParam0) // Position - 0x23439
 		return;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ptemp");
-	Global_4718592.f_166247 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4718592.missionPtempCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	unk2 = 10;
 	unk13 = 10;
 	unk24 = 10;
 	unk35 = 10;
 
-	for (i = 0; i <= *Global_4718592.f_166247 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4718592.missionPtempCount - 1; i = i + 1)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&key, "pto", 8);
 		TEXT_LABEL_APPEND_INT(&key, i, 8);
@@ -19916,7 +19916,7 @@ void func_313(int iParam0) // Position - 0x23682
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "obj");
 	Global_4980736.missionObjectCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	Global_4980736.missionObjectPal = DATAFILE::DATADICT_GET_INT(dict, "pal");
-	Global_4980736.f_5993 = DATAFILE::DATADICT_GET_INT(dict, "rtm");
+	Global_4718592.missionObjRtm = DATAFILE::DATADICT_GET_INT(dict, "rtm");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "loc");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "head");
 	array13 = DATAFILE::DATADICT_GET_ARRAY(dict, "model");
@@ -20994,7 +20994,7 @@ void func_320(int iParam0) // Position - 0x26D7F
 	var unk45;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "zone");
-	Global_4980736.f_208096 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4718592.missionZoneCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "vto");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "vld");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "zntp");
@@ -21033,10 +21033,10 @@ void func_320(int iParam0) // Position - 0x26D7F
 		unk9[i] = DATAFILE::DATADICT_GET_ARRAY(dict, &key);
 	}
 
-	if (*Global_4980736.f_208096 > 32)
-		Global_4980736.f_208096 = 32;
+	if (*Global_4718592.missionZoneCount > 32)
+		Global_4718592.missionZoneCount = 32;
 
-	for (i = 0; i <= *Global_4980736.f_208096 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4718592.missionZoneCount - 1; i = i + 1)
 	{
 		Global_4980736.f_208097[i][0] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array, i));
 		Global_4980736.f_208097[i][1] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array2, i));
@@ -21263,15 +21263,15 @@ void func_323(int iParam0) // Position - 0x27BAD
 	Any* array3;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "usj" /*Stunt Jump*/);
-	Global_4718592.f_112511 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4718592.missionUsgCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "vto");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "vld");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "vcm");
 
-	if (*Global_4718592.f_112511 > 10)
-		Global_4718592.f_112511 = 10;
+	if (*Global_4718592.missionUsgCount > 10)
+		Global_4718592.missionUsgCount = 10;
 
-	for (i = 0; i <= *Global_4718592.f_112511 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4718592.missionUsgCount - 1; i = i + 1)
 	{
 		Global_4718592.f_112512[i] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array, i));
 		Global_4718592.f_112512[i].f_3 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array2, i));
@@ -21424,7 +21424,7 @@ void func_324(int iParam0) // Position - 0x27C7A
 		return;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ddtrig");
-	Global_4718592.missionGenMenubs40189 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4718592.missionDdtrigCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "id");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "fid");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "dtasht");
@@ -21535,12 +21535,12 @@ void func_324(int iParam0) // Position - 0x27C7A
 		unk84[i] = DATAFILE::DATADICT_GET_ARRAY(dict, &key);
 	}
 
-	if (*Global_4718592.missionGenMenubs40189 > 120)
-		Global_4718592.missionGenMenubs40189 = 120;
+	if (*Global_4718592.missionDdtrigCount > 120)
+		Global_4718592.missionDdtrigCount = 120;
 
 	if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, 0) == 2)
 	{
-		for (i = 0; i <= *Global_4718592.missionGenMenubs40189 - 1; i = i + 1)
+		for (i = 0; i <= *Global_4718592.missionDdtrigCount - 1; i = i + 1)
 		{
 			if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, i) == 2)
 			{
@@ -21939,7 +21939,7 @@ void func_324(int iParam0) // Position - 0x27C7A
 	}
 	else
 	{
-		for (i = 0; i <= *Global_4718592.missionGenMenubs40189 - 1; i = i + 1)
+		for (i = 0; i <= *Global_4718592.missionDdtrigCount - 1; i = i + 1)
 		{
 			Global_4718592.f_114297[i] = 0;
 			TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[i].f_2), "", 16);
@@ -31551,7 +31551,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_166302 = -1;
 
-	Global_4718592.missionGenMenubs40201 = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
+	Global_4718592.missionGenTestComplete = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
 	Global_4718592.f_1221 = DATAFILE::DATADICT_GET_INT(dict, "endtype");
 	Global_4718592.f_11 = DATAFILE::DATADICT_GET_INT(dict, "menubs");
 
@@ -37454,7 +37454,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	Global_4718592.missionGenMenubs40184[0] = 0;
 	Global_4718592.missionGenMenubs40184[1] = 0;
-	Global_4718592.missionGenMenubs40189 = 0;
+	Global_4718592.missionDdtrigCount = 0;
 
 	for (i = 0; i <= 14; i = i + 1)
 	{
@@ -37466,7 +37466,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (bParam3)
 		Global_4718592.f_2 = 0;
 
-	Global_4718592.missionGenMenubs40201 = 0;
+	Global_4718592.missionGenTestComplete = 0;
 	Global_4718592.f_114129 = 0;
 	Global_4718592.f_160488 = 0;
 
@@ -38339,7 +38339,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_508(&Global_4718592.f_163766[i]);
 	}
 
-	Global_4718592.f_166247 = 0;
+	Global_4718592.missionPtempCount = 0;
 	Global_4980736.missionDynamicPropCount = 0;
 	Global_4980736.f_68926 = 0;
 	func_507(&(Global_4980736.f_75488.f_83));
@@ -38476,7 +38476,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_107562 = -1;
 	Global_4980736.missionObjectCount = 0;
 	Global_4980736.missionObjectPal = 0;
-	Global_4980736.f_5993 = 0;
+	Global_4718592.missionObjRtm = 0;
 	func_507(&(Global_4980736.f_21739.f_242));
 	func_506(&(Global_4980736.f_75488.f_143));
 
@@ -38814,7 +38814,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_481(i);
 	}
 
-	Global_4718592.f_112511 = 0;
+	Global_4718592.missionUsgCount = 0;
 
 	for (i = 0; i <= 9; i = i + 1)
 	{
@@ -40697,7 +40697,7 @@ void func_487() // Position - 0x56009
 {
 	int i;
 
-	Global_4980736.f_208096 = 0;
+	Global_4718592.missionZoneCount = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
 	{
