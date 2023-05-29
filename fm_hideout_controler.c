@@ -148832,7 +148832,7 @@ void func_1749(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 					if (func_1902() == -1)
 					{
 						if (!IS_BIT_SET(Global_MissionData1.f_12, 15))
-							func_1901(*Global_MissionData1.f_114178);
+							func_1901(*Global_MissionData1.missionRuleTod);
 						else
 							func_1900(*Global_MissionData1.f_162816, *Global_MissionData1.f_162817);
 					
@@ -152774,10 +152774,10 @@ BOOL func_2026(var uParam0) // Position - 0xCF4C3
 	{
 		STATS::PLAYSTATS_CREATE_MATCH_HISTORY_ID_2(&iLocal_180.f_359[0], &iLocal_180.f_359[1]);
 	
-		if (*Global_MissionData1.f_114180 <= 2)
+		if (*Global_MissionData1.missionRuleApeds <= 2)
 			iLocal_180.f_266 = 5 * MISC::GET_RANDOM_INT_IN_RANGE(3, 7);
 		else
-			iLocal_180.f_266 = *Global_MissionData1.f_114180;
+			iLocal_180.f_266 = *Global_MissionData1.missionRuleApeds;
 	
 		func_2031();
 	

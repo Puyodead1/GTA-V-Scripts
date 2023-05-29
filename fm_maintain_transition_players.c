@@ -41569,7 +41569,7 @@ BOOL func_353() // Position - 0x2BCEE
 	if (Global_MissionData1 == 2)
 		return true;
 
-	if (Global_MissionData1 == 1 && Global_MissionData1.f_1232 != 1 && !func_355(PLAYER::PLAYER_ID()))
+	if (Global_MissionData1 == 1 && Global_MissionData1.missionRuleVdm != 1 && !func_355(PLAYER::PLAYER_ID()))
 		if (func_352(Global_MissionData1) > 0)
 			return true;
 

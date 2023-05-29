@@ -31364,7 +31364,7 @@ void func_396(int iParam0) // Position - 0x3F975
 	Global_4718592.f_1220 = DATAFILE::DATADICT_GET_INT(dict, "time");
 	Global_4718592.f_1223 = DATAFILE::DATADICT_GET_INT(dict, "score");
 	Global_4718592.f_1234 = DATAFILE::DATADICT_GET_INT(dict, "prule");
-	Global_4980736.f_75694 = DATAFILE::DATADICT_GET_INT(dict, "ptyp");
+	Global_4980736.missionRulePytp = DATAFILE::DATADICT_GET_INT(dict, "ptyp");
 	Global_4718592.f_1224 = DATAFILE::DATADICT_GET_INT(dict, "blip" /*Blip*/);
 	Global_4718592.f_1226 = DATAFILE::DATADICT_GET_INT(dict, "tag");
 	Global_4718592.f_1227 = DATAFILE::DATADICT_GET_INT(dict, "voice");
@@ -38684,7 +38684,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	}
 
 	Global_4980736.missionWeaponCount = 0;
-	Global_4980736.f_75694 = 0;
+	Global_4980736.missionRulePytp = 0;
 
 	if (bParam0)
 		if (func_151(true) && !func_280())

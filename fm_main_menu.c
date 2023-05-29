@@ -665,18 +665,18 @@ void func_16(var uParam0) // Position - 0x77A
 	else if (Global_MissionData1 == 1)
 	{
 		Global_MissionData1.f_1195 = uParam0->f_8[1][0];
-		Global_MissionData1.f_1220 = uParam0->f_8[1][2];
-		Global_MissionData1.f_1223 = uParam0->f_8[1][3];
+		Global_MissionData1.ruleTime = uParam0->f_8[1][2];
+		Global_MissionData1.ruleScore = uParam0->f_8[1][3];
 		Global_MissionData1.f_1197 = uParam0->f_8[1][4];
 		Global_4980736.f_75696 = uParam0->f_8[1][5];
 		Global_4980736.f_75695 = uParam0->f_8[1][6];
-		Global_MissionData1.f_1229 = uParam0->f_8[1][7];
-		Global_MissionData1.f_107558 = uParam0->f_8[1][8];
-		Global_MissionData1.f_1234 = uParam0->f_8[1][9];
-		Global_MissionData1.f_1224 = uParam0->f_8[1][10];
-		Global_MissionData1.f_1226 = uParam0->f_8[1][11];
-		Global_MissionData1.f_1228 = uParam0->f_8[1][12];
-		Global_MissionData1.f_1227 = uParam0->f_8[1][13];
+		Global_MissionData1.missionRuleAim = uParam0->f_8[1][7];
+		Global_MissionData1.missionRulePol = uParam0->f_8[1][8];
+		Global_MissionData1.rulePrule = uParam0->f_8[1][9];
+		Global_MissionData1.missionRuleBlip = uParam0->f_8[1][10];
+		Global_MissionData1.missionRuleTag = uParam0->f_8[1][11];
+		Global_MissionData1.missionRuleRadio = uParam0->f_8[1][12];
+		Global_MissionData1.missionRuleVoice = uParam0->f_8[1][13];
 		Global_4980736.missionVehiclePal = uParam0->f_8[1][14];
 	}
 	else if (Global_MissionData1 == 2)

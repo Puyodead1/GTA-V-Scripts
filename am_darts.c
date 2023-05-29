@@ -118357,7 +118357,7 @@ void func_1117(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 					if (func_1243() == -1)
 					{
 						if (!IS_BIT_SET(Global_MissionData1.f_12, 15))
-							func_1242(*Global_MissionData1.f_114178);
+							func_1242(*Global_MissionData1.missionRuleTod);
 						else
 							func_1241(*Global_MissionData1.f_162816, *Global_MissionData1.f_162817);
 					
