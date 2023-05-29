@@ -2756,7 +2756,7 @@ BOOL func_74() // Position - 0x3A0E
 {
 	int i;
 
-	for (i = 0; i <= *Global_4980736.f_68925 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionDynamicPropCount - 1; i = i + 1)
 	{
 		if (!_IS_NULL_VECTOR(Global_4980736.f_68927[i]))
 			return true;

@@ -369,32 +369,32 @@ void func_1() // Position - 0x17F
 	int i;
 
 	MISC::CLEAR_AREA_OF_VEHICLES(0f, 0f, 0f, 99999.9f, false, false, false, false, false, false, 0);
-	allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_1578029);
+	allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_VehicleArray);
 
 	for (i = 0; i < allVehicles; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_1578029[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_VehicleArray[i]))
 		{
-			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() == true && !NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(Global_1578029[i]) || NETWORK::NETWORK_IS_GAME_IN_PROGRESS() == false)
+			if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() == true && !NETWORK::NETWORK_GET_ENTITY_IS_NETWORKED(Global_VehicleArray[i]) || NETWORK::NETWORK_IS_GAME_IN_PROGRESS() == false)
 			{
-				if (!(ENTITY::GET_ENTITY_POPULATION_TYPE(Global_1578029[i]) == 1))
+				if (!(ENTITY::GET_ENTITY_POPULATION_TYPE(Global_VehicleArray[i]) == 1))
 				{
-					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_1578029[i]) || !ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1578029[i], false))
+					if (!ENTITY::IS_ENTITY_A_MISSION_ENTITY(Global_VehicleArray[i]) || !ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_VehicleArray[i], false))
 						if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-							if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(Global_1578029[i]))
-								ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1578029[i], false, true);
+							if (NETWORK::NETWORK_GET_ENTITY_IS_LOCAL(Global_VehicleArray[i]))
+								ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_VehicleArray[i], false, true);
 						else
-							ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_1578029[i], true, true);
+							ENTITY::SET_ENTITY_AS_MISSION_ENTITY(Global_VehicleArray[i], true, true);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(Global_1578029[i], false))
-						if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_1578029[i], true))
+					if (!ENTITY::IS_ENTITY_DEAD(Global_VehicleArray[i], false))
+						if (PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_VehicleArray[i], true))
 							TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 				
-					if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_1578029[i], false))
-						if (VEHICLE::IS_MISSION_TRAIN(Global_1578029[i]))
-							VEHICLE::DELETE_MISSION_TRAIN(&Global_1578029[i]);
+					if (ENTITY::DOES_ENTITY_BELONG_TO_THIS_SCRIPT(Global_VehicleArray[i], false))
+						if (VEHICLE::IS_MISSION_TRAIN(Global_VehicleArray[i]))
+							VEHICLE::DELETE_MISSION_TRAIN(&Global_VehicleArray[i]);
 						else
-							VEHICLE::DELETE_VEHICLE(&Global_1578029[i]);
+							VEHICLE::DELETE_VEHICLE(&Global_VehicleArray[i]);
 				}
 			}
 		}

@@ -660,7 +660,7 @@ void func_16(var uParam0) // Position - 0x77A
 	{
 		Global_4718592.f_1195 = uParam0->f_8[0][5];
 		Global_4718592.f_1196 = uParam0->f_8[0][5];
-		Global_4718592.f_1200 = uParam0->f_8[0][7] + 1;
+		Global_4718592.missionGenTnum = uParam0->f_8[0][7] + 1;
 	}
 	else if (Global_4718592 == 1)
 	{

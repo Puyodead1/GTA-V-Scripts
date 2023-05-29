@@ -96189,7 +96189,7 @@ void func_715(BOOL bParam0, BOOL bParam1) // Position - 0x7616D
 	Global_1057408 = 0;
 	Global_1935368.f_2 = 0;
 	Global_1057409 = -1;
-	Global_1926731.f_1345 = 0;
+	Global_MissionControllerServerBD_LB.f_1345 = 0;
 	Global_2684801.f_2846 = 0;
 	Global_2683864.f_43.f_43 = -1;
 	Global_2683864.f_43.f_1 = -1;
@@ -96902,8 +96902,8 @@ void func_743(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x773FC
 	
 		if (bParam2 && !NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		{
-			Global_1926731.f_1347 = 0;
-			Global_1926731.f_1348 = 0;
+			Global_MissionControllerServerBD_LB.f_1347 = 0;
+			Global_MissionControllerServerBD_LB.f_1348 = 0;
 		}
 	
 		if (PLAYER::PLAYER_ID() != -1)

@@ -5404,7 +5404,7 @@ int func_147(var uParam0, var uParam1, var uParam2) // Position - 0x610E
 	var vehiclePedIsIn;
 	float entityModel2;
 
-	allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_1578029);
+	allVehicles = VEHICLE::GET_ALL_VEHICLES(&Global_VehicleArray);
 
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 	{
@@ -5420,19 +5420,19 @@ int func_147(var uParam0, var uParam1, var uParam2) // Position - 0x610E
 
 	for (i = 0; i < allVehicles; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(Global_1578029[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(Global_VehicleArray[i]))
 		{
-			if (!ENTITY::IS_ENTITY_DEAD(Global_1578029[i], false) && PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_1578029[i], false))
+			if (!ENTITY::IS_ENTITY_DEAD(Global_VehicleArray[i], false) && PED::IS_PED_IN_VEHICLE(PLAYER::PLAYER_PED_ID(), Global_VehicleArray[i], false))
 			{
 			}
-			else if (func_156(Global_1578029[i]))
+			else if (func_156(Global_VehicleArray[i]))
 			{
 			}
-			else if (!func_152(Global_1578029[i]))
+			else if (!func_152(Global_VehicleArray[i]))
 			{
-				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(Global_1578029[i], false));
-				entityHeading = ENTITY::GET_ENTITY_HEADING(Global_1578029[i]);
-				entityModel = ENTITY::GET_ENTITY_MODEL(Global_1578029[i]);
+				entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(Global_VehicleArray[i], false));
+				entityHeading = ENTITY::GET_ENTITY_HEADING(Global_VehicleArray[i]);
+				entityModel = ENTITY::GET_ENTITY_MODEL(Global_VehicleArray[i]);
 			
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 					if (func_151(entityCoords, entityHeading, entityModel, entityCoords2, entityHeading2, entityModel2, 0))
@@ -56569,9 +56569,9 @@ BOOL func_448(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 			}
 		}
 	
-		if (Global_4980736.f_5991 > 0)
+		if (Global_4980736.missionObjectCount > 0)
 		{
-			for (i = 0; i < Global_4980736.f_5991; i = i + 1)
+			for (i = 0; i < Global_4980736.missionObjectCount; i = i + 1)
 			{
 				if (Global_4980736.f_5994[i].f_15 != 0)
 					if (func_148(uParam0, Global_4980736.f_5994[i], Global_4980736.f_5994[i].f_3, Global_4980736.f_5994[i].f_15, 0.5f))
@@ -56579,9 +56579,9 @@ BOOL func_448(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 
 			}
 		}
 	
-		if (*Global_4980736.f_84915 > 0)
+		if (*Global_4980736.missionVehicleCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_84915; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionVehicleCount; i = i + 1)
 			{
 				if (Global_4980736.f_84919[i].f_12 != 0)
 					if (func_148(uParam0, Global_4980736.f_84919[i], Global_4980736.f_84919[i].f_3, Global_4980736.f_84919[i].f_12, 0.5f))
@@ -60175,7 +60175,7 @@ int func_513(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x47E67
 
 BOOL func_514() // Position - 0x47F09
 {
-	if (IS_BIT_SET(Global_4718592.f_13, 0) && !Global_2684801.f_6436)
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs3, 0) && !Global_2684801.f_6436)
 		return false;
 
 	return false;
@@ -69742,9 +69742,9 @@ BOOL func_686(Ped pedParam0) // Position - 0x5872A
 	
 		if (playerTeam > -1 && playerTeam < 4)
 		{
-			if (PED::DOES_RELATIONSHIP_GROUP_EXIST(Global_1836885[playerTeam]))
+			if (PED::DOES_RELATIONSHIP_GROUP_EXIST(Global_RelationshipGroupHashes[playerTeam]))
 			{
-				switch (PED::GET_RELATIONSHIP_BETWEEN_GROUPS(pedRelationshipGroupHash, Global_1836885[playerTeam]))
+				switch (PED::GET_RELATIONSHIP_BETWEEN_GROUPS(pedRelationshipGroupHash, Global_RelationshipGroupHashes[playerTeam]))
 				{
 					case 3:
 					case 5:

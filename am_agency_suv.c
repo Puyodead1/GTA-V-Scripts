@@ -12057,9 +12057,9 @@ BOOL func_212(var uParam0, var uParam1, var uParam2, float fParam3) // Position 
 			}
 		}
 	
-		if (Global_4980736.f_5991 > 0)
+		if (Global_4980736.missionObjectCount > 0)
 		{
-			for (i = 0; i < Global_4980736.f_5991; i = i + 1)
+			for (i = 0; i < Global_4980736.missionObjectCount; i = i + 1)
 			{
 				if (Global_4980736.f_5994[i].f_15 != 0)
 					if (func_162(uParam0, Global_4980736.f_5994[i], Global_4980736.f_5994[i].f_3, Global_4980736.f_5994[i].f_15, 0.5f))
@@ -12067,9 +12067,9 @@ BOOL func_212(var uParam0, var uParam1, var uParam2, float fParam3) // Position 
 			}
 		}
 	
-		if (*Global_4980736.f_84915 > 0)
+		if (*Global_4980736.missionVehicleCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_84915; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionVehicleCount; i = i + 1)
 			{
 				if (Global_4980736.f_84919[i].f_12 != 0)
 					if (func_162(uParam0, Global_4980736.f_84919[i], Global_4980736.f_84919[i].f_3, Global_4980736.f_84919[i].f_12, 0.5f))
@@ -15753,7 +15753,7 @@ int func_280(Vector3 vParam0, var uParam1, var uParam2) // Position - 0x18AE5
 
 BOOL func_281() // Position - 0x18B87
 {
-	if (IS_BIT_SET(Global_4718592.f_13, 0) && !Global_2684801.f_6436)
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs3, 0) && !Global_2684801.f_6436)
 		return false;
 
 	return false;

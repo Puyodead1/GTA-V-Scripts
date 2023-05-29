@@ -122902,7 +122902,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 
 	if (!IS_BIT_SET(Global_4718592.f_29, 1) && !func_1748())
 	{
-		if (IS_BIT_SET(Global_4718592.f_14, 17))
+		if (IS_BIT_SET(Global_4718592.missionGenMenubs4, 17))
 		{
 			PLAYER::SET_PLAYER_LEAVE_PED_BEHIND(PLAYER::PLAYER_ID(), false);
 			NETWORK::NETWORK_DISABLE_LEAVE_REMOTE_PED_BEHIND(true);
@@ -123025,7 +123025,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 			Global_2684801.f_6438 = 0;
 
 	if (!func_1775())
-		Global_1926731.f_1345 = 0;
+		Global_MissionControllerServerBD_LB.f_1345 = 0;
 
 	if (!func_1732() && !func_1775())
 	{
@@ -123165,7 +123165,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 			
 				func_1680();
 				Global_1926705 = 0;
-				Global_1926705.f_23 = Vector3(0f, 0f, 0f);
+				Global_1926705.v_23 = Vector3(0f, 0f, 0f);
 				MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 				TEXT_LABEL_ASSIGN_STRING(&(Global_2657589[PLAYER::PLAYER_ID()].f_226), "", 24);
 				Global_2657589[PLAYER::PLAYER_ID()].f_223 = Vector3(0f, 0f, 0f);
@@ -123194,7 +123194,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 				if (flag4 && func_1677() && NETWORK::NETWORK_GET_NUM_PARTICIPANTS() == 1)
 					Global_2684801.f_6008 = Vector3(GET_LOCAL_GAMER_HANDLE());
 			
-				if (Global_4718592.f_1200 > 1 && !func_1666() && !func_1665(*Global_4718592.f_113724) && !func_1664(*Global_4718592.f_113724) && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 > -1 && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 < 4)
+				if (Global_4718592.missionGenTnum > 1 && !func_1666() && !func_1665(*Global_4718592.f_113724) && !func_1664(*Global_4718592.f_113724) && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 > -1 && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 < 4)
 					func_1663(Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28);
 				else
 					func_1662();
@@ -123210,7 +123210,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 					if (NETWORK::NETWORK_IS_PLAYER_ACTIVE(player2))
 						Global_2684801.f_6008 = Vector3(GET_GAMER_HANDLE_PLAYER(player2));
 			
-				if (Global_4718592.f_1200 > 1 && !func_1666() && !func_1665(*Global_4718592.f_113724) && !func_1664(*Global_4718592.f_113724))
+				if (Global_4718592.missionGenTnum > 1 && !func_1666() && !func_1665(*Global_4718592.f_113724) && !func_1664(*Global_4718592.f_113724))
 					func_1663(Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28);
 				else
 					func_1662();
@@ -123559,7 +123559,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 				{
 					if (!IS_BIT_SET(Global_4718592.f_28, 10))
 						if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
-							Global_2684801.f_2846.f_198 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
+							Global_2684801.f_2846.v_198 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 				
 					func_1531();
 					func_1760();
@@ -125492,14 +125492,14 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 	{
 		case 1:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(0f, 0f, 0f);
+			Global_1926705.v_23 = Vector3(0f, 0f, 0f);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			func_1623();
 			break;
 	
 		case 2:
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			Global_1926705.f_17 = Vector3(uParam4);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
@@ -125510,7 +125510,7 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 		
 			func_1621();
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 		
 			if (func_1620())
 				Global_1926705.f_17 = Vector3(uParam4);
@@ -125530,18 +125530,18 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 			{
 				Global_1926705.f_17 = Vector3(func_1640());
 				uParam4 = Vector3(Global_1926705.f_17);
-				Global_1926705.f_23 = Vector3(func_1616());
+				Global_1926705.v_23 = Vector3(func_1616());
 			}
 			else if (func_1617() || func_1660())
 			{
 				if (func_1615())
-					Global_1926705.f_23 = Vector3(func_1614());
+					Global_1926705.v_23 = Vector3(func_1614());
 				else
-					Global_1926705.f_23 = Vector3(fParam1);
+					Global_1926705.v_23 = Vector3(fParam1);
 			}
 			else
 			{
-				Global_1926705.f_23 = Vector3(fParam1);
+				Global_1926705.v_23 = Vector3(fParam1);
 			}
 		
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
@@ -125556,13 +125556,13 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 				func_1618(1);
 		
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	
 		case 8:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			Global_1926705.f_17 = Vector3(uParam4);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
@@ -125570,13 +125570,13 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 		case 9:
 			func_1621();
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	
 		case 10:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(0f, 0f, 0f);
+			Global_1926705.v_23 = Vector3(0f, 0f, 0f);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	}
@@ -125584,7 +125584,7 @@ void func_1610(int iParam0, float fParam1, float fParam2, float fParam3, var uPa
 	func_1612();
 	func_1611();
 	func_1530(Global_1926705.f_9);
-	Global_2657589[PLAYER::PLAYER_ID()].f_223 = Vector3(Global_1926705.f_23);
+	Global_2657589[PLAYER::PLAYER_ID()].f_223 = Vector3(Global_1926705.v_23);
 	Global_2657589[PLAYER::PLAYER_ID()].f_226 = Vector3(uParam4);
 	return;
 }
@@ -126660,25 +126660,25 @@ void func_1720(BOOL bParam0) // Position - 0xA5507
 	unk.f_41 = -1;
 
 	if (Global_2683864.f_669.f_9 == 0)
-		Global_1926731.f_1345 = 0;
+		Global_MissionControllerServerBD_LB.f_1345 = 0;
 
 	for (i = 0; i <= 31; i = i + 1)
 	{
-		unk43 = Global_1926731[i].f_3;
-		Global_1926731[i] = Vector3(unk);
+		unk43 = Global_MissionControllerServerBD_LB[i].f_3;
+		Global_MissionControllerServerBD_LB[i] = Vector3(unk);
 	
 		if (func_1775())
-			Global_1926731[i].f_3 = unk43;
+			Global_MissionControllerServerBD_LB[i].f_3 = unk43;
 	
-		Global_1926731[i].f_1 = _INVALID_PLAYER_INDEX();
-		Global_1926731[i] = -1;
-		Global_1926731[i].f_2 = -1;
+		Global_MissionControllerServerBD_LB[i].f_1 = _INVALID_PLAYER_INDEX();
+		Global_MissionControllerServerBD_LB[i] = -1;
+		Global_MissionControllerServerBD_LB[i].f_2 = -1;
 	}
 
 	if (!func_1775() && !func_1732() && bParam0)
 	{
-		Global_1926731.f_1347 = 0;
-		Global_1926731.f_1348 = 0;
+		Global_MissionControllerServerBD_LB.f_1347 = 0;
+		Global_MissionControllerServerBD_LB.f_1348 = 0;
 	}
 
 	return;
@@ -126690,8 +126690,8 @@ BOOL func_1721() // Position - 0xA55D4
 
 	for (i = 0; i < 32; i = i + 1)
 	{
-		if (Global_1926731[i].f_1 != _INVALID_PLAYER_INDEX())
-			if (Global_1926731[i].f_11 > 0)
+		if (Global_MissionControllerServerBD_LB[i].f_1 != _INVALID_PLAYER_INDEX())
+			if (Global_MissionControllerServerBD_LB[i].f_11 > 0)
 				return true;
 	}
 
@@ -127294,8 +127294,8 @@ void func_1761(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA62B1
 	
 		if (bParam2 && !NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		{
-			Global_1926731.f_1347 = 0;
-			Global_1926731.f_1348 = 0;
+			Global_MissionControllerServerBD_LB.f_1347 = 0;
+			Global_MissionControllerServerBD_LB.f_1348 = 0;
 		}
 	
 		if (PLAYER::PLAYER_ID() != -1)

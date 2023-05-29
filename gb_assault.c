@@ -3560,9 +3560,9 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0
 			}
 		}
 	
-		if (Global_4980736.f_5991 > 0)
+		if (Global_4980736.missionObjectCount > 0)
 		{
-			for (i = 0; i < Global_4980736.f_5991; i = i + 1)
+			for (i = 0; i < Global_4980736.missionObjectCount; i = i + 1)
 			{
 				if (Global_4980736.f_5994[i].f_15 != 0)
 					if (func_75(uParam0, Global_4980736.f_5994[i], Global_4980736.f_5994[i].f_3, Global_4980736.f_5994[i].f_15, 0.5f))
@@ -3570,9 +3570,9 @@ BOOL func_74(var uParam0, var uParam1, var uParam2, int iParam3) // Position - 0
 			}
 		}
 	
-		if (*Global_4980736.f_84915 > 0)
+		if (*Global_4980736.missionVehicleCount > 0)
 		{
-			for (i = 0; i < *Global_4980736.f_84915; i = i + 1)
+			for (i = 0; i < *Global_4980736.missionVehicleCount; i = i + 1)
 			{
 				if (Global_4980736.f_84919[i].f_12 != 0)
 					if (func_75(uParam0, Global_4980736.f_84919[i], Global_4980736.f_84919[i].f_3, Global_4980736.f_84919[i].f_12, 0.5f))
@@ -5793,9 +5793,9 @@ BOOL func_132(Ped pedParam0) // Position - 0x7912
 	
 		if (playerTeam > -1 && playerTeam < 4)
 		{
-			if (PED::DOES_RELATIONSHIP_GROUP_EXIST(Global_1836885[playerTeam]))
+			if (PED::DOES_RELATIONSHIP_GROUP_EXIST(Global_RelationshipGroupHashes[playerTeam]))
 			{
-				switch (PED::GET_RELATIONSHIP_BETWEEN_GROUPS(pedRelationshipGroupHash, Global_1836885[playerTeam]))
+				switch (PED::GET_RELATIONSHIP_BETWEEN_GROUPS(pedRelationshipGroupHash, Global_RelationshipGroupHashes[playerTeam]))
 				{
 					case 3:
 					case 5:

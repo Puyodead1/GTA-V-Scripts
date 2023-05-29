@@ -5649,14 +5649,14 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 	{
 		case 1:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(0f, 0f, 0f);
+			Global_1926705.v_23 = Vector3(0f, 0f, 0f);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			func_57();
 			break;
 	
 		case 2:
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			Global_1926705.f_17 = Vector3(uParam4);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
@@ -5667,7 +5667,7 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 		
 			func_55();
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 		
 			if (func_54())
 				Global_1926705.f_17 = Vector3(uParam4);
@@ -5687,18 +5687,18 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 			{
 				Global_1926705.f_17 = Vector3(func_46());
 				uParam4 = Vector3(Global_1926705.f_17);
-				Global_1926705.f_23 = Vector3(func_45());
+				Global_1926705.v_23 = Vector3(func_45());
 			}
 			else if (func_49() || func_48())
 			{
 				if (func_44())
-					Global_1926705.f_23 = Vector3(func_43());
+					Global_1926705.v_23 = Vector3(func_43());
 				else
-					Global_1926705.f_23 = Vector3(fParam1);
+					Global_1926705.v_23 = Vector3(fParam1);
 			}
 			else
 			{
-				Global_1926705.f_23 = Vector3(fParam1);
+				Global_1926705.v_23 = Vector3(fParam1);
 			}
 		
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
@@ -5713,13 +5713,13 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 				func_50(1);
 		
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	
 		case 8:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			Global_1926705.f_17 = Vector3(uParam4);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
@@ -5727,13 +5727,13 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 		case 9:
 			func_55();
 			Global_1926705 = 1;
-			Global_1926705.f_23 = Vector3(fParam1);
+			Global_1926705.v_23 = Vector3(fParam1);
 			MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	
 		case 10:
 			Global_1926705 = 0;
-			Global_1926705.f_23 = Vector3(0f, 0f, 0f);
+			Global_1926705.v_23 = Vector3(0f, 0f, 0f);
 			MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 1);
 			break;
 	}
@@ -5741,7 +5741,7 @@ void func_38(int iParam0, float fParam1, float fParam2, float fParam3, var uPara
 	func_41();
 	func_40();
 	func_39(Global_1926705.f_9);
-	Global_2657589[PLAYER::PLAYER_ID()].f_223 = Vector3(Global_1926705.f_23);
+	Global_2657589[PLAYER::PLAYER_ID()].f_223 = Vector3(Global_1926705.v_23);
 	Global_2657589[PLAYER::PLAYER_ID()].f_226 = Vector3(uParam4);
 	return;
 }

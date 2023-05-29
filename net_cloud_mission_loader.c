@@ -3453,8 +3453,8 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 				if (func_135(*Global_4718592.f_113724))
 					Global_4718592.f_1238 = Vector3(func_134());
 			
-				if (Global_4718592.f_1200 < 1)
-					Global_4718592.f_1200 = 1;
+				if (Global_4718592.missionGenTnum < 1)
+					Global_4718592.missionGenTnum = 1;
 			
 				if (Global_4718592.f_1199 < 1)
 					Global_4718592.f_1199 = 1;
@@ -3622,9 +3622,9 @@ BOOL func_133() // Position - 0x466A
 	int i;
 	int j;
 
-	for (i = 0; i < Global_4718592.f_1200; i = i + 1)
+	for (i = 0; i < Global_4718592.missionGenTnum; i = i + 1)
 	{
-		for (j = 0; j < Global_4718592.f_1200; j = j + 1)
+		for (j = 0; j < Global_4718592.missionGenTnum; j = j + 1)
 		{
 			if (Global_4718592.f_1207[i] != Global_4718592.f_1207[j])
 				return false;
@@ -4905,7 +4905,7 @@ void func_157() // Position - 0x60DD
 	unk54 = 4;
 	unk59 = 4;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -4945,7 +4945,7 @@ void func_157() // Position - 0x60DD
 	unk82.f_1.f_11.f_11.f_11.f_11.f_11.f_11 = 10;
 	unk82.f_1.f_11.f_11.f_11.f_11.f_11.f_11.f_11 = 10;
 
-	for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+	for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 	{
 		num2 = 0;
 		num = 0;
@@ -6335,46 +6335,46 @@ void func_204() // Position - 0x89EF
 
 	if (*Global_4718592.f_113724 == func_207(2))
 	{
-		Global_4980736.f_84915 = *Global_4980736.f_84915 + 1;
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_12 = joaat("cognoscenti");
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1] = Vector3(-1918.658f, 2056.826f, 140.359f);
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_3 = -102f;
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_57 = 0;
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_56 = 0;
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_176 = 0;
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_175 = 4;
-		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_108), 18);
-		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_108), 19);
-		Global_4980736.f_84919[*Global_4980736.f_84915 - 1].f_52[0] = 89;
-		Global_4980736.f_102382 = *Global_4980736.f_102382 + 1;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_27 = joaat("IG_Agatha");
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1] = Vector3(-1879.785f, 2047.555f, 140.983f);
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_3 = 165f;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_92 = 0;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_91 = 0;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_609 = 0;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_608 = 4;
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_538), 11);
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_538), 12);
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_28 = joaat("WEAPON_UNARMED");
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_56 = 173;
-		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_558), 19);
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_30[0] = 2;
-		MISC::SET_BIT(&Global_4718592.f_95997[0][func_206(*Global_4980736.f_102382 - 1)], func_205(*Global_4980736.f_102382 - 1));
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_492 = 2;
-		Global_4980736.f_102388[*Global_4980736.f_102382 - 1].f_913[0] = 89;
-		Global_4718592.f_140189 = *Global_4718592.f_140189 + 1;
-		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_72), "EMPTY", 24);
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_11 = Vector3(1f, 1f, 1f);
-		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_78), "EMPTY", 24);
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_8 = 0;
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_7 = 0;
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_14 = 0f;
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_146 = 0;
-		Global_4718592.f_114297[*Global_4718592.f_140189 - 1].f_147 = *Global_4980736.f_102382 - 1;
+		Global_4980736.missionVehicleCount = *Global_4980736.missionVehicleCount + 1;
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_12 = joaat("cognoscenti");
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1] = Vector3(-1918.658f, 2056.826f, 140.359f);
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_3 = -102f;
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_57 = 0;
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_56 = 0;
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_176 = 0;
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_175 = 4;
+		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_108), 18);
+		MISC::SET_BIT(&(Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_108), 19);
+		Global_4980736.f_84919[*Global_4980736.missionVehicleCount - 1].f_52[0] = 89;
+		Global_4980736.missionPedCount = *Global_4980736.missionPedCount + 1;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_27 = joaat("IG_Agatha");
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1] = Vector3(-1879.785f, 2047.555f, 140.983f);
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_3 = 165f;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_92 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_91 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_609 = 0;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_608 = 4;
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_538), 11);
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_538), 12);
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_28 = joaat("WEAPON_UNARMED");
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_56 = 173;
+		MISC::SET_BIT(&(Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_558), 19);
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_30[0] = 2;
+		MISC::SET_BIT(&Global_4718592.f_95997[0][func_206(*Global_4980736.missionPedCount - 1)], func_205(*Global_4980736.missionPedCount - 1));
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_492 = 2;
+		Global_4980736.f_102388[*Global_4980736.missionPedCount - 1].f_913[0] = 89;
+		Global_4718592.missionGenMenubs40189 = *Global_4718592.missionGenMenubs40189 + 1;
+		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_72), "EMPTY", 24);
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_11 = Vector3(1f, 1f, 1f);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_78), "EMPTY", 24);
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_8 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_7 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_14 = 0f;
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_146 = 0;
+		Global_4718592.f_114297[*Global_4718592.missionGenMenubs40189 - 1].f_147 = *Global_4980736.missionPedCount - 1;
 		Global_4718592.f_96024[0] = 0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_96024[0].f_6[0], "I'll meet you there.", 64);
-		Global_4718592.f_96024[0].f_1 = *Global_4718592.f_140189 - 1;
+		Global_4718592.f_96024[0].f_1 = *Global_4718592.missionGenMenubs40189 - 1;
 	}
 
 	return;
@@ -8366,7 +8366,7 @@ void func_228(int iParam0) // Position - 0xBE5A
 		return;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ene");
-	Global_4980736.f_102382 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionPedCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	unk10 = 12;
 	unk10.f_13 = 12;
 	unk10.f_30.f_2 = 4;
@@ -8426,7 +8426,7 @@ void func_228(int iParam0) // Position - 0xBE5A
 	unk195.f_275 = 12;
 	unk195.f_288 = 12;
 
-	for (i = 0; i <= *Global_4980736.f_102382 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionPedCount - 1; i = i + 1)
 	{
 		if (i < 80)
 		{
@@ -10634,7 +10634,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 	int array180;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ene");
-	Global_4980736.f_102382 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionPedCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 
 	if (DATAFILE::DATADICT_GET_TYPE(dict, "spcap") == 2 && DATAFILE::DATADICT_GET_INT(dict, "spcap") != 0)
 		Global_4980736.f_102384 = DATAFILE::DATADICT_GET_INT(dict, "spcap");
@@ -10746,7 +10746,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 
 	if (func_151(true))
 	{
-		for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+		for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 		{
 			if (k < 4)
 			{
@@ -10955,7 +10955,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 		}
 	}
 
-	for (i = 0; i <= *Global_4980736.f_102382 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionPedCount - 1; i = i + 1)
 	{
 		if (i < 80)
 		{
@@ -11967,7 +11967,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 						Global_4980736.f_102388[i].f_691[j] = 0f;
 				}
 			
-				for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+				for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 				{
 					if (k < 4)
 					{
@@ -12214,7 +12214,7 @@ void func_278(int iParam0) // Position - 0x14E15
 	int array46;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "dprop");
-	Global_4980736.f_68925 = func_289(DATAFILE::DATADICT_GET_INT(dict, "no"), 0, func_290());
+	Global_4980736.missionDynamicPropCount = func_289(DATAFILE::DATADICT_GET_INT(dict, "no"), 0, func_290());
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "loc");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "vRot");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "head");
@@ -12287,10 +12287,10 @@ void func_278(int iParam0) // Position - 0x14E15
 	unk99.f_30 = 4;
 	unk99.f_35 = 4;
 
-	if (*Global_4980736.f_68925 > 32)
-		Global_4980736.f_68925 = 32;
+	if (*Global_4980736.missionDynamicPropCount > 32)
+		Global_4980736.missionDynamicPropCount = 32;
 
-	for (i = 0; i <= *Global_4980736.f_68925 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionDynamicPropCount - 1; i = i + 1)
 	{
 		Global_4980736.f_68927[i] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array, i));
 		Global_4980736.f_68927[i].f_3 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array2, i));
@@ -12555,7 +12555,7 @@ void func_278(int iParam0) // Position - 0x14E15
 
 	if (func_280() || Global_4718592 == 1 && !func_279())
 	{
-		for (i = 0; i <= Global_4980736.f_5991 - 1; i = i + 1)
+		for (i = 0; i <= Global_4980736.missionObjectCount - 1; i = i + 1)
 		{
 			Global_4980736.f_68927[num] = Vector3(Global_4980736.f_5994[i]);
 			Global_4980736.f_68927[num].f_3 = Vector3(Global_4980736.f_5994[i].f_4);
@@ -12570,7 +12570,7 @@ void func_278(int iParam0) // Position - 0x14E15
 			}
 		
 			Global_4980736.f_68926 = *Global_4980736.f_68926 + 1;
-			Global_4980736.f_68925 = *Global_4980736.f_68925 + 1;
+			Global_4980736.missionDynamicPropCount = *Global_4980736.missionDynamicPropCount + 1;
 			num = num + 1;
 		}
 	}
@@ -13927,14 +13927,14 @@ void func_296(int iParam0) // Position - 0x19223
 	var unk136;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "veh");
-	Global_4980736.f_84915 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionVehicleCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 	Global_4980736.f_84916 = DATAFILE::DATADICT_GET_INT(dict, "time");
 	Global_4980736.f_84917 = DATAFILE::DATADICT_GET_INT(dict, "pal");
 	dict2 = DATAFILE::DATADICT_GET_DICT(iParam0, "vhrls");
 
 	if (dict2 != 0)
 	{
-		for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+		for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 		{
 			for (i = 0; i <= Global_4718592.f_1265[k].f_59 - 1; i = i + 1)
 			{
@@ -14085,7 +14085,7 @@ void func_296(int iParam0) // Position - 0x19223
 		array30 = DATAFILE::DATADICT_GET_ARRAY(dict, "spwn4");
 		array31 = DATAFILE::DATADICT_GET_ARRAY(dict, "spsrc4");
 		array32 = DATAFILE::DATADICT_GET_ARRAY(dict, "spasr4");
-		Global_4980736.f_39171 = DATAFILE::DATADICT_GET_INT(dict, "nocr");
+		Global_4980736.missionVehNocr = DATAFILE::DATADICT_GET_INT(dict, "nocr");
 		array33 = DATAFILE::DATADICT_GET_ARRAY(dict, "crgdm");
 		array36 = DATAFILE::DATADICT_GET_ARRAY(dict, "modps");
 		array37 = DATAFILE::DATADICT_GET_ARRAY(dict, "ncol");
@@ -14276,7 +14276,7 @@ void func_296(int iParam0) // Position - 0x19223
 	
 		array165 = DATAFILE::DATADICT_GET_ARRAY(dict, "ubrkdb");
 	
-		for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+		for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 		{
 			if (k < 4)
 			{
@@ -14308,7 +14308,7 @@ void func_296(int iParam0) // Position - 0x19223
 		}
 	}
 
-	for (i = 0; i <= *Global_4980736.f_84915 - 1; i = i + 1)
+	for (i = 0; i <= *Global_4980736.missionVehicleCount - 1; i = i + 1)
 	{
 		if (i < 32)
 		{
@@ -15102,7 +15102,7 @@ void func_296(int iParam0) // Position - 0x19223
 				else
 					Global_4980736.f_84919[i].f_336 = -1;
 			
-				for (k = 0; k <= Global_4718592.f_1200 - 1; k = k + 1)
+				for (k = 0; k <= Global_4718592.missionGenTnum - 1; k = k + 1)
 				{
 					if (k < 4)
 					{
@@ -19914,8 +19914,8 @@ void func_313(int iParam0) // Position - 0x23682
 	var unk90;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "obj");
-	Global_4980736.f_5991 = DATAFILE::DATADICT_GET_INT(dict, "no");
-	Global_4980736.f_5992 = DATAFILE::DATADICT_GET_INT(dict, "pal");
+	Global_4980736.missionObjectCount = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4980736.missionObjectPal = DATAFILE::DATADICT_GET_INT(dict, "pal");
 	Global_4980736.f_5993 = DATAFILE::DATADICT_GET_INT(dict, "rtm");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "loc");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "head");
@@ -20083,7 +20083,7 @@ void func_313(int iParam0) // Position - 0x23682
 		array124 = DATAFILE::DATADICT_GET_ARRAY(dict, "omcf");
 		array125 = DATAFILE::DATADICT_GET_ARRAY(dict, "omca");
 	
-		for (j = 0; j <= Global_4718592.f_1200 - 1; j = j + 1)
+		for (j = 0; j <= Global_4718592.missionGenTnum - 1; j = j + 1)
 		{
 			if (j < 4)
 			{
@@ -20109,7 +20109,7 @@ void func_313(int iParam0) // Position - 0x23682
 		}
 	}
 
-	for (i = 0; i <= Global_4980736.f_5991 - 1; i = i + 1)
+	for (i = 0; i <= Global_4980736.missionObjectCount - 1; i = i + 1)
 	{
 		if (i < 32)
 		{
@@ -20689,7 +20689,7 @@ void func_313(int iParam0) // Position - 0x23682
 				else
 					Global_4980736.f_5994[i].f_347 = 0.5f;
 			
-				for (j = 0; j <= Global_4718592.f_1200 - 1; j = j + 1)
+				for (j = 0; j <= Global_4718592.missionGenTnum - 1; j = j + 1)
 				{
 					if (j < 4)
 					{
@@ -21424,7 +21424,7 @@ void func_324(int iParam0) // Position - 0x27C7A
 		return;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "ddtrig");
-	Global_4718592.f_140189 = DATAFILE::DATADICT_GET_INT(dict, "no");
+	Global_4718592.missionGenMenubs40189 = DATAFILE::DATADICT_GET_INT(dict, "no");
 	array = DATAFILE::DATADICT_GET_ARRAY(dict, "id");
 	array2 = DATAFILE::DATADICT_GET_ARRAY(dict, "fid");
 	array3 = DATAFILE::DATADICT_GET_ARRAY(dict, "dtasht");
@@ -21535,12 +21535,12 @@ void func_324(int iParam0) // Position - 0x27C7A
 		unk84[i] = DATAFILE::DATADICT_GET_ARRAY(dict, &key);
 	}
 
-	if (*Global_4718592.f_140189 > 120)
-		Global_4718592.f_140189 = 120;
+	if (*Global_4718592.missionGenMenubs40189 > 120)
+		Global_4718592.missionGenMenubs40189 = 120;
 
 	if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, 0) == 2)
 	{
-		for (i = 0; i <= *Global_4718592.f_140189 - 1; i = i + 1)
+		for (i = 0; i <= *Global_4718592.missionGenMenubs40189 - 1; i = i + 1)
 		{
 			if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, i) == 2)
 			{
@@ -21939,7 +21939,7 @@ void func_324(int iParam0) // Position - 0x27C7A
 	}
 	else
 	{
-		for (i = 0; i <= *Global_4718592.f_140189 - 1; i = i + 1)
+		for (i = 0; i <= *Global_4718592.missionGenMenubs40189 - 1; i = i + 1)
 		{
 			Global_4718592.f_114297[i] = 0;
 			TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114297[i].f_2), "", 16);
@@ -22012,19 +22012,19 @@ void func_324(int iParam0) // Position - 0x27C7A
 	}
 
 	if (iParam0 != 0 && DATAFILE::DATADICT_GET_TYPE(iParam0, "dtmp") == 2)
-		Global_4718592.f_140184[0] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp");
+		Global_4718592.missionGenMenubs40184[0] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp");
 	else
-		Global_4718592.f_140184[0] = 0;
+		Global_4718592.missionGenMenubs40184[0] = 0;
 
 	if (iParam0 != 0 && DATAFILE::DATADICT_GET_TYPE(iParam0, "dtmp2") == 2)
-		Global_4718592.f_140184[1] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp2");
+		Global_4718592.missionGenMenubs40184[1] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp2");
 	else
-		Global_4718592.f_140184[1] = 0;
+		Global_4718592.missionGenMenubs40184[1] = 0;
 
 	if (iParam0 != 0 && DATAFILE::DATADICT_GET_TYPE(iParam0, "dtmp3") == 2)
-		Global_4718592.f_140184[2] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp3");
+		Global_4718592.missionGenMenubs40184[2] = DATAFILE::DATADICT_GET_INT(iParam0, "dtmp3");
 	else
-		Global_4718592.f_140184[2] = 0;
+		Global_4718592.missionGenMenubs40184[2] = 0;
 
 	return;
 }
@@ -22189,7 +22189,7 @@ void func_326(int iParam0, int iParam1) // Position - 0x29D24
 	}
 
 	if (iParam1 != -1)
-		MISC::CLEAR_BIT(&Global_4718592.f_140184[iParam1 / 32], iParam1 % 32);
+		MISC::CLEAR_BIT(&Global_4718592.missionGenMenubs40184[iParam1 / 32], iParam1 % 32);
 
 	if (HUD::DOES_BLIP_EXIST(iParam0->f_115))
 		HUD::REMOVE_BLIP(&(iParam0->f_115));
@@ -22306,7 +22306,7 @@ void func_330(var uParam0) // Position - 0x2A1BE
 	func_328("DMwbt", &(Global_4718592.f_179674.f_6914), &dict, -1, -2340845);
 	func_328("DMFlvs", &(Global_4718592.f_179674.f_6903), &dict, 1, -2340845);
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		func_227("DMTlvs", &Global_4718592.f_179674.f_6904[i], &dict, &unk281, i, 1, -2340845);
 		func_227("DMTscr", &Global_4718592.f_179674.f_6909[i], &dict, &(unk281.f_1), i, 0, -2340845);
@@ -22319,7 +22319,7 @@ void func_330(var uParam0) // Position - 0x2A1BE
 		func_331(&unk, &dict, &dict2, &Global_4718592.f_179674[i], i);
 	}
 
-	func_328("dmRND", &(Global_4718592.f_140202), &dict, 2, -2340845);
+	func_328("dmRND", &(Global_4718592.missionGenMenubs40202), &dict, 2, -2340845);
 	return;
 }
 
@@ -22351,7 +22351,7 @@ void func_331(var uParam0, var uParam1, var uParam2, int* piParam3, int iParam4)
 	func_227("cgscPF", &(piParam3->f_16.f_4), uParam1, &(uParam0->f_20), iParam4, 0, -2340845);
 	func_227("cgscPL", &(piParam3->f_16.f_5), uParam1, &(uParam0->f_21), iParam4, 0, -2340845);
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		func_334(&unk, "cgscSST_", i, -1);
 		func_227(&unk, &piParam3->f_16.f_6[i], uParam1, &uParam0->f_22[i], iParam4, 0, -2340845);
@@ -23958,29 +23958,29 @@ void func_360(int iParam0) // Position - 0x2DC53
 	for (i = 0; i <= 9; i = i + 1)
 	{
 		if (array != 0 && DATAFILE::DATAARRAY_GET_TYPE(array, i) == 4)
-			TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i], DATAFILE::DATAARRAY_GET_STRING(array, i), 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i], DATAFILE::DATAARRAY_GET_STRING(array, i), 16);
 		else
-			TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i], "", 16);
+			TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i], "", 16);
 	
 		if (array2 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array2, i) == 2)
-			Global_4718592.f_140381[i].f_4 = DATAFILE::DATAARRAY_GET_INT(array2, i);
+			Global_4718592.missionGenMenubs40381[i].f_4 = DATAFILE::DATAARRAY_GET_INT(array2, i);
 		else
-			Global_4718592.f_140381[i].f_4 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_4 = 0;
 	
 		if (array3 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array3, i) == 2)
-			Global_4718592.f_140381[i].f_5 = DATAFILE::DATAARRAY_GET_INT(array3, i);
+			Global_4718592.missionGenMenubs40381[i].f_5 = DATAFILE::DATAARRAY_GET_INT(array3, i);
 		else
-			Global_4718592.f_140381[i].f_5 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_5 = 0;
 	
 		if (array4 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array4, i) == 2)
-			Global_4718592.f_140381[i].f_6 = DATAFILE::DATAARRAY_GET_INT(array4, i);
+			Global_4718592.missionGenMenubs40381[i].f_6 = DATAFILE::DATAARRAY_GET_INT(array4, i);
 		else
-			Global_4718592.f_140381[i].f_6 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_6 = 0;
 	
-		func_227("bits4", &(Global_4718592.f_140381[i].f_7), &dict, &unk2, i, 0, 0);
-		Global_4718592.f_140381[i].f_1625 = func_236("cselet", &dict, &unk3, i, 0, 0);
+		func_227("bits4", &(Global_4718592.missionGenMenubs40381[i].f_7), &dict, &unk2, i, 0, 0);
+		Global_4718592.missionGenMenubs40381[i].f_1625 = func_236("cselet", &dict, &unk3, i, 0, 0);
 	
-		if (Global_4718592.f_140381[i].f_5 == Global_4718592.f_140381[i].f_4)
+		if (Global_4718592.missionGenMenubs40381[i].f_5 == Global_4718592.missionGenMenubs40381[i].f_4)
 		{
 			dict2 = DATAFILE::DATADICT_GET_DICT(iParam0, "gen");
 		
@@ -23990,129 +23990,129 @@ void func_360(int iParam0) // Position - 0x2DC53
 			
 				for (l = 9; l <= 31; l = l + 1)
 				{
-					MISC::CLEAR_BIT(&(Global_4718592.f_140381[i].f_5), l);
+					MISC::CLEAR_BIT(&(Global_4718592.missionGenMenubs40381[i].f_5), l);
 				}
 			}
 		}
 	
 		if (array5 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array5, i) == 2)
-			Global_4718592.f_140381[i].f_111 = DATAFILE::DATAARRAY_GET_INT(array5, i);
+			Global_4718592.missionGenMenubs40381[i].f_111 = DATAFILE::DATAARRAY_GET_INT(array5, i);
 		else
-			Global_4718592.f_140381[i].f_111 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_111 = 0;
 	
 		if (array6 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array6, i) == 2)
 		{
-			Global_4718592.f_140381[i].f_110 = DATAFILE::DATAARRAY_GET_INT(array6, i);
+			Global_4718592.missionGenMenubs40381[i].f_110 = DATAFILE::DATAARRAY_GET_INT(array6, i);
 		
-			if (Global_4718592.f_140381[i].f_110 >= 3)
-				Global_4718592.f_140381[i].f_110 = 0;
+			if (Global_4718592.missionGenMenubs40381[i].f_110 >= 3)
+				Global_4718592.missionGenMenubs40381[i].f_110 = 0;
 		}
 		else
 		{
-			Global_4718592.f_140381[i].f_110 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_110 = 0;
 		}
 	
 		if (array7 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array7, i) == 2)
-			Global_4718592.f_140381[i].f_112 = DATAFILE::DATAARRAY_GET_INT(array7, i);
+			Global_4718592.missionGenMenubs40381[i].f_112 = DATAFILE::DATAARRAY_GET_INT(array7, i);
 		else
-			Global_4718592.f_140381[i].f_112 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_112 = 0;
 	
 		if (array8 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array8, i) == 2)
-			Global_4718592.f_140381[i].f_887 = DATAFILE::DATAARRAY_GET_INT(array8, i);
+			Global_4718592.missionGenMenubs40381[i].f_887 = DATAFILE::DATAARRAY_GET_INT(array8, i);
 		else
-			Global_4718592.f_140381[i].f_887 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_887 = 0;
 	
 		if (array13 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array13, i) == 5)
-			Global_4718592.f_140381[i].f_880 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array13, i));
+			Global_4718592.missionGenMenubs40381[i].f_880 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array13, i));
 		else
-			Global_4718592.f_140381[i].f_880 = Vector3(0f, 0f, 0f);
+			Global_4718592.missionGenMenubs40381[i].f_880 = Vector3(0f, 0f, 0f);
 	
 		if (array14 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array14, i) == 3)
-			Global_4718592.f_140381[i].f_883 = DATAFILE::DATAARRAY_GET_FLOAT(array14, i);
+			Global_4718592.missionGenMenubs40381[i].f_883 = DATAFILE::DATAARRAY_GET_FLOAT(array14, i);
 		else
-			Global_4718592.f_140381[i].f_883 = 0f;
+			Global_4718592.missionGenMenubs40381[i].f_883 = 0f;
 	
 		if (array15 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array15, i) == 5)
-			Global_4718592.f_140381[i].f_884 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array15, i));
+			Global_4718592.missionGenMenubs40381[i].f_884 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array15, i));
 		else
-			Global_4718592.f_140381[i].f_884 = Vector3(0f, 0f, 0f);
+			Global_4718592.missionGenMenubs40381[i].f_884 = Vector3(0f, 0f, 0f);
 	
-		func_227("synshts", &(Global_4718592.f_140381[i].f_1564.f_5), &dict, &unk458, i, 0, 0);
+		func_227("synshts", &(Global_4718592.missionGenMenubs40381[i].f_1564.f_5), &dict, &unk458, i, 0, 0);
 	
 		if (array23 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array23, i) == 2)
-			Global_4718592.f_140381[i].f_1564 = DATAFILE::DATAARRAY_GET_INT(array23, i);
+			Global_4718592.missionGenMenubs40381[i].f_1564 = DATAFILE::DATAARRAY_GET_INT(array23, i);
 		else
-			Global_4718592.f_140381[i].f_1564 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_1564 = 0;
 	
 		if (array24 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array24, i) == 5)
-			Global_4718592.f_140381[i].f_1564.f_1 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array24, i));
+			Global_4718592.missionGenMenubs40381[i].f_1564.f_1 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array24, i));
 		else
-			Global_4718592.f_140381[i].f_1564.f_1 = Vector3(0f, 0f, 0f);
+			Global_4718592.missionGenMenubs40381[i].f_1564.f_1 = Vector3(0f, 0f, 0f);
 	
 		if (array25 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array25, i) == 3)
-			Global_4718592.f_140381[i].f_1564.f_4 = DATAFILE::DATAARRAY_GET_FLOAT(array25, i);
+			Global_4718592.missionGenMenubs40381[i].f_1564.f_4 = DATAFILE::DATAARRAY_GET_FLOAT(array25, i);
 		else
-			Global_4718592.f_140381[i].f_1564.f_4 = 0f;
+			Global_4718592.missionGenMenubs40381[i].f_1564.f_4 = 0f;
 	
 		if (array9 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array9, i) == 2)
-			Global_4718592.f_140381[i].f_588 = DATAFILE::DATAARRAY_GET_INT(array9, i);
+			Global_4718592.missionGenMenubs40381[i].f_588 = DATAFILE::DATAARRAY_GET_INT(array9, i);
 		else
-			Global_4718592.f_140381[i].f_588 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_588 = 0;
 	
 		if (array10 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array10, i) == 2)
-			Global_4718592.f_140381[i].f_590 = DATAFILE::DATAARRAY_GET_INT(array10, i);
+			Global_4718592.missionGenMenubs40381[i].f_590 = DATAFILE::DATAARRAY_GET_INT(array10, i);
 		else
-			Global_4718592.f_140381[i].f_590 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_590 = 0;
 	
 		if (array11 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array11, i) == 2)
-			Global_4718592.f_140381[i].f_589 = DATAFILE::DATAARRAY_GET_INT(array11, i);
+			Global_4718592.missionGenMenubs40381[i].f_589 = DATAFILE::DATAARRAY_GET_INT(array11, i);
 		else
-			Global_4718592.f_140381[i].f_589 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_589 = 0;
 	
 		if (array12 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array12, i) == 5)
-			Global_4718592.f_140381[i].f_591 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array12, i));
+			Global_4718592.missionGenMenubs40381[i].f_591 = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(array12, i));
 		else
-			Global_4718592.f_140381[i].f_591 = Vector3(0f, 0f, 0f);
+			Global_4718592.missionGenMenubs40381[i].f_591 = Vector3(0f, 0f, 0f);
 	
 		if (array16 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array16, i) == 2)
-			Global_4718592.f_140381[i].f_1551 = DATAFILE::DATAARRAY_GET_INT(array16, i);
+			Global_4718592.missionGenMenubs40381[i].f_1551 = DATAFILE::DATAARRAY_GET_INT(array16, i);
 		else
-			Global_4718592.f_140381[i].f_1551 = -1;
+			Global_4718592.missionGenMenubs40381[i].f_1551 = -1;
 	
 		if (array20 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array20, i) == 2)
-			Global_4718592.f_140381[i].f_1570 = DATAFILE::DATAARRAY_GET_INT(array20, i);
+			Global_4718592.missionGenMenubs40381[i].f_1570 = DATAFILE::DATAARRAY_GET_INT(array20, i);
 		else
-			Global_4718592.f_140381[i].f_1570 = 0;
+			Global_4718592.missionGenMenubs40381[i].f_1570 = 0;
 	
 		if (array21 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array21, i) == 2)
-			Global_4718592.f_140381[i].f_1571 = DATAFILE::DATAARRAY_GET_INT(array21, i);
+			Global_4718592.missionGenMenubs40381[i].f_1571 = DATAFILE::DATAARRAY_GET_INT(array21, i);
 		else
-			Global_4718592.f_140381[i].f_1571 = 3000;
+			Global_4718592.missionGenMenubs40381[i].f_1571 = 3000;
 	
 		if (array17 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array17, i) == 3)
-			Global_4718592.f_140381[i].f_1552 = DATAFILE::DATAARRAY_GET_FLOAT(array17, i);
+			Global_4718592.missionGenMenubs40381[i].f_1552 = DATAFILE::DATAARRAY_GET_FLOAT(array17, i);
 		else
-			Global_4718592.f_140381[i].f_1552 = 1f;
+			Global_4718592.missionGenMenubs40381[i].f_1552 = 1f;
 	
 		if (array18 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array18, i) == 3)
-			Global_4718592.f_140381[i].f_1553 = DATAFILE::DATAARRAY_GET_FLOAT(array18, i);
+			Global_4718592.missionGenMenubs40381[i].f_1553 = DATAFILE::DATAARRAY_GET_FLOAT(array18, i);
 		else
-			Global_4718592.f_140381[i].f_1553 = 0f;
+			Global_4718592.missionGenMenubs40381[i].f_1553 = 0f;
 	
 		if (array19 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array19, i) == 3)
-			Global_4718592.f_140381[i].f_1554 = DATAFILE::DATAARRAY_GET_FLOAT(array19, i);
+			Global_4718592.missionGenMenubs40381[i].f_1554 = DATAFILE::DATAARRAY_GET_FLOAT(array19, i);
 		else
-			Global_4718592.f_140381[i].f_1554 = 0f;
+			Global_4718592.missionGenMenubs40381[i].f_1554 = 0f;
 	
 		if (array22 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array22, i) == 3)
-			Global_4718592.f_140381[i].f_889 = DATAFILE::DATAARRAY_GET_FLOAT(array22, i);
+			Global_4718592.missionGenMenubs40381[i].f_889 = DATAFILE::DATAARRAY_GET_FLOAT(array22, i);
 		else
-			Global_4718592.f_140381[i].f_889 = 6f;
+			Global_4718592.missionGenMenubs40381[i].f_889 = 6f;
 	
-		func_227("csspir", &(Global_4718592.f_140381[i].f_888), &dict, &unk434, i, 5000, 5000);
+		func_227("csspir", &(Global_4718592.missionGenMenubs40381[i].f_888), &dict, &unk434, i, 5000, 5000);
 		num = 0;
 		func_227("scaer", &num, &dict, &unk435, i, 0, -2340845);
-		Global_4718592.f_140381[i].f_34 = num;
+		Global_4718592.missionGenMenubs40381[i].f_34 = num;
 		m = 0;
 	
 		for (m = 0; m <= 3; m = m + 1)
@@ -24121,17 +24121,17 @@ void func_360(int iParam0) // Position - 0x2DC53
 			TEXT_LABEL_APPEND_INT(&unk481, i, 16);
 			TEXT_LABEL_APPEND_STRING(&unk481, "_", 16);
 			TEXT_LABEL_APPEND_INT(&unk481, m, 16);
-			func_226(&unk481, &Global_4718592.f_140381[i].f_35[m], &dict, &unk213[i], m, func_353(), func_353());
+			func_226(&unk481, &Global_4718592.missionGenMenubs40381[i].f_35[m], &dict, &unk213[i], m, func_353(), func_353());
 			TEXT_LABEL_ASSIGN_STRING(&unk481, "scaeh", 16);
 			TEXT_LABEL_APPEND_INT(&unk481, i, 16);
 			TEXT_LABEL_APPEND_STRING(&unk481, "_", 16);
 			TEXT_LABEL_APPEND_INT(&unk481, m, 16);
-			func_225(&unk481, &Global_4718592.f_140381[i].f_58[m], &dict, &unk235[i], m, 0f, 0f);
+			func_225(&unk481, &Global_4718592.missionGenMenubs40381[i].f_58[m], &dict, &unk235[i], m, 0f, 0f);
 		}
 	
 		num2 = 0;
 		func_227("sxtecs", &num2, &dict, &unk433, i, 0, -2340845);
-		Global_4718592.f_140381[i].f_1572 = num2;
+		Global_4718592.missionGenMenubs40381[i].f_1572 = num2;
 		TEXT_LABEL_ASSIGN_STRING(&key, "int", 8);
 		TEXT_LABEL_APPEND_INT(&key, i, 8);
 		unk4[i] = DATAFILE::DATADICT_GET_ARRAY(dict, &key);
@@ -24258,219 +24258,219 @@ void func_360(int iParam0) // Position - 0x2DC53
 		TEXT_LABEL_ASSIGN_STRING(&key, "paos", 8);
 		TEXT_LABEL_APPEND_INT(&key, i, 8);
 		unk447[i] = DATAFILE::DATADICT_GET_ARRAY(dict, &key);
-		func_361(dict, &Global_4718592.f_140381[i], i);
+		func_361(dict, &Global_4718592.missionGenMenubs40381[i], i);
 	
 		for (j = 0; j <= 3; j = j + 1)
 		{
 			if (unk191[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk191[i], j) == 5)
-				Global_4718592.f_140381[i].f_8[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk191[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_8[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk191[i], j));
 			else
-				Global_4718592.f_140381[i].f_8[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_8[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk202[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk202[i], j) == 5)
-				Global_4718592.f_140381[i].f_21[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk202[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_21[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk202[i], j));
 			else
-				Global_4718592.f_140381[i].f_21[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_21[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk180[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk180[i], j) == 3)
-				Global_4718592.f_140381[i].f_48[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk180[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_48[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk180[i], j);
 			else
-				Global_4718592.f_140381[i].f_48[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_48[j] = 0f;
 		
 			if (unk224[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk224[i], j) == 3)
-				Global_4718592.f_140381[i].f_53[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk224[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_53[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk224[i], j);
 			else
-				Global_4718592.f_140381[i].f_53[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_53[j] = 0f;
 		
 			if (unk246[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk246[i], j) == 2)
-				Global_4718592.f_140381[i].f_63[j] = DATAFILE::DATAARRAY_GET_INT(unk246[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_63[j] = DATAFILE::DATAARRAY_GET_INT(unk246[i], j);
 			else
-				Global_4718592.f_140381[i].f_63[j] = -1;
+				Global_4718592.missionGenMenubs40381[i].f_63[j] = -1;
 		}
 	
 		for (j = 0; j <= 19; j = j + 1)
 		{
 			if (unk4[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk4[i], j) == 2)
-				Global_4718592.f_140381[i].f_113[j] = DATAFILE::DATAARRAY_GET_INT(unk4[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_113[j] = DATAFILE::DATAARRAY_GET_INT(unk4[i], j);
 			else
-				Global_4718592.f_140381[i].f_113[j] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_113[j] = 0;
 		
 			if (unk15[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk15[i], j) == 3)
-				Global_4718592.f_140381[i].f_68[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk15[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_68[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk15[i], j);
 			else
-				Global_4718592.f_140381[i].f_68[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_68[j] = 0f;
 		
 			if (unk26[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk26[i], j) == 3)
-				Global_4718592.f_140381[i].f_89[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk26[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_89[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk26[i], j);
 			else
-				Global_4718592.f_140381[i].f_89[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_89[j] = 0f;
 		
 			if (unk37[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk37[i], j) == 2)
-				Global_4718592.f_140381[i].f_134[j] = DATAFILE::DATAARRAY_GET_INT(unk37[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_134[j] = DATAFILE::DATAARRAY_GET_INT(unk37[i], j);
 			else
-				Global_4718592.f_140381[i].f_134[j] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_134[j] = 0;
 		
 			if (unk48[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk48[i], j) == 5)
-				Global_4718592.f_140381[i].f_155[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk48[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_155[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk48[i], j));
 			else
-				Global_4718592.f_140381[i].f_155[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_155[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk59[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk59[i], j) == 5)
-				Global_4718592.f_140381[i].f_216[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk59[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_216[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk59[i], j));
 			else
-				Global_4718592.f_140381[i].f_216[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_216[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk70[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk70[i], j) == 5)
-				Global_4718592.f_140381[i].f_277[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk70[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_277[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk70[i], j));
 			else
-				Global_4718592.f_140381[i].f_277[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_277[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk81[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk81[i], j) == 5)
-				Global_4718592.f_140381[i].f_338[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk81[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_338[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk81[i], j));
 			else
-				Global_4718592.f_140381[i].f_338[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_338[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk92[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk92[i], j) == 3)
-				Global_4718592.f_140381[i].f_399[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk92[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_399[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk92[i], j);
 			else
-				Global_4718592.f_140381[i].f_399[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_399[j] = 0f;
 		
 			if (unk103[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk103[i], j) == 3)
-				Global_4718592.f_140381[i].f_420[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk103[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_420[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk103[i], j);
 			else
-				Global_4718592.f_140381[i].f_420[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_420[j] = 0f;
 		
 			if (unk136[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk136[i], j) == 2)
-				Global_4718592.f_140381[i].f_441[j] = DATAFILE::DATAARRAY_GET_INT(unk136[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_441[j] = DATAFILE::DATAARRAY_GET_INT(unk136[i], j);
 			else
-				Global_4718592.f_140381[i].f_441[j] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_441[j] = 0;
 		
 			if (unk169[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk169[i], j) == 2)
-				Global_4718592.f_140381[i].f_525[j] = DATAFILE::DATAARRAY_GET_INT(unk169[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_525[j] = DATAFILE::DATAARRAY_GET_INT(unk169[i], j);
 			else
-				Global_4718592.f_140381[i].f_525[j] = 500;
+				Global_4718592.missionGenMenubs40381[i].f_525[j] = 500;
 		
 			if (unk147[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk147[i], j) == 2)
-				Global_4718592.f_140381[i].f_483[j] = DATAFILE::DATAARRAY_GET_INT(unk147[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_483[j] = DATAFILE::DATAARRAY_GET_INT(unk147[i], j);
 			else
-				Global_4718592.f_140381[i].f_483[j] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_483[j] = 0;
 		
 			if (unk158[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk158[i], j) == 3)
-				Global_4718592.f_140381[i].f_504[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk158[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_504[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk158[i], j);
 			else
-				Global_4718592.f_140381[i].f_504[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_504[j] = 0f;
 		
 			if (unk257[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk257[i], j) == 2)
-				Global_4718592.f_140381[i].f_676[j] = DATAFILE::DATAARRAY_GET_INT(unk257[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_676[j] = DATAFILE::DATAARRAY_GET_INT(unk257[i], j);
 			else
-				Global_4718592.f_140381[i].f_676[j] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_676[j] = 0;
 		
 			if (unk268[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk268[i], j) == 5)
-				Global_4718592.f_140381[i].f_697[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk268[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_697[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk268[i], j));
 			else
-				Global_4718592.f_140381[i].f_697[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_697[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk279[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk279[i], j) == 5)
-				Global_4718592.f_140381[i].f_758[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk279[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_758[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk279[i], j));
 			else
-				Global_4718592.f_140381[i].f_758[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_758[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk290[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk290[i], j) == 5)
 			{
-				Global_4718592.f_140381[i].f_819[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk290[i], j));
-				Global_4718592.f_160561[j] = Global_4718592.f_140381[i].f_819[j];
-				Global_4718592.f_160582[j] = Global_4718592.f_140381[i].f_819[j].f_1;
-				Global_4718592.f_160603[j] = Global_4718592.f_140381[i].f_819[j].f_2;
+				Global_4718592.missionGenMenubs40381[i].f_819[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk290[i], j));
+				Global_4718592.f_160561[j] = Global_4718592.missionGenMenubs40381[i].f_819[j];
+				Global_4718592.f_160582[j] = Global_4718592.missionGenMenubs40381[i].f_819[j].f_1;
+				Global_4718592.f_160603[j] = Global_4718592.missionGenMenubs40381[i].f_819[j].f_2;
 			}
 			else
 			{
-				Global_4718592.f_140381[i].f_819[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_819[j] = Vector3(0f, 0f, 0f);
 			}
 		
 			if (unk301[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk301[i], j) == 5)
-				Global_4718592.f_140381[i].f_594[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk301[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_594[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk301[i], j));
 			else
-				Global_4718592.f_140381[i].f_594[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_594[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk312[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk312[i], j) == 3)
-				Global_4718592.f_140381[i].f_655[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk312[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_655[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk312[i], j);
 			else
-				Global_4718592.f_140381[i].f_655[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_655[j] = 0f;
 		
 			if (unk345[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk345[i], j) == 5)
-				Global_4718592.f_140381[i].f_1387[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk345[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_1387[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk345[i], j));
 			else
-				Global_4718592.f_140381[i].f_1387[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_1387[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk356[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk356[i], j) == 3)
-				Global_4718592.f_140381[i].f_1448[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk356[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_1448[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk356[i], j);
 			else
-				Global_4718592.f_140381[i].f_1448[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_1448[j] = 0f;
 		
 			if (unk367[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk367[i], j) == 5)
-				Global_4718592.f_140381[i].f_1469[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk367[i], j));
+				Global_4718592.missionGenMenubs40381[i].f_1469[j] = Vector3(DATAFILE::DATAARRAY_GET_VECTOR(unk367[i], j));
 			else
-				Global_4718592.f_140381[i].f_1469[j] = Vector3(0f, 0f, 0f);
+				Global_4718592.missionGenMenubs40381[i].f_1469[j] = Vector3(0f, 0f, 0f);
 		
 			if (unk378[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk378[i], j) == 3)
-				Global_4718592.f_140381[i].f_1530[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk378[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_1530[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk378[i], j);
 			else
-				Global_4718592.f_140381[i].f_1530[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_1530[j] = 0f;
 		
 			if (unk323[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk323[i], j) == 4)
-				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i].f_1225[j], DATAFILE::DATAARRAY_GET_STRING(unk323[i], j), 16);
+				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i].f_1225[j], DATAFILE::DATAARRAY_GET_STRING(unk323[i], j), 16);
 			else
-				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i].f_1225[j], "", 16);
+				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i].f_1225[j], "", 16);
 		
 			if (unk334[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk334[i], j) == 4)
-				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i].f_1306[j], DATAFILE::DATAARRAY_GET_STRING(unk334[i], j), 16);
+				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i].f_1306[j], DATAFILE::DATAARRAY_GET_STRING(unk334[i], j), 16);
 			else
-				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_140381[i].f_1306[j], "", 16);
+				TEXT_LABEL_ASSIGN_STRING(&Global_4718592.missionGenMenubs40381[i].f_1306[j], "", 16);
 		
 			if (unk389[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk389[i], j) == 3)
-				Global_4718592.f_140381[i].f_546[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk389[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_546[j] = DATAFILE::DATAARRAY_GET_FLOAT(unk389[i], j);
 			else
-				Global_4718592.f_140381[i].f_546[j] = 0f;
+				Global_4718592.missionGenMenubs40381[i].f_546[j] = 0f;
 		
 			TEXT_LABEL_ASSIGN_STRING(&key, "zsct", 8);
 			TEXT_LABEL_APPEND_INT(&key, i, 8);
-			func_227(&key, &Global_4718592.f_140381[i].f_462[j], &dict, &unk411[i], j, -1, -2340845);
+			func_227(&key, &Global_4718592.missionGenMenubs40381[i].f_462[j], &dict, &unk411[i], j, -1, -2340845);
 			TEXT_LABEL_ASSIGN_STRING(&key, "drnc", 8);
 			TEXT_LABEL_APPEND_INT(&key, i, 8);
-			Global_4718592.f_140381[i].f_567[j] = func_236(&key, &dict, &unk400[i], j, 0, 0);
+			Global_4718592.missionGenMenubs40381[i].f_567[j] = func_236(&key, &dict, &unk400[i], j, 0, 0);
 		}
 	
 		for (j = 0; j <= 29; j = j + 1)
 		{
 			if (unk114[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk114[i], j) == 2)
-				Global_4718592.f_140381[i].f_890[j].f_1 = DATAFILE::DATAARRAY_GET_INT(unk114[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_890[j].f_1 = DATAFILE::DATAARRAY_GET_INT(unk114[i], j);
 			else
-				Global_4718592.f_140381[i].f_890[j].f_1 = -1;
+				Global_4718592.missionGenMenubs40381[i].f_890[j].f_1 = -1;
 		
 			if (unk125[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk125[i], j) == 2)
-				Global_4718592.f_140381[i].f_890[j] = DATAFILE::DATAARRAY_GET_INT(unk125[i], j);
+				Global_4718592.missionGenMenubs40381[i].f_890[j] = DATAFILE::DATAARRAY_GET_INT(unk125[i], j);
 			else
-				Global_4718592.f_140381[i].f_890[j] = -1;
+				Global_4718592.missionGenMenubs40381[i].f_890[j] = -1;
 		
 			TEXT_LABEL_ASSIGN_STRING(&key, "tlhds", 8);
 			TEXT_LABEL_APPEND_INT(&key, i, 8);
-			TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_140381[i].f_890[j].f_2), func_314(&key, &dict, &unk422[i], j, "", ""), 32);
+			TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.missionGenMenubs40381[i].f_890[j].f_2), func_314(&key, &dict, &unk422[i], j, "", ""), 32);
 		}
 	
 		for (k = 0; k <= 3; k = k + 1)
 		{
 			if (unk436[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk436[i], k) == 2)
-				Global_4718592.f_140381[i].f_1555[k] = DATAFILE::DATAARRAY_GET_INT(unk436[i], k);
+				Global_4718592.missionGenMenubs40381[i].f_1555[k] = DATAFILE::DATAARRAY_GET_INT(unk436[i], k);
 			else
-				Global_4718592.f_140381[i].f_1555[k] = 0;
+				Global_4718592.missionGenMenubs40381[i].f_1555[k] = 0;
 		
 			if (unk447[i] != 0 && DATAFILE::DATAARRAY_GET_TYPE(unk447[i], k) == 2)
-				Global_4718592.f_140381[i].f_1555[k].f_1 = DATAFILE::DATAARRAY_GET_INT(unk447[i], k);
+				Global_4718592.missionGenMenubs40381[i].f_1555[k].f_1 = DATAFILE::DATAARRAY_GET_INT(unk447[i], k);
 			else
-				Global_4718592.f_140381[i].f_1555[k].f_1 = -1;
+				Global_4718592.missionGenMenubs40381[i].f_1555[k].f_1 = -1;
 		
-			func_359(&Global_4718592.f_140381[i].f_1191[k], &unk459[i], k);
-			func_359(&Global_4718592.f_140381[i].f_1208[k], &unk470[i], k);
+			func_359(&Global_4718592.missionGenMenubs40381[i].f_1191[k], &unk459[i], k);
+			func_359(&Global_4718592.missionGenMenubs40381[i].f_1208[k], &unk470[i], k);
 		}
 	}
 
@@ -24654,7 +24654,7 @@ void func_363(int iParam0) // Position - 0x2FEE0
 	unk22 = 4;
 	unk27 = 4;
 
-	for (j = 0; j <= Global_4718592.f_1200 - 1; j = j + 1)
+	for (j = 0; j <= Global_4718592.missionGenTnum - 1; j = j + 1)
 	{
 		if (j < 4)
 		{
@@ -24759,7 +24759,7 @@ void func_366(var uParam0) // Position - 0x302B4
 	unk.f_5 = 2;
 	unk.f_8.f_2 = 4;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		j = 0;
 		func_227("stinv", &Global_4718592.f_176084[i], uParam0, &unk, i, -1, -2340845);
@@ -25165,7 +25165,7 @@ void func_370(int iParam0) // Position - 0x31614
 	unk67 = 4;
 	unk72 = 4;
 
-	for (j = 0; j <= Global_4718592.f_1200 - 1; j = j + 1)
+	for (j = 0; j <= Global_4718592.missionGenTnum - 1; j = j + 1)
 	{
 		if (j < 4)
 		{
@@ -25975,7 +25975,7 @@ void func_378(var uParam0) // Position - 0x338B2
 	int num9;
 	int num10;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -26114,7 +26114,7 @@ void func_379(var uParam0) // Position - 0x33BEB
 	num36 = 0;
 	num37 = 0;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -26260,7 +26260,7 @@ void func_380(var uParam0) // Position - 0x34433
 	int array17;
 	int num;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		array = 0;
 		array2 = 0;
@@ -26481,7 +26481,7 @@ void func_382(var uParam0) // Position - 0x34B8E
 	unk397 = 60;
 	unk458 = 4;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -26646,7 +26646,7 @@ void func_383(var uParam0) // Position - 0x3522C
 	int array5;
 	int array6;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -26768,7 +26768,7 @@ void func_384(var uParam0) // Position - 0x35621
 	int array12;
 	int array13;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -26989,7 +26989,7 @@ void func_385(var uParam0) // Position - 0x35C4C
 	unk25 = 3;
 	unk29 = 1;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -27437,7 +27437,7 @@ void func_386(var uParam0) // Position - 0x36B5C
 	int num18;
 	int num19;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -28187,7 +28187,7 @@ void func_388(var uParam0) // Position - 0x386C0
 	unk68 = 4;
 	unk73 = 4;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -28778,7 +28778,7 @@ void func_390(var uParam0) // Position - 0x39CBF
 	int array50;
 	int array51;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -29310,7 +29310,7 @@ void func_391(var uParam0) // Position - 0x3B124
 	int array19;
 	int array20;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -29648,7 +29648,7 @@ void func_392(var uParam0) // Position - 0x3BAD7
 	unk37 = 4;
 	unk42 = 4;
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -30579,7 +30579,7 @@ void func_394(var uParam0) // Position - 0x3D664
 		Global_4718592.f_96024[i].f_4 = DATAFILE::DATADICT_GET_INT(unk[i], "ptsreq");
 	}
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -30782,10 +30782,10 @@ void func_394(var uParam0) // Position - 0x3D664
 				Global_4718592.f_95208[i] = DATAFILE::DATAARRAY_GET_INT(array42, i);
 		
 			if (array44 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array44, i) == 2 && array44 != 0)
-				Global_4718592.f_140190[i] = DATAFILE::DATAARRAY_GET_INT(array44, i);
+				Global_4718592.missionGenMenubs40190[i] = DATAFILE::DATAARRAY_GET_INT(array44, i);
 		
 			if (array45 != 0 && DATAFILE::DATAARRAY_GET_TYPE(array45, i) == 2 && array45 != 0)
-				Global_4718592.f_140195[i] = DATAFILE::DATAARRAY_GET_INT(array45, i);
+				Global_4718592.missionGenMenubs40195[i] = DATAFILE::DATAARRAY_GET_INT(array45, i);
 		
 			if (array43 != 0)
 				Global_4718592.f_1265[i].f_59 = DATAFILE::DATAARRAY_GET_INT(array43, i);
@@ -31051,7 +31051,7 @@ void func_395(var uParam0) // Position - 0x3E8CB
 	array83 = DATAFILE::DATADICT_GET_ARRAY(*uParam0, "sipis");
 	array84 = DATAFILE::DATADICT_GET_ARRAY(*uParam0, "sipiv");
 
-	for (i = 0; i <= Global_4718592.f_1200 - 1; i = i + 1)
+	for (i = 0; i <= Global_4718592.missionGenTnum - 1; i = i + 1)
 	{
 		if (i < 4)
 		{
@@ -31478,9 +31478,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 		Global_4718592.f_107478 = DATAFILE::DATADICT_GET_INT(dict, "ivm");
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "fixcam") == 2)
-		Global_4718592.f_140203 = DATAFILE::DATADICT_GET_INT(dict, "fixcam");
+		Global_4718592.missionGenMenubs40203 = DATAFILE::DATADICT_GET_INT(dict, "fixcam");
 	else
-		Global_4718592.f_140203 = 0;
+		Global_4718592.missionGenMenubs40203 = 0;
 
 	Global_4718592.f_4 = DATAFILE::DATADICT_GET_INT(dict, "optbs");
 	Global_4718592.f_1247 = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, "camo"));
@@ -31517,20 +31517,20 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	if (func_151(true))
 	{
 		Global_4718592.f_2 = DATAFILE::DATADICT_GET_INT(dict, "subtype");
-		Global_4718592.f_140200 = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
+		Global_4718592.missionGenMenubs40200 = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
 	
 		if (Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5 || Global_4718592.f_2 == 4 || Global_4718592.f_2 == 9)
 		{
 			if (DATAFILE::DATADICT_GET_TYPE(dict, "teamBal") == 2)
-				Global_4718592.f_140202 = DATAFILE::DATADICT_GET_INT(dict, "numRounds");
+				Global_4718592.missionGenMenubs40202 = DATAFILE::DATADICT_GET_INT(dict, "numRounds");
 			else
-				Global_4718592.f_140202 = 1;
+				Global_4718592.missionGenMenubs40202 = 1;
 		
-			if (*Global_4718592.f_140202 < 1)
-				Global_4718592.f_140202 = 1;
+			if (*Global_4718592.missionGenMenubs40202 < 1)
+				Global_4718592.missionGenMenubs40202 = 1;
 		
-			if (Global_4718592.f_2 == 6 && *Global_4718592.f_140202 > 8)
-				Global_4718592.f_140202 = 1;
+			if (Global_4718592.f_2 == 6 && *Global_4718592.missionGenMenubs40202 > 8)
+				Global_4718592.missionGenMenubs40202 = 1;
 		}
 	}
 	else if (func_335())
@@ -31540,9 +31540,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 
 	if (func_335() || func_151(true))
 		if (DATAFILE::DATADICT_GET_TYPE(dict, "teamBal") == 2)
-			Global_4718592.f_140204 = DATAFILE::DATADICT_GET_INT(dict, "teamBal");
+			Global_4718592.missionGenMenubs40204 = DATAFILE::DATADICT_GET_INT(dict, "teamBal");
 		else
-			Global_4718592.f_140204 = 5;
+			Global_4718592.missionGenMenubs40204 = 5;
 
 	Global_4718592.f_166301 = DATAFILE::DATADICT_GET_INT(dict, "adverm");
 
@@ -31551,7 +31551,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_166302 = -1;
 
-	Global_4718592.f_140201 = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
+	Global_4718592.missionGenMenubs40201 = DATAFILE::DATADICT_GET_INT(dict, "testcomplete");
 	Global_4718592.f_1221 = DATAFILE::DATADICT_GET_INT(dict, "endtype");
 	Global_4718592.f_11 = DATAFILE::DATADICT_GET_INT(dict, "menubs");
 
@@ -31563,16 +31563,16 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	Global_4718592.f_12 = DATAFILE::DATADICT_GET_INT(dict, "menubs2");
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "menubs3") == 2)
-		Global_4718592.f_13 = DATAFILE::DATADICT_GET_INT(dict, "menubs3");
+		Global_4718592.missionGenMenubs3 = DATAFILE::DATADICT_GET_INT(dict, "menubs3");
 	else
-		Global_4718592.f_13 = 0;
+		Global_4718592.missionGenMenubs3 = 0;
 
-	Global_4718592.f_14 = DATAFILE::DATADICT_GET_INT(dict, "menubs4");
+	Global_4718592.missionGenMenubs4 = DATAFILE::DATADICT_GET_INT(dict, "menubs4");
 	Global_4718592.f_15 = DATAFILE::DATADICT_GET_INT(dict, "menubs5");
 	Global_4718592.f_16 = DATAFILE::DATADICT_GET_INT(dict, "menubs6");
 	Global_4718592.f_17 = DATAFILE::DATADICT_GET_INT(dict, "menubs7");
 	Global_4718592.f_18 = DATAFILE::DATADICT_GET_INT(dict, "menubs8");
-	Global_4718592.f_19 = DATAFILE::DATADICT_GET_INT(dict, "menubs9");
+	Global_4718592.missionGenMenubs9 = DATAFILE::DATADICT_GET_INT(dict, "menubs9");
 	Global_4718592.f_20 = DATAFILE::DATADICT_GET_INT(dict, "menubs10");
 	Global_4718592.f_21 = DATAFILE::DATADICT_GET_INT(dict, "menubs11");
 	Global_4718592.f_22 = DATAFILE::DATADICT_GET_INT(dict, "menubs12");
@@ -31631,7 +31631,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 
 	if (!func_376())
 	{
-		MISC::CLEAR_BIT(&(Global_4718592.f_14), 26);
+		MISC::CLEAR_BIT(&(Global_4718592.missionGenMenubs4), 26);
 		MISC::CLEAR_BIT(&(Global_4718592.f_28), 13);
 	}
 
@@ -32281,9 +32281,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 		TEXT_LABEL_APPEND_INT(&key6, i, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140376[i] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40376[i] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140376[i] = -1;
+			Global_4718592.missionGenMenubs40376[i] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tmrfs", 8);
 		TEXT_LABEL_APPEND_INT(&key6, i, 8);
@@ -32657,61 +32657,61 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	{
 		TEXT_LABEL_ASSIGN_STRING(&key6, "avss", 8);
 		TEXT_LABEL_APPEND_INT(&key6, j, 8);
-		Global_4718592.f_140291[j][func_206(j)] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+		Global_4718592.missionGenMenubs40291[j][func_206(j)] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 	
 		for (k = func_429(j); k <= 31; k = k + 1)
 		{
-			MISC::CLEAR_BIT(&Global_4718592.f_140291[j][func_206(j)], k);
+			MISC::CLEAR_BIT(&Global_4718592.missionGenMenubs40291[j][func_206(j)], k);
 		}
 	}
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vsclout") == 2)
-		Global_4718592.f_140310[0] = DATAFILE::DATADICT_GET_INT(dict, "vsclout");
+		Global_4718592.missionGenMenubs40310[0] = DATAFILE::DATADICT_GET_INT(dict, "vsclout");
 	else
-		Global_4718592.f_140310[0] = -1;
+		Global_4718592.missionGenMenubs40310[0] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vsthout") == 2)
-		Global_4718592.f_140310[1] = DATAFILE::DATADICT_GET_INT(dict, "vsthout");
+		Global_4718592.missionGenMenubs40310[1] = DATAFILE::DATADICT_GET_INT(dict, "vsthout");
 	else
-		Global_4718592.f_140310[1] = -1;
+		Global_4718592.missionGenMenubs40310[1] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vshwout") == 2)
-		Global_4718592.f_140310[3] = DATAFILE::DATADICT_GET_INT(dict, "vshwout");
+		Global_4718592.missionGenMenubs40310[3] = DATAFILE::DATADICT_GET_INT(dict, "vshwout");
 	else
-		Global_4718592.f_140310[3] = -1;
+		Global_4718592.missionGenMenubs40310[3] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vsenout") == 2)
-		Global_4718592.f_140310[2] = DATAFILE::DATADICT_GET_INT(dict, "vsenout");
+		Global_4718592.missionGenMenubs40310[2] = DATAFILE::DATADICT_GET_INT(dict, "vsenout");
 	else
-		Global_4718592.f_140310[2] = -1;
+		Global_4718592.missionGenMenubs40310[2] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vstgout") == 2)
-		Global_4718592.f_140310[4] = DATAFILE::DATADICT_GET_INT(dict, "vstgout");
+		Global_4718592.missionGenMenubs40310[4] = DATAFILE::DATADICT_GET_INT(dict, "vstgout");
 	else
-		Global_4718592.f_140310[4] = -1;
+		Global_4718592.missionGenMenubs40310[4] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vsbsout") == 2)
-		Global_4718592.f_140310[5] = DATAFILE::DATADICT_GET_INT(dict, "vsbsout");
+		Global_4718592.missionGenMenubs40310[5] = DATAFILE::DATADICT_GET_INT(dict, "vsbsout");
 	else
-		Global_4718592.f_140310[5] = -1;
+		Global_4718592.missionGenMenubs40310[5] = -1;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "alfutvs") == 2)
-		Global_4718592.f_140317 = DATAFILE::DATADICT_GET_INT(dict, "alfutvs");
+		Global_4718592.missionGenMenubs40317 = DATAFILE::DATADICT_GET_INT(dict, "alfutvs");
 	else
-		Global_4718592.f_140317 = 0;
+		Global_4718592.missionGenMenubs40317 = 0;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "vsdfstc") == 2)
-		Global_4718592.f_140318 = DATAFILE::DATADICT_GET_INT(dict, "vsdfstc");
-	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.f_13, 31) && !IS_BIT_SET(Global_4718592.f_14, 8))
-		Global_4718592.f_140318 = -1;
-	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.f_13, 31) && !IS_BIT_SET(Global_4718592.f_14, 8))
-		Global_4718592.f_140318 = 0;
-	else if (IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.f_13, 31) && !IS_BIT_SET(Global_4718592.f_14, 8))
-		Global_4718592.f_140318 = 1;
-	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && IS_BIT_SET(Global_4718592.f_13, 31) && !IS_BIT_SET(Global_4718592.f_14, 8))
-		Global_4718592.f_140318 = 2;
-	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.f_13, 31) && IS_BIT_SET(Global_4718592.f_14, 8))
-		Global_4718592.f_140318 = 3;
+		Global_4718592.missionGenMenubs40318 = DATAFILE::DATADICT_GET_INT(dict, "vsdfstc");
+	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.missionGenMenubs3, 31) && !IS_BIT_SET(Global_4718592.missionGenMenubs4, 8))
+		Global_4718592.missionGenMenubs40318 = -1;
+	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.missionGenMenubs3, 31) && !IS_BIT_SET(Global_4718592.missionGenMenubs4, 8))
+		Global_4718592.missionGenMenubs40318 = 0;
+	else if (IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.missionGenMenubs3, 31) && !IS_BIT_SET(Global_4718592.missionGenMenubs4, 8))
+		Global_4718592.missionGenMenubs40318 = 1;
+	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && IS_BIT_SET(Global_4718592.missionGenMenubs3, 31) && !IS_BIT_SET(Global_4718592.missionGenMenubs4, 8))
+		Global_4718592.missionGenMenubs40318 = 2;
+	else if (!IS_BIT_SET(Global_4718592.f_12, 23) && !IS_BIT_SET(Global_4718592.f_12, 24) && !IS_BIT_SET(Global_4718592.missionGenMenubs3, 31) && IS_BIT_SET(Global_4718592.missionGenMenubs4, 8))
+		Global_4718592.missionGenMenubs40318 = 3;
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "dspteam") == 2)
 		Global_4718592.f_160552 = DATAFILE::DATADICT_GET_INT(dict, "dspteam");
@@ -32795,22 +32795,22 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_163710 = 0;
 
-	Global_4718592.f_1200 = DATAFILE::DATADICT_GET_INT(dict, "tnum");
+	Global_4718592.missionGenTnum = DATAFILE::DATADICT_GET_INT(dict, "tnum");
 	Global_4718592.f_1201 = DATAFILE::DATADICT_GET_INT(dict, "mtnum");
 
 	if (!func_415())
 		if (!IS_BIT_SET(Global_4718592.f_15, 14))
-			Global_4718592.f_1199 = Global_4718592.f_1200;
+			Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 		else if (DATAFILE::DATADICT_GET_TYPE(dict, "dtn") == 2)
 			Global_4718592.f_1199 = DATAFILE::DATADICT_GET_INT(dict, "dtn");
 		else
-			Global_4718592.f_1199 = Global_4718592.f_1200;
+			Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 	else
-		Global_4718592.f_1199 = Global_4718592.f_1200;
+		Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 
 	if (Global_4718592 == 0)
 	{
-		if (Global_2683864.f_669.f_11 != 0 && Global_4718592.f_1200 != Global_2683864.f_669.f_11)
+		if (Global_2683864.f_669.f_11 != 0 && Global_4718592.missionGenTnum != Global_2683864.f_669.f_11)
 		{
 			if (!Global_262145.f_4736 && func_62(*Global_4718592.f_166301))
 			{
@@ -32825,8 +32825,8 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 				}
 			}
 		
-			Global_4718592.f_1200 = Global_2683864.f_669.f_11;
-			Global_4718592.f_1199 = Global_4718592.f_1200;
+			Global_4718592.missionGenTnum = Global_2683864.f_669.f_11;
+			Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 		}
 		else if (func_411() || func_409() && func_408())
 		{
@@ -32834,33 +32834,33 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			num2 = SYSTEM::TO_FLOAT(value) / SYSTEM::TO_FLOAT(Global_4718592.f_1195);
 			flag = false;
 		
-			if (Global_4718592.f_1200 == 3)
+			if (Global_4718592.missionGenTnum == 3)
 			{
 				if (num2 <= 0.66f)
 				{
-					Global_4718592.f_1200 = 2;
+					Global_4718592.missionGenTnum = 2;
 					flag = true;
 				}
 			}
-			else if (Global_4718592.f_1200 == 4)
+			else if (Global_4718592.missionGenTnum == 4)
 			{
 				if (num2 <= 0.5f)
 				{
-					Global_4718592.f_1200 = 2;
+					Global_4718592.missionGenTnum = 2;
 					flag = true;
 				}
 				else if (num2 <= 0.75f)
 				{
-					Global_4718592.f_1200 = 3;
+					Global_4718592.missionGenTnum = 3;
 					flag = true;
 				}
 			}
 		
-			if (flag && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 >= Global_4718592.f_1200)
-				Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 = func_406(Global_4718592.f_1200);
+			if (flag && Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 >= Global_4718592.missionGenTnum)
+				Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28 = func_406(Global_4718592.missionGenTnum);
 		
-			if (Global_4718592.f_1199 > Global_4718592.f_1200)
-				Global_4718592.f_1199 = Global_4718592.f_1200;
+			if (Global_4718592.f_1199 > Global_4718592.missionGenTnum)
+				Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 		}
 	}
 
@@ -32868,10 +32868,10 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	func_404(dict);
 
 	if (Global_4718592 == 1)
-		if (Global_4718592.f_1200 > 4)
-			Global_4718592.f_1200 = 4;
-	else if (Global_4718592.f_1200 > 4)
-		Global_4718592.f_1200 = 4;
+		if (Global_4718592.missionGenTnum > 4)
+			Global_4718592.missionGenTnum = 4;
+	else if (Global_4718592.missionGenTnum > 4)
+		Global_4718592.missionGenTnum = 4;
 
 	Global_4980736.f_187922 = DATAFILE::DATADICT_GET_INT(dict, "atmdm");
 	Global_4718592.f_1214 = DATAFILE::DATADICT_GET_INT(dict, "trel");
@@ -33234,7 +33234,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "dtspP", 8);
 		TEXT_LABEL_APPEND_INT(&key6, j, 8);
-		func_328(&key6, &Global_4718592.f_140147[j], &dict, -1, -1);
+		func_328(&key6, &Global_4718592.missionGenMenubs40147[j], &dict, -1, -1);
 	}
 
 	for (j = 0; j <= 4; j = j + 1)
@@ -33284,32 +33284,32 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-				Global_4718592.f_140229[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+				Global_4718592.missionGenMenubs40229[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		}
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "ofs1", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140341[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40341[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140341[}][0] = 0;
+			Global_4718592.missionGenMenubs40341[}][0] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "ofs2", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140341[}][1] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40341[}][1] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140341[}][1] = 0;
+			Global_4718592.missionGenMenubs40341[}][1] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "mask1", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140363[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40363[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140363[}][0] = 0;
+			Global_4718592.missionGenMenubs40363[}][0] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key5, "gear", 16);
 		TEXT_LABEL_APPEND_INT(&key5, }, 16);
@@ -33323,18 +33323,18 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			}
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 2)
-				Global_4718592.f_140319[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key5);
+				Global_4718592.missionGenMenubs40319[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key5);
 			else
-				Global_4718592.f_140319[}][k] = 0;
+				Global_4718592.missionGenMenubs40319[}][k] = 0;
 		}
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "geard", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140336[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40336[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140336[}] = -1;
+			Global_4718592.missionGenMenubs40336[}] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "apwfr", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
@@ -33464,17 +33464,17 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140286[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40286[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140286[}] = -1;
+			Global_4718592.missionGenMenubs40286[}] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "dfstyl", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_140358[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40358[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_140358[}] = -1;
+			Global_4718592.missionGenMenubs40358[}] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "clrovr", 8);
 		TEXT_LABEL_APPEND_INT(&key6, }, 8);
@@ -36952,13 +36952,13 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4980736.f_102385 = -1;
 		Global_4718592.f_11 = 0;
 		Global_4718592.f_12 = 0;
-		Global_4718592.f_13 = 0;
-		Global_4718592.f_14 = 0;
+		Global_4718592.missionGenMenubs3 = 0;
+		Global_4718592.missionGenMenubs4 = 0;
 		Global_4718592.f_15 = 0;
 		Global_4718592.f_16 = 0;
 		Global_4718592.f_17 = 0;
 		Global_4718592.f_18 = 0;
-		Global_4718592.f_19 = 0;
+		Global_4718592.missionGenMenubs9 = 0;
 		Global_4718592.f_20 = 0;
 		Global_4718592.f_21 = 0;
 		Global_4718592.f_22 = 0;
@@ -37029,7 +37029,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_1228 = 0;
 		Global_4718592.f_1229 = 0;
 		Global_4718592.f_1199 = 0;
-		Global_4718592.f_1200 = 1;
+		Global_4718592.missionGenTnum = 1;
 		Global_4718592.f_6 = 0;
 		Global_4718592.f_1215 = 0;
 		Global_4718592.f_166467 = 10;
@@ -37204,20 +37204,20 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		Global_4718592.f_140291[i][0] = 0;
-		Global_4718592.f_140291[i][1] = 0;
-		Global_4718592.f_140310[i] = -1;
+		Global_4718592.missionGenMenubs40291[i][0] = 0;
+		Global_4718592.missionGenMenubs40291[i][1] = 0;
+		Global_4718592.missionGenMenubs40310[i] = -1;
 	}
 
-	Global_4718592.f_140317 = 0;
-	Global_4718592.f_140318 = -1;
+	Global_4718592.missionGenMenubs40317 = 0;
+	Global_4718592.missionGenMenubs40318 = -1;
 	Global_4718592.f_1 = -1;
 	TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114033), "", 24);
 
 	for (i = 0; i <= 35; i = i + 1)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_139858[i], "", 32);
-		Global_4718592.f_140147[i] = -1;
+		Global_4718592.missionGenMenubs40147[i] = -1;
 	}
 
 	Global_4718592.f_162815 = 0;
@@ -37276,7 +37276,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_163618[i], "", 64);
 		Global_4718592.f_163683[i] = 0;
 		TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_163355[i], "", 64);
-		Global_4718592.f_140376[i] = -1;
+		Global_4718592.missionGenMenubs40376[i] = -1;
 	
 		for (j = 0; j <= 1; j = j + 1)
 		{
@@ -37411,7 +37411,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	for (i = 0; i <= func_544() - 1; i = i + 1)
 	{
-		func_538(&Global_4718592.f_140381[i]);
+		func_538(&Global_4718592.missionGenMenubs40381[i]);
 	}
 
 	for (i = 0; i <= 4; i = i + 1)
@@ -37452,9 +37452,9 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_326(&Global_4718592.f_114297[i], i);
 	}
 
-	Global_4718592.f_140184[0] = 0;
-	Global_4718592.f_140184[1] = 0;
-	Global_4718592.f_140189 = 0;
+	Global_4718592.missionGenMenubs40184[0] = 0;
+	Global_4718592.missionGenMenubs40184[1] = 0;
+	Global_4718592.missionGenMenubs40189 = 0;
 
 	for (i = 0; i <= 14; i = i + 1)
 	{
@@ -37466,7 +37466,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	if (bParam3)
 		Global_4718592.f_2 = 0;
 
-	Global_4718592.f_140201 = 0;
+	Global_4718592.missionGenMenubs40201 = 0;
 	Global_4718592.f_114129 = 0;
 	Global_4718592.f_160488 = 0;
 
@@ -37492,8 +37492,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_114295 = 0;
 	Global_4718592.f_114296 = 0;
 	Global_4718592.f_160560 = 0.5f;
-	Global_4718592.f_140202 = 1;
-	Global_4718592.f_140204 = 5;
+	Global_4718592.missionGenMenubs40202 = 1;
+	Global_4718592.missionGenMenubs40204 = 5;
 
 	if (bParam3)
 		func_525(0);
@@ -37564,12 +37564,12 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	
 		for (j = 0; j <= 12; j = j + 1)
 		{
-			Global_4718592.f_140229[i][j] = 0;
+			Global_4718592.missionGenMenubs40229[i][j] = 0;
 		}
 	
-		Global_4718592.f_140341[i][0] = 0;
-		Global_4718592.f_140341[i][1] = 0;
-		Global_4718592.f_140363[i][0] = 0;
+		Global_4718592.missionGenMenubs40341[i][0] = 0;
+		Global_4718592.missionGenMenubs40341[i][1] = 0;
+		Global_4718592.missionGenMenubs40363[i][0] = 0;
 		Global_4718592.f_1265[i] = Vector3(0f, 0f, 0f);
 		Global_4718592.f_1265[i].f_4 = Vector3(0f, 0f, 0f);
 		Global_4718592.f_1265[i].f_7 = Vector3(0f, 0f, 0f);
@@ -37675,8 +37675,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_95268[i] = -1;
 		Global_4718592.f_95181[i] = 0;
 		Global_4718592.f_95208[i] = 0;
-		Global_4718592.f_140190[i] = 0;
-		Global_4718592.f_140195[i] = 0;
+		Global_4718592.missionGenMenubs40190[i] = 0;
+		Global_4718592.missionGenMenubs40195[i] = 0;
 		Global_4718592.f_107512[i] = 100;
 		Global_4718592.f_107517[i] = 1f;
 		Global_4718592.f_107522[i] = 0;
@@ -37689,10 +37689,10 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	
 		for (j = 0; j <= 2; j = j + 1)
 		{
-			Global_4718592.f_140319[i][j] = 0;
+			Global_4718592.missionGenMenubs40319[i][j] = 0;
 		}
 	
-		Global_4718592.f_140336[i] = -1;
+		Global_4718592.missionGenMenubs40336[i] = -1;
 	
 		for (j = 0; j <= 3; j = j + 1)
 		{
@@ -38340,7 +38340,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	}
 
 	Global_4718592.f_166247 = 0;
-	Global_4980736.f_68925 = 0;
+	Global_4980736.missionDynamicPropCount = 0;
 	Global_4980736.f_68926 = 0;
 	func_507(&(Global_4980736.f_75488.f_83));
 	func_506(&(Global_4980736.f_75488.f_143));
@@ -38449,8 +38449,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	for (i = 0; i <= 3; i = i + 1)
 	{
 		Global_4718592.f_98297[i] = 0;
-		Global_4718592.f_140286[i] = -1;
-		Global_4718592.f_140358[i] = -1;
+		Global_4718592.missionGenMenubs40286[i] = -1;
+		Global_4718592.missionGenMenubs40358[i] = -1;
 	
 		for (j = 0; j <= 16; j = j + 1)
 		{
@@ -38474,8 +38474,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_107561 = 5000;
 	Global_4718592.f_107560 = 3500;
 	Global_4718592.f_107562 = -1;
-	Global_4980736.f_5991 = 0;
-	Global_4980736.f_5992 = 0;
+	Global_4980736.missionObjectCount = 0;
+	Global_4980736.missionObjectPal = 0;
 	Global_4980736.f_5993 = 0;
 	func_507(&(Global_4980736.f_21739.f_242));
 	func_506(&(Global_4980736.f_75488.f_143));
@@ -38789,8 +38789,8 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_4718592.f_114288 = 8f;
 	Global_4718592.f_114289 = 2.5f;
 	Global_4718592.f_114290 = 8f;
-	Global_4980736.f_84915 = 0;
-	Global_4980736.f_39171 = 0;
+	Global_4980736.missionVehicleCount = 0;
+	Global_4980736.missionVehNocr = 0;
 
 	if (bParam0)
 	{
@@ -38888,7 +38888,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		}
 	}
 
-	Global_4980736.f_102382 = 0;
+	Global_4980736.missionPedCount = 0;
 	Global_4980736.f_102386 = 0;
 	Global_4980736.f_102387 = 0;
 	Global_4980736.f_102384 = 50;
