@@ -103073,17 +103073,17 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		}
 	
 		func_720();
-		Global_MissionData1.f_1194 = 0;
-		Global_MissionData1.f_114293 = -0.1f;
-		Global_MissionData1.f_174874 = -1;
-		Global_MissionData1.f_167673 = 0;
-		Global_MissionData1.f_1216 = 0;
+		Global_MissionData1.missionGenExtintt = 0;
+		Global_MissionData1.missionGenFliispr = -0.1f;
+		Global_MissionData1.missionGenCsittd = -1;
+		Global_MissionData1.missionGenCoordmbs = 0;
+		Global_MissionData1.missionGenIplyli = 0;
 		Global_MissionData1.f_166341 = 1;
 		Global_MissionData1.f_166340 = 0;
-		Global_MissionData1.f_1264 = 0;
-		Global_MissionData1.f_95961 = 0;
+		Global_MissionData1.missionGenHptfb = 0;
+		Global_MissionData1.missionGenRcvs = 0;
 		Global_MissionData1.f_160488 = 0;
-		Global_MissionData1.f_10 = 0;
+		Global_MissionData1.missionGenCmpts = 0;
 		Global_MissionData1.f_1195 = 0;
 		Global_MissionData1.missionEndType = 0;
 		Global_MissionData1.f_1222 = 3;
@@ -103099,17 +103099,17 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.missionGenTnum = 1;
 		Global_MissionData1.f_6 = 0;
 		Global_MissionData1.missionRuleLiv = 0;
-		Global_MissionData1.f_166467 = 10;
-		Global_MissionData1.f_166468 = 5f;
-		Global_MissionData1.f_166469 = 10;
-		Global_MissionData1.f_1219 = 1;
+		Global_MissionData1.missionGenTrstim = 10;
+		Global_MissionData1.missionGenTrerad = 5f;
+		Global_MissionData1.missionGenTrsstim = 10;
+		Global_MissionData1.missionGenRank = 1;
 		Global_MissionData1.f_1196 = 0;
-		Global_MissionData1.f_114182 = 0;
-		Global_MissionData1.f_114184 = 0;
-		Global_MissionData1.f_114183 = 0;
+		Global_MissionData1.missionGenCharcon = 0;
+		Global_MissionData1.missionGenCshr = 0;
+		Global_MissionData1.missionGenXpr = 0;
 		Global_MissionData1.f_114181 = 0;
 		Global_MissionData1.missionGenChksfx = 0;
-		Global_MissionData1.f_166304 = -1;
+		Global_MissionData1.missionGenIopcd = -1;
 		Global_MissionData1.f_167378 = 0;
 		Global_MissionData1.f_167379 = 0;
 		Global_MissionData1.f_167380 = 0;
@@ -103156,11 +103156,11 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	
 		for (l = 0; l <= 4; l = l + 1)
 		{
-			TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.f_167488[l], "", 64);
+			TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.missionGenSpecobjt[l], "", 64);
 		}
 	
-		Global_MissionData1.f_167677 = 0f;
-		Global_MissionData1.f_167678 = -1;
+		Global_MissionData1.missionGenTurammo = 0f;
+		Global_MissionData1.missionGenTurgudm = -1;
 		func_715();
 		Global_MissionData1.f_170488 = 0;
 	
@@ -103189,8 +103189,8 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 			Global_MissionData1.f_5 = 0;
 		}
 	
-		Global_MissionData1.f_174877 = -1;
-		Global_MissionData1.f_174878 = 1f;
+		Global_MissionData1.missionGenIstngc = -1;
+		Global_MissionData1.missionGenFsbaoe = 1f;
 		Global_MissionData1.f_3 = 0;
 	
 		for (i = 0; i <= 9; i = i + 1)
@@ -103486,7 +103486,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		func_698(&Global_MissionData1.f_156642[i]);
 	}
 
-	func_698(&(Global_MissionData1.f_159468));
+	func_698(&(Global_MissionData1.missionGenEcsmn));
 
 	for (i = 0; i <= 2; i = i + 1)
 	{
@@ -103592,11 +103592,11 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_MissionData1.missionRuleAlwc = 0;
 	Global_MissionData1.f_95180 = 0;
 	func_691(&(Global_MissionData1.f_114189));
-	Global_MissionData1.f_114250 = 0;
+	Global_MissionData1.missionGenCtspw = 0;
 
 	for (j = 0; j <= 19; j = j + 1)
 	{
-		Global_MissionData1.f_114251[j] = 0;
+		Global_MissionData1.missionGenCtsspw[j] = 0;
 	}
 
 	Global_MissionData1.f_114140 = 100;
@@ -104992,8 +104992,8 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	func_637(&(Global_4980736.f_5706));
 	Global_MissionData1.f_112509 = 0;
 	Global_MissionData1.f_1213 = 0;
-	Global_MissionData1.f_162816 = 12;
-	Global_MissionData1.f_162817 = 0;
+	Global_MissionData1.missionGenTimeOfDayHours = 12;
+	Global_MissionData1.missionGenTimeOfDayMins = 0;
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
@@ -105128,10 +105128,10 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_MissionData1.f_174888 = -1;
 	Global_MissionData1.f_174889 = 0f;
 	Global_MissionData1.f_186645 = 0;
-	Global_MissionData1.f_167669 = 0;
-	Global_MissionData1.f_167670 = 0;
-	Global_MissionData1.f_167671 = 0f;
-	Global_MissionData1.f_167672 = 0;
+	Global_MissionData1.missionGenRmlo = 0;
+	Global_MissionData1.missionGenMxlap = 0;
+	Global_MissionData1.missionGenAghd = 0f;
+	Global_MissionData1.missionGenAgt = 0;
 
 	for (i = 0; i <= 11; i = i + 1)
 	{

@@ -16944,7 +16944,7 @@ void func_427(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam4
 						if (!IS_BIT_SET(Global_MissionData1.f_12, 15))
 							func_610(*Global_MissionData1.missionRuleTod);
 						else
-							func_609(*Global_MissionData1.f_162816, *Global_MissionData1.f_162817);
+							func_609(*Global_MissionData1.missionGenTimeOfDayHours, *Global_MissionData1.missionGenTimeOfDayMins);
 					
 						if (Global_1926705.f_14 > -1)
 							NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(Global_1926705.f_14, Global_1926705.f_15, 0);

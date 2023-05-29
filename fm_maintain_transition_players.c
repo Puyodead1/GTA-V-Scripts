@@ -2018,7 +2018,7 @@ BOOL func_30(var uParam0, var uParam1, BOOL bParam2) // Position - 0x10AC
 		case 3:
 			for (i = 0; i < Global_2684801.f_1.f_2805; i = i + 1)
 			{
-				if (bParam2 && uLocal_189[uParam0->f_12[i]] != 0 && Global_MissionData1.f_1264 == 0)
+				if (bParam2 && uLocal_189[uParam0->f_12[i]] != 0 && Global_MissionData1.missionGenHptfb == 0)
 					if (uParam0->f_73[uParam0->f_12[i]] >= uLocal_189[uParam0->f_12[i]])
 						uParam0->f_12[i] = func_54(uParam0);
 			
@@ -2044,7 +2044,7 @@ BOOL func_30(var uParam0, var uParam1, BOOL bParam2) // Position - 0x10AC
 						if (uParam0->f_124 < 1)
 							uParam0->f_124 = 1;
 					
-						if (Global_MissionData1.f_1264 != 0 && !func_45(uParam0) && uParam0->f_73[uParam0->f_124] > 0)
+						if (Global_MissionData1.missionGenHptfb != 0 && !func_45(uParam0) && uParam0->f_73[uParam0->f_124] > 0)
 							uParam0->f_124 = uParam0->f_124 + 1;
 					
 						if (uParam0->f_73[uParam0->f_124] >= uParam0->f_123)
@@ -2576,14 +2576,14 @@ BOOL func_47(var uParam0, int iParam1) // Position - 0x1FEB
 	{
 		if (uLocal_189[uParam0->f_63[0]] != 0 && uLocal_189[uParam0->f_63[iParam1]] != 0)
 		{
-			if (Global_MissionData1.f_1264 != 0)
+			if (Global_MissionData1.missionGenHptfb != 0)
 			{
 				if (func_45(uParam0) && func_49(uParam0))
 				{
 					if (func_38(uParam0, true))
 						return false;
 				
-					if (IS_BIT_SET(Global_MissionData1.f_1264, uParam0->f_63[0]) && uLocal_189[uParam0->f_63[0]] == uParam0->f_73[uParam0->f_63[0]] || func_48(uParam0))
+					if (IS_BIT_SET(Global_MissionData1.missionGenHptfb, uParam0->f_63[0]) && uLocal_189[uParam0->f_63[0]] == uParam0->f_73[uParam0->f_63[0]] || func_48(uParam0))
 						return true;
 					else
 						return false;

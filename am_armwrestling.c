@@ -116964,7 +116964,7 @@ void func_1144(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 						if (!IS_BIT_SET(Global_MissionData1.f_12, 15))
 							func_1269(*Global_MissionData1.missionRuleTod);
 						else
-							func_1268(*Global_MissionData1.f_162816, *Global_MissionData1.f_162817);
+							func_1268(*Global_MissionData1.missionGenTimeOfDayHours, *Global_MissionData1.missionGenTimeOfDayMins);
 					
 						if (Global_1926705.f_14 > -1)
 							NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(Global_1926705.f_14, Global_1926705.f_15, 0);
@@ -121752,7 +121752,7 @@ void func_1401(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 					{
 						amount2 = *Global_4980736.missionEnemyCount;
 					
-						if (*Global_MissionData1.f_114188 != 0)
+						if (*Global_MissionData1.missionGenCtsc != 0)
 							amount2 = amount2 + 1;
 					
 						amount2 = amount2 + *Global_4980736.f_214764;
@@ -122425,9 +122425,9 @@ eMPStat func_1427(int iParam0) // Position - 0x982DA
 
 void func_1428() // Position - 0x98389
 {
-	if (Global_MissionData1 == 0 && *Global_MissionData1.f_114184 > Global_262145.f_8187)
+	if (Global_MissionData1 == 0 && *Global_MissionData1.missionGenCshr > Global_262145.f_8187)
 		if (*Global_MissionData1.f_114294 != 1 && *Global_MissionData1.f_114294 != 2 && *Global_MissionData1.f_114294 != 3 && *Global_MissionData1.f_114294 != 4 && *Global_MissionData1.f_114294 != 5 && *Global_MissionData1.f_114294 != 6)
-			Global_MissionData1.f_114184 = Global_262145.f_8187;
+			Global_MissionData1.missionGenCshr = Global_262145.f_8187;
 
 	return;
 }
