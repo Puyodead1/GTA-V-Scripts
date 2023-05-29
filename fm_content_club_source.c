@@ -15648,7 +15648,7 @@ void func_286(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_287() // Position - 0xDBDA
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_291(7))
@@ -35492,7 +35492,7 @@ int func_920(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_924(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_921(playerTeam, iParam2, true, 4);
 			else
 				return func_921(playerTeam, iParam2, false, 4);
@@ -35599,7 +35599,7 @@ BOOL func_922(int iParam0, BOOL bParam1) // Position - 0x2F6C9
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -63078,7 +63078,7 @@ int func_1408(int iParam0) // Position - 0x5955C
 
 BOOL func_1409(BOOL bParam0) // Position - 0x59593
 {
-	if (func_1411(bParam0) || func_939() || func_1410(*Global_MissionData1.f_166301))
+	if (func_1411(bParam0) || func_939() || func_1410(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -104546,14 +104546,14 @@ BOOL func_1531(Hash hParam0, BOOL bParam1) // Position - 0x887A9
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_1533(*Global_MissionData1.f_166301) || func_1532(*Global_MissionData1.f_166301))
+			if (func_1533(*Global_MissionData1.missionGenAdverm) || func_1532(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_1533(*Global_MissionData1.f_166301))
+			if (func_1533(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -121985,7 +121985,7 @@ BOOL func_1712(float fParam0, Any* panParam1, var uParam2) // Position - 0x9F1CE
 					if (fParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_1532(*Global_MissionData1.f_166301))
+					if (func_1532(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = fParam0->f_30;
@@ -132125,7 +132125,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_1940(*Global_MissionData1.f_166301))
+					if (func_1940(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -142441,7 +142441,7 @@ void func_2124(Hash hParam0) // Position - 0xBBD1E
 	Hash weaponHash;
 	Hash weaponHash2;
 
-	if (func_2133(*Global_MissionData1.f_166301))
+	if (func_2133(*Global_MissionData1.missionGenAdverm))
 		if (func_2123(hParam0))
 			return;
 
@@ -149200,7 +149200,7 @@ BOOL func_2285() // Position - 0xC39F9
 
 BOOL func_2286(int iParam0) // Position - 0xC3A0E
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 BOOL func_2287() // Position - 0xC3A23
@@ -149532,7 +149532,7 @@ int func_2290(Hash hParam0) // Position - 0xC3FD8
 
 BOOL func_2291() // Position - 0xC3FEF
 {
-	return IS_BIT_SET(Global_MissionData1.f_11, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL func_2292(Hash hParam0) // Position - 0xC400B
@@ -150392,7 +150392,7 @@ BOOL func_2327(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xC51BA
 		}
 	}
 
-	if (func_943() || func_2329(*Global_MissionData1.f_166301) || func_92())
+	if (func_943() || func_2329(*Global_MissionData1.missionGenAdverm) || func_92())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{

@@ -19144,7 +19144,7 @@ int func_110(int iParam0) // Position - 0x1EB67
 
 BOOL func_111(BOOL bParam0) // Position - 0x1EB9E
 {
-	if (func_115(bParam0) || func_113() || func_112(*Global_MissionData1.f_166301))
+	if (func_115(bParam0) || func_113() || func_112(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

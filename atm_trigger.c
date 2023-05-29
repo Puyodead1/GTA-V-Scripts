@@ -776,7 +776,7 @@ void main() // Position - 0x0
 						Global_113648.f_20566.f_100 = 1;
 				}
 			
-				if (!PED::IS_PED_USING_ANY_SCENARIO(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && !func_82(0) && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_505, 1f, 1f, 1f, false, true, 1) && !PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false) && !func_81() && !func_80(obScriptParam_613, false) && !func_79() && ENTITY::GET_ENTITY_SPEED(PLAYER::PLAYER_PED_ID()) < 4f && func_77(PLAYER::PLAYER_ID()) != 171 && !func_76(*Global_MissionData1.f_166301) && !func_75(*Global_MissionData1.f_166301) && !func_74(*Global_MissionData1.f_166301) && !IS_BIT_SET(Global_MissionData1.f_28, 1) && !_IS_PLAYER_IN_ANIMAL_FORM(PLAYER::PLAYER_ID()))
+				if (!PED::IS_PED_USING_ANY_SCENARIO(PLAYER::PLAYER_PED_ID()) && !PED::IS_PED_RAGDOLL(PLAYER::PLAYER_PED_ID()) && !func_82(0) && ENTITY::IS_ENTITY_AT_COORD(PLAYER::PLAYER_PED_ID(), uLocal_505, 1f, 1f, 1f, false, true, 1) && !PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false) && !func_81() && !func_80(obScriptParam_613, false) && !func_79() && ENTITY::GET_ENTITY_SPEED(PLAYER::PLAYER_PED_ID()) < 4f && func_77(PLAYER::PLAYER_ID()) != 171 && !func_76(*Global_MissionData1.missionGenAdverm) && !func_75(*Global_MissionData1.missionGenAdverm) && !func_74(*Global_MissionData1.missionGenAdverm) && !IS_BIT_SET(Global_MissionData1.f_28, 1) && !_IS_PLAYER_IN_ANIMAL_FORM(PLAYER::PLAYER_ID()))
 				{
 					if (TASK::DOES_SCENARIO_EXIST_IN_AREA(uLocal_505, 2f, false))
 						flag3 = false;

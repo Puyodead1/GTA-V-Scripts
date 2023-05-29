@@ -8189,7 +8189,7 @@ int func_204(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_208(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_205(playerTeam, iParam2, true, 4);
 			else
 				return func_205(playerTeam, iParam2, false, 4);
@@ -8296,7 +8296,7 @@ BOOL func_206(int iParam0, BOOL bParam1) // Position - 0xB003
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -17257,7 +17257,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_495(*Global_MissionData1.f_166301))
+					if (func_495(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

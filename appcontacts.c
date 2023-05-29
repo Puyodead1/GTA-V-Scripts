@@ -13754,7 +13754,7 @@ int func_207(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_211(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_208(playerTeam, iParam2, true, 4);
 			else
 				return func_208(playerTeam, iParam2, false, 4);
@@ -13861,7 +13861,7 @@ BOOL func_209(int iParam0, BOOL bParam1) // Position - 0xEF4D
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -14446,11 +14446,11 @@ BOOL func_233(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 				
 					for (j = 0; j <= 7; j = j + 1)
 					{
-						if (MISC::IS_STRING_NULL(&Global_MissionData1.f_113882[j]))
-							TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.f_113882[j], "", 64);
+						if (MISC::IS_STRING_NULL(&Global_MissionData1.missionGenSzTag[j]))
+							TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.missionGenSzTag[j], "", 64);
 					}
 				
-					MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_MissionData1.f_113882[0], &Global_MissionData1.f_113882[1], &Global_MissionData1.f_113882[2], &Global_MissionData1.f_113882[3], &Global_MissionData1.f_113882[4], &Global_MissionData1.f_113882[5], &Global_MissionData1.f_113882[6], &Global_MissionData1.f_113882[7], maxInputLength2);
+					MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_MissionData1.missionGenSzTag[0], &Global_MissionData1.missionGenSzTag[1], &Global_MissionData1.missionGenSzTag[2], &Global_MissionData1.missionGenSzTag[3], &Global_MissionData1.missionGenSzTag[4], &Global_MissionData1.missionGenSzTag[5], &Global_MissionData1.missionGenSzTag[6], &Global_MissionData1.missionGenSzTag[7], maxInputLength2);
 				}
 				else if (bParam6)
 				{

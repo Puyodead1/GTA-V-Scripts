@@ -26138,7 +26138,7 @@ int func_284(int iParam0) // Position - 0x28AD4
 
 BOOL func_285(BOOL bParam0) // Position - 0x28B0B
 {
-	if (func_289(bParam0) || func_287() || func_286(*Global_MissionData1.f_166301))
+	if (func_289(bParam0) || func_287() || func_286(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

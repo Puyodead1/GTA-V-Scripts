@@ -52256,7 +52256,7 @@ int func_201(int iParam0) // Position - 0x396D9
 
 BOOL func_202(BOOL bParam0) // Position - 0x39710
 {
-	if (func_206(bParam0) || func_204() || func_203(*Global_MissionData1.f_166301))
+	if (func_206(bParam0) || func_204() || func_203(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

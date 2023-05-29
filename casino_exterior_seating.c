@@ -47343,7 +47343,7 @@ int func_188(int iParam0) // Position - 0x322E4
 
 BOOL func_189(BOOL bParam0) // Position - 0x3231B
 {
-	if (func_193(bParam0) || func_191() || func_190(*Global_MissionData1.f_166301))
+	if (func_193(bParam0) || func_191() || func_190(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -95845,7 +95845,7 @@ BOOL func_483(int iParam0) // Position - 0x73BAB
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 29)
+	if (*Global_MissionData1.missionGenAdverm == 29)
 		return true;
 
 	if (iParam0 == 0)

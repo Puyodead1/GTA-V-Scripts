@@ -2700,7 +2700,7 @@ BOOL func_73(var uParam0, var uParam1, var uParam2) // Position - 0x25BE
 					if (uParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_234(*Global_MissionData1.f_166301))
+					if (func_234(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = uParam0->f_30;
@@ -12889,7 +12889,7 @@ eHudColour func_356(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) //
 					return func_360(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_357(playerTeam, iParam2, true, 4);
 			else
 				return func_357(playerTeam, iParam2, false, 4);
@@ -12996,7 +12996,7 @@ BOOL func_358(int iParam0, BOOL bParam1) // Position - 0x11066
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)

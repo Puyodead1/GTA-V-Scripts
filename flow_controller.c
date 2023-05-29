@@ -75372,7 +75372,7 @@ int func_634(int iParam0) // Position - 0x64CF0
 
 BOOL func_635(BOOL bParam0) // Position - 0x64D27
 {
-	if (func_639(bParam0) || func_637() || func_636(*Global_MissionData1.f_166301))
+	if (func_639(bParam0) || func_637() || func_636(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

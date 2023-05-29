@@ -67415,7 +67415,7 @@ BOOL func_578(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x50723
 		}
 	}
 
-	if (func_584() || func_583(*Global_MissionData1.f_166301) || func_582())
+	if (func_584() || func_583(*Global_MissionData1.missionGenAdverm) || func_582())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -95384,7 +95384,7 @@ int func_831(int iParam0) // Position - 0x7EC28
 
 BOOL func_832(BOOL bParam0) // Position - 0x7EC5F
 {
-	if (func_836(bParam0) || func_834() || func_833(*Global_MissionData1.f_166301))
+	if (func_836(bParam0) || func_834() || func_833(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

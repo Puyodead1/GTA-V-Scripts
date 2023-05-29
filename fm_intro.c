@@ -14658,7 +14658,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_372(*Global_MissionData1.f_166301))
+					if (func_372(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -17701,7 +17701,7 @@ BOOL func_449() // Position - 0x1859E
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_MissionData1.f_114039[i]))
+		if (!MISC::IS_STRING_NULL_OR_EMPTY(&Global_MissionData1.missionGenNrcid[i]))
 			num = 0;
 	}
 
@@ -17734,7 +17734,7 @@ void func_452() // Position - 0x1860D
 	{
 		if (func_349())
 		{
-			if (func_457(*Global_MissionData1.f_166301))
+			if (func_457(*Global_MissionData1.missionGenAdverm))
 			{
 				switch (*Global_MissionData1.f_160097)
 				{
@@ -17743,7 +17743,7 @@ void func_452() // Position - 0x1860D
 						break;
 				}
 			}
-			else if (func_456(*Global_MissionData1.f_166301))
+			else if (func_456(*Global_MissionData1.missionGenAdverm))
 			{
 				switch (*Global_MissionData1.f_160097)
 				{
@@ -17752,7 +17752,7 @@ void func_452() // Position - 0x1860D
 						break;
 				}
 			}
-			else if (func_455(*Global_MissionData1.f_166301))
+			else if (func_455(*Global_MissionData1.missionGenAdverm))
 			{
 				switch (*Global_MissionData1.f_160097)
 				{
@@ -17761,7 +17761,7 @@ void func_452() // Position - 0x1860D
 						break;
 				}
 			}
-			else if (func_454(*Global_MissionData1.f_166301))
+			else if (func_454(*Global_MissionData1.missionGenAdverm))
 			{
 				switch (*Global_MissionData1.f_160097)
 				{
@@ -17772,7 +17772,7 @@ void func_452() // Position - 0x1860D
 						break;
 				}
 			}
-			else if (func_453(*Global_MissionData1.f_166301))
+			else if (func_453(*Global_MissionData1.missionGenAdverm))
 			{
 				switch (*Global_MissionData1.f_160097)
 				{
@@ -20041,7 +20041,7 @@ void func_606(int iParam0, BOOL bParam1) // Position - 0x1B14D
 			break;
 	
 		case 3:
-			if (func_607(*Global_MissionData1.f_166301))
+			if (func_607(*Global_MissionData1.missionGenAdverm))
 				NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(20, 50, 0);
 			else
 				NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(21, 0, 0);
@@ -20249,7 +20249,7 @@ BOOL func_629(int iParam0) // Position - 0x1B484
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 46)
+	if (*Global_MissionData1.missionGenAdverm == 46)
 		return true;
 
 	if (iParam0 == 0)
@@ -20268,7 +20268,7 @@ BOOL func_630(int iParam0) // Position - 0x1B4D1
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 21)
+	if (*Global_MissionData1.missionGenAdverm == 21)
 		return true;
 
 	if (iParam0 == 0)
@@ -20288,7 +20288,7 @@ BOOL func_631() // Position - 0x1B51D
 	if (IS_BIT_SET(Global_MissionData1.f_18, 0))
 		return true;
 
-	return func_638(*Global_MissionData1.f_113724, true) || func_637(*Global_MissionData1.f_113724) || func_636(*Global_MissionData1.f_113724) || func_635(*Global_MissionData1.f_113724) || func_634(*Global_MissionData1.f_166301) || func_633(*Global_MissionData1.f_166301) || func_632(*Global_MissionData1.f_166301);
+	return func_638(*Global_MissionData1.f_113724, true) || func_637(*Global_MissionData1.f_113724) || func_636(*Global_MissionData1.f_113724) || func_635(*Global_MissionData1.f_113724) || func_634(*Global_MissionData1.missionGenAdverm) || func_633(*Global_MissionData1.missionGenAdverm) || func_632(*Global_MissionData1.missionGenAdverm);
 }
 
 BOOL func_632(int iParam0) // Position - 0x1B5BB
@@ -20310,7 +20310,7 @@ BOOL func_635(int iParam0) // Position - 0x1B5E2
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 35)
+	if (*Global_MissionData1.missionGenAdverm == 35)
 		return true;
 
 	if (iParam0 == 0)
@@ -20329,7 +20329,7 @@ BOOL func_636(int iParam0) // Position - 0x1B62F
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 27)
+	if (*Global_MissionData1.missionGenAdverm == 27)
 		return true;
 
 	if (iParam0 == 0)
@@ -20348,7 +20348,7 @@ int func_637(int iParam0) // Position - 0x1B67C
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 32)
+	if (*Global_MissionData1.missionGenAdverm == 32)
 		return 1;
 
 	if (iParam0 == 0)
@@ -20368,7 +20368,7 @@ int func_638(int iParam0, BOOL bParam1) // Position - 0x1B6C9
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return 1;
 
 	if (iParam0 == 0)

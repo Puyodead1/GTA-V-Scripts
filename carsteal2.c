@@ -85759,7 +85759,7 @@ int func_808(int iParam0) // Position - 0x75F9C
 
 BOOL func_809(BOOL bParam0) // Position - 0x75FD3
 {
-	if (func_813(bParam0) || func_811() || func_810(*Global_MissionData1.f_166301))
+	if (func_813(bParam0) || func_811() || func_810(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

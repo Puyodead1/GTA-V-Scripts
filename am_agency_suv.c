@@ -2413,7 +2413,7 @@ char* func_25(int iParam0) // Position - 0x58D
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_26(*Global_MissionData1.f_166301))
+			if (func_26(*Global_MissionData1.missionGenAdverm))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -2590,7 +2590,7 @@ BOOL func_28() // Position - 0x10D0
 
 BOOL func_29(int iParam0) // Position - 0x10E5
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 BOOL func_30(Player plParam0) // Position - 0x10FA
@@ -9037,7 +9037,7 @@ void func_124(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_125() // Position - 0xA0FE
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_129(7))
@@ -16801,7 +16801,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_334(*Global_MissionData1.f_166301))
+					if (func_334(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

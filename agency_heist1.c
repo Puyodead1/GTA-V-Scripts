@@ -53118,7 +53118,7 @@ int func_311(int iParam0) // Position - 0x44EC8
 
 BOOL func_312(BOOL bParam0) // Position - 0x44EFF
 {
-	if (func_316(bParam0) || func_314() || func_313(*Global_MissionData1.f_166301))
+	if (func_316(bParam0) || func_314() || func_313(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -97862,7 +97862,7 @@ void func_550(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_551() // Position - 0x7B580
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_554(7))
@@ -104365,7 +104365,7 @@ BOOL func_674(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x86907
 		}
 	}
 
-	if (func_680() || func_679(*Global_MissionData1.f_166301) || func_678())
+	if (func_680() || func_679(*Global_MissionData1.missionGenAdverm) || func_678())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{

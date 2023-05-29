@@ -4065,7 +4065,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_98(*Global_MissionData1.f_166301))
+					if (func_98(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -25191,7 +25191,7 @@ int func_297(int iParam0) // Position - 0x25F77
 
 BOOL func_298(BOOL bParam0) // Position - 0x25FAE
 {
-	if (func_302(bParam0) || func_300() || func_299(*Global_MissionData1.f_166301))
+	if (func_302(bParam0) || func_300() || func_299(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -66835,14 +66835,14 @@ BOOL func_429(Hash hParam0, BOOL bParam1) // Position - 0x5540F
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_431(*Global_MissionData1.f_166301) || func_430(*Global_MissionData1.f_166301))
+			if (func_431(*Global_MissionData1.missionGenAdverm) || func_430(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_431(*Global_MissionData1.f_166301))
+			if (func_431(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -84116,7 +84116,7 @@ void func_547(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_548() // Position - 0x6AA90
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_550(7))
@@ -97847,7 +97847,7 @@ BOOL func_816(float fParam0, Any* panParam1, var uParam2) // Position - 0x85CC5
 					if (fParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_430(*Global_MissionData1.f_166301))
+					if (func_430(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = fParam0->f_30;

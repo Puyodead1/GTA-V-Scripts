@@ -7365,7 +7365,7 @@ int func_174(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_178(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_175(playerTeam, iParam2, true, 4);
 			else
 				return func_175(playerTeam, iParam2, false, 4);
@@ -7472,7 +7472,7 @@ BOOL func_176(int iParam0, BOOL bParam1) // Position - 0x5709
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -11040,7 +11040,7 @@ BOOL func_277(float fParam0, Any* panParam1, var uParam2) // Position - 0xA142
 					if (fParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_415(*Global_MissionData1.f_166301))
+					if (func_415(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = fParam0->f_30;
@@ -41232,7 +41232,7 @@ int func_758(int iParam0) // Position - 0x3881B
 
 BOOL func_759(BOOL bParam0) // Position - 0x38852
 {
-	if (func_761(bParam0) || func_196() || func_760(*Global_MissionData1.f_166301))
+	if (func_761(bParam0) || func_196() || func_760(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -82813,14 +82813,14 @@ BOOL func_884(Hash hParam0, BOOL bParam1) // Position - 0x67C6C
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_885(*Global_MissionData1.f_166301) || func_415(*Global_MissionData1.f_166301))
+			if (func_885(*Global_MissionData1.missionGenAdverm) || func_415(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_885(*Global_MissionData1.f_166301))
+			if (func_885(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -100262,7 +100262,7 @@ void func_994(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_995() // Position - 0x7D9DE
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_996(7))
@@ -126428,7 +126428,7 @@ void func_1635(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0xAAB11
 
 BOOL func_1636() // Position - 0xAAD6E
 {
-	if (!func_535(PLAYER::PLAYER_ID()) && !func_516(PLAYER::PLAYER_ID()) && func_105(PLAYER::PLAYER_ID()) != 146 && !func_1639() && !func_1638() && !func_1637(*Global_MissionData1.f_166301) && !func_199() && !IS_BIT_SET(Global_MissionData1.f_38, 28))
+	if (!func_535(PLAYER::PLAYER_ID()) && !func_516(PLAYER::PLAYER_ID()) && func_105(PLAYER::PLAYER_ID()) != 146 && !func_1639() && !func_1638() && !func_1637(*Global_MissionData1.missionGenAdverm) && !func_199() && !IS_BIT_SET(Global_MissionData1.f_38, 28))
 		return false;
 
 	return true;
@@ -126449,7 +126449,7 @@ BOOL func_1638() // Position - 0xAADF6
 
 BOOL func_1639() // Position - 0xAAE17
 {
-	if (Global_MissionData1 == 0 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_MissionData1.f_5 != 0 || *Global_MissionData1.f_166301 > 0 || IS_BIT_SET(Global_MissionData1.f_4, 15) || IS_BIT_SET(Global_MissionData1.f_4, 18) || IS_BIT_SET(Global_MissionData1.f_4, 19) || IS_BIT_SET(Global_MissionData1.f_4, 29) || IS_BIT_SET(Global_MissionData1.f_4, 28) || IS_BIT_SET(Global_MissionData1.f_5, 23))
+	if (Global_MissionData1 == 0 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_MissionData1.f_5 != 0 || *Global_MissionData1.missionGenAdverm > 0 || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 15) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 18) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 19) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 29) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 28) || IS_BIT_SET(Global_MissionData1.f_5, 23))
 		return true;
 
 	return false;

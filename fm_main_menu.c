@@ -278,7 +278,7 @@ void main() // Position - 0x0
 
 	HUD::REQUEST_ADDITIONAL_TEXT("FMMC", 2);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
-	uLocal_237 = Global_MissionData1.f_2;
+	uLocal_237 = Global_MissionData1.missionGenSubtype;
 	Global_1574605 = 0;
 	uLocal_116.f_5 = Global_MissionData1;
 	Global_1574533 = 0;
@@ -286,7 +286,7 @@ void main() // Position - 0x0
 	iLocal_236 = Global_MissionData1;
 
 	if (Global_MissionData1 == 0)
-		Global_MissionData1.f_2 = uLocal_237;
+		Global_MissionData1.missionGenSubtype = uLocal_237;
 
 	Global_1926652 = 0;
 
@@ -335,19 +335,19 @@ void main() // Position - 0x0
 		
 			case 4:
 				if (func_13(true))
-					if (Global_MissionData1.f_2 == 5)
+					if (Global_MissionData1.missionGenSubtype == 5)
 						if (func_12(&uLocal_235))
 							iLocal_234 = 2;
 					else if (func_11())
 						if (func_10(&uLocal_235))
 							iLocal_234 = 2;
-					else if (Global_MissionData1.f_2 == 11)
+					else if (Global_MissionData1.missionGenSubtype == 11)
 						if (func_9(&uLocal_235))
 							iLocal_234 = 2;
-					else if (Global_MissionData1.f_2 == 12)
+					else if (Global_MissionData1.missionGenSubtype == 12)
 						if (func_8(&uLocal_235))
 							iLocal_234 = 2;
-					else if (Global_MissionData1.f_2 != 6 && Global_MissionData1 != 4)
+					else if (Global_MissionData1.missionGenSubtype != 6 && Global_MissionData1 != 4)
 						if (func_7(&uLocal_235))
 							iLocal_234 = 2;
 					else if (func_6(&uLocal_235))
@@ -637,7 +637,7 @@ BOOL func_13(BOOL bParam0) // Position - 0x6E2
 	if (!bParam0)
 		return Global_MissionData1 == 0;
 
-	if (Global_MissionData1 == 0 || Global_MissionData1 == 4 || Global_MissionData1 == 6 || Global_MissionData1 == 3 || Global_MissionData1 == 31 || Global_MissionData1.f_2 == 6 || Global_MissionData1.f_2 == 5)
+	if (Global_MissionData1 == 0 || Global_MissionData1 == 4 || Global_MissionData1 == 6 || Global_MissionData1 == 3 || Global_MissionData1 == 31 || Global_MissionData1.missionGenSubtype == 6 || Global_MissionData1.missionGenSubtype == 5)
 		return true;
 
 	return false;

@@ -12774,7 +12774,7 @@ void func_244(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_245() // Position - 0xCB73
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_249(7))
@@ -32312,7 +32312,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_757(*Global_MissionData1.f_166301))
+					if (func_757(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -62059,7 +62059,7 @@ int func_1327(int iParam0) // Position - 0x59C90
 
 BOOL func_1328(BOOL bParam0) // Position - 0x59CC7
 {
-	if (func_1332(bParam0) || func_1330() || func_1329(*Global_MissionData1.f_166301))
+	if (func_1332(bParam0) || func_1330() || func_1329(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -103369,14 +103369,14 @@ BOOL func_1448(Hash hParam0, BOOL bParam1) // Position - 0x88852
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_1450(*Global_MissionData1.f_166301) || func_1449(*Global_MissionData1.f_166301))
+			if (func_1450(*Global_MissionData1.missionGenAdverm) || func_1449(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_1450(*Global_MissionData1.f_166301))
+			if (func_1450(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -120903,7 +120903,7 @@ BOOL func_1634(float fParam0, Any* panParam1, var uParam2) // Position - 0x9F617
 					if (fParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_1449(*Global_MissionData1.f_166301))
+					if (func_1449(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = fParam0->f_30;
@@ -142156,7 +142156,7 @@ BOOL func_2041(int iParam0) // Position - 0xBDE4B
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 29)
+	if (*Global_MissionData1.missionGenAdverm == 29)
 		return true;
 
 	if (iParam0 == 0)
@@ -144560,7 +144560,7 @@ void func_2134(Hash hParam0) // Position - 0xC08D2
 	Hash weaponHash;
 	Hash weaponHash2;
 
-	if (func_2136(*Global_MissionData1.f_166301))
+	if (func_2136(*Global_MissionData1.missionGenAdverm))
 		if (func_2133(hParam0))
 			return;
 
@@ -149868,7 +149868,7 @@ BOOL func_2323(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0xC6BDB
 		}
 	}
 
-	if (func_2326() || func_2325(*Global_MissionData1.f_166301) || func_93())
+	if (func_2326() || func_2325(*Global_MissionData1.missionGenAdverm) || func_93())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -151558,7 +151558,7 @@ int func_2404(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Posit
 					return func_2408(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_2405(playerTeam, iParam2, true, 4);
 			else
 				return func_2405(playerTeam, iParam2, false, 4);
@@ -151665,7 +151665,7 @@ BOOL func_2406(int iParam0, BOOL bParam1) // Position - 0xC9076
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)

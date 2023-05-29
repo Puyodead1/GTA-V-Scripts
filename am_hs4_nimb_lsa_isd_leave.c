@@ -664,7 +664,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_17(*Global_MissionData1.f_166301))
+					if (func_17(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -7636,7 +7636,7 @@ void func_134(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_135() // Position - 0xA29A
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_139(7))
@@ -44495,7 +44495,7 @@ int func_257(int iParam0) // Position - 0x3228B
 
 BOOL func_258(BOOL bParam0) // Position - 0x322C2
 {
-	if (func_262(bParam0) || func_260() || func_259(*Global_MissionData1.f_166301))
+	if (func_262(bParam0) || func_260() || func_259(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;

@@ -823,7 +823,7 @@ BOOL func_9(var uParam0, var uParam1, var uParam2) // Position - 0x747
 					if (uParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_175(*Global_MissionData1.f_166301))
+					if (func_175(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = uParam0->f_30;

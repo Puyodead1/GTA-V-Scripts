@@ -5100,7 +5100,7 @@ int func_63(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positio
 					return func_67(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_64(playerTeam, iParam2, true, 4);
 			else
 				return func_64(playerTeam, iParam2, false, 4);
@@ -5207,7 +5207,7 @@ BOOL func_65(int iParam0, BOOL bParam1) // Position - 0x1EB2
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -23633,7 +23633,7 @@ void func_705(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1A072
 
 BOOL func_706() // Position - 0x1A2CF
 {
-	if (!func_629(PLAYER::PLAYER_ID()) && !func_610(PLAYER::PLAYER_ID()) && func_309(PLAYER::PLAYER_ID()) != 146 && !func_709() && !func_708() && !func_707(*Global_MissionData1.f_166301) && !func_93() && !IS_BIT_SET(Global_MissionData1.f_38, 28))
+	if (!func_629(PLAYER::PLAYER_ID()) && !func_610(PLAYER::PLAYER_ID()) && func_309(PLAYER::PLAYER_ID()) != 146 && !func_709() && !func_708() && !func_707(*Global_MissionData1.missionGenAdverm) && !func_93() && !IS_BIT_SET(Global_MissionData1.f_38, 28))
 		return false;
 
 	return true;
@@ -23654,7 +23654,7 @@ BOOL func_708() // Position - 0x1A357
 
 BOOL func_709() // Position - 0x1A378
 {
-	if (Global_MissionData1 == 0 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_MissionData1.f_5 != 0 || *Global_MissionData1.f_166301 > 0 || IS_BIT_SET(Global_MissionData1.f_4, 15) || IS_BIT_SET(Global_MissionData1.f_4, 18) || IS_BIT_SET(Global_MissionData1.f_4, 19) || IS_BIT_SET(Global_MissionData1.f_4, 29) || IS_BIT_SET(Global_MissionData1.f_4, 28) || IS_BIT_SET(Global_MissionData1.f_5, 23))
+	if (Global_MissionData1 == 0 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_MissionData1.f_5 != 0 || *Global_MissionData1.missionGenAdverm > 0 || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 15) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 18) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 19) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 29) || IS_BIT_SET(Global_MissionData1.missionGenOptbs, 28) || IS_BIT_SET(Global_MissionData1.f_5, 23))
 		return true;
 
 	return false;

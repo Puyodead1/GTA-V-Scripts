@@ -80414,7 +80414,7 @@ int func_694(int iParam0) // Position - 0x6FA12
 
 BOOL func_695(BOOL bParam0) // Position - 0x6FA49
 {
-	if (func_699(bParam0) || func_697() || func_696(*Global_MissionData1.f_166301))
+	if (func_699(bParam0) || func_697() || func_696(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -116737,7 +116737,7 @@ void func_795(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_796() // Position - 0x990C8
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_799(7))

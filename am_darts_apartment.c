@@ -7598,7 +7598,7 @@ void func_94() // Position - 0x96E9
 	STREAMING::REMOVE_ANIM_DICT("MP_CORONA@TEAM_IDLES@MALE_B");
 	STREAMING::REMOVE_ANIM_DICT("MP_CORONA@TEAM_IDLES@MALE_C");
 
-	if (func_95(*Global_MissionData1.f_166301))
+	if (func_95(*Global_MissionData1.missionGenAdverm))
 	{
 		STREAMING::REMOVE_ANIM_DICT("anim@MP_CORONA_IDLES_JUGGERNAUT@MALE_A@BASE");
 		STREAMING::REMOVE_ANIM_DICT("anim@MP_CORONA_IDLES_JUGGERNAUT@MALE_A@IDLE_A");
@@ -44587,7 +44587,7 @@ void func_293(var uParam0, BOOL bParam1) // Position - 0x3171E
 	{
 		if (bParam1)
 		{
-			if (!func_298(*Global_MissionData1.f_166301))
+			if (!func_298(*Global_MissionData1.missionGenAdverm))
 			{
 				if (GRAPHICS::GET_REQUESTINGNIGHTVISION() || GRAPHICS::GET_USINGNIGHTVISION())
 				{
@@ -51877,24 +51877,24 @@ BOOL func_482(var uParam0) // Position - 0x3C6DE
 
 BOOL func_483() // Position - 0x3C70D
 {
-	if (func_493(*Global_MissionData1.f_166301))
+	if (func_493(*Global_MissionData1.missionGenAdverm))
 		return true;
-	else if (func_492(*Global_MissionData1.f_166301))
+	else if (func_492(*Global_MissionData1.missionGenAdverm))
 		return true;
-	else if (func_491(*Global_MissionData1.f_166301))
+	else if (func_491(*Global_MissionData1.missionGenAdverm))
 		return true;
-	else if (func_490(*Global_MissionData1.f_166301))
+	else if (func_490(*Global_MissionData1.missionGenAdverm))
 		return true;
-	else if (func_489(*Global_MissionData1.f_166301))
+	else if (func_489(*Global_MissionData1.missionGenAdverm))
 		return true;
 	else if (func_488())
 		return false;
 	else if (func_487())
 		return false;
-	else if (func_486(*Global_MissionData1.f_166301))
+	else if (func_486(*Global_MissionData1.missionGenAdverm))
 		if (Global_1665699 == 1)
 			return true;
-	else if (func_485(*Global_MissionData1.f_166301))
+	else if (func_485(*Global_MissionData1.missionGenAdverm))
 		if (Global_1665699 == 1)
 			return true;
 
@@ -52344,12 +52344,12 @@ int func_519(int iParam0) // Position - 0x3D19A
 
 BOOL func_520() // Position - 0x3D1D0
 {
-	return IS_BIT_SET(Global_MissionData1.f_11, 19) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs, 19) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL func_521() // Position - 0x3D1EA
 {
-	return IS_BIT_SET(Global_MissionData1.f_11, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL func_522(int iParam0) // Position - 0x3D204
@@ -61824,7 +61824,7 @@ int func_686(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_690(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_687(playerTeam, iParam2, true, 4);
 			else
 				return func_687(playerTeam, iParam2, false, 4);
@@ -61931,7 +61931,7 @@ BOOL func_688(int iParam0, BOOL bParam1) // Position - 0x4953B
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -62814,7 +62814,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_725(*Global_MissionData1.f_166301))
+					if (func_725(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -64195,7 +64195,7 @@ BOOL func_806() // Position - 0x4BEC9
 
 BOOL func_807(int iParam0) // Position - 0x4BEDE
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 int func_808() // Position - 0x4BEF3
@@ -64215,7 +64215,7 @@ int func_809() // Position - 0x4BF04
 	switch (Global_MissionData1)
 	{
 		case 0:
-			switch (Global_MissionData1.f_2)
+			switch (Global_MissionData1.missionGenSubtype)
 			{
 				case 5:
 					if (Global_262145.f_8728)

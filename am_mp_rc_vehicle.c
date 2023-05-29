@@ -20872,7 +20872,7 @@ int func_174(int iParam0) // Position - 0x2113A
 
 BOOL func_175(BOOL bParam0) // Position - 0x21171
 {
-	if (func_179(bParam0) || func_177() || func_176(*Global_MissionData1.f_166301))
+	if (func_179(bParam0) || func_177() || func_176(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -62538,14 +62538,14 @@ BOOL func_308(Hash hParam0, BOOL bParam1) // Position - 0x50598
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_310(*Global_MissionData1.f_166301) || func_309(*Global_MissionData1.f_166301))
+			if (func_310(*Global_MissionData1.missionGenAdverm) || func_309(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_310(*Global_MissionData1.f_166301))
+			if (func_310(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -80751,7 +80751,7 @@ void func_435(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_436() // Position - 0x67037
 {
-	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.missionGenSubtype == 20)
 		return false;
 
 	if (func_439(7))
@@ -94563,7 +94563,7 @@ BOOL func_713(float fParam0, Any* panParam1, var uParam2) // Position - 0x823A1
 					if (fParam0->f_26)
 						unk13.f_10 = 0;
 				
-					if (func_309(*Global_MissionData1.f_166301))
+					if (func_309(*Global_MissionData1.missionGenAdverm))
 						unk13.f_9 = 1;
 				
 					unk13.f_60 = fParam0->f_30;
@@ -107415,7 +107415,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_1073(*Global_MissionData1.f_166301))
+					if (func_1073(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -110954,7 +110954,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x991DC
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_1198(*Global_MissionData1.f_166301))
+			if (func_1198(*Global_MissionData1.missionGenAdverm))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -111131,7 +111131,7 @@ BOOL func_1200() // Position - 0x99D32
 
 BOOL func_1201(int iParam0) // Position - 0x99D47
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 int func_1202() // Position - 0x99D5C

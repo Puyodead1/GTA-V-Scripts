@@ -4621,10 +4621,10 @@ char* func_146(BOOL bParam0) // Position - 0x5C7B
 	if (func_154())
 		return "MenuMGTournamentIn";
 
-	if (func_148(*Global_MissionData1.f_166301))
+	if (func_148(*Global_MissionData1.missionGenAdverm))
 		return "MenuMGRemixIn";
 
-	if (func_147(*Global_MissionData1.f_166301) && IS_BIT_SET(Global_MissionData1.f_167679.f_2808, 2))
+	if (func_147(*Global_MissionData1.missionGenAdverm) && IS_BIT_SET(Global_MissionData1.f_167679.f_2808, 2))
 		return "MenuSurvivalAlienIn";
 
 	return "MenuMGSelectionIn";
@@ -5116,7 +5116,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_189(*Global_MissionData1.f_166301))
+					if (func_189(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

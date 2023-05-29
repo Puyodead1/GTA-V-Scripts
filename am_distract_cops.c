@@ -1119,7 +1119,7 @@ int func_39(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positio
 					return func_43(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_40(playerTeam, iParam2, true, 4);
 			else
 				return func_40(playerTeam, iParam2, false, 4);
@@ -1226,7 +1226,7 @@ BOOL func_41(int iParam0, BOOL bParam1) // Position - 0x1228
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)

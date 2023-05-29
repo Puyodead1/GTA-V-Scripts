@@ -11063,14 +11063,14 @@ BOOL func_201(Hash hParam0, BOOL bParam1) // Position - 0xD070
 			return true;
 	
 		case joaat("nightshark"):
-			if (func_203(*Global_MissionData1.f_166301) || func_202(*Global_MissionData1.f_166301))
+			if (func_203(*Global_MissionData1.missionGenAdverm) || func_202(*Global_MissionData1.missionGenAdverm))
 				if (!bParam1)
 					return true;
 			break;
 	
 		case joaat("technical3"):
 		case joaat("technical"):
-			if (func_203(*Global_MissionData1.f_166301))
+			if (func_203(*Global_MissionData1.missionGenAdverm))
 				return true;
 			break;
 	
@@ -12901,7 +12901,7 @@ BOOL func_280(int iParam0) // Position - 0xF2D5
 
 	if (playerTeam >= 0 && playerTeam <= 3)
 	{
-		if (IS_BIT_SET(Global_MissionData1.f_11, 30) && Global_MissionData1.f_107479[playerTeam] != 0 || IS_BIT_SET(*Global_MissionData1.f_160488, 10) && Global_1665787 != 0 && func_309(playerTeam))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs, 30) && Global_MissionData1.f_107479[playerTeam] != 0 || IS_BIT_SET(*Global_MissionData1.f_160488, 10) && Global_1665787 != 0 && func_309(playerTeam))
 			return false;
 	
 		if (func_308())
@@ -13062,7 +13062,7 @@ BOOL func_280(int iParam0) // Position - 0xF2D5
 			break;
 	
 		case 7:
-			if (func_307() || func_305() || func_306(PLAYER::PLAYER_ID()) || func_304(PLAYER::PLAYER_ID()) || Global_1853910[PLAYER::PLAYER_ID()] == 3 || func_289(*Global_MissionData1.f_166301) || func_288())
+			if (func_307() || func_305() || func_306(PLAYER::PLAYER_ID()) || func_304(PLAYER::PLAYER_ID()) || Global_1853910[PLAYER::PLAYER_ID()] == 3 || func_289(*Global_MissionData1.missionGenAdverm) || func_288())
 				return false;
 		
 			if (func_287())
@@ -13787,12 +13787,12 @@ int func_294(int iParam0) // Position - 0x10355
 
 BOOL func_295() // Position - 0x109DA
 {
-	return IS_BIT_SET(Global_MissionData1.f_11, 19) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs, 19) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL func_296() // Position - 0x109F4
 {
-	return IS_BIT_SET(Global_MissionData1.f_11, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs, 18) && NETWORK::NETWORK_IS_ACTIVITY_SESSION();
 }
 
 BOOL func_297() // Position - 0x10A0E
@@ -13805,7 +13805,7 @@ BOOL func_297() // Position - 0x10A0E
 
 BOOL func_298(int iParam0) // Position - 0x10A23
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 BOOL func_299(Player plParam0) // Position - 0x10A38
@@ -61575,7 +61575,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM_0_0(int iParam0) // Position - 0x4
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_1072(*Global_MissionData1.f_166301))
+			if (func_1072(*Global_MissionData1.missionGenAdverm))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -75602,7 +75602,7 @@ BOOL func_1400(Hash hParam0, int iParam1) // Position - 0x589DB
 	{
 		if (Global_2680249[9] == 0)
 		{
-			if (hParam0 == *Global_MissionData1.f_107478)
+			if (hParam0 == *Global_MissionData1.missionGenIvm)
 				return true;
 		
 			if (Global_1665819 != -1)

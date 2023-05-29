@@ -1172,7 +1172,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_26(*Global_MissionData1.f_166301))
+					if (func_26(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -54165,7 +54165,7 @@ int func_310(int iParam0) // Position - 0x420F5
 
 BOOL func_311(BOOL bParam0) // Position - 0x4212C
 {
-	if (func_315(bParam0) || func_313() || func_312(*Global_MissionData1.f_166301))
+	if (func_315(bParam0) || func_313() || func_312(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -70310,7 +70310,7 @@ int func_371(int iParam0) // Position - 0x5996E
 
 BOOL func_372(int iParam0) // Position - 0x5999C
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 BOOL func_373(var uParam0, int iParam1) // Position - 0x599B1
@@ -74144,7 +74144,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x5D8AA
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_462(*Global_MissionData1.f_166301))
+			if (func_462(*Global_MissionData1.missionGenAdverm))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -76591,7 +76591,7 @@ int func_507(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 					return func_511(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenOptbs, 20))
 				return func_508(playerTeam, iParam2, true, 4);
 			else
 				return func_508(playerTeam, iParam2, false, 4);
@@ -76698,7 +76698,7 @@ BOOL func_509(int iParam0, BOOL bParam1) // Position - 0x61272
 	int i;
 
 	if (bParam1)
-		if (*Global_MissionData1.f_166301 == 65)
+		if (*Global_MissionData1.missionGenAdverm == 65)
 			return true;
 
 	if (iParam0 == 0)

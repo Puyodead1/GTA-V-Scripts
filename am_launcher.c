@@ -1169,7 +1169,7 @@ char* func_6(int iParam0) // Position - 0x570
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_7(*Global_MissionData1.f_166301))
+			if (func_7(*Global_MissionData1.missionGenAdverm))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -1346,7 +1346,7 @@ BOOL func_9() // Position - 0x10B3
 
 BOOL func_10(int iParam0) // Position - 0x10C8
 {
-	return *Global_MissionData1.f_166302 >= iParam0;
+	return *Global_MissionData1.missionDlcRel >= iParam0;
 }
 
 BOOL func_11() // Position - 0x10DD

@@ -13079,7 +13079,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 				Global_2097536.f_2780.f_29[3] = 5;
 				Global_2097536.f_2780.f_29[4] = 5;
 			}
-			else if (Global_MissionData1.f_1221 == 1)
+			else if (Global_MissionData1.missionEndType == 1)
 			{
 				uParam0->f_44 = 777;
 				uParam0->f_44.f_1 = 5;
@@ -13090,14 +13090,14 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 				{
-					if (Global_MissionData1.f_2 == 5)
+					if (Global_MissionData1.missionGenSubtype == 5)
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS" /*LTS - ~a~*/, 32);
 					else
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS" /*Mission - ~a~*/, 32);
 				
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_9), sParam3, 64);
 				}
-				else if (Global_MissionData1.f_2 == 5)
+				else if (Global_MissionData1.missionGenSubtype == 5)
 				{
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS_NN" /*LTS - ~a~*/, 32);
 				}
@@ -13135,14 +13135,14 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 				{
-					if (Global_MissionData1.f_2 == 5)
+					if (Global_MissionData1.missionGenSubtype == 5)
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS" /*LTS - ~a~*/, 32);
 					else
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS" /*Mission - ~a~*/, 32);
 				
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_9), sParam3, 64);
 				}
-				else if (Global_MissionData1.f_2 == 5)
+				else if (Global_MissionData1.missionGenSubtype == 5)
 				{
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS_NN" /*LTS - ~a~*/, 32);
 				}
@@ -13151,7 +13151,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS_NN" /*Mission*/, 32);
 				}
 			
-				if (func_239(*Global_MissionData1.f_166301) || func_236(*Global_MissionData1.f_166301))
+				if (func_239(*Global_MissionData1.missionGenAdverm) || func_236(*Global_MissionData1.missionGenAdverm))
 				{
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[0], "SCLB_C_SCORE" /*SCORE*/, 24);
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[1], "SCLB_C_DEATH" /*DEATHS*/, 24);
@@ -13167,7 +13167,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 					Global_2097536.f_2780.f_29[1] = 5;
 					Global_2097536.f_2780.f_29[2] = 5;
 				}
-				else if (func_235(*Global_MissionData1.f_166301))
+				else if (func_235(*Global_MissionData1.missionGenAdverm))
 				{
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[0], "SCLB_C_SCORE" /*SCORE*/, 24);
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[1], "SCLB_C_DEATH" /*DEATHS*/, 24);

@@ -1401,7 +1401,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_34(*Global_MissionData1.f_166301))
+					if (func_34(*Global_MissionData1.missionGenAdverm))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -17682,7 +17682,7 @@ int func_152(int iParam0) // Position - 0x17FBD
 
 BOOL func_153(BOOL bParam0) // Position - 0x17FF4
 {
-	if (func_157(bParam0) || func_155() || func_154(*Global_MissionData1.f_166301))
+	if (func_157(bParam0) || func_155() || func_154(*Global_MissionData1.missionGenAdverm))
 		return true;
 
 	return false;
@@ -70309,7 +70309,7 @@ BOOL func_345(int iParam0) // Position - 0x5A21A
 {
 	int i;
 
-	if (*Global_MissionData1.f_166301 == 29)
+	if (*Global_MissionData1.missionGenAdverm == 29)
 		return true;
 
 	if (iParam0 == 0)
