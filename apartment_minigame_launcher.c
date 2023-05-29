@@ -671,8 +671,8 @@ void main() // Position - 0x0
 
 	func_130(&uLocal_338, iLocal_328);
 	func_129(&uLocal_100, &uLocal_338);
-	Global_4718592.f_114143 = 1;
-	Global_4718592.f_114144 = uLocal_218[iLocal_212];
+	Global_MissionData1.f_114143 = 1;
+	Global_MissionData1.f_114144 = uLocal_218[iLocal_212];
 
 	for (i = 0; i <= 1; i = i + 1)
 	{
@@ -5767,8 +5767,8 @@ void func_98() // Position - 0x7D48
 
 	if (bLocal_94)
 	{
-		Global_4718592.f_114143 = 1;
-		Global_4718592.f_114144 = uLocal_218[iLocal_212];
+		Global_MissionData1.f_114143 = 1;
+		Global_MissionData1.f_114144 = uLocal_218[iLocal_212];
 		bLocal_94 = false;
 	}
 

@@ -15803,16 +15803,16 @@ BOOL func_507(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, c
 	unk40.f_30 = 3;
 	unk40.f_34 = 3;
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		if (func_593())
 			additionalTextInfoLine1 = "FMMC_ENDMTYPEK" /*Your King of the Hill*/;
 		else
 			additionalTextInfoLine1 = "FMMC_ENDMTYPED" /*Your Deathmatch*/;
-	else if (Global_4718592 == 2 || Global_4718592 == 32)
+	else if (Global_MissionData1== 2 || Global_MissionData1== 32)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPER" /*Your Race*/;
-	else if (Global_4718592 == 0 && Global_4718592.f_2 == 6)
+	else if (Global_MissionData1== 0 && Global_4718592.f_2 == 6)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPEC" /*Your Capture*/;
-	else if (Global_4718592 == 0 && Global_4718592.f_2 == 5)
+	else if (Global_MissionData1== 0 && Global_4718592.f_2 == 5)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPEL" /*Your Last Team Standing*/;
 	else if (func_592())
 		additionalTextInfoLine1 = "FMMC_ENDMTYPES" /*Your Survival*/;
@@ -16062,16 +16062,16 @@ BOOL func_509(BOOL bParam0) // Position - 0x1304E
 {
 	char* additionalTextInfoLine1;
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		if (func_593() || func_510(Global_4718592, Global_4718592.f_2))
 			additionalTextInfoLine1 = "FMMC_ENDMTYPEK" /*Your King of the Hill*/;
 		else
 			additionalTextInfoLine1 = "FMMC_ENDMTYPED" /*Your Deathmatch*/;
-	else if (Global_4718592 == 2 || Global_4718592 == 32)
+	else if (Global_MissionData1== 2 || Global_MissionData1== 32)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPER" /*Your Race*/;
-	else if (Global_4718592 == 0 && Global_4718592.f_2 == 6)
+	else if (Global_MissionData1== 0 && Global_4718592.f_2 == 6)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPEC" /*Your Capture*/;
-	else if (Global_4718592 == 0 && Global_4718592.f_2 == 5)
+	else if (Global_MissionData1== 0 && Global_4718592.f_2 == 5)
 		additionalTextInfoLine1 = "FMMC_ENDMTYPEL" /*Your Last Team Standing*/;
 	else if (func_592())
 		additionalTextInfoLine1 = "FMMC_ENDMTYPES" /*Your Survival*/;
@@ -16801,7 +16801,7 @@ void func_530(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 	DATAFILE::DATADICT_SET_INT(*uParam1, "fixcam", *Global_4718592.missionGenMenubs40203);
 	DATAFILE::DATADICT_SET_BOOL(*uParam1, "chksfx", *Global_4718592.f_97695);
 
-	if (Global_4718592 == 6)
+	if (Global_MissionData1== 6)
 	{
 		DATAFILE::DATADICT_SET_VECTOR(*uParam1, "start", Global_4980736.f_5[1].f_1[0]);
 		DATAFILE::DATADICT_SET_VECTOR(*uParam1, "area", Global_4980736.f_5[2].f_1[0]);
@@ -18341,7 +18341,7 @@ void func_535(char* sParam0, var uParam1, int iParam2, var uParam3, var uParam4,
 
 BOOL func_536() // Position - 0x18FCB
 {
-	if (Global_4718592 == 0 && Global_4718592.f_2 == 5)
+	if (Global_MissionData1== 0 && Global_4718592.f_2 == 5)
 		return true;
 
 	return false;
@@ -22800,15 +22800,15 @@ void func_565(var uParam0) // Position - 0x1E5D7
 
 BOOL func_566() // Position - 0x1E69C
 {
-	return Global_4718592 == 1;
+	return Global_MissionData1== 1;
 }
 
 BOOL func_567(BOOL bParam0) // Position - 0x1E6AA
 {
 	if (!bParam0)
-		return Global_4718592 == 0;
+		return Global_MissionData1== 0;
 
-	if (Global_4718592 == 0 || Global_4718592 == 4 || Global_4718592 == 6 || Global_4718592 == 3 || Global_4718592 == 31 || Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5)
+	if (Global_MissionData1== 0 || Global_MissionData1== 4 || Global_MissionData1== 6 || Global_MissionData1== 3 || Global_MissionData1== 31 || Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5)
 		return true;
 
 	return false;
@@ -22816,7 +22816,7 @@ BOOL func_567(BOOL bParam0) // Position - 0x1E6AA
 
 BOOL func_568() // Position - 0x1E71C
 {
-	if (Global_4718592 == 2 || Global_4718592 == 8)
+	if (Global_MissionData1== 2 || Global_MissionData1== 8)
 		return true;
 
 	return false;
@@ -22885,7 +22885,7 @@ void func_570(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 			func_589(uParam2, &unk, &num, Global_4718592.f_98303[i]);
 		}
 	}
-	else if (Global_4718592 == 1)
+	else if (Global_MissionData1== 1)
 	{
 		for (i = 0; i <= *Global_4980736.f_187916 - 1; i = i + 1)
 		{
@@ -23662,7 +23662,7 @@ void func_584(var uParam0) // Position - 0x1F815
 {
 	int i;
 
-	if (Global_4718592 == 2)
+	if (Global_MissionData1== 2)
 	{
 		if (*Global_4718592.f_104427 == 2 || *Global_4718592.f_104427 == 3)
 		{
@@ -23845,7 +23845,7 @@ void func_591(var uParam0, int iParam1) // Position - 0x1FB2B
 
 BOOL func_592() // Position - 0x1FB38
 {
-	return Global_4718592 == 3;
+	return Global_MissionData1== 3;
 }
 
 BOOL func_593() // Position - 0x1FB46
@@ -26787,7 +26787,7 @@ int func_652() // Position - 0x23BCC
 	switch (iLocal_1135[0])
 	{
 		case 8:
-			if (Global_4718592 == 0)
+			if (Global_MissionData1== 0)
 				return Global_4718592.f_1195 + 1;
 			else
 				return Global_4718592.f_1195 + 2;
@@ -26825,7 +26825,7 @@ int func_653() // Position - 0x23CE9
 	switch (iLocal_1135[0])
 	{
 		case 8:
-			if (Global_4718592 == 1)
+			if (Global_MissionData1== 1)
 				return 2;
 			else
 				return 1;
@@ -32468,7 +32468,7 @@ BOOL func_727(var uParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 		}
 	}
 
-	if (Global_4718592 == 0 && Global_4718592.f_2 == 6)
+	if (Global_MissionData1== 0 && Global_4718592.f_2 == 6)
 		if (uParam0->f_21 == -1 && uParam0->f_22 == -1 && !func_40())
 			if (!NETWORK::UGC_IS_LANGUAGE_SUPPORTED(NETWORK::UGC_GET_CONTENT_LANGUAGE(0)))
 				Global_4718592.f_114277 = 1;
@@ -32491,10 +32491,10 @@ void func_728() // Position - 0x2D0D2
 
 BOOL func_729() // Position - 0x2D0E7
 {
-	if (Global_4718592 != 2 && Global_4718592 != 0 && Global_4718592 != 1 && Global_4718592 != 3)
+	if (Global_MissionData1!= 2 && Global_MissionData1!= 0 && Global_MissionData1!= 1 && Global_MissionData1!= 3)
 		return true;
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		if (*Global_4718592.f_166301 != 0)
 			return true;
@@ -32506,7 +32506,7 @@ BOOL func_729() // Position - 0x2D0E7
 			return true;
 	}
 
-	if (Global_4718592 == 2)
+	if (Global_MissionData1== 2)
 		if (*Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9)
 			return true;
 
@@ -39690,12 +39690,12 @@ void func_882(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 			return;
 	}
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 	{
 		func_1051(dict);
 		func_972(dict);
 	}
-	else if (Global_4718592 == 0 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || Global_4718592 == 6 || func_592())
+	else if (Global_MissionData1== 0 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || Global_MissionData1== 6 || func_592())
 	{
 		func_969(dict);
 		func_925(dict);
@@ -43486,7 +43486,7 @@ void func_969(int iParam0) // Position - 0x4114F
 	array7 = DATAFILE::DATADICT_GET_ARRAY(dict, "rsp");
 	unk2 = 4;
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		unk2[0] = DATAFILE::DATADICT_GET_ARRAY(dict, "team");
 
 	array8 = DATAFILE::DATADICT_GET_ARRAY(dict, "wep");
@@ -43837,7 +43837,7 @@ void func_969(int iParam0) // Position - 0x4114F
 			_int = DATAFILE::DATAARRAY_GET_INT(array6, i);
 			Global_4980736.f_102388[i].f_29 = _int;
 		
-			if (Global_4718592 == 1)
+			if (Global_MissionData1== 1)
 				Global_4980736.f_102388[i].f_30[0] = DATAFILE::DATAARRAY_GET_INT(unk2[0], i);
 		
 			Global_4980736.f_102388[i].f_80 = DATAFILE::DATAARRAY_GET_INT(array14, i);
@@ -44913,7 +44913,7 @@ BOOL func_970(int iParam0) // Position - 0x465EB
 
 BOOL func_971() // Position - 0x46B5F
 {
-	if (Global_4718592 == 6)
+	if (Global_MissionData1== 6)
 		return true;
 
 	return false;
@@ -45382,7 +45382,7 @@ void func_973(int iParam0) // Position - 0x46CA4
 
 	num = i;
 
-	if (func_536() || Global_4718592 == 1 && !func_593())
+	if (func_536() || Global_MissionData1== 1 && !func_593())
 	{
 		for (i = 0; i <= Global_4980736.missionObjectCount - 1; i = i + 1)
 		{
@@ -46405,7 +46405,7 @@ BOOL func_984(Hash hParam0) // Position - 0x4AFB5
 
 BOOL func_985() // Position - 0x4AFF7
 {
-	return Global_4718592 == 2;
+	return Global_MissionData1== 2;
 }
 
 BOOL func_986(Hash hParam0) // Position - 0x4B005
@@ -48212,7 +48212,7 @@ void func_996(int iParam0) // Position - 0x50309
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "weap");
 	Global_4980736.missionWeaponCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 		if (*Global_4980736.missionWeaponCount > 60)
 			Global_4980736.missionWeaponCount = 60;
 	else if (*Global_4980736.missionWeaponCount > 60)
@@ -57230,7 +57230,7 @@ void func_1065(var uParam0) // Position - 0x64F29
 
 BOOL func_1066() // Position - 0x66A6C
 {
-	return Global_4718592 == 0 && Global_4718592.f_2 == 6;
+	return Global_MissionData1== 0 && Global_4718592.f_2 == 6;
 }
 
 void func_1067(var uParam0) // Position - 0x66A87
@@ -60599,7 +60599,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	int unk62;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "gen");
-	Global_4718592 = DATAFILE::DATADICT_GET_INT(dict, "type");
+	Global_MissionData1= DATAFILE::DATADICT_GET_INT(dict, "type");
 	Global_4718592.f_9 = DATAFILE::DATADICT_GET_BOOL(dict, "ngjob");
 	_bool = DATAFILE::DATADICT_GET_BOOL(dict, "photo");
 
@@ -61942,7 +61942,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	else
 		Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		if (Global_2683864.f_669.f_11 != 0 && Global_4718592.missionGenTnum != Global_2683864.f_669.f_11)
 		{
@@ -62001,7 +62001,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	func_1083(&dict);
 	func_1082(dict);
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		if (Global_4718592.missionGenTnum > 4)
 			Global_4718592.missionGenTnum = 4;
 	else if (Global_4718592.missionGenTnum > 4)

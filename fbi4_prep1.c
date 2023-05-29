@@ -8248,7 +8248,7 @@ BOOL func_251(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x924A
 		}
 	}
 
-	if (func_258() || func_257(*Global_4718592.f_166301) || func_256())
+	if (func_258() || func_257(*Global_MissionData1.f_166301) || func_256())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{

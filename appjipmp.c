@@ -1331,7 +1331,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_10(*Global_4718592.f_166301))
+					if (func_10(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -4974,10 +4974,10 @@ Hash func_132(BOOL bParam0) // Position - 0x5FBD
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(&string2) && !MISC::ARE_STRINGS_EQUAL(".", &string2))
 		return MISC::GET_HASH_KEY(&string2);
 
-	if (Global_262145.f_9049 == *Global_4718592.f_113724)
+	if (Global_262145.f_9049 == *Global_MissionData1.f_113724)
 		return Global_262145.f_9051;
 
-	return *Global_4718592.f_113724;
+	return *Global_MissionData1.f_113724;
 }
 
 struct<6> func_133() // Position - 0x6024
@@ -9469,7 +9469,7 @@ void func_285() // Position - 0xAD76
 void func_286() // Position - 0xB0AD
 {
 	if (!_IS_FMMC_ACTIVE() && !func_316() && Global_2684800)
-		Global_4718592.f_113724 = 0;
+		Global_MissionData1.f_113724 = 0;
 
 	return;
 }
@@ -10523,7 +10523,7 @@ int func_347(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 
 			}
 			else
 			{
-				switch (*Global_4718592.f_104427)
+				switch (*Global_MissionData1.f_104427)
 				{
 					case 4:
 					case 5:
@@ -10551,6 +10551,6 @@ int func_347(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 
 
 BOOL func_348() // Position - 0xC9CA
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 

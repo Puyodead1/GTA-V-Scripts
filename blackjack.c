@@ -3750,7 +3750,7 @@ void main() // Position - 0x0
 		if (!func_427(PLAYER::PLAYER_ID()) && !func_426(PLAYER::PLAYER_ID()) && !func_425(PLAYER::PLAYER_ID()))
 			func_429();
 	
-		if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_4718592.f_34, 7))
+		if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_MissionData1.f_34, 7))
 			func_429();
 	
 		if (func_426(PLAYER::PLAYER_ID()) && func_421() != _INVALID_PLAYER_INDEX_0())
@@ -19071,7 +19071,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_299(*Global_4718592.f_166301))
+					if (func_299(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

@@ -1912,7 +1912,7 @@ void func_84(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, va
 		finalRenderedCamRot = Vector3(-9.1167f, 0f, 130.9763f);
 		finalRenderedCamFov = 50f;
 	}
-	else if (func_130(*Global_4718592.f_113724) || IS_BIT_SET(iParam16, 2))
+	else if (func_130(*Global_MissionData1.f_113724) || IS_BIT_SET(iParam16, 2))
 	{
 		if (func_129(PLAYER::PLAYER_ID()))
 		{
@@ -1928,13 +1928,13 @@ void func_84(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, va
 			finalRenderedCamFov = 42.6052f;
 		}
 	}
-	else if (func_128(*Global_4718592.f_113724) || IS_BIT_SET(iParam16, 1))
+	else if (func_128(*Global_MissionData1.f_113724) || IS_BIT_SET(iParam16, 1))
 	{
 		entityCoords = Vector3(347.2638f, 4867.324f, -59.2679f);
 		finalRenderedCamRot = Vector3(1.2933f, 0.0747f, -34.6934f);
 		finalRenderedCamFov = 50f;
 	}
-	else if (IS_BIT_SET(iParam16, 4) || func_127(*Global_4718592.f_113724))
+	else if (IS_BIT_SET(iParam16, 4) || func_127(*Global_MissionData1.f_113724))
 	{
 		entityCoords = Vector3(2709.3323f, -366.5988f, -52.2786f);
 		finalRenderedCamRot = Vector3(-19.962f, 0f, -121.3927f);
@@ -1966,7 +1966,7 @@ void func_84(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, va
 		finalRenderedCamRot = Vector3(-19.0288f, 0f, -35.2577f);
 		finalRenderedCamFov = 50f;
 	}
-	else if (IS_BIT_SET(iParam16, 8) || func_119(*Global_4718592.f_113724))
+	else if (IS_BIT_SET(iParam16, 8) || func_119(*Global_MissionData1.f_113724))
 	{
 	}
 	else if (IS_BIT_SET(iParam16, 9) || func_117() && func_116(249))
@@ -1982,7 +1982,7 @@ void func_84(var uParam0, int iParam1, int iParam2, var uParam3, var uParam4, va
 	else if (IS_BIT_SET(iParam16, 10))
 	{
 	}
-	else if (func_114(*Global_4718592.f_113724))
+	else if (func_114(*Global_MissionData1.f_113724))
 	{
 		entityCoords = Vector3(800.2757f, -3051.393f, 10.5728f);
 		finalRenderedCamRot = Vector3(3.1956f, 0f, -8.4268f);
@@ -3802,7 +3802,7 @@ BOOL func_116(int iParam0) // Position - 0x4C92
 
 BOOL func_117() // Position - 0x4CC3
 {
-	return func_118(*Global_4718592.f_113724);
+	return func_118(*Global_MissionData1.f_113724);
 }
 
 BOOL func_118(var uParam0) // Position - 0x4CD9
@@ -3833,7 +3833,7 @@ BOOL func_119(int iParam0) // Position - 0x4D08
 
 void func_120(var uParam0, var uParam1, var uParam2) // Position - 0x4D37
 {
-	if (func_122(*Global_4718592.f_113724))
+	if (func_122(*Global_MissionData1.f_113724))
 	{
 		if (MISC::ABSF(GRAPHICS::GET_ASPECT_RATIO(false) - 1.3333333f) < 0.1f)
 		{
@@ -3848,7 +3848,7 @@ void func_120(var uParam0, var uParam1, var uParam2) // Position - 0x4D37
 			*uParam2 = 69f;
 		}
 	}
-	else if (func_121(*Global_4718592.f_113724))
+	else if (func_121(*Global_MissionData1.f_113724))
 	{
 		*uParam0 = Vector3(-1348.9563f, 138.2791f, -94.7272f);
 		*uParam1 = Vector3(-2.4593f, 0f, -164.9275f);
@@ -3889,7 +3889,7 @@ BOOL func_122(int iParam0) // Position - 0x4E3F
 
 BOOL func_123() // Position - 0x4E6F
 {
-	if (func_122(*Global_4718592.f_113724))
+	if (func_122(*Global_MissionData1.f_113724))
 		return true;
 
 	return false;
@@ -4612,7 +4612,7 @@ void func_145(BOOL bParam0) // Position - 0x5C5A
 
 char* func_146(BOOL bParam0) // Position - 0x5C7B
 {
-	if (func_155(*Global_4718592.f_113724))
+	if (func_155(*Global_MissionData1.f_113724))
 		return "MenuMGIslandHeistIn";
 
 	if (bParam0 || func_116(134))
@@ -4621,10 +4621,10 @@ char* func_146(BOOL bParam0) // Position - 0x5C7B
 	if (func_154())
 		return "MenuMGTournamentIn";
 
-	if (func_148(*Global_4718592.f_166301))
+	if (func_148(*Global_MissionData1.f_166301))
 		return "MenuMGRemixIn";
 
-	if (func_147(*Global_4718592.f_166301) && IS_BIT_SET(Global_4718592.f_167679.f_2808, 2))
+	if (func_147(*Global_MissionData1.f_166301) && IS_BIT_SET(Global_MissionData1.f_167679.f_2808, 2))
 		return "MenuSurvivalAlienIn";
 
 	return "MenuMGSelectionIn";
@@ -5116,7 +5116,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_189(*Global_4718592.f_166301))
+					if (func_189(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

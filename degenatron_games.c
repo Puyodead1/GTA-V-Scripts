@@ -3098,7 +3098,7 @@ void func_27() // Position - 0x692
 {
 	Global_1648783 = 0;
 	func_47();
-	Global_4718592.f_160554 = 0;
+	Global_MissionData1.f_160554 = 0;
 	func_46();
 	MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 16);
 	func_45(false, true, true, false);
@@ -3338,7 +3338,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_30(*Global_4718592.f_166301))
+					if (func_30(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -56452,7 +56452,7 @@ int func_320(int iParam0) // Position - 0x42245
 
 BOOL func_321(BOOL bParam0) // Position - 0x4227C
 {
-	if (func_325(bParam0) || func_323() || func_322(*Global_4718592.f_166301))
+	if (func_325(bParam0) || func_323() || func_322(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -56465,7 +56465,7 @@ BOOL func_322(int iParam0) // Position - 0x422B0
 
 BOOL func_323() // Position - 0x422BD
 {
-	return func_324(*Global_4718592.f_113724);
+	return func_324(*Global_MissionData1.f_113724);
 }
 
 int func_324(int iParam0) // Position - 0x422D3
@@ -56487,14 +56487,14 @@ int func_324(int iParam0) // Position - 0x422D3
 BOOL func_325(BOOL bParam0) // Position - 0x4230D
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_326();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_326();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_326() // Position - 0x42343
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -71917,7 +71917,7 @@ BOOL func_380(Ped pedParam0, var uParam1, int iParam2, var uParam3) // Position 
 			if (!func_373(false))
 				num = Global_1853910[PLAYER::PLAYER_ID()].f_96.f_28;
 			else
-				num = Global_4718592.f_1213;
+				num = Global_MissionData1.f_1213;
 		
 			*uParam3 = func_381(num);
 			ped.f_1 = -1;
@@ -72597,7 +72597,7 @@ int func_381(int iParam0) // Position - 0x59AB6
 
 BOOL func_382(int iParam0) // Position - 0x59AE4
 {
-	return *Global_4718592.f_166302 >= iParam0;
+	return *Global_MissionData1.f_166302 >= iParam0;
 }
 
 BOOL func_383(var uParam0, int iParam1) // Position - 0x59AF9
@@ -76469,7 +76469,7 @@ char* AUDIO_SPEECH_GET_PARAM_STRING_FROM_ENUM(int iParam0) // Position - 0x5DA90
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_475(*Global_4718592.f_166301))
+			if (func_475(*Global_MissionData1.f_166301))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -86875,7 +86875,7 @@ void func_768() // Position - 0x6BB3E
 void func_769() // Position - 0x6BC08
 {
 	MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 16);
-	Global_4718592.f_160554 = 1;
+	Global_MissionData1.f_160554 = 1;
 	Global_1648783 = 1;
 	func_771();
 
@@ -86931,7 +86931,7 @@ void func_771() // Position - 0x6BCFC
 void func_772() // Position - 0x6BD1D
 {
 	if (!_IS_FMMC_ACTIVE() && !func_773() && Global_2684800)
-		Global_4718592.f_113724 = 0;
+		Global_MissionData1.f_113724 = 0;
 
 	return;
 }

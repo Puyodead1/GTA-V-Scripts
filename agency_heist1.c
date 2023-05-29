@@ -53118,7 +53118,7 @@ int func_311(int iParam0) // Position - 0x44EC8
 
 BOOL func_312(BOOL bParam0) // Position - 0x44EFF
 {
-	if (func_316(bParam0) || func_314() || func_313(*Global_4718592.f_166301))
+	if (func_316(bParam0) || func_314() || func_313(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -53131,7 +53131,7 @@ BOOL func_313(int iParam0) // Position - 0x44F33
 
 BOOL func_314() // Position - 0x44F40
 {
-	return func_315(*Global_4718592.f_113724);
+	return func_315(*Global_MissionData1.f_113724);
 }
 
 int func_315(int iParam0) // Position - 0x44F56
@@ -53153,14 +53153,14 @@ int func_315(int iParam0) // Position - 0x44F56
 BOOL func_316(BOOL bParam0) // Position - 0x44F90
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_317();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_317();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_317() // Position - 0x44FC6
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -97862,7 +97862,7 @@ void func_550(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_551() // Position - 0x7B580
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_554(7))
@@ -104365,7 +104365,7 @@ BOOL func_674(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x86907
 		}
 	}
 
-	if (func_680() || func_679(*Global_4718592.f_166301) || func_678())
+	if (func_680() || func_679(*Global_MissionData1.f_166301) || func_678())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{

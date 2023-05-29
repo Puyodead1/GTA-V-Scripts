@@ -1729,7 +1729,7 @@ void func_29(var uParam0) // Position - 0x10BD
 		AUDIO::STOP_STREAM();
 
 	func_51();
-	Global_4718592.f_160554 = 0;
+	Global_MissionData1.f_160554 = 0;
 	func_50();
 	MISC::CLEAR_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_861), 16);
 	func_49(false, true, true, false);
@@ -1964,7 +1964,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_33(*Global_4718592.f_166301))
+					if (func_33(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -7461,7 +7461,7 @@ void func_184(var uParam0) // Position - 0x8725
 
 	if (iLocal_234 == -1)
 	{
-		Global_4718592.f_160554 = 1;
+		Global_MissionData1.f_160554 = 1;
 		uParam0->f_8 = func_185();
 		uParam0->f_3 = AUDIO::GET_SOUND_ID();
 		uParam0->f_6 = AUDIO::GET_SOUND_ID();

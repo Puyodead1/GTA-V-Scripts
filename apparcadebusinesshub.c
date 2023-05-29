@@ -948,19 +948,19 @@ int func_32(Player plParam0, int iParam1) // Position - 0x9F4
 		switch (iParam1)
 		{
 			case 2:
-				return Global_4718592.f_160064.f_13;
+				return Global_MissionData1.f_160064.f_13;
 		
 			case 4:
-				return Global_4718592.f_160064.f_12;
+				return Global_MissionData1.f_160064.f_12;
 		
 			case 3:
-				return Global_4718592.f_160064.f_11;
+				return Global_MissionData1.f_160064.f_11;
 		
 			case 5:
-				return Global_4718592.f_160064.f_10;
+				return Global_MissionData1.f_160064.f_10;
 		
 			case 6:
-				return Global_4718592.f_160064.f_9;
+				return Global_MissionData1.f_160064.f_9;
 		}
 	
 		return 0;
@@ -1085,7 +1085,7 @@ float func_38(int iParam0) // Position - 0xBD0
 float func_39(Player plParam0) // Position - 0xCE4
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return (float)Global_4718592.f_160064.f_5 + 0f;
+		return (float)Global_MissionData1.f_160064.f_5 + 0f;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX() || !func_40(plParam0))
 		return 0f;
@@ -3968,7 +3968,7 @@ eHudColour func_181(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BO
 		playerTeam = PLAYER::GET_PLAYER_TEAM(plParam0);
 	
 		if (playerTeam > -1 && playerTeam < 4)
-			if (Global_4718592.f_108449[playerTeam] != -1)
+			if (Global_MissionData1.f_108449[playerTeam] != -1)
 				iParam1 = playerTeam;
 	}
 
@@ -3981,14 +3981,14 @@ eHudColour func_181(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BO
 				if (NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped) != -1)
 					if (_NETWORK_IS_PLAYER_VALID(NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), false, true))
 						if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-							if (Global_4718592.f_108449[iParam1] != -1)
+							if (Global_MissionData1.f_108449[iParam1] != -1)
 								return func_214(iParam1, plParam0, false);
 							else
 								return func_198(plParam0, NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), iParam1, bParam2, bParam3);
 						else
 							return func_198(plParam0, NETWORK::NETWORK_GET_PLAYER_INDEX_FROM_PED(ped), iParam1, bParam2, bParam3);
 			else if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-				if (Global_4718592.f_108449[iParam1] != -1)
+				if (Global_MissionData1.f_108449[iParam1] != -1)
 					return func_214(iParam1, plParam0, false);
 				else
 					return func_182(false, -1, false);
@@ -3997,7 +3997,7 @@ eHudColour func_181(Player plParam0, int iParam1, BOOL bParam2, BOOL bParam3, BO
 	}
 
 	if (iParam1 > -1 && NETWORK::NETWORK_IS_ACTIVITY_SESSION() && iParam1 < 4)
-		if (Global_4718592.f_108449[iParam1] != -1)
+		if (Global_MissionData1.f_108449[iParam1] != -1)
 			return func_214(iParam1, plParam0, false);
 		else
 			return func_198(plParam0, PLAYER::PLAYER_ID(), iParam1, bParam2, bParam3);
@@ -4028,14 +4028,14 @@ int func_183(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 	if (bParam1)
 	{
 		if (iParam2 > -1)
-			if (func_188(playerTeam, iParam2, 0, -1) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18))
+			if (func_188(playerTeam, iParam2, 0, -1) && !IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 18))
 				if (playerTeam == iParam2)
 					return func_187(true);
 				else
 					return func_187(false);
 			else if (bParam3)
 				return 28;
-			else if (IS_BIT_SET(Global_4718592.f_4, 20))
+			else if (IS_BIT_SET(Global_MissionData1.f_4, 20))
 				return func_184(playerTeam, iParam2, true, 4);
 			else
 				return func_184(playerTeam, iParam2, false, 4);
@@ -4056,7 +4056,7 @@ int func_184(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 
 
 	num = func_186(iParam0, iParam1, iParam3);
 
-	if (func_185(*Global_4718592.f_113724, true))
+	if (func_185(*Global_MissionData1.f_113724, true))
 		if (num == 1)
 			num = 0;
 
@@ -4142,7 +4142,7 @@ BOOL func_185(int iParam0, BOOL bParam1) // Position - 0x47EB
 	int i;
 
 	if (bParam1)
-		if (*Global_4718592.f_166301 == 65)
+		if (*Global_MissionData1.f_166301 == 65)
 			return true;
 
 	if (iParam0 == 0)
@@ -4207,7 +4207,7 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 	
 		if (num < 17 && num > -1)
 		{
-			if (IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23341, num))
+			if (IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23341, num))
 			{
 				num2 = Global_1058070.f_14[iParam1];
 			
@@ -4217,22 +4217,22 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 					{
 						case 0:
 							if (!func_189(iParam0, num, iParam1, num2) || !func_189(iParam1, num2, iParam0, num))
-								return IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23343[num], 0 + iParam1);
+								return IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23343[num], 0 + iParam1);
 							break;
 					
 						case 1:
 							if (!func_189(iParam0, num, iParam1, num2) || !func_189(iParam1, num2, iParam0, num))
-								return IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23343[num], 4 + iParam1);
+								return IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23343[num], 4 + iParam1);
 							break;
 					
 						case 2:
 							if (!func_189(iParam0, num, iParam1, num2) || !func_189(iParam1, num2, iParam0, num))
-								return IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23343[num], 8 + iParam1);
+								return IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23343[num], 8 + iParam1);
 							break;
 					
 						case 3:
 							if (!func_189(iParam0, num, iParam1, num2) || !func_189(iParam1, num2, iParam0, num))
-								return IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23343[num], 12 + iParam1);
+								return IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23343[num], 12 + iParam1);
 							break;
 					}
 				}
@@ -4246,16 +4246,16 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 			switch (iParam1)
 			{
 				case 0:
-					return IS_BIT_SET(Global_4718592.f_1214, 0);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 0);
 			
 				case 1:
-					return IS_BIT_SET(Global_4718592.f_1214, 1);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 1);
 			
 				case 2:
-					return IS_BIT_SET(Global_4718592.f_1214, 2);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 2);
 			
 				case 3:
-					return IS_BIT_SET(Global_4718592.f_1214, 3);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 3);
 			
 				default:
 					break;
@@ -4266,16 +4266,16 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 			switch (iParam1)
 			{
 				case 0:
-					return IS_BIT_SET(Global_4718592.f_1214, 4);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 4);
 			
 				case 1:
-					return IS_BIT_SET(Global_4718592.f_1214, 5);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 5);
 			
 				case 2:
-					return IS_BIT_SET(Global_4718592.f_1214, 6);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 6);
 			
 				case 3:
-					return IS_BIT_SET(Global_4718592.f_1214, 7);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 7);
 			
 				default:
 					break;
@@ -4286,16 +4286,16 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 			switch (iParam1)
 			{
 				case 0:
-					return IS_BIT_SET(Global_4718592.f_1214, 8);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 8);
 			
 				case 1:
-					return IS_BIT_SET(Global_4718592.f_1214, 9);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 9);
 			
 				case 2:
-					return IS_BIT_SET(Global_4718592.f_1214, 10);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 10);
 			
 				case 3:
-					return IS_BIT_SET(Global_4718592.f_1214, 11);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 11);
 			
 				default:
 					break;
@@ -4306,16 +4306,16 @@ BOOL func_188(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 			switch (iParam1)
 			{
 				case 0:
-					return IS_BIT_SET(Global_4718592.f_1214, 12);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 12);
 			
 				case 1:
-					return IS_BIT_SET(Global_4718592.f_1214, 13);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 13);
 			
 				case 2:
-					return IS_BIT_SET(Global_4718592.f_1214, 14);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 14);
 			
 				case 3:
-					return IS_BIT_SET(Global_4718592.f_1214, 15);
+					return IS_BIT_SET(Global_MissionData1.f_1214, 15);
 			
 				default:
 					break;
@@ -4338,10 +4338,10 @@ BOOL func_189(int iParam0, int iParam1, int iParam2, int iParam3) // Position - 
 	if (iParam0 == iParam2)
 		return true;
 
-	if (!IS_BIT_SET(Global_4718592.f_1265[iParam0].f_23342, iParam1))
+	if (!IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_23342, iParam1))
 		return false;
 
-	if (!IS_BIT_SET(Global_4718592.f_1265[iParam2].f_23342, iParam3))
+	if (!IS_BIT_SET(Global_MissionData1.f_1265[iParam2].f_23342, iParam3))
 		return false;
 
 	num = 1;
@@ -4462,20 +4462,20 @@ BOOL func_194() // Position - 0x4E04
 	if (func_195())
 		return true;
 
-	return IS_BIT_SET(*Global_4718592.f_170488, 4);
+	return IS_BIT_SET(*Global_MissionData1.f_170488, 4);
 }
 
 BOOL func_195() // Position - 0x4E23
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_196() // Position - 0x4E38
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return IS_BIT_SET(*Global_4718592.f_170488, 0);
+		return IS_BIT_SET(*Global_MissionData1.f_170488, 0);
 
-	return IS_BIT_SET(*Global_4718592.f_170488, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
+	return IS_BIT_SET(*Global_MissionData1.f_170488, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
 }
 
 BOOL func_197() // Position - 0x4E7F
@@ -4520,9 +4520,9 @@ eHudColour func_198(Player plParam0, Player plParam1, int iParam2, BOOL bParam3,
 					return func_201(num);
 			}
 		
-			if (func_200(plParam1, plParam0, playerTeam, 0) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18) || func_188(PLAYER::GET_PLAYER_TEAM(plParam1), PLAYER::GET_PLAYER_TEAM(plParam0), 0, -1) && IS_BIT_SET(Global_4718592.missionGenMenubs5, 23) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18))
+			if (func_200(plParam1, plParam0, playerTeam, 0) && !IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 18) || func_188(PLAYER::GET_PLAYER_TEAM(plParam1), PLAYER::GET_PLAYER_TEAM(plParam0), 0, -1) && IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 23) && !IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 18))
 				return func_187(true);
-			else if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 26))
+			else if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26))
 				return func_199(true);
 			else
 				return func_183(plParam1, true, playerTeam, bParam4);
@@ -4662,7 +4662,7 @@ BOOL func_204() // Position - 0x51CF
 	if (func_213() || func_212() || func_211() || func_210() || func_209() || func_207() || func_205())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_4718592.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
 		return true;
 
 	return false;
@@ -4670,7 +4670,7 @@ BOOL func_204() // Position - 0x51CF
 
 BOOL func_205() // Position - 0x5237
 {
-	return func_206(*Global_4718592.f_113724);
+	return func_206(*Global_MissionData1.f_113724);
 }
 
 BOOL func_206(var uParam0) // Position - 0x524D
@@ -4688,7 +4688,7 @@ BOOL func_206(var uParam0) // Position - 0x524D
 
 BOOL func_207() // Position - 0x527C
 {
-	return func_208(*Global_4718592.f_113724);
+	return func_208(*Global_MissionData1.f_113724);
 }
 
 BOOL func_208(int iParam0) // Position - 0x5292
@@ -4749,35 +4749,35 @@ eHudColour func_214(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x
 	}
 
 	if (num2 > -1 && num2 < 17)
-		if (IS_BIT_SET(Global_4718592.f_1265[iParam0].f_8067[num2], 24))
+		if (IS_BIT_SET(Global_MissionData1.f_1265[iParam0].f_8067[num2], 24))
 			return 18;
 
 	if (iParam0 > -1 && plParam1 != _INVALID_PLAYER_INDEX())
 	{
-		if (Global_4718592.f_108449[iParam0] != -1 && Global_4718592.f_108449[iParam0] <= 4)
-			if (Global_4718592.f_108449[iParam0] == 0)
+		if (Global_MissionData1.f_108449[iParam0] != -1 && Global_MissionData1.f_108449[iParam0] <= 4)
+			if (Global_MissionData1.f_108449[iParam0] == 0)
 				num = 15;
-			else if (Global_4718592.f_108449[iParam0] == 1)
+			else if (Global_MissionData1.f_108449[iParam0] == 1)
 				num = 18;
-			else if (Global_4718592.f_108449[iParam0] == 2)
+			else if (Global_MissionData1.f_108449[iParam0] == 2)
 				num = 24;
-			else if (Global_4718592.f_108449[iParam0] == 4)
-				if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 29))
+			else if (Global_MissionData1.f_108449[iParam0] == 4)
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 29))
 					num = 21;
 				else
 					num = 6;
 			else
-				num = Global_4718592.f_108449[iParam0];
+				num = Global_MissionData1.f_108449[iParam0];
 		else
 			num = func_183(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_4718592.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
 			num = func_215(iParam0);
 	
-		if (IS_BIT_SET(Global_4718592.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
 			num = 0;
 	
-		if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 26) && !func_188(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_188(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
 			num = func_199(true);
 	}
 	else
@@ -4795,19 +4795,19 @@ int func_215(int iParam0) // Position - 0x5492
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_4718592.f_166456;
+			num = *Global_MissionData1.f_166456;
 			break;
 	
 		case 1:
-			num = *Global_4718592.f_166457;
+			num = *Global_MissionData1.f_166457;
 			break;
 	
 		case 2:
-			num = *Global_4718592.f_166458;
+			num = *Global_MissionData1.f_166458;
 			break;
 	
 		case 3:
-			num = *Global_4718592.f_166459;
+			num = *Global_MissionData1.f_166459;
 			break;
 	}
 
@@ -7988,10 +7988,10 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4718592.f_113731)))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.f_113731)))
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_4718592.f_113731), "", "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.f_113731), "", "", "", maxInputLength2);
 				}
 				else if (bParam32)
 				{
@@ -7999,10 +7999,10 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					maxInputLength2 = 63;
 					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4718592.f_166915)))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.f_166915)))
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_4718592.f_166915), "", "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.f_166915), "", "", "", maxInputLength2);
 				}
 				else if (bParam25)
 				{
@@ -8017,10 +8017,10 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_4718592.f_166915)))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.f_166915)))
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_4718592.f_166915), "", "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.f_166915), "", "", "", maxInputLength2);
 				}
 				else if (iParam30 != -1)
 				{
@@ -8031,10 +8031,10 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 				
 					maxInputLength2 = 60;
 					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
-					defaultText = Vector3(Global_4718592.f_166947[iParam30]);
+					defaultText = Vector3(Global_MissionData1.f_166947[iParam30]);
 				
 					if (iParam31 > -1)
-						defaultText = Vector3(Global_4718592.f_167028[iParam30][iParam31]);
+						defaultText = Vector3(Global_MissionData1.f_167028[iParam30][iParam31]);
 				
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
@@ -8134,11 +8134,11 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 				
 					for (j = 0; j <= 7; j = j + 1)
 					{
-						if (MISC::IS_STRING_NULL(&Global_4718592.f_113882[j]))
-							TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_113882[j], "", 64);
+						if (MISC::IS_STRING_NULL(&Global_MissionData1.f_113882[j]))
+							TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.f_113882[j], "", 64);
 					}
 				
-					MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_4718592.f_113882[0], &Global_4718592.f_113882[1], &Global_4718592.f_113882[2], &Global_4718592.f_113882[3], &Global_4718592.f_113882[4], &Global_4718592.f_113882[5], &Global_4718592.f_113882[6], &Global_4718592.f_113882[7], maxInputLength2);
+					MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_MissionData1.f_113882[0], &Global_MissionData1.f_113882[1], &Global_MissionData1.f_113882[2], &Global_MissionData1.f_113882[3], &Global_MissionData1.f_113882[4], &Global_MissionData1.f_113882[5], &Global_MissionData1.f_113882[6], &Global_MissionData1.f_113882[7], maxInputLength2);
 				}
 				else if (bParam6)
 				{
@@ -8158,7 +8158,7 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_4718592.f_96024[iParam16].f_6[0]))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&Global_MissionData1.f_96024[iParam16].f_6[0]))
 					{
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					}
@@ -8166,11 +8166,11 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					{
 						for (k = 0; k <= 1; k = k + 1)
 						{
-							if (MISC::IS_STRING_NULL(&Global_4718592.f_96024[iParam16].f_6[k]))
-								TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_96024[iParam16].f_6[k], "", 64);
+							if (MISC::IS_STRING_NULL(&Global_MissionData1.f_96024[iParam16].f_6[k]))
+								TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.f_96024[iParam16].f_6[k], "", 64);
 						}
 					
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &Global_4718592.f_96024[iParam16].f_6[0], &Global_4718592.f_96024[iParam16].f_6[1], "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &Global_MissionData1.f_96024[iParam16].f_6[0], &Global_MissionData1.f_96024[iParam16].f_6[1], "", "", maxInputLength2);
 					}
 				}
 				else if (bParam8)
@@ -8529,8 +8529,8 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 				
 					for (l = 0; l <= 7; l = l + 1)
 					{
-						if (MISC::IS_STRING_NULL(&Global_4718592.f_113753[l]))
-							TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_113753[l], "", 64);
+						if (MISC::IS_STRING_NULL(&Global_MissionData1.f_113753[l]))
+							TEXT_LABEL_ASSIGN_STRING(&Global_MissionData1.f_113753[l], "", 64);
 					}
 				
 					if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam33))
@@ -8542,7 +8542,7 @@ BOOL func_339(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (bParam11)
 						MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, sParam5, sParam10, "", "", "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_4718592.f_113753[0], &Global_4718592.f_113753[1], &Global_4718592.f_113753[2], &Global_4718592.f_113753[3], &Global_4718592.f_113753[4], &Global_4718592.f_113753[5], &Global_4718592.f_113753[6], &Global_4718592.f_113753[7], maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD_WITH_LONGER_INITIAL_STRING(num2, windowTitle, str, &Global_MissionData1.f_113753[0], &Global_MissionData1.f_113753[1], &Global_MissionData1.f_113753[2], &Global_MissionData1.f_113753[3], &Global_MissionData1.f_113753[4], &Global_MissionData1.f_113753[5], &Global_MissionData1.f_113753[6], &Global_MissionData1.f_113753[7], maxInputLength2);
 				}
 			}
 		

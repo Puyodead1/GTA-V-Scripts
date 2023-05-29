@@ -496,7 +496,7 @@ void main() // Position - 0x0
 		switch (func_53(NETWORK::PARTICIPANT_ID_TO_INT()))
 		{
 			case 0:
-				if (Global_4718592 == 2)
+				if (Global_MissionData1 == 2)
 					iLocal_121 = 98;
 				else
 					iLocal_121 = 99;
@@ -1245,7 +1245,7 @@ BOOL func_44() // Position - 0xFDC
 		return true;
 
 	if (func_52() == 2)
-		if (Global_4718592 == 2)
+		if (Global_MissionData1 == 2)
 			return true;
 
 	return false;
@@ -1253,7 +1253,7 @@ BOOL func_44() // Position - 0xFDC
 
 BOOL func_45() // Position - 0x1004
 {
-	if (Global_4718592 == 2 || Global_4718592 == 8)
+	if (Global_MissionData1 == 2 || Global_MissionData1 == 8)
 		return true;
 
 	return false;

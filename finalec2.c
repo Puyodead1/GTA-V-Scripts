@@ -64546,7 +64546,7 @@ int func_488(int iParam0) // Position - 0x4F154
 
 BOOL func_489(BOOL bParam0) // Position - 0x4F18B
 {
-	if (func_493(bParam0) || func_491() || func_490(*Global_4718592.f_166301))
+	if (func_493(bParam0) || func_491() || func_490(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -64559,7 +64559,7 @@ BOOL func_490(int iParam0) // Position - 0x4F1BF
 
 BOOL func_491() // Position - 0x4F1CC
 {
-	return func_492(*Global_4718592.f_113724);
+	return func_492(*Global_MissionData1.f_113724);
 }
 
 int func_492(int iParam0) // Position - 0x4F1E2
@@ -64581,14 +64581,14 @@ int func_492(int iParam0) // Position - 0x4F1E2
 BOOL func_493(BOOL bParam0) // Position - 0x4F21C
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_494();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_494();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_494() // Position - 0x4F252
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -112132,7 +112132,7 @@ void func_804(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_805() // Position - 0x8A71F
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_808(7))
@@ -119695,7 +119695,7 @@ BOOL func_923() // Position - 0x95AA1
 				if (Global_1963026)
 					return true;
 			
-				if (IS_BIT_SET(Global_4718592.f_37, 23))
+				if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 					if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_59())
 						return true;
 			}
@@ -119747,7 +119747,7 @@ BOOL func_927(int iParam0) // Position - 0x95BF6
 		if (Global_2684801.f_6640 == 122)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_59())
 			return true;
 
@@ -119760,7 +119760,7 @@ BOOL func_927(int iParam0) // Position - 0x95BF6
 		if (iParam0 == 0)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		return true;
 
 	if (func_928() || func_924())
@@ -119808,7 +119808,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x95DD9
 
 BOOL func_933() // Position - 0x95DEC
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_934() // Position - 0x95E01
@@ -125248,7 +125248,7 @@ BOOL func_1029(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x9D4CD
 		}
 	}
 
-	if (func_1035() || func_1034(*Global_4718592.f_166301) || func_1033())
+	if (func_1035() || func_1034(*Global_MissionData1.f_166301) || func_1033())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{

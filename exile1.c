@@ -6715,7 +6715,7 @@ BOOL func_64(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x70A3
 		}
 	}
 
-	if (func_72() || func_71(*Global_4718592.f_166301) || func_70())
+	if (func_72() || func_71(*Global_MissionData1.f_166301) || func_70())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -25749,7 +25749,7 @@ void func_405(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_406() // Position - 0x24609
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_409(7))
@@ -76228,7 +76228,7 @@ int func_698(int iParam0) // Position - 0x6756C
 
 BOOL func_699(BOOL bParam0) // Position - 0x675A3
 {
-	if (func_703(bParam0) || func_701() || func_700(*Global_4718592.f_166301))
+	if (func_703(bParam0) || func_701() || func_700(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -76241,7 +76241,7 @@ BOOL func_700(int iParam0) // Position - 0x675D7
 
 BOOL func_701() // Position - 0x675E4
 {
-	return func_702(*Global_4718592.f_113724);
+	return func_702(*Global_MissionData1.f_113724);
 }
 
 int func_702(int iParam0) // Position - 0x675FA
@@ -76263,14 +76263,14 @@ int func_702(int iParam0) // Position - 0x675FA
 BOOL func_703(BOOL bParam0) // Position - 0x67634
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_704();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_704();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_704() // Position - 0x6766A
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;

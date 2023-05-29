@@ -67244,7 +67244,7 @@ int func_552(int iParam0) // Position - 0x5E238
 
 BOOL func_553(BOOL bParam0) // Position - 0x5E26F
 {
-	if (func_557(bParam0) || func_555() || func_554(*Global_4718592.f_166301))
+	if (func_557(bParam0) || func_555() || func_554(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -67257,7 +67257,7 @@ BOOL func_554(int iParam0) // Position - 0x5E2A3
 
 BOOL func_555() // Position - 0x5E2B0
 {
-	return func_556(*Global_4718592.f_113724);
+	return func_556(*Global_MissionData1.f_113724);
 }
 
 int func_556(int iParam0) // Position - 0x5E2C6
@@ -67279,14 +67279,14 @@ int func_556(int iParam0) // Position - 0x5E2C6
 BOOL func_557(BOOL bParam0) // Position - 0x5E300
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_558();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_558();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_558() // Position - 0x5E336
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;

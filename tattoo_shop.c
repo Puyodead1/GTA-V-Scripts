@@ -66091,7 +66091,7 @@ void func_480(int iParam0, BOOL bParam1, int iParam2, int iParam3) // Position -
 					flag2 = MONEY::NETWORK_GET_VC_BANK_BALANCE() > 0;
 					flag3 = MONEY::NETWORK_GET_VC_BANK_BALANCE() < Global_100733.f_1402;
 				
-					if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_4718592 == 0 || func_545(PLAYER::PLAYER_ID()) == 11)
+					if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && Global_MissionData1== 0 || func_545(PLAYER::PLAYER_ID()) == 11)
 						if (iParam2 == 11)
 							MISC::SET_BIT(&Global_1574991, 0);
 				

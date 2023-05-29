@@ -4472,19 +4472,19 @@ int func_76(Player plParam0, int iParam1) // Position - 0x618F
 		switch (iParam1)
 		{
 			case 2:
-				return Global_4718592.f_160064.f_13;
+				return Global_MissionData1.f_160064.f_13;
 		
 			case 4:
-				return Global_4718592.f_160064.f_12;
+				return Global_MissionData1.f_160064.f_12;
 		
 			case 3:
-				return Global_4718592.f_160064.f_11;
+				return Global_MissionData1.f_160064.f_11;
 		
 			case 5:
-				return Global_4718592.f_160064.f_10;
+				return Global_MissionData1.f_160064.f_10;
 		
 			case 6:
-				return Global_4718592.f_160064.f_9;
+				return Global_MissionData1.f_160064.f_9;
 		}
 	
 		return 0;
@@ -9095,7 +9095,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_215(*Global_4718592.f_166301))
+					if (func_215(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

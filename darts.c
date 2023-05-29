@@ -13079,7 +13079,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 				Global_2097536.f_2780.f_29[3] = 5;
 				Global_2097536.f_2780.f_29[4] = 5;
 			}
-			else if (Global_4718592.f_1221 == 1)
+			else if (Global_MissionData1.f_1221 == 1)
 			{
 				uParam0->f_44 = 777;
 				uParam0->f_44.f_1 = 5;
@@ -13090,14 +13090,14 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 				{
-					if (Global_4718592.f_2 == 5)
+					if (Global_MissionData1.f_2 == 5)
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS" /*LTS - ~a~*/, 32);
 					else
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS" /*Mission - ~a~*/, 32);
 				
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_9), sParam3, 64);
 				}
-				else if (Global_4718592.f_2 == 5)
+				else if (Global_MissionData1.f_2 == 5)
 				{
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS_NN" /*LTS - ~a~*/, 32);
 				}
@@ -13135,14 +13135,14 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 			
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam3))
 				{
-					if (Global_4718592.f_2 == 5)
+					if (Global_MissionData1.f_2 == 5)
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS" /*LTS - ~a~*/, 32);
 					else
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS" /*Mission - ~a~*/, 32);
 				
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_9), sParam3, 64);
 				}
-				else if (Global_4718592.f_2 == 5)
+				else if (Global_MissionData1.f_2 == 5)
 				{
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_LTS_NN" /*LTS - ~a~*/, 32);
 				}
@@ -13151,7 +13151,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 					TEXT_LABEL_ASSIGN_STRING(&(Global_2097536.f_2780.f_1), "SCLB_MIS_NN" /*Mission*/, 32);
 				}
 			
-				if (func_239(*Global_4718592.f_166301) || func_236(*Global_4718592.f_166301))
+				if (func_239(*Global_MissionData1.f_166301) || func_236(*Global_MissionData1.f_166301))
 				{
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[0], "SCLB_C_SCORE" /*SCORE*/, 24);
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[1], "SCLB_C_DEATH" /*DEATHS*/, 24);
@@ -13167,7 +13167,7 @@ void func_232(var uParam0, int iParam1, char* sParam2, char* sParam3, int iParam
 					Global_2097536.f_2780.f_29[1] = 5;
 					Global_2097536.f_2780.f_29[2] = 5;
 				}
-				else if (func_235(*Global_4718592.f_166301))
+				else if (func_235(*Global_MissionData1.f_166301))
 				{
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[0], "SCLB_C_SCORE" /*SCORE*/, 24);
 					TEXT_LABEL_ASSIGN_STRING(&Global_2097536.f_2717[1], "SCLB_C_DEATH" /*DEATHS*/, 24);
@@ -14164,7 +14164,7 @@ struct<6> func_240(int iParam0) // Position - 0x1543B
 
 BOOL func_241() // Position - 0x155C4
 {
-	if (*Global_4718592.f_104427 == 1 || *Global_4718592.f_104427 == 3 || *Global_4718592.f_104427 == 5 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 19 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || *Global_4718592.f_104427 == 11 || *Global_4718592.f_104427 == 13 || *Global_4718592.f_104427 == 21 || *Global_4718592.f_104427 == 23 || *Global_4718592.f_104427 == 25 || *Global_4718592.f_104427 == 26)
+	if (*Global_MissionData1.f_104427 == 1 || *Global_MissionData1.f_104427 == 3 || *Global_MissionData1.f_104427 == 5 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 19 || *Global_MissionData1.f_104427 == 8 || *Global_MissionData1.f_104427 == 9 || *Global_MissionData1.f_104427 == 11 || *Global_MissionData1.f_104427 == 13 || *Global_MissionData1.f_104427 == 21 || *Global_MissionData1.f_104427 == 23 || *Global_MissionData1.f_104427 == 25 || *Global_MissionData1.f_104427 == 26)
 		return true;
 
 	return false;

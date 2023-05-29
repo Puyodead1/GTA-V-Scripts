@@ -3427,7 +3427,7 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 	
 		if (func_152(uParam0, sParam1, 0, true, false, bParam5, 0, 0, true, bParam9, bParam10, bParam11, false, bParam12, bParam13, false))
 		{
-			if (func_151(true) || Global_4718592 == 31 || Global_4718592 == 6 || Global_4718592 == 4)
+			if (func_151(true) || Global_MissionData1== 31 || Global_MissionData1== 6 || Global_MissionData1== 4)
 			{
 				if (func_150(*Global_4718592.f_113724))
 					Global_4718592.f_1238 = Vector3(func_149());
@@ -3462,7 +3462,7 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 				if (!func_133())
 					func_132();
 			}
-			else if (Global_4718592 == 1)
+			else if (Global_MissionData1== 1)
 			{
 				Global_1665725.f_4 = 99;
 				Global_1665725.f_6 = Global_4718592.f_1223;
@@ -3604,7 +3604,7 @@ BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x46
 
 BOOL func_131() // Position - 0x4631
 {
-	if (Global_4718592 == 2 || Global_4718592 == 8)
+	if (Global_MissionData1== 2 || Global_MissionData1== 8)
 		return true;
 
 	return false;
@@ -3793,9 +3793,9 @@ BOOL func_150(int iParam0) // Position - 0x494D
 BOOL func_151(BOOL bParam0) // Position - 0x4987
 {
 	if (!bParam0)
-		return Global_4718592 == 0;
+		return Global_MissionData1== 0;
 
-	if (Global_4718592 == 0 || Global_4718592 == 4 || Global_4718592 == 6 || Global_4718592 == 3 || Global_4718592 == 31 || Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5)
+	if (Global_MissionData1== 0 || Global_MissionData1== 4 || Global_MissionData1== 6 || Global_MissionData1== 3 || Global_MissionData1== 31 || Global_4718592.f_2 == 6 || Global_4718592.f_2 == 5)
 		return true;
 
 	return false;
@@ -5546,7 +5546,7 @@ BOOL func_175(var uParam0, int iParam1, BOOL bParam2, BOOL bParam3) // Position 
 		}
 	}
 
-	if (Global_4718592 == 0 && Global_4718592.f_2 == 6)
+	if (Global_MissionData1== 0 && Global_4718592.f_2 == 6)
 		if (uParam0->f_21 == -1 && uParam0->f_22 == -1 && !func_114())
 			if (!NETWORK::UGC_IS_LANGUAGE_SUPPORTED(NETWORK::UGC_GET_CONTENT_LANGUAGE(0)))
 				Global_4718592.f_114277 = 1;
@@ -5569,10 +5569,10 @@ void func_176() // Position - 0x728F
 
 BOOL func_177() // Position - 0x72A4
 {
-	if (Global_4718592 != 2 && Global_4718592 != 0 && Global_4718592 != 1 && Global_4718592 != 3)
+	if (Global_MissionData1!= 2 && Global_MissionData1!= 0 && Global_MissionData1!= 1 && Global_MissionData1!= 3)
 		return true;
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		if (*Global_4718592.f_166301 != 0)
 			return true;
@@ -5584,7 +5584,7 @@ BOOL func_177() // Position - 0x72A4
 			return true;
 	}
 
-	if (Global_4718592 == 2)
+	if (Global_MissionData1== 2)
 		if (*Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9)
 			return true;
 
@@ -6077,12 +6077,12 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 			return;
 	}
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 	{
 		func_371(dict);
 		func_277(dict);
 	}
-	else if (Global_4718592 == 0 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || Global_4718592 == 6 || func_276())
+	else if (Global_MissionData1== 0 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || Global_MissionData1== 6 || func_276())
 	{
 		func_273(dict);
 		func_228(dict);
@@ -10652,7 +10652,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 	array7 = DATAFILE::DATADICT_GET_ARRAY(dict, "rsp");
 	unk2 = 4;
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		unk2[0] = DATAFILE::DATADICT_GET_ARRAY(dict, "team");
 
 	array8 = DATAFILE::DATADICT_GET_ARRAY(dict, "wep");
@@ -11003,7 +11003,7 @@ void func_273(int iParam0) // Position - 0xF2AA
 			_int = DATAFILE::DATAARRAY_GET_INT(array6, i);
 			Global_4980736.f_102388[i].f_29 = _int;
 		
-			if (Global_4718592 == 1)
+			if (Global_MissionData1== 1)
 				Global_4980736.f_102388[i].f_30[0] = DATAFILE::DATAARRAY_GET_INT(unk2[0], i);
 		
 			Global_4980736.f_102388[i].f_80 = DATAFILE::DATAARRAY_GET_INT(array14, i);
@@ -12079,7 +12079,7 @@ BOOL func_274(int iParam0) // Position - 0x1474E
 
 BOOL func_275() // Position - 0x14CC2
 {
-	if (Global_4718592 == 6)
+	if (Global_MissionData1== 6)
 		return true;
 
 	return false;
@@ -12087,7 +12087,7 @@ BOOL func_275() // Position - 0x14CC2
 
 BOOL func_276() // Position - 0x14CD7
 {
-	return Global_4718592 == 3;
+	return Global_MissionData1== 3;
 }
 
 void func_277(int iParam0) // Position - 0x14CE5
@@ -12553,7 +12553,7 @@ void func_278(int iParam0) // Position - 0x14E15
 
 	num = i;
 
-	if (func_280() || Global_4718592 == 1 && !func_279())
+	if (func_280() || Global_MissionData1== 1 && !func_279())
 	{
 		for (i = 0; i <= Global_4980736.missionObjectCount - 1; i = i + 1)
 		{
@@ -12588,7 +12588,7 @@ BOOL func_279() // Position - 0x1612A
 
 BOOL func_280() // Position - 0x16171
 {
-	if (Global_4718592 == 0 && Global_4718592.f_2 == 5)
+	if (Global_MissionData1== 0 && Global_4718592.f_2 == 5)
 		return true;
 
 	return false;
@@ -13605,7 +13605,7 @@ BOOL func_293(Hash hParam0) // Position - 0x191BC
 
 BOOL func_294() // Position - 0x191FE
 {
-	return Global_4718592 == 2;
+	return Global_MissionData1== 2;
 }
 
 BOOL func_295(Hash hParam0) // Position - 0x1920C
@@ -18835,7 +18835,7 @@ void func_308(int iParam0) // Position - 0x21AC2
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "weap");
 	Global_4980736.missionWeaponCount = DATAFILE::DATADICT_GET_INT(dict, "no");
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 		if (*Global_4980736.missionWeaponCount > 60)
 			Global_4980736.missionWeaponCount = 60;
 	else if (*Global_4980736.missionWeaponCount > 60)
@@ -22506,7 +22506,7 @@ void func_334(char* sParam0, char* sParam1, int iParam2, int iParam3) // Positio
 
 BOOL func_335() // Position - 0x2ACF7
 {
-	return Global_4718592 == 1;
+	return Global_MissionData1== 1;
 }
 
 void func_336() // Position - 0x2AD05
@@ -28096,7 +28096,7 @@ void func_386(var uParam0) // Position - 0x36B5C
 
 BOOL func_387() // Position - 0x386A5
 {
-	return Global_4718592 == 0 && Global_4718592.f_2 == 6;
+	return Global_MissionData1== 0 && Global_4718592.f_2 == 6;
 }
 
 void func_388(var uParam0) // Position - 0x386C0
@@ -31465,7 +31465,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	int unk62;
 
 	dict = DATAFILE::DATADICT_GET_DICT(iParam0, "gen");
-	Global_4718592 = DATAFILE::DATADICT_GET_INT(dict, "type");
+	Global_MissionData1= DATAFILE::DATADICT_GET_INT(dict, "type");
 	Global_4718592.f_9 = DATAFILE::DATADICT_GET_BOOL(dict, "ngjob");
 	_bool = DATAFILE::DATADICT_GET_BOOL(dict, "photo");
 
@@ -32808,7 +32808,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		if (Global_2683864.f_669.f_11 != 0 && Global_4718592.missionGenTnum != Global_2683864.f_669.f_11)
 		{
@@ -32867,7 +32867,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	func_405(&dict);
 	func_404(dict);
 
-	if (Global_4718592 == 1)
+	if (Global_MissionData1== 1)
 		if (Global_4718592.missionGenTnum > 4)
 			Global_4718592.missionGenTnum = 4;
 	else if (Global_4718592.missionGenTnum > 4)

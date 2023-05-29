@@ -62539,7 +62539,7 @@ int func_354(int iParam0) // Position - 0x4BD9F
 
 BOOL func_355(BOOL bParam0) // Position - 0x4BDD6
 {
-	if (func_359(bParam0) || func_357() || func_356(*Global_4718592.f_166301))
+	if (func_359(bParam0) || func_357() || func_356(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -62552,7 +62552,7 @@ BOOL func_356(int iParam0) // Position - 0x4BE0A
 
 BOOL func_357() // Position - 0x4BE17
 {
-	return func_358(*Global_4718592.f_113724);
+	return func_358(*Global_MissionData1.f_113724);
 }
 
 int func_358(int iParam0) // Position - 0x4BE2D
@@ -62574,14 +62574,14 @@ int func_358(int iParam0) // Position - 0x4BE2D
 BOOL func_359(BOOL bParam0) // Position - 0x4BE67
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_360();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_360();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_360() // Position - 0x4BE9D
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -113808,7 +113808,7 @@ void func_721(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_722() // Position - 0x8EE4D
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_725(7))

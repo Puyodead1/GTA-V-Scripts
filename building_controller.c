@@ -300,7 +300,7 @@ void func_1() // Position - 0x1A6
 		OBJECT::DELETE_OBJECT(&uLocal_167[0]);
 	}
 
-	if (!IS_BIT_SET(Global_41952, 1) && func_3() == 0 && !(NETWORK::NETWORK_IS_ACTIVITY_SESSION() && func_2(*Global_4718592.f_113724) == 14 || func_2(*Global_4718592.f_113724) == 15))
+	if (!IS_BIT_SET(Global_41952, 1) && func_3() == 0 && !(NETWORK::NETWORK_IS_ACTIVITY_SESSION() && func_2(*Global_MissionData1.f_113724) == 14 || func_2(*Global_MissionData1.f_113724) == 15))
 	{
 		if (!ENTITY::DOES_ENTITY_EXIST(uLocal_167[1]))
 		{
@@ -450,7 +450,7 @@ void func_4() // Position - 0x485
 				if (!STREAMING::IS_IPL_ACTIVE("xm_hatch_closed"))
 					STREAMING::REQUEST_IPL("xm_hatch_closed");
 			
-				if (!IS_BIT_SET(*Global_4718592.f_160048, 14))
+				if (!IS_BIT_SET(*Global_MissionData1.f_160048, 14))
 					if (!STREAMING::IS_IPL_ACTIVE("xm_bunkerentrance_door"))
 						STREAMING::REQUEST_IPL("xm_bunkerentrance_door");
 			
@@ -461,7 +461,7 @@ void func_4() // Position - 0x485
 					STREAMING::REQUEST_IPL("xm_hatches_terrain");
 			}
 		}
-		else if (IS_BIT_SET(*Global_4718592.f_160048, 13))
+		else if (IS_BIT_SET(*Global_MissionData1.f_160048, 13))
 		{
 			if (!STREAMING::IS_IPL_ACTIVE("xm_siloentranceclosed_x17"))
 				STREAMING::REQUEST_IPL("xm_siloentranceclosed_x17");
@@ -667,7 +667,7 @@ void func_4() // Position - 0x485
 			if (!STREAMING::IS_IPL_ACTIVE("xm3_security_fix"))
 				STREAMING::REQUEST_IPL("xm3_security_fix");
 		
-			if (func_13(*Global_4718592.f_113724) == 3)
+			if (func_13(*Global_MissionData1.f_113724) == 3)
 				if (STREAMING::IS_IPL_ACTIVE("xm3_warehouse_grnd"))
 					STREAMING::REMOVE_IPL("xm3_warehouse_grnd");
 			else if (!STREAMING::IS_IPL_ACTIVE("xm3_warehouse_grnd"))
@@ -854,7 +854,7 @@ BOOL func_15() // Position - 0xEA7
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		return func_17();
 
-	return func_16(*Global_4718592.f_113724);
+	return func_16(*Global_MissionData1.f_113724);
 }
 
 BOOL func_16(int iParam0) // Position - 0xECB

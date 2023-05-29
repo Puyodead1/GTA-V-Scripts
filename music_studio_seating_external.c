@@ -94238,7 +94238,7 @@ BOOL func_488(Any* panParam0, Ped pedParam1, var uParam2, var uParam3, var uPara
 
 void func_489(var uParam0, BOOL bParam1, var uParam2, var uParam3, var uParam4, var uParam5) // Position - 0x73BF8
 {
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 20))
 			func_491(uParam0, bParam1, uParam2, uParam3, uParam4, uParam5);

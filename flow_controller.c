@@ -31659,7 +31659,7 @@ BOOL func_155(Player plParam0) // Position - 0x21A38
 BOOL func_156(Player plParam0) // Position - 0x21AAE
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 8;
+		return Global_MissionData1.f_160064.f_2 == 8;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31675,7 +31675,7 @@ Player _INVALID_PLAYER_INDEX() // Position - 0x21AF1
 BOOL func_158(Player plParam0) // Position - 0x21AFA
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 7;
+		return Global_MissionData1.f_160064.f_2 == 7;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31686,7 +31686,7 @@ BOOL func_158(Player plParam0) // Position - 0x21AFA
 BOOL func_159(Player plParam0) // Position - 0x21B3D
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 6;
+		return Global_MissionData1.f_160064.f_2 == 6;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31697,7 +31697,7 @@ BOOL func_159(Player plParam0) // Position - 0x21B3D
 BOOL func_160(Player plParam0) // Position - 0x21B80
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 5;
+		return Global_MissionData1.f_160064.f_2 == 5;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31708,7 +31708,7 @@ BOOL func_160(Player plParam0) // Position - 0x21B80
 BOOL func_161(Player plParam0) // Position - 0x21BC3
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 4;
+		return Global_MissionData1.f_160064.f_2 == 4;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31719,7 +31719,7 @@ BOOL func_161(Player plParam0) // Position - 0x21BC3
 BOOL func_162(Player plParam0) // Position - 0x21C06
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 3;
+		return Global_MissionData1.f_160064.f_2 == 3;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31730,7 +31730,7 @@ BOOL func_162(Player plParam0) // Position - 0x21C06
 BOOL func_163(Player plParam0) // Position - 0x21C49
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 2;
+		return Global_MissionData1.f_160064.f_2 == 2;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31741,7 +31741,7 @@ BOOL func_163(Player plParam0) // Position - 0x21C49
 BOOL func_164(Player plParam0) // Position - 0x21C8C
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 1;
+		return Global_MissionData1.f_160064.f_2 == 1;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -31752,7 +31752,7 @@ BOOL func_164(Player plParam0) // Position - 0x21C8C
 BOOL func_165(Player plParam0) // Position - 0x21CCF
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_2 == 0;
+		return Global_MissionData1.f_160064.f_2 == 0;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;
@@ -75372,7 +75372,7 @@ int func_634(int iParam0) // Position - 0x64CF0
 
 BOOL func_635(BOOL bParam0) // Position - 0x64D27
 {
-	if (func_639(bParam0) || func_637() || func_636(*Global_4718592.f_166301))
+	if (func_639(bParam0) || func_637() || func_636(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -75385,7 +75385,7 @@ BOOL func_636(int iParam0) // Position - 0x64D5B
 
 BOOL func_637() // Position - 0x64D68
 {
-	return func_638(*Global_4718592.f_113724);
+	return func_638(*Global_MissionData1.f_113724);
 }
 
 int func_638(int iParam0) // Position - 0x64D7E
@@ -75407,14 +75407,14 @@ int func_638(int iParam0) // Position - 0x64D7E
 BOOL func_639(BOOL bParam0) // Position - 0x64DB8
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_640();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_640();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_640() // Position - 0x64DEE
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;

@@ -148,7 +148,7 @@ void func_1() // Position - 0x106
 void func_2() // Position - 0x127
 {
 	if (!_IS_FMMC_ACTIVE() && !func_3() && Global_2684800)
-		Global_4718592.f_113724 = 0;
+		Global_MissionData1.f_113724 = 0;
 
 	return;
 }
@@ -2723,7 +2723,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_92(*Global_4718592.f_166301))
+					if (func_92(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

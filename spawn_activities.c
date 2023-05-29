@@ -96335,7 +96335,7 @@ BOOL func_693() // Position - 0x72815
 
 BOOL func_694() // Position - 0x7285E
 {
-	if (Global_4718592 == 2 || Global_4718592 == 8)
+	if (Global_MissionData1== 2 || Global_MissionData1== 8)
 		return true;
 
 	return false;

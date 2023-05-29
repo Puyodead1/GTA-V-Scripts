@@ -8479,7 +8479,7 @@ BOOL func_165() // Position - 0xCF9B
 				if (Global_1963026)
 					return true;
 			
-				if (IS_BIT_SET(Global_4718592.f_37, 23))
+				if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 					if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_82())
 						return true;
 			}
@@ -8757,7 +8757,7 @@ BOOL func_170(int iParam0) // Position - 0xD5A4
 		if (Global_2684801.f_6640 == 122)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_82())
 			return true;
 
@@ -8770,7 +8770,7 @@ BOOL func_170(int iParam0) // Position - 0xD5A4
 		if (iParam0 == 0)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		return true;
 
 	if (func_171() || func_166())
@@ -8828,7 +8828,7 @@ int func_177(Player plParam0) // Position - 0xD7AA
 
 BOOL func_178() // Position - 0xD7C7
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_179() // Position - 0xD7DC
@@ -9541,7 +9541,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_203(*Global_4718592.f_166301))
+					if (func_203(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			

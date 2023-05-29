@@ -20502,7 +20502,7 @@ void func_329(int iParam0, int iParam1, char* sParam2, int iParam3, var uParam4,
 			str7 = "TIMER_BESLAP" /*BEST LAP*/;
 	}
 
-	if (*Global_4718592.f_104427 != 1 && *Global_4718592.f_104427 != 3 && *Global_4718592.f_104427 != 5 && *Global_4718592.f_104427 != 7 && *Global_4718592.f_104427 != 19)
+	if (*Global_MissionData1.f_104427 != 1 && *Global_MissionData1.f_104427 != 3 && *Global_MissionData1.f_104427 != 5 && *Global_MissionData1.f_104427 != 7 && *Global_MissionData1.f_104427 != 19)
 	{
 		if (iParam21 > -1)
 		{

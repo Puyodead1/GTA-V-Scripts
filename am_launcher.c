@@ -1169,7 +1169,7 @@ char* func_6(int iParam0) // Position - 0x570
 			return "Range_Modern_MP";
 	
 		case 203:
-			if (func_7(*Global_4718592.f_166301))
+			if (func_7(*Global_MissionData1.f_166301))
 				return "FM_Survival_Controller";
 			else
 				return "FM_Horde_Controler";
@@ -1346,7 +1346,7 @@ BOOL func_9() // Position - 0x10B3
 
 BOOL func_10(int iParam0) // Position - 0x10C8
 {
-	return *Global_4718592.f_166302 >= iParam0;
+	return *Global_MissionData1.f_166302 >= iParam0;
 }
 
 BOOL func_11() // Position - 0x10DD
@@ -10061,7 +10061,7 @@ void func_241(var uParam0) // Position - 0xC336
 
 	fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
 	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
-	Global_4718592.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
+	Global_MissionData1.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
 	func_242(&dict, uParam0, false, &unk);
 	return;
 }

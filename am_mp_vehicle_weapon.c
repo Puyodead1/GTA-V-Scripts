@@ -4380,7 +4380,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_140(*Global_4718592.f_166301))
+					if (func_140(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -4620,7 +4620,7 @@ BOOL func_151() // Position - 0x5599
 			if (func_123(player) && func_27(func_119(player)) == 4 && ENTITY::DOES_ENTITY_EXIST(PLAYER::GET_PLAYER_PED(player)) && !PED::IS_PED_INJURED(PLAYER::GET_PLAYER_PED(player)) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::GET_PLAYER_PED(player), false) && ENTITY::DOES_ENTITY_EXIST(PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(player), false)) && func_162(PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(player), false)))
 				return true;
 		
-			if (!func_161(*Global_4718592.f_113724))
+			if (!func_161(*Global_MissionData1.f_113724))
 				if (func_164(player))
 					if (func_160(player))
 						return true;
@@ -4707,7 +4707,7 @@ BOOL func_151() // Position - 0x5599
 
 BOOL func_152(int iParam0) // Position - 0x58D1
 {
-	return Global_262145.f_5042[iParam0] == *Global_4718592.f_113724;
+	return Global_262145.f_5042[iParam0] == *Global_MissionData1.f_113724;
 }
 
 BOOL func_153(Player plParam0) // Position - 0x58EF

@@ -935,7 +935,7 @@ BOOL func_7(Player plParam0) // Position - 0x82D
 
 BOOL func_8() // Position - 0x8E6
 {
-	return Global_4718592 == 3;
+	return Global_MissionData1 == 3;
 }
 
 BOOL func_9(Player plParam0) // Position - 0x8F4

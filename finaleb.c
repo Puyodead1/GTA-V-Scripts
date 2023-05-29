@@ -55447,7 +55447,7 @@ int func_387(int iParam0) // Position - 0x47F07
 
 BOOL func_388(BOOL bParam0) // Position - 0x47F3E
 {
-	if (func_392(bParam0) || func_390() || func_389(*Global_4718592.f_166301))
+	if (func_392(bParam0) || func_390() || func_389(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -55460,7 +55460,7 @@ BOOL func_389(int iParam0) // Position - 0x47F72
 
 BOOL func_390() // Position - 0x47F7F
 {
-	return func_391(*Global_4718592.f_113724);
+	return func_391(*Global_MissionData1.f_113724);
 }
 
 int func_391(int iParam0) // Position - 0x47F95
@@ -55482,14 +55482,14 @@ int func_391(int iParam0) // Position - 0x47F95
 BOOL func_392(BOOL bParam0) // Position - 0x47FCF
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_393();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_393();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_393() // Position - 0x48006
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -94744,7 +94744,7 @@ BOOL func_552(BOOL bParam0, BOOL bParam1, BOOL bParam2) // Position - 0x753F5
 		}
 	}
 
-	if (func_559() || func_558(*Global_4718592.f_166301) || func_557())
+	if (func_559() || func_558(*Global_MissionData1.f_166301) || func_557())
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
@@ -103567,7 +103567,7 @@ void func_695(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_696() // Position - 0x848C5
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_699(7))

@@ -746,7 +746,7 @@ BOOL func_18(Player plParam0, int iParam1) // Position - 0xE56
 	int num;
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return Global_4718592.f_160064.f_6 == iParam1;
+		return Global_MissionData1.f_160064.f_6 == iParam1;
 
 	if (plParam0 == _INVALID_PLAYER_INDEX() || iParam1 == -1)
 		return false;
@@ -816,7 +816,7 @@ BOOL func_22() // Position - 0xFFC
 BOOL func_23(Player plParam0) // Position - 0x1016
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return IS_BIT_SET(Global_4718592.f_160064.f_14, 4);
+		return IS_BIT_SET(Global_MissionData1.f_160064.f_14, 4);
 
 	if (plParam0 == _INVALID_PLAYER_INDEX())
 		return false;

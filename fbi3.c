@@ -80414,7 +80414,7 @@ int func_694(int iParam0) // Position - 0x6FA12
 
 BOOL func_695(BOOL bParam0) // Position - 0x6FA49
 {
-	if (func_699(bParam0) || func_697() || func_696(*Global_4718592.f_166301))
+	if (func_699(bParam0) || func_697() || func_696(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -80427,7 +80427,7 @@ BOOL func_696(int iParam0) // Position - 0x6FA7D
 
 BOOL func_697() // Position - 0x6FA8A
 {
-	return func_698(*Global_4718592.f_113724);
+	return func_698(*Global_MissionData1.f_113724);
 }
 
 int func_698(int iParam0) // Position - 0x6FAA0
@@ -80449,14 +80449,14 @@ int func_698(int iParam0) // Position - 0x6FAA0
 BOOL func_699(BOOL bParam0) // Position - 0x6FADA
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_700();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_700();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_700() // Position - 0x6FB10
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -116737,7 +116737,7 @@ void func_795(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_796() // Position - 0x990C8
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_799(7))
@@ -123671,7 +123671,7 @@ BOOL func_889() // Position - 0xA411A
 				if (Global_1963026)
 					return true;
 			
-				if (IS_BIT_SET(Global_4718592.f_37, 23))
+				if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 					if (!func_270(PLAYER::PLAYER_ID(), 0) && !func_248())
 						return true;
 			}
@@ -123723,7 +123723,7 @@ BOOL func_893(int iParam0) // Position - 0xA426F
 		if (Global_2684801.f_6640 == 122)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		if (!func_270(PLAYER::PLAYER_ID(), 0) && !func_248())
 			return true;
 
@@ -123736,7 +123736,7 @@ BOOL func_893(int iParam0) // Position - 0xA426F
 		if (iParam0 == 0)
 			return true;
 
-	if (IS_BIT_SET(Global_4718592.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
 		return true;
 
 	if (func_894() || func_890())
@@ -123784,7 +123784,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0xA4452
 
 BOOL func_899() // Position - 0xA4465
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_900() // Position - 0xA447A

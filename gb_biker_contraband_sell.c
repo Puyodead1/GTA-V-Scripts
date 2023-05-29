@@ -117940,7 +117940,7 @@ BOOL func_1177() // Position - 0x95BF8
 
 BOOL func_1178() // Position - 0x95C04
 {
-	if (Global_4718592 == 6)
+	if (Global_MissionData1== 6)
 		return true;
 
 	return false;

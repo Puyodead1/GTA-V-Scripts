@@ -1481,7 +1481,7 @@ BOOL func_43() // Position - 0x11F5
 			if (func_11(player) && func_29(func_57(player)) == 4 && ENTITY::DOES_ENTITY_EXIST(PLAYER::GET_PLAYER_PED(player)) && !PED::IS_PED_INJURED(PLAYER::GET_PLAYER_PED(player)) && PED::IS_PED_IN_ANY_VEHICLE(PLAYER::GET_PLAYER_PED(player), false) && ENTITY::DOES_ENTITY_EXIST(PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(player), false)) && func_56(PED::GET_VEHICLE_PED_IS_IN(PLAYER::GET_PLAYER_PED(player), false)))
 				return true;
 		
-			if (!func_55(*Global_4718592.f_113724))
+			if (!func_55(*Global_MissionData1.f_113724))
 				if (func_59(player))
 					if (func_54(player))
 						return true;
@@ -1568,7 +1568,7 @@ BOOL func_43() // Position - 0x11F5
 
 BOOL func_44(int iParam0) // Position - 0x152D
 {
-	return Global_262145.f_5042[iParam0] == *Global_4718592.f_113724;
+	return Global_262145.f_5042[iParam0] == *Global_MissionData1.f_113724;
 }
 
 BOOL func_45(Player plParam0) // Position - 0x154B
@@ -2856,7 +2856,7 @@ int func_110() // Position - 0x2F01
 
 	scaleformName = "";
 
-	switch (*Global_4718592.f_160097)
+	switch (*Global_MissionData1.f_160097)
 	{
 		case 1:
 			scaleformName = "ARENA_GUN_CAM_APOCALYPSE";
@@ -7264,7 +7264,7 @@ void func_263(BOOL bParam0) // Position - 0x9030
 
 BOOL func_264() // Position - 0x9063
 {
-	return IS_BIT_SET(Global_4718592.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 BOOL func_265(Player plParam0) // Position - 0x907F
@@ -8430,7 +8430,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_299(*Global_4718592.f_166301))
+					if (func_299(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -11851,7 +11851,7 @@ Vector3 func_427() // Position - 0xF3DC
 	yOffset = 6f;
 	vector = Vector3(2800f, -3800.2f, 170f);
 
-	if (Global_4718592.f_160097.f_1 == 3 || Global_4718592.f_160097.f_1 == 3 || Global_4718592.f_160097.f_1 == 3)
+	if (Global_MissionData1.f_160097.f_1 == 3 || Global_MissionData1.f_160097.f_1 == 3 || Global_MissionData1.f_160097.f_1 == 3)
 		vector.f_1 = -3860f;
 
 	xOffset = xOffset * (float)NETWORK::PARTICIPANT_ID_TO_INT();
@@ -12009,10 +12009,10 @@ BOOL func_439() // Position - 0xF63D
 	num = Global_1058070.f_14[playerTeam];
 
 	if (num < 17)
-		if (IS_BIT_SET(Global_4718592.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_4718592.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_4718592.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_4718592.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_4718592.f_32, 16))
+		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_MissionData1.f_32, 16))
 			return 1;
 
-	if (!IS_BIT_SET(Global_4718592.f_32, 16))
+	if (!IS_BIT_SET(Global_MissionData1.f_32, 16))
 		return 1;
 	else if (func_437() || func_440(PLAYER::PLAYER_ID()))
 		return 1;
@@ -12027,7 +12027,7 @@ BOOL func_440(Player plParam0) // Position - 0xF735
 
 BOOL func_441() // Position - 0xF74D
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
@@ -12035,7 +12035,7 @@ BOOL func_441() // Position - 0xF74D
 
 BOOL func_442() // Position - 0xF77B
 {
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 void func_443() // Position - 0xF790
@@ -13392,7 +13392,7 @@ void func_502(BOOL bParam0) // Position - 0x10F23
 			num2.f_1 = Global_786547.f_1;
 		
 			if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-				num2 = *Global_4718592.f_113724;
+				num2 = *Global_MissionData1.f_113724;
 			else
 				num2 = func_507(PLAYER::PLAYER_ID());
 		

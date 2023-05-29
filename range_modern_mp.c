@@ -97277,7 +97277,7 @@ BOOL func_703(int iParam0) // Position - 0x78FA0
 
 BOOL func_704() // Position - 0x78FB5
 {
-	return Global_4718592 == 1;
+	return Global_MissionData1== 1;
 }
 
 int func_705() // Position - 0x78FC3
@@ -97362,7 +97362,7 @@ int func_706() // Position - 0x78FD4
 
 	if (flag)
 		if (flag2)
-			if (Global_4718592 == 1)
+			if (Global_MissionData1== 1)
 				return Global_262145.f_8729 * Global_2680249[13];
 			else
 				return Global_262145.f_8729 * Global_2680249[12];
@@ -119531,7 +119531,7 @@ void func_1208(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4,
 		{
 			num5 = Global_1837301;
 		
-			if (Global_4718592 == 2)
+			if (Global_MissionData1== 2)
 			{
 				if (func_1349(PLAYER::PLAYER_ID(), false) || func_1276())
 				{
@@ -131464,7 +131464,7 @@ void func_1437(int* piParam0) // Position - 0xAAC8D
 
 BOOL func_1438() // Position - 0xAAD32
 {
-	return Global_4718592 == 3;
+	return Global_MissionData1== 3;
 }
 
 BOOL func_1439() // Position - 0xAAD40
@@ -133358,7 +133358,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 
 	func_1679();
 
-	if (Global_4718592 != 6 && func_1678(*Global_4718592.f_113724) != 14 && func_1678(*Global_4718592.f_113724) != 15 && !func_120() && !func_1182())
+	if (Global_MissionData1!= 6 && func_1678(*Global_4718592.f_113724) != 14 && func_1678(*Global_4718592.f_113724) != 15 && !func_120() && !func_1182())
 		if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true))
 			if (PED::IS_PED_WEARING_HELMET(PLAYER::PLAYER_PED_ID()))
 				PED::REMOVE_PED_HELMET(PLAYER::PLAYER_PED_ID(), true);
@@ -133421,9 +133421,9 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 	{
 		if (!bParam4)
 		{
-			Global_4718592 = 2;
+			Global_MissionData1= 2;
 			func_1671();
-			Global_4718592 = 0;
+			Global_MissionData1= 0;
 		}
 		else
 		{
@@ -133946,7 +133946,7 @@ void func_1474(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 	Global_1853910[player].f_36.f_2 = -1;
 	Global_1853910[player].f_36.f_16 = -1;
 	Global_1853910[player].f_36.f_1 = -1;
-	Global_4718592 = 0;
+	Global_MissionData1= 0;
 
 	if (!flag2)
 		func_1536(false);
@@ -137327,10 +137327,10 @@ void func_1714(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (Global_4718592 != 5 && Global_4718592 != 6 && Global_4718592 != 32 && Global_4718592 != 148)
+		if (Global_MissionData1!= 5 && Global_MissionData1!= 6 && Global_MissionData1!= 32 && Global_MissionData1!= 148)
 			func_1732();
 	
-		if (Global_4718592 != 5 || *uParam1 != 40)
+		if (Global_MissionData1!= 5 || *uParam1 != 40)
 		{
 			if (bParam5)
 			{
@@ -137350,7 +137350,7 @@ void func_1714(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 			{
 				if (*Global_4980736.missionEnemyCount > 0 || *Global_4980736.f_214764 > 0)
 				{
-					if (Global_4718592 == 1)
+					if (Global_MissionData1== 1)
 					{
 					}
 					else
@@ -137420,18 +137420,18 @@ void func_1714(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 	if (bParam6)
 		PLAYER::SET_PLAYER_INVINCIBLE(PLAYER::PLAYER_ID(), false);
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 		if (!func_1459() && !func_1183())
 			if (!func_1366())
 				MISC::CLEAR_AREA(0f, 0f, 0f, 16000f, true, false, false, false);
-	else if (Global_4718592 == 6)
+	else if (Global_MissionData1== 6)
 		func_1722(17);
 
 	if (func_1459())
 	{
 		PLAYER::SET_PLAYER_LEAVE_PED_BEHIND(PLAYER::PLAYER_ID(), false);
 	
-		if (Global_4718592 != 2 && Global_4718592 != 8 && Global_4718592 != 0 && Global_4718592 != 1 && Global_4718592 != 3)
+		if (Global_MissionData1!= 2 && Global_MissionData1!= 8 && Global_MissionData1!= 0 && Global_MissionData1!= 1 && Global_MissionData1!= 3)
 		{
 			func_1721();
 			func_1720();
@@ -137439,7 +137439,7 @@ void func_1714(var uParam0, var uParam1, var uParam2, int iParam3, BOOL bParam4,
 		}
 	}
 
-	if (Global_4718592 == 10 || Global_4718592 == 15 || Global_4718592 == 14 || Global_4718592 == 11 || Global_4718592 == 92 || Global_4718592 == 35 || Global_4718592 == 33 || Global_4718592 == 34 || Global_4718592 == 13 || Global_4718592 == 12)
+	if (Global_MissionData1== 10 || Global_MissionData1== 15 || Global_MissionData1== 14 || Global_MissionData1== 11 || Global_MissionData1== 92 || Global_MissionData1== 35 || Global_MissionData1== 33 || Global_MissionData1== 34 || Global_MissionData1== 13 || Global_MissionData1== 12)
 		if (func_1718(0) > 0)
 			func_1717(4, -1);
 
@@ -137464,7 +137464,7 @@ void func_1715() // Position - 0xB1E59
 	BOOL flag3;
 	BOOL flag4;
 
-	if (Global_4718592 == 0)
+	if (Global_MissionData1== 0)
 	{
 		flag = IS_BIT_SET(Global_4718592.f_4, 20);
 		flag2 = IS_BIT_SET(Global_4718592.f_4, 21);
@@ -137972,7 +137972,7 @@ eMPStat func_1737(int iParam0) // Position - 0xB27DA
 
 void func_1738() // Position - 0xB2889
 {
-	if (Global_4718592 == 0 && *Global_4718592.f_114184 > Global_262145.f_8187)
+	if (Global_MissionData1== 0 && *Global_4718592.f_114184 > Global_262145.f_8187)
 		if (*Global_4718592.f_114294 != 1 && *Global_4718592.f_114294 != 2 && *Global_4718592.f_114294 != 3 && *Global_4718592.f_114294 != 4 && *Global_4718592.f_114294 != 5 && *Global_4718592.f_114294 != 6)
 			Global_4718592.f_114184 = Global_262145.f_8187;
 

@@ -662,7 +662,7 @@ void _SET_PLAYER_CONTROL_EX(Player plParam0, BOOL bParam1, eSetPlayerControlFlag
 							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(playerPed, true);
 					}
 				
-					if (func_17(*Global_4718592.f_166301))
+					if (func_17(*Global_MissionData1.f_166301))
 						ENTITY::FREEZE_ENTITY_POSITION(playerPed, true);
 				}
 			
@@ -7577,7 +7577,7 @@ void func_132(Vehicle veParam0, var uParam1, BOOL bParam2, BOOL bParam3) // Posi
 
 BOOL func_133() // Position - 0xA1B8
 {
-	if (*Global_4718592.f_104427 == 6 || *Global_4718592.f_104427 == 7 || *Global_4718592.f_104427 == 18 || *Global_4718592.f_104427 == 19 && Global_4718592.f_2 == 20)
+	if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 7 || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19 && Global_MissionData1.f_2 == 20)
 		return false;
 
 	if (func_137(7))
@@ -44436,7 +44436,7 @@ int func_255(int iParam0) // Position - 0x3228B
 
 BOOL func_256(BOOL bParam0) // Position - 0x322C2
 {
-	if (func_260(bParam0) || func_258() || func_257(*Global_4718592.f_166301))
+	if (func_260(bParam0) || func_258() || func_257(*Global_MissionData1.f_166301))
 		return true;
 
 	return false;
@@ -44449,7 +44449,7 @@ BOOL func_257(int iParam0) // Position - 0x322F6
 
 BOOL func_258() // Position - 0x32303
 {
-	return func_259(*Global_4718592.f_113724);
+	return func_259(*Global_MissionData1.f_113724);
 }
 
 int func_259(int iParam0) // Position - 0x32319
@@ -44471,14 +44471,14 @@ int func_259(int iParam0) // Position - 0x32319
 BOOL func_260(BOOL bParam0) // Position - 0x32353
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_4718592.f_160050, 12) && func_261();
+		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_261();
 
-	return IS_BIT_SET(*Global_4718592.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
 }
 
 BOOL func_261() // Position - 0x32389
 {
-	if (*Global_4718592.f_114294 == 1 || *Global_4718592.f_114294 == 2)
+	if (*Global_MissionData1.f_114294 == 1 || *Global_MissionData1.f_114294 == 2)
 		return true;
 
 	return false;
