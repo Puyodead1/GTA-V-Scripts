@@ -13081,7 +13081,7 @@ BOOL func_17() // Position - 0x2CE9
 				if (Global_1963026)
 					return true;
 			
-				if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 					if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_18())
 						return true;
 			}
@@ -13409,7 +13409,7 @@ BOOL func_26(int iParam0) // Position - 0x3398
 		if (Global_2684801.f_6640 == 122)
 			return true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 		if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_18())
 			return true;
 
@@ -13422,7 +13422,7 @@ BOOL func_26(int iParam0) // Position - 0x3398
 		if (iParam0 == 0)
 			return true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 		return true;
 
 	if (func_27() || func_22())
@@ -102689,7 +102689,7 @@ void func_600(int iParam0) // Position - 0x710EE
 	Global_MissionData1.f_104427 = iParam0;
 
 	if (*Global_MissionData1.f_104427 != 18 && *Global_MissionData1.f_104427 != 19)
-		MISC::CLEAR_BIT(&(Global_MissionData1.f_28), 18);
+		MISC::CLEAR_BIT(&(Global_MissionData1.missionGenMenubs18), 18);
 
 	func_601(func_602() || func_34());
 	return;
@@ -102703,7 +102703,7 @@ void func_601(BOOL bParam0) // Position - 0x71142
 
 BOOL func_602() // Position - 0x71150
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -103016,37 +103016,37 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 			Global_MissionData1.f_160499 = 2;
 		}
 	
-		Global_4980736.f_102385 = -1;
+		Global_MissionData1.missionGenOvrpc = -1;
 		Global_MissionData1.missionGenMenubs = 0;
 		Global_MissionData1.f_12 = 0;
 		Global_MissionData1.missionGenMenubs3 = 0;
 		Global_MissionData1.missionGenMenubs4 = 0;
 		Global_MissionData1.missionGenMenubs5 = 0;
-		Global_MissionData1.f_16 = 0;
-		Global_MissionData1.f_17 = 0;
-		Global_MissionData1.f_18 = 0;
+		Global_MissionData1.missionGenMenubs6 = 0;
+		Global_MissionData1.missionGenMenubs7 = 0;
+		Global_MissionData1.missionGenMenubs8 = 0;
 		Global_MissionData1.missionGenMenubs9 = 0;
-		Global_MissionData1.f_20 = 0;
-		Global_MissionData1.f_21 = 0;
-		Global_MissionData1.f_22 = 0;
-		Global_MissionData1.f_23 = 0;
-		Global_MissionData1.f_24 = 0;
-		Global_MissionData1.f_25 = 0;
-		Global_MissionData1.f_26 = 0;
-		Global_MissionData1.f_27 = 0;
-		Global_MissionData1.f_28 = 0;
-		Global_MissionData1.f_29 = 0;
-		Global_MissionData1.f_30 = 0;
-		Global_MissionData1.f_31 = 0;
-		Global_MissionData1.f_32 = 0;
-		Global_MissionData1.f_33 = 0;
-		Global_MissionData1.f_34 = 0;
-		Global_MissionData1.f_35 = 0;
-		Global_MissionData1.f_36 = 0;
-		Global_MissionData1.f_37 = 0;
-		Global_MissionData1.f_38 = 0;
-		Global_MissionData1.f_39 = 0;
-		Global_MissionData1.f_40 = 0;
+		Global_MissionData1.missionGenMenubs10 = 0;
+		Global_MissionData1.missionGenMenubs11 = 0;
+		Global_MissionData1.missionGenMenubs12 = 0;
+		Global_MissionData1.missionGenMenubs13 = 0;
+		Global_MissionData1.missionGenMenubs14 = 0;
+		Global_MissionData1.missionGenMenubs15 = 0;
+		Global_MissionData1.missionGenMenubs16 = 0;
+		Global_MissionData1.missionGenMenubs17 = 0;
+		Global_MissionData1.missionGenMenubs18 = 0;
+		Global_MissionData1.missionGenMenubs19 = 0;
+		Global_MissionData1.missionGenMenubs20 = 0;
+		Global_MissionData1.missionGenMenubs21 = 0;
+		Global_MissionData1.missionGenMenubs22 = 0;
+		Global_MissionData1.missionGenMenubs23 = 0;
+		Global_MissionData1.missionGenMenubs24 = 0;
+		Global_MissionData1.missionGenMenubs25 = 0;
+		Global_MissionData1.missionGenMenubs26 = 0;
+		Global_MissionData1.missionGenMenubs27 = 0;
+		Global_MissionData1.missionGenMenubs28 = 0;
+		Global_MissionData1.missionGenMenubs29 = 0;
+		Global_MissionData1.missionGenMenubs30 = 0;
 		Global_MissionData1.f_41 = 0;
 	
 		for (i = 0; i <= 4; i = i + 1)
@@ -103234,7 +103234,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.f_1263 = 0;
 		Global_MissionData1.f_114279 = 0;
 		Global_MissionData1.f_166334 = 0;
-		Global_MissionData1.f_167430 = 0;
+		Global_MissionData1.missionGenAlrtLocal = 0;
 		Global_MissionData1.f_160501 = 0;
 	
 		for (i = 0; i < 26; i = i + 1)

@@ -4662,7 +4662,7 @@ BOOL func_204() // Position - 0x51CF
 	if (func_213() || func_212() || func_211() || func_210() || func_209() || func_207() || func_205())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs26, 1))
 		return true;
 
 	return false;
@@ -4771,10 +4771,10 @@ eHudColour func_214(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x
 		else
 			num = func_183(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 13))
 			num = func_215(iParam0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs14, 29))
 			num = 0;
 	
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_188(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))

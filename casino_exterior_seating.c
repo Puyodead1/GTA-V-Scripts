@@ -65031,7 +65031,7 @@ void func_330(Player plParam0, int iParam1, int iParam2) // Position - 0x51288
 		else
 			func_311(plParam0, iParam1, 0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_28, 4))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 4))
 			func_311(plParam0, Global_1836625, 1);
 	
 		func_212(plParam0, iParam2);
@@ -95945,7 +95945,7 @@ void func_490(int iParam0, int iParam1) // Position - 0x74012
 
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 		if (func_491(*Global_MissionData1.f_113724))
-			if (IS_BIT_SET(Global_MissionData1.f_23, 24))
+			if (IS_BIT_SET(Global_MissionData1.missionGenMenubs13, 24))
 				if (func_459(PLAYER::PLAYER_PED_ID(), 3, -1))
 					func_455(PLAYER::PLAYER_PED_ID(), 3, -1, -1);
 

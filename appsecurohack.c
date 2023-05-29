@@ -162,7 +162,7 @@ void func_7() // Position - 0x1E7
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 
-	if (!IS_BIT_SET(Global_MissionData1.f_21, 30))
+	if (!IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 30))
 		func_8(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
 
 	return;

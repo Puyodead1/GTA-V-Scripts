@@ -5521,7 +5521,7 @@ BOOL func_93() // Position - 0x3113
 	if (func_101() || func_100() || func_64() || func_99() || func_98() || func_96() || func_94())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs26, 1))
 		return true;
 
 	return false;
@@ -5625,10 +5625,10 @@ int func_102(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x3248
 		else
 			num = func_71(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 13))
 			num = func_103(iParam0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs14, 29))
 			num = 0;
 	
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_76(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
@@ -8255,7 +8255,7 @@ int func_181(int iParam0, Ped pedParam1, char* sParam2, Hash hParam3, Hash hPara
 
 	num = func_191(iParam0, sParam2, hParam3, hParam4, iParam5, iParam6, iParam7, bParam9);
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_39, 19))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs29, 19))
 		return num;
 
 	if (hParam4 == joaat("XPCATEGORY_COMPLETED_SHOWER") || hParam4 == joaat("XPCATEGORY_COMPLETED_ROLLERCOASTER"))
@@ -15539,7 +15539,7 @@ void func_439(Player plParam0, int iParam1, int iParam2) // Position - 0x1062B
 		else
 			func_456(plParam0, iParam1, 0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_28, 4))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 4))
 			func_456(plParam0, Global_1836625, 1);
 	
 		func_451(plParam0, iParam2);
@@ -21230,7 +21230,7 @@ void func_604(var uParam0, Player plParam1) // Position - 0x18519
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(122);
 	}
-	else if (IS_BIT_SET(Global_MissionData1.f_27, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
+	else if (IS_BIT_SET(Global_MissionData1.missionGenMenubs17, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(123);
 	}
@@ -23311,7 +23311,7 @@ BOOL func_687(int iParam0) // Position - 0x1A90A
 
 BOOL func_688() // Position - 0x1A91E
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 BOOL func_689(BOOL bParam0) // Position - 0x1A93A
@@ -24474,7 +24474,7 @@ void func_750(int iParam0, BOOL bParam1, BOOL bParam2) // Position - 0x1BF57
 
 BOOL func_751() // Position - 0x1C1B6
 {
-	if (!func_676(PLAYER::PLAYER_ID()) && !func_657(PLAYER::PLAYER_ID()) && func_330(PLAYER::PLAYER_ID()) != 146 && !func_754() && !func_753() && !func_752(*Global_MissionData1.missionGenAdverm) && !func_99() && !IS_BIT_SET(Global_MissionData1.f_38, 28))
+	if (!func_676(PLAYER::PLAYER_ID()) && !func_657(PLAYER::PLAYER_ID()) && func_330(PLAYER::PLAYER_ID()) != 146 && !func_754() && !func_753() && !func_752(*Global_MissionData1.missionGenAdverm) && !func_99() && !IS_BIT_SET(Global_MissionData1.missionGenMenubs28, 28))
 		return false;
 
 	return true;

@@ -44637,7 +44637,7 @@ BOOL func_300() // Position - 0x31ACD
 	if (*Global_MissionData1.f_104427 == 22 || *Global_MissionData1.f_104427 == 23)
 		return true;
 
-	return IS_BIT_SET(Global_MissionData1.f_32, 9);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 9);
 }
 
 BOOL func_301() // Position - 0x31B05
@@ -44645,7 +44645,7 @@ BOOL func_301() // Position - 0x31B05
 	if (*Global_MissionData1.f_104427 == 20 || *Global_MissionData1.f_104427 == 21)
 		return true;
 
-	return IS_BIT_SET(Global_MissionData1.f_30, 3);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 3);
 }
 
 BOOL func_302(int iParam0) // Position - 0x31B3C
@@ -54322,7 +54322,7 @@ BOOL func_502() // Position - 0x3D821
 				if (Global_1963026)
 					return true;
 			
-				if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 					if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_58())
 						return true;
 			}
@@ -54600,7 +54600,7 @@ BOOL func_506(int iParam0) // Position - 0x3DE2B
 		if (Global_2684801.f_6640 == 122)
 			return true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 		if (!_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && !func_58())
 			return true;
 
@@ -54613,7 +54613,7 @@ BOOL func_506(int iParam0) // Position - 0x3DE2B
 		if (iParam0 == 0)
 			return true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_37, 23))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 23))
 		return true;
 
 	if (func_511() || func_503())
@@ -114357,7 +114357,7 @@ BOOL func_1032() // Position - 0x8EC34
 	if (func_458() || func_455() || func_125() || func_1034() || func_503() || func_622() || func_1033())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs26, 1))
 		return true;
 
 	return false;
@@ -114412,10 +114412,10 @@ int func_1035(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x8ECC0
 		else
 			num = func_1015(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 13))
 			num = func_1036(iParam0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs14, 29))
 			num = 0;
 	
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_108(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
@@ -115555,7 +115555,7 @@ BOOL func_1097() // Position - 0x90783
 
 BOOL func_1098() // Position - 0x90791
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 void func_1099() // Position - 0x907AD
@@ -116587,7 +116587,7 @@ void func_1144(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 	Global_MissionData1.f_114281 = 0;
 	Global_1926664.f_4 = 0;
 
-	if (!IS_BIT_SET(Global_MissionData1.f_29, 1) && !func_324())
+	if (!IS_BIT_SET(Global_MissionData1.missionGenMenubs19, 1) && !func_324())
 	{
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs4, 17))
 		{
@@ -117244,7 +117244,7 @@ void func_1144(BOOL bParam0, int iParam1, int iParam2, BOOL bParam3, BOOL bParam
 				}
 				else
 				{
-					if (!IS_BIT_SET(Global_MissionData1.f_28, 10))
+					if (!IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 10))
 						if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 							Global_2684801.f_2846.v_198 = Vector3(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false));
 				
@@ -118892,7 +118892,7 @@ BOOL func_1278(int iParam0) // Position - 0x94548
 
 BOOL func_1279() // Position - 0x94594
 {
-	if (IS_BIT_SET(Global_MissionData1.f_18, 0))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 0))
 		return true;
 
 	return func_1017(*Global_MissionData1.f_113724, true) || func_1285(*Global_MissionData1.f_113724) || func_1284(*Global_MissionData1.f_113724) || func_1283(*Global_MissionData1.f_113724) || func_1282(*Global_MissionData1.missionGenAdverm) || func_1281(*Global_MissionData1.missionGenAdverm) || func_1280(*Global_MissionData1.missionGenAdverm);
@@ -122471,7 +122471,7 @@ Player func_1434() // Position - 0x9849E
 
 BOOL func_1435() // Position - 0x984AD
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && !_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && IS_BIT_SET(Global_1853910[PLAYER::PLAYER_ID()].f_36.f_18, 14);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && !_NETWORK_IS_PLAYER_IN_SCTV(PLAYER::PLAYER_ID(), 0) && IS_BIT_SET(Global_1853910[PLAYER::PLAYER_ID()].f_36.f_18, 14);
 }
 
 void func_1436() // Position - 0x984E4

@@ -26372,7 +26372,7 @@ int func_638(var uParam0, Ped pedParam1, const char* sParam2, Hash hParam3, Hash
 
 	num = func_648(uParam0, sParam2, hParam3, hParam4, iParam5, iParam6, iParam7, bParam9);
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_39, 19))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs29, 19))
 		return num;
 
 	if (hParam4 == joaat("XPCATEGORY_COMPLETED_SHOWER") || hParam4 == joaat("XPCATEGORY_COMPLETED_ROLLERCOASTER"))
@@ -35938,12 +35938,12 @@ void func_998(int iParam0) // Position - 0x329AF
 
 BOOL func_999() // Position - 0x32A04
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 BOOL func_1000() // Position - 0x32A2D
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 void func_1001(BOOL bParam0, BOOL bParam1) // Position - 0x32A49
@@ -96358,7 +96358,7 @@ BOOL func_1236(Vehicle veParam0) // Position - 0x809BD
 
 BOOL func_1237() // Position - 0x80A4A
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -109604,7 +109604,7 @@ void func_1374(Vehicle veParam0) // Position - 0x8FCC4
 			}
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (IS_BIT_SET(Global_MissionData1.f_26, 25))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs16, 25))
 					if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 						func_1376(veParam0);
 		}
@@ -109626,7 +109626,7 @@ void func_1374(Vehicle veParam0) // Position - 0x8FCC4
 			}
 		}
 	
-		if (IS_BIT_SET(Global_MissionData1.f_18, 24) || func_1375() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 24) || func_1375() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			VEHICLE::SET_BIKE_EASY_TO_LAND(veParam0, true);
 	}
 
@@ -135205,7 +135205,7 @@ void func_1828(var uParam0, Player plParam1) // Position - 0xB52A2
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(122);
 	}
-	else if (IS_BIT_SET(Global_MissionData1.f_27, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
+	else if (IS_BIT_SET(Global_MissionData1.missionGenMenubs17, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(123);
 	}
@@ -139288,7 +139288,7 @@ BOOL func_2015() // Position - 0xB9C06
 	if (func_401() || func_2020() || func_81() || func_2019() || func_2018() || func_1103() || func_2016())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs26, 1))
 		return true;
 
 	return false;
@@ -139366,10 +139366,10 @@ eHudColour func_2021(int iParam0, Player plParam1, BOOL bParam2) // Position - 0
 		else
 			num = func_2005(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 13))
 			num = func_2022(iParam0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs14, 29))
 			num = 0;
 	
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_326(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))

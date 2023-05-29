@@ -466,7 +466,7 @@ void func_5() // Position - 0x227
 	{
 		_STOPWATCH_INITIALIZE(&(iLocal_130.f_32), false, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_32, 16) && !IS_BIT_SET(Global_1969893, 3))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 16) && !IS_BIT_SET(Global_1969893, 3))
 		{
 			func_1009(true);
 			func_1008(1);
@@ -62939,7 +62939,7 @@ BOOL func_318(Vehicle veParam0) // Position - 0x50F59
 
 BOOL func_319() // Position - 0x50FE6
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -90500,7 +90500,7 @@ BOOL func_670() // Position - 0x7AFF5
 
 BOOL func_671() // Position - 0x7B1E1
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 int func_672() // Position - 0x7B20A
@@ -90676,7 +90676,7 @@ void func_675(Vehicle veParam0) // Position - 0x7B2F8
 			}
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (IS_BIT_SET(Global_MissionData1.f_26, 25))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs16, 25))
 					if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 						func_677(veParam0);
 		}
@@ -90698,7 +90698,7 @@ void func_675(Vehicle veParam0) // Position - 0x7B2F8
 			}
 		}
 	
-		if (IS_BIT_SET(Global_MissionData1.f_18, 24) || func_676() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 24) || func_676() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			VEHICLE::SET_BIKE_EASY_TO_LAND(veParam0, true);
 	}
 
@@ -105868,7 +105868,7 @@ void func_1001(int iParam0) // Position - 0x9352C
 
 BOOL func_1002() // Position - 0x93581
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 void func_1003(BOOL bParam0, BOOL bParam1) // Position - 0x9359D
@@ -109384,7 +109384,7 @@ Vector3 func_1156(var uParam0) // Position - 0x97B0F
 					offsetFromCoordAndHeadingInWorldCoords2 = Vector3(Global_4980736.f_191884[playerTeam][i]);
 					flag2 = false;
 				
-					if (IS_BIT_SET(Global_MissionData1.f_30, 25) || IS_BIT_SET(Global_MissionData1.f_32, 23))
+					if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 25) || IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 23))
 						offsetFromCoordAndHeadingInWorldCoords2 = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromCoordAndHeadingInWorldCoords2, Global_4980736.f_191884[playerTeam][i].f_3, 0f, 6.5f, 0.5f));
 				
 					num3 = Vector3(offsetFromCoordAndHeadingInWorldCoords2);
@@ -109417,7 +109417,7 @@ Vector3 func_1156(var uParam0) // Position - 0x97B0F
 		{
 			offsetFromCoordAndHeadingInWorldCoords = Vector3(Global_4980736.f_191884[0][0]);
 		
-			if (IS_BIT_SET(Global_MissionData1.f_30, 25) || IS_BIT_SET(Global_MissionData1.f_32, 23))
+			if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 25) || IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 23))
 				offsetFromCoordAndHeadingInWorldCoords = Vector3(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(offsetFromCoordAndHeadingInWorldCoords, Global_4980736.f_191884[playerTeam][i].f_3, 0f, 6.5f, 0.5f));
 		
 			*uParam0 = Global_4980736.f_191884[0][0].f_3;

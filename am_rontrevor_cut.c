@@ -6609,12 +6609,12 @@ void func_189(int iParam0) // Position - 0x78B8
 
 BOOL func_190() // Position - 0x790D
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 BOOL func_191() // Position - 0x7936
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 void func_192(BOOL bParam0, BOOL bParam1) // Position - 0x7952
@@ -67236,7 +67236,7 @@ BOOL func_439(Vehicle veParam0) // Position - 0x55DD0
 
 BOOL func_440() // Position - 0x55E5D
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -93960,7 +93960,7 @@ void func_778(Vehicle veParam0) // Position - 0x7EC20
 			}
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (IS_BIT_SET(Global_MissionData1.f_26, 25))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs16, 25))
 					if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 						func_780(veParam0);
 		}
@@ -93982,7 +93982,7 @@ void func_778(Vehicle veParam0) // Position - 0x7EC20
 			}
 		}
 	
-		if (IS_BIT_SET(Global_MissionData1.f_18, 24) || func_779() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 24) || func_779() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			VEHICLE::SET_BIKE_EASY_TO_LAND(veParam0, true);
 	}
 

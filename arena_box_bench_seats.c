@@ -1116,10 +1116,10 @@ void func_25(var uParam0, BOOL bParam1) // Position - 0xAB2
 
 BOOL func_26() // Position - 0xAEC
 {
-	if (IS_BIT_SET(Global_MissionData1.f_32, 23) && !IS_BIT_SET(Global_1969893, 13) && !IS_BIT_SET(Global_1969893, 19))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 23) && !IS_BIT_SET(Global_1969893, 13) && !IS_BIT_SET(Global_1969893, 19))
 		return false;
 
-	if (IS_BIT_SET(Global_MissionData1.f_30, 25) && !IS_BIT_SET(Global_1969893, 15) && !IS_BIT_SET(Global_1969893, 19))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 25) && !IS_BIT_SET(Global_1969893, 15) && !IS_BIT_SET(Global_1969893, 19))
 		return false;
 
 	if (_IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("MPOFSEAT_PCEXIT" /*Press ~INPUT_SCRIPT_RRIGHT~ to stand up.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("MPOFSEAT_EXIT" /*Press ~INPUT_FRONTEND_RIGHT~ to stand up.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("ARENA_SEAT" /*Press ~INPUT_SCRIPT_RDOWN~ to fly a Battle Drone.~n~Press ~INPUT_SCRIPT_RRIGHT~ to drive an RC Bandito.~n~Press ~INPUT_SCRIPT_RLEFT~ to use the Trap Cam.~n~Press ~INPUT_SCRIPT_RUP~ to use a Turret.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("ARENA_SEAT_PC" /*Press ~INPUT_SCRIPT_RDOWN~ to fly a Battle Drone.~n~Press ~INPUT_SCRIPT_RRIGHT~ to drive an RC Bandito.~n~Press ~INPUT_SCRIPT_RLEFT~ to use the Trap Cam.~n~Press ~INPUT_SCRIPT_RUP~ to use a Turret.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/) || func_28("ARENA_SEAT1" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam for $~1~.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone for $~1~.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26645, Global_262145.f_26646) || func_28("ARENA_SEAT_PC1" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam for $~1~.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone for $~1~.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26645, Global_262145.f_26646) || func_27("ARENA_SEAT2" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam for $~1~.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26645) || func_27("ARENA_SEAT_PC2" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam for $~1~.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26645) || func_27("ARENA_SEAT3" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone for $~1~.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26646) || func_27("ARENA_SEAT_PC3" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone for $~1~.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/, Global_262145.f_26646) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("ARENA_SEAT4" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("ARENA_SEAT_PC4" /*Press ~INPUT_SCRIPT_RDOWN~ to use Spectator Cam.~n~Press ~INPUT_SCRIPT_RLEFT~ to fly a Spectator Drone.~n~Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/) || _IS_THIS_HELP_MESSAGE_BEING_DISPLAYED("ARENA_SEAT_EX" /*Press ~INPUT_SCRIPT_PAD_RIGHT~ to stand up.*/))
@@ -1669,7 +1669,7 @@ BOOL func_52() // Position - 0x1604
 	if (func_55() && !func_54())
 		return true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_30, 25) || IS_BIT_SET(Global_MissionData1.f_32, 23))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 25) || IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 23))
 		if (func_53())
 			return true;
 
@@ -1681,7 +1681,7 @@ BOOL func_52() // Position - 0x1604
 	num = Global_1058070.f_14[playerTeam];
 
 	if (num < 17)
-		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_MissionData1.f_32, 16))
+		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 16))
 			return true;
 
 	return false;
@@ -1699,7 +1699,7 @@ BOOL func_54() // Position - 0x170F
 
 BOOL func_55() // Position - 0x171B
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 BOOL func_56() // Position - 0x1737
@@ -1707,7 +1707,7 @@ BOOL func_56() // Position - 0x1737
 	if (func_58() && !func_57())
 		return false;
 
-	if (IS_BIT_SET(Global_MissionData1.f_32, 16))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 16))
 		return true;
 
 	return false;
@@ -2719,7 +2719,7 @@ BOOL func_72() // Position - 0x3922
 		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26))
 			flag = true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_32, 4) && !flag)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 4) && !flag)
 		return true;
 
 	return false;
@@ -2746,7 +2746,7 @@ BOOL func_73() // Position - 0x3992
 		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25))
 			flag = true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_32, 1) && !flag)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 1) && !flag)
 		return true;
 
 	return false;
@@ -2791,7 +2791,7 @@ BOOL func_76() // Position - 0x3A79
 		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24))
 			flag = true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_30, 14) && !flag)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 14) && !flag)
 		return true;
 
 	return false;
@@ -2815,7 +2815,7 @@ BOOL func_77() // Position - 0x3AEA
 		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23))
 			flag = true;
 
-	if (IS_BIT_SET(Global_MissionData1.f_30, 13) && !flag)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 13) && !flag)
 		return true;
 
 	return false;
@@ -3433,7 +3433,7 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 
 BOOL func_108() // Position - 0x47CC
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 BOOL func_109(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x47F5

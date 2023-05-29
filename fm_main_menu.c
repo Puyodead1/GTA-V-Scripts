@@ -664,7 +664,7 @@ void func_16(var uParam0) // Position - 0x77A
 	}
 	else if (Global_MissionData1 == 1)
 	{
-		Global_MissionData1.f_1195 = uParam0->f_8[1][0];
+		Global_MissionData1.f_1195am0->f_8[1][0];
 		Global_MissionData1.ruleTime = uParam0->f_8[1][2];
 		Global_MissionData1.ruleScore = uParam0->f_8[1][3];
 		Global_MissionData1.f_1197 = uParam0->f_8[1][4];
@@ -681,7 +681,7 @@ void func_16(var uParam0) // Position - 0x77A
 	}
 	else if (Global_MissionData1 == 2)
 	{
-		Global_MissionData1.f_1195 = uParam0->f_8[2][4];
+		Global_MissionData1.f_1195am0->f_8[2][4];
 		Global_MissionData1.f_104426 = uParam0->f_8[2][7];
 	}
 

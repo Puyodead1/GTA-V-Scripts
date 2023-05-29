@@ -62982,7 +62982,7 @@ void func_313(Player plParam0, int iParam1, int iParam2) // Position - 0x50776
 		else
 			func_314(plParam0, iParam1, 0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_28, 4))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 4))
 			func_314(plParam0, Global_1836625, 1);
 	
 		func_182(plParam0, iParam2);

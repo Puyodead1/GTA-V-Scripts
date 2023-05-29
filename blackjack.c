@@ -3750,7 +3750,7 @@ void main() // Position - 0x0
 		if (!func_427(PLAYER::PLAYER_ID()) && !func_426(PLAYER::PLAYER_ID()) && !func_425(PLAYER::PLAYER_ID()))
 			func_429();
 	
-		if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_MissionData1.f_34, 7))
+		if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_MissionData1.missionGenMenubs24, 7))
 			func_429();
 	
 		if (func_426(PLAYER::PLAYER_ID()) && func_421() != _INVALID_PLAYER_INDEX_0())

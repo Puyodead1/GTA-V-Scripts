@@ -672,7 +672,7 @@ void func_15() // Position - 0x6FD
 {
 	Vector3 entityCoords;
 
-	if (!Global_2793046.f_4616 && !IS_BIT_SET(Global_MissionData1.f_33, 19))
+	if (!Global_2793046.f_4616 && !IS_BIT_SET(Global_MissionData1.missionGenMenubs23, 19))
 	{
 		if (_NETWORK_IS_PLAYER_VALID(PLAYER::PLAYER_ID(), true, true) && !PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !Global_1574582.f_6 && func_1032())
 		{
@@ -3357,12 +3357,12 @@ void func_95(int iParam0) // Position - 0x3F20
 
 BOOL func_96() // Position - 0x3F75
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 BOOL func_97() // Position - 0x3F9E
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 void func_98(BOOL bParam0, BOOL bParam1) // Position - 0x3FBA
@@ -64058,7 +64058,7 @@ BOOL func_350(Vehicle veParam0) // Position - 0x5228C
 
 BOOL func_351() // Position - 0x52319
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -91731,7 +91731,7 @@ void func_702(Vehicle veParam0) // Position - 0x7C58E
 			}
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (IS_BIT_SET(Global_MissionData1.f_26, 25))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs16, 25))
 					if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 						func_704(veParam0);
 		}
@@ -91753,7 +91753,7 @@ void func_702(Vehicle veParam0) // Position - 0x7C58E
 			}
 		}
 	
-		if (IS_BIT_SET(Global_MissionData1.f_18, 24) || func_703() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 24) || func_703() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			VEHICLE::SET_BIKE_EASY_TO_LAND(veParam0, true);
 	}
 

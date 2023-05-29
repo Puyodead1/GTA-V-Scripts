@@ -7264,7 +7264,7 @@ void func_263(BOOL bParam0) // Position - 0x9030
 
 BOOL func_264() // Position - 0x9063
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 BOOL func_265(Player plParam0) // Position - 0x907F
@@ -12009,10 +12009,10 @@ BOOL func_439() // Position - 0xF63D
 	num = Global_1058070.f_14[playerTeam];
 
 	if (num < 17)
-		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_MissionData1.f_32, 16))
+		if (IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 23) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 24) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 25) && IS_BIT_SET(Global_MissionData1.f_1265[playerTeam].f_8085[num], 26) && IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 16))
 			return 1;
 
-	if (!IS_BIT_SET(Global_MissionData1.f_32, 16))
+	if (!IS_BIT_SET(Global_MissionData1.missionGenMenubs22, 16))
 		return 1;
 	else if (func_437() || func_440(PLAYER::PLAYER_ID()))
 		return 1;

@@ -17593,7 +17593,7 @@ void func_345() // Position - 0x134A9
 	if (func_346() && Global_1950108.f_3683 != 123 && CAM::IS_SCREEN_FADED_OUT())
 		func_359();
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_MissionData1.f_34, 9))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && !IS_BIT_SET(Global_MissionData1.missionGenMenubs24, 9))
 		func_359();
 
 	return;

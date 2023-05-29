@@ -1149,7 +1149,7 @@ void main() // Position - 0x0
 				
 					if (ENTITY::GET_ENTITY_SUBMERGED_LEVEL(PLAYER::PLAYER_PED_ID()) == 1f)
 					{
-						if (IS_BIT_SET(Global_MissionData1.f_37, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632)
+						if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632)
 						{
 							func_5(true, true);
 							MISC::SET_BIT(&G_SleepModeOnOn25, 14);
@@ -1302,7 +1302,7 @@ void main() // Position - 0x0
 			
 				if (PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()))
 				{
-					if (IS_BIT_SET(Global_MissionData1.f_37, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632)
+					if (IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632)
 					{
 						func_5(true, true);
 					}
@@ -4730,7 +4730,7 @@ BOOL func_74() // Position - 0x5867
 				if (ENTITY::IS_ENTITY_IN_WATER(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
 					return false;
 	
-		if (PED::IS_PED_SWIMMING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()) || PED::IS_PED_HANGING_ON_TO_VEHICLE(PLAYER::PLAYER_PED_ID()) && !(IS_BIT_SET(Global_MissionData1.f_37, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632))
+		if (PED::IS_PED_SWIMMING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()) || PED::IS_PED_HANGING_ON_TO_VEHICLE(PLAYER::PLAYER_PED_ID()) && !(IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632))
 			return false;
 	
 		if (Global_112696)

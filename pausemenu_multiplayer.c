@@ -17241,7 +17241,7 @@ void func_530(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 		DATAFILE::DATADICT_SET_INT(*uParam1, "cmpts", Global_4718592.f_10);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "clbscr", *Global_4718592.f_160500);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "disar", *Global_4718592.f_160501);
-		DATAFILE::DATADICT_SET_INT(*uParam1, "ovrpc", *Global_4980736.f_102385);
+		DATAFILE::DATADICT_SET_INT(*uParam1, "ovrpc", *Global_MissionData1.missionGenOvrpc);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "hptfb", Global_4718592.f_1264);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "csittd", *Global_4718592.f_174874);
 		DATAFILE::DATADICT_SET_FLOAT(*uParam1, "fiispr", *Global_4718592.f_114293);
@@ -32807,7 +32807,7 @@ void func_755(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 			Global_4718592.f_160499 = 2;
 		}
 	
-		Global_4980736.f_102385 = -1;
+		Global_MissionData1.missionGenOvrpc = -1;
 		Global_4718592.f_11 = 0;
 		Global_4718592.f_12 = 0;
 		Global_4718592.missionGenMenubs3 = 0;
@@ -60690,9 +60690,9 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	Global_4718592.f_11 = DATAFILE::DATADICT_GET_INT(dict, "menubs");
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "ovrpc") == 2)
-		Global_4980736.f_102385 = DATAFILE::DATADICT_GET_INT(dict, "ovrpc");
+		Global_MissionData1.missionGenOvrpc = DATAFILE::DATADICT_GET_INT(dict, "ovrpc");
 	else
-		Global_4980736.f_102385 = -1;
+		Global_MissionData1.missionGenOvrpc = -1;
 
 	Global_4718592.f_12 = DATAFILE::DATADICT_GET_INT(dict, "menubs2");
 

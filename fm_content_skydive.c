@@ -24956,7 +24956,7 @@ void func_555() // Position - 0x24A17
 
 	AUDIO::RELEASE_SOUND_ID(iLocal_114.f_4);
 	AUDIO::RELEASE_SOUND_ID(iLocal_114.f_5);
-	MISC::CLEAR_BIT(&(Global_MissionData1.f_39), 3);
+	MISC::CLEAR_BIT(&(Global_MissionData1.missionGenMenubs29), 3);
 
 	if (bLocal_2767 && ENTITY::IS_ENTITY_PLAYING_ANIM(pedLocal_2772, func_566(), func_565(), 3))
 		TASK::CLEAR_PED_TASKS(pedLocal_2772);
@@ -28156,12 +28156,12 @@ int func_608() // Position - 0x294AC
 
 BOOL func_609() // Position - 0x294B8
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 12) && Global_1969891 == 8;
 }
 
 BOOL func_610() // Position - 0x294E1
 {
-	return IS_BIT_SET(Global_MissionData1.f_30, 12) && IS_BIT_SET(Global_1969892, 0);
+	return IS_BIT_SET(Global_MissionData1.missionGenMenubs20, 12) && IS_BIT_SET(Global_1969892, 0);
 }
 
 BOOL func_611(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0x294FD
@@ -28887,7 +28887,7 @@ int func_653() // Position - 0x2A319
 {
 	Ped ped;
 
-	MISC::SET_BIT(&(Global_MissionData1.f_39), 3);
+	MISC::SET_BIT(&(Global_MissionData1.missionGenMenubs29), 3);
 
 	if (!bLocal_2767)
 		return 0;
@@ -32028,7 +32028,7 @@ int func_828(var uParam0, Ped pedParam1, const char* sParam2, Hash hParam3, Hash
 
 	num = func_838(uParam0, sParam2, hParam3, hParam4, iParam5, iParam6, iParam7, bParam9);
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_39, 19))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs29, 19))
 		return num;
 
 	if (hParam4 == joaat("XPCATEGORY_COMPLETED_SHOWER") || hParam4 == joaat("XPCATEGORY_COMPLETED_ROLLERCOASTER"))
@@ -100795,7 +100795,7 @@ BOOL func_1463(Vehicle veParam0) // Position - 0x86272
 
 BOOL func_1464() // Position - 0x862FF
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -113949,7 +113949,7 @@ void func_1596(Vehicle veParam0) // Position - 0x9539B
 			}
 		
 			if (entityModel == joaat("submersible") || entityModel == joaat("submersible2"))
-				if (IS_BIT_SET(Global_MissionData1.f_26, 25))
+				if (IS_BIT_SET(Global_MissionData1.missionGenMenubs16, 25))
 					if (ENTITY::DOES_ENTITY_EXIST(veParam0))
 						func_1598(veParam0);
 		}
@@ -113971,7 +113971,7 @@ void func_1596(Vehicle veParam0) // Position - 0x9539B
 			}
 		}
 	
-		if (IS_BIT_SET(Global_MissionData1.f_18, 24) || func_1597() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 24) || func_1597() && NETWORK::NETWORK_IS_ACTIVITY_SESSION())
 			VEHICLE::SET_BIKE_EASY_TO_LAND(veParam0, true);
 	}
 
@@ -132176,7 +132176,7 @@ void func_2023(Player plParam0, int iParam1, int iParam2) // Position - 0xB18F0
 		else
 			func_583(plParam0, iParam1, 0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_28, 4))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 4))
 			func_583(plParam0, Global_1836625, 1);
 	
 		func_585(plParam0, iParam2);
@@ -144134,7 +144134,7 @@ void func_2181(var uParam0, Player plParam1) // Position - 0xC0E03
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(122);
 	}
-	else if (IS_BIT_SET(Global_MissionData1.f_27, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
+	else if (IS_BIT_SET(Global_MissionData1.missionGenMenubs17, 15) && plParam1 > -1 && plParam1 < 32 && IS_BIT_SET(Global_2657589[plParam1].f_436, 0))
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(123);
 	}
@@ -149057,7 +149057,7 @@ BOOL func_2395() // Position - 0xC6A12
 	if (func_401() || func_2400() || func_76() || func_2399() || func_2398() || func_1332() || func_2396())
 		return true;
 
-	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.f_36, 1))
+	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION() && IS_BIT_SET(Global_MissionData1.missionGenMenubs26, 1))
 		return true;
 
 	return false;
@@ -149135,10 +149135,10 @@ eHudColour func_2401(int iParam0, Player plParam1, BOOL bParam2) // Position - 0
 		else
 			num = func_2385(plParam1, !bParam2, iParam0, false);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_21, 13))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs11, 13))
 			num = func_2402(iParam0);
 	
-		if (IS_BIT_SET(Global_MissionData1.f_24, 29))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs14, 29))
 			num = 0;
 	
 		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs5, 26) && !func_326(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))

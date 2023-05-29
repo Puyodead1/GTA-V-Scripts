@@ -31556,9 +31556,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	Global_4718592.f_11 = DATAFILE::DATADICT_GET_INT(dict, "menubs");
 
 	if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, "ovrpc") == 2)
-		Global_4980736.f_102385 = DATAFILE::DATADICT_GET_INT(dict, "ovrpc");
+		Global_MissionData1.missionGenOvrpc = DATAFILE::DATADICT_GET_INT(dict, "ovrpc");
 	else
-		Global_4980736.f_102385 = -1;
+		Global_MissionData1.missionGenOvrpc = -1;
 
 	Global_4718592.f_12 = DATAFILE::DATADICT_GET_INT(dict, "menubs2");
 
@@ -36949,7 +36949,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 			Global_4718592.f_160499 = 2;
 		}
 	
-		Global_4980736.f_102385 = -1;
+		Global_MissionData1.missionGenOvrpc = -1;
 		Global_4718592.f_11 = 0;
 		Global_4718592.f_12 = 0;
 		Global_4718592.missionGenMenubs3 = 0;

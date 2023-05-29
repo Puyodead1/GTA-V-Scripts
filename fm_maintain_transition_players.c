@@ -1891,7 +1891,7 @@ BOOL func_25(var uParam0) // Position - 0xF3E
 
 BOOL func_26() // Position - 0xF5C
 {
-	if (IS_BIT_SET(Global_MissionData1.f_28, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs18, 18) || *Global_MissionData1.f_104427 == 18 || *Global_MissionData1.f_104427 == 19)
 		return true;
 
 	return false;
@@ -1916,7 +1916,7 @@ void func_27() // Position - 0xF9B
 	if (flag)
 	{
 		if (Global_MissionData1 == 0 && num > Global_MissionData1.f_1195)
-			num = Global_MissionData1.f_1195;
+			num = Global_MissionData1.f_1195
 	
 		NETWORK::NETWORK_SET_ACTIVITY_PLAYER_MAX(num);
 	}
@@ -2438,7 +2438,7 @@ BOOL func_38(var uParam0, BOOL bParam1) // Position - 0x1C81
 
 BOOL func_39() // Position - 0x1CF7
 {
-	if (IS_BIT_SET(Global_MissionData1.f_18, 0))
+	if (IS_BIT_SET(Global_MissionData1.missionGenMenubs8, 0))
 		return true;
 
 	return func_44(*Global_MissionData1.f_113724, true) || func_43(*Global_MissionData1.f_113724) || func_42(*Global_MissionData1.f_113724) || func_61(*Global_MissionData1.f_113724) || func_60(*Global_MissionData1.missionGenAdverm) || func_41(*Global_MissionData1.missionGenAdverm) || func_40(*Global_MissionData1.missionGenAdverm);
@@ -43018,8 +43018,8 @@ BOOL _STOPWATCH_IS_INITIALIZED(var uParam0) // Position - 0x2D90C
 
 void func_443(BOOL bParam0) // Position - 0x2D918
 {
-	if (!IS_BIT_SET(Global_MissionData1.f_31, 4))
-		if (IS_BIT_SET(Global_MissionData1.f_31, 13))
+	if (!IS_BIT_SET(Global_MissionData1.missionGenMenubs21, 4))
+		if (IS_BIT_SET(Global_MissionData1.missionGenMenubs21, 13))
 			VEHICLE::SET_VEHICLE_COMBAT_MODE(true);
 
 	if (func_445())
@@ -48839,7 +48839,7 @@ void func_676(var uParam0) // Position - 0x34FA6
 
 	player = PLAYER::PLAYER_ID();
 	iLocal_195.f_4 = *uParam0;
-	iLocal_195.f_5 = Global_MissionData1.f_1195;
+	iLocal_195.f_5 = Global_MissionData1.f_1195
 	iLocal_195.f_6 = 0;
 	iLocal_195.f_7 = Global_2680249[1];
 
