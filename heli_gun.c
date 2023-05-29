@@ -7082,7 +7082,7 @@ BOOL func_151() // Position - 0x9960
 				
 					if (func_152())
 					{
-						if (!IS_BIT_SET(Global_4718592.f_15, 12) && !Global_2694562)
+						if (!IS_BIT_SET(Global_4718592.missionGenMenubs5, 12) && !Global_2694562)
 						{
 							if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_340, false) && !func_43(veLocal_340, false))
 							{
@@ -7443,7 +7443,7 @@ void func_165() // Position - 0xA347
 	if (!func_173())
 		return;
 
-	if (IS_BIT_SET(Global_4718592.f_15, 12) || Global_2694562 || Global_1577914)
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 12) || Global_2694562 || Global_1577914)
 		return;
 
 	if (func_158())
@@ -7787,7 +7787,7 @@ void func_178() // Position - 0xAA7A
 		
 	}
 
-	if (IS_BIT_SET(Global_4718592.f_15, 12) || Global_2694562)
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 12) || Global_2694562)
 		return;
 
 	if (plLocal_344 == PLAYER::PLAYER_ID() && hLocal_295 != joaat("bombushka"))

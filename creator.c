@@ -103021,7 +103021,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_12 = 0;
 		Global_4718592.missionGenMenubs3 = 0;
 		Global_4718592.missionGenMenubs4 = 0;
-		Global_4718592.f_15 = 0;
+		Global_4718592.missionGenMenubs5 = 0;
 		Global_4718592.f_16 = 0;
 		Global_4718592.f_17 = 0;
 		Global_4718592.f_18 = 0;

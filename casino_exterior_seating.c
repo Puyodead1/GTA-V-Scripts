@@ -95491,7 +95491,7 @@ void func_480(var uParam0, BOOL bParam1, var uParam2, var uParam3, var uParam4, 
 {
 	if (Global_4718592 == 0)
 	{
-		if (IS_BIT_SET(Global_4718592.f_15, 20))
+		if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 20))
 			func_482(uParam0, bParam1, uParam2, uParam3, uParam4, uParam5);
 	
 		if (Global_262145.f_13166)

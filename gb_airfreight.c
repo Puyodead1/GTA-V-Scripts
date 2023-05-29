@@ -47410,7 +47410,7 @@ int func_344(Player plParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Positi
 	if (bParam1)
 	{
 		if (iParam2 > -1)
-			if (func_310(playerTeam, iParam2, 0, -1) && !IS_BIT_SET(Global_4718592.f_15, 18))
+			if (func_310(playerTeam, iParam2, 0, -1) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18))
 				if (playerTeam == iParam2)
 					return func_348(true);
 				else
@@ -47653,9 +47653,9 @@ int func_354(Player plParam0, Player plParam1, int iParam2, BOOL bParam3, BOOL b
 					return func_357(num);
 			}
 		
-			if (func_356(plParam1, plParam0, playerTeam, 0) && !IS_BIT_SET(Global_4718592.f_15, 18) || func_310(PLAYER::GET_PLAYER_TEAM(plParam1), PLAYER::GET_PLAYER_TEAM(plParam0), 0, -1) && IS_BIT_SET(Global_4718592.f_15, 23) && !IS_BIT_SET(Global_4718592.f_15, 18))
+			if (func_356(plParam1, plParam0, playerTeam, 0) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18) || func_310(PLAYER::GET_PLAYER_TEAM(plParam1), PLAYER::GET_PLAYER_TEAM(plParam0), 0, -1) && IS_BIT_SET(Global_4718592.missionGenMenubs5, 23) && !IS_BIT_SET(Global_4718592.missionGenMenubs5, 18))
 				return func_348(true);
-			else if (IS_BIT_SET(Global_4718592.f_15, 26))
+			else if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 26))
 				return func_355(true);
 			else
 				return func_344(plParam1, true, playerTeam, bParam4);
@@ -47898,7 +47898,7 @@ int func_370(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x32C48
 			else if (Global_4718592.f_108449[iParam0] == 2)
 				num = 24;
 			else if (Global_4718592.f_108449[iParam0] == 4)
-				if (IS_BIT_SET(Global_4718592.f_15, 29))
+				if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 29))
 					num = 21;
 				else
 					num = 6;
@@ -47913,7 +47913,7 @@ int func_370(int iParam0, Player plParam1, BOOL bParam2) // Position - 0x32C48
 		if (IS_BIT_SET(Global_4718592.f_24, 29))
 			num = 0;
 	
-		if (IS_BIT_SET(Global_4718592.f_15, 26) && !func_310(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
+		if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 26) && !func_310(iParam0, PLAYER::GET_PLAYER_TEAM(plParam1), 0, -1))
 			num = func_355(true);
 	}
 	else

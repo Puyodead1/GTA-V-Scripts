@@ -31568,7 +31568,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 		Global_4718592.missionGenMenubs3 = 0;
 
 	Global_4718592.missionGenMenubs4 = DATAFILE::DATADICT_GET_INT(dict, "menubs4");
-	Global_4718592.f_15 = DATAFILE::DATADICT_GET_INT(dict, "menubs5");
+	Global_4718592.missionGenMenubs5 = DATAFILE::DATADICT_GET_INT(dict, "menubs5");
 	Global_4718592.f_16 = DATAFILE::DATADICT_GET_INT(dict, "menubs6");
 	Global_4718592.f_17 = DATAFILE::DATADICT_GET_INT(dict, "menubs7");
 	Global_4718592.f_18 = DATAFILE::DATADICT_GET_INT(dict, "menubs8");
@@ -31752,7 +31752,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_166304 = -1;
 
-	if (IS_BIT_SET(Global_4718592.f_15, 31))
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 31))
 	{
 	}
 
@@ -32799,7 +32799,7 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	Global_4718592.f_1201 = DATAFILE::DATADICT_GET_INT(dict, "mtnum");
 
 	if (!func_415())
-		if (!IS_BIT_SET(Global_4718592.f_15, 14))
+		if (!IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 			Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 		else if (DATAFILE::DATADICT_GET_TYPE(dict, "dtn") == 2)
 			Global_4718592.f_1199 = DATAFILE::DATADICT_GET_INT(dict, "dtn");
@@ -36954,7 +36954,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_12 = 0;
 		Global_4718592.missionGenMenubs3 = 0;
 		Global_4718592.missionGenMenubs4 = 0;
-		Global_4718592.f_15 = 0;
+		Global_4718592.missionGenMenubs5 = 0;
 		Global_4718592.f_16 = 0;
 		Global_4718592.f_17 = 0;
 		Global_4718592.f_18 = 0;

@@ -1383,7 +1383,7 @@ void main() // Position - 0x0
 					{
 						if (func_29(&iLocal_195, &uLocal_320, bLocal_183))
 						{
-							if (Global_2683864.f_669.f_9 != 0 && bLocal_188 || IS_BIT_SET(Global_4718592.f_15, 14))
+							if (Global_2683864.f_669.f_9 != 0 && bLocal_188 || IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 							{
 								Global_1890444[PLAYER::PLAYER_ID()] = Global_4718592.missionGenTnum;
 								Global_2683864.f_669.f_11 = Global_4718592.missionGenTnum;
@@ -3239,7 +3239,7 @@ void func_63(var uParam0) // Position - 0x2D09
 	
 		bLocal_188 = true;
 	}
-	else if (!IS_BIT_SET(Global_4718592.f_15, 14))
+	else if (!IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 	{
 		Global_2683864.f_669.f_11 = 0;
 	}
@@ -3685,7 +3685,7 @@ void func_91(var uParam0) // Position - 0x3710
 		uParam0->f_6 = 0;
 		uParam0->f_7 = Global_4718592.missionGenTnum;
 	
-		if (IS_BIT_SET(Global_4718592.f_15, 14))
+		if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 		{
 			if (Global_2680249[0] == -1)
 			{

@@ -17099,7 +17099,7 @@ void func_530(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 	DATAFILE::DATADICT_SET_INT(*uParam1, "adverm", *Global_4718592.f_166301);
 	DATAFILE::DATADICT_SET_INT(*uParam1, "num", func_558(Global_4718592, Global_4718592.f_1195));
 
-	if (!IS_BIT_SET(Global_4718592.f_15, 14))
+	if (!IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 		if (Global_4718592.f_1196 < func_557(Global_4718592, Global_4718592.missionGenTnum))
 			Global_4718592.f_1196 = func_557(Global_4718592, Global_4718592.missionGenTnum);
 
@@ -17199,7 +17199,7 @@ void func_530(var uParam0, var uParam1, var uParam2, BOOL bParam3) // Position -
 		func_528("menubs2", &(Global_4718592.f_12), uParam1, 0);
 		func_528("menubs3", &(Global_4718592.missionGenMenubs3), uParam1, 0);
 		func_528("menubs4", &(Global_4718592.missionGenMenubs4), uParam1, 0);
-		func_528("menubs5", &(Global_4718592.f_15), uParam1, 0);
+		func_528("menubs5", &(Global_4718592.missionGenMenubs5), uParam1, 0);
 		func_528("menubs6", &(Global_4718592.f_16), uParam1, 0);
 		func_528("menubs7", &(Global_4718592.f_17), uParam1, 0);
 		func_528("menubs8", &(Global_4718592.f_18), uParam1, 0);
@@ -32812,7 +32812,7 @@ void func_755(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_4718592.f_12 = 0;
 		Global_4718592.missionGenMenubs3 = 0;
 		Global_4718592.missionGenMenubs4 = 0;
-		Global_4718592.f_15 = 0;
+		Global_4718592.missionGenMenubs5 = 0;
 		Global_4718592.f_16 = 0;
 		Global_4718592.f_17 = 0;
 		Global_4718592.f_18 = 0;
@@ -60702,7 +60702,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 		Global_4718592.missionGenMenubs3 = 0;
 
 	Global_4718592.missionGenMenubs4 = DATAFILE::DATADICT_GET_INT(dict, "menubs4");
-	Global_4718592.f_15 = DATAFILE::DATADICT_GET_INT(dict, "menubs5");
+	Global_4718592.missionGenMenubs5 = DATAFILE::DATADICT_GET_INT(dict, "menubs5");
 	Global_4718592.f_16 = DATAFILE::DATADICT_GET_INT(dict, "menubs6");
 	Global_4718592.f_17 = DATAFILE::DATADICT_GET_INT(dict, "menubs7");
 	Global_4718592.f_18 = DATAFILE::DATADICT_GET_INT(dict, "menubs8");
@@ -60886,7 +60886,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	else
 		Global_4718592.f_166304 = -1;
 
-	if (IS_BIT_SET(Global_4718592.f_15, 31))
+	if (IS_BIT_SET(Global_4718592.missionGenMenubs5, 31))
 	{
 	}
 
@@ -61933,7 +61933,7 @@ void func_1076(int iParam0, int iParam1, BOOL bParam2) // Position - 0x6DFBA
 	Global_4718592.f_1201 = DATAFILE::DATADICT_GET_INT(dict, "mtnum");
 
 	if (!func_1093())
-		if (!IS_BIT_SET(Global_4718592.f_15, 14))
+		if (!IS_BIT_SET(Global_4718592.missionGenMenubs5, 14))
 			Global_4718592.f_1199 = Global_4718592.missionGenTnum;
 		else if (DATAFILE::DATADICT_GET_TYPE(dict, "dtn") == 2)
 			Global_4718592.f_1199 = DATAFILE::DATADICT_GET_INT(dict, "dtn");
