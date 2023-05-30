@@ -4848,7 +4848,7 @@ void func_44(var uParam0, int iParam1, var uParam2, var uParam3, int iParam4) //
 		case 0:
 			*uParam2 = Vector3(2956.9841f, -3866.8152f, 140f);
 		
-			switch (*Global_MissionData1.f_160097)
+			switch (*Global_MissionData1.missionGenArnTh)
 			{
 				case 3:
 					uParam2->f_2 = uParam2->f_2 + 0.05f;
@@ -5228,7 +5228,7 @@ BOOL func_48(int iParam0) // Position - 0x5E86
 
 BOOL func_49() // Position - 0x6014
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160048, 19);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIplop, 19);
 }
 
 BOOL func_50(int iParam0, BOOL bParam1) // Position - 0x6029
@@ -5926,7 +5926,7 @@ void func_76(BOOL bParam0) // Position - 0x6BD0
 
 BOOL func_77() // Position - 0x6C52
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 void func_78(int* piParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, int iParam6, int iParam7) // Position - 0x6C67
@@ -45290,9 +45290,9 @@ BOOL func_350() // Position - 0x32532
 BOOL func_351(BOOL bParam0) // Position - 0x32545
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_352();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_352();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_352() // Position - 0x3257B
@@ -57232,19 +57232,19 @@ int func_662(int iParam0) // Position - 0x4103E
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_MissionData1.f_166456;
+			num = *Global_MissionData1.missionGenTwct1;
 			break;
 	
 		case 1:
-			num = *Global_MissionData1.f_166457;
+			num = *Global_MissionData1.missionGenTwct2;
 			break;
 	
 		case 2:
-			num = *Global_MissionData1.f_166458;
+			num = *Global_MissionData1.missionGenTwct3;
 			break;
 	
 		case 3:
-			num = *Global_MissionData1.f_166459;
+			num = *Global_MissionData1.missionGenTwct4;
 			break;
 	}
 

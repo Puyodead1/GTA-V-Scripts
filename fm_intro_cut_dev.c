@@ -8828,7 +8828,7 @@ int func_177(Player plParam0) // Position - 0xD7AA
 
 BOOL func_178() // Position - 0xD7C7
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_179() // Position - 0xD7DC

@@ -2856,7 +2856,7 @@ int func_110() // Position - 0x2F01
 
 	scaleformName = "";
 
-	switch (*Global_MissionData1.f_160097)
+	switch (*Global_MissionData1.missionGenArnTh)
 	{
 		case 1:
 			scaleformName = "ARENA_GUN_CAM_APOCALYPSE";
@@ -11851,7 +11851,7 @@ Vector3 func_427() // Position - 0xF3DC
 	yOffset = 6f;
 	vector = Vector3(2800f, -3800.2f, 170f);
 
-	if (Global_MissionData1.f_160097.f_1 == 3 || Global_MissionData1.f_160097.f_1 == 3 || Global_MissionData1.f_160097.f_1 == 3)
+	if (Global_MissionData1.missionGenArnTh.arnTy == 3 || Global_MissionData1.missionGenArnTh.arnTy == 3 || Global_MissionData1.missionGenArnTh.arnTy == 3)
 		vector.f_1 = -3860f;
 
 	xOffset = xOffset * (float)NETWORK::PARTICIPANT_ID_TO_INT();
@@ -12035,7 +12035,7 @@ BOOL func_441() // Position - 0xF74D
 
 BOOL func_442() // Position - 0xF77B
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 void func_443() // Position - 0xF790

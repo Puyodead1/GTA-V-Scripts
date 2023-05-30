@@ -34115,7 +34115,7 @@ BOOL func_926() // Position - 0x2FE68
 
 BOOL func_927() // Position - 0x2FE85
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_928(Player plParam0) // Position - 0x2FE9A
@@ -55521,9 +55521,9 @@ int func_1151(int iParam0) // Position - 0x51C5D
 BOOL func_1152(BOOL bParam0) // Position - 0x51C97
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_1153();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_1153();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_1153() // Position - 0x51CCD
@@ -140121,19 +140121,19 @@ int func_2067(int iParam0) // Position - 0xBA0A7
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_MissionData1.f_166456;
+			num = *Global_MissionData1.missionGenTwct1;
 			break;
 	
 		case 1:
-			num = *Global_MissionData1.f_166457;
+			num = *Global_MissionData1.missionGenTwct2;
 			break;
 	
 		case 2:
-			num = *Global_MissionData1.f_166458;
+			num = *Global_MissionData1.missionGenTwct3;
 			break;
 	
 		case 3:
-			num = *Global_MissionData1.f_166459;
+			num = *Global_MissionData1.missionGenTwct4;
 			break;
 	}
 

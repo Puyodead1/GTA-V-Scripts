@@ -15678,7 +15678,7 @@ Hash func_270(Hash hParam0) // Position - 0x1210D
 {
 	Hash model;
 
-	switch (*Global_MissionData1.f_160097)
+	switch (*Global_MissionData1.missionGenArnTh)
 	{
 		case 1:
 			switch (hParam0)
@@ -29503,7 +29503,7 @@ void func_442(var uParam0, float fParam1) // Position - 0x27309
 
 BOOL func_443() // Position - 0x27328
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_444() // Position - 0x2733D
@@ -29862,15 +29862,15 @@ void func_458(var uParam0, char* sParam1, int iParam2, BOOL bParam3, char* sPara
 				str = "CELEB_OUT_OF_LIVES" /*OUT OF LIVES*/;
 		else if (iParam2 == 2 || iParam2 == 0 || iParam2 == 9 || iParam2 == 4 || iParam2 == 6 || iParam2 == 7 || iParam2 == 3)
 			if (bParam3)
-				if (*Global_MissionData1.f_160500 == 9)
+				if (*Global_MissionData1.missionGenClbscr == 9)
 					str = "CELEB_DRUG1_2" /*SURVIVED*/;
-				else if (*Global_MissionData1.f_160500 == 10)
+				else if (*Global_MissionData1.missionGenClbscr == 10)
 					str = "CELEB_DRUG2_2" /*SURVIVED*/;
 				else
 					str = "CELEB_PASSED" /*PASSED*/;
-			else if (*Global_MissionData1.f_160500 == 9)
+			else if (*Global_MissionData1.missionGenClbscr == 9)
 				str = "CELEB_DRUG1_2F" /*WASTED*/;
-			else if (*Global_MissionData1.f_160500 == 10)
+			else if (*Global_MissionData1.missionGenClbscr == 10)
 				str = "CELEB_DRUG2_2F" /*REHABILITATED*/;
 			else
 				str = "CELEB_FAILED" /*FAILED*/;
@@ -29928,15 +29928,15 @@ void func_458(var uParam0, char* sParam1, int iParam2, BOOL bParam3, char* sPara
 		{
 			text = "CELEB_LESSON" /*LESSON*/;
 		}
-		else if (*Global_MissionData1.f_160500 == 6)
+		else if (*Global_MissionData1.missionGenClbscr == 6)
 		{
 			text = "CELEB_ROBBERY" /*CONTRACT*/;
 		}
-		else if (*Global_MissionData1.f_160500 == 9 && bParam3)
+		else if (*Global_MissionData1.missionGenClbscr == 9 && bParam3)
 		{
 			text = "CELEB_DRUG1_1" /*TRIP*/;
 		}
-		else if (*Global_MissionData1.f_160500 == 10 && bParam3)
+		else if (*Global_MissionData1.missionGenClbscr == 10 && bParam3)
 		{
 			text = "CELEB_DRUG2_1" /*TRIP*/;
 		}
@@ -30218,19 +30218,19 @@ int func_461(int iParam0) // Position - 0x2809F
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_MissionData1.f_166456;
+			num = *Global_MissionData1.missionGenTwct1;
 			break;
 	
 		case 1:
-			num = *Global_MissionData1.f_166457;
+			num = *Global_MissionData1.missionGenTwct2;
 			break;
 	
 		case 2:
-			num = *Global_MissionData1.f_166458;
+			num = *Global_MissionData1.missionGenTwct3;
 			break;
 	
 		case 3:
-			num = *Global_MissionData1.f_166459;
+			num = *Global_MissionData1.missionGenTwct4;
 			break;
 	}
 
@@ -35783,9 +35783,9 @@ BOOL func_672() // Position - 0x2F482
 BOOL func_673(BOOL bParam0) // Position - 0x2F495
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_674();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_674();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_674() // Position - 0x2F4CB
@@ -141313,7 +141313,7 @@ void func_1683(Object obParam0, int iParam1, BOOL bParam2) // Position - 0xBF8D1
 		if (Global_262145.f_3958)
 			Global_4980736.f_39173[iParam1].f_27 = 0;
 	
-		if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 18 && !IS_BIT_SET(*Global_MissionData1.f_160050, 12))
+		if (*Global_MissionData1.f_104427 == 6 || *Global_MissionData1.f_104427 == 18 && !IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12))
 		{
 			INTERIOR::CLEAR_ROOM_FOR_ENTITY(obParam0);
 			ENTITY::SET_WAIT_FOR_COLLISIONS_BEFORE_PROBE(obParam0, true);
@@ -141325,7 +141325,7 @@ void func_1683(Object obParam0, int iParam1, BOOL bParam2) // Position - 0xBF8D1
 	{
 		OBJECT::SET_OBJECT_TINT_INDEX(obParam0, Global_4980736.f_39173[iParam1].f_27);
 	
-		if (!IS_BIT_SET(*Global_MissionData1.f_160050, 12))
+		if (!IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12))
 			INTERIOR::SET_IS_EXTERIOR_ONLY(obParam0, true);
 	}
 
@@ -149542,7 +149542,7 @@ void func_1766() // Position - 0xCBABA
 		{
 			if (func_645(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 1:
 						ENTITY::REMOVE_MODEL_HIDE(2947.7297f, -3860.6223f, 142.61438f, 5f, joaat("xs_combined_dyst_06_build_03"), false);
@@ -149551,7 +149551,7 @@ void func_1766() // Position - 0xCBABA
 			}
 			else if (func_644(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);
@@ -149560,7 +149560,7 @@ void func_1766() // Position - 0xCBABA
 			}
 			else if (func_638(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2948.968f, -3854.075f, 150.7258f, 5f, joaat("xs_propint4_waste_08_plates"), false);
@@ -149569,7 +149569,7 @@ void func_1766() // Position - 0xCBABA
 			}
 			else if (func_646(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2944.7256f, -3846.3835f, 140.00003f, 5f, joaat("xs_propint5_waste_09_ground_d"), false);
@@ -149580,7 +149580,7 @@ void func_1766() // Position - 0xCBABA
 			}
 			else if (func_643(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);
@@ -152759,10 +152759,10 @@ BOOL func_2026(var uParam0) // Position - 0xCF4C3
 			iLocal_180.f_232[i].f_2 = 1;
 	}
 
-	if (Global_MissionData1.f_1263 == 0)
+	if (Global_MissionData1.missionGenGpmn == 0)
 		iLocal_180.f_257 = func_2033(iLocal_180.f_261, 1);
 	else
-		iLocal_180.f_257 = Global_MissionData1.f_1263;
+		iLocal_180.f_257 = Global_MissionData1.missionGenGpmn;
 
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_180, 598, 0);
 	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_778, 289, 0);

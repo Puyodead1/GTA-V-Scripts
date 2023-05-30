@@ -20907,9 +20907,9 @@ int func_178(int iParam0) // Position - 0x211C8
 BOOL func_179(BOOL bParam0) // Position - 0x21202
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_180();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_180();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_180() // Position - 0x21238
@@ -89951,7 +89951,7 @@ BOOL func_644() // Position - 0x7A666
 
 BOOL func_645() // Position - 0x7A683
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 Vector3 func_646(Hash hParam0, var uParam1, var uParam2, var uParam3) // Position - 0x7A698

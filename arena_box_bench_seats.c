@@ -1723,7 +1723,7 @@ BOOL func_57() // Position - 0x1765
 
 BOOL func_58() // Position - 0x1793
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 void func_59(var uParam0, var uParam1) // Position - 0x17A8

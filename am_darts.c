@@ -5956,7 +5956,7 @@ void func_32(int iParam0) // Position - 0x78F9
 
 BOOL func_33() // Position - 0x7914
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 void func_34() // Position - 0x7929
@@ -25747,9 +25747,9 @@ BOOL func_191(int iParam0) // Position - 0x27B3F
 BOOL func_192(BOOL bParam0) // Position - 0x27B79
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_193();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_193();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_193() // Position - 0x27BAF
@@ -88339,7 +88339,7 @@ void func_391(var uParam0, int iParam1, var uParam2, var uParam3, int iParam4) /
 		case 0:
 			*uParam2 = Vector3(2956.9841f, -3866.8152f, 140f);
 		
-			switch (*Global_MissionData1.f_160097)
+			switch (*Global_MissionData1.missionGenArnTh)
 			{
 				case 3:
 					uParam2->f_2 = uParam2->f_2 + 0.05f;
@@ -88719,7 +88719,7 @@ BOOL func_395(int iParam0) // Position - 0x6C5BE
 
 BOOL func_396() // Position - 0x6C74C
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160048, 19);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIplop, 19);
 }
 
 BOOL func_397(int iParam0, BOOL bParam1) // Position - 0x6C761
@@ -101137,19 +101137,19 @@ int func_683(int iParam0) // Position - 0x7EF3E
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_MissionData1.f_166456;
+			num = *Global_MissionData1.missionGenTwct1;
 			break;
 	
 		case 1:
-			num = *Global_MissionData1.f_166457;
+			num = *Global_MissionData1.missionGenTwct2;
 			break;
 	
 		case 2:
-			num = *Global_MissionData1.f_166458;
+			num = *Global_MissionData1.missionGenTwct3;
 			break;
 	
 		case 3:
-			num = *Global_MissionData1.f_166459;
+			num = *Global_MissionData1.missionGenTwct4;
 			break;
 	}
 
@@ -119084,7 +119084,7 @@ void func_1136() // Position - 0x9554A
 		{
 			if (func_858(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 1:
 						ENTITY::REMOVE_MODEL_HIDE(2947.7297f, -3860.6223f, 142.61438f, 5f, joaat("xs_combined_dyst_06_build_03"), false);
@@ -119093,7 +119093,7 @@ void func_1136() // Position - 0x9554A
 			}
 			else if (func_857(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);
@@ -119102,7 +119102,7 @@ void func_1136() // Position - 0x9554A
 			}
 			else if (func_851(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2948.968f, -3854.075f, 150.7258f, 5f, joaat("xs_propint4_waste_08_plates"), false);
@@ -119111,7 +119111,7 @@ void func_1136() // Position - 0x9554A
 			}
 			else if (func_859(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2944.7256f, -3846.3835f, 140.00003f, 5f, joaat("xs_propint5_waste_09_ground_d"), false);
@@ -119122,7 +119122,7 @@ void func_1136() // Position - 0x9554A
 			}
 			else if (func_856(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);

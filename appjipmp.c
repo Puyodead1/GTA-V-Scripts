@@ -10551,6 +10551,6 @@ int func_347(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 
 
 BOOL func_348() // Position - 0xC9CA
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 

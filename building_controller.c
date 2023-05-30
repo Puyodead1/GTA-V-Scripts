@@ -450,7 +450,7 @@ void func_4() // Position - 0x485
 				if (!STREAMING::IS_IPL_ACTIVE("xm_hatch_closed"))
 					STREAMING::REQUEST_IPL("xm_hatch_closed");
 			
-				if (!IS_BIT_SET(*Global_MissionData1.f_160048, 14))
+				if (!IS_BIT_SET(*Global_MissionData1.missionGenIplop, 14))
 					if (!STREAMING::IS_IPL_ACTIVE("xm_bunkerentrance_door"))
 						STREAMING::REQUEST_IPL("xm_bunkerentrance_door");
 			
@@ -461,7 +461,7 @@ void func_4() // Position - 0x485
 					STREAMING::REQUEST_IPL("xm_hatches_terrain");
 			}
 		}
-		else if (IS_BIT_SET(*Global_MissionData1.f_160048, 13))
+		else if (IS_BIT_SET(*Global_MissionData1.missionGenIplop, 13))
 		{
 			if (!STREAMING::IS_IPL_ACTIVE("xm_siloentranceclosed_x17"))
 				STREAMING::REQUEST_IPL("xm_siloentranceclosed_x17");

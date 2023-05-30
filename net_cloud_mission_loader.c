@@ -32029,19 +32029,19 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 		func_227(&unk219, &(Global_4718592.f_170732[j].f_9), &dict, &unk228, j, -1, -2340845);
 	}
 
-	func_328("entCont_Num", &(Global_4980736.f_214781), &dict, 0, -2340845);
+	func_328("entCont_Num", &(Global_MissionData1.missionGenEndConNum), &dict, 0, -2340845);
 
-	for (j = 0; j <= *Global_4980736.f_214781 - 1; j = j + 1)
+	for (j = 0; j <= *Global_MissionData1.missionGenEndConNum - 1; j = j + 1)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk229, "entCont_Typ", 16);
 		TEXT_LABEL_APPEND_INT(&unk229, j, 16);
-		func_227(&unk229, &Global_4980736.f_214765[j], &dict, &unk233, j, 0, -2340845);
+		func_227(&unk229, &Global_MissionData1.missionGenEntContTyp[j], &dict, &unk233, j, 0, -2340845);
 		TEXT_LABEL_ASSIGN_STRING(&unk229, "entCont_Ind", 16);
 		TEXT_LABEL_APPEND_INT(&unk229, j, 16);
-		func_227(&unk229, &(Global_4980736.f_214765[j].f_1), &dict, &unk234, j, -1, -2340845);
+		func_227(&unk229, &(Global_MissionData1.missionGenEntContTyp[j].f_1), &dict, &unk234, j, -1, -2340845);
 		TEXT_LABEL_ASSIGN_STRING(&unk229, "entCont_IgBS", 16);
 		TEXT_LABEL_APPEND_INT(&unk229, j, 16);
-		func_227(&unk229, &(Global_4980736.f_214765[j].f_2), &dict, &unk235, j, 0, -2340845);
+		func_227(&unk229, &(Global_MissionData1.missionGenEntContTyp[j].f_2), &dict, &unk235, j, 0, -2340845);
 	}
 
 	Global_4718592.f_160047 = DATAFILE::DATADICT_GET_INT(dict, "apwbs");
@@ -37315,7 +37315,7 @@ void func_457(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	for (j = 0; j <= 4; j = j + 1)
 	{
-		Global_4980736.f_214765[j] = Vector3(unk11);
+		Global_MissionData1.missionGenEntContTyp[j] = Vector3(unk11);
 	}
 
 	for (i = 0; i <= 3; i = i + 1)

@@ -66616,9 +66616,9 @@ int func_515(int iParam0) // Position - 0x59634
 BOOL func_516(BOOL bParam0) // Position - 0x5966E
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_517();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_517();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_517() // Position - 0x596A4
@@ -111555,7 +111555,7 @@ Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0x8E2BA
 
 BOOL func_853() // Position - 0x8E2CD
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_854() // Position - 0x8E2E2

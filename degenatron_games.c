@@ -56487,9 +56487,9 @@ int func_324(int iParam0) // Position - 0x422D3
 BOOL func_325(BOOL bParam0) // Position - 0x4230D
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_326();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_326();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_326() // Position - 0x42343

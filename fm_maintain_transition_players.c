@@ -1915,8 +1915,8 @@ void func_27() // Position - 0xF9B
 
 	if (flag)
 	{
-		if (Global_MissionData1 == 0 && num > Global_MissionData1.f_1195)
-			num = Global_MissionData1.f_1195
+		if (Global_MissionData1 == 0 && num > Global_MissionData1.missionGenNum)
+			num = Global_MissionData1.missionGenNum
 	
 		NETWORK::NETWORK_SET_ACTIVITY_PLAYER_MAX(num);
 	}
@@ -3169,7 +3169,7 @@ BOOL func_58(int iParam0) // Position - 0x2B82
 
 BOOL func_59() // Position - 0x2B8F
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 20) || IS_BIT_SET(*Global_MissionData1.f_160050, 21) || IS_BIT_SET(*Global_MissionData1.f_160050, 22) || IS_BIT_SET(*Global_MissionData1.f_160050, 23) || IS_BIT_SET(*Global_MissionData1.f_160050, 24) || IS_BIT_SET(*Global_MissionData1.f_160050, 25) || IS_BIT_SET(*Global_MissionData1.f_160050, 26) || IS_BIT_SET(*Global_MissionData1.f_160050, 27) || IS_BIT_SET(*Global_MissionData1.f_160050, 28) || IS_BIT_SET(*Global_MissionData1.f_160050, 29) || IS_BIT_SET(*Global_MissionData1.f_160050, 30);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 20) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 21) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 22) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 23) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 24) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 25) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 26) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 27) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 28) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 29) || IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 30);
 }
 
 BOOL func_60(int iParam0) // Position - 0x2C62
@@ -41288,7 +41288,7 @@ BOOL func_338(Hash hParam0) // Position - 0x2B556
 
 BOOL func_339() // Position - 0x2B66D
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_340() // Position - 0x2B682
@@ -41671,9 +41671,9 @@ BOOL func_362(int iParam0) // Position - 0x2BFF4
 BOOL func_363(BOOL bParam0) // Position - 0x2C003
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_364();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_364();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_364() // Position - 0x2C039
@@ -41706,11 +41706,11 @@ void func_365(var uParam0) // Position - 0x2C067
 					{
 						if (func_363(true))
 							if (Global_MissionData1 == 0)
-								Global_MissionData1.f_160097.f_2 = Global_2680249[5];
+								Global_MissionData1.missionGenArnTh.arnLi = Global_2680249[5];
 							else if (Global_MissionData1 == 1)
-								Global_MissionData1.f_160097.f_2 = Global_2680249[8];
+								Global_MissionData1.missionGenArnTh.arnLi = Global_2680249[8];
 							else if (Global_MissionData1 == 2)
-								Global_MissionData1.f_160097.f_2 = Global_2680249[6];
+								Global_MissionData1.missionGenArnTh.arnLi = Global_2680249[6];
 					
 						if (func_438(&uLocal_1014, &uLocal_1015, false))
 						{
@@ -42862,7 +42862,7 @@ BOOL func_436() // Position - 0x2D643
 
 void func_437() // Position - 0x2D653
 {
-	if (IS_BIT_SET(*Global_MissionData1.f_160048, 19))
+	if (IS_BIT_SET(*Global_MissionData1.missionGenIplop, 19))
 	{
 		Global_2695716 = true;
 		STREAMING::LOAD_GLOBAL_WATER_FILE(1);
@@ -42876,7 +42876,7 @@ BOOL func_438(var uParam0, var uParam1, BOOL bParam2) // Position - 0x2D675
 	Vector3 vector;
 	Interior unk;
 
-	if (!IS_BIT_SET(*Global_MissionData1.f_160050, 12))
+	if (!IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12))
 		return true;
 
 	if (!INTERIOR::IS_VALID_INTERIOR(*uParam0))
@@ -42893,7 +42893,7 @@ BOOL func_438(var uParam0, var uParam1, BOOL bParam2) // Position - 0x2D675
 	if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE())
 		return false;
 
-	if (IS_BIT_SET(*Global_MissionData1.f_160050, 12))
+	if (IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12))
 	{
 		if (!func_480())
 			return false;
@@ -43068,9 +43068,9 @@ void func_446(var uParam0, BOOL bParam1) // Position - 0x2D99F
 	func_449(uParam0, bParam1, "set_centreline_dystopian_05", 4, 23);
 	func_449(uParam0, bParam1, "set_centreline_scifi_05", 4, 24);
 	func_449(uParam0, bParam1, "Set_CentreLine_Wasteland_05", 4, 25);
-	func_448(uParam0, "Set_Turrets", bParam1 && *Global_MissionData1.f_160097 == 1);
-	func_448(uParam0, "set_turrets_scifi", bParam1 && *Global_MissionData1.f_160097 == 2);
-	func_448(uParam0, "set_turrets_wasteland", bParam1 && *Global_MissionData1.f_160097 == 3);
+	func_448(uParam0, "Set_Turrets", bParam1 && *Global_MissionData1.missionGenArnTh == 1);
+	func_448(uParam0, "set_turrets_scifi", bParam1 && *Global_MissionData1.missionGenArnTh == 2);
+	func_448(uParam0, "set_turrets_wasteland", bParam1 && *Global_MissionData1.missionGenArnTh == 3);
 	func_447(bParam1, uParam0);
 	INTERIOR::REFRESH_INTERIOR(*uParam0);
 	return;
@@ -43104,10 +43104,10 @@ void func_447(BOOL bParam0, var uParam1) // Position - 0x2DACB
 				break;
 		}
 	
-		if (Global_MissionData1.f_160097.f_29[i] > 0 && bParam0)
+		if (Global_MissionData1.missionGenArnTh.arnBn[i] > 0 && bParam0)
 		{
 			INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(*uParam1, entitySetName);
-			INTERIOR::SET_INTERIOR_ENTITY_SET_TINT_INDEX(*uParam1, entitySetName, Global_MissionData1.f_160097.f_29[i]);
+			INTERIOR::SET_INTERIOR_ENTITY_SET_TINT_INDEX(*uParam1, entitySetName, Global_MissionData1.missionGenArnTh.arnBn[i]);
 		}
 		else
 		{
@@ -43137,7 +43137,7 @@ void func_449(var uParam0, BOOL bParam1, char* sParam2, int iParam3, int iParam4
 	switch (iParam3)
 	{
 		case 4:
-			flag = func_450(&(Global_MissionData1.f_160097.f_24), iParam4);
+			flag = func_450(&(Global_MissionData1.missionGenArnTh.f_24), iParam4);
 			break;
 	}
 
@@ -43180,7 +43180,7 @@ int func_452(int iParam0) // Position - 0x2DC3A
 void func_453(var uParam0, BOOL bParam1) // Position - 0x2DC60
 {
 	func_467(uParam0, bParam1);
-	func_454(Global_MissionData1.f_160097.f_2, &(Global_MissionData1.f_160097.f_2), bParam1, 1, false);
+	func_454(Global_MissionData1.missionGenArnTh.arnLi, &(Global_MissionData1.missionGenArnTh.arnLi), bParam1, 1, false);
 	return;
 }
 
@@ -43195,14 +43195,14 @@ void func_454(int iParam0, int iParam1, BOOL bParam2, int iParam3, BOOL bParam4)
 	idOfThisThread = SCRIPT::GET_ID_OF_THIS_THREAD();
 
 	if (NETWORK::NETWORK_IS_THREAD_A_NETWORK_SCRIPT(idOfThisThread) && NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
-		if (*iParam1 != Global_MissionData1.f_160097.f_2)
-			*iParam1 = Global_MissionData1.f_160097.f_2;
+		if (*iParam1 != Global_MissionData1.missionGenArnTh.arnLi)
+			*iParam1 = Global_MissionData1.missionGenArnTh.arnLi;
 
 	if (func_322() && *iParam1 > -1)
 	{
-		if (Global_MissionData1.f_160097.f_2 != *iParam1)
+		if (Global_MissionData1.missionGenArnTh.arnLi != *iParam1)
 		{
-			Global_MissionData1.f_160097.f_2 = *iParam1;
+			Global_MissionData1.missionGenArnTh.arnLi = *iParam1;
 			iParam0 = *iParam1;
 		}
 	}
@@ -43357,7 +43357,7 @@ void func_457(BOOL bParam0) // Position - 0x2DF49
 
 	if (bParam0)
 	{
-		modifierName = func_458(Global_MissionData1.f_160097.f_2);
+		modifierName = func_458(Global_MissionData1.missionGenArnTh.arnLi);
 	
 		if (!MISC::IS_STRING_NULL_OR_EMPTY(modifierName))
 			GRAPHICS::SET_TIMECYCLE_MODIFIER(modifierName);
@@ -43393,7 +43393,7 @@ char* func_458(int iParam0) // Position - 0x2DF82
 			return "MP_Arena_theme_morning";
 	
 		case 6:
-			if (*Global_MissionData1.f_160097 == 2)
+			if (*Global_MissionData1.missionGenArnTh == 2)
 				return "MP_Arena_theme_scifi_night";
 			else
 				return "MP_Arena_theme_night";
@@ -43478,17 +43478,17 @@ BOOL func_466() // Position - 0x2E118
 
 void func_467(var uParam0, BOOL bParam1) // Position - 0x2E137
 {
-	func_448(uParam0, "Set_Lights_atlantis", bParam1 && Global_MissionData1.f_160097.f_2 == 1);
-	func_448(uParam0, "Set_Lights_evening", bParam1 && Global_MissionData1.f_160097.f_2 == 2);
-	func_448(uParam0, "Set_Lights_hell", bParam1 && Global_MissionData1.f_160097.f_2 == 3);
-	func_448(uParam0, "Set_Lights_midday", bParam1 && Global_MissionData1.f_160097.f_2 == 4);
-	func_448(uParam0, "Set_Lights_morning", bParam1 && Global_MissionData1.f_160097.f_2 == 5);
-	func_448(uParam0, "Set_Lights_night", bParam1 && Global_MissionData1.f_160097.f_2 == 6 && *Global_MissionData1.f_160097 != 2);
-	func_448(uParam0, "set_lights_sfnight", bParam1 && Global_MissionData1.f_160097.f_2 == 6 && *Global_MissionData1.f_160097 == 2);
-	func_448(uParam0, "Set_Lights_saccharine", bParam1 && Global_MissionData1.f_160097.f_2 == 7);
-	func_448(uParam0, "Set_Lights_sandstorm", bParam1 && Global_MissionData1.f_160097.f_2 == 8);
-	func_448(uParam0, "Set_Lights_storm", bParam1 && Global_MissionData1.f_160097.f_2 == 9);
-	func_448(uParam0, "Set_Lights_toxic", bParam1 && Global_MissionData1.f_160097.f_2 == 10);
+	func_448(uParam0, "Set_Lights_atlantis", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 1);
+	func_448(uParam0, "Set_Lights_evening", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 2);
+	func_448(uParam0, "Set_Lights_hell", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 3);
+	func_448(uParam0, "Set_Lights_midday", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 4);
+	func_448(uParam0, "Set_Lights_morning", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 5);
+	func_448(uParam0, "Set_Lights_night", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 6 && *Global_MissionData1.missionGenArnTh != 2);
+	func_448(uParam0, "set_lights_sfnight", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 6 && *Global_MissionData1.missionGenArnTh == 2);
+	func_448(uParam0, "Set_Lights_saccharine", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 7);
+	func_448(uParam0, "Set_Lights_sandstorm", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 8);
+	func_448(uParam0, "Set_Lights_storm", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 9);
+	func_448(uParam0, "Set_Lights_toxic", bParam1 && Global_MissionData1.missionGenArnTh.arnLi == 10);
 	return;
 }
 
@@ -43525,13 +43525,13 @@ void func_468(var uParam0, BOOL bParam1) // Position - 0x2E2AE
 				TEXT_LABEL_APPEND_STRING(&unk, "0", 64);
 		
 			TEXT_LABEL_APPEND_INT(&unk, j + 1, 64);
-			func_448(uParam0, &unk, bParam1 && Global_MissionData1.f_160097.f_1 == j && *Global_MissionData1.f_160097 == i);
+			func_448(uParam0, &unk, bParam1 && Global_MissionData1.missionGenArnTh.arnTy == j && *Global_MissionData1.missionGenArnTh == i);
 		}
 	}
 
-	func_448(uParam0, "Set_Dystopian_Scene", bParam1 && *Global_MissionData1.f_160097 == 1);
-	func_448(uParam0, "Set_Scifi_Scene", bParam1 && *Global_MissionData1.f_160097 == 2);
-	func_448(uParam0, "Set_Wasteland_Scene", bParam1 && *Global_MissionData1.f_160097 == 3);
+	func_448(uParam0, "Set_Dystopian_Scene", bParam1 && *Global_MissionData1.missionGenArnTh == 1);
+	func_448(uParam0, "Set_Scifi_Scene", bParam1 && *Global_MissionData1.missionGenArnTh == 2);
+	func_448(uParam0, "Set_Wasteland_Scene", bParam1 && *Global_MissionData1.missionGenArnTh == 3);
 	return;
 }
 
@@ -43583,7 +43583,7 @@ void func_470(BOOL bParam0, var uParam1) // Position - 0x2E3F8
 		if (bParam0)
 		{
 			INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(*uParam1, entitySetName);
-			INTERIOR::SET_INTERIOR_ENTITY_SET_TINT_INDEX(*uParam1, entitySetName, Global_MissionData1.f_160097.f_34[i]);
+			INTERIOR::SET_INTERIOR_ENTITY_SET_TINT_INDEX(*uParam1, entitySetName, Global_MissionData1.missionGenArnTh.arnCr[i]);
 		}
 		else
 		{
@@ -48839,7 +48839,7 @@ void func_676(var uParam0) // Position - 0x34FA6
 
 	player = PLAYER::PLAYER_ID();
 	iLocal_195.f_4 = *uParam0;
-	iLocal_195.f_5 = Global_MissionData1.f_1195
+	iLocal_195.f_5 = Global_MissionData1.missionGenNum
 	iLocal_195.f_6 = 0;
 	iLocal_195.f_7 = Global_2680249[1];
 

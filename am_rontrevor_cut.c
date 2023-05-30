@@ -25226,9 +25226,9 @@ int func_301(int iParam0) // Position - 0x26005
 BOOL func_302(BOOL bParam0) // Position - 0x2603F
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_303();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_303();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_303() // Position - 0x26075
@@ -93260,7 +93260,7 @@ BOOL func_750() // Position - 0x7E004
 
 BOOL func_751() // Position - 0x7E021
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 Vector3 func_752(Hash hParam0, var uParam1, var uParam2, var uParam3) // Position - 0x7E036

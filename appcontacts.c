@@ -13674,19 +13674,19 @@ int func_206(int iParam0) // Position - 0xEC5E
 	switch (iParam0)
 	{
 		case 0:
-			num = *Global_MissionData1.f_166456;
+			num = *Global_MissionData1.missionGenTwct1;
 			break;
 	
 		case 1:
-			num = *Global_MissionData1.f_166457;
+			num = *Global_MissionData1.missionGenTwct2;
 			break;
 	
 		case 2:
-			num = *Global_MissionData1.f_166458;
+			num = *Global_MissionData1.missionGenTwct3;
 			break;
 	
 		case 3:
-			num = *Global_MissionData1.f_166459;
+			num = *Global_MissionData1.missionGenTwct4;
 			break;
 	}
 
@@ -13937,7 +13937,7 @@ BOOL func_213() // Position - 0xF04B
 
 BOOL func_214() // Position - 0xF06A
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_215() // Position - 0xF07F
@@ -14311,10 +14311,10 @@ BOOL func_233(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					maxInputLength2 = 63;
 					MISC::NEXT_ONSCREEN_KEYBOARD_RESULT_WILL_DISPLAY_USING_THESE_FONTS(2);
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.f_166915)))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.missionGenBlmpmsg)))
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.f_166915), "", "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.missionGenBlmpmsg), "", "", "", maxInputLength2);
 				}
 				else if (bParam25)
 				{
@@ -14329,10 +14329,10 @@ BOOL func_233(var uParam0, int* piParam1, var uParam2, BOOL bParam3, BOOL bParam
 					if (iParam35 != -1)
 						maxInputLength2 = iParam35;
 				
-					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.f_166915)))
+					if (MISC::IS_STRING_NULL_OR_EMPTY(&(Global_MissionData1.missionGenBlmpmsg)))
 						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, "", "", "", "", maxInputLength2);
 					else
-						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.f_166915), "", "", "", maxInputLength2);
+						MISC::DISPLAY_ONSCREEN_KEYBOARD(num2, windowTitle, str, &(Global_MissionData1.missionGenBlmpmsg), "", "", "", maxInputLength2);
 				}
 				else if (iParam30 != -1)
 				{

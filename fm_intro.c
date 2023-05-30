@@ -13969,7 +13969,7 @@ int func_348(Player plParam0) // Position - 0x1339D
 
 BOOL func_349() // Position - 0x133BA
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_350() // Position - 0x133CF
@@ -17736,7 +17736,7 @@ void func_452() // Position - 0x1860D
 		{
 			if (func_457(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 1:
 						ENTITY::REMOVE_MODEL_HIDE(2947.7297f, -3860.6223f, 142.61438f, 5f, joaat("xs_combined_dyst_06_build_03"), false);
@@ -17745,7 +17745,7 @@ void func_452() // Position - 0x1860D
 			}
 			else if (func_456(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);
@@ -17754,7 +17754,7 @@ void func_452() // Position - 0x1860D
 			}
 			else if (func_455(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2948.968f, -3854.075f, 150.7258f, 5f, joaat("xs_propint4_waste_08_plates"), false);
@@ -17763,7 +17763,7 @@ void func_452() // Position - 0x1860D
 			}
 			else if (func_454(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2944.7256f, -3846.3835f, 140.00003f, 5f, joaat("xs_propint5_waste_09_ground_d"), false);
@@ -17774,7 +17774,7 @@ void func_452() // Position - 0x1860D
 			}
 			else if (func_453(*Global_MissionData1.missionGenAdverm))
 			{
-				switch (*Global_MissionData1.f_160097)
+				switch (*Global_MissionData1.missionGenArnTh)
 				{
 					case 3:
 						ENTITY::REMOVE_MODEL_HIDE(2943.7654f, -3859.6245f, 151.10071f, 5f, joaat("xs_propint3_set_waste_03_licencep"), false);

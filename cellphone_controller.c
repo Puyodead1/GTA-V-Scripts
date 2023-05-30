@@ -672,7 +672,7 @@ void func_5() // Position - 0x94A
 	if (Global_78558)
 	{
 		if (func_7())
-			GRAPHICS::SET_ARENA_THEME_AND_VARIATION_FOR_TAKEN_PHOTO(*Global_MissionData1.f_160097, Global_MissionData1.f_160097.f_1);
+			GRAPHICS::SET_ARENA_THEME_AND_VARIATION_FOR_TAKEN_PHOTO(*Global_MissionData1.missionGenArnTh, Global_MissionData1.missionGenArnTh.arnTy);
 	
 		if (func_6(&(Global_2657589[PLAYER::PLAYER_ID()].f_445), 0))
 			GRAPHICS::SET_ON_ISLAND_X_FOR_TAKEN_PHOTO(1);
@@ -701,7 +701,7 @@ BOOL func_6(var uParam0, int iParam1) // Position - 0x9C2
 
 BOOL func_7() // Position - 0x9D0
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 void func_8() // Position - 0x9E5

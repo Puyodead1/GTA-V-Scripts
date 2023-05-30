@@ -13480,7 +13480,7 @@ int func_33(Player plParam0) // Position - 0x359E
 
 BOOL func_34() // Position - 0x35BB
 {
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_35() // Position - 0x35D0
@@ -33579,9 +33579,9 @@ BOOL func_193(Hash hParam0) // Position - 0x23C96
 BOOL func_194(BOOL bParam0) // Position - 0x23CD0
 {
 	if (bParam0)
-		return IS_BIT_SET(*Global_MissionData1.f_160050, 12) && func_195();
+		return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12) && func_195();
 
-	return IS_BIT_SET(*Global_MissionData1.f_160050, 12);
+	return IS_BIT_SET(*Global_MissionData1.missionGenIntop2, 12);
 }
 
 BOOL func_195() // Position - 0x23D06
@@ -103082,12 +103082,12 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.f_166340 = 0;
 		Global_MissionData1.missionGenHptfb = 0;
 		Global_MissionData1.missionGenRcvs = 0;
-		Global_MissionData1.f_160488 = 0;
+		Global_MissionData1.missionGenRlopt = 0;
 		Global_MissionData1.missionGenCmpts = 0;
-		Global_MissionData1.f_1195 = 0;
+		Global_MissionData1.missionGenNum = 0;
 		Global_MissionData1.missionEndType = 0;
 		Global_MissionData1.f_1222 = 3;
-		Global_MissionData1.f_1197 = 0;
+		Global_MissionData1.missionGenTime = 0;
 		Global_MissionData1.ruleTime = 0;
 		Global_MissionData1.ruleScore = 0;
 		Global_MissionData1.missionRuleBlip = 0;
@@ -103216,11 +103216,11 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.f_114185 = 0;
 		Global_MissionData1.f_114186 = 0;
 		Global_MissionData1.f_114187 = 0;
-		Global_MissionData1.f_114177 = -1;
+		Global_MissionData1.missionGenMusx = -1;
 		Global_MissionData1.f_114174 = 0;
-		Global_MissionData1.f_114175 = -1;
+		Global_MissionData1.missionGenMusmustr = -1;
 		Global_MissionData1.f_114176 = 0;
-		Global_MissionData1.f_114173 = -1;
+		Global_MissionData1.missionGenNewausc = -1;
 		Global_MissionData1.f_1233 = 0;
 		Global_MissionData1.missionGenCam = Vector3( 0f, 0f, 0f );
 		Global_MissionData1.f_1244 = Vector3( 0f, 0f, 0f );
@@ -103231,11 +103231,11 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.missionGenCamfv = 0f;
 		Global_MissionData1.missionGenCamh = 0f;
 		Global_MissionData1.missionGenDmbds = 0f;
-		Global_MissionData1.f_1263 = 0;
+		Global_MissionData1.missionGenGpmn = 0;
 		Global_MissionData1.f_114279 = 0;
 		Global_MissionData1.f_166334 = 0;
 		Global_MissionData1.missionGenAlrtLocal = 0;
-		Global_MissionData1.f_160501 = 0;
+		Global_MissionData1.missionGenDisar = 0;
 	
 		for (i = 0; i < 26; i = i + 1)
 		{
@@ -103290,10 +103290,10 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_MissionData1.f_162815 = 0;
 	Global_MissionData1.f_1214 = 0;
 	Global_MissionData1.missionGenPhpo = Vector3( 0f, 0f, 0f );
-	Global_MissionData1.f_160500 = -1;
+	Global_MissionData1.missionGenClbscr = -1;
 	TEXT_LABEL_ASSIGN_STRING(&(Global_MissionData1.f_113731), "", 64);
-	TEXT_LABEL_ASSIGN_STRING(&(Global_MissionData1.f_114017), "", 64);
-	TEXT_LABEL_ASSIGN_STRING(&(Global_MissionData1.f_166915), "", 64);
+	TEXT_LABEL_ASSIGN_STRING(&(Global_MissionData1.missionGenPttl), "", 64);
+	TEXT_LABEL_ASSIGN_STRING(&(Global_MissionData1.missionGenBlmpmsg), "", 64);
 
 	if (bParam2)
 	{
@@ -103360,15 +103360,15 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	Global_MissionData1.f_166455 = 0;
 	Global_MissionData1.f_166454 = 0;
-	Global_MissionData1.f_166456 = 0;
-	Global_MissionData1.f_166457 = 1;
-	Global_MissionData1.f_166458 = 2;
-	Global_MissionData1.f_166459 = 3;
-	Global_MissionData1.f_166460 = 4;
-	Global_MissionData1.f_166461 = 6;
-	Global_MissionData1.f_166462 = 7;
-	Global_MissionData1.f_166463 = 9;
-	Global_MissionData1.f_166464 = 0;
+	Global_MissionData1.missionGenTwct1 = 0;
+	Global_MissionData1.missionGenTwct2 = 1;
+	Global_MissionData1.missionGenTwct3 = 2;
+	Global_MissionData1.missionGenTwct4 = 3;
+	Global_MissionData1.missionGenTwcon = 4;
+	Global_MissionData1.missionGenTwcto = 6;
+	Global_MissionData1.missionGenTwcun = 7;
+	Global_MissionData1.missionGenTwcdi = 9;
+	Global_MissionData1.missionGenSvmrcvbr = 0;
 	unk = -1;
 	unk.f_1 = 30000;
 	unk.f_9 = -1;
@@ -103382,7 +103382,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	for (j = 0; j <= 4; j = j + 1)
 	{
-		Global_4980736.f_214765[j] = Vector3(unk11);
+		Global_MissionData1.missionGenEntContTyp[j] = Vector3(unk11);
 	}
 
 	for (i = 0; i <= 3; i = i + 1)
@@ -103535,7 +103535,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 
 	Global_MissionData1.missionGenTestComplete = 0;
 	Global_MissionData1.f_114129 = 0;
-	Global_MissionData1.f_160488 = 0;
+	Global_MissionData1.missionGenRlopt = 0;
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
@@ -103550,8 +103550,8 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		}
 	}
 
-	Global_MissionData1.f_160537 = -1;
-	Global_MissionData1.f_160538 = -1;
+	Global_MissionData1.missionGenPmcsss = -1;
+	Global_MissionData1.missionGenPmcsssf = -1;
 	Global_MissionData1.f_166303 = 0;
 	Global_MissionData1.f_166261 = 0;
 	Global_MissionData1.f_166326 = 0;
@@ -104324,7 +104324,7 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_MissionData1.f_1238 = Vector3( 0f, 0f, 0f );
 	Global_MissionData1.f_97676 = Vector3( 0f, 0f, 0f );
 	Global_MissionData1.f_1261 = 0f;
-	Global_MissionData1.f_160033 = Vector3( 0f, 0f, 0f );
+	Global_MissionData1.missionGenApart = Vector3( 0f, 0f, 0f );
 	Global_MissionData1.f_166303 = 0;
 	Global_MissionData1.f_166326 = 0;
 	Global_MissionData1.f_114130[0] = 0;
@@ -105001,22 +105001,22 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 		Global_MissionData1.f_160042[i] = -1;
 	}
 
-	Global_MissionData1.f_107559 = 0;
+	Global_MissionData1.missionGenCopteam = 0;
 	Global_MissionData1.f_160552 = -1;
-	Global_MissionData1.f_160047 = 0;
-	Global_MissionData1.f_160036 = 0;
-	Global_MissionData1.f_160049 = 0;
-	Global_MissionData1.f_160050 = 0;
-	Global_MissionData1.f_160051 = 0;
-	Global_MissionData1.f_160048 = 0;
-	Global_MissionData1.f_160063 = -1;
-	Global_MissionData1.f_160092 = 0;
-	Global_MissionData1.f_160052 = 1;
-	Global_MissionData1.f_160052.f_1 = 0;
-	Global_MissionData1.f_160052.f_2 = 0;
-	Global_MissionData1.f_160052.f_3 = -1;
-	Global_MissionData1.f_160052.f_4 = -1;
-	Global_MissionData1.f_160052.f_5 = 0;
+	Global_MissionData1.missionGenApwbs = 0;
+	Global_MissionData1.missionGenWrploc = 0;
+	Global_MissionData1.missionGenIntop = 0;
+	Global_MissionData1.missionGenIntop2 = 0;
+	Global_MissionData1.missionGenIntop3 = 0;
+	Global_MissionData1.missionGenIplop = 0;
+	Global_MissionData1.missionGenIntMB = -1;
+	Global_MissionData1.missionGenTwrst = 0;
+	Global_MissionData1.missionGenCasCol = 1;
+	Global_MissionData1.missionGenCasCol.casPat = 0;
+	Global_MissionData1.missionGenCasCol.casArc = 0;
+	Global_MissionData1.missionGenCasCol.casPrt = -1;
+	Global_MissionData1.missionGenCasCol.casPR = -1;
+	Global_MissionData1.missionGenCasCol.casBS = 0;
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
@@ -105028,29 +105028,29 @@ void func_616(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Positio
 	Global_MissionData1.f_160093.f_1 = 20;
 	Global_MissionData1.f_160093.f_3 = 60;
 	func_636();
-	Global_MissionData1.f_160097 = 1;
-	Global_MissionData1.f_160097.f_1 = 0;
-	Global_MissionData1.f_160097.f_2 = 4;
-	Global_MissionData1.f_160097.f_29[0] = 0;
-	Global_MissionData1.f_160097.f_29[1] = 0;
-	Global_MissionData1.f_160097.f_29[2] = 0;
-	Global_MissionData1.f_160097.f_29[3] = 0;
-	Global_MissionData1.f_160097.f_34[0] = 0;
-	Global_MissionData1.f_160097.f_34[1] = 0;
-	Global_MissionData1.f_160097.f_34[2] = 0;
-	Global_MissionData1.f_160097.f_34[3] = 0;
-	Global_MissionData1.f_160097.f_3 = 0;
+	Global_MissionData1.missionGenArnTh = 1;
+	Global_MissionData1.missionGenArnTh.arnTy = 0;
+	Global_MissionData1.missionGenArnTh.arnLi = 4;
+	Global_MissionData1.missionGenArnTh.arnBn[0] = 0;
+	Global_MissionData1.missionGenArnTh.arnBn[1] = 0;
+	Global_MissionData1.missionGenArnTh.arnBn[2] = 0;
+	Global_MissionData1.missionGenArnTh.arnBn[3] = 0;
+	Global_MissionData1.missionGenArnTh.arnCr[0] = 0;
+	Global_MissionData1.missionGenArnTh.arnCr[1] = 0;
+	Global_MissionData1.missionGenArnTh.arnCr[2] = 0;
+	Global_MissionData1.missionGenArnTh.arnCr[3] = 0;
+	Global_MissionData1.missionGenArnTh.arnRn = 0;
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
-		Global_MissionData1.f_160097.f_4[i] = 0;
-		Global_MissionData1.f_160097.f_9[i] = 0;
-		Global_MissionData1.f_160097.f_14[i] = 0;
-		Global_MissionData1.f_160097.f_19[i] = 0;
-		Global_MissionData1.f_160097.f_24[i] = 0;
+		Global_MissionData1.missionGenArnTh.f_4[i] = 0;
+		Global_MissionData1.missionGenArnTh.f_9[i] = 0;
+		Global_MissionData1.missionGenArnTh.f_14[i] = 0;
+		Global_MissionData1.missionGenArnTh.f_19[i] = 0;
+		Global_MissionData1.missionGenArnTh.f_24[i] = 0;
 	}
 
-	Global_MissionData1.f_160136 = 5;
+	Global_MissionData1.missionGenArnVMN = 5;
 
 	for (i = 0; i <= 3; i = i + 1)
 	{
