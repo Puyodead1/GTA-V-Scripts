@@ -3323,7 +3323,7 @@
 	var uLocal_3321 = 0;
 	var uLocal_3322 = 0;
 	Blip blLocal_3323 = 0;
-	var uLocal_3324 = 0;
+	var scriptName = 0;
 	var uLocal_3325 = 0;
 	var uLocal_3326 = 0;
 	var uLocal_3327 = 0;
@@ -5042,9 +5042,9 @@ void main() // Position - 0x0
 	fLocal_3307 = 99999f;
 	fLocal_3308 = 99999f;
 	fLocal_3309 = 999999f;
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_3324, SCRIPT::GET_THIS_SCRIPT_NAME(), 64);
-	uLocal_3324 = Vector3(uLocal_3324);
-	uLocal_2045 = Vector3(uLocal_2045);
+	TEXT_LABEL_ASSIGN_STRING(&scriptName, SCRIPT::GET_THIS_SCRIPT_NAME(), 64);
+	// scriptName = Vector3(scriptName); // ???
+	// uLocal_2045 = Vector3(uLocal_2045); // this doesnt seem right?
 	func_3902(false);
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())

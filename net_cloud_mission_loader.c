@@ -3864,7 +3864,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						if (!bParam9)
 							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
 					
-						func_196(-1, true, false, 0);
+						ParseUGCFile1(-1, true, false, 0);
 						uParam0->f_8 = 0;
 						func_105(uParam0, 9);
 						*uParam0 = 1;
@@ -3877,7 +3877,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						{
 							TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), sParam1, 24);
 							Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1050140.f_14);
-							func_195(&fileDict, &unk, &Global_1050140);
+							ParsePlaylistUGC(&fileDict, &unk, &Global_1050140);
 						
 							if (Global_1050140.f_67 == 0)
 							{
@@ -3895,7 +3895,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						{
 							TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
 							Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
-							func_195(&fileDict, &unk, &Global_1048576);
+							ParsePlaylistUGC(&fileDict, &unk, &Global_1048576);
 							uParam0->f_8 = 0;
 						
 							if (Global_1048576.f_67 == 0)
@@ -3992,7 +3992,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 								Global_1050140.f_73 = NETWORK::UGC_GET_CONTENT_CATEGORY(0);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), sParam1, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1050140.f_14);
-								func_195(&fileDict, &unk, &Global_1050140);
+								ParsePlaylistUGC(&fileDict, &unk, &Global_1050140);
 							
 								if (Global_1050140.f_67 == 0)
 								{
@@ -4013,7 +4013,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 								Global_1048576.f_73 = NETWORK::UGC_GET_CONTENT_CATEGORY(0);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
-								func_195(&fileDict, &unk, &Global_1048576);
+								ParsePlaylistUGC(&fileDict, &unk, &Global_1048576);
 								uParam0->f_8 = 0;
 							}
 						
@@ -4239,7 +4239,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 					
 						if (!func_114())
 						{
-							func_196(uParam0->f_35, bParam11, bParam13 || bParam14, uParam0->f_32);
+							ParseUGCFile1(uParam0->f_35, bParam11, bParam13 || bParam14, uParam0->f_32);
 						
 							if (func_150(*Global_4718592.f_113724))
 								Global_4718592.f_1238 = Vector3(func_149());
@@ -4282,7 +4282,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						}
 						else
 						{
-							func_196(-1, bParam11, false, 0);
+							ParseUGCFile1(-1, bParam11, false, 0);
 						}
 					
 						if (func_175(uParam0, iParam2, bParam13, bParam9))
@@ -4332,7 +4332,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 			break;
 	
 		case 5:
-			func_196(uParam0->f_35, bParam11, bParam13 || bParam14, uParam0->f_32);
+			ParseUGCFile1(uParam0->f_35, bParam11, bParam13 || bParam14, uParam0->f_32);
 		
 			if (uParam0->f_32 >= 6)
 				if (func_175(uParam0, iParam2, bParam13 || bParam14, bParam9))
@@ -5923,7 +5923,7 @@ void func_194(var uParam0) // Position - 0x7D85
 	return;
 }
 
-void func_195(var uParam0, var uParam1, var uParam2) // Position - 0x7DB5
+void ParsePlaylistUGC(var uParam0, var uParam1, var uParam2) // Position - 0x7DB5
 {
 	int i;
 	var unk;
@@ -5954,41 +5954,41 @@ void func_195(var uParam0, var uParam1, var uParam2) // Position - 0x7DB5
 	return;
 }
 
-void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position - 0x7E68
+void ParseUGCFile1(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position - 0x7E68
 {
 	Any* fileDict;
-	int dict;
-	Any* dict2;
-	Any* dict3;
-	Any* dict4;
-	Any* dict5;
+	int missionDict;
+	Any* missionGenDict;
+	Any* missionEndconDict;
+	Any* missionTmdDict;
+	Any* missionEneDict;
 	int num;
 
 	fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
-	dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
-	dict2 = DATAFILE::DATADICT_GET_DICT(dict, "gen");
-	dict3 = DATAFILE::DATADICT_GET_DICT(dict, "endcon");
+	missionDict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
+	missionGenDict = DATAFILE::DATADICT_GET_DICT(missionDict, "gen");
+	missionEndconDict = DATAFILE::DATADICT_GET_DICT(missionDict, "endcon");
 	Global_4718592.missionDebugOnlyVersion = DATAFILE::DATADICT_GET_INT(fileDict, "debugOnlyVersion");
 
 	if (!bParam2 || iParam3 == 0)
 	{
-		func_397(dict, iParam0, bParam1);
-		func_396(dict);
-		func_395(&dict3);
-		func_394(&dict3);
-		func_392(&dict3);
-		func_391(&dict3);
-		func_390(&dict3);
-		func_388(&dict3);
-		func_386(&dict3);
-		func_385(&dict3);
-		func_384(&dict3);
-		func_383(&dict3);
-		func_382(&dict3);
-		func_380(&dict3);
-		func_379(&dict3);
-		func_378(&dict3);
-		func_377(&dict2);
+		ParseUGCMissionGenObject(missionDict, iParam0, bParam1);
+		ParseUGCMissionRuleObject(missionDict);
+		ParseUGCMissionEndconObject1(&missionEndconDict);
+		ParseUGCMissionEndconObject2(&missionEndconDict);
+		ParseUGCMissionEndconObject3(&missionEndconDict);
+		ParseUGCMissionEndconObject4(&missionEndconDict);
+		ParseUGCMissionEndconObject5(&missionEndconDict);
+		ParseUGCMissionEndconObject6(&missionEndconDict);
+		ParseUGCMissionEndconObject7(&missionEndconDict);
+		ParseUGCMissionEndconObject8(&missionEndconDict);
+		ParseUGCMissionEndconObject9(&missionEndconDict);
+		ParseUGCMissionEndconObject10(&missionEndconDict);
+		ParseUGCMissionEndconObject11(&missionEndconDict);
+		ParseUGCMissionEndconObject12(&missionEndconDict);
+		ParseUGCMissionEndconObject13(&missionEndconDict);
+		ParseUGCMissionEndconObject14(&missionEndconDict);
+		func_377(&missionGenDict);
 	
 		if (bParam2)
 			return;
@@ -5999,18 +5999,18 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 		if (!bParam2 || iParam3 == 1)
 		{
 			if (func_376())
-				func_375(dict);
+				ParseUGCMissionDoorObject(missionDict);
 			else
-				func_372(&dict);
+				ParseUGCMissionDoorObject2(&missionDict);
 		
-			func_371(dict);
-			func_370(dict);
-			func_369(&dict);
-			func_368(&dict);
-			func_367(&dict);
-			dict4 = DATAFILE::DATADICT_GET_DICT(dict, "tmD");
-			func_366(&dict4);
-			func_364(&dict);
+			ParseUGCMissionCoverObject(missionDict);
+			ParseUGCMissionGotoObject(missionDict);
+			ParseUGCMissionFMMCTrainObject(&missionDict);
+			ParseUGCMissionInteractablesObject(&missionDict);
+			ParseUGCMissionInvtyObject(&missionDict);
+			missionTmdDict = DATAFILE::DATADICT_GET_DICT(missionDict, "tmD");
+			func_366(&missionTmdDict);
+			ParseUGCMissionMprqObject(&missionDict);
 		
 			if (bParam2)
 				return;
@@ -6018,9 +6018,9 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	
 		if (!bParam2 || iParam3 == 2)
 		{
-			func_363(dict);
-			func_362(dict2);
-			func_360(dict);
+			ParseUGCMissionKillObject(missionDict);
+			func_362(missionGenDict);
+			ParseUGCMissionCutsObject(missionDict);
 		
 			if (bParam2)
 				return;
@@ -6028,10 +6028,10 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	
 		if (!bParam2 || iParam3 == 3)
 		{
-			func_352(dict);
-			func_351(dict);
-			func_349(dict);
-			func_348(dict);
+			ParseUGCMissionMocapObject(missionDict);
+			ParseUGCMissionDdblipObject(missionDict);
+			ParseUGCMissionDhpropObject(missionDict);
+			ParseUGCMissionOtzoneObject(missionDict);
 		
 			if (bParam2)
 				return;
@@ -6039,28 +6039,28 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	}
 	else if (func_131())
 	{
-		func_340(dict);
-		func_349(dict);
-		func_339(&dict);
+		ParseUGCMissionRaceObject(missionDict);
+		ParseUGCMissionDhpropObject(missionDict);
+		ParseUGCMissionUnitObject1(&missionDict);
 		func_338();
 		func_336();
 	}
 	else if (func_335())
 	{
-		func_349(dict);
-		func_330(&dict);
-		func_329(&dict);
+		ParseUGCMissionDhpropObject(missionDict);
+		ParseUGCMissionDMD_DMinvtyObjects(&missionDict);
+		ParseUGCMissionWpnDmObject(&missionDict);
 	}
 
-	func_327(&dict);
+	func_327(&missionDict);
 
 	if (!bParam2 || iParam3 == 4)
 	{
-		func_324(dict);
-		func_323(dict);
-		func_320(dict);
-		func_313(dict);
-		func_312(dict);
+		ParseUGCMissionDdtrigObject(missionDict);
+		ParseUGCMissionUsjObject(missionDict);
+		ParseUGCMissionZoneObject(missionDict);
+		ParseUGCMissionObjObject(missionDict);
+		ParseUGCMissionPtempObject(missionDict);
 	
 		if (bParam2)
 			return;
@@ -6068,10 +6068,10 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 
 	if (!bParam2 || iParam3 == 5)
 	{
-		func_308(dict);
-		func_296(dict);
-		func_291(dict);
-		func_278(dict);
+		ParseUGCMissionWeapObject(missionDict);
+		ParseUGCMissionVehObject(missionDict);
+		ParseUGCMissionPropObject(missionDict);
+		ParseUGCMissionDpropObject(missionDict);
 	
 		if (bParam2)
 			return;
@@ -6079,19 +6079,19 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 
 	if (Global_MissionData1== 1)
 	{
-		func_371(dict);
-		func_277(dict);
+		ParseUGCMissionCoverObject(missionDict);
+		ParseUGCMissionEneObject1(missionDict);
 	}
 	else if (Global_MissionData1== 0 || *Global_4718592.f_104427 == 8 || *Global_4718592.f_104427 == 9 || Global_MissionData1== 6 || func_276())
 	{
-		func_273(dict);
-		func_228(dict);
-		dict5 = DATAFILE::DATADICT_GET_DICT(dict, "ene");
-		func_223(&dict5);
+		ParseUGCMissionEneObject2(missionDict);
+		ParseUGCMissionEneObject3(missionDict);
+		missionEneDict = DATAFILE::DATADICT_GET_DICT(missionDict, "ene");
+		ParseUGCMissionEneObject5(&missionEneDict);
 	}
 
 	if (IS_BIT_SET(Global_4718592.f_17, 19))
-		func_222(dict);
+		func_222(missionDict);
 
 	MISC::CLEAR_BIT(&(Global_4718592.f_4), 15);
 	MISC::CLEAR_BIT(&(Global_4718592.f_4), 18);
@@ -6100,7 +6100,7 @@ void func_196(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Position 
 	MISC::CLEAR_BIT(&(Global_4718592.f_4), 28);
 
 	if (func_276() && func_221(*Global_4718592.f_166301))
-		func_217(&dict);
+		func_217(&missionDict);
 
 	if (func_78(*Global_4718592.f_113724))
 		Global_4718592.f_1196 = Global_4718592.f_1195;
@@ -7991,7 +7991,7 @@ void func_222(int iParam0) // Position - 0xB1F1
 	return;
 }
 
-void func_223(var uParam0) // Position - 0xB299
+void ParseUGCMissionEneObject5(var uParam0) // Position - 0xB299
 {
 	var unk;
 	var unk2;
@@ -8338,7 +8338,7 @@ void func_227(char* sParam0, int iParam1, var uParam2, var uParam3, int iParam4,
 	return;
 }
 
-void func_228(int iParam0) // Position - 0xBE5A
+void ParseUGCMissionEneObject3(int iParam0) // Position - 0xBE5A
 {
 	int i;
 	var unk;
@@ -10302,7 +10302,7 @@ void func_272(var uParam0, int iParam1) // Position - 0xF290
 	return;
 }
 
-void func_273(int iParam0) // Position - 0xF2AA
+void ParseUGCMissionEneObject2(int iParam0) // Position - 0xF2AA
 {
 	int i;
 	int j;
@@ -12090,7 +12090,7 @@ BOOL func_276() // Position - 0x14CD7
 	return Global_MissionData1== 3;
 }
 
-void func_277(int iParam0) // Position - 0x14CE5
+void ParseUGCMissionEneObject1(int iParam0) // Position - 0x14CE5
 {
 	Any* dict;
 	Any* array;
@@ -12124,11 +12124,11 @@ void func_277(int iParam0) // Position - 0x14CE5
 		}
 	}
 
-	func_223(&dict);
+	ParseUGCMissionEneObject5(&dict);
 	return;
 }
 
-void func_278(int iParam0) // Position - 0x14E15
+void ParseUGCMissionDpropObject(int iParam0) // Position - 0x14E15
 {
 	int i;
 	int _int;
@@ -12951,7 +12951,7 @@ int func_290() // Position - 0x17878
 	return 200;
 }
 
-void func_291(int iParam0) // Position - 0x1788E
+void ParseUGCMissionPropObject(int iParam0) // Position - 0x1788E
 {
 	int i;
 	int _int;
@@ -13616,7 +13616,7 @@ BOOL func_295(Hash hParam0) // Position - 0x1920C
 	return false;
 }
 
-void func_296(int iParam0) // Position - 0x19223
+void ParseUGCMissionVehObject(int iParam0) // Position - 0x19223
 {
 	int i;
 	int j;
@@ -18763,7 +18763,7 @@ int func_307(int iParam0) // Position - 0x21A5B
 	return Global_1968511[iParam0];
 }
 
-void func_308(int iParam0) // Position - 0x21AC2
+void ParseUGCMissionWeapObject(int iParam0) // Position - 0x21AC2
 {
 	int i;
 	int _int;
@@ -19625,7 +19625,7 @@ BOOL func_311(int iParam0) // Position - 0x23030
 	return false;
 }
 
-void func_312(int iParam0) // Position - 0x23439
+void ParseUGCMissionPtempObject(int iParam0) // Position - 0x23439
 {
 	int i;
 	int j;
@@ -19688,7 +19688,7 @@ void func_312(int iParam0) // Position - 0x23439
 	return;
 }
 
-void func_313(int iParam0) // Position - 0x23682
+void ParseUGCMissionObjObject(int iParam0) // Position - 0x23682
 {
 	int i;
 	int _int;
@@ -20920,7 +20920,7 @@ void func_319(int iParam0) // Position - 0x26CF9
 	return;
 }
 
-void func_320(int iParam0) // Position - 0x26D7F
+void ParseUGCMissionZoneObject(int iParam0) // Position - 0x26D7F
 {
 	int i;
 	int j;
@@ -21254,7 +21254,7 @@ void func_322(var uParam0, var uParam1) // Position - 0x27B95
 	return;
 }
 
-void func_323(int iParam0) // Position - 0x27BAD
+void ParseUGCMissionUsjObject(int iParam0) // Position - 0x27BAD
 {
 	int i;
 	Any* dict;
@@ -21281,7 +21281,7 @@ void func_323(int iParam0) // Position - 0x27BAD
 	return;
 }
 
-void func_324(int iParam0) // Position - 0x27C7A
+void ParseUGCMissionDdtrigObject(int iParam0) // Position - 0x27C7A
 {
 	int i;
 	int j;
@@ -22246,7 +22246,7 @@ void func_328(char* sParam0, int iParam1, var uParam2, int iParam3, int iParam4)
 	return;
 }
 
-void func_329(var uParam0) // Position - 0x2A176
+void ParseUGCMissionWpnDmObject(var uParam0) // Position - 0x2A176
 {
 	Any* dict;
 	int i;
@@ -22262,7 +22262,7 @@ void func_329(var uParam0) // Position - 0x2A176
 	return;
 }
 
-void func_330(var uParam0) // Position - 0x2A1BE
+void ParseUGCMissionDMD_DMinvtyObjects(var uParam0) // Position - 0x2A1BE
 {
 	int i;
 	int dict;
@@ -22560,7 +22560,7 @@ void func_338() // Position - 0x2ADAB
 	return;
 }
 
-void func_339(var uParam0) // Position - 0x2AE1F
+void ParseUGCMissionUnitObject1(var uParam0) // Position - 0x2AE1F
 {
 	int i;
 	int num;
@@ -22609,7 +22609,7 @@ void func_339(var uParam0) // Position - 0x2AE1F
 	return;
 }
 
-void func_340(int iParam0) // Position - 0x2B085
+void ParseUGCMissionRaceObject(int iParam0) // Position - 0x2B085
 {
 	int i;
 	int _int;
@@ -23034,7 +23034,7 @@ void func_347() // Position - 0x2C256
 	return;
 }
 
-void func_348(int iParam0) // Position - 0x2C371
+void ParseUGCMissionOtzoneObject(int iParam0) // Position - 0x2C371
 {
 	int i;
 	int dict;
@@ -23095,7 +23095,7 @@ void func_348(int iParam0) // Position - 0x2C371
 	return;
 }
 
-void func_349(int iParam0) // Position - 0x2C5AE
+void ParseUGCMissionDhpropObject(int iParam0) // Position - 0x2C5AE
 {
 	int i;
 	Any* dict;
@@ -23153,7 +23153,7 @@ int func_350() // Position - 0x2C74A
 	return 40;
 }
 
-void func_351(int iParam0) // Position - 0x2C754
+void ParseUGCMissionDdblipObject(int iParam0) // Position - 0x2C754
 {
 	int i;
 	int j;
@@ -23319,7 +23319,7 @@ void func_351(int iParam0) // Position - 0x2C754
 	return;
 }
 
-void func_352(int iParam0) // Position - 0x2CDC5
+void ParseUGCMissionMocapObject(int iParam0) // Position - 0x2CDC5
 {
 	int i;
 	int j;
@@ -23794,7 +23794,7 @@ void func_359(var uParam0, var uParam1, int iParam2) // Position - 0x2DC22
 	return;
 }
 
-void func_360(int iParam0) // Position - 0x2DC53
+void ParseUGCMissionCutsObject(int iParam0) // Position - 0x2DC53
 {
 	int i;
 	int j;
@@ -24626,7 +24626,7 @@ void func_362(Any* panParam0) // Position - 0x2FBC1
 	return;
 }
 
-void func_363(int iParam0) // Position - 0x2FEE0
+void ParseUGCMissionKillObject(int iParam0) // Position - 0x2FEE0
 {
 	int i;
 	int j;
@@ -24718,7 +24718,7 @@ void func_363(int iParam0) // Position - 0x2FEE0
 	return;
 }
 
-void func_364(var uParam0) // Position - 0x30207
+void ParseUGCMissionMprqObject(var uParam0) // Position - 0x30207
 {
 	int dict;
 	int i;
@@ -24783,7 +24783,7 @@ void func_366(var uParam0) // Position - 0x302B4
 	return;
 }
 
-void func_367(var uParam0) // Position - 0x30419
+void ParseUGCMissionInvtyObject(var uParam0) // Position - 0x30419
 {
 	Any* dict;
 	int i;
@@ -24798,7 +24798,7 @@ void func_367(var uParam0) // Position - 0x30419
 	return;
 }
 
-void func_368(var uParam0) // Position - 0x30455
+void ParseUGCMissionInteractablesObject(var uParam0) // Position - 0x30455
 {
 	int i;
 	Any* dict;
@@ -24958,7 +24958,7 @@ void func_368(var uParam0) // Position - 0x30455
 	return;
 }
 
-void func_369(var uParam0) // Position - 0x31070
+void ParseUGCMissionFMMCTrainObject(var uParam0) // Position - 0x31070
 {
 	int i;
 	int j;
@@ -25053,7 +25053,7 @@ void func_369(var uParam0) // Position - 0x31070
 	return;
 }
 
-void func_370(int iParam0) // Position - 0x31614
+void ParseUGCMissionGotoObject(int iParam0) // Position - 0x31614
 {
 	int i;
 	int j;
@@ -25607,7 +25607,7 @@ void func_370(int iParam0) // Position - 0x31614
 	return;
 }
 
-void func_371(int iParam0) // Position - 0x32C90
+void ParseUGCMissionCoverObject(int iParam0) // Position - 0x32C90
 {
 	int i;
 	Any* dict;
@@ -25640,7 +25640,7 @@ void func_371(int iParam0) // Position - 0x32C90
 	return;
 }
 
-void func_372(var uParam0) // Position - 0x32D9C
+void ParseUGCMissionDoorObject2(var uParam0) // Position - 0x32D9C
 {
 	int i;
 	int _int;
@@ -25747,7 +25747,7 @@ void func_374(var uParam0, var uParam1, int iParam2, int iParam3, int iParam4) /
 	return;
 }
 
-void func_375(int iParam0) // Position - 0x33176
+void ParseUGCMissionDoorObject(int iParam0) // Position - 0x33176
 {
 	int i;
 	int _int;
@@ -25955,7 +25955,7 @@ void func_377(var uParam0) // Position - 0x33783
 	return;
 }
 
-void func_378(var uParam0) // Position - 0x338B2
+void ParseUGCMissionEndconObject14(var uParam0) // Position - 0x338B2
 {
 	int i;
 	int j;
@@ -26033,7 +26033,7 @@ void func_378(var uParam0) // Position - 0x338B2
 	return;
 }
 
-void func_379(var uParam0) // Position - 0x33BEB
+void ParseUGCMissionEndconObject13(var uParam0) // Position - 0x33BEB
 {
 	int i;
 	int j;
@@ -26233,7 +26233,7 @@ void func_379(var uParam0) // Position - 0x33BEB
 	return;
 }
 
-void func_380(var uParam0) // Position - 0x34433
+void ParseUGCMissionEndconObject12(var uParam0) // Position - 0x34433
 {
 	int i;
 	int j;
@@ -26453,7 +26453,7 @@ BOOL func_381(var uParam0, int iParam1, int iParam2) // Position - 0x34B6C
 	return true;
 }
 
-void func_382(var uParam0) // Position - 0x34B8E
+void ParseUGCMissionEndconObject11(var uParam0) // Position - 0x34B8E
 {
 	var unk;
 	var unk2;
@@ -26631,7 +26631,7 @@ void func_382(var uParam0) // Position - 0x34B8E
 	return;
 }
 
-void func_383(var uParam0) // Position - 0x3522C
+void ParseUGCMissionEndconObject10(var uParam0) // Position - 0x3522C
 {
 	int i;
 	int j;
@@ -26746,7 +26746,7 @@ void func_383(var uParam0) // Position - 0x3522C
 	return;
 }
 
-void func_384(var uParam0) // Position - 0x35621
+void ParseUGCMissionEndconObject9(var uParam0) // Position - 0x35621
 {
 	int i;
 	int j;
@@ -26926,7 +26926,7 @@ void func_384(var uParam0) // Position - 0x35621
 	return;
 }
 
-void func_385(var uParam0) // Position - 0x35C4C
+void ParseUGCMissionEndconObject8(var uParam0) // Position - 0x35C4C
 {
 	int i;
 	int j;
@@ -27348,7 +27348,7 @@ void func_385(var uParam0) // Position - 0x35C4C
 	return;
 }
 
-void func_386(var uParam0) // Position - 0x36B5C
+void ParseUGCMissionEndconObject7(var uParam0) // Position - 0x36B5C
 {
 	int i;
 	int j;
@@ -28099,7 +28099,7 @@ BOOL func_387() // Position - 0x386A5
 	return Global_MissionData1== 0 && Global_4718592.f_2 == 6;
 }
 
-void func_388(var uParam0) // Position - 0x386C0
+void ParseUGCMissionEndconObject6(var uParam0) // Position - 0x386C0
 {
 	int i;
 	int j;
@@ -28718,7 +28718,7 @@ void func_389(int iParam0, var uParam1, var uParam2, int iParam3, int iParam4, i
 	return;
 }
 
-void func_390(var uParam0) // Position - 0x39CBF
+void ParseUGCMissionEndconObject5(var uParam0) // Position - 0x39CBF
 {
 	int i;
 	int j;
@@ -29275,7 +29275,7 @@ void func_390(var uParam0) // Position - 0x39CBF
 	return;
 }
 
-void func_391(var uParam0) // Position - 0x3B124
+void ParseUGCMissionEndconObject4(var uParam0) // Position - 0x3B124
 {
 	int i;
 	int j;
@@ -29547,7 +29547,7 @@ void func_391(var uParam0) // Position - 0x3B124
 	return;
 }
 
-void func_392(var uParam0) // Position - 0x3BAD7
+void ParseUGCMissionEndconObject3(var uParam0) // Position - 0x3BAD7
 {
 	int i;
 	int j;
@@ -30382,7 +30382,7 @@ void func_393(int iParam0) // Position - 0x3D62E
 	return;
 }
 
-void func_394(var uParam0) // Position - 0x3D664
+void ParseUGCMissionEndconObject2(var uParam0) // Position - 0x3D664
 {
 	int i;
 	int _int;
@@ -30878,7 +30878,7 @@ void func_394(var uParam0) // Position - 0x3D664
 	return;
 }
 
-void func_395(var uParam0) // Position - 0x3E8CB
+void ParseUGCMissionEndconObject1(var uParam0) // Position - 0x3E8CB
 {
 	int i;
 	int array;
@@ -31356,7 +31356,7 @@ void func_395(var uParam0) // Position - 0x3E8CB
 	return;
 }
 
-void func_396(int iParam0) // Position - 0x3F975
+void ParseUGCMissionRuleObject(int iParam0) // Position - 0x3F975
 {
 	Any* dict;
 
@@ -31377,7 +31377,7 @@ void func_396(int iParam0) // Position - 0x3F975
 	Global_4718592.f_114136 = DATAFILE::DATADICT_GET_INT(dict, "weth");
 	Global_4718592.f_114137 = DATAFILE::DATADICT_GET_INT(dict, "alW");
 	Global_4718592.f_114138 = DATAFILE::DATADICT_GET_INT(dict, "alWC");
-	Global_4718592.f_114180 = DATAFILE::DATADICT_GET_INT(dict, "apeds");
+	Global_4718592.missionRuleApeds = DATAFILE::DATADICT_GET_INT(dict, "apeds");
 	Global_4718592.f_114139 = DATAFILE::DATADICT_GET_INT(dict, "wethec");
 	Global_4718592.f_114179 = DATAFILE::DATADICT_GET_INT(dict, "vehd");
 	Global_4718592.f_1232 = DATAFILE::DATADICT_GET_INT(dict, "vdm");
@@ -31387,7 +31387,7 @@ void func_396(int iParam0) // Position - 0x3F975
 	return;
 }
 
-void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
+void ParseUGCMissionGenObject(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 {
 	int i;
 	int dict;
@@ -33275,44 +33275,44 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_ASSIGN_STRING(&Global_4718592.f_108099[j], "", 64);
 	}
 
-	for (} = 0; } <= 3; } = } + 1)
+	for (j = 0; } <= 3; j = j + 1)
 	{
 		for (k = 0; k <= 12; k = k + 1)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&key6, "ofit", 8);
 			TEXT_LABEL_APPEND_INT(&key6, k + 1, 8);
-			TEXT_LABEL_APPEND_INT(&key6, }, 8);
+			TEXT_LABEL_APPEND_INT(&key6, j, 8);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-				Global_4718592.missionGenMenubs40229[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+				Global_4718592.missionGenMenubs40229[j][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		}
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "ofs1", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40341[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40341[j][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40341[}][0] = 0;
+			Global_4718592.missionGenMenubs40341[j][0] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "ofs2", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40341[}][1] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40341[j][1] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40341[}][1] = 0;
+			Global_4718592.missionGenMenubs40341[j][1] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "mask1", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40363[}][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40363[j][0] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40363[}][0] = 0;
+			Global_4718592.missionGenMenubs40363[j][0] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key5, "gear", 16);
-		TEXT_LABEL_APPEND_INT(&key5, }, 16);
+		TEXT_LABEL_APPEND_INT(&key5, j, 16);
 	
 		for (k = 0; k <= 2; k = k + 1)
 		{
@@ -33323,219 +33323,219 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			}
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 2)
-				Global_4718592.missionGenMenubs40319[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key5);
+				Global_4718592.missionGenMenubs40319[j][k] = DATAFILE::DATADICT_GET_INT(dict, &key5);
 			else
-				Global_4718592.missionGenMenubs40319[}][k] = 0;
+				Global_4718592.missionGenMenubs40319[j][k] = 0;
 		}
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "geard", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40336[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40336[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40336[}] = -1;
+			Global_4718592.missionGenMenubs40336[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "apwfr", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_160037[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_160037[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_160037[}] = -1;
+			Global_4718592.f_160037[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "apwlr", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_160042[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_160042[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_160042[}] = -1;
+			Global_4718592.f_160042[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tcmin", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2 && !func_280())
-			Global_4718592.f_160462[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_160462[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_160462[}] = 0;
+			Global_4718592.f_160462[j] = 0;
 	
 		for (k = 0; k <= 3; k = k + 1)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&key6, "trcmn", 8);
 			TEXT_LABEL_APPEND_INT(&key6, k, 8);
-			TEXT_LABEL_APPEND_INT(&key6, }, 8);
+			TEXT_LABEL_APPEND_INT(&key6, j, 8);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2 && !func_280())
-				Global_4718592.f_160467[}][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+				Global_4718592.f_160467[j][k] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 			else
-				Global_4718592.f_160467[}][k] = 0;
+				Global_4718592.f_160467[j][k] = 0;
 		}
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tmrsp", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_160489[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_160489[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_160489[}] = 0;
+			Global_4718592.f_160489[j] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "vifcit", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_167365[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_167365[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_167365[}] = -1;
+			Global_4718592.f_167365[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tvpm", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_107553[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_107553[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_107553[}] = -1;
+			Global_4718592.f_107553[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tvnc", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_107532[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_107532[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_107532[}] = -1;
+			Global_4718592.f_107532[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tmrees", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 3)
-			Global_4718592.f_160494[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
+			Global_4718592.f_160494[j] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
 		else
-			Global_4718592.f_160494[}] = 1f;
+			Global_4718592.f_160494[j] = 1f;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tmvhp", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_107512[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_107512[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_107512[}] = 100;
+			Global_4718592.f_107512[j] = 100;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tmvds", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 3)
-			Global_4718592.f_107517[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
+			Global_4718592.f_107517[j] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
 		else
-			Global_4718592.f_107517[}] = 1f;
+			Global_4718592.f_107517[j] = 1f;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tblty", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_107547[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_107547[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_107547[}] = 0;
+			Global_4718592.f_107547[j] = 0;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "pmpos", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 5)
-			Global_4718592.f_112478[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
+			Global_4718592.f_112478[j] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
 		else
-			Global_4718592.f_112478[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_112478[j] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "pmpoi", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 5)
-			Global_4718592.f_112491[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
+			Global_4718592.f_112491[j] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
 		else
-			Global_4718592.f_112491[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_112491[j] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "pmrad", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 3)
-			Global_4718592.f_112504[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
+			Global_4718592.f_112504[j] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
 		else
-			Global_4718592.f_112504[}] = 0f;
+			Global_4718592.f_112504[j] = 0f;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "dfofit", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40286[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40286[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40286[}] = -1;
+			Global_4718592.missionGenMenubs40286[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "dfstyl", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.missionGenMenubs40358[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.missionGenMenubs40358[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.missionGenMenubs40358[}] = -1;
+			Global_4718592.missionGenMenubs40358[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "clrovr", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4718592.f_108449[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4718592.f_108449[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4718592.f_108449[}] = -1;
+			Global_4718592.f_108449[j] = -1;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tswpal", 8);
-		TEXT_LABEL_APPEND_INT(&key6, }, 8);
+		TEXT_LABEL_APPEND_INT(&key6, j, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-			Global_4980736.f_75697[}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+			Global_4980736.f_75697[j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 		else
-			Global_4980736.f_75697[}] = -1;
+			Global_4980736.f_75697[j] = -1;
 	
 		for (~ = 0; ~ <= 3; ~ = ~ + 1)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&key6, "", 8);
 			TEXT_LABEL_APPEND_INT(&key6, ~ + 1, 8);
 			TEXT_LABEL_APPEND_STRING(&key6, "cmrt", 8);
-			TEXT_LABEL_APPEND_INT(&key6, }, 8);
+			TEXT_LABEL_APPEND_INT(&key6, j, 8);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-				Global_4718592.f_107563[~][}] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+				Global_4718592.f_107563[~][j] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 			else
-				Global_4718592.f_107563[~][}] = 0;
+				Global_4718592.f_107563[~][j] = 0;
 		
 			TEXT_LABEL_ASSIGN_STRING(&key5, "trstp", 16);
-			TEXT_LABEL_APPEND_INT(&key5, }, 16);
+			TEXT_LABEL_APPEND_INT(&key5, j, 16);
 		
 			if (~ > 0)
 				TEXT_LABEL_APPEND_INT(&key5, ~, 16);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-				Global_4718592.f_112603[}][~][0] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+				Global_4718592.f_112603[j][~][0] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 			else
-				Global_4718592.f_112603[}][~][0] = Vector3(0f, 0f, 0f);
+				Global_4718592.f_112603[j][~][0] = Vector3(0f, 0f, 0f);
 		
 			TEXT_LABEL_ASSIGN_STRING(&key5, "trstf", 16);
-			TEXT_LABEL_APPEND_INT(&key5, }, 16);
+			TEXT_LABEL_APPEND_INT(&key5, j, 16);
 		
 			if (~ > 0)
 				TEXT_LABEL_APPEND_INT(&key5, ~, 16);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-				Global_4718592.f_112901[}][~][0] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+				Global_4718592.f_112901[j][~][0] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 			else
-				Global_4718592.f_112901[}][~][0] = Vector3(0f, 0f, 0f);
+				Global_4718592.f_112901[j][~][0] = Vector3(0f, 0f, 0f);
 		
 			TEXT_LABEL_ASSIGN_STRING(&key5, "trsth", 16);
-			TEXT_LABEL_APPEND_INT(&key5, }, 16);
+			TEXT_LABEL_APPEND_INT(&key5, j, 16);
 		
 			if (~ > 0)
 				TEXT_LABEL_APPEND_INT(&key5, ~, 16);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 3)
-				Global_4718592.f_112816[}][~][0] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
+				Global_4718592.f_112816[j][~][0] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
 			else
-				Global_4718592.f_112816[}][~][0] = 0f;
+				Global_4718592.f_112816[j][~][0] = 0f;
 		
 			for ( = 0;  <= 3;  =  + 1)
 			{
@@ -33546,9 +33546,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 				TEXT_LABEL_APPEND_INT(&key5, , 16);
 			
 				if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-					Global_4718592.f_112603[}][~][] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+					Global_4718592.f_112603[j][~][] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 				else
-					Global_4718592.f_112603[}][~][] = Vector3(0f, 0f, 0f);
+					Global_4718592.f_112603[j][~][] = Vector3(0f, 0f, 0f);
 			
 				TEXT_LABEL_ASSIGN_STRING(&key5, "trsth", 16);
 				TEXT_LABEL_APPEND_INT(&key5, }, 16);
@@ -33557,9 +33557,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 				TEXT_LABEL_APPEND_INT(&key5, , 16);
 			
 				if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 3)
-					Global_4718592.f_112816[}][~][] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
+					Global_4718592.f_112816[j][~][] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
 				else
-					Global_4718592.f_112816[}][~][] = 0f;
+					Global_4718592.f_112816[j][~][] = 0f;
 			}
 		
 			TEXT_LABEL_ASSIGN_STRING(&key6, "trsrl", 8);
@@ -33567,9 +33567,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, ~, 8);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 2)
-				Global_4718592.f_163688[}][~] = DATAFILE::DATADICT_GET_INT(dict, &key6);
+				Global_4718592.f_163688[j][~] = DATAFILE::DATADICT_GET_INT(dict, &key6);
 			else
-				Global_4718592.f_163688[}][~] = 0;
+				Global_4718592.f_163688[j][~] = 0;
 		}
 	
 		for ( = 0;  <= 3;  =  + 1)
@@ -33579,9 +33579,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key5, , 16);
 		
 			if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 2)
-				Global_4718592.f_166305[}][] = DATAFILE::DATADICT_GET_INT(dict, &key5);
+				Global_4718592.f_166305[j][] = DATAFILE::DATADICT_GET_INT(dict, &key5);
 			else
-				Global_4718592.f_166305[}][] = 0;
+				Global_4718592.f_166305[j][] = 0;
 		}
 	
 		for ( = 0;  <= 4;  =  + 1)
@@ -33596,9 +33596,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 				TEXT_LABEL_APPEND_INT(&key5, , 16);
 			
 				if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-					Global_4718592.f_162880[}][][] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+					Global_4718592.f_162880[j][][] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 				else
-					Global_4718592.f_162880[}][][] = Vector3(0f, 0f, 0f);
+					Global_4718592.f_162880[j][][] = Vector3(0f, 0f, 0f);
 			
 				TEXT_LABEL_ASSIGN_STRING(&key5, "cph", 16);
 				TEXT_LABEL_APPEND_INT(&key5, }, 16);
@@ -33608,9 +33608,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 				TEXT_LABEL_APPEND_INT(&key5, , 16);
 			
 				if (DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 3)
-					Global_4718592.f_163145[}][][] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
+					Global_4718592.f_163145[j][][] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
 				else
-					Global_4718592.f_163145[}][][] = -1f;
+					Global_4718592.f_163145[j][][] = -1f;
 			}
 		}
 	
@@ -33620,9 +33620,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 5)
-			Global_4718592.f_162818[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
+			Global_4718592.f_162818[j] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
 		else
-			Global_4718592.f_162818[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_162818[j] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tscrot", 8);
 	
@@ -33630,9 +33630,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 5)
-			Global_4718592.f_162831[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
+			Global_4718592.f_162831[j] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
 		else
-			Global_4718592.f_162831[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_162831[j] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tspos", 8);
 	
@@ -33640,9 +33640,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 5)
-			Global_4718592.f_162844[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
+			Global_4718592.f_162844[j] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key6));
 		else
-			Global_4718592.f_162844[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_162844[j] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tscfov", 8);
 	
@@ -33650,9 +33650,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 3)
-			Global_4718592.f_162857[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
+			Global_4718592.f_162857[j] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
 		else
-			Global_4718592.f_162857[}] = 45f;
+			Global_4718592.f_162857[j] = 45f;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key6, "tshead", 8);
 	
@@ -33660,9 +33660,9 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 			TEXT_LABEL_APPEND_INT(&key6, }, 8);
 	
 		if (DATAFILE::DATADICT_GET_TYPE(dict, &key6) == 3)
-			Global_4718592.f_162862[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
+			Global_4718592.f_162862[j] = DATAFILE::DATADICT_GET_FLOAT(dict, &key6);
 		else
-			Global_4718592.f_162862[}] = 0f;
+			Global_4718592.f_162862[j] = 0f;
 	}
 
 	for (j = 0; j <= 17; j = j + 1)
@@ -34156,39 +34156,39 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	else
 		Global_4718592.f_167586 = 0;
 
-	for (} = 0; } <= 4; } = } + 1)
+	for (l = 0; l <= 4; l = l + 1)
 	{
 		TEXT_LABEL_ASSIGN_STRING(&key5, "rmspco", 16);
-		TEXT_LABEL_APPEND_INT(&key5, }, 16);
+		TEXT_LABEL_APPEND_INT(&key5, l, 16);
 	
 		if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-			Global_4718592.f_167624[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+			Global_4718592.f_167624[l] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 		else
-			Global_4718592.f_167624[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_167624[l] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key5, "rmspch", 16);
-		TEXT_LABEL_APPEND_INT(&key5, }, 16);
+		TEXT_LABEL_APPEND_INT(&key5, l, 16);
 	
 		if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 3)
-			Global_4718592.f_167640[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
+			Global_4718592.f_167640[l] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
 		else
-			Global_4718592.f_167640[}] = 0f;
+			Global_4718592.f_167640[l] = 0f;
 	
 		TEXT_LABEL_ASSIGN_STRING(&key5, "rmspcc", 16);
-		TEXT_LABEL_APPEND_INT(&key5, }, 16);
+		TEXT_LABEL_APPEND_INT(&key5, l, 16);
 	
 		if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 5)
-			Global_4718592.f_167646[}] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
+			Global_4718592.f_167646[l] = Vector3(DATAFILE::DATADICT_GET_VECTOR(dict, &key5));
 		else
-			Global_4718592.f_167646[}] = Vector3(0f, 0f, 0f);
+			Global_4718592.f_167646[l] = Vector3(0f, 0f, 0f);
 	
 		TEXT_LABEL_ASSIGN_STRING(&key5, "rmspcr", 16);
-		TEXT_LABEL_APPEND_INT(&key5, }, 16);
+		TEXT_LABEL_APPEND_INT(&key5, l, 16);
 	
 		if (dict != 0 && DATAFILE::DATADICT_GET_TYPE(dict, &key5) == 3)
-			Global_4718592.f_167662[}] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
+			Global_4718592.f_167662[l] = DATAFILE::DATADICT_GET_FLOAT(dict, &key5);
 		else
-			Global_4718592.f_167662[}] = 0f;
+			Global_4718592.f_167662[l] = 0f;
 	}
 
 	for (j = 0; j <= 2; j = j + 1)
@@ -34382,32 +34382,32 @@ void func_397(int iParam0, int iParam1, BOOL bParam2) // Position - 0x3FB38
 	func_244("gcgc23", &(Global_4718592.f_176338), &dict, 150f, -904994889);
 	func_328("setft", &(Global_4718592.f_176342), &dict, 0, -2340845);
 
-	for ( = 0;  <= 3;  =  + 1)
+	for (c= 0; c <= 3; c= c + 1)
 	{
-		func_334(&key5, "asoAS", , -1);
-		func_328(&key5, &Global_4718592.f_114153[], &dict, -1, -1);
-		func_334(&key5, "asoAST", , -1);
-		func_328(&key5, &Global_4718592.f_114158[], &dict, -1, -1);
-		func_334(&key5, "asoASSR", , -1);
-		func_328(&key5, &Global_4718592.f_114163[], &dict, -1, -1);
-		func_334(&key5, "asoASER", , -1);
-		func_328(&key5, &Global_4718592.f_114168[], &dict, -1, -1);
+		func_334(&key5, "asoAS", c, -1);
+		func_328(&key5, &Global_4718592.f_114153[c], &dict, -1, -1);
+		func_334(&key5, "asoAST", c, -1);
+		func_328(&key5, &Global_4718592.f_114158[c], &dict, -1, -1);
+		func_334(&key5, "asoASSR", c, -1);
+		func_328(&key5, &Global_4718592.f_114163[c], &dict, -1, -1);
+		func_334(&key5, "asoASER", c, -1);
+		func_328(&key5, &Global_4718592.f_114168[c], &dict, -1, -1);
 	}
 
-	for (} = 0; } <= 3; } = } + 1)
+	for (i = 0; i <= 3; i = i + 1)
 	{
 		for (j = 0; j <= 3; j = j + 1)
 		{
 			TEXT_LABEL_ASSIGN_STRING(&key5, "gCachedVeh", 16);
-			TEXT_LABEL_APPEND_INT(&key5, }, 16);
+			TEXT_LABEL_APPEND_INT(&key5, i, 16);
 			TEXT_LABEL_APPEND_STRING(&key5, "_", 16);
 			TEXT_LABEL_APPEND_INT(&key5, j, 16);
-			func_328(&key5, &Global_4718592.f_186589[}][j], &dict, -1, -1);
+			func_328(&key5, &Global_4718592.f_186589[i][j], &dict, -1, -1);
 			TEXT_LABEL_ASSIGN_STRING(&key5, "gRFE", 16);
-			TEXT_LABEL_APPEND_INT(&key5, }, 16);
+			TEXT_LABEL_APPEND_INT(&key5, i, 16);
 			TEXT_LABEL_APPEND_STRING(&key5, "_", 16);
 			TEXT_LABEL_APPEND_INT(&key5, j, 16);
-			func_328(&key5, &Global_4718592.f_186610[}][j], &dict, 0, 0);
+			func_328(&key5, &Global_4718592.f_186610[i][j], &dict, 0, 0);
 		}
 	}
 

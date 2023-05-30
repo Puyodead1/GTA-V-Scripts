@@ -16697,7 +16697,7 @@ void func_529(var uParam0, var uParam1, BOOL bParam2) // Position - 0x1431B
 		DATAFILE::DATADICT_SET_INT(*uParam1, "voice", Global_4718592.f_1227);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "radio", Global_4718592.f_1228);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "aim", Global_4718592.f_1229);
-		DATAFILE::DATADICT_SET_INT(*uParam1, "apeds", *Global_4718592.f_114180);
+		DATAFILE::DATADICT_SET_INT(*uParam1, "apeds", *Global_4718592.missionRuleApeds);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "alW", *Global_4718592.f_114137);
 		DATAFILE::DATADICT_SET_INT(*uParam1, "alWC", *Global_4718592.f_114138);
 	}
@@ -60511,7 +60511,7 @@ void func_1075(int iParam0) // Position - 0x6DDF5
 	Global_4718592.f_114136 = DATAFILE::DATADICT_GET_INT(dict, "weth");
 	Global_4718592.f_114137 = DATAFILE::DATADICT_GET_INT(dict, "alW");
 	Global_4718592.f_114138 = DATAFILE::DATADICT_GET_INT(dict, "alWC");
-	Global_4718592.f_114180 = DATAFILE::DATADICT_GET_INT(dict, "apeds");
+	Global_4718592.missionRuleApeds = DATAFILE::DATADICT_GET_INT(dict, "apeds");
 	Global_4718592.f_114139 = DATAFILE::DATADICT_GET_INT(dict, "wethec");
 	Global_4718592.f_114179 = DATAFILE::DATADICT_GET_INT(dict, "vehd");
 	Global_4718592.f_1232 = DATAFILE::DATADICT_GET_INT(dict, "vdm");
