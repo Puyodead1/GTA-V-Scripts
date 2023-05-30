@@ -109328,7 +109328,7 @@ BOOL func_885(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 		if (!func_894())
 			return false;
 
-	if (!func_893())
+	if (!StartNetCloudMissionLoaderScript())
 		return false;
 
 	if (func_891())
@@ -109439,7 +109439,7 @@ void func_892() // Position - 0x8EBB0
 	return;
 }
 
-BOOL func_893() // Position - 0x8EC10
+BOOL StartNetCloudMissionLoaderScript() // Position - 0x8EC10
 {
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("net_cloud_mission_loader")) > 0)
 		return true;

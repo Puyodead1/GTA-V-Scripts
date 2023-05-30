@@ -173129,7 +173129,7 @@ void func_3549(var uParam0) // Position - 0xE1735
 				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(uParam0->f_9)))
 					TEXT_LABEL_COPY(&unk18[1], Vector3(uParam0->f_9), 6);
 				else
-					unk18[1] = Vector3(Global_4718592.f_114011);
+					unk18[1] = Vector3(Global_4718592.ugcContentId);
 				break;
 		}
 	

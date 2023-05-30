@@ -19574,7 +19574,7 @@ int func_564(int iParam0) // Position - 0x1A820
 	}
 	else if (iParam0 == 1 || iParam0 == 4)
 	{
-		if (DATAFILE::UGC_SET_PLAYER_DATA(&(Global_1048576.f_44), 0f, func_566(iParam0), 0))
+		if (DATAFILE::UGC_SET_PLAYER_DATA(&(Global_1048576.ugcContentId), 0f, func_566(iParam0), 0))
 		{
 		}
 	}

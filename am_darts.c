@@ -106876,7 +106876,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			unk102.f_18 = func_970() - Global_1057406.f_1;
 		
 			if (func_887() || func_84(PLAYER::PLAYER_ID()))
-				unk102.f_19 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+				unk102.f_19 = MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId));
 		
 			unk102.f_20 = flag2;
 		
@@ -106897,7 +106897,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			TEXT_LABEL_ASSIGN_STRING(&unk127, "", 24);
 		
 			if (func_887() || func_84(PLAYER::PLAYER_ID()))
-				unk127 = Vector3(Global_1048576.f_44);
+				unk127 = Vector3(Global_1048576.ugcContentId);
 		
 			STATS::PLAYSTATS_JOB_LTS_ROUND_END(&data, &matchId, &unk102, &unk127);
 			return;
@@ -106975,7 +106975,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 	
 		if (func_887() || func_84(PLAYER::PLAYER_ID()))
 		{
-			num9.f_28 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+			num9.f_28 = MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId));
 		
 			if (func_877() || func_876())
 				num9.f_32 = 1;
@@ -106984,7 +106984,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 		}
 	
 		if (func_887() || func_84(PLAYER::PLAYER_ID()))
-			unk133 = Vector3(Global_1048576.f_44);
+			unk133 = Vector3(Global_1048576.ugcContentId);
 	
 		SOCIALCLUB::SC_PRESENCE_ATTR_SET_STRING(joaat("mp_mis_str"), "");
 		SOCIALCLUB::SC_PRESENCE_ATTR_SET_INT(joaat("mp_mis_inst"), 0);
@@ -107033,7 +107033,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 			
 				if (func_887() || func_84(PLAYER::PLAYER_ID()))
 				{
-					num10.f_20 = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+					num10.f_20 = MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId));
 					num10.f_23 = func_877() || func_876();
 					num10.f_24 = func_875() || func_874();
 				}
@@ -107062,7 +107062,7 @@ void func_829(int iParam0, var uParam1, int iParam2, BOOL bParam3, int iParam4, 
 				TEXT_LABEL_ASSIGN_STRING(&unk171, "", 24);
 			
 				if (func_887() || func_84(PLAYER::PLAYER_ID()))
-					unk171 = Vector3(Global_1048576.f_44);
+					unk171 = Vector3(Global_1048576.ugcContentId);
 			
 				STATS::PLAYSTATS_JOB_LTS_END(&data, &matchId, &num10, &unk171);
 				func_872();
@@ -119976,7 +119976,7 @@ int func_1219(int iParam0) // Position - 0x96462
 	}
 	else if (iParam0 == 1 || iParam0 == 4)
 	{
-		if (DATAFILE::UGC_SET_PLAYER_DATA(&(Global_1048576.f_44), 0f, func_1221(iParam0), 0))
+		if (DATAFILE::UGC_SET_PLAYER_DATA(&(Global_1048576.ugcContentId), 0f, func_1221(iParam0), 0))
 		{
 		}
 	}

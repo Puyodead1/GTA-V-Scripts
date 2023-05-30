@@ -326,6 +326,7 @@ void main() // Position - 0x0
 			{
 				func_574();
 			}
+			// seems to lead into loading UGC, unk11 would be the ugc filename
 			else if (!func_121(&bLocal_64, &unk11, &(Global_1853910[player].f_36.f_18), num, false, false, true, 0, true, flag2, false, true, false, true))
 			{
 				Global_2625315.f_23 = 0;
@@ -596,7 +597,7 @@ BOOL func_5(var uParam0) // Position - 0x516
 			break;
 	
 		case 1:
-			if (NETWORK::UGC_QUERY_BY_CONTENT_IDS(&Global_2625377, uParam0->f_13, true, func_102(0)))
+			if (NETWORK::UGC_QUERY_BY_CONTENT_IDS(&Global_2625377, uParam0->f_13, true, GetUGCTypeName(0)  /* gta5mission */))
 				func_105(uParam0, 2);
 			break;
 	
@@ -3023,7 +3024,7 @@ BOOL func_101(const char* sParam0) // Position - 0x3A77
 	return false;
 }
 
-char* func_102(int iParam0) // Position - 0x3B8C
+char* GetUGCTypeName(int iParam0) // Position - 0x3B8C
 {
 	switch (iParam0)
 	{
@@ -3107,15 +3108,15 @@ BOOL func_103(int iParam0) // Position - 0x3BE0
 	return true;
 }
 
-void func_104(int iParam0) // Position - 0x3D3F
+void func_104(int value) // Position - 0x3D3F
 {
-	Global_1935725.f_1784 = iParam0;
+	Global_1935725.f_1784 = value;
 	return;
 }
 
-void func_105(var uParam0, int iParam1) // Position - 0x3D50
+void func_105(var uParam0, int value) // Position - 0x3D50
 {
-	uParam0->f_4 = iParam1;
+	uParam0->f_4 = value;
 	return;
 }
 
@@ -3181,15 +3182,18 @@ BOOL func_111() // Position - 0x3E11
 
 BOOL func_112() // Position - 0x3E26
 {
+	// seems to be something related to profanity
 	if (func_113())
 		return false;
 
+	// checks if the network is not available
 	if (NETWORK::NETWORK_IS_CLOUD_AVAILABLE() == false)
 		return false;
 
 	return true;
 }
 
+// seems to be something related to profanity
 BOOL func_113() // Position - 0x3E46
 {
 	return Global_2695033;
@@ -3232,7 +3236,7 @@ BOOL func_116(var uParam0, const char* sParam1, char* sParam2, var uParam3) // P
 			break;
 	
 		case 1:
-			if (NETWORK::UGC_GET_GET_BY_CONTENT_ID(sParam1, func_102(0)))
+			if (NETWORK::UGC_GET_GET_BY_CONTENT_ID(sParam1, GetUGCTypeName(0)  /* gta5mission */))
 				func_105(uParam0, 3);
 			break;
 	
@@ -3358,7 +3362,7 @@ void func_120() // Position - 0x4134
 	return;
 }
 
-BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12, BOOL bParam13) // Position - 0x414A
+BOOL func_121(var uParam0, const char* ugcFilename, int* piParam2, int iParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6, int iParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12, BOOL bParam13) // Position - 0x414A
 {
 	if (iParam3 > 10 && iParam3 <= 15 || iParam3 == 122)
 	{
@@ -3424,10 +3428,12 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 			func_577(uParam0, true, true);
 			*uParam0 = 0;
 		}
-	
-		if (func_152(uParam0, sParam1, 0, true, false, bParam5, 0, 0, true, bParam9, bParam10, bParam11, false, bParam12, bParam13, false))
+
+		// seems to do a bulk of the ugc parsing, third param is the ugc type (gta5mission here)
+		if (func_152(uParam0, ugcFilename, 0, true, false, bParam5, 0, 0, true, bParam9, bParam10, bParam11, false, bParam12, bParam13, false))
 		{
-			if (func_151(true) || Global_MissionData1== 31 || Global_MissionData1== 6 || Global_MissionData1== 4)
+			// not really sure what this does, but it doesn't trigger for gta5mission ugcs
+			if (func_151(true) || Global_MissionData1== 31 || Global_MissionData1== 6 || Global_MissionData1== 4) // checks if mission type is ?, ?, challenge
 			{
 				if (func_150(*Global_4718592.f_113724))
 					Global_4718592.f_1238 = Vector3(func_149());
@@ -3462,7 +3468,7 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 				if (!func_133())
 					func_132();
 			}
-			else if (Global_MissionData1== 1)
+			else if (Global_MissionData1== 1) // checks if mission type is a playlist
 			{
 				Global_1665725.f_4 = 99;
 				Global_1665725.f_6 = Global_4718592.f_1223;
@@ -3476,7 +3482,7 @@ BOOL func_121(var uParam0, const char* sParam1, int* piParam2, int iParam3, BOOL
 				Global_1665725.f_5 = Global_4718592.f_1220;
 				Global_1665725.f_10 = Global_4718592.f_1234;
 			}
-			else if (func_131())
+			else if (func_131()) // checks is the ugc type is lifeinvaderpost, or ?
 			{
 				Global_4456484.f_7 = 9901;
 				Global_4456484.f_8 = *Global_4718592.f_104426 + 1;
@@ -3602,6 +3608,7 @@ BOOL _IS_NULL_VECTOR(float fParam0, var uParam1, var uParam2) // Position - 0x46
 	return false;
 }
 
+// checks is the ugc type is lifeinvaderpost, or ?
 BOOL func_131() // Position - 0x4631
 {
 	if (Global_MissionData1== 2 || Global_MissionData1== 8)
@@ -3801,12 +3808,12 @@ BOOL func_151(BOOL bParam0) // Position - 0x4987
 	return false;
 }
 
-BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12, BOOL bParam13, BOOL bParam14, BOOL bParam15) // Position - 0x49F9
+BOOL func_152(var uParam0, const char* ugcFilename, int ugcType, BOOL bParam3, BOOL bParam4, BOOL bParam5, int iParam6, BOOL bParam7, BOOL bParam8, BOOL bParam9, BOOL bParam10, BOOL bParam11, BOOL bParam12, BOOL bParam13, BOOL bParam14, BOOL bParam15) // Position - 0x49F9
 {
 	var unk;
-	Any* fileDict;
-	Any* dict;
-	Any* dict2;
+	Any* ugcDict;
+	Any* ugcMissionDict;
+	Any* ugcGenDict;
 	var gamerHandle;
 	var unk2;
 	Player unk3;
@@ -3815,7 +3822,8 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 		if (func_109() && uParam0->f_4 == 0)
 			return false;
 
-	if (!func_114() || iParam2 != 0 && iParam2 != 1)
+	// checks an unknown bool set from seeminly thin air and checks if the ugc is not of type gta5mission or playlist
+	if (!func_114() || ugcType != 0 && ugcType != 1)
 	{
 		if (func_111())
 		{
@@ -3855,14 +3863,15 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 		case 1:
 			if (func_114() || bParam9)
 			{
-				if (DATAFILE::DATAFILE_LOAD_OFFLINE_UGC(sParam1, 0))
+				if (DATAFILE::DATAFILE_LOAD_OFFLINE_UGC(ugcFilename, 0))
 				{
-					if (iParam2 == 0)
+					if (ugcType == 0) // checks if the ugc type is gta5mission
 					{
+						// content category?
 						Global_4718592.f_114294 = 1;
 					
 						if (!bParam9)
-							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), ugcFilename, 24);
 					
 						ParseUGCFile1(-1, true, false, 0);
 						uParam0->f_8 = 0;
@@ -3871,13 +3880,13 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						func_120();
 						return true;
 					}
-					else if (iParam2 == 1)
+					else if (ugcType == 1) // checks if the ugc type os playlist
 					{
 						if (uParam0->f_16)
 						{
-							TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), ugcFilename, 24);
 							Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1050140.f_14);
-							ParsePlaylistUGC(&fileDict, &unk, &Global_1050140);
+							ParsePlaylistUGC(&ugcDict, &unk, &Global_1050140);
 						
 							if (Global_1050140.f_67 == 0)
 							{
@@ -3893,9 +3902,9 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						}
 						else
 						{
-							TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), ugcFilename, 24);
 							Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
-							ParsePlaylistUGC(&fileDict, &unk, &Global_1048576);
+							ParsePlaylistUGC(&ugcDict, &unk, &Global_1048576);
 							uParam0->f_8 = 0;
 						
 							if (Global_1048576.f_67 == 0)
@@ -3930,18 +3939,18 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 					return true;
 				}
 			}
-			else if (uParam0->f_21 != -1 && uParam0->f_22 != -1 && iParam2 == 0)
+			else if (uParam0->f_21 != -1 && uParam0->f_22 != -1 && ugcType == 0)
 			{
-				uParam0->f_5 = NETWORK::UGC_REQUEST_CONTENT_DATA_FROM_PARAMS(func_102(iParam2), sParam1, 0, uParam0->f_21, uParam0->f_22);
+				uParam0->f_5 = NETWORK::UGC_REQUEST_CONTENT_DATA_FROM_PARAMS(GetUGCTypeName(ugcType)  /* gta5mission */, ugcFilename, 0, uParam0->f_21, uParam0->f_22);
 				DATAFILE::DATAFILE_WATCH_REQUEST_ID(uParam0->f_5);
 				func_105(uParam0, 4);
 			}
 			else if (bParam10)
 			{
-				if (NETWORK::UGC_QUERY_BY_CONTENT_ID(sParam1, true, func_102(iParam2)))
+				if (NETWORK::UGC_QUERY_BY_CONTENT_ID(ugcFilename, true, GetUGCTypeName(ugcType)))
 					func_105(uParam0, 3);
 			}
-			else if (NETWORK::UGC_GET_GET_BY_CONTENT_ID(sParam1, func_102(iParam2)))
+			else if (NETWORK::UGC_GET_GET_BY_CONTENT_ID(ugcFilename, GetUGCTypeName(ugcType)))
 			{
 				func_105(uParam0, 3);
 			}
@@ -3975,13 +3984,13 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						return true;
 					}
 				
-					if (iParam2 == 0)
+					if (ugcType == 0)
 					{
 						uParam0->f_5 = NETWORK::UGC_REQUEST_CONTENT_DATA_FROM_INDEX(0, 0);
 						DATAFILE::DATAFILE_WATCH_REQUEST_ID(uParam0->f_5);
 						func_105(uParam0, 4);
 					}
-					else if (iParam2 == 1)
+					else if (ugcType == 1)
 					{
 						if (DATAFILE::DATAFILE_SELECT_UGC_DATA(0, 0))
 						{
@@ -3990,9 +3999,9 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
 								Global_1050140.f_73 = NETWORK::UGC_GET_CONTENT_CATEGORY(0);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), ugcFilename, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1050140.f_14);
-								ParsePlaylistUGC(&fileDict, &unk, &Global_1050140);
+								ParsePlaylistUGC(&ugcDict, &unk, &Global_1050140);
 							
 								if (Global_1050140.f_67 == 0)
 								{
@@ -4011,9 +4020,9 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
 								Global_1048576.f_73 = NETWORK::UGC_GET_CONTENT_CATEGORY(0);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), ugcFilename, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
-								ParsePlaylistUGC(&fileDict, &unk, &Global_1048576);
+								ParsePlaylistUGC(&ugcDict, &unk, &Global_1048576);
 								uParam0->f_8 = 0;
 							}
 						
@@ -4028,13 +4037,13 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							return true;
 						}
 					}
-					else if (iParam2 == 4)
+					else if (ugcType == 4)
 					{
 						if (DATAFILE::DATAFILE_SELECT_UGC_DATA(0, 0))
 						{
 							if (uParam0->f_16)
 							{
-								func_190(&fileDict, &unk, &Global_1050140, iParam6);
+								func_190(&ugcDict, &unk, &Global_1050140, iParam6);
 							
 								if (iParam6 == 1)
 								{
@@ -4046,13 +4055,13 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1050140.f_44), ugcFilename, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1050140.f_14);
 								uParam0->f_8 = 0;
 							}
 							else
 							{
-								func_190(&fileDict, &unk, &Global_1048576, iParam6);
+								func_190(&ugcDict, &unk, &Global_1048576, iParam6);
 							
 								if (iParam6 == 1)
 								{
@@ -4064,7 +4073,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), ugcFilename, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
 								uParam0->f_8 = 0;
 							}
@@ -4148,7 +4157,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						if (bParam13)
 							func_457(true, true, bParam11, true);
 					
-						if (uParam0->f_21 != -1 && uParam0->f_22 != -1 && iParam2 == 0)
+						if (uParam0->f_21 != -1 && uParam0->f_22 != -1 && ugcType == 0)
 						{
 							Global_4718592.f_114294 = 1;
 							Global_4718592.f_114279 = 1;
@@ -4157,7 +4166,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_113725), "RockStar", 24);
 						
 							if (bParam10)
-								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), ugcFilename, 24);
 						
 							uParam0->f_35 = uParam0->f_22;
 						}
@@ -4184,7 +4193,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							Global_4718592.f_160499 = uParam0->f_23;
 						
 							if (bParam10)
-								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), NETWORK::UGC_GET_CONTENT_ID(0), 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), NETWORK::UGC_GET_CONTENT_ID(0), 24);
 						
 							if (*Global_4718592.f_114294 == 0 || *Global_4718592.f_114294 == 3)
 							{
@@ -4233,7 +4242,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						}
 					
 						if (!bParam10)
-							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), ugcFilename, 24);
 					
 						uParam0->f_32 = 0;
 					
@@ -4285,16 +4294,16 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							ParseUGCFile1(-1, bParam11, false, 0);
 						}
 					
-						if (func_175(uParam0, iParam2, bParam13, bParam9))
+						if (func_175(uParam0, ugcType, bParam13, bParam9))
 							return true;
 					}
 					else
 					{
-						fileDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
-						dict = DATAFILE::DATADICT_GET_DICT(fileDict, "mission");
-						dict2 = DATAFILE::DATADICT_GET_DICT(dict, "gen");
+						ugcDict = DATAFILE::DATAFILE_GET_FILE_DICT(0);
+						ugcMissionDict = DATAFILE::DATADICT_GET_DICT(ugcDict, "mission");
+						ugcGenDict = DATAFILE::DATADICT_GET_DICT(ugcMissionDict, "gen");
 						TEXT_LABEL_ASSIGN_STRING(&(Global_2672505.f_3551), NETWORK::UGC_GET_CONTENT_NAME(0), 32);
-						Global_2672505.f_3551.f_8 = DATAFILE::DATADICT_GET_INT(dict2, "type");
+						Global_2672505.f_3551.f_8 = DATAFILE::DATADICT_GET_INT(ugcGenDict, "type");
 						uParam0->f_17 = NETWORK::UGC_GET_CONTENT_HAS_PLAYER_RECORD(0);
 						*uParam0 = 1;
 						func_120();
@@ -4306,7 +4315,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 					DATAFILE::DATAFILE_DELETE_REQUESTED_FILE(uParam0->f_5);
 					func_107();
 				}
-				else if (iParam2 == 0)
+				else if (ugcType == 0)
 				{
 					func_577(uParam0, true, true);
 					uParam0->f_42.f_3 = 0;
@@ -4335,7 +4344,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 			ParseUGCFile1(uParam0->f_35, bParam11, bParam13 || bParam14, uParam0->f_32);
 		
 			if (uParam0->f_32 >= 6)
-				if (func_175(uParam0, iParam2, bParam13 || bParam14, bParam9))
+				if (func_175(uParam0, ugcType, bParam13 || bParam14, bParam9))
 					return true;
 		
 			uParam0->f_32 = uParam0->f_32 + 1;
@@ -4376,7 +4385,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 			break;
 	
 		case 19:
-			if (NETWORK::UGC_QUERY_BY_CONTENT_ID(&Global_4718592.f_114039[0], true, func_102(iParam2)))
+			if (NETWORK::UGC_QUERY_BY_CONTENT_ID(&Global_4718592.f_114039[0], true, GetUGCTypeName(ugcType)))
 				func_105(uParam0, 21);
 			break;
 	
@@ -4466,7 +4475,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 			{
 				if (bParam7)
 				{
-					if (func_156(&(uParam0->f_42), sParam1, uParam0->f_21, uParam0->f_23))
+					if (func_156(&(uParam0->f_42), ugcFilename, uParam0->f_21, uParam0->f_23))
 					{
 						func_577(uParam0, true, false);
 						uParam0->f_42.f_3 = 1;
@@ -4477,7 +4486,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 				}
 				else
 				{
-					TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42.f_4), sParam1, 64);
+					TEXT_LABEL_ASSIGN_STRING(&(uParam0->f_42.f_4), ugcFilename, 64);
 					uParam0->f_42.f_3 = 1;
 					func_577(uParam0, true, false);
 					func_120();
@@ -4494,7 +4503,7 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 			break;
 	
 		case 10:
-			if (func_173(uParam0, 0, bParam3, iParam2))
+			if (func_173(uParam0, 0, bParam3, ugcType))
 			{
 				func_107();
 				func_105(uParam0, 11);
@@ -4503,9 +4512,9 @@ BOOL func_152(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 	
 		case 11:
 			if (uParam0->f_16)
-				if (NETWORK::UGC_GET_GET_BY_CONTENT_IDS(&(Global_1050140.f_1179), Global_1050140.f_67, func_102(0)))
+				if (NETWORK::UGC_GET_GET_BY_CONTENT_IDS(&(Global_1050140.f_1179), Global_1050140.f_67, GetUGCTypeName(0) /* gta5mission */))
 					func_105(uParam0, 12);
-			else if (NETWORK::UGC_GET_GET_BY_CONTENT_IDS(&(Global_1048576.f_1179), Global_1048576.f_67, func_102(0)))
+			else if (NETWORK::UGC_GET_GET_BY_CONTENT_IDS(&(Global_1048576.f_1179), Global_1048576.f_67, GetUGCTypeName(0)  /* gta5mission */))
 				func_105(uParam0, 12);
 			break;
 	
@@ -6037,7 +6046,7 @@ void ParseUGCFile1(int iParam0, BOOL bParam1, BOOL bParam2, int iParam3) // Posi
 				return;
 		}
 	}
-	else if (func_131())
+	else if (func_131()) // checks is the ugc type is lifeinvaderpost, or ?
 	{
 		ParseUGCMissionRaceObject(missionDict);
 		ParseUGCMissionDhpropObject(missionDict);
@@ -26982,7 +26991,7 @@ void ParseUGCMissionEndconObject8(var uParam0) // Position - 0x35C4C
 	int num5;
 	int num6;
 
-	if (func_131())
+	if (func_131()) // checks is the ugc type is lifeinvaderpost, or ?
 		return;
 
 	unk4 = 20;

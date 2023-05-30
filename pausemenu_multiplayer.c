@@ -2093,7 +2093,7 @@ void func_3(int iParam0, char* sParam1, const char* sParam2, int iParam3, char* 
 				{
 					if (func_10(PLAYER::PLAYER_ID()) && _IS_FMMC_ACTIVE())
 					{
-						hashKey = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+						hashKey = MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId));
 						num4 = func_12(hashKey);
 					}
 				}
@@ -6513,7 +6513,7 @@ void func_182() // Position - 0x686A
 	Global_1048576.f_14 = Vector3(Global_1050140.f_14);
 	Global_1048576.f_30 = Vector3(Global_1050140.f_30);
 	Global_1048576.f_38 = Vector3(Global_1050140.f_38);
-	Global_1048576.f_44 = Vector3(Global_1050140.f_44);
+	Global_1048576.ugcContentId = Vector3(Global_1050140.f_44);
 	Global_1048576.f_50 = Vector3(Global_1050140.f_50);
 	Global_1048576.f_66 = Global_1050140.f_66;
 	Global_1048576.f_67 = Global_1050140.f_67;
@@ -7183,7 +7183,7 @@ void func_229(char* sParam0) // Position - 0x7604
 	TEXT_LABEL_ASSIGN_STRING(&(Global_2683864.f_860), sParam0, 24);
 
 	if (func_230())
-		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam0, 24);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam0, 24);
 
 	return;
 }
@@ -7610,7 +7610,7 @@ void func_259() // Position - 0x7F2D
 
 	numConnectedPlayers = NETWORK::NETWORK_GET_NUM_CONNECTED_PLAYERS();
 	num = MISC::ABSI(NETWORK::GET_TIME_DIFFERENCE(Global_1057161, NETWORK::GET_NETWORK_TIME()));
-	STATS::PLAYSTATS_QUIT_MODE(Global_4718592, &(Global_4718592.f_114011), numConnectedPlayers, num, Global_1057161.f_1);
+	STATS::PLAYSTATS_QUIT_MODE(Global_4718592, &(Global_4718592.ugcContentId), numConnectedPlayers, num, Global_1057161.f_1);
 	func_109();
 	return;
 }
@@ -30718,7 +30718,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						Global_4718592.f_114294 = 1;
 					
 						if (!bParam9)
-							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), sParam1, 24);
 					
 						func_882(-1, true, false, 0);
 						uParam0->f_8 = 0;
@@ -30749,7 +30749,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						}
 						else
 						{
-							TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam1, 24);
 							Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
 							func_880(&fileDict, &unk, &Global_1048576);
 							uParam0->f_8 = 0;
@@ -30867,7 +30867,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
 								Global_1048576.f_73 = NETWORK::UGC_GET_CONTENT_CATEGORY(0);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam1, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
 								func_880(&fileDict, &unk, &Global_1048576);
 								uParam0->f_8 = 0;
@@ -30920,7 +30920,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_14), NETWORK::UGC_GET_CONTENT_NAME(0), 64);
 								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_38), NETWORK::UGC_GET_CONTENT_ID(0), 24);
-								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam1, 24);
 								Global_1853910[PLAYER::PLAYER_ID()].f_17 = Vector3(Global_1048576.f_14);
 								uParam0->f_8 = 0;
 							}
@@ -31013,7 +31013,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_113725), "RockStar", 24);
 						
 							if (bParam10)
-								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), sParam1, 24);
 						
 							uParam0->f_35 = uParam0->f_22;
 						}
@@ -31040,7 +31040,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 							Global_4718592.f_160499 = uParam0->f_23;
 						
 							if (bParam10)
-								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), NETWORK::UGC_GET_CONTENT_ID(0), 24);
+								TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), NETWORK::UGC_GET_CONTENT_ID(0), 24);
 						
 							if (*Global_4718592.f_114294 == 0 || *Global_4718592.f_114294 == 3)
 							{
@@ -31089,7 +31089,7 @@ BOOL func_703(var uParam0, const char* sParam1, int iParam2, BOOL bParam3, BOOL 
 						}
 					
 						if (!bParam10)
-							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.f_114011), sParam1, 24);
+							TEXT_LABEL_ASSIGN_STRING(&(Global_4718592.ugcContentId), sParam1, 24);
 					
 						uParam0->f_32 = 0;
 					
@@ -71571,7 +71571,7 @@ void func_1301(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 
@@ -71609,7 +71609,7 @@ void func_1303(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 
@@ -71623,7 +71623,7 @@ void func_1304(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 
@@ -80785,7 +80785,7 @@ void func_1525(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 
@@ -80799,7 +80799,7 @@ void func_1526(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 
@@ -80813,7 +80813,7 @@ void func_1527(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, 
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[0], "-FromLiveArea", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[1], "-LiveAreaContentType=UGC_TYPE_GTA5_MISSION", 64);
 	TEXT_LABEL_ASSIGN_STRING(&Global_2645068[num].f_18[2], "-LiveAreaLoadContent=", 64);
-	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.f_114011), 16);
+	TEXT_LABEL_COPY(&Global_2645068[num].f_18[3], Vector3(Global_4718592.ugcContentId), 16);
 	return;
 }
 

@@ -681,7 +681,7 @@ void func_6(int iParam0, char* sParam1, const char* sParam2, int iParam3, char* 
 				{
 					if (func_13(PLAYER::PLAYER_ID()) && _IS_FMMC_ACTIVE())
 					{
-						hashKey = MISC::GET_HASH_KEY(&(Global_1048576.f_44));
+						hashKey = MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId));
 						num4 = func_15(hashKey);
 					}
 				}
@@ -2728,7 +2728,7 @@ void func_74(char* sParam0) // Position - 0x2A98
 	TEXT_LABEL_ASSIGN_STRING(&(Global_2683864.f_860), sParam0, 24);
 
 	if (func_75())
-		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam0, 24);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam0, 24);
 
 	return;
 }

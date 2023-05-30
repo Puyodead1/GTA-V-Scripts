@@ -46247,10 +46247,10 @@ void func_522() // Position - 0x4070B
 			contentModifierListId = -1;
 		
 			if (func_97(PLAYER::PLAYER_ID()))
-				contentModifierListId = NETWORK::NETWORK_GET_CONTENT_MODIFIER_LIST_ID(MISC::GET_HASH_KEY(&(Global_1048576.f_44)));
+				contentModifierListId = NETWORK::NETWORK_GET_CONTENT_MODIFIER_LIST_ID(MISC::GET_HASH_KEY(&(Global_1048576.ugcContentId)));
 		
 			if (contentModifierListId == -1)
-				contentModifierListId = NETWORK::NETWORK_GET_CONTENT_MODIFIER_LIST_ID(MISC::GET_HASH_KEY(&(Global_4718592.f_114011)));
+				contentModifierListId = NETWORK::NETWORK_GET_CONTENT_MODIFIER_LIST_ID(MISC::GET_HASH_KEY(&(Global_4718592.ugcContentId)));
 		
 			iLocal_70 = func_553(contentModifierListId);
 		

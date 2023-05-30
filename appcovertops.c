@@ -5318,7 +5318,7 @@ void func_184(const char* sParam0) // Position - 0x6294
 	TEXT_LABEL_ASSIGN_STRING(&(Global_2683864.f_860), sParam0, 24);
 
 	if (func_185())
-		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.f_44), sParam0, 24);
+		TEXT_LABEL_ASSIGN_STRING(&(Global_1048576.ugcContentId), sParam0, 24);
 
 	return;
 }
