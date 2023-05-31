@@ -27785,9 +27785,9 @@ BOOL func_380(int iParam0) // Position - 0x243F3
 	if (!func_381())
 		return false;
 
-	for (i = 0; i <= Global_MissionData1.f_170488.f_1 - 1; i = i + 1)
+	for (i = 0; i <= Global_MissionData1.missionGenKhBS.f_1 - 1; i = i + 1)
 	{
-		if (Global_MissionData1.f_170488.f_2[i] == 2 && Global_MissionData1.f_170488.f_2[i].f_1 == iParam0)
+		if (Global_MissionData1.missionGenKhBS.f_2[i] == 2 && Global_MissionData1.missionGenKhBS.f_2[i].f_1 == iParam0)
 			return true;
 	}
 
@@ -27797,9 +27797,9 @@ BOOL func_380(int iParam0) // Position - 0x243F3
 BOOL func_381() // Position - 0x24457
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return IS_BIT_SET(*Global_MissionData1.f_170488, 0);
+		return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 0);
 
-	return IS_BIT_SET(*Global_MissionData1.f_170488, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
+	return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
 }
 
 BOOL func_382(Vehicle veParam0, int iParam1) // Position - 0x2449E
@@ -30476,7 +30476,7 @@ BOOL func_468() // Position - 0x2848C
 	if (func_443())
 		return true;
 
-	return IS_BIT_SET(*Global_MissionData1.f_170488, 4);
+	return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 4);
 }
 
 BOOL func_469() // Position - 0x284AB

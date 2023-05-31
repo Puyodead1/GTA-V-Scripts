@@ -3679,7 +3679,7 @@ BOOL func_102() // Position - 0x4069
 	if (func_103())
 		return true;
 
-	return IS_BIT_SET(*Global_MissionData1.f_170488, 4);
+	return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 4);
 }
 
 BOOL func_103() // Position - 0x4088
@@ -3690,9 +3690,9 @@ BOOL func_103() // Position - 0x4088
 BOOL func_104() // Position - 0x409D
 {
 	if (NETWORK::NETWORK_IS_ACTIVITY_SESSION())
-		return IS_BIT_SET(*Global_MissionData1.f_170488, 0);
+		return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 0);
 
-	return IS_BIT_SET(*Global_MissionData1.f_170488, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
+	return IS_BIT_SET(*Global_MissionData1.missionGenKhBS, 0) || Global_1926644 && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("fm_deathmatch_creator")) > 0;
 }
 
 BOOL func_105() // Position - 0x40E4
