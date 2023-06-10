@@ -27107,8 +27107,8 @@ void func_284() // Position - 0x1864F
 void func_285() // Position - 0x18666
 {
 	Global_1574747 = false;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.f_1), "", 32);
-	Global_1574747.f_9 = 0;
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.scriptName), "", 32);
+	Global_1574747.scriptHash = 0;
 	return;
 }
 
@@ -27631,8 +27631,8 @@ void func_303() // Position - 0x18F7B
 void func_304() // Position - 0x18FD2
 {
 	Global_1574747 = true;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.f_1), SCRIPT::GET_THIS_SCRIPT_NAME(), 32);
-	Global_1574747.f_9 = MISC::GET_HASH_KEY(&(Global_1574747.f_1));
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.scriptName), SCRIPT::GET_THIS_SCRIPT_NAME(), 32);
+	Global_1574747.scriptHash = MISC::GET_HASH_KEY(&(Global_1574747.scriptName));
 	return;
 }
 

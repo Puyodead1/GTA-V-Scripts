@@ -6316,13 +6316,13 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 
 	if (!IS_BIT_SET(*piParam0, 31))
 	{
-		if (piParam0->f_6 > 0)
+		if (piParam0->step > 0)
 		{
-			piParam0->f_32 = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(234.0331f, -1005.2032f, -98.4626f, "hei_dlc_garage_high_new");
+			piParam0->garageInterior = INTERIOR::GET_INTERIOR_AT_COORDS_WITH_TYPE(234.0331f, -1005.2032f, -98.4626f, "hei_dlc_garage_high_new");
 		
-			if (piParam0->f_32 != 0)
+			if (piParam0->garageInterior != 0)
 			{
-				INTERIOR::PIN_INTERIOR_IN_MEMORY(piParam0->f_32);
+				INTERIOR::PIN_INTERIOR_IN_MEMORY(piParam0->garageInterior);
 				MISC::SET_BIT(piParam0, 31);
 			}
 		}
@@ -6330,7 +6330,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		switch (piParam0->f_6)
+		switch (piParam0->step)
 		{
 			case 0:
 				piParam0->f_292 = 1;
@@ -6360,8 +6360,8 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (!CAM::IS_SCREEN_FADED_OUT() && !CAM::IS_SCREEN_FADING_OUT())
 					CAM::DO_SCREEN_FADE_OUT(800);
 			
-				if (!_STOPWATCH_IS_INITIALIZED(&(piParam0->f_15)))
-					_STOPWATCH_INITIALIZE(&(piParam0->f_15), false, false);
+				if (!_STOPWATCH_IS_INITIALIZED(&(piParam0->stopwatch)))
+					_STOPWATCH_INITIALIZE(&(piParam0->stopwatch), false, false);
 			
 				GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1935677);
 				Global_1935678 = false;
@@ -6375,14 +6375,14 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					*piParam0 = 0;
 					piParam0->f_4 = 0;
 					piParam0->f_5 = 0;
-					func_370(false, false, false, true, true, true, false);
+					HandleSetPlayerControlFlags(false, false, false, true, true, true, false);
 					NETWORK::SET_LOCAL_PLAYER_VISIBLE_IN_CUTSCENE(true, false);
 					func_415(true);
 					INTERIOR::DISABLE_METRO_SYSTEM(true);
 					MISC::SET_OVERRIDE_WEATHER("EXTRASUNNY");
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(19, 0, 0);
 					NETWORK::NETWORK_SET_IN_FREE_CAM_MODE(true);
-					func_369(false);
+					ToggleTraffic(false);
 					STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
 					func_361(true, 0);
 					func_332(true, true);
@@ -6399,15 +6399,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						}
 					}
 				
-					func_323(14, false);
-					piParam0->f_6 = 1;
+					LoadInterior(14, false);
+					piParam0->step = 1;
 					*piParam0 = 0;
 					MISC::CLEAR_BIT(piParam0, 0);
 					MISC::CLEAR_BIT(piParam0, 1);
 					MISC::CLEAR_BIT(piParam0, 2);
 					MISC::CLEAR_BIT(piParam0, 9);
 					MISC::SET_BIT(piParam0, 7);
-					piParam0->f_122 = PED::ADD_SCENARIO_BLOCKING_AREA(-1012.7869f, -2747.5974f, 15f, -1052.0299f, -2716.1438f, 25f, false, true, true, true);
+					piParam0->blockingArea= PED::ADD_SCENARIO_BLOCKING_AREA(-1012.7869f, -2747.5974f, 15f, -1052.0299f, -2716.1438f, 25f, false, true, true, true);
 				}
 				break;
 		
@@ -6439,7 +6439,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 								HUD::SET_BLIP_SCALE(HUD::GET_MAIN_PLAYER_BLIP_ID(), 0f);
 						
 							ENTITY::FREEZE_ENTITY_POSITION(PLAYER::PLAYER_PED_ID(), true);
-							piParam0->f_6 = 2;
+							piParam0->step = 2;
 						}
 					}
 				}
@@ -6454,12 +6454,12 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						{
 							STREAMING::CLEAR_FOCUS();
 							STREAMING::NEW_LOAD_SCENE_START(754.2219f, 1226.8309f, 356.5081f, func_311(-14.367f, 0f, 157.3524f), 100f, 0);
-							_STOPWATCH_DESTROY(&(piParam0->f_17));
-							_STOPWATCH_INITIALIZE(&(piParam0->f_17), false, false);
+							_STOPWATCH_DESTROY(&(piParam0->stopwatch2));
+							_STOPWATCH_INITIALIZE(&(piParam0->stopwatch2), false, false);
 							MISC::SET_BIT(piParam0, 4);
 						}
 					}
-					else if (AUDIO::PREPARE_MUSIC_EVENT("FM_INTRO_START") && STREAMING::IS_NEW_LOAD_SCENE_LOADED() || _STOPWATCH_HAS_TIME_PASSED(&(piParam0->f_17), 5000, false))
+					else if (AUDIO::PREPARE_MUSIC_EVENT("FM_INTRO_START") && STREAMING::IS_NEW_LOAD_SCENE_LOADED() || _STOPWATCH_HAS_TIME_PASSED(&(piParam0->stopwatch2), 5000, false))
 					{
 						if (!IS_BIT_SET(*piParam0, 24))
 						{
@@ -6475,15 +6475,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							STREAMING::NEW_LOAD_SCENE_STOP();
 							GRAPHICS::RESET_ADAPTATION(6);
 						
-							if (!CAM::DOES_CAM_EXIST(piParam0->f_7))
+							if (!CAM::DOES_CAM_EXIST(piParam0->cam))
 							{
-								piParam0->f_7 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
-								CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
+								piParam0->cam = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
+								CAM::SET_CAM_ACTIVE(piParam0->cam, true);
 							}
 						
-							CAM::SET_CAM_PARAMS(piParam0->f_7, 754.2219f, 1226.8309f, 356.5081f, -14.367f, 0f, 157.3524f, 42.2442f, 0, 1, 1, 2);
-							CAM::SET_CAM_PARAMS(piParam0->f_7, 740.7797f, 1193.9226f, 351.1997f, -9.6114f, 0f, 157.8659f, 44.8314f, 6500, 0, 0, 2);
-							CAM::SHAKE_CAM(piParam0->f_7, "HAND_SHAKE", 0.15f);
+							CAM::SET_CAM_PARAMS(piParam0->cam, 754.2219f, 1226.8309f, 356.5081f, -14.367f, 0f, 157.3524f, 42.2442f, 0, 1, 1, 2);
+							CAM::SET_CAM_PARAMS(piParam0->cam, 740.7797f, 1193.9226f, 351.1997f, -9.6114f, 0f, 157.8659f, 44.8314f, 6500, 0, 0, 2);
+							CAM::SHAKE_CAM(piParam0->cam, "HAND_SHAKE", 0.15f);
 							CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, true, 0);
 							func_310(piParam0);
 							MISC::SET_BIT(piParam0, 11);
@@ -6499,7 +6499,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							if (CAM::IS_SCREEN_FADED_OUT())
 								CAM::DO_SCREEN_FADE_IN(800);
 						
-							piParam0->f_6 = 6;
+							piParam0->step = 6;
 						}
 					}
 				}
@@ -6507,12 +6507,12 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 		
 			case 6:
 				func_309(piParam0, 6);
-				func_308(piParam0);
+				SpawnFrogger(piParam0);
 			
 				if (func_307(piParam0, 6, 0))
 				{
 					HUD::CLEAR_HELP(true);
-					piParam0->f_6 = 7;
+					piParam0->step = 7;
 				}
 				break;
 		
@@ -6524,21 +6524,21 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					MISC::SET_BIT(piParam0, 2);
 				}
 			
-				CAM::SET_CAM_PARAMS(piParam0->f_7, -259.3686f, -553.8571f, 142.6048f, 13.2752f, -0.5186f, -143.3378f, 44.9959f, 0, 1, 1, 2);
-				CAM::SET_CAM_PARAMS(piParam0->f_7, -277.7789f, -569.962f, 142.8625f, 12.4479f, -0.5186f, -134.9992f, 44.9959f, 6000, 0, 0, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, -259.3686f, -553.8571f, 142.6048f, 13.2752f, -0.5186f, -143.3378f, 44.9959f, 0, 1, 1, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, -277.7789f, -569.962f, 142.8625f, 12.4479f, -0.5186f, -134.9992f, 44.9959f, 6000, 0, 0, 2);
 				STREAMING::SET_SRL_READAHEAD_TIMES(9, 13, 9, 13);
-				piParam0->f_6 = 8;
+				piParam0->step = 8;
 				break;
 		
 			case 8:
 				func_309(piParam0, 8);
 			
-				if (func_308(piParam0))
+				if (SpawnFrogger(piParam0))
 				{
 					func_306(piParam0);
 				
 					if (func_307(piParam0, 8, 0))
-						piParam0->f_6 = 9;
+						piParam0->step = 9;
 				}
 				break;
 		
@@ -6549,22 +6549,22 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					MISC::SET_BIT(piParam0, 10);
 				}
 			
-				CAM::SET_CAM_PARAMS(piParam0->f_7, -4.6668f, -900.9736f, 184.887f, -1.6106f, -0.5186f, 78.3786f, 45.0069f, 0, 1, 1, 2);
-				CAM::SET_CAM_PARAMS(piParam0->f_7, -23.0087f, -896.4288f, 184.1939f, -2.8529f, -0.5186f, 81.8262f, 45.0069f, 8000, 0, 0, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, -4.6668f, -900.9736f, 184.887f, -1.6106f, -0.5186f, 78.3786f, 45.0069f, 0, 1, 1, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, -23.0087f, -896.4288f, 184.1939f, -2.8529f, -0.5186f, 81.8262f, 45.0069f, 8000, 0, 0, 2);
 			
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_48, false))
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->frogger, false))
 				{
-					VEHICLE::UNPAUSE_PLAYBACK_RECORDED_VEHICLE(piParam0->f_48);
-					ENTITY::SET_ENTITY_VISIBLE(piParam0->f_48, true, false);
-					VEHICLE::SET_HELI_BLADES_FULL_SPEED(piParam0->f_48);
+					VEHICLE::UNPAUSE_PLAYBACK_RECORDED_VEHICLE(piParam0->frogger);
+					ENTITY::SET_ENTITY_VISIBLE(piParam0->frogger, true, false);
+					VEHICLE::SET_HELI_BLADES_FULL_SPEED(piParam0->frogger);
 				}
 			
-				piParam0->f_6 = 10;
+				piParam0->step = 10;
 				break;
 		
 			case 10:
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_48, false))
-					VEHICLE::SET_HELI_BLADES_FULL_SPEED(piParam0->f_48);
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->frogger, false))
+					VEHICLE::SET_HELI_BLADES_FULL_SPEED(piParam0->frogger);
 			
 				func_309(piParam0, 10);
 			
@@ -6584,39 +6584,39 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							
 								time = 5000f;
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[0], false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[0], false))
 								{
-									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[0], 100, "FM_Intro_uber", true);
-									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[0], time);
+									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[0], 100, "FM_Intro_uber", true);
+									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[0], time);
 								}
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[1], false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[1], false))
 								{
-									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[1], 101, "FM_Intro_uber", true);
-									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[1], time);
+									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[1], 101, "FM_Intro_uber", true);
+									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[1], time);
 								}
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[2], false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[2], false))
 								{
-									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[2], 102, "FM_Intro_uber", true);
-									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[2], time);
+									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[2], 102, "FM_Intro_uber", true);
+									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[2], time);
 								}
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[3], false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[3], false))
 								{
-									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[3], 103, "FM_Intro_uber", true);
-									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[3], time);
+									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[3], 103, "FM_Intro_uber", true);
+									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[3], time);
 								}
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[4], false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[4], false))
 								{
-									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[4], 104, "FM_Intro_uber", true);
-									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_92[4], time);
+									VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[4], 104, "FM_Intro_uber", true);
+									VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->raceVehicles[4], time);
 								}
 							
 								MISC::SET_BIT(piParam0, 15);
 								CAM::DO_SCREEN_FADE_IN(800);
-								piParam0->f_6 = 14;
+								piParam0->step = 14;
 							}
 						}
 					}
@@ -6629,9 +6629,9 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					func_302(piParam0);
 					func_301(piParam0, "race_camera_1", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0.1982f, 1065353216);
-					CAM::STOP_CAM_SHAKING(piParam0->f_7, true);
-					CAM::DETACH_CAM(piParam0->f_7);
-					CAM::DESTROY_CAM(piParam0->f_7, false);
+					CAM::STOP_CAM_SHAKING(piParam0->cam, true);
+					CAM::DETACH_CAM(piParam0->cam);
+					CAM::DESTROY_CAM(piParam0->cam, false);
 					AUDIO::START_AUDIO_SCENE("MP_INTRO_RACE_SCENE");
 					STREAMING::SET_SRL_READAHEAD_TIMES(9, 12, 9, 12);
 					func_299(piParam0, 14);
@@ -6651,7 +6651,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_298(piParam0, 23539f, 0);
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 15;
+					piParam0->step = 15;
 				}
 				break;
 		
@@ -6675,14 +6675,14 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_298(piParam0, 28833.33f, 75f);
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 16;
+					piParam0->step = 16;
 				}
 				break;
 		
 			case 16:
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					func_277(piParam0, "race_camera_3a", "mp_intro_seq@", piParam0->f_92[4], 0f, 0f, -0.1f, 0f, 0f, 0f);
+					func_277(piParam0, "race_camera_3a", "mp_intro_seq@", piParam0->raceVehicles[4], 0f, 0f, -0.1f, 0f, 0f, 0f);
 					func_299(piParam0, 16);
 					MISC::CLEAR_BIT(piParam0, 15);
 				}
@@ -6699,7 +6699,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_298(piParam0, 29700f, 0);
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 17;
+					piParam0->step = 17;
 				}
 				break;
 		
@@ -6707,7 +6707,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (IS_BIT_SET(*piParam0, 15))
 				{
 					func_301(piParam0, "race_camera_3b", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0, 1065353216);
-					PED::SET_SYNCHRONIZED_SCENE_RATE(piParam0->f_9, 0.7f);
+					PED::SET_SYNCHRONIZED_SCENE_RATE(piParam0->syncScene, 0.7f);
 					func_299(piParam0, 17);
 					MISC::CLEAR_BIT(piParam0, 15);
 				}
@@ -6730,7 +6730,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_298(piParam0, 36450f, 0);
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 18;
+					piParam0->step = 18;
 				}
 				break;
 		
@@ -6749,26 +6749,26 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				func_309(piParam0, 18);
 			
-				if (func_276() && func_307(piParam0, 18, 0))
+				if (IsGTAOScaleformLoaded() && func_307(piParam0, 18, 0))
 				{
 					func_298(piParam0, 43650f, 0);
 					NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(16, 0, 0);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 19;
+					piParam0->step = 19;
 				}
 				break;
 		
 			case 19:
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[2]))
-						VEHICLE::DELETE_VEHICLE(&piParam0->f_92[2]);
+					if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[2]))
+						VEHICLE::DELETE_VEHICLE(&piParam0->raceVehicles[2]);
 				
-					if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[3]))
-						VEHICLE::DELETE_VEHICLE(&piParam0->f_92[3]);
+					if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[3]))
+						VEHICLE::DELETE_VEHICLE(&piParam0->raceVehicles[3]);
 				
-					if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[4]))
-						VEHICLE::DELETE_VEHICLE(&piParam0->f_92[4]);
+					if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[4]))
+						VEHICLE::DELETE_VEHICLE(&piParam0->raceVehicles[4]);
 				
 					func_301(piParam0, "race_camera_5", "mp_intro_seq@", -2237.39f, -333.52f, 12.47f, 0f, 0f, 0f, 0, 1065353216);
 					func_299(piParam0, 19);
@@ -6783,19 +6783,19 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					if (!IS_BIT_SET(piParam0->f_3, 6))
 					{
-						if (piParam0->f_32 != 0)
+						if (piParam0->garageInterior != 0)
 						{
-							if (INTERIOR::IS_INTERIOR_READY(piParam0->f_32))
+							if (INTERIOR::IS_INTERIOR_READY(piParam0->garageInterior))
 							{
-								if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_91, false))
-									INTERIOR::FORCE_ROOM_FOR_ENTITY(piParam0->f_91, piParam0->f_32, MISC::GET_HASH_KEY("GtaMloRoom001"));
+								if (!ENTITY::IS_ENTITY_DEAD(piParam0->garagePed, false))
+									INTERIOR::FORCE_ROOM_FOR_ENTITY(piParam0->garagePed, piParam0->garageInterior, MISC::GET_HASH_KEY("GtaMloRoom001"));
 							
 								AUDIO::SET_STATIC_EMITTER_ENABLED("SE_MP_GARAGE_L_RADIO", false);
 							
 								for (i = 0; i < 8; i = i + 1)
 								{
-									if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_49[i], false))
-										INTERIOR::FORCE_ROOM_FOR_ENTITY(piParam0->f_49[i], piParam0->f_32, MISC::GET_HASH_KEY("GtaMloRoom001"));
+									if (!ENTITY::IS_ENTITY_DEAD(piParam0->garageVehicles[i], false))
+										INTERIOR::FORCE_ROOM_FOR_ENTITY(piParam0->garageVehicles[i], piParam0->garageInterior, MISC::GET_HASH_KEY("GtaMloRoom001"));
 								}
 							
 								MISC::SET_BIT(&(piParam0->f_3), 6);
@@ -6816,7 +6816,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					if (IS_BIT_SET(*piParam0, 12))
 						MISC::CLEAR_BIT(piParam0, 12);
 				
-					piParam0->f_6 = 22;
+					piParam0->step = 22;
 				}
 				else if (func_307(piParam0, 19, -4968))
 				{
@@ -6842,29 +6842,29 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (IS_BIT_SET(piParam0->f_3, 0))
 				{
-					if (!CAM::DOES_CAM_EXIST(piParam0->f_7))
-						piParam0->f_7 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
+					if (!CAM::DOES_CAM_EXIST(piParam0->cam))
+						piParam0->cam = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
 				
-					CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
-					CAM::SET_CAM_PARAMS(piParam0->f_7, 228.1892f, -1006.7584f, -96.8311f, -13.0682f, 0.0572f, 0.7306f, 40.033f, 0, 1, 1, 2);
-					CAM::SET_CAM_PARAMS(piParam0->f_7, 228.2493f, -1006.1546f, -98.1976f, -2.3097f, 0.0572f, 0.7306f, 40.033f, 6000, 0, 0, 2);
-					CAM::SHAKE_CAM(piParam0->f_7, "HAND_SHAKE", 0.1f);
-					INTERIOR::FORCE_ROOM_FOR_GAME_VIEWPORT(piParam0->f_32, MISC::GET_HASH_KEY("GtaMloRoom001"));
+					CAM::SET_CAM_ACTIVE(piParam0->cam, true);
+					CAM::SET_CAM_PARAMS(piParam0->cam, 228.1892f, -1006.7584f, -96.8311f, -13.0682f, 0.0572f, 0.7306f, 40.033f, 0, 1, 1, 2);
+					CAM::SET_CAM_PARAMS(piParam0->cam, 228.2493f, -1006.1546f, -98.1976f, -2.3097f, 0.0572f, 0.7306f, 40.033f, 6000, 0, 0, 2);
+					CAM::SHAKE_CAM(piParam0->cam, "HAND_SHAKE", 0.1f);
+					INTERIOR::FORCE_ROOM_FOR_GAME_VIEWPORT(piParam0->garageInterior, MISC::GET_HASH_KEY("GtaMloRoom001"));
 					AUDIO::SET_STATIC_EMITTER_ENABLED("SE_MP_GARAGE_L_RADIO", false);
 					GRAPHICS::RESET_ADAPTATION(0);
-					PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_10, 0f);
+					PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->garageSyncScene, 0f);
 				
-					if (!PED::IS_PED_INJURED(piParam0->f_91))
-						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->f_91, false, false);
+					if (!PED::IS_PED_INJURED(piParam0->garagePed))
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->garagePed, false, false);
 				
 					if (AUDIO::IS_AUDIO_SCENE_ACTIVE("MP_INTRO_RACE_SCENE"))
 						AUDIO::STOP_AUDIO_SCENE("MP_INTRO_RACE_SCENE");
 				
 					STREAMING::SET_SRL_READAHEAD_TIMES(9, 13, 9, 13);
-					func_273(piParam0);
-					func_272();
+					CleanupRaceVehicles(piParam0);
+					ShowGTAOLogo();
 					_DISPLAY_HELP_TEXT_NO_SOUND("FMIC_GAR" /*You can store your own collection of cars and motorcycles in Garages that you can purchase around the Map.*/, -1);
-					piParam0->f_6 = 23;
+					piParam0->step = 23;
 				}
 				break;
 		
@@ -6878,18 +6878,18 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (func_307(piParam0, 23, 0))
 				{
-					CAM::SET_CAM_PARAMS(piParam0->f_7, 222.9166f, -999.9128f, -99.4285f, 5.5453f, 0.0572f, -57.3736f, 31.9442f, 0, 1, 1, 2);
-					CAM::SET_CAM_PARAMS(piParam0->f_7, 223.1394f, -999.8619f, -99.4078f, 5.5453f, 0.0572f, -56.2437f, 31.9442f, 3500, 0, 0, 2);
-					PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_10, 0f);
+					CAM::SET_CAM_PARAMS(piParam0->cam, 222.9166f, -999.9128f, -99.4285f, 5.5453f, 0.0572f, -57.3736f, 31.9442f, 0, 1, 1, 2);
+					CAM::SET_CAM_PARAMS(piParam0->cam, 223.1394f, -999.8619f, -99.4078f, 5.5453f, 0.0572f, -56.2437f, 31.9442f, 3500, 0, 0, 2);
+					PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->garageSyncScene, 0f);
 				
-					if (!PED::IS_PED_INJURED(piParam0->f_91))
-						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->f_91, false, false);
+					if (!PED::IS_PED_INJURED(piParam0->garagePed))
+						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->garagePed, false, false);
 				
-					func_270(piParam0, 0);
-					func_270(piParam0, 1);
-					func_270(piParam0, 5);
-					func_270(piParam0, 6);
-					piParam0->f_6 = 24;
+					CleanupGarageVehicles(piParam0, 0);
+					CleanupGarageVehicles(piParam0, 1);
+					CleanupGarageVehicles(piParam0, 5);
+					CleanupGarageVehicles(piParam0, 6);
+					piParam0->step = 24;
 				}
 				break;
 		
@@ -6902,7 +6902,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_278(piParam0);
 			
 				if (func_307(piParam0, 24, 0))
-					piParam0->f_6 = 27;
+					piParam0->step = 27;
 				break;
 		
 			case 27:
@@ -6910,18 +6910,18 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				func_274(piParam0);
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -1148.2856f, -1639.737f, 5.106698f, true, false, false, true);
 				MISC::SET_BIT(piParam0, 13);
-				CAM::SET_CAM_PARAMS(piParam0->f_7, 226.4832f, -978.9647f, -98.874f, -3.0848f, 0.0347f, -115.3629f, 25.2446f, 0, 1, 1, 2);
-				CAM::SET_CAM_PARAMS(piParam0->f_7, 226.4608f, -978.0541f, -98.874f, -3.0848f, 0.0347f, -115.3629f, 25.2446f, 1500, 3, 3, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, 226.4832f, -978.9647f, -98.874f, -3.0848f, 0.0347f, -115.3629f, 25.2446f, 0, 1, 1, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, 226.4608f, -978.0541f, -98.874f, -3.0848f, 0.0347f, -115.3629f, 25.2446f, 1500, 3, 3, 2);
 				NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(18, 0, 0);
-				func_270(piParam0, 2);
-				func_270(piParam0, 7);
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_269());
+				CleanupGarageVehicles(piParam0, 2);
+				CleanupGarageVehicles(piParam0, 7);
+				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(GetMechanicPedHash());
 			
-				if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_91))
-					PED::DELETE_PED(&(piParam0->f_91));
+				if (ENTITY::DOES_ENTITY_EXIST(piParam0->garagePed))
+					PED::DELETE_PED(&(piParam0->garagePed));
 			
 				MISC::SET_BIT(piParam0, 29);
-				piParam0->f_6 = 28;
+				piParam0->step = 28;
 				break;
 		
 			case 28:
@@ -6937,7 +6937,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				func_309(piParam0, 28);
 			
 				if (AUDIO::PREPARE_MUSIC_EVENT("FM_INTRO_DRIVE_START") && IS_BIT_SET(piParam0->f_3, 3) && func_307(piParam0, 28, 0))
-					piParam0->f_6 = 29;
+					piParam0->step = 29;
 				break;
 		
 			case 29:
@@ -6966,16 +6966,16 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(0, "MP_Female_Character", 3, joaat("MP_F_Freemode_01"), 0);
 				}
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_35, "LAMAR", 0, 0, 0);
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->pedLamar, "LAMAR", 0, 0, 0);
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
-					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_34, "MP_Lamar_Car", 0, 0, 0);
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
+					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->lamarsFrogger, "MP_Lamar_Car", 0, 0, 0);
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_33, false))
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->jet, false))
 				{
-					ENTITY::SET_ENTITY_VISIBLE(piParam0->f_33, true, false);
-					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_33, "MP_Plane", 0, 0, 0);
+					ENTITY::SET_ENTITY_VISIBLE(piParam0->jet, true, false);
+					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->jet, "MP_Plane", 0, 0, 0);
 				}
 			
 				func_264(piParam0);
@@ -6984,20 +6984,20 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				_DISPLAY_HELP_TEXT_NO_SOUND("FMIC_TENN" /*~s~Challenge others to Tennis, Golf and many other Activities.*/, -1);
 				CUTSCENE::START_CUTSCENE(4);
 				func_256(true, true, true, false, false, false, false);
-				piParam0->f_6 = 30;
+				piParam0->step = 30;
 				break;
 		
 			case 30:
 				if (CUTSCENE::IS_CUTSCENE_PLAYING())
 				{
-					if (piParam0->f_32 != 0)
-						INTERIOR::UNPIN_INTERIOR(piParam0->f_32);
+					if (piParam0->garageInterior != 0)
+						INTERIOR::UNPIN_INTERIOR(piParam0->garageInterior);
 				
 					func_255(piParam0);
 				
 					if (piParam0->f_293)
 					{
-						piParam0->f_26 = MISC::GET_GAME_TIMER() - piParam0->f_13;
+						piParam0->f_26 = MISC::GET_GAME_TIMER() - piParam0->gameTimer;
 					}
 					else
 					{
@@ -7005,7 +7005,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						piParam0->f_27 = 52618;
 					}
 				
-					piParam0->f_6 = 31;
+					piParam0->step = 31;
 				}
 				break;
 		
@@ -7013,26 +7013,26 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (piParam0->f_295)
 					if (func_266(piParam0))
 						if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("MP_Female_Character", 0))
-							if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+							if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 								if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 									if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
-										TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+										TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 					else if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("MP_Male_Character", 0))
-						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 								if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
-									TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+									TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 			
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("LAMAR", 0))
 				{
-					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 					{
-						if (!PED::IS_PED_INJURED(piParam0->f_35))
+						if (!PED::IS_PED_INJURED(piParam0->pedLamar))
 						{
-							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->f_35, false))
+							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->pedLamar, false))
 							{
-								TASK::TASK_ENTER_VEHICLE(piParam0->f_35, piParam0->f_34, 20000, -1, 1f, 1048592, 0);
-								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->f_35, false, false);
+								TASK::TASK_ENTER_VEHICLE(piParam0->pedLamar, piParam0->lamarsFrogger, 20000, -1, 1f, 1048592, 0);
+								PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(piParam0->pedLamar, false, false);
 							}
 						}
 					}
@@ -7040,13 +7040,13 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("MP_Lamar_Car", 0))
 				{
-					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 					{
-						VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->f_34, true, true, false);
-						ENTITY::SET_ENTITY_COORDS(piParam0->f_34, -1028.4062f, -2732.7822f, 19.5931f, true, false, false, true);
-						ENTITY::SET_ENTITY_HEADING(piParam0->f_34, -106.11f);
+						VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->lamarsFrogger, true, true, false);
+						ENTITY::SET_ENTITY_COORDS(piParam0->lamarsFrogger, -1028.4062f, -2732.7822f, 19.5931f, true, false, false, true);
+						ENTITY::SET_ENTITY_HEADING(piParam0->lamarsFrogger, -106.11f);
 						func_254(piParam0, 3099.997f);
-						VEHICLE::SET_VEHICLE_DOORS_SHUT(piParam0->f_34, true);
+						VEHICLE::SET_VEHICLE_DOORS_SHUT(piParam0->lamarsFrogger, true);
 					}
 				}
 			
@@ -7065,7 +7065,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					if (piParam0->f_293)
 					{
-						piParam0->f_28 = MISC::GET_GAME_TIMER() - piParam0->f_13;
+						piParam0->f_28 = MISC::GET_GAME_TIMER() - piParam0->gameTimer;
 					}
 					else
 					{
@@ -7097,12 +7097,12 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_256(false, true, true, false, false, false, false);
 					MISC::SET_BIT(piParam0, 15);
 					MISC::CLEAR_BIT(piParam0, 13);
-					piParam0->f_6 = 33;
+					piParam0->step = 33;
 				}
 				else
 				{
 					if (piParam0->f_293)
-						piParam0->f_13 = MISC::GET_GAME_TIMER() - (piParam0->f_26 + CUTSCENE::GET_CUTSCENE_TIME());
+						piParam0->gameTimer = MISC::GET_GAME_TIMER() - (piParam0->f_26 + CUTSCENE::GET_CUTSCENE_TIME());
 				
 					if (!IS_BIT_SET(*piParam0, 22))
 					{
@@ -7124,13 +7124,13 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							{
 								if (!IS_BIT_SET(*piParam0, 27))
 								{
-									GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY("scr_mp_plane_landing_tyre_smoke", piParam0->f_33, -2.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1065353216, false, false, false);
+									GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY("scr_mp_plane_landing_tyre_smoke", piParam0->jet, -2.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1065353216, false, false, false);
 									MISC::SET_BIT(piParam0, 27);
 								}
 							
 								if (!IS_BIT_SET(*piParam0, 28))
 								{
-									GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY("scr_mp_plane_landing_tyre_smoke", piParam0->f_33, 3.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1065353216, false, false, false);
+									GRAPHICS::START_PARTICLE_FX_NON_LOOPED_ON_ENTITY("scr_mp_plane_landing_tyre_smoke", piParam0->jet, 3.508f, -3.666f, -3.584f, 0f, 0f, -90f, 1065353216, false, false, false);
 									MISC::SET_BIT(piParam0, 28);
 								}
 							}
@@ -7158,10 +7158,10 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							MISC::SET_BIT(piParam0, 22);
 						}
 					
-						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 						{
-							VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->f_34);
-							VEHICLE::SET_VEHICLE_LIGHTS(piParam0->f_34, 2);
+							VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->lamarsFrogger);
+							VEHICLE::SET_VEHICLE_LIGHTS(piParam0->lamarsFrogger, 2);
 						}
 					}
 				
@@ -7201,7 +7201,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (func_307(piParam0, 33, 0))
 				{
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 34;
+					piParam0->step = 34;
 				}
 				break;
 		
@@ -7213,29 +7213,29 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						CAM::ATTACH_CAM_TO_ENTITY(piParam0->f_7, piParam0->f_34, 0.8056f, 2.2245f, 0.5533f, true);
-						CAM::POINT_CAM_AT_ENTITY(piParam0->f_7, piParam0->f_34, -0.4552f, -0.4977f, 0.5449f, true);
-						CAM::SET_CAM_FOV(piParam0->f_7, 33.3479f);
-						CAM::SHAKE_CAM(piParam0->f_7, "ROAD_VIBRATION_SHAKE", 2f);
-						CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
+						CAM::ATTACH_CAM_TO_ENTITY(piParam0->cam, piParam0->lamarsFrogger, 0.8056f, 2.2245f, 0.5533f, true);
+						CAM::POINT_CAM_AT_ENTITY(piParam0->cam, piParam0->lamarsFrogger, -0.4552f, -0.4977f, 0.5449f, true);
+						CAM::SET_CAM_FOV(piParam0->cam, 33.3479f);
+						CAM::SHAKE_CAM(piParam0->cam, "ROAD_VIBRATION_SHAKE", 2f);
+						CAM::SET_CAM_ACTIVE(piParam0->cam, true);
 					
-						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, false, false);
+						if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+							ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, false, false);
 					
 						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, true, false);
 					
 						piParam0->f_11 = -1;
 						piParam0->f_11 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_dside_f"));
+						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_dside_f"));
 					
 						if (func_266(piParam0))
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_pside_f"));
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_pside_f"));
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_fem", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.129f);
@@ -7245,7 +7245,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, 0);
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_male", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.145f);
@@ -7267,7 +7267,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 18966.65f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 35;
+					piParam0->step = 35;
 				}
 				break;
 		
@@ -7295,15 +7295,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_301(piParam0, "LAMAR_CAR_DRIVE_03", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, true, false);
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+						ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, true, false);
 				
 					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, false, false);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
 				
@@ -7317,7 +7317,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (func_307(piParam0, 35, 0))
 				{
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 36;
+					piParam0->step = 36;
 				}
 				break;
 		
@@ -7341,29 +7341,29 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						CAM::ATTACH_CAM_TO_ENTITY(piParam0->f_7, piParam0->f_34, 0.8056f, 2.2245f, 0.5533f, true);
-						CAM::POINT_CAM_AT_ENTITY(piParam0->f_7, piParam0->f_34, -0.4552f, -0.4977f, 0.5449f, true);
-						CAM::SET_CAM_FOV(piParam0->f_7, 33.3479f);
-						CAM::SHAKE_CAM(piParam0->f_7, "ROAD_VIBRATION_SHAKE", 2f);
-						CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
+						CAM::ATTACH_CAM_TO_ENTITY(piParam0->cam, piParam0->lamarsFrogger, 0.8056f, 2.2245f, 0.5533f, true);
+						CAM::POINT_CAM_AT_ENTITY(piParam0->cam, piParam0->lamarsFrogger, -0.4552f, -0.4977f, 0.5449f, true);
+						CAM::SET_CAM_FOV(piParam0->cam, 33.3479f);
+						CAM::SHAKE_CAM(piParam0->cam, "ROAD_VIBRATION_SHAKE", 2f);
+						CAM::SET_CAM_ACTIVE(piParam0->cam, true);
 					
-						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, false, false);
+						if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+							ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, false, false);
 					
 						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, true, false);
 					
 						piParam0->f_11 = -1;
 						piParam0->f_11 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_dside_f"));
+						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_dside_f"));
 					
 						if (func_266(piParam0))
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_pside_f"));
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_pside_f"));
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_fem", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.363f);
@@ -7373,7 +7373,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, 0);
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_male", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.298f);
@@ -7395,7 +7395,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 42700.96f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 37;
+					piParam0->step = 37;
 				}
 				break;
 		
@@ -7415,15 +7415,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_301(piParam0, "LAMAR_CAR_DRIVE_05", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, true, false);
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+						ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, true, false);
 				
 					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, false, false);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
 				
@@ -7438,7 +7438,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 51033.28f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 38;
+					piParam0->step = 38;
 				}
 				break;
 		
@@ -7477,7 +7477,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (func_307(piParam0, 38, 0))
 				{
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 39;
+					piParam0->step = 39;
 				}
 				break;
 		
@@ -7504,29 +7504,29 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						CAM::ATTACH_CAM_TO_ENTITY(piParam0->f_7, piParam0->f_34, 0.8056f, 2.2245f, 0.5533f, true);
-						CAM::POINT_CAM_AT_ENTITY(piParam0->f_7, piParam0->f_34, -0.4552f, -0.4977f, 0.5449f, true);
-						CAM::SET_CAM_FOV(piParam0->f_7, 33.3479f);
-						CAM::SHAKE_CAM(piParam0->f_7, "ROAD_VIBRATION_SHAKE", 2f);
-						CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
+						CAM::ATTACH_CAM_TO_ENTITY(piParam0->cam, piParam0->lamarsFrogger, 0.8056f, 2.2245f, 0.5533f, true);
+						CAM::POINT_CAM_AT_ENTITY(piParam0->cam, piParam0->lamarsFrogger, -0.4552f, -0.4977f, 0.5449f, true);
+						CAM::SET_CAM_FOV(piParam0->cam, 33.3479f);
+						CAM::SHAKE_CAM(piParam0->cam, "ROAD_VIBRATION_SHAKE", 2f);
+						CAM::SET_CAM_ACTIVE(piParam0->cam, true);
 					
-						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, false, false);
+						if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+							ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, false, false);
 					
 						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, true, false);
 					
 						piParam0->f_11 = -1;
 						piParam0->f_11 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_dside_f"));
+						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_dside_f"));
 					
 						if (func_266(piParam0))
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_pside_f"));
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_pside_f"));
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_fem", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.811f);
@@ -7536,7 +7536,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, 0);
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_lamar", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_male", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.791f);
@@ -7558,7 +7558,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 85050f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 40;
+					piParam0->step = 40;
 				}
 				break;
 		
@@ -7572,15 +7572,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					func_301(piParam0, "LAMAR_CAR_DRIVE_10", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 					STREAMING::SET_SRL_READAHEAD_TIMES(9, 12, 9, 12);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, true, false);
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+						ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, true, false);
 				
 					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, false, false);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
 				
@@ -7594,7 +7594,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 116366.5f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 41;
+					piParam0->step = 41;
 				}
 				break;
 		
@@ -7615,7 +7615,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					GRAPHICS::RENDER_SHADOWED_LIGHTS_WITH_NO_SHADOWS(true);
 					func_254(piParam0, 127166.5f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 42;
+					piParam0->step = 42;
 				}
 				break;
 		
@@ -7635,7 +7635,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					GRAPHICS::RENDER_SHADOWED_LIGHTS_WITH_NO_SHADOWS(false);
 					func_254(piParam0, 170800f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 43;
+					piParam0->step = 43;
 				}
 				break;
 		
@@ -7654,7 +7654,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					STREAMING::SET_SRL_READAHEAD_TIMES(9, 12, 9, 12);
 					func_254(piParam0, 191799.8f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 44;
+					piParam0->step = 44;
 				}
 				break;
 		
@@ -7672,7 +7672,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 196633.1f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 45;
+					piParam0->step = 45;
 				}
 				break;
 		
@@ -7690,7 +7690,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 201466.5f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 46;
+					piParam0->step = 46;
 				}
 				break;
 		
@@ -7707,7 +7707,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (func_307(piParam0, 46, 0))
 				{
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 47;
+					piParam0->step = 47;
 				}
 				break;
 		
@@ -7716,29 +7716,29 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				if (IS_BIT_SET(*piParam0, 15))
 				{
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						CAM::ATTACH_CAM_TO_ENTITY(piParam0->f_7, piParam0->f_34, 0.8056f, 2.2245f, 0.5533f, true);
-						CAM::POINT_CAM_AT_ENTITY(piParam0->f_7, piParam0->f_34, -0.4552f, -0.4977f, 0.5449f, true);
-						CAM::SET_CAM_FOV(piParam0->f_7, 33.3479f);
-						CAM::SHAKE_CAM(piParam0->f_7, "ROAD_VIBRATION_SHAKE", 2f);
-						CAM::SET_CAM_ACTIVE(piParam0->f_7, true);
+						CAM::ATTACH_CAM_TO_ENTITY(piParam0->cam, piParam0->lamarsFrogger, 0.8056f, 2.2245f, 0.5533f, true);
+						CAM::POINT_CAM_AT_ENTITY(piParam0->cam, piParam0->lamarsFrogger, -0.4552f, -0.4977f, 0.5449f, true);
+						CAM::SET_CAM_FOV(piParam0->cam, 33.3479f);
+						CAM::SHAKE_CAM(piParam0->cam, "ROAD_VIBRATION_SHAKE", 2f);
+						CAM::SET_CAM_ACTIVE(piParam0->cam, true);
 					
-						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, false, false);
+						if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+							ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, false, false);
 					
 						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 							ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, true, false);
 					
 						piParam0->f_11 = -1;
 						piParam0->f_11 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_dside_f"));
+						PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_11, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_dside_f"));
 					
 						if (func_266(piParam0))
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->f_34, "seat_pside_f"));
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, ENTITY::GET_ENTITY_BONE_INDEX_BY_NAME(piParam0->lamarsFrogger, "seat_pside_f"));
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_radio", "mp_intro_ig_1_p2", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_female", "ig_1_lamar_drive_female_fem", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.726f);
@@ -7748,7 +7748,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						{
 							piParam0->f_12 = -1;
 							piParam0->f_12 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->f_34, 0);
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_12, piParam0->lamarsFrogger, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_36, piParam0->f_11, "mp_intro_seq@ig_1_lamar_drive_radio", "mp_intro_ig_1_p2", 1000f, -1000f, 0, 0, 1148846080, 0);
 							TASK::TASK_SYNCHRONIZED_SCENE(PLAYER::PLAYER_PED_ID(), piParam0->f_12, "mp_intro_seq@ig_1_lamar_drive_male", "ig_1_lamar_drive_male_male", 1000f, -1000f, 0, 0, 1148846080, 0);
 							PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_11, 0.726f);
@@ -7769,7 +7769,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_254(piParam0, 213066.4f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 48;
+					piParam0->step = 48;
 				}
 				break;
 		
@@ -7780,15 +7780,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_301(piParam0, "LAMAR_CAR_DRIVE_24", "mp_intro_seq@", -1038.78f, -2732.61f, 19.08f, 0f, 0f, 0f, 0, 1065353216);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_35, true, false);
+					if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+						ENTITY::SET_ENTITY_VISIBLE(piParam0->pedLamar, true, false);
 				
 					if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_36, false))
 						ENTITY::SET_ENTITY_VISIBLE(piParam0->f_36, false, false);
 				
-					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
+					if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
 					{
-						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+						TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 						PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
 					}
 				
@@ -7803,7 +7803,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_139), 3);
 					func_242(piParam0, 10177.75f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 49;
+					piParam0->step = 49;
 				}
 				break;
 		
@@ -7823,7 +7823,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				{
 					func_240(piParam0, 4500f);
 					MISC::SET_BIT(piParam0, 15);
-					piParam0->f_6 = 50;
+					piParam0->step = 50;
 				}
 				break;
 		
@@ -7868,10 +7868,10 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				func_309(piParam0, 50);
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
-					if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(piParam0->f_34))
-						if (ENTITY::GET_ENTITY_SPEED(piParam0->f_34) < 1f)
-							VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(piParam0->f_34);
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
+					if (VEHICLE::IS_PLAYBACK_GOING_ON_FOR_VEHICLE(piParam0->lamarsFrogger))
+						if (ENTITY::GET_ENTITY_SPEED(piParam0->lamarsFrogger) < 1f)
+							VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(piParam0->lamarsFrogger);
 			
 				if (func_307(piParam0, 50, 0) && IS_BIT_SET(*piParam0, 20))
 				{
@@ -7881,8 +7881,8 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						MISC::CLEAR_BIT(piParam0, 21);
 					}
 				
-					VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(piParam0->f_34);
-					piParam0->f_6 = 51;
+					VEHICLE::STOP_PLAYBACK_RECORDED_VEHICLE(piParam0->lamarsFrogger);
+					piParam0->step = 51;
 				}
 				break;
 		
@@ -7894,11 +7894,11 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						else
 							CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(PLAYER::PLAYER_PED_ID(), "MP_1", 0, 0, 0);
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_35, false))
-					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_35, "LAMAR", 0, 0, 0);
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->pedLamar, false))
+					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->pedLamar, "LAMAR", 0, 0, 0);
 			
-				if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_34, false))
-					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_34, "MP_Lamar_Car", 0, 0, 0);
+				if (!ENTITY::IS_ENTITY_DEAD(piParam0->lamarsFrogger, false))
+					CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->lamarsFrogger, "MP_Lamar_Car", 0, 0, 0);
 			
 				MISC::SET_BIT(piParam0, 13);
 			
@@ -7907,7 +7907,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 			
 				CUTSCENE::START_CUTSCENE(4);
 				func_256(true, true, true, false, false, false, false);
-				piParam0->f_6 = 52;
+				piParam0->step = 52;
 				break;
 		
 			case 52:
@@ -7916,12 +7916,12 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 				
 					if (piParam0->f_293)
-						piParam0->f_30 = MISC::GET_GAME_TIMER() - piParam0->f_13;
+						piParam0->f_30 = MISC::GET_GAME_TIMER() - piParam0->gameTimer;
 					else
 						piParam0->f_30 = func_239(piParam0);
 				
 					piParam0->f_14 = 0;
-					piParam0->f_6 = 53;
+					piParam0->step = 53;
 				}
 				break;
 		
@@ -7964,14 +7964,14 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				}
 			
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("LAMAR", 0))
-					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-						if (!PED::IS_PED_INJURED(piParam0->f_35))
-							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->f_35, false))
-								TASK::TASK_ENTER_VEHICLE(piParam0->f_35, piParam0->f_34, 20000, -1, 1f, 1048592, 0);
+					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+						if (!PED::IS_PED_INJURED(piParam0->pedLamar))
+							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->pedLamar, false))
+								TASK::TASK_ENTER_VEHICLE(piParam0->pedLamar, piParam0->lamarsFrogger, 20000, -1, 1f, 1048592, 0);
 			
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_REGISTERED_ENTITY("MP_Lamar_Car", 0))
-					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->f_34, 1084227584);
+					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+						VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->lamarsFrogger, 1084227584);
 			
 				if (CUTSCENE::CAN_SET_EXIT_STATE_FOR_CAMERA(false))
 				{
@@ -7986,7 +7986,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				if (CUTSCENE::IS_CUTSCENE_PLAYING())
 				{
 					if (piParam0->f_293)
-						piParam0->f_13 = MISC::GET_GAME_TIMER() - (piParam0->f_30 + CUTSCENE::GET_CUTSCENE_TIME());
+						piParam0->gameTimer = MISC::GET_GAME_TIMER() - (piParam0->f_30 + CUTSCENE::GET_CUTSCENE_TIME());
 				
 					switch (piParam0->f_14)
 					{
@@ -8048,7 +8048,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 				
 					func_256(false, true, true, false, false, false, false);
 					MISC::CLEAR_BIT(piParam0, 13);
-					piParam0->f_6 = 57;
+					piParam0->step = 57;
 				}
 				break;
 		
@@ -8072,8 +8072,8 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							MISC::CLEAR_BIT(piParam0, 11);
 						}
 					
-						_STOPWATCH_DESTROY(&(piParam0->f_17));
-						_STOPWATCH_INITIALIZE(&(piParam0->f_17), false, false);
+						_STOPWATCH_DESTROY(&(piParam0->stopwatch2));
+						_STOPWATCH_INITIALIZE(&(piParam0->stopwatch2), false, false);
 						MISC::SET_BIT(piParam0, 17);
 					}
 					else if (!CAM::IS_SCREEN_FADING_OUT())
@@ -8081,7 +8081,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						CAM::DO_SCREEN_FADE_OUT(250);
 					}
 				}
-				else if (_STOPWATCH_HAS_TIME_PASSED(&(piParam0->f_17), 10000, false))
+				else if (_STOPWATCH_HAS_TIME_PASSED(&(piParam0->stopwatch2), 10000, false))
 				{
 					if (func_234(piParam0))
 					{
@@ -8100,10 +8100,10 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							}
 						}
 					
-						if (!PED::IS_PED_INJURED(piParam0->f_35))
-							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->f_35, false))
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-									TASK::TASK_ENTER_VEHICLE(piParam0->f_35, piParam0->f_34, 20000, -1, 1f, 1048592, 0);
+						if (!PED::IS_PED_INJURED(piParam0->pedLamar))
+							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->pedLamar, false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+									TASK::TASK_ENTER_VEHICLE(piParam0->pedLamar, piParam0->lamarsFrogger, 20000, -1, 1f, 1048592, 0);
 					
 						func_238(true);
 					
@@ -8121,7 +8121,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					
 						MISC::SET_BIT(piParam0, 1);
 						MISC::SET_BIT(piParam0, 15);
-						piParam0->f_6 = 57;
+						piParam0->step = 57;
 					}
 				}
 				break;
@@ -8146,8 +8146,8 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 							MISC::CLEAR_BIT(piParam0, 11);
 						}
 					
-						_STOPWATCH_DESTROY(&(piParam0->f_17));
-						_STOPWATCH_INITIALIZE(&(piParam0->f_17), false, false);
+						_STOPWATCH_DESTROY(&(piParam0->stopwatch2));
+						_STOPWATCH_INITIALIZE(&(piParam0->stopwatch2), false, false);
 						MISC::SET_BIT(piParam0, 17);
 					}
 					else if (!CAM::IS_SCREEN_FADING_OUT())
@@ -8155,7 +8155,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						CAM::DO_SCREEN_FADE_OUT(250);
 					}
 				}
-				else if (_STOPWATCH_HAS_TIME_PASSED(&(piParam0->f_17), 10000, false))
+				else if (_STOPWATCH_HAS_TIME_PASSED(&(piParam0->stopwatch2), 10000, false))
 				{
 					if (func_286(piParam0))
 					{
@@ -8172,15 +8172,15 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 								ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), -200.8225f, 302.9014f, 95.9455f, true, false, false, true);
 								ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), 61.3164f);
 							
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-									TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->f_34, 20000, 0, 1f, 1048592, 0);
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+									TASK::TASK_ENTER_VEHICLE(PLAYER::PLAYER_PED_ID(), piParam0->lamarsFrogger, 20000, 0, 1f, 1048592, 0);
 							}
 						}
 					
-						if (!PED::IS_PED_INJURED(piParam0->f_35))
-							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->f_35, false))
-								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-									TASK::TASK_ENTER_VEHICLE(piParam0->f_35, piParam0->f_34, 20000, -1, 1f, 1048592, 0);
+						if (!PED::IS_PED_INJURED(piParam0->pedLamar))
+							if (!PED::IS_PED_IN_ANY_VEHICLE(piParam0->pedLamar, false))
+								if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+									TASK::TASK_ENTER_VEHICLE(piParam0->pedLamar, piParam0->lamarsFrogger, 20000, -1, 1f, 1048592, 0);
 					
 						!func_237(PLAYER::PLAYER_ID());
 						func_256(false, true, true, false, false, false, false);
@@ -8194,11 +8194,11 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 						CAM::DO_SCREEN_FADE_IN(250);
 						NETWORK::NETWORK_OVERRIDE_CLOCK_TIME(0, 0, 0);
 						MISC::SET_BIT(&(Global_1853910[PLAYER::PLAYER_ID()].f_139), 3);
-						piParam0->f_13 = MISC::GET_GAME_TIMER() - func_231(piParam0, 48, false);
+						piParam0->gameTimer = MISC::GET_GAME_TIMER() - func_231(piParam0, 48, false);
 						piParam0->f_293 = 1;
 						func_242(piParam0, 10177.75f);
 						MISC::SET_BIT(piParam0, 15);
-						piParam0->f_6 = 49;
+						piParam0->step = 49;
 					}
 				}
 				break;
@@ -8214,10 +8214,10 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 					MISC::CLEAR_BIT(piParam0, 11);
 				}
 			
-				if (!PED::IS_PED_INJURED(piParam0->f_35))
+				if (!PED::IS_PED_INJURED(piParam0->pedLamar))
 				{
-					TASK::TASK_STAND_STILL(piParam0->f_35, -1);
-					PED::SET_PED_KEEP_TASK(piParam0->f_35, true);
+					TASK::TASK_STAND_STILL(piParam0->pedLamar, -1);
+					PED::SET_PED_KEEP_TASK(piParam0->pedLamar, true);
 				}
 			
 				NETWORK::NETWORK_SET_VOICE_ACTIVE(true);
@@ -8244,7 +8244,7 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 		if (!piParam0->f_291)
 		{
 			if (piParam0->f_293)
-				piParam0->f_289 = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER() - piParam0->f_13);
+				piParam0->f_289 = SYSTEM::TO_FLOAT(MISC::GET_GAME_TIMER() - piParam0->gameTimer);
 			else
 				piParam0->f_289 = SYSTEM::TO_FLOAT(func_239(piParam0));
 		
@@ -8262,10 +8262,10 @@ BOOL func_210(int* piParam0, int* piParam1) // Position - 0x6821
 		func_214(piParam0);
 	
 		if (IS_BIT_SET(*piParam0, 12))
-			if (func_276())
+			if (IsGTAOScaleformLoaded())
 				func_213();
 	
-		if (piParam0->f_6 > 0 && piParam0->f_6 <= 57)
+		if (piParam0->step > 0 && piParam0->step <= 57)
 		{
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
@@ -8295,7 +8295,7 @@ void func_211(int* piParam0) // Position - 0x9F4C
 
 	if (!IS_BIT_SET(*piParam0, 9))
 	{
-		if (piParam0->f_6 > 0)
+		if (piParam0->step > 0)
 		{
 			if (!NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 			{
@@ -8331,15 +8331,15 @@ void func_212(BOOL bParam0) // Position - 0x9FA2
 
 void func_213() // Position - 0x9FFF
 {
-	GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(Global_1577867, 255, 255, 255, 255, 0);
+	GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(Global_IntroScaleform, 255, 255, 255, 255, 0);
 
-	if (Global_1577869 == 0)
+	if (Global_HasIntroScaleformShown == 0)
 	{
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577867, "SET_BIG_LOGO_VISIBLE");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_IntroScaleform, "SET_BIG_LOGO_VISIBLE");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(true);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		Global_1577869 = 1;
+		Global_HasIntroScaleformShown = 1;
 	}
 
 	return;
@@ -8349,10 +8349,10 @@ void func_214(int* piParam0) // Position - 0xA03E
 {
 	var entityCoords;
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[piParam0->f_90]))
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[piParam0->f_90]))
 	{
-		ENTITY::IS_ENTITY_DEAD(piParam0->f_58[piParam0->f_90], false);
-		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(piParam0->f_58[piParam0->f_90], true));
+		ENTITY::IS_ENTITY_DEAD(piParam0->entityList[piParam0->f_90], false);
+		entityCoords = Vector3(ENTITY::GET_ENTITY_COORDS(piParam0->entityList[piParam0->f_90], true));
 	
 		if (entityCoords.f_2 < -50f)
 			func_215(piParam0, piParam0->f_90);
@@ -8371,22 +8371,22 @@ void func_215(int* piParam0, int iParam1) // Position - 0xA0AB
 	Vector3 vector;
 	float unk;
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[iParam1]))
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[iParam1]))
 	{
-		ENTITY::IS_ENTITY_DEAD(piParam0->f_58[iParam1], false);
+		ENTITY::IS_ENTITY_DEAD(piParam0->entityList[iParam1], false);
 		func_216(iParam1, &vector, &heading);
-		ENTITY::SET_ENTITY_COORDS(piParam0->f_58[iParam1], vector, true, false, false, true);
-		ENTITY::SET_ENTITY_HEADING(piParam0->f_58[iParam1], heading);
-		ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_58[iParam1], true);
-		VEHICLE::SET_VEHICLE_FIXED(piParam0->f_58[iParam1]);
-		ENTITY::SET_ENTITY_COLLISION(piParam0->f_58[iParam1], false, false);
-		ENTITY::SET_ENTITY_VISIBLE(piParam0->f_58[iParam1], false, false);
+		ENTITY::SET_ENTITY_COORDS(piParam0->entityList[iParam1], vector, true, false, false, true);
+		ENTITY::SET_ENTITY_HEADING(piParam0->entityList[iParam1], heading);
+		ENTITY::FREEZE_ENTITY_POSITION(piParam0->entityList[iParam1], true);
+		VEHICLE::SET_VEHICLE_FIXED(piParam0->entityList[iParam1]);
+		ENTITY::SET_ENTITY_COLLISION(piParam0->entityList[iParam1], false, false);
+		ENTITY::SET_ENTITY_VISIBLE(piParam0->entityList[iParam1], false, false);
 	}
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_74[iParam1]))
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->vehiclePeds[iParam1]))
 	{
-		ENTITY::IS_ENTITY_DEAD(piParam0->f_74[iParam1], false);
-		ENTITY::SET_ENTITY_VISIBLE(piParam0->f_74[iParam1], false, false);
+		ENTITY::IS_ENTITY_DEAD(piParam0->vehiclePeds[iParam1], false);
+		ENTITY::SET_ENTITY_VISIBLE(piParam0->vehiclePeds[iParam1], false, false);
 	}
 
 	return;
@@ -8483,7 +8483,7 @@ float func_217(int* piParam0) // Position - 0xA396
 	float num;
 	float num2;
 
-	if (piParam0->f_6 >= 31 && piParam0->f_6 < 33)
+	if (piParam0->step >= 31 && piParam0->step < 33)
 	{
 		if (func_266(piParam0))
 		{
@@ -8543,20 +8543,20 @@ void func_219(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA492
 		func_251(piParam0);
 		func_302(piParam0);
 		func_250(piParam0);
-		func_272();
+		ShowGTAOLogo();
 		func_255(piParam0);
-		func_273(piParam0);
+		CleanupRaceVehicles(piParam0);
 		func_229(piParam0);
 		func_244(piParam0);
 		PED::REMOVE_SCENARIO_BLOCKING_AREAS();
 	
 		if (bParam2)
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_34))
-				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&(piParam0->f_34));
+			if (ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger))
+				ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&(piParam0->lamarsFrogger));
 		
-			if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_35))
-				ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(piParam0->f_35));
+			if (ENTITY::DOES_ENTITY_EXIST(piParam0->pedLamar))
+				ENTITY::SET_PED_AS_NO_LONGER_NEEDED(&(piParam0->pedLamar));
 		}
 	
 		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_36))
@@ -8582,7 +8582,7 @@ void func_219(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA492
 		}
 	
 		NETWORK::NETWORK_SET_IN_FREE_CAM_MODE(false);
-		func_369(true);
+		ToggleTraffic(true);
 	
 		if (IS_BIT_SET(*piParam0, 26))
 		{
@@ -8608,7 +8608,7 @@ void func_219(int* piParam0, BOOL bParam1, BOOL bParam2) // Position - 0xA492
 		if (AUDIO::IS_AUDIO_SCENE_ACTIVE("MP_INTRO_LAMAR_DRIVE_SCENE"))
 			AUDIO::STOP_AUDIO_SCENE("MP_INTRO_LAMAR_DRIVE_SCENE");
 	
-		func_323(14, true);
+		LoadInterior(14, true);
 		PLAYER::SET_MAX_WANTED_LEVEL(5);
 		MISC::UNLOAD_CLOUD_HAT("CONTRAILS", 0);
 		VEHICLE::REMOVE_VEHICLE_RECORDING(5, "FMINTRO");
@@ -8765,8 +8765,8 @@ void func_227() // Position - 0xA8A2
 void func_228() // Position - 0xA8B9
 {
 	Global_1574747 = false;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.f_1), "", 32);
-	Global_1574747.f_9 = 0;
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.scriptName), "", 32);
+	Global_1574747.scriptHash = 0;
 	return;
 }
 
@@ -9044,29 +9044,29 @@ BOOL func_234(int* piParam0) // Position - 0xAD94
 
 	if (STREAMING::HAS_MODEL_LOADED(model) && STREAMING::HAS_MODEL_LOADED(model2))
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_34))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger))
 		{
-			piParam0->f_34 = VEHICLE::CREATE_VEHICLE(model2, -198.221f, 301.8606f, 95.9455f, 148.1586f, false, false, false);
-			ENTITY::SET_ENTITY_ALWAYS_PRERENDER(piParam0->f_34, true);
-			AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_34, false);
-			ENTITY::SET_ENTITY_PROOFS(piParam0->f_34, true, true, true, true, true, true, true, false);
-			VEHICLE::SET_VEHICLE_LIGHTS(piParam0->f_34, 2);
+			piParam0->lamarsFrogger = VEHICLE::CREATE_VEHICLE(model2, -198.221f, 301.8606f, 95.9455f, 148.1586f, false, false, false);
+			ENTITY::SET_ENTITY_ALWAYS_PRERENDER(piParam0->lamarsFrogger, true);
+			AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->lamarsFrogger, false);
+			ENTITY::SET_ENTITY_PROOFS(piParam0->lamarsFrogger, true, true, true, true, true, true, true, false);
+			VEHICLE::SET_VEHICLE_LIGHTS(piParam0->lamarsFrogger, 2);
 		}
-		else if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_35))
+		else if (!ENTITY::DOES_ENTITY_EXIST(piParam0->pedLamar))
 		{
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 			{
-				piParam0->f_35 = PED::CREATE_PED(PED_TYPE_MISSION, model, -195.2f, 307.1825f, 95.9455f, 143.6341f, false, false);
-				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_35, true);
-				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_34, true);
-				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_35, true);
-				PED::SET_PED_RELATIONSHIP_GROUP_HASH(piParam0->f_35, PED::GET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID()));
-				ENTITY::SET_ENTITY_PROOFS(piParam0->f_35, true, true, true, true, true, true, true, false);
+				piParam0->pedLamar = PED::CREATE_PED(PED_TYPE_MISSION, model, -195.2f, 307.1825f, 95.9455f, 143.6341f, false, false);
+				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->pedLamar, true);
+				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->lamarsFrogger, true);
+				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->pedLamar, true);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(piParam0->pedLamar, PED::GET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID()));
+				ENTITY::SET_ENTITY_PROOFS(piParam0->pedLamar, true, true, true, true, true, true, true, false);
 			}
 		}
 	}
 
-	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_34) || !ENTITY::DOES_ENTITY_EXIST(piParam0->f_35))
+	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger) || !ENTITY::DOES_ENTITY_EXIST(piParam0->pedLamar))
 		return false;
 
 	return true;
@@ -9074,11 +9074,11 @@ BOOL func_234(int* piParam0) // Position - 0xAD94
 
 void func_235(int* piParam0, int iParam1) // Position - 0xAEBA
 {
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[iParam1]))
-		VEHICLE::DELETE_VEHICLE(&piParam0->f_58[iParam1]);
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[iParam1]))
+		VEHICLE::DELETE_VEHICLE(&piParam0->entityList[iParam1]);
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_74[iParam1]))
-		PED::DELETE_PED(&piParam0->f_74[iParam1]);
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->vehiclePeds[iParam1]))
+		PED::DELETE_PED(&piParam0->vehiclePeds[iParam1]);
 
 	return;
 }
@@ -9110,10 +9110,10 @@ void func_238(BOOL bParam0) // Position - 0xAF44
 
 int func_239(int* piParam0) // Position - 0xAF78
 {
-	if (piParam0->f_6 < 31)
+	if (piParam0->step < 31)
 		return AUDIO::GET_MUSIC_PLAYTIME();
 
-	if (piParam0->f_6 < 33)
+	if (piParam0->step < 33)
 		return piParam0->f_26 + CUTSCENE::GET_CUTSCENE_TIME();
 
 	return piParam0->f_28 + AUDIO::GET_MUSIC_PLAYTIME();
@@ -9121,7 +9121,7 @@ int func_239(int* piParam0) // Position - 0xAF78
 
 void func_240(int* piParam0, float fParam1) // Position - 0xAFB4
 {
-	func_241(piParam0->f_34, 7, "FMINTRO", fParam1, true);
+	func_241(piParam0->lamarsFrogger, 7, "FMINTRO", fParam1, true);
 	return;
 }
 
@@ -9160,7 +9160,7 @@ void func_241(Vehicle veParam0, int iParam1, char* sParam2, float fParam3, BOOL 
 
 void func_242(int* piParam0, float fParam1) // Position - 0xB04C
 {
-	func_241(piParam0->f_34, 6, "FMINTRO", fParam1, true);
+	func_241(piParam0->lamarsFrogger, 6, "FMINTRO", fParam1, true);
 	return;
 }
 
@@ -9331,11 +9331,11 @@ void func_247(int* piParam0) // Position - 0xB511
 					break;
 			}
 		
-			if (!PED::IS_PED_INJURED(piParam0->f_98[i]) && VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[i], false))
+			if (!PED::IS_PED_INJURED(piParam0->raceVehiclePeds[i]) && VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[i], false))
 			{
-				ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_92[i], false);
-				VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->f_92[i], 10f);
-				TASK::TASK_VEHICLE_DRIVE_TO_COORD(piParam0->f_98[i], piParam0->f_92[i], vector, 5f, 0, ENTITY::GET_ENTITY_MODEL(piParam0->f_92[i]), 262144, 1f, 100f);
+				ENTITY::FREEZE_ENTITY_POSITION(piParam0->raceVehicles[i], false);
+				VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->raceVehicles[i], 10f);
+				TASK::TASK_VEHICLE_DRIVE_TO_COORD(piParam0->raceVehiclePeds[i], piParam0->raceVehicles[i], vector, 5f, 0, ENTITY::GET_ENTITY_MODEL(piParam0->raceVehicles[i]), 262144, 1f, 100f);
 			}
 		}
 	
@@ -9357,13 +9357,13 @@ BOOL func_248(int* piParam0) // Position - 0xB5EC
 
 	model = joaat("shamal");
 	STREAMING::REQUEST_MODEL(model);
-	STREAMING::REQUEST_MODEL(func_249());
+	STREAMING::REQUEST_MODEL(GetPlayerPedEntityModel());
 
 	if (STREAMING::HAS_MODEL_LOADED(model))
 	{
 		for (i = 0; i < 1; i = i + 1)
 		{
-			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
+			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
 			{
 				switch (i)
 				{
@@ -9378,33 +9378,33 @@ BOOL func_248(int* piParam0) // Position - 0xB5EC
 						break;
 				}
 			
-				piParam0->f_92[i] = VEHICLE::CREATE_VEHICLE(model, vector, heading, false, false, false);
-				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->f_92[i], 1084227584);
-				ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_92[i], true);
-				VEHICLE::SET_VEHICLE_LIGHTS(piParam0->f_92[i], 2);
+				piParam0->raceVehicles[i] = VEHICLE::CREATE_VEHICLE(model, vector, heading, false, false, false);
+				VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->raceVehicles[i], 1084227584);
+				ENTITY::FREEZE_ENTITY_POSITION(piParam0->raceVehicles[i], true);
+				VEHICLE::SET_VEHICLE_LIGHTS(piParam0->raceVehicles[i], 2);
 			}
 		}
 	}
 
 	for (i = 0; i < 1; i = i + 1)
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
 			return false;
 	}
 
-	if (STREAMING::HAS_MODEL_LOADED(func_249()))
+	if (STREAMING::HAS_MODEL_LOADED(GetPlayerPedEntityModel()))
 	{
 		for (i = 0; i < 1; i = i + 1)
 		{
-			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_98[i]))
+			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehiclePeds[i]))
 			{
-				if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
+				if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
 				{
-					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[i], false))
+					if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[i], false))
 					{
-						piParam0->f_98[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->f_92[i], PED_TYPE_CIVMALE, func_249(), -1, false, false);
-						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_98[i], true);
-						VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->f_92[i], true, true, false);
+						piParam0->raceVehiclePeds[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->raceVehicles[i], PED_TYPE_CIVMALE, GetPlayerPedEntityModel(), -1, false, false);
+						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->raceVehiclePeds[i], true);
+						VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->raceVehicles[i], true, true, false);
 					}
 				}
 			}
@@ -9412,12 +9412,12 @@ BOOL func_248(int* piParam0) // Position - 0xB5EC
 	}
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(model);
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_249());
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(GetPlayerPedEntityModel());
 	MISC::SET_BIT(&(piParam0->f_3), 11);
 	return true;
 }
 
-Hash func_249() // Position - 0xB798
+Hash GetPlayerPedEntityModel() // Position - 0xB798
 {
 	return ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID());
 }
@@ -9428,15 +9428,15 @@ void func_250(int* piParam0) // Position - 0xB7A8
 
 	for (i = 0; i < 1; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
-			VEHICLE::DELETE_VEHICLE(&piParam0->f_92[i]);
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
+			VEHICLE::DELETE_VEHICLE(&piParam0->raceVehicles[i]);
 	
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_98[i]))
-			PED::DELETE_PED(&piParam0->f_98[i]);
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehiclePeds[i]))
+			PED::DELETE_PED(&piParam0->raceVehiclePeds[i]);
 	}
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("shamal"));
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_249());
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(GetPlayerPedEntityModel());
 	return;
 }
 
@@ -9448,16 +9448,16 @@ void func_251(int* piParam0) // Position - 0xB809
 	{
 		STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("p_cs_mp_jet_01_s"));
 	
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_33))
-			OBJECT::DELETE_OBJECT(&(piParam0->f_33));
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->jet))
+			OBJECT::DELETE_OBJECT(&(piParam0->jet));
 	
 		if (piParam0->f_294)
 		{
-			if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(piParam0->f_120))
-				GRAPHICS::REMOVE_PARTICLE_FX(piParam0->f_120, false);
+			if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(piParam0->planeExhaustFx1))
+				GRAPHICS::REMOVE_PARTICLE_FX(piParam0->planeExhaustFx1, false);
 		
-			if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(piParam0->f_121))
-				GRAPHICS::REMOVE_PARTICLE_FX(piParam0->f_121, false);
+			if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(piParam0->planeExhaustFx2))
+				GRAPHICS::REMOVE_PARTICLE_FX(piParam0->planeExhaustFx2, false);
 		
 			if (STREAMING::HAS_PTFX_ASSET_LOADED())
 				STREAMING::REMOVE_PTFX_ASSET();
@@ -9465,8 +9465,8 @@ void func_251(int* piParam0) // Position - 0xB809
 	
 		for (i = 0; i < 7; i = i + 1)
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_104[i]))
-				PED::DELETE_PED(&piParam0->f_104[i]);
+			if (ENTITY::DOES_ENTITY_EXIST(piParam0->PlanePeds[i]))
+				PED::DELETE_PED(&piParam0->PlanePeds[i]);
 		}
 	
 		MISC::CLEAR_BIT(&(piParam0->f_3), 2);
@@ -9533,7 +9533,7 @@ int func_253(int* piParam0) // Position - 0xB914
 
 void func_254(int* piParam0, float fParam1) // Position - 0xB9DA
 {
-	func_241(piParam0->f_34, 5, "FMINTRO", fParam1, false);
+	func_241(piParam0->lamarsFrogger, 5, "FMINTRO", fParam1, false);
 	return;
 }
 
@@ -9541,15 +9541,15 @@ void func_255(int* piParam0) // Position - 0xB9F2
 {
 	int i;
 
-	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_269());
+	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(GetMechanicPedHash());
 
 	for (i = 0; i < 8; i = i + 1)
 	{
-		func_270(piParam0, i);
+		CleanupGarageVehicles(piParam0, i);
 	}
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_91))
-		PED::DELETE_PED(&(piParam0->f_91));
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->garagePed))
+		PED::DELETE_PED(&(piParam0->garagePed));
 
 	return;
 }
@@ -9705,10 +9705,10 @@ void func_264(int* piParam0) // Position - 0xBCC6
 
 	for (i = 0; i < 7; i = i + 1)
 	{
-		if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_104[i], false))
+		if (!ENTITY::IS_ENTITY_DEAD(piParam0->PlanePeds[i], false))
 		{
-			PED::FINALIZE_HEAD_BLEND(piParam0->f_104[i]);
-			CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->f_104[i], func_265(i), 0, 0, 64);
+			PED::FINALIZE_HEAD_BLEND(piParam0->PlanePeds[i]);
+			CUTSCENE::REGISTER_ENTITY_FOR_CUTSCENE(piParam0->PlanePeds[i], func_265(i), 0, 0, 64);
 		}
 	}
 
@@ -9747,19 +9747,19 @@ char* func_265(int iParam0) // Position - 0xBD13
 BOOL func_266(int* piParam0) // Position - 0xBD95
 {
 	if (piParam0->f_295)
-		return func_267();
+		return IsPlayerPedFemale();
 	else
 		return false;
 
 	return false;
 }
 
-BOOL func_267() // Position - 0xBDB4
+BOOL IsPlayerPedFemale() // Position - 0xBDB4
 {
-	return func_268(PLAYER::PLAYER_ID());
+	return IsPedFemale(PLAYER::PLAYER_ID());
 }
 
-BOOL func_268(Player plParam0) // Position - 0xBDC4
+BOOL IsPedFemale(Player plParam0) // Position - 0xBDC4
 {
 	if (ENTITY::GET_ENTITY_MODEL(PLAYER::GET_PLAYER_PED(plParam0)) == joaat("MP_F_Freemode_01"))
 		return 1;
@@ -9767,20 +9767,20 @@ BOOL func_268(Player plParam0) // Position - 0xBDC4
 	return 0;
 }
 
-Hash func_269() // Position - 0xBDE3
+Hash GetMechanicPedHash() // Position - 0xBDE3
 {
 	return joaat("S_M_Y_XMech_02");
 }
 
-void func_270(int* piParam0, int iParam1) // Position - 0xBDF0
+void CleanupGarageVehicles(int* piParam0, int iParam1) // Position - 0xBDF0
 {
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_271(iParam1));
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[iParam1]))
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[iParam1]))
 	{
-		VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false);
-		VEHICLE::RELEASE_PRELOAD_MODS(piParam0->f_49[iParam1]);
-		VEHICLE::DELETE_VEHICLE(&piParam0->f_49[iParam1]);
+		VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false);
+		VEHICLE::RELEASE_PRELOAD_MODS(piParam0->garageVehicles[iParam1]);
+		VEHICLE::DELETE_VEHICLE(&piParam0->garageVehicles[iParam1]);
 	}
 
 	return;
@@ -9818,38 +9818,38 @@ Hash func_271(int iParam0) // Position - 0xBE39
 	return joaat("tailgater");
 }
 
-void func_272() // Position - 0xBED5
+void ShowGTAOLogo() // Position - 0xBED5
 {
-	Global_1577869 = 0;
+	Global_HasIntroScaleformShown = 0;
 
-	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577867))
+	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_IntroScaleform))
 	{
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_1577867, "SET_BIG_LOGO_VISIBLE");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_IntroScaleform, "SET_BIG_LOGO_VISIBLE");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_1577867);
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&Global_IntroScaleform);
 	}
 
 	return;
 }
 
-void func_273(int* piParam0) // Position - 0xBF10
+void CleanupRaceVehicles(int* piParam0) // Position - 0xBF10
 {
 	var unk;
 	int i;
 
 	for (i = 0; i <= 4; i = i + 1)
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
 		{
-			unk = piParam0->f_92[i];
+			unk = piParam0->raceVehicles[i];
 			ENTITY::DELETE_ENTITY(&unk);
 		}
 	
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_98[i]))
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehiclePeds[i]))
 		{
-			unk = piParam0->f_98[i];
+			unk = piParam0->raceVehiclePeds[i];
 			ENTITY::DELETE_ENTITY(&unk);
 		}
 	}
@@ -9869,34 +9869,34 @@ void func_273(int* piParam0) // Position - 0xBF10
 
 void func_274(int* piParam0) // Position - 0xBFC6
 {
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[2]))
-		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[2], false))
-			VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->f_49[2]);
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[2]))
+		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[2], false))
+			VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->garageVehicles[2]);
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[4]))
-		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[4], false))
-			VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->f_49[4]);
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[4]))
+		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[4], false))
+			VEHICLE::REQUEST_VEHICLE_HIGH_DETAIL_MODEL(piParam0->garageVehicles[4]);
 
 	return;
 }
 
 void func_275(int* piParam0) // Position - 0xC020
 {
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[2]))
-		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[2], false))
-			VEHICLE::SET_VEHICLE_DOOR_CONTROL(piParam0->f_49[2], 4, 0, 1f);
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[2]))
+		if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[2], false))
+			VEHICLE::SET_VEHICLE_DOOR_CONTROL(piParam0->garageVehicles[2], 4, 0, 1f);
 
 	return;
 }
 
-BOOL func_276() // Position - 0xC053
+BOOL IsGTAOScaleformLoaded() // Position - 0xC053
 {
 	if (DLC::GET_IS_LOADING_SCREEN_ACTIVE())
 		return false;
 
-	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1577867))
+	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_IntroScaleform))
 	{
-		Global_1577867 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("GTAV_ONLINE");
+		Global_IntroScaleform = GRAPHICS::REQUEST_SCALEFORM_MOVIE("GTAV_ONLINE");
 		return false;
 	}
 
@@ -9909,14 +9909,14 @@ void func_277(int* piParam0, char* sParam1, char* sParam2, Entity eParam3, float
 	{
 		ENTITY::IS_ENTITY_DEAD(eParam3, false);
 	
-		if (!CAM::DOES_CAM_EXIST(piParam0->f_8))
-			piParam0->f_8 = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
+		if (!CAM::DOES_CAM_EXIST(piParam0->defaultAnimatedCam))
+			piParam0->defaultAnimatedCam = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
 	
-		piParam0->f_9 = -1;
-		piParam0->f_9 = PED::CREATE_SYNCHRONIZED_SCENE(fParam4, fParam7, 2);
-		PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_9, eParam3, 0);
-		CAM::PLAY_SYNCHRONIZED_CAM_ANIM(piParam0->f_8, piParam0->f_9, sParam1, sParam2);
-		CAM::SET_CAM_ACTIVE(piParam0->f_8, true);
+		piParam0->syncScene = -1;
+		piParam0->syncScene = PED::CREATE_SYNCHRONIZED_SCENE(fParam4, fParam7, 2);
+		PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->syncScene, eParam3, 0);
+		CAM::PLAY_SYNCHRONIZED_CAM_ANIM(piParam0->defaultAnimatedCam, piParam0->syncScene, sParam1, sParam2);
+		CAM::SET_CAM_ACTIVE(piParam0->defaultAnimatedCam, true);
 		CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, true, 0);
 	}
 
@@ -9982,15 +9982,15 @@ BOOL func_280(int* piParam0) // Position - 0xC1A3
 	
 		if (STREAMING::HAS_MODEL_LOADED(joaat("p_cs_mp_jet_01_s")) && STREAMING::HAS_MODEL_LOADED(joaat("MP_M_Freemode_01")) && STREAMING::HAS_MODEL_LOADED(joaat("MP_F_Freemode_01")) && !piParam0->f_294 || STREAMING::HAS_PTFX_ASSET_LOADED())
 		{
-			piParam0->f_33 = OBJECT::CREATE_OBJECT(joaat("p_cs_mp_jet_01_s"), vector, false, false, false);
-			ENTITY::SET_ENTITY_LOD_DIST(piParam0->f_33, 3000);
-			ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(piParam0->f_33, false);
-			ENTITY::SET_ENTITY_VISIBLE(piParam0->f_33, false, false);
+			piParam0->jet = OBJECT::CREATE_OBJECT(joaat("p_cs_mp_jet_01_s"), vector, false, false, false);
+			ENTITY::SET_ENTITY_LOD_DIST(piParam0->jet, 3000);
+			ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(piParam0->jet, false);
+			ENTITY::SET_ENTITY_VISIBLE(piParam0->jet, false, false);
 		
 			if (piParam0->f_294)
 			{
-				piParam0->f_120 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_mp_intro_plane_exhaust", piParam0->f_33, -5.403f, -8f, -2.2f, 0f, 0f, 0f, 1065353216, false, false, false);
-				piParam0->f_121 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_mp_intro_plane_exhaust", piParam0->f_33, 6.629f, -8f, -2.2f, 0f, 0f, 0f, 1065353216, false, false, false);
+				piParam0->planeExhaustFx1 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_mp_intro_plane_exhaust", piParam0->jet, -5.403f, -8f, -2.2f, 0f, 0f, 0f, 1065353216, false, false, false);
+				piParam0->planeExhaustFx2 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_mp_intro_plane_exhaust", piParam0->jet, 6.629f, -8f, -2.2f, 0f, 0f, 0f, 1065353216, false, false, false);
 			}
 		
 			if (piParam0->f_295)
@@ -9999,15 +9999,15 @@ BOOL func_280(int* piParam0) // Position - 0xC1A3
 			for (i = 0; i < 7; i = i + 1)
 			{
 				if (func_283(piParam0, i))
-					piParam0->f_104[i] = PED::CREATE_PED(PED_TYPE_MISSION, joaat("MP_F_Freemode_01"), -1117.7778f, -1557.6249f, 3.3819f, 0f, false, false);
+					piParam0->PlanePeds[i] = PED::CREATE_PED(PED_TYPE_MISSION, joaat("MP_F_Freemode_01"), -1117.7778f, -1557.6249f, 3.3819f, 0f, false, false);
 				else
-					piParam0->f_104[i] = PED::CREATE_PED(PED_TYPE_MISSION, joaat("MP_M_Freemode_01"), -1117.7778f, -1557.6249f, 3.3819f, 0f, false, false);
+					piParam0->PlanePeds[i] = PED::CREATE_PED(PED_TYPE_MISSION, joaat("MP_M_Freemode_01"), -1117.7778f, -1557.6249f, 3.3819f, 0f, false, false);
 			
 				if (func_282(piParam0, i))
 				{
 					!ENTITY::IS_ENTITY_DEAD(PLAYER::GET_PLAYER_PED(PLAYER::INT_TO_PLAYERINDEX(piParam0->f_112[i])), false);
-					PED::CLONE_PED_TO_TARGET(PLAYER::GET_PLAYER_PED(PLAYER::INT_TO_PLAYERINDEX(piParam0->f_112[i])), piParam0->f_104[i]);
-					PED::FINALIZE_HEAD_BLEND(piParam0->f_104[i]);
+					PED::CLONE_PED_TO_TARGET(PLAYER::GET_PLAYER_PED(PLAYER::INT_TO_PLAYERINDEX(piParam0->f_112[i])), piParam0->PlanePeds[i]);
+					PED::FINALIZE_HEAD_BLEND(piParam0->PlanePeds[i]);
 				}
 				else
 				{
@@ -10032,171 +10032,171 @@ void func_281(int* piParam0, int iParam1) // Position - 0xC3A3
 	switch (iParam1)
 	{
 		case 0:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 21, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 9, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 1, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 9, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 4, 8, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 15, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 10, 0, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 21, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 9, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 1, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 9, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 4, 8, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 15, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 10, 0, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 1:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 13, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 5, 4, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 1, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 10, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 10, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 11, 2, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 13, 6, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 10, 0, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 13, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 5, 4, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 1, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 10, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 10, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 11, 2, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 13, 6, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 10, 0, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 2:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 15, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 1, 4, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 1, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 0, 1, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 1, 7, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 2, 9, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 6, 0, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 15, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 1, 4, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 1, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 0, 1, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 1, 7, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 2, 9, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 6, 0, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 3:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 14, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 5, 3, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 3, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 1, 6, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 11, 5, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 2, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 3, 12, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 14, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 5, 3, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 3, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 1, 6, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 11, 5, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 2, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 3, 12, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 4:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 18, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 15, 3, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 15, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 2, 5, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 4, 6, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 4, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 3, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 4, 0, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 18, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 15, 3, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 15, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 2, 5, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 4, 6, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 4, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 3, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 4, 0, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 5:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 27, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 7, 3, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 11, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 4, 8, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 13, 14, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 5, 3, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 3, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 2, 7, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 27, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 7, 3, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 11, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 4, 8, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 13, 14, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 5, 3, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 3, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 2, 7, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	
 		case 6:
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HEAD, 16, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_BERD, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAIR, 15, 1, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_UPPR, 3, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_LOWR, 5, 6, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_HAND, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_FEET, 2, 8, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TEEF, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_ACCS, 2, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_TASK, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_DECL, 0, 0, 0);
-			PED::SET_PED_COMPONENT_VARIATION(piParam0->f_104[iParam1], PV_COMP_JBIB, 3, 7, 0);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 0, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 1, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 2, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 3, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 4, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 5, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 6, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 7, 1);
-			PED::CLEAR_PED_PROP(piParam0->f_104[iParam1], 8, 1);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HEAD, 16, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_BERD, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAIR, 15, 1, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_UPPR, 3, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_LOWR, 5, 6, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_HAND, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_FEET, 2, 8, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TEEF, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_ACCS, 2, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_TASK, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_DECL, 0, 0, 0);
+			PED::SET_PED_COMPONENT_VARIATION(piParam0->PlanePeds[iParam1], PV_COMP_JBIB, 3, 7, 0);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 0, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 1, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 2, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 3, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 4, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 5, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 6, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 7, 1);
+			PED::CLEAR_PED_PROP(piParam0->PlanePeds[iParam1], 8, 1);
 			break;
 	}
 
@@ -10214,7 +10214,7 @@ BOOL func_282(int* piParam0, int iParam1) // Position - 0xCCDD
 BOOL func_283(int* piParam0, int iParam1) // Position - 0xCD18
 {
 	if (func_282(piParam0, iParam1))
-		return func_268(PLAYER::INT_TO_PLAYERINDEX(piParam0->f_112[iParam1]));
+		return IsPedFemale(PLAYER::INT_TO_PLAYERINDEX(piParam0->f_112[iParam1]));
 	else if (iParam1 == 3 || iParam1 == 4 || iParam1 == 5 || iParam1 == 6)
 		return true;
 
@@ -10303,30 +10303,30 @@ BOOL func_286(int* piParam0) // Position - 0xCE45
 
 	if (STREAMING::HAS_MODEL_LOADED(model) && STREAMING::HAS_MODEL_LOADED(model2) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(5, "FMINTRO") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(6, "FMINTRO") && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(7, "FMINTRO") && STREAMING::HAS_ANIM_DICT_LOADED("mp_intro_seq@"))
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_34))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger))
 		{
 			MISC::CLEAR_AREA(-1034.0347f, -2730.4849f, 19.0565f, 3f, true, false, false, false);
-			piParam0->f_34 = VEHICLE::CREATE_VEHICLE(model2, -1032.3224f, -2731.192f, 19.0658f, 239.2169f, false, false, false);
-			ENTITY::SET_ENTITY_ALWAYS_PRERENDER(piParam0->f_34, true);
-			AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_34, false);
-			ENTITY::SET_ENTITY_PROOFS(piParam0->f_34, true, true, true, true, true, true, true, false);
+			piParam0->lamarsFrogger = VEHICLE::CREATE_VEHICLE(model2, -1032.3224f, -2731.192f, 19.0658f, 239.2169f, false, false, false);
+			ENTITY::SET_ENTITY_ALWAYS_PRERENDER(piParam0->lamarsFrogger, true);
+			AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->lamarsFrogger, false);
+			ENTITY::SET_ENTITY_PROOFS(piParam0->lamarsFrogger, true, true, true, true, true, true, true, false);
 		}
-		else if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_35))
+		else if (!ENTITY::DOES_ENTITY_EXIST(piParam0->pedLamar))
 		{
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
 			{
-				piParam0->f_35 = PED::CREATE_PED(PED_TYPE_MISSION, model, -1031.6f, -2730.15f, 20.15f, 143.6341f, false, false);
-				TASK::TASK_ENTER_VEHICLE(piParam0->f_35, piParam0->f_34, 20000, -1, 1f, 1048592, 0);
-				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_35, true);
-				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_34, true);
-				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_35, true);
-				PED::SET_PED_RELATIONSHIP_GROUP_HASH(piParam0->f_35, PED::GET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID()));
-				ENTITY::SET_ENTITY_PROOFS(piParam0->f_35, true, true, true, true, true, true, true, false);
+				piParam0->pedLamar = PED::CREATE_PED(PED_TYPE_MISSION, model, -1031.6f, -2730.15f, 20.15f, 143.6341f, false, false);
+				TASK::TASK_ENTER_VEHICLE(piParam0->pedLamar, piParam0->lamarsFrogger, 20000, -1, 1f, 1048592, 0);
+				PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->pedLamar, true);
+				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->lamarsFrogger, true);
+				ENTITY::SET_ENTITY_INVINCIBLE(piParam0->pedLamar, true);
+				PED::SET_PED_RELATIONSHIP_GROUP_HASH(piParam0->pedLamar, PED::GET_PED_RELATIONSHIP_GROUP_HASH(PLAYER::PLAYER_PED_ID()));
+				ENTITY::SET_ENTITY_PROOFS(piParam0->pedLamar, true, true, true, true, true, true, true, false);
 			}
 		}
 	}
 
-	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_34) || !ENTITY::DOES_ENTITY_EXIST(piParam0->f_35))
+	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger) || !ENTITY::DOES_ENTITY_EXIST(piParam0->pedLamar))
 		return false;
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(model);
@@ -10346,19 +10346,19 @@ void func_287(int* piParam0) // Position - 0xD011
 	
 		if (func_289(piParam0))
 		{
-			if (func_288(piParam0))
+			if (SetupMechanicPed(piParam0))
 			{
-				if (!CAM::DOES_CAM_EXIST(piParam0->f_7))
-					piParam0->f_7 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
+				if (!CAM::DOES_CAM_EXIST(piParam0->cam))
+					piParam0->cam = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", false);
 			
-				CAM::SET_CAM_PARAMS(piParam0->f_7, 228.1892f, -1006.7584f, -96.8311f, -13.0682f, 0.0572f, 0.7306f, 40.033f, 0, 1, 1, 2);
+				CAM::SET_CAM_PARAMS(piParam0->cam, 228.1892f, -1006.7584f, -96.8311f, -13.0682f, 0.0572f, 0.7306f, 40.033f, 0, 1, 1, 2);
 			
 				for (i = 0; i < 8; i = i + 1)
 				{
 					STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_271(i));
 				}
 			
-				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(func_269());
+				STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(GetMechanicPedHash());
 				MISC::SET_BIT(&(piParam0->f_3), 0);
 			}
 		}
@@ -10367,15 +10367,15 @@ void func_287(int* piParam0) // Position - 0xD011
 	return;
 }
 
-BOOL func_288(int* piParam0) // Position - 0xD0B3
+BOOL SetupMechanicPed(int* piParam0) // Position - 0xD0B3
 {
 	Hash model;
 
-	model = func_269();
+	model = GetMechanicPedHash();
 
-	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_91))
+	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->garagePed))
 	{
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[2]))
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[2]))
 		{
 			if (STREAMING::IS_MODEL_IN_CDIMAGE(model))
 			{
@@ -10383,38 +10383,38 @@ BOOL func_288(int* piParam0) // Position - 0xD0B3
 				{
 					if (STREAMING::HAS_ANIM_DICT_LOADED("MP_INTRO_SEQ@"))
 					{
-						if (!ENTITY::IS_ENTITY_DEAD(piParam0->f_49[2], false))
+						if (!ENTITY::IS_ENTITY_DEAD(piParam0->garageVehicles[2], false))
 						{
-							piParam0->f_10 = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
-							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->f_10, piParam0->f_49[2], 0);
-							piParam0->f_91 = PED::CREATE_PED(PED_TYPE_CIVMALE, model, 226.6826f, -998.5228f, -99.9999f, 63.813f, false, false);
-							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_91, true);
-							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->f_91, piParam0->f_10, "MP_INTRO_SEQ@", "MP_Mech_Fix", 1000f, -1000f, 64, 0, 1148846080, 0);
-							PED::SET_SYNCHRONIZED_SCENE_LOOPED(piParam0->f_10, true);
-							ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_91, true);
-							ENTITY::SET_ENTITY_COLLISION(piParam0->f_91, false, false);
-							WEAPON::REMOVE_WEAPON_FROM_PED(piParam0->f_91, joaat("GADGET_PARACHUTE"));
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_HEAD, 1, 1, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_BERD, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_HAIR, 0, 2, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_UPPR, 0, 2, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_LOWR, 1, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_HAND, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_FEET, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_TEEF, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_ACCS, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_TASK, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_DECL, 0, 0, 0);
-							PED::SET_PED_COMPONENT_VARIATION(piParam0->f_91, PV_COMP_JBIB, 0, 0, 0);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 0, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 1, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 2, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 3, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 4, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 5, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 6, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 7, 1);
-							PED::CLEAR_PED_PROP(piParam0->f_91, 8, 1);
+							piParam0->garageSyncScene = PED::CREATE_SYNCHRONIZED_SCENE(0f, 0f, 0f, 0f, 0f, 0f, 2);
+							PED::ATTACH_SYNCHRONIZED_SCENE_TO_ENTITY(piParam0->garageSyncScene, piParam0->garageVehicles[2], 0);
+							piParam0->garagePed = PED::CREATE_PED(PED_TYPE_CIVMALE, model, 226.6826f, -998.5228f, -99.9999f, 63.813f, false, false);
+							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->garagePed, true);
+							TASK::TASK_SYNCHRONIZED_SCENE(piParam0->garagePed, piParam0->garageSyncScene, "MP_INTRO_SEQ@", "MP_Mech_Fix", 1000f, -1000f, 64, 0, 1148846080, 0);
+							PED::SET_SYNCHRONIZED_SCENE_LOOPED(piParam0->garageSyncScene, true);
+							ENTITY::FREEZE_ENTITY_POSITION(piParam0->garagePed, true);
+							ENTITY::SET_ENTITY_COLLISION(piParam0->garagePed, false, false);
+							WEAPON::REMOVE_WEAPON_FROM_PED(piParam0->garagePed, joaat("GADGET_PARACHUTE"));
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_HEAD, 1, 1, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_BERD, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_HAIR, 0, 2, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_UPPR, 0, 2, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_LOWR, 1, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_HAND, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_FEET, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_TEEF, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_ACCS, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_TASK, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_DECL, 0, 0, 0);
+							PED::SET_PED_COMPONENT_VARIATION(piParam0->garagePed, PV_COMP_JBIB, 0, 0, 0);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 0, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 1, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 2, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 3, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 4, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 5, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 6, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 7, 1);
+							PED::CLEAR_PED_PROP(piParam0->garagePed, 8, 1);
 						}
 					}
 				}
@@ -10422,7 +10422,7 @@ BOOL func_288(int* piParam0) // Position - 0xD0B3
 		}
 	}
 
-	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_91))
+	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->garagePed))
 		return false;
 
 	return true;
@@ -10445,7 +10445,7 @@ BOOL func_289(int* piParam0) // Position - 0xD2A1
 		
 			if (!func_293(vector, 0f, 0f, 0f, false))
 			{
-				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[i]))
+				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[i]))
 				{
 					model = func_271(i);
 				
@@ -10453,15 +10453,15 @@ BOOL func_289(int* piParam0) // Position - 0xD2A1
 					{
 						if (STREAMING::HAS_MODEL_LOADED(model))
 						{
-							piParam0->f_49[i] = VEHICLE::CREATE_VEHICLE(model, vector, heading, false, false, false);
-							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(piParam0->f_49[i], true);
-							VEHICLE::SET_VEHICLE_DIRT_LEVEL(piParam0->f_49[i], 0f);
-							VEHICLE::SET_VEHICLE_NOT_STEALABLE_AMBIENTLY(piParam0->f_49[i], false);
+							piParam0->garageVehicles[i] = VEHICLE::CREATE_VEHICLE(model, vector, heading, false, false, false);
+							ENTITY::SET_ENTITY_SHOULD_FREEZE_WAITING_ON_COLLISION(piParam0->garageVehicles[i], true);
+							VEHICLE::SET_VEHICLE_DIRT_LEVEL(piParam0->garageVehicles[i], 0f);
+							VEHICLE::SET_VEHICLE_NOT_STEALABLE_AMBIENTLY(piParam0->garageVehicles[i], false);
 						
 							if (i == 2)
 							{
-								VEHICLE::SET_VEHICLE_DOOR_OPEN(piParam0->f_49[i], 4, false, true);
-								VEHICLE::SET_VEHICLE_DOOR_CONTROL(piParam0->f_49[i], 4, 0, 1f);
+								VEHICLE::SET_VEHICLE_DOOR_OPEN(piParam0->garageVehicles[i], 4, false, true);
+								VEHICLE::SET_VEHICLE_DOOR_CONTROL(piParam0->garageVehicles[i], 4, 0, 1f);
 							}
 						
 							func_292(piParam0, i);
@@ -10475,7 +10475,7 @@ BOOL func_289(int* piParam0) // Position - 0xD2A1
 	
 		for (i = 0; i < 8; i = i + 1)
 		{
-			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_49[i]))
+			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->garageVehicles[i]))
 				return false;
 		
 			if (!IS_BIT_SET(piParam0->f_2, i))
@@ -10484,8 +10484,8 @@ BOOL func_289(int* piParam0) // Position - 0xD2A1
 				else
 					return false;
 		
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[i], false))
-				if (!VEHICLE::HAVE_VEHICLE_MODS_STREAMED_IN(piParam0->f_49[i]))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[i], false))
+				if (!VEHICLE::HAVE_VEHICLE_MODS_STREAMED_IN(piParam0->garageVehicles[i]))
 					return false;
 		}
 	
@@ -10500,127 +10500,127 @@ BOOL func_290(int* piParam0, int iParam1) // Position - 0xD404
 	switch (iParam1)
 	{
 		case 0:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 3, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 5, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 7, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 10, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 12, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 14, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 4, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 11, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 3, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 5, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 7, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 10, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 12, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 14, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 4, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 11, false);
 					return true;
 				}
 			}
 			break;
 	
 		case 1:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 12, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 3, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 12, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 3, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
 			break;
 	
 		case 2:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 14, 5, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 3, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 14, 5, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 3, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
 			break;
 	
 		case 3:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 3, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 11, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 3, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 11, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
 			break;
 	
 		case 4:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 7, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 11, 3, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 12, 2, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 13, 2, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 3, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 16, 4, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 5, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 7, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 11, 3, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 12, 2, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 13, 2, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 3, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 16, 4, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 5, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
 			break;
 	
 		case 5:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 3, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 6, 2, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 10, 3, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 14, 7, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 15, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 5, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 3, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 6, 2, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 10, 3, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 14, 7, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 15, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 5, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
 			break;
 	
 		case 6:
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_49[iParam1], false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->garageVehicles[iParam1], false))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_49[iParam1]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->garageVehicles[iParam1]) > 0)
 				{
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 8, 0, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 14, 7, false);
-					VEHICLE::SET_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 0, false);
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_49[iParam1], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_49[iParam1], false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 8, 0, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 14, 7, false);
+					VEHICLE::SET_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 0, false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->garageVehicles[iParam1], false);
 					return true;
 				}
 			}
@@ -10638,60 +10638,60 @@ void func_291(int* piParam0, int iParam1) // Position - 0xD8B9
 	switch (iParam1)
 	{
 		case 0:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 3, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 5, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 7, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 10, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 11);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 3, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 5, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 7, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 10, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 11);
 			break;
 	
 		case 1:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
 			break;
 	
 		case 2:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 0);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 0);
 			break;
 	
 		case 3:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 11);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 11);
 			break;
 	
 		case 4:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 7, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 5);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 7, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 5);
 			break;
 	
 		case 5:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 0, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 2, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 3, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 6, 2);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 10, 3);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 5);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 0, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 2, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 3, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 6, 2);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 10, 3);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 5);
 			break;
 	
 		case 6:
-			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_49[iParam1], 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 1, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 4, 1);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 8, 0);
-			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->f_49[iParam1], 23, 0);
+			VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->garageVehicles[iParam1], 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 1, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 4, 1);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 8, 0);
+			VEHICLE::PRELOAD_VEHICLE_MOD(piParam0->garageVehicles[iParam1], 23, 0);
 			break;
 	}
 
@@ -10703,38 +10703,38 @@ void func_292(int* piParam0, int iParam1) // Position - 0xDB00
 	switch (iParam1)
 	{
 		case 0:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 83, 134);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 134, 134);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 83, 134);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 134, 134);
 			break;
 	
 		case 1:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 0, 0);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 0, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 0, 0);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 0, 156);
 			break;
 	
 		case 2:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 49, 0);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 0, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 49, 0);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 0, 156);
 			break;
 	
 		case 3:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 0, 0);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 0, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 0, 0);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 0, 156);
 			break;
 	
 		case 4:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 43, 5);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 0, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 43, 5);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 0, 156);
 			break;
 	
 		case 5:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 3, 3);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 6, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 3, 3);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 6, 156);
 			break;
 	
 		case 6:
-			VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_49[iParam1], 35, 0);
-			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_49[iParam1], 0, 156);
+			VEHICLE::SET_VEHICLE_COLOURS(piParam0->garageVehicles[iParam1], 35, 0);
+			VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->garageVehicles[iParam1], 0, 156);
 			break;
 	}
 
@@ -10799,7 +10799,7 @@ void func_294(int iParam0, var uParam1, var uParam2) // Position - 0xDC64
 
 void func_295() // Position - 0xDD93
 {
-	STREAMING::REQUEST_MODEL(func_269());
+	STREAMING::REQUEST_MODEL(GetMechanicPedHash());
 	STREAMING::REQUEST_ANIM_DICT(func_296());
 	return;
 }
@@ -10823,11 +10823,11 @@ void func_297() // Position - 0xDDB7
 
 void func_298(int* piParam0, float fParam1, int iParam2) // Position - 0xDDDC
 {
-	func_241(piParam0->f_92[0], 100, "FM_Intro_uber", fParam1, false);
-	func_241(piParam0->f_92[1], 101, "FM_Intro_uber", fParam1, false);
-	func_241(piParam0->f_92[2], 102, "FM_Intro_uber", fParam1 + iParam2, false);
-	func_241(piParam0->f_92[3], 103, "FM_Intro_uber", fParam1, false);
-	func_241(piParam0->f_92[4], 104, "FM_Intro_uber", fParam1, false);
+	func_241(piParam0->raceVehicles[0], 100, "FM_Intro_uber", fParam1, false);
+	func_241(piParam0->raceVehicles[1], 101, "FM_Intro_uber", fParam1, false);
+	func_241(piParam0->raceVehicles[2], 102, "FM_Intro_uber", fParam1 + iParam2, false);
+	func_241(piParam0->raceVehicles[3], 103, "FM_Intro_uber", fParam1, false);
+	func_241(piParam0->raceVehicles[4], 104, "FM_Intro_uber", fParam1, false);
 	return;
 }
 
@@ -10996,29 +10996,29 @@ void func_299(int* piParam0, int iParam1) // Position - 0xDE4B
 
 void func_300(int* piParam0, int iParam1, float fParam2, float fParam3, float fParam4, float fParam5, int* piParam6, BOOL bParam7) // Position - 0xE817
 {
-	if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_58[iParam1], false) && !PED::IS_PED_INJURED(piParam0->f_74[iParam1]))
+	if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->entityList[iParam1], false) && !PED::IS_PED_INJURED(piParam0->vehiclePeds[iParam1]))
 	{
-		ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_58[iParam1], false);
-		ENTITY::SET_ENTITY_COLLISION(piParam0->f_58[iParam1], true, false);
-		ENTITY::SET_ENTITY_COORDS(piParam0->f_58[iParam1], fParam2, true, false, false, true);
-		ENTITY::SET_ENTITY_HEADING(piParam0->f_58[iParam1], fParam5);
-		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->f_58[iParam1], 1084227584);
-		VEHICLE::SET_VEHICLE_FIXED(piParam0->f_58[iParam1]);
+		ENTITY::FREEZE_ENTITY_POSITION(piParam0->entityList[iParam1], false);
+		ENTITY::SET_ENTITY_COLLISION(piParam0->entityList[iParam1], true, false);
+		ENTITY::SET_ENTITY_COORDS(piParam0->entityList[iParam1], fParam2, true, false, false, true);
+		ENTITY::SET_ENTITY_HEADING(piParam0->entityList[iParam1], fParam5);
+		VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(piParam0->entityList[iParam1], 1084227584);
+		VEHICLE::SET_VEHICLE_FIXED(piParam0->entityList[iParam1]);
 	
 		if (bParam7)
 		{
-			TASK::TASK_VEHICLE_MISSION(piParam0->f_74[iParam1], piParam0->f_58[iParam1], 0, 1, 35f, 786603, 5f, 5f, true);
-			VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->f_58[iParam1], 30f);
+			TASK::TASK_VEHICLE_MISSION(piParam0->vehiclePeds[iParam1], piParam0->entityList[iParam1], 0, 1, 35f, 786603, 5f, 5f, true);
+			VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->entityList[iParam1], 30f);
 		}
 		else
 		{
-			TASK::TASK_VEHICLE_MISSION(piParam0->f_74[iParam1], piParam0->f_58[iParam1], 0, 1, 15f, 786603, 5f, 5f, true);
-			VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->f_58[iParam1], 10f);
+			TASK::TASK_VEHICLE_MISSION(piParam0->vehiclePeds[iParam1], piParam0->entityList[iParam1], 0, 1, 15f, 786603, 5f, 5f, true);
+			VEHICLE::SET_VEHICLE_FORWARD_SPEED(piParam0->entityList[iParam1], 10f);
 		}
 	
-		PED::SET_PED_KEEP_TASK(piParam0->f_74[iParam1], true);
-		ENTITY::SET_ENTITY_VISIBLE(piParam0->f_58[iParam1], true, false);
-		ENTITY::SET_ENTITY_VISIBLE(piParam0->f_74[iParam1], true, false);
+		PED::SET_PED_KEEP_TASK(piParam0->vehiclePeds[iParam1], true);
+		ENTITY::SET_ENTITY_VISIBLE(piParam0->entityList[iParam1], true, false);
+		ENTITY::SET_ENTITY_VISIBLE(piParam0->vehiclePeds[iParam1], true, false);
 		MISC::SET_BIT(piParam6, iParam1);
 	}
 
@@ -11027,15 +11027,15 @@ void func_300(int* piParam0, int iParam1, float fParam2, float fParam3, float fP
 
 void func_301(int* piParam0, char* sParam1, char* sParam2, float fParam3, float fParam4, float fParam5, float fParam6, float fParam7, float fParam8, int iParam9, int iParam10) // Position - 0xE93B
 {
-	if (!CAM::DOES_CAM_EXIST(piParam0->f_8))
-		piParam0->f_8 = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
+	if (!CAM::DOES_CAM_EXIST(piParam0->defaultAnimatedCam))
+		piParam0->defaultAnimatedCam = CAM::CREATE_CAM("DEFAULT_ANIMATED_CAMERA", false);
 
-	piParam0->f_9 = -1;
-	piParam0->f_9 = PED::CREATE_SYNCHRONIZED_SCENE(fParam3, fParam6, 2);
-	CAM::PLAY_SYNCHRONIZED_CAM_ANIM(piParam0->f_8, piParam0->f_9, sParam1, sParam2);
-	PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->f_9, iParam9);
-	PED::SET_SYNCHRONIZED_SCENE_RATE(piParam0->f_9, iParam10);
-	CAM::SET_CAM_ACTIVE(piParam0->f_8, true);
+	piParam0->syncScene = -1;
+	piParam0->syncScene = PED::CREATE_SYNCHRONIZED_SCENE(fParam3, fParam6, 2);
+	CAM::PLAY_SYNCHRONIZED_CAM_ANIM(piParam0->defaultAnimatedCam, piParam0->syncScene, sParam1, sParam2);
+	PED::SET_SYNCHRONIZED_SCENE_PHASE(piParam0->syncScene, iParam9);
+	PED::SET_SYNCHRONIZED_SCENE_RATE(piParam0->syncScene, iParam10);
+	CAM::SET_CAM_ACTIVE(piParam0->defaultAnimatedCam, true);
 	CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, true, 0);
 	return;
 }
@@ -11045,8 +11045,8 @@ void func_302(int* piParam0) // Position - 0xE9AC
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("frogger"));
 	VEHICLE::REMOVE_VEHICLE_RECORDING(8, "FMIntro");
 
-	if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_48))
-		VEHICLE::DELETE_VEHICLE(&(piParam0->f_48));
+	if (ENTITY::DOES_ENTITY_EXIST(piParam0->frogger))
+		VEHICLE::DELETE_VEHICLE(&(piParam0->frogger));
 
 	return;
 }
@@ -11066,13 +11066,13 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 	{
 		func_305();
 	
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[0]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[0]))
 		{
 			if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 			{
-				piParam0->f_92[0] = VEHICLE::CREATE_VEHICLE(joaat("cheetah"), -3007.912f, 370.6909f, 13.7517f, 184.1746f, false, false, false);
-				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_92[0], false);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_92[0], false);
+				piParam0->raceVehicles[0] = VEHICLE::CREATE_VEHICLE(joaat("cheetah"), -3007.912f, 370.6909f, 13.7517f, 184.1746f, false, false, false);
+				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->raceVehicles[0], false);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->raceVehicles[0], false);
 			}
 			else
 			{
@@ -11080,15 +11080,15 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 			}
 		}
 	
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[1]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[1]))
 		{
 			if (STREAMING::HAS_MODEL_LOADED(joaat("entityxf")))
 			{
-				piParam0->f_92[1] = VEHICLE::CREATE_VEHICLE(joaat("entityxf"), -2999.383f, 404.3465f, 14.3213f, 184.1746f, false, false, false);
-				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_92[1], false);
-				ENTITY::SET_ENTITY_QUATERNION(piParam0->f_92[1], -0.0001f, -0.002f, 0.9978f, 0.0661f);
-				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->f_92[1], 8);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_92[1], false);
+				piParam0->raceVehicles[1] = VEHICLE::CREATE_VEHICLE(joaat("entityxf"), -2999.383f, 404.3465f, 14.3213f, 184.1746f, false, false, false);
+				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->raceVehicles[1], false);
+				ENTITY::SET_ENTITY_QUATERNION(piParam0->raceVehicles[1], -0.0001f, -0.002f, 0.9978f, 0.0661f);
+				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->raceVehicles[1], 8);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->raceVehicles[1], false);
 			}
 			else
 			{
@@ -11096,15 +11096,15 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 			}
 		}
 	
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[2]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[2]))
 		{
 			if (STREAMING::HAS_MODEL_LOADED(joaat("monroe")))
 			{
-				piParam0->f_92[2] = VEHICLE::CREATE_VEHICLE(joaat("monroe"), -2994.4165f, 435.5293f, 14.278f, 184.1746f, false, false, false);
-				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_92[2], false);
-				ENTITY::SET_ENTITY_QUATERNION(piParam0->f_92[2], 0.0072f, -0.0028f, 0.9981f, 0.0612f);
-				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->f_92[2], 2);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_92[2], false);
+				piParam0->raceVehicles[2] = VEHICLE::CREATE_VEHICLE(joaat("monroe"), -2994.4165f, 435.5293f, 14.278f, 184.1746f, false, false, false);
+				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->raceVehicles[2], false);
+				ENTITY::SET_ENTITY_QUATERNION(piParam0->raceVehicles[2], 0.0072f, -0.0028f, 0.9981f, 0.0612f);
+				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->raceVehicles[2], 2);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->raceVehicles[2], false);
 			}
 			else
 			{
@@ -11112,15 +11112,15 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 			}
 		}
 	
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[3]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[3]))
 		{
 			if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 			{
-				piParam0->f_92[3] = VEHICLE::CREATE_VEHICLE(joaat("cheetah"), -2992.2593f, 473.8287f, 14.5044f, 184.1746f, false, false, false);
-				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_92[3], false);
-				ENTITY::SET_ENTITY_QUATERNION(piParam0->f_92[3], 0.0071f, -0.0058f, 0.9993f, 0.0375f);
-				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->f_92[3], 15);
-				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_92[3], false);
+				piParam0->raceVehicles[3] = VEHICLE::CREATE_VEHICLE(joaat("cheetah"), -2992.2593f, 473.8287f, 14.5044f, 184.1746f, false, false, false);
+				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->raceVehicles[3], false);
+				ENTITY::SET_ENTITY_QUATERNION(piParam0->raceVehicles[3], 0.0071f, -0.0058f, 0.9993f, 0.0375f);
+				VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->raceVehicles[3], 15);
+				VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->raceVehicles[3], false);
 			}
 			else
 			{
@@ -11128,30 +11128,30 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 			}
 		}
 	
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[4]))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[4]))
 		{
 			if (STREAMING::HAS_MODEL_LOADED(joaat("feltzer2")))
 			{
-				piParam0->f_92[4] = VEHICLE::CREATE_VEHICLE(joaat("feltzer2"), -2988.246f, 425.2664f, 14.387f, 184.1746f, false, false, false);
-				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->f_92[4], false);
-				ENTITY::SET_ENTITY_QUATERNION(piParam0->f_92[4], 0.0026f, -0.0014f, 0.998f, 0.0637f);
-				VEHICLE::SET_VEHICLE_COLOURS(piParam0->f_92[4], 0, 0);
-				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->f_92[4], 0, 156);
-				VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->f_92[4], 0);
+				piParam0->raceVehicles[4] = VEHICLE::CREATE_VEHICLE(joaat("feltzer2"), -2988.246f, 425.2664f, 14.387f, 184.1746f, false, false, false);
+				AUDIO::SET_VEHICLE_RADIO_ENABLED(piParam0->raceVehicles[4], false);
+				ENTITY::SET_ENTITY_QUATERNION(piParam0->raceVehicles[4], 0.0026f, -0.0014f, 0.998f, 0.0637f);
+				VEHICLE::SET_VEHICLE_COLOURS(piParam0->raceVehicles[4], 0, 0);
+				VEHICLE::SET_VEHICLE_EXTRA_COLOURS(piParam0->raceVehicles[4], 0, 156);
+				VEHICLE::SET_VEHICLE_MOD_KIT(piParam0->raceVehicles[4], 0);
 			}
 			else
 			{
 				flag = false;
 			}
 		}
-		else if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[4], false))
+		else if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[4], false))
 		{
 			if (!IS_BIT_SET(piParam0->f_3, 1))
 			{
-				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->f_92[4]) > 0)
+				if (VEHICLE::GET_NUM_MOD_KITS(piParam0->raceVehicles[4]) > 0)
 				{
-					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->f_92[4], 22, true);
-					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->f_92[4], false);
+					VEHICLE::TOGGLE_VEHICLE_MOD(piParam0->raceVehicles[4], 22, true);
+					VEHICLE::SET_VEHICLE_TYRES_CAN_BURST(piParam0->raceVehicles[4], false);
 					MISC::SET_BIT(&(piParam0->f_3), 1);
 				}
 				else
@@ -11161,19 +11161,19 @@ BOOL func_303(int* piParam0) // Position - 0xE9DA
 			}
 		}
 	
-		if (STREAMING::HAS_MODEL_LOADED(func_249()))
+		if (STREAMING::HAS_MODEL_LOADED(GetPlayerPedEntityModel()))
 		{
 			for (i = 0; i <= 4; i = i + 1)
 			{
-				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_98[i]))
+				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehiclePeds[i]))
 				{
-					if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_92[i]))
+					if (ENTITY::DOES_ENTITY_EXIST(piParam0->raceVehicles[i]))
 					{
-						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_92[i], false))
+						if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->raceVehicles[i], false))
 						{
-							piParam0->f_98[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->f_92[i], PED_TYPE_CIVMALE, func_249(), -1, false, false);
-							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_98[i], true);
-							VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->f_92[i], true, true, false);
+							piParam0->raceVehiclePeds[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->raceVehicles[i], PED_TYPE_CIVMALE, GetPlayerPedEntityModel(), -1, false, false);
+							PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->raceVehiclePeds[i], true);
+							VEHICLE::SET_VEHICLE_ENGINE_ON(piParam0->raceVehicles[i], true, true, false);
 						}
 					}
 				}
@@ -11202,7 +11202,7 @@ BOOL func_304() // Position - 0xEDAB
 {
 	func_305();
 
-	if (STREAMING::HAS_MODEL_LOADED(func_249()))
+	if (STREAMING::HAS_MODEL_LOADED(GetPlayerPedEntityModel()))
 		if (STREAMING::HAS_MODEL_LOADED(joaat("cheetah")))
 			if (STREAMING::HAS_MODEL_LOADED(joaat("monroe")))
 				if (STREAMING::HAS_MODEL_LOADED(joaat("entityxf")))
@@ -11224,7 +11224,7 @@ void func_305() // Position - 0xEE43
 	STREAMING::REQUEST_MODEL(joaat("monroe"));
 	STREAMING::REQUEST_MODEL(joaat("entityxf"));
 	STREAMING::REQUEST_MODEL(joaat("feltzer2"));
-	STREAMING::REQUEST_MODEL(func_249());
+	STREAMING::REQUEST_MODEL(GetPlayerPedEntityModel());
 	VEHICLE::REQUEST_VEHICLE_RECORDING(100, "FM_Intro_uber");
 	VEHICLE::REQUEST_VEHICLE_RECORDING(101, "FM_Intro_uber");
 	VEHICLE::REQUEST_VEHICLE_RECORDING(102, "FM_Intro_uber");
@@ -11249,13 +11249,13 @@ BOOL func_306(int* piParam0) // Position - 0xEEB1
 	{
 		STREAMING::REQUEST_MODEL(joaat("asterope"));
 		STREAMING::REQUEST_MODEL(joaat("sentinel"));
-		STREAMING::REQUEST_MODEL(func_249());
+		STREAMING::REQUEST_MODEL(GetPlayerPedEntityModel());
 	
-		if (STREAMING::HAS_MODEL_LOADED(joaat("asterope")) && STREAMING::HAS_MODEL_LOADED(joaat("sentinel")) && STREAMING::HAS_MODEL_LOADED(func_249()))
+		if (STREAMING::HAS_MODEL_LOADED(joaat("asterope")) && STREAMING::HAS_MODEL_LOADED(joaat("sentinel")) && STREAMING::HAS_MODEL_LOADED(GetPlayerPedEntityModel()))
 		{
 			for (i = 0; i < 15; i = i + 1)
 			{
-				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[i]))
+				if (!ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[i]))
 				{
 					if (i < 7)
 						modelHash = joaat("asterope");
@@ -11263,20 +11263,20 @@ BOOL func_306(int* piParam0) // Position - 0xEEB1
 						modelHash = joaat("sentinel");
 				
 					func_216(i, &vector, &heading);
-					piParam0->f_58[i] = VEHICLE::CREATE_VEHICLE(modelHash, vector, heading, false, false, false);
-					VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->f_58[i], i);
-					ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_58[i], true);
-					VEHICLE::SET_VEHICLE_LIGHTS(piParam0->f_58[i], 2);
-					ENTITY::FREEZE_ENTITY_POSITION(piParam0->f_58[i], true);
+					piParam0->entityList[i] = VEHICLE::CREATE_VEHICLE(modelHash, vector, heading, false, false, false);
+					VEHICLE::SET_VEHICLE_COLOUR_COMBINATION(piParam0->entityList[i], i);
+					ENTITY::SET_ENTITY_INVINCIBLE(piParam0->entityList[i], true);
+					VEHICLE::SET_VEHICLE_LIGHTS(piParam0->entityList[i], 2);
+					ENTITY::FREEZE_ENTITY_POSITION(piParam0->entityList[i], true);
 				}
 			
-				if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[i]))
+				if (ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[i]))
 				{
-					if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_74[i]))
+					if (!ENTITY::DOES_ENTITY_EXIST(piParam0->vehiclePeds[i]))
 					{
-						piParam0->f_74[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->f_58[i], PED_TYPE_CIVMALE, func_249(), -1, false, false);
-						ENTITY::SET_ENTITY_INVINCIBLE(piParam0->f_74[i], true);
-						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->f_74[i], true);
+						piParam0->vehiclePeds[i] = PED::CREATE_PED_INSIDE_VEHICLE(piParam0->entityList[i], PED_TYPE_CIVMALE, GetPlayerPedEntityModel(), -1, false, false);
+						ENTITY::SET_ENTITY_INVINCIBLE(piParam0->vehiclePeds[i], true);
+						PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(piParam0->vehiclePeds[i], true);
 					}
 				}
 			}
@@ -11284,7 +11284,7 @@ BOOL func_306(int* piParam0) // Position - 0xEEB1
 	
 		for (i = 0; i < 15; i = i + 1)
 		{
-			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_58[i]) || !ENTITY::DOES_ENTITY_EXIST(piParam0->f_74[i]))
+			if (!ENTITY::DOES_ENTITY_EXIST(piParam0->entityList[i]) || !ENTITY::DOES_ENTITY_EXIST(piParam0->vehiclePeds[i]))
 				return false;
 		}
 	
@@ -11304,7 +11304,7 @@ BOOL func_307(int* piParam0, int iParam1, int iParam2) // Position - 0xF049
 	num = func_231(piParam0, iParam1, false);
 
 	if (piParam0->f_293)
-		if (piParam0->f_13 + num + iParam2 <= MISC::GET_GAME_TIMER())
+		if (piParam0->gameTimer + num + iParam2 <= MISC::GET_GAME_TIMER())
 			return true;
 	else if (num + iParam2 <= func_239(piParam0))
 		return true;
@@ -11312,7 +11312,7 @@ BOOL func_307(int* piParam0, int iParam1, int iParam2) // Position - 0xF049
 	return false;
 }
 
-BOOL func_308(int* piParam0) // Position - 0xF08F
+BOOL SpawnFrogger(int* piParam0) // Position - 0xF08F
 {
 	Hash model;
 
@@ -11325,18 +11325,18 @@ BOOL func_308(int* piParam0) // Position - 0xF08F
 
 	if (STREAMING::HAS_MODEL_LOADED(model) && VEHICLE::HAS_VEHICLE_RECORDING_BEEN_LOADED(8, "FMIntro"))
 	{
-		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_48))
+		if (!ENTITY::DOES_ENTITY_EXIST(piParam0->frogger))
 		{
-			piParam0->f_48 = VEHICLE::CREATE_VEHICLE(model, VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(8, 0f, "FMIntro"), 0f, false, false, false);
-			VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->f_48, 8, "FMIntro", true);
-			VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->f_48, 5000f);
-			VEHICLE::PAUSE_PLAYBACK_RECORDED_VEHICLE(piParam0->f_48);
-			ENTITY::SET_ENTITY_VISIBLE(piParam0->f_48, false, false);
+			piParam0->frogger = VEHICLE::CREATE_VEHICLE(model, VEHICLE::GET_POSITION_OF_VEHICLE_RECORDING_AT_TIME(8, 0f, "FMIntro"), 0f, false, false, false);
+			VEHICLE::START_PLAYBACK_RECORDED_VEHICLE(piParam0->frogger, 8, "FMIntro", true);
+			VEHICLE::SKIP_TIME_IN_PLAYBACK_RECORDED_VEHICLE(piParam0->frogger, 5000f);
+			VEHICLE::PAUSE_PLAYBACK_RECORDED_VEHICLE(piParam0->frogger);
+			ENTITY::SET_ENTITY_VISIBLE(piParam0->frogger, false, false);
 			STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(model);
 		}
 	}
 
-	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->f_48))
+	if (!ENTITY::DOES_ENTITY_EXIST(piParam0->frogger))
 		return false;
 
 	MISC::SET_BIT(&(piParam0->f_3), 8);
@@ -11347,7 +11347,7 @@ void func_309(int* piParam0, int iParam1) // Position - 0xF14B
 {
 	if (func_307(piParam0, iParam1, 0))
 		if (piParam0->f_293)
-			piParam0->f_13 = MISC::GET_GAME_TIMER() - func_231(piParam0, iParam1, false);
+			piParam0->gameTimer = MISC::GET_GAME_TIMER() - func_231(piParam0, iParam1, false);
 		else
 			piParam0->f_291 = 1;
 
@@ -11356,7 +11356,7 @@ void func_309(int* piParam0, int iParam1) // Position - 0xF14B
 
 void func_310(int* piParam0) // Position - 0xF182
 {
-	piParam0->f_13 = MISC::GET_GAME_TIMER();
+	piParam0->gameTimer = MISC::GET_GAME_TIMER();
 	return;
 }
 
@@ -11455,8 +11455,8 @@ void func_318(int iParam0) // Position - 0xF32B
 void func_319() // Position - 0xF395
 {
 	Global_1574747 = true;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.f_1), SCRIPT::GET_THIS_SCRIPT_NAME(), 32);
-	Global_1574747.f_9 = MISC::GET_HASH_KEY(&(Global_1574747.f_1));
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.scriptName), SCRIPT::GET_THIS_SCRIPT_NAME(), 32);
+	Global_1574747.scriptHash = MISC::GET_HASH_KEY(&(Global_1574747.scriptName));
 	return;
 }
 
@@ -11503,7 +11503,7 @@ void func_322(int iParam0) // Position - 0xF43B
 	return;
 }
 
-void func_323(int iParam0, BOOL bParam1) // Position - 0xF456
+void LoadInterior(int iParam0, BOOL bParam1) // Position - 0xF456
 {
 	char* string2;
 	Interior interior;
@@ -14408,7 +14408,7 @@ BOOL func_368() // Position - 0x13A66
 	return false;
 }
 
-void func_369(BOOL bParam0) // Position - 0x13A7D
+void ToggleTraffic(BOOL bParam0) // Position - 0x13A7D
 {
 	if (bParam0)
 	{
@@ -14434,7 +14434,7 @@ void func_369(BOOL bParam0) // Position - 0x13A7D
 	return;
 }
 
-void func_370(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x13AF1
+void HandleSetPlayerControlFlags(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0x13AF1
 {
 	eSetPlayerControlFlags controlBs;
 
@@ -14892,7 +14892,7 @@ void func_383(int* piParam0) // Position - 0x14295
 	}
 	else
 	{
-		if (piParam0->f_6 > 30)
+		if (piParam0->step > 30)
 		{
 			if (!Global_1935678)
 			{
@@ -14901,7 +14901,7 @@ void func_383(int* piParam0) // Position - 0x14295
 			}
 		}
 	
-		if (piParam0->f_6 > 31)
+		if (piParam0->step > 31)
 		{
 			if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_1935677))
 			{
@@ -14912,7 +14912,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 0:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 33)
+								if (piParam0->step >= 33)
 								{
 									if (LOCALIZATION::GET_CURRENT_LANGUAGE() == 9 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 10 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 8 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 12)
 										func_388("artdir", 0f, 420f, "left", 0.3f, 0.3f);
@@ -14954,7 +14954,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 2:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 35)
+								if (piParam0->step >= 35)
 								{
 									func_388("assartdir", 0f, 100f, "left", 0.3f, 0f);
 									func_387("assartdir", "Associate Art Directors", 20f, "HUD_COLOUR_NET_PLAYER2", true);
@@ -14963,7 +14963,7 @@ void func_383(int* piParam0) // Position - 0x14295
 									MISC::SET_BIT(&(piParam0->f_4), piParam0->f_5);
 								}
 							}
-							else if (piParam0->f_6 > 35)
+							else if (piParam0->step > 35)
 							{
 								func_384("assartdir", 0f);
 								piParam0->f_5 = piParam0->f_5 + 1;
@@ -14973,7 +14973,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 3:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 36)
+								if (piParam0->step >= 36)
 								{
 									if (LOCALIZATION::GET_CURRENT_LANGUAGE() == 9 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 10 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 8 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 12)
 										func_388("asstecdir", 0f, 370f, "right", 0.3f, 0.3f);
@@ -15015,7 +15015,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 5:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 37)
+								if (piParam0->step >= 37)
 								{
 									if (LOCALIZATION::GET_CURRENT_LANGUAGE() == 9 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 10 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 8 || LOCALIZATION::GET_CURRENT_LANGUAGE() == 12)
 										func_388("senprog", 0f, 200f, "left", 0.3f, 0.3f);
@@ -15038,7 +15038,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 6:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 38)
+								if (piParam0->step >= 38)
 								{
 									func_388("prog", 0f, 100f, "left", 0.3f, 0.3f);
 									func_387("prog", "Programmers", 35f, "HUD_COLOUR_NET_PLAYER2", true);
@@ -15080,7 +15080,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 8:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 39)
+								if (piParam0->step >= 39)
 								{
 									func_388("audio", 0f, 10f, "right", 0.3f, 0.3f);
 									func_387("audio", "Audio", 0f, "HUD_COLOUR_FRIENDLY", true);
@@ -15099,7 +15099,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 9:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 40)
+								if (piParam0->step >= 40)
 								{
 									func_388("scrlead", 50f, 85f, "right", 0.3f, 0.3f);
 									func_387("scrlead", "Script Leads", 0f, "HUD_COLOUR_NET_PLAYER1", true);
@@ -15118,7 +15118,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 10:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 41)
+								if (piParam0->step >= 41)
 								{
 									func_388("script1", 0f, 10f, "left", 0.3f, 0.3f);
 									func_387("script1", "Scripters", 20f, "HUD_COLOUR_NET_PLAYER2", true);
@@ -15137,7 +15137,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 11:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 42)
+								if (piParam0->step >= 42)
 								{
 									func_388("script2", 0f, 10f, "left", 0.3f, 0.3f);
 									func_387("script2", "Scripters", 20f, "HUD_COLOUR_NET_PLAYER3", true);
@@ -15156,7 +15156,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 12:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 43)
+								if (piParam0->step >= 43)
 								{
 									func_388("visdes", 0f, 45f, "left", 0.2f, 0.2f);
 									func_387("visdes", "Visual Design", 30f, "HUD_COLOUR_FRIENDLY", true);
@@ -15177,7 +15177,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 13:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 44)
+								if (piParam0->step >= 44)
 								{
 									func_388("uides", 40f, 20f, "right", 0f, 0.3f);
 									func_387("uides", "UI Design & Development", 0f, "HUD_COLOUR_NET_PLAYER1", true);
@@ -15196,7 +15196,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 14:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 46)
+								if (piParam0->step >= 46)
 								{
 									func_388("concre", 0f, 20f, "left", 0f, 0.3f);
 									func_387("concre", "Content Creation", 40f, "HUD_COLOUR_NET_PLAYER2", true);
@@ -15216,7 +15216,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 15:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 47)
+								if (piParam0->step >= 47)
 								{
 									func_388("devass", 0f, 400f, "right", 0f, 0f);
 									func_387("devass", "Development Assistants", 0f, "HUD_COLOUR_NET_PLAYER3", true);
@@ -15225,7 +15225,7 @@ void func_383(int* piParam0) // Position - 0x14295
 									MISC::SET_BIT(&(piParam0->f_4), piParam0->f_5);
 								}
 							}
-							else if (piParam0->f_6 > 47)
+							else if (piParam0->step > 47)
 							{
 								func_384("devass", 0f);
 								piParam0->f_5 = piParam0->f_5 + 1;
@@ -15235,7 +15235,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 16:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 48)
+								if (piParam0->step >= 48)
 								{
 									func_388("qasup", 20f, 0f, "right", 0.3f, 0.3f);
 									func_387("qasup", "QA Supervisor", 0f, "HUD_COLOUR_FRIENDLY", true);
@@ -15256,7 +15256,7 @@ void func_383(int* piParam0) // Position - 0x14295
 						case 17:
 							if (!IS_BIT_SET(piParam0->f_4, piParam0->f_5))
 							{
-								if (piParam0->f_6 >= 49)
+								if (piParam0->step >= 49)
 								{
 									func_388("senta", 0f, 25f, "left", 0.3f, 0.3f);
 									func_387("senta", "Senior Test Analysts", 30f, "HUD_COLOUR_NET_PLAYER1", true);
@@ -15305,7 +15305,7 @@ void func_383(int* piParam0) // Position - 0x14295
 										MISC::SET_BIT(&(piParam0->f_4), piParam0->f_5);
 									}
 								}
-								else if (piParam0->f_6 >= 50)
+								else if (piParam0->step >= 50)
 								{
 									func_388("animdir", 50f, 90f, "right", 0.3f, 0.3f);
 									func_387("animdir", "Animation Director", 0f, "HUD_COLOUR_NET_PLAYER3", true);
@@ -15533,10 +15533,10 @@ void func_388(char* sParam0, float fParam1, float fParam2, char* sParam3, float 
 
 void func_389(int* piParam0) // Position - 0x15814
 {
-	if (piParam0->f_6 >= 33 && piParam0->f_6 < 51)
-		if (ENTITY::DOES_ENTITY_EXIST(piParam0->f_34))
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->f_34, false))
-				GRAPHICS::DRAW_LIGHT_WITH_RANGE(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(piParam0->f_34, 0f, 0.25f, 0.6f), 255, 255, 255, 1.5f, 0.5f);
+	if (piParam0->step >= 33 && piParam0->step < 51)
+		if (ENTITY::DOES_ENTITY_EXIST(piParam0->lamarsFrogger))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(piParam0->lamarsFrogger, false))
+				GRAPHICS::DRAW_LIGHT_WITH_RANGE(ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(piParam0->lamarsFrogger, 0f, 0.25f, 0.6f), 255, 255, 255, 1.5f, 0.5f);
 
 	return;
 }
@@ -20860,13 +20860,13 @@ void func_683(BOOL bParam0, int iParam1) // Position - 0x1BD5A
 
 void func_684(int* piParam0) // Position - 0x1BE18
 {
-	if (piParam0->f_9 != 0)
+	if (piParam0->syncScene != 0)
 	{
 		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(*piParam0))
 			GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(piParam0);
 	
 		*piParam0 = 0;
-		piParam0->f_9 = 0;
+		piParam0->syncScene = 0;
 	}
 
 	return;

@@ -7447,8 +7447,8 @@ void func_253() // Position - 0x914A
 void func_254() // Position - 0x9156
 {
 	Global_1574747 = 0;
-	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.f_1), "", 32);
-	Global_1574747.f_9 = 0;
+	TEXT_LABEL_ASSIGN_STRING(&(Global_1574747.scriptName), "", 32);
+	Global_1574747.scriptHash = 0;
 	return;
 }
 
