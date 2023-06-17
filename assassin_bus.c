@@ -797,8 +797,8 @@
 	var uLocal_795 = 0;
 	var uLocal_796 = 0;
 	var uLocal_797 = 0;
-	int iLocal_798 = 0;
-	int iLocal_799 = 0;
+	int standardBlipEnumID = 0;
+	int waypointBlipEnumID = 0;
 	var uLocal_800 = 16;
 	var uLocal_801 = 0;
 	var uLocal_802 = 0;
@@ -2688,8 +2688,8 @@ void main() // Position - 0x0
 	uLocal_43 = { 500f, 500f, 500f };
 	iLocal_143 = 100;
 	iLocal_144 = 3;
-	iLocal_798 = HUD::GET_STANDARD_BLIP_ENUM_ID();
-	iLocal_799 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
+	standardBlipEnumID = HUD::GET_STANDARD_BLIP_ENUM_ID();
+	waypointBlipEnumID = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
 	iLocal_1044 = 1;
 	iLocal_1445 = -1;
 	fLocal_1447 = 1f;

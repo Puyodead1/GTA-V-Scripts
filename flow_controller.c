@@ -122839,8 +122839,8 @@ void func_977(int iParam0, int iParam1) // Position - 0x9DBBA
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	G_MissionStats.f_8616[iParam0] = 1;
-	G_MissionStats.f_8616.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
+	G_MissionStats.codeControl.runflagArray[iParam0] = 1;
+	G_MissionStats.codeControl.executeTimerArray[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
 

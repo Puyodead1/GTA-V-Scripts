@@ -2862,8 +2862,8 @@ void func_92(int iParam0, int iParam1) // Position - 0x3186
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	G_MissionStats.f_8616[iParam0] = 1;
-	G_MissionStats.f_8616.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
+	G_MissionStats.codeControl.runflagArray[iParam0] = 1;
+	G_MissionStats.codeControl.executeTimerArray[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
 
@@ -103563,8 +103563,8 @@ void func_683() // Position - 0x88BCB
 
 	for (i = 0; i < 235; i = i + 1)
 	{
-		G_MissionStats.f_8616[i] = 0;
-		G_MissionStats.f_8616.f_236[i] = -1;
+		G_MissionStats.codeControl.runflagArray[i] = 0;
+		G_MissionStats.codeControl.executeTimerArray[i] = -1;
 	}
 
 	return;

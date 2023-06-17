@@ -80,17 +80,7 @@ void main() // Position - 0x0
 		ENTITY::SET_ENTITY_HEADING(playerPed, 225.2837f);
 	}
 
-	func_1(19, 0);
+	G_MissionStats.codeControl.runflagArray[19] = 1;
+	G_MissionStats.codeControl.executeTimerArray[19] = MISC::GET_GAME_TIMER();
 	return;
 }
-
-void func_1(int iParam0, int iParam1) // Position - 0xB1
-{
-	if (iParam0 == 235 || iParam0 == 0)
-		return;
-
-	G_MissionStats.f_8616[iParam0] = 1;
-	G_MissionStats.f_8616.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
-	return;
-}
-

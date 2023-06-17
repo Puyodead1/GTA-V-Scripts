@@ -94934,9 +94934,9 @@ void SaveBuildingDoorStates(Any* panParam0, char* sParam1) // Position - 0x79FBF
 
 void SaveCodeControlStruct() // Position - 0x7A006
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.f_8616), 472, "CODE_CONTROL_DATA_STRUCT");
-	SaveCodeControlRunflagArray(&(G_MissionStats.f_8616), "CODE_CONTROL_RUNFLAG_ARRAY");
-	SaveCodeControlExecuteTimerArray(&(G_MissionStats.f_8616.f_236), "CODE_CONTROL_EXECUTE_TIMER_ARRAY");
+	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.codeControl.runflagArray), 472, "CODE_CONTROL_DATA_STRUCT");
+	SaveCodeControlRunflagArray(&(G_MissionStats.codeControl.runflagArray), "CODE_CONTROL_RUNFLAG_ARRAY");
+	SaveCodeControlExecuteTimerArray(&(G_MissionStats.codeControl.executeTimerArray), "CODE_CONTROL_EXECUTE_TIMER_ARRAY");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }

@@ -93,9 +93,9 @@ void main() // Position - 0x0
 	
 		for (i = 0; i < 235; i = i + 1)
 		{
-			if (G_MissionStats.f_8616[i])
+			if (G_MissionStats.codeControl.runflagArray[i])
 			{
-				if (MISC::GET_GAME_TIMER() >= G_MissionStats.f_8616.f_236[i])
+				if (MISC::GET_GAME_TIMER() >= G_MissionStats.codeControl.executeTimerArray[i])
 				{
 					switch (i)
 					{
@@ -931,7 +931,7 @@ void main() // Position - 0x0
 							break;
 					}
 				
-					G_MissionStats.f_8616[i] = false;
+					G_MissionStats.codeControl.runflagArray[i] = false;
 				}
 			}
 		}
@@ -1075,8 +1075,8 @@ void func_6(int iParam0, int iParam1) // Position - 0xEC3
 	if (iParam0 == 235 || iParam0 == 0)
 		return;
 
-	G_MissionStats.f_8616[iParam0] = true;
-	G_MissionStats.f_8616.f_236[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
+	G_MissionStats.codeControl.runflagArray[iParam0] = true;
+	G_MissionStats.codeControl.executeTimerArray[iParam0] = MISC::GET_GAME_TIMER() + iParam1;
 	return;
 }
 
