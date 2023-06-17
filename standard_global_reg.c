@@ -94035,17 +94035,17 @@ void SaveBasejumpStruct() // Position - 0x787A8
 
 void SaveAssassinStruct() // Position - 0x787F9
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.f_19966), 10, "ASSASSIN_SAVED_STRUCT");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_19966), "ASSASSIN_iCurRank");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_19966.f_1), "ASSASSIN_iGenData");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_19966.f_2), "ASSASSIN_iBools");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_19966.f_3), "ASSASSIN_iAttemptsOnCur");
-	MISC::REGISTER_ENUM_TO_SAVE(&(G_MissionStats.f_19966.f_4), "ASSASSIN_TOD_iTime");
-	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.f_19966.f_5), "ASSASSIN_HotelMissionTime");
-	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.f_19966.f_6), "ASSASSIN_MultiMissionTime");
-	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.f_19966.f_7), "ASSASSIN_ViceMissionTime");
-	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.f_19966.f_8), "ASSASSIN_BusMissionTime");
-	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.f_19966.f_9), "ASSASSIN_ConstructionMissionTime");
+	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.assassin.currentRank), 10, "ASSASSIN_SAVED_STRUCT");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.assassin.currentRank), "ASSASSIN_iCurRank");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.assassin.genData), "ASSASSIN_iGenData");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.assassin.bools), "ASSASSIN_iBools");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.assassin.attemptsOnCur), "ASSASSIN_iAttemptsOnCur");
+	MISC::REGISTER_ENUM_TO_SAVE(&(G_MissionStats.assassin.todTime), "ASSASSIN_TOD_iTime");
+	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.assassin.hotelMissionTime), "ASSASSIN_HotelMissionTime");
+	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.assassin.multiMissionTime), "ASSASSIN_MultiMissionTime");
+	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.assassin.viceMissionTime), "ASSASSIN_ViceMissionTime");
+	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.assassin.busMissionTime), "ASSASSIN_BusMissionTime");
+	MISC::REGISTER_FLOAT_TO_SAVE(&(G_MissionStats.assassin.constructionMissionTime), "ASSASSIN_ConstructionMissionTime");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }

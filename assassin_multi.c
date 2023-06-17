@@ -2562,8 +2562,8 @@ void main() // Position - 0x0
 	{
 		STREAMING::CLEAR_HD_AREA();
 		func_540();
-		G_MissionStats.f_19966.f_6 = func_539();
-		func_537(&(G_MissionStats.f_19966.f_1), 1024);
+		G_MissionStats.assassin.multiMissionTime = func_539();
+		func_537(&(G_MissionStats.assassin.genData), 1024);
 		func_535();
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obLocal_1467))
@@ -2666,7 +2666,7 @@ void main() // Position - 0x0
 			if (func_520())
 			{
 				if (func_519(&uLocal_1040))
-					G_MissionStats.f_19966.f_6 = func_539();
+					G_MissionStats.assassin.multiMissionTime = func_539();
 			
 				PED::REMOVE_SCENARIO_BLOCKING_AREA(iLocal_1591, false);
 				func_540();
@@ -2677,8 +2677,8 @@ void main() // Position - 0x0
 		{
 			if (func_158(&uScriptParam_2225, &pedLocal_1047))
 			{
-				G_MissionStats.f_19966.f_6 = func_539();
-				fLocal_132 = G_MissionStats.f_19966.f_6 / 1000f;
+				G_MissionStats.assassin.multiMissionTime = func_539();
+				fLocal_132 = G_MissionStats.assassin.multiMissionTime / 1000f;
 				func_157(&uLocal_1040, fLocal_132);
 				func_156(&uLocal_1040);
 			
@@ -3412,7 +3412,7 @@ BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x15F7
 
 void func_19(const char* sParam0) // Position - 0x161F
 {
-	func_537(&(G_MissionStats.f_19966.f_1), 1024);
+	func_537(&(G_MissionStats.assassin.genData), 1024);
 
 	if (!MISC::IS_STRING_NULL(sParam0))
 		func_20(sParam0);
@@ -4338,7 +4338,7 @@ void func_53(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 				{
 					func_97(&uLocal_148, 0);
 					func_139(false);
-					G_MissionStats.f_19966 = G_MissionStats.f_19966 + 1;
+					G_MissionStats.assassin.currentRank = G_MissionStats.assassin.currentRank + 1;
 					func_96();
 					func_94(false, 0);
 					func_56(uParam0);
@@ -4380,7 +4380,7 @@ void func_56(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 	value = 1f + func_93();
 	value = value * uParam0.f_23;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 4194304))
+	if (func_92(G_MissionStats.assassin.genData, 4194304))
 		value = value + uParam0.f_24;
 
 	func_57(_GET_CURRENT_PLAYER_CHARACTER(), 97, SYSTEM::ROUND(value), false, false);
@@ -5527,31 +5527,31 @@ float func_93() // Position - 0x3B17
 
 	num = 0f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 8192))
+	if (func_92(G_MissionStats.assassin.genData, 8192))
 		num = num + 0.2f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 16384))
+	if (func_92(G_MissionStats.assassin.genData, 16384))
 		num = num + 0.2f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 32768))
+	if (func_92(G_MissionStats.assassin.genData, 32768))
 		num = num + 0.2f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 65536))
+	if (func_92(G_MissionStats.assassin.genData, 65536))
 		num = num + 0.1f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 131072))
+	if (func_92(G_MissionStats.assassin.genData, 131072))
 		num = num + 0.1f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 262144))
+	if (func_92(G_MissionStats.assassin.genData, 262144))
 		num = num + 0.1f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 524288))
+	if (func_92(G_MissionStats.assassin.genData, 524288))
 		num = num + 0.333f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 1048576))
+	if (func_92(G_MissionStats.assassin.genData, 1048576))
 		num = num + 0.333f;
 
-	if (func_92(G_MissionStats.f_19966.f_1, 2097152))
+	if (func_92(G_MissionStats.assassin.genData, 2097152))
 		num = num + 0.333f;
 
 	return num;
@@ -5626,7 +5626,7 @@ BOOL func_95(int iParam0) // Position - 0x3D00
 
 void func_96() // Position - 0x3D3E
 {
-	func_537(&(G_MissionStats.f_19966.f_1), 2048);
+	func_537(&(G_MissionStats.assassin.genData), 2048);
 	return;
 }
 
@@ -8064,7 +8064,7 @@ void func_153(var uParam0, char* sParam1, char* sParam2, int iParam3) // Positio
 
 void func_154() // Position - 0x72C7
 {
-	func_537(&(G_MissionStats.f_19966.f_1), 4194304);
+	func_537(&(G_MissionStats.assassin.genData), 4194304);
 	return;
 }
 
@@ -8178,7 +8178,7 @@ BOOL func_158(var uParam0, var uParam1) // Position - 0x7365
 			else if (!func_519(&uLocal_1040))
 			{
 				func_43(&uLocal_1040);
-				G_MissionStats.f_19966.f_6 = 0f;
+				G_MissionStats.assassin.multiMissionTime = 0f;
 			}
 		
 			if (iLocal_1554 < 4)
@@ -25049,11 +25049,11 @@ void func_530() // Position - 0x22F7F
 {
 	BOOL flag;
 
-	flag = func_92(G_MissionStats.f_19966.f_1, 4096);
-	G_MissionStats.f_19966.f_1 = 0;
+	flag = func_92(G_MissionStats.assassin.genData, 4096);
+	G_MissionStats.assassin.genData = 0;
 
 	if (flag)
-		func_537(&(G_MissionStats.f_19966.f_1), 4096);
+		func_537(&(G_MissionStats.assassin.genData), 4096);
 
 	return;
 }

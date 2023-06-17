@@ -2597,7 +2597,7 @@ void main() // Position - 0x0
 	{
 		func_517();
 		AUDIO::TRIGGER_MUSIC_EVENT("ASS3_FAIL");
-		func_515(&(G_MissionStats.f_19966.f_1), 1024);
+		func_515(&(G_MissionStats.assassin.genData), 1024);
 		func_513();
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obLocal_1465))
@@ -2708,8 +2708,8 @@ void main() // Position - 0x0
 			{
 				if (func_119(&uLocal_1040))
 				{
-					G_MissionStats.f_19966.f_7 = func_116(&uLocal_1040);
-					fLocal_132 = G_MissionStats.f_19966.f_7;
+					G_MissionStats.assassin.viceMissionTime = func_116(&uLocal_1040);
+					fLocal_132 = G_MissionStats.assassin.viceMissionTime;
 				}
 			
 				if (!bLocal_1493)
@@ -2794,7 +2794,7 @@ void func_1(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 				{
 					func_54(&uLocal_148, 0);
 					func_100(false);
-					G_MissionStats.f_19966 = G_MissionStats.f_19966 + 1;
+					G_MissionStats.assassin.currentRank = G_MissionStats.assassin.currentRank + 1;
 					func_53();
 					func_50(false, 0);
 					func_5(uParam0);
@@ -2844,7 +2844,7 @@ void func_5(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var
 	value = 1f + func_49();
 	value = value * uParam0.f_23;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 4194304))
+	if (func_48(G_MissionStats.assassin.genData, 4194304))
 		value = value + uParam0.f_24;
 
 	func_6(_GET_CURRENT_PLAYER_CHARACTER(), 97, SYSTEM::ROUND(value), false, false);
@@ -4074,31 +4074,31 @@ float func_49() // Position - 0x1D96
 
 	num = 0f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 8192))
+	if (func_48(G_MissionStats.assassin.genData, 8192))
 		num = num + 0.2f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 16384))
+	if (func_48(G_MissionStats.assassin.genData, 16384))
 		num = num + 0.2f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 32768))
+	if (func_48(G_MissionStats.assassin.genData, 32768))
 		num = num + 0.2f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 65536))
+	if (func_48(G_MissionStats.assassin.genData, 65536))
 		num = num + 0.1f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 131072))
+	if (func_48(G_MissionStats.assassin.genData, 131072))
 		num = num + 0.1f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 262144))
+	if (func_48(G_MissionStats.assassin.genData, 262144))
 		num = num + 0.1f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 524288))
+	if (func_48(G_MissionStats.assassin.genData, 524288))
 		num = num + 0.333f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 1048576))
+	if (func_48(G_MissionStats.assassin.genData, 1048576))
 		num = num + 0.333f;
 
-	if (func_48(G_MissionStats.f_19966.f_1, 2097152))
+	if (func_48(G_MissionStats.assassin.genData, 2097152))
 		num = num + 0.333f;
 
 	return num;
@@ -4188,7 +4188,7 @@ BOOL func_52(int iParam0) // Position - 0x1FB1
 
 void func_53() // Position - 0x1FEF
 {
-	func_515(&(G_MissionStats.f_19966.f_1), 2048);
+	func_515(&(G_MissionStats.assassin.genData), 2048);
 	return;
 }
 
@@ -6686,7 +6686,7 @@ void func_114(var uParam0, char* sParam1, char* sParam2, int iParam3) // Positio
 
 void func_115() // Position - 0x572A
 {
-	func_515(&(G_MissionStats.f_19966.f_1), 4194304);
+	func_515(&(G_MissionStats.assassin.genData), 4194304);
 	return;
 }
 
@@ -6773,8 +6773,8 @@ BOOL func_120(var uParam0, Ped* ppedParam1) // Position - 0x57F1
 		
 			if (bLocal_1970)
 			{
-				if (G_MissionStats.f_19966.f_7 != 0f)
-					func_381(&uLocal_1040, G_MissionStats.f_19966.f_7);
+				if (G_MissionStats.assassin.viceMissionTime != 0f)
+					func_381(&uLocal_1040, G_MissionStats.assassin.viceMissionTime);
 			
 				if (iLocal_2006 == 0)
 					func_380();
@@ -6792,7 +6792,7 @@ BOOL func_120(var uParam0, Ped* ppedParam1) // Position - 0x57F1
 				if (!func_119(&uLocal_1040))
 				{
 					func_368(&uLocal_1040);
-					G_MissionStats.f_19966.f_7 = 0f;
+					G_MissionStats.assassin.viceMissionTime = 0f;
 				}
 			
 				func_367(&hLocal_1687, &pedLocal_1047, true);
@@ -9789,7 +9789,7 @@ void func_201(var uParam0) // Position - 0x9C65
 			{
 				if (!PED::IS_PED_INJURED(uParam0->f_7))
 				{
-					if (G_MissionStats.f_19966.f_3 % 2 == 1)
+					if (G_MissionStats.assassin.attemptsOnCur % 2 == 1)
 					{
 						TEXT_LABEL_ASSIGN_STRING(&uLocal_2059, "OJAShk_101", 16);
 						TEXT_LABEL_ASSIGN_STRING(&uLocal_2063, "OJAShk_103", 16);
@@ -9840,7 +9840,7 @@ void func_203(var uParam0) // Position - 0x9D66
 			{
 				if (!PED::IS_PED_INJURED(uParam0->f_7))
 				{
-					if (G_MissionStats.f_19966.f_3 % 2 == 0)
+					if (G_MissionStats.assassin.attemptsOnCur % 2 == 0)
 					{
 						uLocal_2018 = { -576.8151f, -1734.9265f, 22.4815f };
 						uLocal_2021 = { -524.8151f, -1771.9265f, 20.3315f };
@@ -11924,7 +11924,7 @@ void func_260() // Position - 0xCD0C
 
 void func_261(const char* sParam0) // Position - 0xCDF9
 {
-	func_515(&(G_MissionStats.f_19966.f_1), 1024);
+	func_515(&(G_MissionStats.assassin.genData), 1024);
 
 	if (!MISC::IS_STRING_NULL(sParam0))
 		func_262(sParam0);
@@ -19975,11 +19975,11 @@ void func_433() // Position - 0x19691
 {
 	BOOL flag;
 
-	flag = func_48(G_MissionStats.f_19966.f_1, 4096);
-	G_MissionStats.f_19966.f_1 = 0;
+	flag = func_48(G_MissionStats.assassin.genData, 4096);
+	G_MissionStats.assassin.genData = 0;
 
 	if (flag)
-		func_515(&(G_MissionStats.f_19966.f_1), 4096);
+		func_515(&(G_MissionStats.assassin.genData), 4096);
 
 	return;
 }
@@ -24703,7 +24703,7 @@ void func_516(int iParam0, int iParam1) // Position - 0x22E55
 void func_517() // Position - 0x22E66
 {
 	if (func_119(&uLocal_1040))
-		G_MissionStats.f_19966.f_7 = func_116(&uLocal_1040);
+		G_MissionStats.assassin.viceMissionTime = func_116(&uLocal_1040);
 
 	return;
 }

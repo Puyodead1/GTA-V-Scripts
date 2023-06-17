@@ -78,7 +78,7 @@ void main() // Position - 0x0
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			G_MissionStats.f_19966 = G_MissionStats.f_19966 + 1;
+			G_MissionStats.assassin.currentRank = G_MissionStats.assassin.currentRank + 1;
 			func_1();
 			SCRIPT::TERMINATE_THIS_THREAD();
 		}
@@ -91,19 +91,12 @@ void main() // Position - 0x0
 
 void func_1() // Position - 0xAD
 {
-	func_2(&(G_MissionStats.f_19966.f_1), 2048);
+	func_2(&(G_MissionStats.assassin.genData), 2048);
 	return;
 }
 
 void func_2(var uParam0, int iParam1) // Position - 0xC5
 {
-	func_3(uParam0, iParam1);
-	return;
-}
-
-void func_3(var uParam0, int iParam1) // Position - 0xD5
-{
 	*uParam0 = *uParam0 || iParam1;
 	return;
 }
-

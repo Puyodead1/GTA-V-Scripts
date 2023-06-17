@@ -1773,7 +1773,7 @@ void main() // Position - 0x0
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
 		AUDIO::TRIGGER_MUSIC_EVENT("ASS1_FAIL");
-		func_554(&(G_MissionStats.f_19966.f_1), 1024);
+		func_554(&(G_MissionStats.assassin.genData), 1024);
 		func_552();
 		func_547();
 	}
@@ -3389,7 +3389,7 @@ BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x23F8
 
 void func_47(char* sParam0) // Position - 0x2420
 {
-	func_554(&(G_MissionStats.f_19966.f_1), 1024);
+	func_554(&(G_MissionStats.assassin.genData), 1024);
 
 	if (!MISC::IS_STRING_NULL(sParam0))
 		func_48(sParam0);
@@ -7194,8 +7194,8 @@ void func_154() // Position - 0x79E5
 		
 			if (bLocal_1144)
 			{
-				if (G_MissionStats.f_19966.f_5 != 0f)
-					func_57(&uLocal_1338, G_MissionStats.f_19966.f_5);
+				if (G_MissionStats.assassin.hotelMissionTime != 0f)
+					func_57(&uLocal_1338, G_MissionStats.assassin.hotelMissionTime);
 			
 				iLocal_1211 = func_540();
 			
@@ -7215,7 +7215,7 @@ void func_154() // Position - 0x79E5
 				if (!func_58(&uLocal_1338))
 				{
 					func_55(&uLocal_1338);
-					G_MissionStats.f_19966.f_5 = 0f;
+					G_MissionStats.assassin.hotelMissionTime = 0f;
 				}
 			
 				iLocal_1033 = 7;
@@ -7299,8 +7299,8 @@ void func_156() // Position - 0x7C19
 					func_253();
 				}
 			
-				G_MissionStats.f_19966.f_5 = func_52(&uLocal_1338);
-				fLocal_370 = G_MissionStats.f_19966.f_5;
+				G_MissionStats.assassin.hotelMissionTime = func_52(&uLocal_1338);
+				fLocal_370 = G_MissionStats.assassin.hotelMissionTime;
 				func_246();
 				bLocal_375 = true;
 				iLocal_1217 = 1;
@@ -7345,7 +7345,7 @@ void func_156() // Position - 0x7C19
 				if (func_210(&uLocal_386, false, 1065353216, false, false, false))
 				{
 					func_199(&uLocal_386, 0);
-					G_MissionStats.f_19966 = G_MissionStats.f_19966 + 1;
+					G_MissionStats.assassin.currentRank = G_MissionStats.assassin.currentRank + 1;
 					func_198();
 					func_161(uLocal_55);
 					func_159(false, 0);
@@ -7454,7 +7454,7 @@ void func_161(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	value = 1f + func_197();
 	value = value * uParam0.f_23;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 4194304))
+	if (func_124(G_MissionStats.assassin.genData, 4194304))
 		value = value + uParam0.f_24;
 
 	func_162(_GET_CURRENT_PLAYER_CHARACTER(), 97, SYSTEM::ROUND(value), false, false);
@@ -8596,31 +8596,31 @@ float func_197() // Position - 0x9323
 
 	num = 0f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 8192))
+	if (func_124(G_MissionStats.assassin.genData, 8192))
 		num = num + 0.2f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 16384))
+	if (func_124(G_MissionStats.assassin.genData, 16384))
 		num = num + 0.2f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 32768))
+	if (func_124(G_MissionStats.assassin.genData, 32768))
 		num = num + 0.2f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 65536))
+	if (func_124(G_MissionStats.assassin.genData, 65536))
 		num = num + 0.1f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 131072))
+	if (func_124(G_MissionStats.assassin.genData, 131072))
 		num = num + 0.1f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 262144))
+	if (func_124(G_MissionStats.assassin.genData, 262144))
 		num = num + 0.1f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 524288))
+	if (func_124(G_MissionStats.assassin.genData, 524288))
 		num = num + 0.333f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 1048576))
+	if (func_124(G_MissionStats.assassin.genData, 1048576))
 		num = num + 0.333f;
 
-	if (func_124(G_MissionStats.f_19966.f_1, 2097152))
+	if (func_124(G_MissionStats.assassin.genData, 2097152))
 		num = num + 0.333f;
 
 	return num;
@@ -8628,7 +8628,7 @@ float func_197() // Position - 0x9323
 
 void func_198() // Position - 0x943C
 {
-	func_554(&(G_MissionStats.f_19966.f_1), 2048);
+	func_554(&(G_MissionStats.assassin.genData), 2048);
 	return;
 }
 
@@ -11012,7 +11012,7 @@ void func_252(var uParam0, char* sParam1, char* sParam2, int iParam3) // Positio
 
 void func_253() // Position - 0xC93B
 {
-	func_554(&(G_MissionStats.f_19966.f_1), 4194304);
+	func_554(&(G_MissionStats.assassin.genData), 4194304);
 	return;
 }
 
@@ -24805,11 +24805,11 @@ void func_543() // Position - 0x243AC
 {
 	BOOL flag;
 
-	flag = func_124(G_MissionStats.f_19966.f_1, 4096);
-	G_MissionStats.f_19966.f_1 = 0;
+	flag = func_124(G_MissionStats.assassin.genData, 4096);
+	G_MissionStats.assassin.genData = 0;
 
 	if (flag)
-		func_554(&(G_MissionStats.f_19966.f_1), 4096);
+		func_554(&(G_MissionStats.assassin.genData), 4096);
 
 	return;
 }
@@ -24835,7 +24835,7 @@ BOOL _IS_MISSION_REPLAY_IN_PROGRESS() // Position - 0x24400
 void func_547() // Position - 0x24424
 {
 	if (func_58(&uLocal_1338))
-		G_MissionStats.f_19966.f_5 = func_52(&uLocal_1338);
+		G_MissionStats.assassin.hotelMissionTime = func_52(&uLocal_1338);
 
 	if (!bLocal_1178)
 		AUDIO::TRIGGER_MUSIC_EVENT("ASS1_LOST");
