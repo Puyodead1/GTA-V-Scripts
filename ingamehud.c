@@ -4874,7 +4874,7 @@ BOOL func_170(int iParam0) // Position - 0x51D9
 	Hash statHash;
 	BOOL outValue;
 
-	hash = Global_1665484[iParam0];
+	hash = MPStatHashes3[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_BOOL(statHash, &outValue, -1))
@@ -111910,7 +111910,7 @@ BOOL func_1184() // Position - 0x8A009
 
 BOOL func_1185() // Position - 0x8A051
 {
-	if (Global_2694509)
+	if (MPStatsInitialized)
 		if (func_413())
 			if (func_1182() != Global_2694469)
 				if (func_1182() == 1)

@@ -1,5 +1,5 @@
 #region Local Var
-	int iLocal_0 = 0;
+	int state = 0;
 	var uScriptParam_1 = 0;
 	var uScriptParam_2 = 5;
 	var uScriptParam_3 = 0;
@@ -31,29 +31,29 @@ void main() // Position - 0x0
 		SCRIPT::TERMINATE_THIS_THREAD();
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
-		func_1();
+		Terminate();
 
 	while (true)
 	{
 		SYSTEM::WAIT(0);
 	
 		if (!BRAIN::IS_WORLD_POINT_WITHIN_BRAIN_ACTIVATION_RANGE())
-			iLocal_0 = 3;
+			state = 3; // if not within range, go to case 3
 	
-		switch (iLocal_0)
+		switch (state)
 		{
 			case 0:
-				if (CLOCK::GET_CLOCK_HOURS() >= 22 || CLOCK::GET_CLOCK_HOURS() <= 4)
-					iLocal_0 = 1;
+				if (CLOCK::GET_CLOCK_HOURS() >= 22 || CLOCK::GET_CLOCK_HOURS() <= 4) // between 10pm and 4am
+					state = 1;
 				else
-					func_1();
+					Terminate();
 				break;
 		
 			case 1:
 				if (!STREAMING::IS_IPL_ACTIVE("ID2_21_G_Night"))
 				{
 					STREAMING::REQUEST_IPL("ID2_21_G_Night");
-					iLocal_0 = 2;
+					state = 2;
 				}
 				break;
 		
@@ -62,7 +62,7 @@ void main() // Position - 0x0
 		
 			case 3:
 				if (!STREAMING::IS_NEW_LOAD_SCENE_ACTIVE() && !STREAMING::IS_PLAYER_SWITCH_IN_PROGRESS())
-					func_1();
+					Terminate();
 				break;
 		}
 	}
@@ -70,7 +70,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0xB1
+void Terminate() // Position - 0xB1
 {
 	if (STREAMING::IS_IPL_ACTIVE("ID2_21_G_Night"))
 		STREAMING::REMOVE_IPL("ID2_21_G_Night");

@@ -24,9 +24,9 @@ void main() // Position - 0x0
 		case 1:
 			if (iScriptParam_0.f_1 == joaat("PM_REPLAY"))
 			{
-				func_2(1, 0, -1029819160, 0, true, "PM_PANE_AUD" /*Audio*/);
-				func_2(1, 1, -1029819160, 1, false, "PM_PANE_DIS" /*Display*/);
-				func_1(1);
+				SetDataSlot(1, 0, -1029819160, 0, true, "PM_PANE_AUD" /*Audio*/);
+				SetDataSlot(1, 1, -1029819160, 1, false, "PM_PANE_DIS" /*Display*/);
+				DisplayDataSlot(1);
 			}
 		
 			iScriptParam_0.f_1 == -1029820160;
@@ -37,7 +37,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x8A
+void DisplayDataSlot(int iParam0) // Position - 0x8A
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("DISPLAY_DATA_SLOT"))
 	{
@@ -48,7 +48,7 @@ void func_1(int iParam0) // Position - 0x8A
 	return;
 }
 
-void func_2(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* sParam5) // Position - 0xA6
+void SetDataSlot(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* scaleformCommandString) // Position - 0xA6
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -64,16 +64,16 @@ void func_2(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, ch
 		else
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 	
-		func_3(sParam5);
+		DisplayScaleformCommandString(scaleformCommandString);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	}
 
 	return;
 }
 
-void func_3(char* sParam0) // Position - 0xF6
+void DisplayScaleformCommandString(char* componentType) // Position - 0xF6
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(componentType);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }

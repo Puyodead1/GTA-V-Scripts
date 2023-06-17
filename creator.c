@@ -115244,7 +115244,7 @@ int func_844(int iParam0) // Position - 0x8608D
 	Hash statHash;
 	int outValue;
 
-	hash = Global_1665476[iParam0];
+	hash = MPStatHashes1[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_INT(statHash, &outValue, -1))

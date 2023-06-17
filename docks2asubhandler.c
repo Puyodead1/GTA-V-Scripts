@@ -1,72 +1,72 @@
 #region Local Var
-	Vehicle veLocal_0 = 0;
-	Entity eLocal_1 = 0;
-	int iLocal_2 = 0;
+	Vehicle vehicle = 0;
+	Entity entity = 0;
+	int flags = 0;
 	Vehicle veScriptParam_3 = 0;
 	var uScriptParam_4 = 0;
 #endregion
 
 void main() // Position - 0x0
 {
-	float num;
+	float vDistance;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(19))
-		func_1();
+		Terminate();
 
-	veLocal_0 = veScriptParam_3;
-	eLocal_1 = veScriptParam_3.f_1;
+	vehicle = veScriptParam_3;
+	entity = veScriptParam_3.f_1;
 
-	while (!IS_BIT_SET(iLocal_2, 1))
+	while (!IS_BIT_SET(flags, 1))
 	{
-		if (!IS_BIT_SET(iLocal_2, 0))
+		if (!IS_BIT_SET(flags, 0))
 		{
-			if (ENTITY::DOES_ENTITY_EXIST(veLocal_0))
+			if (ENTITY::DOES_ENTITY_EXIST(vehicle))
 			{
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_0, false))
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(vehicle, false))
 				{
-					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(veLocal_0, false, true);
-					ENTITY::FREEZE_ENTITY_POSITION(veLocal_0, true);
-					ENTITY::SET_ENTITY_PROOFS(veLocal_0, true, true, true, true, true, false, false, false);
+					ENTITY::SET_ENTITY_AS_MISSION_ENTITY(vehicle, false, true);
+					ENTITY::FREEZE_ENTITY_POSITION(vehicle, true);
+					ENTITY::SET_ENTITY_PROOFS(vehicle, true, true, true, true, true, false, false, false);
 				
-					if (ENTITY::DOES_ENTITY_EXIST(eLocal_1))
+					if (ENTITY::DOES_ENTITY_EXIST(entity))
 					{
-						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(eLocal_1, false, true);
-						ENTITY::FREEZE_ENTITY_POSITION(eLocal_1, true);
-						ENTITY::SET_ENTITY_PROOFS(eLocal_1, true, true, true, true, true, false, false, false);
+						ENTITY::SET_ENTITY_AS_MISSION_ENTITY(entity, false, true);
+						ENTITY::FREEZE_ENTITY_POSITION(entity, true);
+						ENTITY::SET_ENTITY_PROOFS(entity, true, true, true, true, true, false, false, false);
 					}
 				
-					MISC::SET_BIT(&iLocal_2, 0);
+					MISC::SET_BIT(&flags, 0);
 				}
 			}
 		}
 		else if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		{
-			if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_0, false))
+			if (VEHICLE::IS_VEHICLE_DRIVEABLE(vehicle, false))
 			{
-				num = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(veLocal_0, true));
+				vDistance = SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), ENTITY::GET_ENTITY_COORDS(vehicle, true));
 			
-				if (num > 90000f)
-					MISC::SET_BIT(&iLocal_2, 1);
-				else if (num > 40000f && !ENTITY::IS_ENTITY_ON_SCREEN(veLocal_0))
-					MISC::SET_BIT(&iLocal_2, 1);
+				if (vDistance > 90000f)
+					MISC::SET_BIT(&flags, 1);
+				else if (vDistance > 40000f && !ENTITY::IS_ENTITY_ON_SCREEN(vehicle))
+					MISC::SET_BIT(&flags, 1);
 			}
 			else
 			{
-				MISC::SET_BIT(&iLocal_2, 1);
+				MISC::SET_BIT(&flags, 1);
 			}
 		}
 	
 		SYSTEM::WAIT(0);
 	}
 
-	func_1();
+	Terminate();
 	return;
 }
 
-void func_1() // Position - 0x105
+void Terminate() // Position - 0x105
 {
-	ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&veLocal_0);
-	ENTITY::SET_ENTITY_AS_NO_LONGER_NEEDED(&eLocal_1);
+	ENTITY::SET_VEHICLE_AS_NO_LONGER_NEEDED(&vehicle);
+	ENTITY::SET_ENTITY_AS_NO_LONGER_NEEDED(&entity);
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

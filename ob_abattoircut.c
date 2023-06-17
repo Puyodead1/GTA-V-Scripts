@@ -1,14 +1,12 @@
 #region Local Var
-	var uLocal_0 = 0;
-	var uLocal_1 = 0;
-	int iLocal_2 = 0;
+	int playState = 0;
 	Object obScriptParam_3 = 0;
 #endregion
 
 void main() // Position - 0x0
 {
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
-		func_1();
+		Terminate();
 
 	if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_3))
 		ENTITY::FREEZE_ENTITY_POSITION(obScriptParam_3, true);
@@ -21,7 +19,7 @@ void main() // Position - 0x0
 		{
 			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_3) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael2")) > 0)
 			{
-				switch (iLocal_2)
+				switch (playState)
 				{
 					case 0:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_3))
@@ -31,7 +29,7 @@ void main() // Position - 0x0
 							if (STREAMING::HAS_ANIM_DICT_LOADED("MISSMIC2"))
 							{
 								ENTITY::PLAY_ENTITY_ANIM(obScriptParam_3, "beefsplitter_loop", "MISSMIC2", 1f, true, false, false, 0, 0);
-								iLocal_2 = 1;
+								playState = 1;
 							}
 						}
 						break;
@@ -45,35 +43,22 @@ void main() // Position - 0x0
 			}
 			else
 			{
-				func_1();
+				Terminate();
 			}
 		}
 		else
 		{
-			func_1();
+			Terminate();
 		}
 	}
 
 	return;
 }
 
-void func_1() // Position - 0xAF
+void Terminate() // Position - 0xAF
 {
-	func_2("ob_abattoir Terminated >>>>>>>>>>>>>>>>>\\n");
+	Print("ob_abattoir Terminated >>>>>>>>>>>>>>>>>\\n");
 	STREAMING::REMOVE_ANIM_DICT("MISSMIC2");
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
-
-void func_2(char* sParam0) // Position - 0xC8
-{
-	func_3(sParam0);
-	return;
-}
-
-void func_3(char* sParam0) // Position - 0xD6
-{
-	MISC::ARE_STRINGS_EQUAL(sParam0, sParam0);
-	return;
-}
-

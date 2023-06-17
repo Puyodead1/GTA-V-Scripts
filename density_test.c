@@ -1,30 +1,30 @@
 #region Local Var
-	BOOL bLocal_0 = 0;
-	BOOL bLocal_1 = 0;
-	float fLocal_2 = 0f;
-	float fLocal_3 = 0f;
-	float fLocal_4 = 0f;
-	float fLocal_5 = 0f;
-	float fLocal_6 = 0f;
+	BOOL doSetVehicleDensity = 0;
+	BOOL doSetPedDensity = 0;
+	float vehicleDensityMultiplier = 0f;
+	float randomVehicleDensityMultiplier = 0f;
+	float parkedVehicleDensityMultiplier = 0f;
+	float ambientVehicleRangeMultiplier = 0f;
+	float pedDensityMultiplier = 0f;
 	float fLocal_7 = 0f;
 	float fLocal_8 = 0f;
 #endregion
 
 void main() // Position - 0x0
 {
-	bLocal_0 = true;
-	bLocal_1 = true;
-	fLocal_2 = 1f;
-	fLocal_3 = 1f;
-	fLocal_4 = 1f;
-	fLocal_5 = 1f;
-	fLocal_6 = 1f;
+	doSetVehicleDensity = true;
+	doSetPedDensity = true;
+	vehicleDensityMultiplier = 1f;
+	randomVehicleDensityMultiplier = 1f;
+	parkedVehicleDensityMultiplier = 1f;
+	ambientVehicleRangeMultiplier = 1f;
+	pedDensityMultiplier = 1f;
 	fLocal_7 = 1f;
 	fLocal_8 = 1f;
 	MISC::SET_MISSION_FLAG(true);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_1();
+		Terminate();
 
 	while (true)
 	{
@@ -32,15 +32,15 @@ void main() // Position - 0x0
 	
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 		{
-			if (bLocal_0)
-				VEHICLE::SET_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_2);
+			if (doSetVehicleDensity)
+				VEHICLE::SET_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(vehicleDensityMultiplier);
 		
-			VEHICLE::SET_RANDOM_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_3);
-			VEHICLE::SET_PARKED_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_4);
-			VEHICLE::SET_AMBIENT_VEHICLE_RANGE_MULTIPLIER_THIS_FRAME(fLocal_5);
+			VEHICLE::SET_RANDOM_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(randomVehicleDensityMultiplier);
+			VEHICLE::SET_PARKED_VEHICLE_DENSITY_MULTIPLIER_THIS_FRAME(parkedVehicleDensityMultiplier);
+			VEHICLE::SET_AMBIENT_VEHICLE_RANGE_MULTIPLIER_THIS_FRAME(ambientVehicleRangeMultiplier);
 		
-			if (bLocal_1)
-				PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_6);
+			if (doSetPedDensity)
+				PED::SET_PED_DENSITY_MULTIPLIER_THIS_FRAME(pedDensityMultiplier);
 		
 			PED::SET_SCENARIO_PED_DENSITY_MULTIPLIER_THIS_FRAME(fLocal_7, fLocal_8);
 		}
@@ -49,7 +49,7 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x7C
+void Terminate() // Position - 0x7C
 {
 	VEHICLE::SET_RANDOM_TRAINS(true);
 	SCRIPT::TERMINATE_THIS_THREAD();
