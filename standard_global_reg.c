@@ -92,63 +92,63 @@ void main() // Position - 0x0
 	func_661();
 	MISC::START_SAVE_DATA(&Global_113810, 38587, true);
 	MISC::REGISTER_FLOAT_TO_SAVE(&Global_113810, "fSaveVersion");
-	func_651();
-	func_644();
-	func_630();
-	func_623();
-	func_619();
-	func_615();
-	func_611();
-	func_606();
-	func_596();
-	func_580();
-	func_575();
-	func_572();
-	func_559();
-	func_556();
-	func_549();
-	func_547();
-	func_535();
-	func_532();
-	func_528();
-	func_523();
-	func_518();
-	func_514();
-	func_504();
-	func_501();
-	func_500();
-	func_499();
-	func_498();
-	func_497();
-	func_495();
-	func_491();
-	func_490();
-	func_487();
-	func_483();
-	func_481();
-	func_479();
-	func_476();
-	func_470();
-	func_465();
-	func_464();
-	func_454();
-	func_453();
-	func_450();
-	func_447();
-	func_446();
-	func_442();
-	func_439();
-	func_438();
-	func_437();
-	func_436();
+	SaveFlowStruct();
+	SaveFlowCustomStruct();
+	SaveHeistStruct();
+	CallSaveStripClipData();
+	CallSavePilotSchoolData();
+	CallSaveRampageStruct();
+	CallSaveShopDataStruct();
+	CallSaveSocialStruct();
+	SavesStuff1();
+	SavesStuff2();
+	CallSaveRespawnLocationData();
+	CallSaveCharsheetArray();
+	CallSaveFriendsArray();
+	CallSaveFamilyData();
+	CallSavePlayerSceneData();
+	SaveSavedRandomCharactersArray();
+	SaveCommControlStruct();
+	SaveCodeControlStruct();
+	CallSaveBuildingStruct();
+	CallSaveVehicleGenStruct();
+	SaveFlowHelpStruct();
+	CallSaveCompletionPercentageStruct();
+	SavePhoneSettings();
+	CallSaveFinanceStruct();
+	SaveTowingStruct();
+	SaveAssassinStruct();
+	SaveBasejumpStruct();
+	SaveDartsStruct();
+	SaveTraffickingStruct();
+	SaveTaxiStruct();
+	SaveShrinkStruct();
+	SaveOffroadStruct();
+	SaveGolfStruct();
+	SaveShootingRangeArray();
+	CallSaveTenisData();
+	SaveTriathlonStruct();
+	CallSaveSPTTStruct();
+	SaveShopRobberiesStruct();
+	SaveSpecialPedStruct();
+	SaveEmailData();
+	SaveStreetRaceStruct();
+	SaveRPData();
+	SaveBuyVecStruct();
+	SaveBailBondStruct();
+	CallSavePropertiesStruct();
+	SaveRandomEventsStruct();
+	SaveSeaRaceStruct();
+	SaveCountryRaceStruct();
+	SaveDirectorStruct();
 	MISC::STOP_SAVE_DATA();
 	MISC::SET_BIT(&Global_4543160, 2);
 	num = 38587;
 	sizeOfSaveData = MISC::GET_SIZE_OF_SAVE_DATA(true);
 	num != sizeOfSaveData;
 	func_435();
-	STATS::STAT_SET_INT(joaat("SP_KNIFE_FLIGHTS_COUNT"), func_434(), true);
-	STATS::STAT_SET_INT(joaat("SP_UNDER_THE_BRIDGE_COUNT"), func_432(), true);
+	STATS::STAT_SET_INT(joaat("SP_KNIFE_FLIGHTS_COUNT"), GetSPKnifeFlightsCount(), true);
+	STATS::STAT_SET_INT(joaat("SP_UNDER_THE_BRIDGE_COUNT"), GetSPUnderTheBridgeCount(), true);
 
 	if (IS_BIT_SET(Global_113810.f_9088.f_2[27], 1))
 		Global_1 = true;
@@ -251,7 +251,7 @@ void main() // Position - 0x0
 		}
 		else
 		{
-			func_82("startup_positioning", SHOP);
+			StartScript("startup_positioning", SHOP);
 		}
 	}
 
@@ -287,7 +287,7 @@ void main() // Position - 0x0
 
 	if (!(MISC::IS_COMMANDLINE_END_USER_BENCHMARK() || MISC::LANDING_SCREEN_STARTED_END_USER_BENCHMARK()))
 	{
-		func_82("main_persistent", DEFAULT);
+		StartScript("main_persistent", DEFAULT);
 		BRAIN::ENABLE_SCRIPT_BRAIN_SET(1);
 	}
 
@@ -8214,7 +8214,7 @@ BOOL func_81() // Position - 0xF340
 	return 0;
 }
 
-void func_82(char* sParam0, eStackSize essParam1) // Position - 0xF375
+void StartScript(char* sParam0, eStackSize essParam1) // Position - 0xF375
 {
 	SCRIPT::REQUEST_SCRIPT(sParam0);
 
@@ -92309,7 +92309,7 @@ int func_431(int iParam0) // Position - 0x756B4
 	return -1;
 }
 
-int func_432() // Position - 0x759EA
+int GetSPUnderTheBridgeCount() // Position - 0x759EA
 {
 	int num;
 	int i;
@@ -92357,7 +92357,7 @@ BOOL func_433(int iParam0) // Position - 0x75A68
 	return false;
 }
 
-int func_434() // Position - 0x75AD9
+int GetSPKnifeFlightsCount() // Position - 0x75AD9
 {
 	int num;
 	int i;
@@ -92397,7 +92397,7 @@ void func_435() // Position - 0x75B54
 	return;
 }
 
-void func_436() // Position - 0x75B8F
+void SaveDirectorStruct() // Position - 0x75B8F
 {
 	int i;
 	var name;
@@ -92557,7 +92557,7 @@ void func_436() // Position - 0x75B8F
 	return;
 }
 
-void func_437() // Position - 0x76146
+void SaveCountryRaceStruct() // Position - 0x76146
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_25076), 11, "COUNTRY_RACE_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_25076), "COUNTRY_RACE_iCurrentRace");
@@ -92575,7 +92575,7 @@ void func_437() // Position - 0x76146
 	return;
 }
 
-void func_438() // Position - 0x76228
+void SaveSeaRaceStruct() // Position - 0x76228
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_24979), 3, "SEA_RACE_SAVED_STRUCT");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_24979), "bSeaRaceFirstBlip");
@@ -92585,7 +92585,7 @@ void func_438() // Position - 0x76228
 	return;
 }
 
-void func_439() // Position - 0x76279
+void SaveRandomEventsStruct() // Position - 0x76279
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_24998), 78, "RANDOM_EVENTS_SAVED");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_24998), "RE_FLAGS");
@@ -92640,16 +92640,16 @@ void func_441(Any* panParam0, char* sParam1) // Position - 0x76390
 	return;
 }
 
-void func_442() // Position - 0x763D7
+void CallSavePropertiesStruct() // Position - 0x763D7
 {
-	func_443(&(Global_113810.f_24907), "PROPERTIES_SAVED_DATA");
+	SavePropertiesStruct(&(Global_113810.f_24907), "PROPERTIES_SAVED_DATA");
 	return;
 }
 
-void func_443(Any* panParam0, char* sParam1) // Position - 0x763EF
+void SavePropertiesStruct(Any* panParam0, char* sParam1) // Position - 0x763EF
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 72, sParam1);
-	func_444(panParam0, "OwnershipData");
+	SavePropertyOwnershipDataArray(panParam0, "OwnershipData");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_65), "bit");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_66), "subvarbit");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_67), "propertyNextTime");
@@ -92661,7 +92661,7 @@ void func_443(Any* panParam0, char* sParam1) // Position - 0x763EF
 	return;
 }
 
-void func_444(Any* panParam0, char* sParam1) // Position - 0x7646B
+void SavePropertyOwnershipDataArray(Any* panParam0, char* sParam1) // Position - 0x7646B
 {
 	int i;
 	var unk;
@@ -92746,14 +92746,14 @@ void func_444(Any* panParam0, char* sParam1) // Position - 0x7646B
 				break;
 		}
 	
-		func_445(&panParam0->[i], &unk);
+		SavePropertyStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_445(Any* panParam0, const char* sParam1) // Position - 0x765E0
+void SavePropertyStruct(Any* panParam0, const char* sParam1) // Position - 0x765E0
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 4, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(panParam0, "propertyOwner");
@@ -92764,7 +92764,7 @@ void func_445(Any* panParam0, const char* sParam1) // Position - 0x765E0
 	return;
 }
 
-void func_446() // Position - 0x76627
+void SaveBailBondStruct() // Position - 0x76627
 {
 	int i;
 	var name;
@@ -92790,18 +92790,18 @@ void func_446() // Position - 0x76627
 	return;
 }
 
-void func_447() // Position - 0x766E5
+void SaveBuyVecStruct() // Position - 0x766E5
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_25185), 1252, "BUY_VEC_SAVED");
-	func_449(&(Global_113810.f_25185), "OWVEC_IND");
-	func_448(&(Global_113810.f_25185.f_313), "OWVEC_COL_M");
-	func_448(&(Global_113810.f_25185.f_626), "OWVEC_COL_F");
-	func_448(&(Global_113810.f_25185.f_939), "OWVEC_COL_T");
+	SaveOwvecIndArray(&(Global_113810.f_25185), "OWVEC_IND");
+	SaveOwnvecColArray(&(Global_113810.f_25185.f_313), "OWVEC_COL_M");
+	SaveOwnvecColArray(&(Global_113810.f_25185.f_626), "OWVEC_COL_F");
+	SaveOwnvecColArray(&(Global_113810.f_25185.f_939), "OWVEC_COL_T");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_448(Any* panParam0, char* sParam1) // Position - 0x7674D
+void SaveOwnvecColArray(Any* panParam0, char* sParam1) // Position - 0x7674D
 {
 	int i;
 	var name;
@@ -92820,7 +92820,7 @@ void func_448(Any* panParam0, char* sParam1) // Position - 0x7674D
 	return;
 }
 
-void func_449(Any* panParam0, char* sParam1) // Position - 0x76796
+void SaveOwvecIndArray(Any* panParam0, char* sParam1) // Position - 0x76796
 {
 	int i;
 	var name;
@@ -92839,7 +92839,7 @@ void func_449(Any* panParam0, char* sParam1) // Position - 0x76796
 	return;
 }
 
-void func_450() // Position - 0x767DF
+void SaveRPData() // Position - 0x767DF
 {
 	var name;
 	var unk;
@@ -92985,7 +92985,7 @@ void func_452(Any* panParam0, var uParam1, var uParam2, var uParam3, var uParam4
 	return;
 }
 
-void func_453() // Position - 0x76DE3
+void SaveStreetRaceStruct() // Position - 0x76DE3
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_24982), 7, "STREET_RACE_SAVED_STRUCT");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_24982), "eStreetRaceToUnlock");
@@ -92999,7 +92999,7 @@ void func_453() // Position - 0x76DE3
 	return;
 }
 
-void func_454() // Position - 0x76E7C
+void SaveEmailData() // Position - 0x76E7C
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_21040), 3867, "EMAIL_DATA");
 	func_455(&(Global_113810.f_21040));
@@ -93373,7 +93373,7 @@ void func_463(Any* panParam0, int iParam1, char* sParam2) // Position - 0x776FC
 	return;
 }
 
-void func_464() // Position - 0x77718
+void SaveSpecialPedStruct() // Position - 0x77718
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_20120), 1, "SPECIALPED_SAVED_STRUCT");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_20120), "SPEC_PedsKilled");
@@ -93381,20 +93381,20 @@ void func_464() // Position - 0x77718
 	return;
 }
 
-void func_465() // Position - 0x77745
+void SaveShopRobberiesStruct() // Position - 0x77745
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_20038), 82, "SHOPROBBERIES_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_20038.f_41), "ShopRob_NumOfRobsSinceCopAmbush");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_20038.f_20), "ShopRob_GenericShopData");
-	func_469(&(Global_113810.f_20038), "ShopRob_NumTimesRobbed_Array");
-	func_468(&(Global_113810.f_20038.f_21), "ShopRob_TimeLastRobbed_Array");
-	func_467(&(Global_113810.f_20038.f_42), "ShopRob_TimeLastPlayerRobbed_Array");
-	func_466(&(Global_113810.f_20038.f_62), "ShopRob_LastPlayerToRobShop_Array");
+	SaveShopRobberiesNumTimesRobbedArray(&(Global_113810.f_20038), "ShopRob_NumTimesRobbed_Array");
+	SaveShopRobberiesLastTimeRobbedArray(&(Global_113810.f_20038.f_21), "ShopRob_TimeLastRobbed_Array");
+	SaveShopRobberiesLastTimePlayerRobbedArray(&(Global_113810.f_20038.f_42), "ShopRob_TimeLastPlayerRobbed_Array");
+	SaveShopRobberiesLastPlayerToRobShopArray(&(Global_113810.f_20038.f_62), "ShopRob_LastPlayerToRobShop_Array");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_466(Any* panParam0, char* sParam1) // Position - 0x777CD
+void SaveShopRobberiesLastPlayerToRobShopArray(Any* panParam0, char* sParam1) // Position - 0x777CD
 {
 	int i;
 	var name;
@@ -93412,7 +93412,7 @@ void func_466(Any* panParam0, char* sParam1) // Position - 0x777CD
 	return;
 }
 
-void func_467(Any* panParam0, char* sParam1) // Position - 0x77811
+void SaveShopRobberiesLastTimePlayerRobbedArray(Any* panParam0, char* sParam1) // Position - 0x77811
 {
 	int i;
 	var name;
@@ -93430,7 +93430,7 @@ void func_467(Any* panParam0, char* sParam1) // Position - 0x77811
 	return;
 }
 
-void func_468(Any* panParam0, char* sParam1) // Position - 0x77855
+void SaveShopRobberiesLastTimeRobbedArray(Any* panParam0, char* sParam1) // Position - 0x77855
 {
 	int i;
 	var name;
@@ -93448,7 +93448,7 @@ void func_468(Any* panParam0, char* sParam1) // Position - 0x77855
 	return;
 }
 
-void func_469(Any* panParam0, char* sParam1) // Position - 0x77899
+void SaveShopRobberiesNumTimesRobbedArray(Any* panParam0, char* sParam1) // Position - 0x77899
 {
 	int i;
 	var name;
@@ -93466,24 +93466,24 @@ void func_469(Any* panParam0, char* sParam1) // Position - 0x77899
 	return;
 }
 
-void func_470() // Position - 0x778DD
+void CallSaveSPTTStruct() // Position - 0x778DD
 {
-	func_471(&(Global_113810.f_19046), "SPTT_DATA_SAVED_STRUCT");
+	SaveSPTTStruct(&(Global_113810.f_19046), "SPTT_DATA_SAVED_STRUCT");
 	return;
 }
 
-void func_471(Any* panParam0, char* sParam1) // Position - 0x778F5
+void SaveSPTTStruct(Any* panParam0, char* sParam1) // Position - 0x778F5
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 54, sParam1);
-	func_475(&(panParam0->f_6), "SPTT_TIMES");
-	func_474(panParam0, "SPTT_RANKS");
-	func_472(&(panParam0->f_12), "SPTT_COURSE_DATA");
+	SaveSPTTTimesArray(&(panParam0->f_6), "SPTT_TIMES");
+	SaveSPTTRanksArray(panParam0, "SPTT_RANKS");
+	SaveSPTTCourseDataArray(&(panParam0->f_12), "SPTT_COURSE_DATA");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_53), "SPTT_iGeneralFlags");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_472(Any* panParam0, char* sParam1) // Position - 0x7793D
+void SaveSPTTCourseDataArray(Any* panParam0, char* sParam1) // Position - 0x7793D
 {
 	var unk;
 	int unk2;
@@ -93526,7 +93526,7 @@ void func_473(Any* panParam0, const char* sParam1) // Position - 0x77988
 	return;
 }
 
-void func_474(Any* panParam0, char* sParam1) // Position - 0x77A19
+void SaveSPTTRanksArray(Any* panParam0, char* sParam1) // Position - 0x77A19
 {
 	var name;
 	int unk;
@@ -93545,7 +93545,7 @@ void func_474(Any* panParam0, char* sParam1) // Position - 0x77A19
 	return;
 }
 
-void func_475(Any* panParam0, char* sParam1) // Position - 0x77A63
+void SaveSPTTTimesArray(Any* panParam0, char* sParam1) // Position - 0x77A63
 {
 	var name;
 	int unk;
@@ -93564,18 +93564,18 @@ void func_475(Any* panParam0, char* sParam1) // Position - 0x77A63
 	return;
 }
 
-void func_476() // Position - 0x77AAD
+void SaveTriathlonStruct() // Position - 0x77AAD
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_20014), 10, "TRIATHLON_SAVED_STRUCT");
-	func_478(&(Global_113810.f_20014.f_4), "TRI_TIMES");
-	func_477(&(Global_113810.f_20014), "TRI_RANKS");
+	SaveTriathlonTimesArray(&(Global_113810.f_20014.f_4), "TRI_TIMES");
+	SaveTriathlonRanksArray(&(Global_113810.f_20014), "TRI_RANKS");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_20014.f_8), "TRIATHLON_eCurrentUnlock");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_20014.f_9), "TRIATHLON_iBitFlags");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_477(Any* panParam0, char* sParam1) // Position - 0x77B11
+void SaveTriathlonRanksArray(Any* panParam0, char* sParam1) // Position - 0x77B11
 {
 	var name;
 	int unk;
@@ -93594,7 +93594,7 @@ void func_477(Any* panParam0, char* sParam1) // Position - 0x77B11
 	return;
 }
 
-void func_478(Any* panParam0, char* sParam1) // Position - 0x77B5B
+void SaveTriathlonTimesArray(Any* panParam0, char* sParam1) // Position - 0x77B5B
 {
 	var name;
 	int unk;
@@ -93613,13 +93613,13 @@ void func_478(Any* panParam0, char* sParam1) // Position - 0x77B5B
 	return;
 }
 
-void func_479() // Position - 0x77BA5
+void CallSaveTenisData() // Position - 0x77BA5
 {
-	func_480(&(Global_113810.f_20024), "TENNIS_SAVE_DATA");
+	SaveTennisData(&(Global_113810.f_20024), "TENNIS_SAVE_DATA");
 	return;
 }
 
-void func_480(Any* panParam0, char* sParam1) // Position - 0x77BBD
+void SaveTennisData(Any* panParam0, char* sParam1) // Position - 0x77BBD
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 14, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "TENNIS_iTotalAces");
@@ -93640,7 +93640,7 @@ void func_480(Any* panParam0, char* sParam1) // Position - 0x77BBD
 	return;
 }
 
-void func_481() // Position - 0x77C87
+void SaveShootingRangeArray() // Position - 0x77C87
 {
 	int i;
 	var structName;
@@ -93661,7 +93661,7 @@ void func_481() // Position - 0x77C87
 		MISC::REGISTER_INT_TO_SAVE(&Global_113810.f_19150[i], "SRANGE_iCategoryChallengeLockStatus");
 		MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19150[i].f_1), "SRANGE_iWeaponsLockStatus");
 		MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19150[i].f_2), "SRANGE_iWeaponUsedStatus");
-		func_482(&(Global_113810.f_19150[i].f_3), "SRANGE_ROUND_ARRAY");
+		SaveShootingRangeRoundArray(&(Global_113810.f_19150[i].f_3), "SRANGE_ROUND_ARRAY");
 		MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_19150[i].f_268), "SRANGE_bHasSeenTutorial");
 		MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_19150[i].f_269), "SRANGE_bClearedAll");
 		MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19150[i].f_270), "SRANGE_iBoolBits");
@@ -93672,7 +93672,7 @@ void func_481() // Position - 0x77C87
 	return;
 }
 
-void func_482(Any* panParam0, char* sParam1) // Position - 0x77DA9
+void SaveShootingRangeRoundArray(Any* panParam0, char* sParam1) // Position - 0x77DA9
 {
 	int i;
 	var unk;
@@ -93727,11 +93727,11 @@ void func_482(Any* panParam0, char* sParam1) // Position - 0x77DA9
 	return;
 }
 
-void func_483() // Position - 0x77F6F
+void SaveGolfStruct() // Position - 0x77F6F
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_18982), 37, "GOLF_SAVED_STRUCT");
-	func_485(&(Global_113810.f_18982), "GOLF_COURSE_");
-	func_484(&(Global_113810.f_18982.f_29), "GOLF_iNumRoundsWithCharacter_");
+	SaveGolfCourseArray(&(Global_113810.f_18982), "GOLF_COURSE_");
+	SaveGolfNumRoundsWithCharacterArray(&(Global_113810.f_18982.f_29), "GOLF_iNumRoundsWithCharacter_");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_18982.f_22), "GOLF_iNumHolesPlayed");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_18982.f_20), "GOLF_iNumPuttsTotal");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_18982.f_21), "GOLF_iNumFairwayDrivesTotal");
@@ -93749,7 +93749,7 @@ void func_483() // Position - 0x77F6F
 	return;
 }
 
-void func_484(Any* panParam0, char* sParam1) // Position - 0x7809B
+void SaveGolfNumRoundsWithCharacterArray(Any* panParam0, char* sParam1) // Position - 0x7809B
 {
 	int i;
 	var name;
@@ -93767,7 +93767,7 @@ void func_484(Any* panParam0, char* sParam1) // Position - 0x7809B
 	return;
 }
 
-void func_485(Any* panParam0, char* sParam1) // Position - 0x780DC
+void SaveGolfCourseArray(Any* panParam0, char* sParam1) // Position - 0x780DC
 {
 	int i;
 	var unk;
@@ -93779,14 +93779,14 @@ void func_485(Any* panParam0, char* sParam1) // Position - 0x780DC
 		TEXT_LABEL_ASSIGN_STRING(&unk, sParam1, 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
 		TEXT_LABEL_APPEND_STRING(&unk, "_", 64);
-		func_486(&panParam0->[i], &unk);
+		SaveGolfCourseArrayData(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_486(Any* panParam0, const char* sParam1) // Position - 0x78127
+void SaveGolfCourseArrayData(Any* panParam0, const char* sParam1) // Position - 0x78127
 {
 	int i;
 	var unk;
@@ -93811,13 +93811,13 @@ void func_486(Any* panParam0, const char* sParam1) // Position - 0x78127
 	return;
 }
 
-void func_487() // Position - 0x781A6
+void SaveOffroadStruct() // Position - 0x781A6
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_19019), 27, "OFFROAD_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19019), "OFFROAD_iBitflags");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_19019.f_1), "OFFROAD_eCurrentRace");
-	func_489(&(Global_113810.f_19019.f_10), "OFFROAD_TIMES");
-	func_488(&(Global_113810.f_19019.f_2), "OFFROAD_RANKS");
+	SaveOffroadTimesArray(&(Global_113810.f_19019.f_10), "OFFROAD_TIMES");
+	SaveOffroadRanksArray(&(Global_113810.f_19019.f_2), "OFFROAD_RANKS");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19019.f_18), "OFFROAD_iRacePlaceEarned");
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(Global_113810.f_19019.f_19), 8, "OFFROAD_iBestPlaces");
 	MISC::REGISTER_INT_TO_SAVE(&Global_113810.f_19019.f_19[0], "OFFROAD_Race5Best");
@@ -93832,7 +93832,7 @@ void func_487() // Position - 0x781A6
 	return;
 }
 
-void func_488(Any* panParam0, char* sParam1) // Position - 0x782C7
+void SaveOffroadRanksArray(Any* panParam0, char* sParam1) // Position - 0x782C7
 {
 	var name;
 	int unk;
@@ -93851,7 +93851,7 @@ void func_488(Any* panParam0, char* sParam1) // Position - 0x782C7
 	return;
 }
 
-void func_489(Any* panParam0, char* sParam1) // Position - 0x78312
+void SaveOffroadTimesArray(Any* panParam0, char* sParam1) // Position - 0x78312
 {
 	var name;
 	int unk;
@@ -93870,7 +93870,7 @@ void func_489(Any* panParam0, char* sParam1) // Position - 0x78312
 	return;
 }
 
-void func_490() // Position - 0x7835D
+void SaveShrinkStruct() // Position - 0x7835D
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_19964), 2, "SHRINK_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19964), "SHRINK_iByte0");
@@ -93879,18 +93879,18 @@ void func_490() // Position - 0x7835D
 	return;
 }
 
-void func_491() // Position - 0x7839C
+void SaveTaxiStruct() // Position - 0x7839C
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_19100), 50, "TAXI_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19100), "TAXI_iGenData");
-	func_494(&(Global_113810.f_19100.f_1), "TAXI_MISSION_ARRAY");
-	func_493(&(Global_113810.f_19100.f_22), "TAXI_STAT_ARRAY");
-	func_492(&(Global_113810.f_19100.f_39), "TAXI_RUNS_ARRAY");
+	SaveTaxiMissionsAray(&(Global_113810.f_19100.f_1), "TAXI_MISSION_ARRAY");
+	SaveTaxiStatsArray(&(Global_113810.f_19100.f_22), "TAXI_STAT_ARRAY");
+	SaveTaxiRunsArray(&(Global_113810.f_19100.f_39), "TAXI_RUNS_ARRAY");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_492(Any* panParam0, char* sParam1) // Position - 0x78400
+void SaveTaxiRunsArray(Any* panParam0, char* sParam1) // Position - 0x78400
 {
 	int i;
 	var name;
@@ -93909,7 +93909,7 @@ void func_492(Any* panParam0, char* sParam1) // Position - 0x78400
 	return;
 }
 
-void func_493(Any* panParam0, char* sParam1) // Position - 0x78447
+void SaveTaxiStatsArray(Any* panParam0, char* sParam1) // Position - 0x78447
 {
 	int i;
 	var name;
@@ -93928,7 +93928,7 @@ void func_493(Any* panParam0, char* sParam1) // Position - 0x78447
 	return;
 }
 
-void func_494(Any* panParam0, char* sParam1) // Position - 0x7848E
+void SaveTaxiMissionsAray(Any* panParam0, char* sParam1) // Position - 0x7848E
 {
 	int i;
 	var name;
@@ -93950,7 +93950,7 @@ void func_494(Any* panParam0, char* sParam1) // Position - 0x7848E
 	return;
 }
 
-void func_495() // Position - 0x784F2
+void SaveTraffickingStruct() // Position - 0x784F2
 {
 	int i;
 	var name;
@@ -93961,7 +93961,7 @@ void func_495() // Position - 0x784F2
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19986.f_2), "TRAFFICKING_SAVED_iAirRank");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19986.f_3), "TRAFFICKING_iLastPairing");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19986.f_4), "TRAFFICKING_iNumRepeatComplete");
-	func_496(&(Global_113810.f_19986.f_5), "TRAFFICKING_TIME_COLLECTED_ARRAY");
+	SaveTraffickingTimeCollectedArray(&(Global_113810.f_19986.f_5), "TRAFFICKING_TIME_COLLECTED_ARRAY");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_19986.f_11), "TRAFFICKING_todNextAir");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_19986.f_12), "TRAFFICKING_todNextGnd");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_19986.f_13), "TRAFFICKING_GndBlipOn");
@@ -93988,7 +93988,7 @@ void func_495() // Position - 0x784F2
 	return;
 }
 
-void func_496(Any* panParam0, char* sParam1) // Position - 0x786A5
+void SaveTraffickingTimeCollectedArray(Any* panParam0, char* sParam1) // Position - 0x786A5
 {
 	int i;
 	var name;
@@ -94007,7 +94007,7 @@ void func_496(Any* panParam0, char* sParam1) // Position - 0x786A5
 	return;
 }
 
-void func_497() // Position - 0x786EA
+void SaveDartsStruct() // Position - 0x786EA
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_18973), 9, "DARTS_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_18973), "DARTS_iNumBullseyes");
@@ -94023,7 +94023,7 @@ void func_497() // Position - 0x786EA
 	return;
 }
 
-void func_498() // Position - 0x787A8
+void SaveBasejumpStruct() // Position - 0x787A8
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_18970), 3, "BASEJUMP_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_18970), "BJ_iLaunchRank");
@@ -94033,7 +94033,7 @@ void func_498() // Position - 0x787A8
 	return;
 }
 
-void func_499() // Position - 0x787F9
+void SaveAssassinStruct() // Position - 0x787F9
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_19966), 10, "ASSASSIN_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19966), "ASSASSIN_iCurRank");
@@ -94050,7 +94050,7 @@ void func_499() // Position - 0x787F9
 	return;
 }
 
-void func_500() // Position - 0x788C9
+void SaveTowingStruct() // Position - 0x788C9
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_19976), 10, "TOWING_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_19976), "TOWING_iRank");
@@ -94067,13 +94067,13 @@ void func_500() // Position - 0x788C9
 	return;
 }
 
-void func_501() // Position - 0x78999
+void CallSaveFinanceStruct() // Position - 0x78999
 {
-	func_502(&(Global_113810.f_20567), "FINANCE_SAVED_ARRAY");
+	SaveFinanceStruct(&(Global_113810.f_20567), "FINANCE_SAVED_ARRAY");
 	return;
 }
 
-void func_502(Any* panParam0, char* sParam1) // Position - 0x789B1
+void SaveFinanceStruct(Any* panParam0, char* sParam1) // Position - 0x789B1
 {
 	int i;
 	var structName;
@@ -94303,23 +94303,23 @@ void func_503(Any* panParam0, int iParam1, char* sParam2) // Position - 0x78FEE
 	return;
 }
 
-void func_504() // Position - 0x7900A
+void SavePhoneSettings() // Position - 0x7900A
 {
-	func_511(&(Global_113810.f_14054), "CELLPHONE_SETTINGS_SAVED_ARRAY");
-	func_508(&(Global_113810.f_14144), "TEXT_MESSAGES_SAVED_ARRAY");
-	func_505(&(Global_113810.f_17785), "GALLERY_IMAGES_SAVED_ARRAY");
+	SaveCellphoneSettings(&(Global_113810.f_14054), "CELLPHONE_SETTINGS_SAVED_ARRAY");
+	SaveTextMessagesStruct(&(Global_113810.f_14144), "TEXT_MESSAGES_SAVED_ARRAY");
+	SaveGalleryImagesStruct(&(Global_113810.f_17785), "GALLERY_IMAGES_SAVED_ARRAY");
 	return;
 }
 
-void func_505(Any* panParam0, char* sParam1) // Position - 0x79042
+void SaveGalleryImagesStruct(Any* panParam0, char* sParam1) // Position - 0x79042
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 321, sParam1);
-	func_506(panParam0, "struct_g_GalleryImage");
+	SaveGalleryImageArray(panParam0, "struct_g_GalleryImage");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_506(Any* panParam0, char* sParam1) // Position - 0x79064
+void SaveGalleryImageArray(Any* panParam0, char* sParam1) // Position - 0x79064
 {
 	int num;
 	var unk;
@@ -94332,7 +94332,7 @@ void func_506(Any* panParam0, char* sParam1) // Position - 0x79064
 		TEXT_LABEL_ASSIGN_STRING(&unk, "GalleryImgIndex", 24);
 		TEXT_LABEL_APPEND_STRING(&unk, "_", 24);
 		TEXT_LABEL_APPEND_INT(&unk, num, 24);
-		func_507(&panParam0->[num], &unk);
+		SaveGalleryImage(&panParam0->[num], &unk);
 		num = num + 1;
 	}
 
@@ -94340,7 +94340,7 @@ void func_506(Any* panParam0, char* sParam1) // Position - 0x79064
 	return;
 }
 
-void func_507(Any* panParam0, const char* sParam1) // Position - 0x790B2
+void SaveGalleryImage(Any* panParam0, const char* sParam1) // Position - 0x790B2
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 32, sParam1);
 	MISC::REGISTER_TEXT_LABEL_63_TO_SAVE(panParam0, "Thumb_label");
@@ -94349,15 +94349,15 @@ void func_507(Any* panParam0, const char* sParam1) // Position - 0x790B2
 	return;
 }
 
-void func_508(Any* panParam0, char* sParam1) // Position - 0x790E0
+void SaveTextMessagesStruct(Any* panParam0, char* sParam1) // Position - 0x790E0
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 3641, sParam1);
-	func_509(panParam0, "struct_g_TextMessage");
+	SaveTextMessagesArray(panParam0, "struct_g_TextMessage");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_509(Any* panParam0, char* sParam1) // Position - 0x79102
+void SaveTextMessagesArray(Any* panParam0, char* sParam1) // Position - 0x79102
 {
 	int num;
 	var unk;
@@ -94415,7 +94415,7 @@ void func_510(Any* panParam0, const char* sParam1) // Position - 0x79150
 	return;
 }
 
-void func_511(Any* panParam0, char* sParam1) // Position - 0x792F8
+void SaveCellphoneSettings(Any* panParam0, char* sParam1) // Position - 0x792F8
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 90, sParam1);
 	func_512(panParam0, "struct_g_CellphoneSettings");
@@ -94486,16 +94486,16 @@ void func_513(Any* panParam0, const char* sParam1) // Position - 0x7943E
 	return;
 }
 
-void func_514() // Position - 0x794D4
+void CallSaveCompletionPercentageStruct() // Position - 0x794D4
 {
-	func_515(&(Global_113810.f_10197), "COMP_PERCENT_SAVED_ARRAY");
+	SaveCompletionPercentageStruct(&(Global_113810.f_10197), "COMP_PERCENT_SAVED_ARRAY");
 	return;
 }
 
-void func_515(Any* panParam0, char* sParam1) // Position - 0x794EC
+void SaveCompletionPercentageStruct(Any* panParam0, char* sParam1) // Position - 0x794EC
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 3857, sParam1);
-	func_516(panParam0, "struct_g_CompletionPercentage");
+	SaveCompletionPercentageArray(panParam0, "struct_g_CompletionPercentage");
 	MISC::REGISTER_FLOAT_TO_SAVE(&(panParam0->f_3853), "Game_Complete_Percentage");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_3854), "Has_100_Percent_Been_Reached");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_3855), "SP_Event_F_EntryTrackerBitset");
@@ -94504,7 +94504,7 @@ void func_515(Any* panParam0, char* sParam1) // Position - 0x794EC
 	return;
 }
 
-void func_516(Any* panParam0, char* sParam1) // Position - 0x79546
+void SaveCompletionPercentageArray(Any* panParam0, char* sParam1) // Position - 0x79546
 {
 	int num;
 	var unk;
@@ -94540,18 +94540,18 @@ void func_517(Any* panParam0, const char* sParam1) // Position - 0x79599
 	return;
 }
 
-void func_518() // Position - 0x79622
+void SaveFlowHelpStruct() // Position - 0x79622
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_20413), 154, "FLOW_HELP_STRUCT");
-	func_521(&(Global_113810.f_20413), "FLOW_HELP_STRUCT_ARRAY");
+	SaveFlowHelpStructArray(&(Global_113810.f_20413), "FLOW_HELP_STRUCT_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_20413.f_145), "iFlowHelpCount");
-	func_520(&(Global_113810.f_20413.f_146), "FLOW_HELP_PRIORITY_ARRAY");
-	func_519(&(Global_113810.f_20413.f_150), "HELP_DISPLAYED_BITSET_ARRAY");
+	SaveFlowHelpPriorityArray(&(Global_113810.f_20413.f_146), "FLOW_HELP_PRIORITY_ARRAY");
+	SaveHelpDisplayedBitsetArray(&(Global_113810.f_20413.f_150), "HELP_DISPLAYED_BITSET_ARRAY");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_519(Any* panParam0, char* sParam1) // Position - 0x79686
+void SaveHelpDisplayedBitsetArray(Any* panParam0, char* sParam1) // Position - 0x79686
 {
 	var name;
 	int unk;
@@ -94569,7 +94569,7 @@ void func_519(Any* panParam0, char* sParam1) // Position - 0x79686
 	return;
 }
 
-void func_520(Any* panParam0, char* sParam1) // Position - 0x796CA
+void SaveFlowHelpPriorityArray(Any* panParam0, char* sParam1) // Position - 0x796CA
 {
 	var name;
 	int unk;
@@ -94587,7 +94587,7 @@ void func_520(Any* panParam0, char* sParam1) // Position - 0x796CA
 	return;
 }
 
-void func_521(Any* panParam0, char* sParam1) // Position - 0x7970E
+void SaveFlowHelpStructArray(Any* panParam0, char* sParam1) // Position - 0x7970E
 {
 	var unk;
 	int unk2;
@@ -94622,13 +94622,13 @@ void func_522(Any* panParam0, const char* sParam1) // Position - 0x79753
 	return;
 }
 
-void func_523() // Position - 0x797E9
+void CallSaveVehicleGenStruct() // Position - 0x797E9
 {
-	func_524(&(Global_113810.f_32752), "VEHICLE_GEN_SAVED_DATA_STRUCT");
+	SaveVehicleGenStruct(&(Global_113810.f_32752), "VEHICLE_GEN_SAVED_DATA_STRUCT");
 	return;
 }
 
-void func_524(Any* panParam0, char* sParam1) // Position - 0x79801
+void SaveVehicleGenStruct(Any* panParam0, char* sParam1) // Position - 0x79801
 {
 	int i;
 	var arrayName;
@@ -94636,7 +94636,7 @@ void func_524(Any* panParam0, char* sParam1) // Position - 0x79801
 	int unk2;
 
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 5835, sParam1);
-	func_527(panParam0, "VEHICLE_GEN_PROPERTIES");
+	SaveVehicleGenProperties(panParam0, "VEHICLE_GEN_PROPERTIES");
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(panParam0->f_69), 1795, "DYANMIC_DATA");
 
 	for (i = 0; i < 23; i = i + 1)
@@ -94859,7 +94859,7 @@ void func_526(Any* panParam0, const char* sParam1) // Position - 0x79D26
 	return;
 }
 
-void func_527(Any* panParam0, char* sParam1) // Position - 0x79EDC
+void SaveVehicleGenProperties(Any* panParam0, char* sParam1) // Position - 0x79EDC
 {
 	int i;
 	var name;
@@ -94878,23 +94878,23 @@ void func_527(Any* panParam0, char* sParam1) // Position - 0x79EDC
 	return;
 }
 
-void func_528() // Position - 0x79F23
+void CallSaveBuildingStruct() // Position - 0x79F23
 {
-	func_529(&(Global_113810.f_7264), "BUILDING_SAVED_DATA_STRUCT");
+	SaveBuildingStruct(&(Global_113810.f_7264), "BUILDING_SAVED_DATA_STRUCT");
 	return;
 }
 
-void func_529(Any* panParam0, char* sParam1) // Position - 0x79F3B
+void SaveBuildingStruct(Any* panParam0, char* sParam1) // Position - 0x79F3B
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 427, sParam1);
-	func_531(panParam0, "DOOR_STATES");
-	func_530(&(panParam0->f_227), "BUILDING_STATES");
+	SaveBuildingDoorStates(panParam0, "DOOR_STATES");
+	SaveBuildingStates(&(panParam0->f_227), "BUILDING_STATES");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_426), "BUILDING_DEFAULT_DATA_SET");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_530(Any* panParam0, char* sParam1) // Position - 0x79F78
+void SaveBuildingStates(Any* panParam0, char* sParam1) // Position - 0x79F78
 {
 	int i;
 	var name;
@@ -94913,7 +94913,7 @@ void func_530(Any* panParam0, char* sParam1) // Position - 0x79F78
 	return;
 }
 
-void func_531(Any* panParam0, char* sParam1) // Position - 0x79FBF
+void SaveBuildingDoorStates(Any* panParam0, char* sParam1) // Position - 0x79FBF
 {
 	int i;
 	var name;
@@ -94932,16 +94932,16 @@ void func_531(Any* panParam0, char* sParam1) // Position - 0x79FBF
 	return;
 }
 
-void func_532() // Position - 0x7A006
+void SaveCodeControlStruct() // Position - 0x7A006
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_8616), 472, "CODE_CONTROL_DATA_STRUCT");
-	func_534(&(Global_113810.f_8616), "CODE_CONTROL_RUNFLAG_ARRAY");
-	func_533(&(Global_113810.f_8616.f_236), "CODE_CONTROL_EXECUTE_TIMER_ARRAY");
+	SaveCodeControlRunflagArray(&(Global_113810.f_8616), "CODE_CONTROL_RUNFLAG_ARRAY");
+	SaveCodeControlExecuteTimerArray(&(Global_113810.f_8616.f_236), "CODE_CONTROL_EXECUTE_TIMER_ARRAY");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_533(Any* panParam0, char* sParam1) // Position - 0x7A047
+void SaveCodeControlExecuteTimerArray(Any* panParam0, char* sParam1) // Position - 0x7A047
 {
 	int i;
 	var name;
@@ -94959,7 +94959,7 @@ void func_533(Any* panParam0, char* sParam1) // Position - 0x7A047
 	return;
 }
 
-void func_534(Any* panParam0, char* sParam1) // Position - 0x7A08B
+void SaveCodeControlRunflagArray(Any* panParam0, char* sParam1) // Position - 0x7A08B
 {
 	int i;
 	var name;
@@ -94977,20 +94977,20 @@ void func_534(Any* panParam0, char* sParam1) // Position - 0x7A08B
 	return;
 }
 
-void func_535() // Position - 0x7A0CF
+void SaveCommControlStruct() // Position - 0x7A0CF
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_7691), 925, "COMM_CONTROL_DATA_STRUCT");
-	func_546(&(Global_113810.f_7691), "COMM_CONTROL_QUEUED_CALLS_ARRAY");
+	SaveCommControlQueuedCallsArray(&(Global_113810.f_7691), "COMM_CONTROL_QUEUED_CALLS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_136), "No_Queued_Calls");
-	func_545(&(Global_113810.f_7691.f_137), "COMM_CONTROL_MISSED_CALLS_ARRAY");
+	SaveCommControlMissedCallsArray(&(Global_113810.f_7691.f_137), "COMM_CONTROL_MISSED_CALLS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_198), "No_Missed_Calls");
-	func_543(&(Global_113810.f_7691.f_199), "COMM_CONTROL_CHAT_CALLS_ARRAY");
+	SaveCommControlChatCallsArray(&(Global_113810.f_7691.f_199), "COMM_CONTROL_CHAT_CALLS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_650), "No_Chat_Calls");
-	func_542(&(Global_113810.f_7691.f_651), "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
+	SaveCommControlQueuedTextsArray(&(Global_113810.f_7691.f_651), "COMM_CONTROL_QUEUED_TEXTS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_764), "No_Queued_Texts");
-	func_540(&(Global_113810.f_7691.f_867), "COMM_CONTROL_SENT_TEXTS_ARRAY");
+	SaveCommControlSentTextsArray(&(Global_113810.f_7691.f_867), "COMM_CONTROL_SENT_TEXTS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_910), "No_Sent_Texts");
-	func_537(&(Global_113810.f_7691.f_765), "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
+	SaveCommControlQueuedEmailsArray(&(Global_113810.f_7691.f_765), "COMM_CONTROL_QUEUED_EMAILS_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_866), "No_Queued_Emails");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_7691.f_911), "Last_Completed_Call");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_7691.f_912), "Last_Call_Answered");
@@ -95000,14 +95000,14 @@ void func_535() // Position - 0x7A0CF
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_7691.f_916), "Last_Text_Had_Response");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_7691.f_917), "Last_Text_Response");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_7691.f_918), "Last_Completed_Email");
-	func_536(&(Global_113810.f_7691.f_919), "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
+	SaveCommControlCharPriorityArray(&(Global_113810.f_7691.f_919), "COMM_CONTROL_CHAR_PRIORITY_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_923), "Exile_Warning_Bitset");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_7691.f_924), "Comms_Game_time");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_536(Any* panParam0, char* sParam1) // Position - 0x7A29C
+void SaveCommControlCharPriorityArray(Any* panParam0, char* sParam1) // Position - 0x7A29C
 {
 	int i;
 	var name;
@@ -95042,7 +95042,7 @@ void func_536(Any* panParam0, char* sParam1) // Position - 0x7A29C
 	return;
 }
 
-void func_537(Any* panParam0, char* sParam1) // Position - 0x7A319
+void SaveCommControlQueuedEmailsArray(Any* panParam0, char* sParam1) // Position - 0x7A319
 {
 	int i;
 	var unk;
@@ -95053,22 +95053,22 @@ void func_537(Any* panParam0, char* sParam1) // Position - 0x7A319
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "EMAIL_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_538(&panParam0->[i], &unk);
+		SaveEmailDataStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_538(Any* panParam0, const char* sParam1) // Position - 0x7A35D
+void SaveEmailDataStruct(Any* panParam0, const char* sParam1) // Position - 0x7A35D
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 10, sParam1);
-	func_539(panParam0, "COMMUNICATION_DATA_STRUCT");
+	SaveCommunicationStruct(panParam0, "COMMUNICATION_DATA_STRUCT");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_539(Any* panParam0, char* sParam1) // Position - 0x7A37E
+void SaveCommunicationStruct(Any* panParam0, char* sParam1) // Position - 0x7A37E
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 10, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(panParam0, "ID");
@@ -95085,7 +95085,7 @@ void func_539(Any* panParam0, char* sParam1) // Position - 0x7A37E
 	return;
 }
 
-void func_540(Any* panParam0, char* sParam1) // Position - 0x7A414
+void SaveCommControlSentTextsArray(Any* panParam0, char* sParam1) // Position - 0x7A414
 {
 	int i;
 	var unk;
@@ -95096,17 +95096,17 @@ void func_540(Any* panParam0, char* sParam1) // Position - 0x7A414
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "SENT_TEXT_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_541(&panParam0->[i], &unk);
+		SaveSentTextStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_541(Any* panParam0, const char* sParam1) // Position - 0x7A457
+void SaveSentTextStruct(Any* panParam0, const char* sParam1) // Position - 0x7A457
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 14, sParam1);
-	func_539(panParam0, "COMMUNICATION_DATA_STRUCT");
+	SaveCommunicationStruct(panParam0, "COMMUNICATION_DATA_STRUCT");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_10), "ePart1");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_11), "ePart2");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_12), "Fail_Count");
@@ -95115,7 +95115,7 @@ void func_541(Any* panParam0, const char* sParam1) // Position - 0x7A457
 	return;
 }
 
-void func_542(Any* panParam0, char* sParam1) // Position - 0x7A4AC
+void SaveCommControlQueuedTextsArray(Any* panParam0, char* sParam1) // Position - 0x7A4AC
 {
 	int i;
 	var unk;
@@ -95126,14 +95126,14 @@ void func_542(Any* panParam0, char* sParam1) // Position - 0x7A4AC
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "TEXT_MESSAGE_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_541(&panParam0->[i], &unk);
+		SaveSentTextStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_543(Any* panParam0, char* sParam1) // Position - 0x7A4F0
+void SaveCommControlChatCallsArray(Any* panParam0, char* sParam1) // Position - 0x7A4F0
 {
 	int i;
 	var unk;
@@ -95144,17 +95144,17 @@ void func_543(Any* panParam0, char* sParam1) // Position - 0x7A4F0
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "CHAT_CALL_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_544(&panParam0->[i], &unk);
+		SaveChatCallStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_544(Any* panParam0, const char* sParam1) // Position - 0x7A535
+void SaveChatCallStruct(Any* panParam0, const char* sParam1) // Position - 0x7A535
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 15, sParam1);
-	func_539(panParam0, "COMMUNICATION_DATA_STRUCT");
+	SaveCommunicationStruct(panParam0, "COMMUNICATION_DATA_STRUCT");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_10), "eCommExtra");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_11), "eCommExtra2");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_12), "eYesResponse");
@@ -95164,7 +95164,7 @@ void func_544(Any* panParam0, const char* sParam1) // Position - 0x7A535
 	return;
 }
 
-void func_545(Any* panParam0, char* sParam1) // Position - 0x7A597
+void SaveCommControlMissedCallsArray(Any* panParam0, char* sParam1) // Position - 0x7A597
 {
 	int i;
 	var unk;
@@ -95175,14 +95175,14 @@ void func_545(Any* panParam0, char* sParam1) // Position - 0x7A597
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "MISSED_CALL_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_544(&panParam0->[i], &unk);
+		SaveChatCallStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_546(Any* panParam0, char* sParam1) // Position - 0x7A5DA
+void SaveCommControlQueuedCallsArray(Any* panParam0, char* sParam1) // Position - 0x7A5DA
 {
 	int i;
 	var unk;
@@ -95193,14 +95193,14 @@ void func_546(Any* panParam0, char* sParam1) // Position - 0x7A5DA
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "CALL_DATA_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_544(&panParam0->[i], &unk);
+		SaveChatCallStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_547() // Position - 0x7A61E
+void SaveSavedRandomCharactersArray() // Position - 0x7A61E
 {
 	int i;
 	char* str;
@@ -95470,7 +95470,7 @@ void func_547() // Position - 0x7A61E
 				break;
 		}
 	
-		func_548(&Global_113810.f_18577[i], str);
+		SaveRandomCharacterArrayEntry(&Global_113810.f_18577[i], str);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
@@ -95498,7 +95498,7 @@ void func_547() // Position - 0x7A61E
 	return;
 }
 
-void func_548(Any* panParam0, char* sParam1) // Position - 0x7AB80
+void SaveRandomCharacterArrayEntry(Any* panParam0, char* sParam1) // Position - 0x7AB80
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 6, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "RC_FLAGS");
@@ -95511,25 +95511,25 @@ void func_548(Any* panParam0, char* sParam1) // Position - 0x7AB80
 	return;
 }
 
-void func_549() // Position - 0x7ABE1
+void CallSavePlayerSceneData() // Position - 0x7ABE1
 {
-	func_550(&(Global_113810.f_18536), "PLAYER_SCENE_SAVED_DATA");
+	SavePlayerSceneData(&(Global_113810.f_18536), "PLAYER_SCENE_SAVED_DATA");
 	return;
 }
 
-void func_550(Any* panParam0, char* sParam1) // Position - 0x7ABF9
+void SavePlayerSceneData(Any* panParam0, char* sParam1) // Position - 0x7ABF9
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 41, sParam1);
-	func_555(panParam0, "g_ePlayerLastScene");
-	func_553(&(panParam0->f_4), "g_eLastSceneQueue");
-	func_551(&(panParam0->f_24), "g_bPlayerTriggeredPrioritySwitch");
+	SaveLastPlayerScene(panParam0, "g_ePlayerLastScene");
+	SaveLastSceneQueue(&(panParam0->f_4), "g_eLastSceneQueue");
+	SavebPlayerTriggeredPrioritySwitchArray(&(panParam0->f_24), "g_bPlayerTriggeredPrioritySwitch");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_23), "g_iSeenOneOffSceneBit");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_40), "g_bSeenTrevorsPrettyDress");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_551(Any* panParam0, char* sParam1) // Position - 0x7AC4E
+void SavebPlayerTriggeredPrioritySwitchArray(Any* panParam0, char* sParam1) // Position - 0x7AC4E
 {
 	int i;
 	var unk;
@@ -95558,14 +95558,14 @@ void func_551(Any* panParam0, char* sParam1) // Position - 0x7AC4E
 				break;
 		}
 	
-		func_552(&panParam0->[i], &unk);
+		SavebPlayerTriggeredPrioritySwitchEntry(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_552(Any* panParam0, const char* sParam1) // Position - 0x7ACD1
+void SavebPlayerTriggeredPrioritySwitchEntry(Any* panParam0, const char* sParam1) // Position - 0x7ACD1
 {
 	int i;
 	var name;
@@ -95604,7 +95604,7 @@ void func_552(Any* panParam0, const char* sParam1) // Position - 0x7ACD1
 	return;
 }
 
-void func_553(Any* panParam0, char* sParam1) // Position - 0x7AD5E
+void SaveLastSceneQueue(Any* panParam0, char* sParam1) // Position - 0x7AD5E
 {
 	int i;
 	var unk;
@@ -95658,7 +95658,7 @@ void func_554(Any* panParam0, const char* sParam1) // Position - 0x7ADE1
 	return;
 }
 
-void func_555(Any* panParam0, char* sParam1) // Position - 0x7AE25
+void SaveLastPlayerScene(Any* panParam0, char* sParam1) // Position - 0x7AE25
 {
 	int i;
 	var name;
@@ -95694,16 +95694,16 @@ void func_555(Any* panParam0, char* sParam1) // Position - 0x7AE25
 	return;
 }
 
-void func_556() // Position - 0x7AEA7
+void CallSaveFamilyData() // Position - 0x7AEA7
 {
-	func_557(&(Global_113810.f_18517), "FAMILY_SAVED_DATA");
+	SaveFamilyData(&(Global_113810.f_18517), "FAMILY_SAVED_DATA");
 	return;
 }
 
-void func_557(Any* panParam0, char* sParam1) // Position - 0x7AEBF
+void SaveFamilyData(Any* panParam0, char* sParam1) // Position - 0x7AEBF
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 19, sParam1);
-	func_558(panParam0, "ePreviousFamilyEvent");
+	SavePreviousFamilyEvent(panParam0, "ePreviousFamilyEvent");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_16), "bInitialisedPreviousEvents");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_17), "bSeenFamWeaponDisplay");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_18), "bHeardTrevorCountry");
@@ -95711,7 +95711,7 @@ void func_557(Any* panParam0, char* sParam1) // Position - 0x7AEBF
 	return;
 }
 
-void func_558(Any* panParam0, char* sParam1) // Position - 0x7AF07
+void SavePreviousFamilyEvent(Any* panParam0, char* sParam1) // Position - 0x7AF07
 {
 	int i;
 	var name;
@@ -95795,21 +95795,21 @@ void func_558(Any* panParam0, char* sParam1) // Position - 0x7AF07
 	return;
 }
 
-void func_559() // Position - 0x7B063
+void CallSaveFriendsArray() // Position - 0x7B063
 {
-	func_560(&(Global_113810.f_18106), "FRIENDS_SAVED_ARRAY");
+	SaveFriendsArray(&(Global_113810.f_18106), "FRIENDS_SAVED_ARRAY");
 	return;
 }
 
-void func_560(Any* panParam0, char* sParam1) // Position - 0x7B07B
+void SaveFriendsArray(Any* panParam0, char* sParam1) // Position - 0x7B07B
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 411, sParam1);
-	func_569(panParam0, "g_FriendData");
-	func_567(&(panParam0->f_175), "g_FriendConnectData");
-	func_565(&(panParam0->f_347), "g_FriendGroupData");
-	func_563(&(panParam0->f_362), "g_FriendFailTimers");
-	func_562(&(panParam0->f_381), "g_FriendFailMessages");
-	func_561(&(panParam0->f_388), "g_FranklinLamarEndChat");
+	SaveFriendData(panParam0, "g_FriendData");
+	SaveFriendConnectData(&(panParam0->f_175), "g_FriendConnectData");
+	SaveFriendGroupData(&(panParam0->f_347), "g_FriendGroupData");
+	SaveFriendFailTimers(&(panParam0->f_362), "g_FriendFailTimers");
+	SaveFriendFailMessages(&(panParam0->f_381), "g_FriendFailMessages");
+	SaveFranklinLamarEndChat(&(panParam0->f_388), "g_FranklinLamarEndChat");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_395), "g_FriendScriptThread");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_396), "g_bHelpDoneCanPhoneFriend");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_397), "g_bHelpDoneCanPhoneBBuddy");
@@ -95830,7 +95830,7 @@ void func_560(Any* panParam0, char* sParam1) // Position - 0x7B07B
 	return;
 }
 
-void func_561(Any* panParam0, char* sParam1) // Position - 0x7B1C2
+void SaveFranklinLamarEndChat(Any* panParam0, char* sParam1) // Position - 0x7B1C2
 {
 	var name;
 	int unk;
@@ -95850,7 +95850,7 @@ void func_561(Any* panParam0, char* sParam1) // Position - 0x7B1C2
 	return;
 }
 
-void func_562(Any* panParam0, char* sParam1) // Position - 0x7B214
+void SaveFriendFailMessages(Any* panParam0, char* sParam1) // Position - 0x7B214
 {
 	int i;
 	var name;
@@ -95898,7 +95898,7 @@ void func_562(Any* panParam0, char* sParam1) // Position - 0x7B214
 	return;
 }
 
-void func_563(Any* panParam0, char* sParam1) // Position - 0x7B2CC
+void SaveFriendFailTimers(Any* panParam0, char* sParam1) // Position - 0x7B2CC
 {
 	int i;
 	var unk;
@@ -95939,14 +95939,14 @@ void func_563(Any* panParam0, char* sParam1) // Position - 0x7B2CC
 				break;
 		}
 	
-		func_564(&panParam0->[i], &unk);
+		SaveFriendFailTimerStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_564(Any* panParam0, char* sParam1) // Position - 0x7B385
+void SaveFriendFailTimerStruct(Any* panParam0, char* sParam1) // Position - 0x7B385
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 3, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "TimerBits");
@@ -95956,7 +95956,7 @@ void func_564(Any* panParam0, char* sParam1) // Position - 0x7B385
 	return;
 }
 
-void func_565(Any* panParam0, char* sParam1) // Position - 0x7B3BF
+void SaveFriendGroupData(Any* panParam0, char* sParam1) // Position - 0x7B3BF
 {
 	int i;
 	var unk;
@@ -95981,22 +95981,22 @@ void func_565(Any* panParam0, char* sParam1) // Position - 0x7B3BF
 				break;
 		}
 	
-		func_566(&panParam0->[i], &unk);
+		SaveFriendGroupStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_566(Any* panParam0, const char* sParam1) // Position - 0x7B430
+void SaveFriendGroupStruct(Any* panParam0, const char* sParam1) // Position - 0x7B430
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 7, sParam1);
-	func_561(panParam0, "chatData");
+	SaveFranklinLamarEndChat(panParam0, "chatData");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_567(Any* panParam0, char* sParam1) // Position - 0x7B450
+void SaveFriendConnectData(Any* panParam0, char* sParam1) // Position - 0x7B450
 {
 	int i;
 	var unk;
@@ -96049,14 +96049,14 @@ void func_567(Any* panParam0, char* sParam1) // Position - 0x7B450
 				break;
 		}
 	
-		func_568(&panParam0->[i], &unk);
+		SaveFriendConnectDataStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_568(Any* panParam0, const char* sParam1) // Position - 0x7B540
+void SaveFriendConnectDataStruct(Any* panParam0, const char* sParam1) // Position - 0x7B540
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 19, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(panParam0, "friendA");
@@ -96064,9 +96064,9 @@ void func_568(Any* panParam0, const char* sParam1) // Position - 0x7B540
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_2), "blockBits");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_3), "blockMissionID");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_4), "commID");
-	func_564(&(panParam0->f_5), "lastContactTimer");
+	SaveFriendFailTimerStruct(&(panParam0->f_5), "lastContactTimer");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_8), "lastContactType");
-	func_561(&(panParam0->f_9), "chatData");
+	SaveFranklinLamarEndChat(&(panParam0->f_9), "chatData");
 	MISC::REGISTER_ENUM_TO_SAVE(&(panParam0->f_16), "wanted");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_17), "likes");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_18), "flags");
@@ -96074,7 +96074,7 @@ void func_568(Any* panParam0, const char* sParam1) // Position - 0x7B540
 	return;
 }
 
-void func_569(Any* panParam0, char* sParam1) // Position - 0x7B5E3
+void SaveFriendData(Any* panParam0, char* sParam1) // Position - 0x7B5E3
 {
 	int i;
 	var unk;
@@ -96115,22 +96115,22 @@ void func_569(Any* panParam0, char* sParam1) // Position - 0x7B5E3
 				break;
 		}
 	
-		func_570(&panParam0->[i], &unk);
+		SaveFriendStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_570(Any* panParam0, const char* sParam1) // Position - 0x7B69C
+void SaveFriendStruct(Any* panParam0, const char* sParam1) // Position - 0x7B69C
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 29, sParam1);
-	func_571(panParam0, "charSheet");
+	SaveFriendCharSheetStruct(panParam0, "charSheet");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_571(Any* panParam0, const char* sParam1) // Position - 0x7B6BD
+void SaveFriendCharSheetStruct(Any* panParam0, const char* sParam1) // Position - 0x7B6BD
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 29, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(panParam0, "game_model");
@@ -96163,21 +96163,21 @@ void func_571(Any* panParam0, const char* sParam1) // Position - 0x7B6BD
 	return;
 }
 
-void func_572() // Position - 0x7B82F
+void CallSaveCharsheetArray() // Position - 0x7B82F
 {
-	func_573(&(Global_113810.f_28053), "CHARSHEET_SAVED_ARRAY");
+	SaveCharsheetArray(&(Global_113810.f_28053), "CHARSHEET_SAVED_ARRAY");
 	return;
 }
 
-void func_573(Any* panParam0, char* sParam1) // Position - 0x7B847
+void SaveCharsheetArray(Any* panParam0, char* sParam1) // Position - 0x7B847
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 4699, sParam1);
-	func_574(panParam0, "struct_g_CharacterSheet");
+	SaveCharSheet(panParam0, "struct_g_CharacterSheet");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_574(Any* panParam0, char* sParam1) // Position - 0x7B869
+void SaveCharSheet(Any* panParam0, char* sParam1) // Position - 0x7B869
 {
 	int num;
 	var unk;
@@ -96189,7 +96189,7 @@ void func_574(Any* panParam0, char* sParam1) // Position - 0x7B869
 	{
 		TEXT_LABEL_COPY(&unk, { Global_113810.f_28053[num].f_3 }, 8);
 		TEXT_LABEL_APPEND_STRING(&unk, "_Saved", 32);
-		func_571(&panParam0->[num], &unk);
+		SaveFriendCharSheetStruct(&panParam0->[num], &unk);
 		num = num + 1;
 	}
 
@@ -96197,18 +96197,18 @@ void func_574(Any* panParam0, char* sParam1) // Position - 0x7B869
 	return;
 }
 
-void func_575() // Position - 0x7B8BD
+void CallSaveRespawnLocationData() // Position - 0x7B8BD
 {
-	func_576(&(Global_113810.f_7232), "RESPAWN_LOCATION_DATA");
+	SaveRespawnLocationData(&(Global_113810.f_7232), "RESPAWN_LOCATION_DATA");
 	return;
 }
 
-void func_576(Any* panParam0, char* sParam1) // Position - 0x7B8D5
+void SaveRespawnLocationData(Any* panParam0, char* sParam1) // Position - 0x7B8D5
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 32, sParam1);
-	func_579(panParam0, "SAVEHOUSE");
-	func_578(&(panParam0->f_17), "POLICE_STATION");
-	func_577(&(panParam0->f_11), "HOSPITAL");
+	SaveRespawnLocationSavehouse(panParam0, "SAVEHOUSE");
+	SaveRespawnLocationPoliceStation(&(panParam0->f_17), "POLICE_STATION");
+	SaveRespawnLocationHospital(&(panParam0->f_11), "HOSPITAL");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_25), "SAVEHOUSE_DATA_SET");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_26), "HOSPITAL_DATA_SET");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_27), "POLICE_DATA_SET");
@@ -96220,7 +96220,7 @@ void func_576(Any* panParam0, char* sParam1) // Position - 0x7B8D5
 	return;
 }
 
-void func_577(Any* panParam0, char* sParam1) // Position - 0x7B96B
+void SaveRespawnLocationHospital(Any* panParam0, char* sParam1) // Position - 0x7B96B
 {
 	int i;
 	var name;
@@ -96239,7 +96239,7 @@ void func_577(Any* panParam0, char* sParam1) // Position - 0x7B96B
 	return;
 }
 
-void func_578(Any* panParam0, char* sParam1) // Position - 0x7B9AF
+void SaveRespawnLocationPoliceStation(Any* panParam0, char* sParam1) // Position - 0x7B9AF
 {
 	int i;
 	var name;
@@ -96258,7 +96258,7 @@ void func_578(Any* panParam0, char* sParam1) // Position - 0x7B9AF
 	return;
 }
 
-void func_579(Any* panParam0, char* sParam1) // Position - 0x7B9F4
+void SaveRespawnLocationSavehouse(Any* panParam0, char* sParam1) // Position - 0x7B9F4
 {
 	int i;
 	var name;
@@ -96277,14 +96277,14 @@ void func_579(Any* panParam0, char* sParam1) // Position - 0x7B9F4
 	return;
 }
 
-void func_580() // Position - 0x7BA39
+void SavesStuff2() // Position - 0x7BA39
 {
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(Global_113810.f_2366), 493, "COMPONENTS_ARRAY");
 	func_595(&Global_113810.f_2366[0], "SP0");
 	func_595(&Global_113810.f_2366[1], "SP1");
 	func_595(&Global_113810.f_2366[2], "SP2");
 	MISC::STOP_SAVE_ARRAY();
-	func_582(&(Global_113810.f_2366.f_539), "PP_INFO_STRUCT");
+	SavePPInfoStruct(&(Global_113810.f_2366.f_539), "PP_INFO_STRUCT");
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(Global_113810.f_2366.f_493), 46, "TATTOOS_ARRAY");
 	func_581(&Global_113810.f_2366.f_493[0], "SP0");
 	func_581(&Global_113810.f_2366.f_493[1], "SP1");
@@ -96336,7 +96336,7 @@ void func_581(Any* panParam0, char* sParam1) // Position - 0x7BB38
 	return;
 }
 
-void func_582(Any* panParam0, char* sParam1) // Position - 0x7BC0D
+void SavePPInfoStruct(Any* panParam0, char* sParam1) // Position - 0x7BC0D
 {
 	int i;
 	var name;
@@ -97576,11 +97576,11 @@ void func_595(Any* panParam0, char* sParam1) // Position - 0x7D66B
 	return;
 }
 
-void func_596() // Position - 0x7E10B
+void SavesStuff1() // Position - 0x7E10B
 {
-	func_605(&(Global_113810.f_10052), "STUNT_JUMPS_SAVED_STRUCT");
-	func_603(&(Global_113810.f_10052.f_1), "PROSTITUTE_SAVED_DATA");
-	func_602(&(Global_113810.f_10052.f_90), "PROSTITUTE_SERVICES_ARRAY");
+	SaveStuntJumpsStruct(&(Global_113810.f_10052), "STUNT_JUMPS_SAVED_STRUCT");
+	SaveProstituteData(&(Global_113810.f_10052.f_1), "PROSTITUTE_SAVED_DATA");
+	SaveProstituteServicesArray(&(Global_113810.f_10052.f_90), "PROSTITUTE_SERVICES_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_94), "CHOP_HINTS_DISPLAYED");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_95), "WARDROBE_HINTS_DISPLAYED");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_96), "BRIDGES_FLOWN_UNDER_FLAGS");
@@ -97600,26 +97600,26 @@ void func_596() // Position - 0x7E10B
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_110), "HUNTING_LOWEST_TIME_GOLD");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_10052.f_115), "HUNTING_CHALLENGE_DISPLAYED");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_10052.f_116), "HUNTING_WEEK_TIMER");
-	func_601(&(Global_113810.f_10052.f_111), "CHALLENGE_FREE_MODE");
+	SaveChallengeFreeMode(&(Global_113810.f_10052.f_111), "CHALLENGE_FREE_MODE");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_117), "VEHICLE_REPAIR_FRANKLIN");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_118), "VEHICLE_REPAIR_MICHAEL");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_119), "VEHICLE_REPAIR_TREVOR");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_10052.f_120), "TAXI_HAIL_HELP_PROMPT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_121), "TAXI_ENTER_HELP_PROMPT");
-	func_600(&(Global_113810.f_10052.f_122), "LETTER_SCRAPS_SAVED_STRUCT");
-	func_600(&(Global_113810.f_10052.f_125), "SPACESHIP_PARTS_SAVED_STRUCT");
+	SaveGlobalScrapData(&(Global_113810.f_10052.f_122), "LETTER_SCRAPS_SAVED_STRUCT");
+	SaveGlobalScrapData(&(Global_113810.f_10052.f_125), "SPACESHIP_PARTS_SAVED_STRUCT");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_128), "FIB4_GETAWAY_STATE");
-	func_599(&(Global_113810.f_10052.f_129), "WEBSITE_SUBSCRIPTION_ARRAY");
+	SaveWebsiteSubscriptionArray(&(Global_113810.f_10052.f_129), "WEBSITE_SUBSCRIPTION_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_133), "MURDER_MYSTERY_PROGRESS");
 	MISC::REGISTER_ENUM_TO_SAVE(&(Global_113810.f_10052.f_134), "NOIR_EFFECTS_STATUS");
-	func_598(&(Global_113810.f_10052.f_135), "PHOTOGRAPHY_MONKEY_FLAGS");
-	func_597(&(Global_113810.f_10052.f_138), "PEYOTE_PICKUP_OF_TYPE_FOUND");
+	SavePhotographyMonkeyFlags(&(Global_113810.f_10052.f_135), "PHOTOGRAPHY_MONKEY_FLAGS");
+	SavePeyotePickupOfTypeFoundArray(&(Global_113810.f_10052.f_138), "PEYOTE_PICKUP_OF_TYPE_FOUND");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10052.f_143), "PEYOTE_ANIMAL_SEEN");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_10052.f_144), "PEYOTE_PROGRESSION_COMPLETE");
 	return;
 }
 
-void func_597(Any* panParam0, char* sParam1) // Position - 0x7E3BD
+void SavePeyotePickupOfTypeFoundArray(Any* panParam0, char* sParam1) // Position - 0x7E3BD
 {
 	int i;
 	var name;
@@ -97638,7 +97638,7 @@ void func_597(Any* panParam0, char* sParam1) // Position - 0x7E3BD
 	return;
 }
 
-void func_598(Any* panParam0, char* sParam1) // Position - 0x7E405
+void SavePhotographyMonkeyFlags(Any* panParam0, char* sParam1) // Position - 0x7E405
 {
 	MISC::START_SAVE_ARRAY_WITH_SIZE(panParam0, 3, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(&panParam0->[0], "PHOTOGRAPHY_MONKEY_FLAGS_1");
@@ -97647,7 +97647,7 @@ void func_598(Any* panParam0, char* sParam1) // Position - 0x7E405
 	return;
 }
 
-void func_599(Any* panParam0, char* sParam1) // Position - 0x7E436
+void SaveWebsiteSubscriptionArray(Any* panParam0, char* sParam1) // Position - 0x7E436
 {
 	MISC::START_SAVE_ARRAY_WITH_SIZE(panParam0, 4, sParam1);
 	MISC::REGISTER_BOOL_TO_SAVE(&panParam0->[0], "REALITY_MILL_MICHAEL");
@@ -97657,7 +97657,7 @@ void func_599(Any* panParam0, char* sParam1) // Position - 0x7E436
 	return;
 }
 
-void func_600(Any* panParam0, char* sParam1) // Position - 0x7E475
+void SaveGlobalScrapData(Any* panParam0, char* sParam1) // Position - 0x7E475
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 3, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "GLOBAL_SCRAP_DATA_iScrap0to31");
@@ -97667,7 +97667,7 @@ void func_600(Any* panParam0, char* sParam1) // Position - 0x7E475
 	return;
 }
 
-void func_601(Any* panParam0, char* sParam1) // Position - 0x7E4AF
+void SaveChallengeFreeMode(Any* panParam0, char* sParam1) // Position - 0x7E4AF
 {
 	var name;
 	int unk;
@@ -97685,7 +97685,7 @@ void func_601(Any* panParam0, char* sParam1) // Position - 0x7E4AF
 	return;
 }
 
-void func_602(Any* panParam0, char* sParam1) // Position - 0x7E4F0
+void SaveProstituteServicesArray(Any* panParam0, char* sParam1) // Position - 0x7E4F0
 {
 	MISC::START_SAVE_ARRAY_WITH_SIZE(panParam0, 4, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(&panParam0->[0], "PROSTITUTE_SERVICES_MICHAEL");
@@ -97695,7 +97695,7 @@ void func_602(Any* panParam0, char* sParam1) // Position - 0x7E4F0
 	return;
 }
 
-void func_603(Any* panParam0, char* sParam1) // Position - 0x7E52F
+void SaveProstituteData(Any* panParam0, char* sParam1) // Position - 0x7E52F
 {
 	int i;
 	var unk;
@@ -97784,7 +97784,7 @@ void func_604(Any* panParam0, char* sParam1) // Position - 0x7E610
 	return;
 }
 
-void func_605(Any* panParam0, char* sParam1) // Position - 0x7E701
+void SaveStuntJumpsStruct(Any* panParam0, char* sParam1) // Position - 0x7E701
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 1, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "STUNT_JUMPS_iStuntJumpsCompleted");
@@ -97792,26 +97792,26 @@ void func_605(Any* panParam0, char* sParam1) // Position - 0x7E701
 	return;
 }
 
-void func_606() // Position - 0x7E721
+void CallSaveSocialStruct() // Position - 0x7E721
 {
-	func_607(&(Global_113810.f_20121), "SOCIAL_SAVED_DATA_STRUCT");
+	SaveSocialStruct(&(Global_113810.f_20121), "SOCIAL_SAVED_DATA_STRUCT");
 	return;
 }
 
-void func_607(Any* panParam0, char* sParam1) // Position - 0x7E739
+void SaveSocialStruct(Any* panParam0, char* sParam1) // Position - 0x7E739
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 292, sParam1);
 	MISC::START_SAVE_ARRAY_WITH_SIZE(panParam0, 130, "CAR_APP_DATA");
-	func_610(&panParam0->[0], "CAR_APP_DATA_M");
-	func_610(&panParam0->[1], "CAR_APP_DATA_F");
-	func_610(&panParam0->[2], "CAR_APP_DATA_T");
+	SaveCarAppData(&panParam0->[0], "CAR_APP_DATA_M");
+	SaveCarAppData(&panParam0->[1], "CAR_APP_DATA_F");
+	SaveCarAppData(&panParam0->[2], "CAR_APP_DATA_T");
 	MISC::STOP_SAVE_ARRAY();
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(panParam0->f_130), 124, "CAR_APP_ORDER");
-	func_609(&panParam0->f_130[0], "CAR_APP_ORDER_M");
-	func_609(&panParam0->f_130[1], "CAR_APP_ORDER_F");
-	func_609(&panParam0->f_130[2], "CAR_APP_ORDER_T");
+	SaveCarAppOrder(&panParam0->f_130[0], "CAR_APP_ORDER_M");
+	SaveCarAppOrder(&panParam0->f_130[1], "CAR_APP_ORDER_F");
+	SaveCarAppOrder(&panParam0->f_130[2], "CAR_APP_ORDER_T");
 	MISC::STOP_SAVE_ARRAY();
-	func_608(&(panParam0->f_254), "DOG_APP_DATA");
+	SaveDogAppData(&(panParam0->f_254), "DOG_APP_DATA");
 	MISC::STOP_SAVE_STRUCT();
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_260), "bSingleplayeDataWiped");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_261), "bCarAppPlateSet");
@@ -97849,7 +97849,7 @@ void func_607(Any* panParam0, char* sParam1) // Position - 0x7E739
 	return;
 }
 
-void func_608(Any* panParam0, char* sParam1) // Position - 0x7E9A9
+void SaveDogAppData(Any* panParam0, char* sParam1) // Position - 0x7E9A9
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 6, sParam1);
 	MISC::REGISTER_FLOAT_TO_SAVE(panParam0, "fHappiness");
@@ -97862,7 +97862,7 @@ void func_608(Any* panParam0, char* sParam1) // Position - 0x7E9A9
 	return;
 }
 
-void func_609(Any* panParam0, char* sParam1) // Position - 0x7EA0A
+void SaveCarAppOrder(Any* panParam0, char* sParam1) // Position - 0x7EA0A
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 41, sParam1);
 	MISC::REGISTER_ENUM_TO_SAVE(panParam0, "Model");
@@ -97904,7 +97904,7 @@ void func_609(Any* panParam0, char* sParam1) // Position - 0x7EA0A
 	return;
 }
 
-void func_610(Any* panParam0, char* sParam1) // Position - 0x7EBE5
+void SaveCarAppData(Any* panParam0, char* sParam1) // Position - 0x7EBE5
 {
 	int i;
 	var name;
@@ -97958,19 +97958,19 @@ void func_610(Any* panParam0, char* sParam1) // Position - 0x7EBE5
 	return;
 }
 
-void func_611() // Position - 0x7EDF4
+void CallSaveShopDataStruct() // Position - 0x7EDF4
 {
-	func_612(&(Global_113810.f_668), "SHOP_SAVED_DATA_STRUCT");
+	SaveShopDataStruct(&(Global_113810.f_668), "SHOP_SAVED_DATA_STRUCT");
 	return;
 }
 
-void func_612(Any* panParam0, char* sParam1) // Position - 0x7EE0C
+void SaveShopDataStruct(Any* panParam0, char* sParam1) // Position - 0x7EE0C
 {
 	int i;
 	var name;
 
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 1323, sParam1);
-	func_614(panParam0, "SHOP_PROPERTIES");
+	SaveShopProperties(panParam0, "SHOP_PROPERTIES");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_62), "SHOP_DEFAULT_DATA_SET");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_63), "SHOP_TYPES_VISITED");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_64), "iHairdoShopVisits");
@@ -97983,9 +97983,9 @@ void func_612(Any* panParam0, char* sParam1) // Position - 0x7EE0C
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_70), "iGunShopPostLamar1Dialogue");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_71), "iClothesShopPostLester1Dialogue");
 	MISC::START_SAVE_ARRAY_WITH_SIZE(&(panParam0->f_74), 16, "CARMOD_DATA");
-	func_613(&panParam0->f_74[0], "P0_CARMOD_DATA");
-	func_613(&panParam0->f_74[1], "P1_CARMOD_DATA");
-	func_613(&panParam0->f_74[2], "P2_CARMOD_DATA");
+	SaveShopCarmodData(&panParam0->f_74[0], "P0_CARMOD_DATA");
+	SaveShopCarmodData(&panParam0->f_74[1], "P1_CARMOD_DATA");
+	SaveShopCarmodData(&panParam0->f_74[2], "P2_CARMOD_DATA");
 	MISC::STOP_SAVE_ARRAY();
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_73), "FIRST_MODSHOP_REPAIR");
 	MISC::REGISTER_BOOL_TO_SAVE(&(panParam0->f_1321), "SHOP_BARBER_BLIP_HELP_SHOWN");
@@ -98010,7 +98010,7 @@ void func_612(Any* panParam0, char* sParam1) // Position - 0x7EE0C
 	return;
 }
 
-void func_613(Any* panParam0, char* sParam1) // Position - 0x7EFC3
+void SaveShopCarmodData(Any* panParam0, char* sParam1) // Position - 0x7EFC3
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 5, sParam1);
 	MISC::REGISTER_BOOL_TO_SAVE(panParam0, "PROCESSING");
@@ -98022,7 +98022,7 @@ void func_613(Any* panParam0, char* sParam1) // Position - 0x7EFC3
 	return;
 }
 
-void func_614(Any* panParam0, char* sParam1) // Position - 0x7F017
+void SaveShopProperties(Any* panParam0, char* sParam1) // Position - 0x7F017
 {
 	int i;
 	var name;
@@ -98041,21 +98041,21 @@ void func_614(Any* panParam0, char* sParam1) // Position - 0x7F017
 	return;
 }
 
-void func_615() // Position - 0x7F05E
+void CallSaveRampageStruct() // Position - 0x7F05E
 {
-	func_616(&(Global_113810.f_2355), "RAMPAGE_SAVED_ARRAY");
+	SaveRampageData(&(Global_113810.f_2355), "RAMPAGE_SAVED_ARRAY");
 	return;
 }
 
-void func_616(Any* panParam0, char* sParam1) // Position - 0x7F076
+void SaveRampageData(Any* panParam0, char* sParam1) // Position - 0x7F076
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 11, sParam1);
-	func_617(panParam0, "structRampagePlayerData");
+	SaveRampagePlayerDataArray(panParam0, "structRampagePlayerData");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_617(Any* panParam0, char* sParam1) // Position - 0x7F097
+void SaveRampagePlayerDataArray(Any* panParam0, char* sParam1) // Position - 0x7F097
 {
 	int i;
 	var unk;
@@ -98066,14 +98066,14 @@ void func_617(Any* panParam0, char* sParam1) // Position - 0x7F097
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "Rampage", 32);
 		TEXT_LABEL_APPEND_INT(&unk, i + 1, 32);
-		func_618(&panParam0->[i], &unk);
+		SaveRampageData(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_618(Any* panParam0, const char* sParam1) // Position - 0x7F0DE
+void SaveRampageData(Any* panParam0, const char* sParam1) // Position - 0x7F0DE
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 2, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "MedalIndex");
@@ -98082,23 +98082,23 @@ void func_618(Any* panParam0, const char* sParam1) // Position - 0x7F0DE
 	return;
 }
 
-void func_619() // Position - 0x7F10B
+void CallSavePilotSchoolData() // Position - 0x7F10B
 {
-	func_620(&(Global_113810.f_1991), "PILOT_SCHOOL_SAVED_ARRAY");
+	SavePilotSchoolData(&(Global_113810.f_1991), "PILOT_SCHOOL_SAVED_ARRAY");
 	return;
 }
 
-void func_620(Any* panParam0, char* sParam1) // Position - 0x7F123
+void SavePilotSchoolData(Any* panParam0, char* sParam1) // Position - 0x7F123
 {
 	MISC::START_SAVE_ARRAY_WITH_SIZE(panParam0, 364, sParam1);
-	func_621(&panParam0->[0], "structPilotSchool_p0");
-	func_621(&panParam0->[1], "structPilotSchool_p1");
-	func_621(&panParam0->[2], "structPilotSchool_p2");
+	SavePilotSchoolArray(&panParam0->[0], "structPilotSchool_p0");
+	SavePilotSchoolArray(&panParam0->[1], "structPilotSchool_p1");
+	SavePilotSchoolArray(&panParam0->[2], "structPilotSchool_p2");
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_621(Any* panParam0, char* sParam1) // Position - 0x7F164
+void SavePilotSchoolArray(Any* panParam0, char* sParam1) // Position - 0x7F164
 {
 	int i;
 	var unk;
@@ -98163,14 +98163,14 @@ void func_621(Any* panParam0, char* sParam1) // Position - 0x7F164
 				break;
 		}
 	
-		func_622(&panParam0->[i], &unk);
+		SavePilotSchoolArrayEntry(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_622(Any* panParam0, const char* sParam1) // Position - 0x7F28A
+void SavePilotSchoolArrayEntry(Any* panParam0, const char* sParam1) // Position - 0x7F28A
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 10, sParam1);
 	MISC::REGISTER_FLOAT_TO_SAVE(panParam0, "ElapsedTime");
@@ -98187,13 +98187,13 @@ void func_622(Any* panParam0, const char* sParam1) // Position - 0x7F28A
 	return;
 }
 
-void func_623() // Position - 0x7F320
+void CallSaveStripClipData() // Position - 0x7F320
 {
-	func_624(&(Global_113810.f_243), "STRIP_CLUB_SAVED_ARRAY");
+	SaveStripClubData(&(Global_113810.f_243), "STRIP_CLUB_SAVED_ARRAY");
 	return;
 }
 
-void func_624(Any* panParam0, char* sParam1) // Position - 0x7F337
+void SaveStripClubData(Any* panParam0, char* sParam1) // Position - 0x7F337
 {
 	int i;
 	var unk;
@@ -98246,23 +98246,23 @@ void func_624(Any* panParam0, char* sParam1) // Position - 0x7F337
 				break;
 		}
 	
-		func_625(&panParam0->[i], &unk);
+		SaveStripClubStruct(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_625(Any* panParam0, const char* sParam1) // Position - 0x7F41D
+void SaveStripClubStruct(Any* panParam0, const char* sParam1) // Position - 0x7F41D
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 53, sParam1);
-	func_628(panParam0, "STRIP_CLUBS");
-	func_626(&(panParam0->f_2), "BOOTY_CALLS");
+	SaveStripClubsArray(panParam0, "STRIP_CLUBS");
+	SaveBootyCallsArray(&(panParam0->f_2), "BOOTY_CALLS");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_626(Any* panParam0, char* sParam1) // Position - 0x7F44B
+void SaveBootyCallsArray(Any* panParam0, char* sParam1) // Position - 0x7F44B
 {
 	int i;
 	var unk;
@@ -98323,14 +98323,14 @@ void func_626(Any* panParam0, char* sParam1) // Position - 0x7F44B
 				break;
 		}
 	
-		func_627(&panParam0->[i], &unk);
+		SaveBootyCallEntry(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_627(Any* panParam0, const char* sParam1) // Position - 0x7F554
+void SaveBootyCallEntry(Any* panParam0, const char* sParam1) // Position - 0x7F554
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 5, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "bootyCallLike");
@@ -98342,7 +98342,7 @@ void func_627(Any* panParam0, const char* sParam1) // Position - 0x7F554
 	return;
 }
 
-void func_628(Any* panParam0, char* sParam1) // Position - 0x7F5A8
+void SaveStripClubsArray(Any* panParam0, char* sParam1) // Position - 0x7F5A8
 {
 	int i;
 	var unk;
@@ -98367,14 +98367,14 @@ void func_628(Any* panParam0, char* sParam1) // Position - 0x7F5A8
 				break;
 		}
 	
-		func_629(&panParam0->[i], &unk);
+		SaveStripClubEntry(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_629(Any* panParam0, const char* sParam1) // Position - 0x7F60D
+void SaveStripClubEntry(Any* panParam0, const char* sParam1) // Position - 0x7F60D
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 1, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "stripClubReputation");
@@ -98382,24 +98382,24 @@ void func_629(Any* panParam0, const char* sParam1) // Position - 0x7F60D
 	return;
 }
 
-void func_630() // Position - 0x7F62D
+void SaveHeistStruct() // Position - 0x7F62D
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_1), 242, "HEIST_DATA_STRUCT");
-	func_643(&(Global_113810.f_1), "HEIST_CHOICE_HELP_DISPLAYED_ARRAY");
-	func_642(&(Global_113810.f_1.f_6), "HEIST_CREW_HELP_DISPLAYED_ARRAY");
-	func_640(&(Global_113810.f_1.f_12), "HEIST_SELECTED_CREW_ARRAY");
-	func_638(&(Global_113810.f_1.f_73), "HEIST_CREW_ACTIVE_DATA_ARRAY");
+	SaveHeistChoiceHelpDisplayedArray(&(Global_113810.f_1), "HEIST_CHOICE_HELP_DISPLAYED_ARRAY");
+	SaveHeistCrewHelpDisplayedArray(&(Global_113810.f_1.f_6), "HEIST_CREW_HELP_DISPLAYED_ARRAY");
+	SaveHeistSelectedCrewArray(&(Global_113810.f_1.f_12), "HEIST_SELECTED_CREW_ARRAY");
+	SaveHeistCrewActiveDataArray(&(Global_113810.f_1.f_73), "HEIST_CREW_ACTIVE_DATA_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_1.f_116), "Crew_Unlocked_Bitset");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_1.f_117), "Crew_Used_Bitset");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_1.f_118), "Crew_Dead_Bitset");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_1.f_119), "Crew_Dialogue_Bitset");
-	func_637(&(Global_113810.f_1.f_120), "HEIST_DISPLAY_GROUP_VISIBLE_ARRAY");
-	func_631(&(Global_113810.f_1.f_126), "HEIST_END_SCREEN_DATA_STRUCT");
+	SaveHeistDisplayGroupVisibleArray(&(Global_113810.f_1.f_120), "HEIST_DISPLAY_GROUP_VISIBLE_ARRAY");
+	SaveHeistEndScreenDataStruct(&(Global_113810.f_1.f_126), "HEIST_END_SCREEN_DATA_STRUCT");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_631(Any* panParam0, char* sParam1) // Position - 0x7F6F2
+void SaveHeistEndScreenDataStruct(Any* panParam0, char* sParam1) // Position - 0x7F6F2
 {
 	int i;
 
@@ -98410,23 +98410,23 @@ void func_631(Any* panParam0, char* sParam1) // Position - 0x7F6F2
 		switch (i)
 		{
 			case 0:
-				func_632(&panParam0->[i], "HEIST_END_SCREEN_JEWEL");
+				SaveHeistEndEntry(&panParam0->[i], "HEIST_END_SCREEN_JEWEL");
 				break;
 		
 			case 1:
-				func_632(&panParam0->[i], "HEIST_END_SCREEN_DOCKS");
+				SaveHeistEndEntry(&panParam0->[i], "HEIST_END_SCREEN_DOCKS");
 				break;
 		
 			case 2:
-				func_632(&panParam0->[i], "HEIST_END_SCREEN_RURAL_BANK");
+				SaveHeistEndEntry(&panParam0->[i], "HEIST_END_SCREEN_RURAL_BANK");
 				break;
 		
 			case 3:
-				func_632(&panParam0->[i], "HEIST_END_SCREEN_AGENCY");
+				SaveHeistEndEntry(&panParam0->[i], "HEIST_END_SCREEN_AGENCY");
 				break;
 		
 			case 4:
-				func_632(&panParam0->[i], "HEIST_END_SCREEN_FINALE");
+				SaveHeistEndEntry(&panParam0->[i], "HEIST_END_SCREEN_FINALE");
 				break;
 		}
 	}
@@ -98435,21 +98435,21 @@ void func_631(Any* panParam0, char* sParam1) // Position - 0x7F6F2
 	return;
 }
 
-void func_632(Any* panParam0, char* sParam1) // Position - 0x7F799
+void SaveHeistEndEntry(Any* panParam0, char* sParam1) // Position - 0x7F799
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 23, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "Potential_Take");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_1), "Actual_Take");
 	MISC::REGISTER_INT_TO_SAVE(&(panParam0->f_10), "Time_Taken");
-	func_636(&(panParam0->f_2), "HEIST_END_SCREEN_PLAYER_TAKE");
-	func_635(&(panParam0->f_6), "HEIST_END_SCREEN_PLAYER_PERC");
-	func_634(&(panParam0->f_11), "HEIST_END_SCREEN_CREW_STATUS");
-	func_633(&(panParam0->f_17), "HEIST_END_SCREEN_CREW_TAKE");
+	SaveHeistEndScreenPlayerTake(&(panParam0->f_2), "HEIST_END_SCREEN_PLAYER_TAKE");
+	SaveHeistEndScreenPlayerPercent(&(panParam0->f_6), "HEIST_END_SCREEN_PLAYER_PERC");
+	SaveHeistEndScreenCrewStatus(&(panParam0->f_11), "HEIST_END_SCREEN_CREW_STATUS");
+	SaveHeistEndScreenCrewTake(&(panParam0->f_17), "HEIST_END_SCREEN_CREW_TAKE");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_633(Any* panParam0, char* sParam1) // Position - 0x7F808
+void SaveHeistEndScreenCrewTake(Any* panParam0, char* sParam1) // Position - 0x7F808
 {
 	int i;
 	var name;
@@ -98467,7 +98467,7 @@ void func_633(Any* panParam0, char* sParam1) // Position - 0x7F808
 	return;
 }
 
-void func_634(Any* panParam0, char* sParam1) // Position - 0x7F84A
+void SaveHeistEndScreenCrewStatus(Any* panParam0, char* sParam1) // Position - 0x7F84A
 {
 	int i;
 	var name;
@@ -98485,7 +98485,7 @@ void func_634(Any* panParam0, char* sParam1) // Position - 0x7F84A
 	return;
 }
 
-void func_635(Any* panParam0, char* sParam1) // Position - 0x7F88C
+void SaveHeistEndScreenPlayerPercent(Any* panParam0, char* sParam1) // Position - 0x7F88C
 {
 	int i;
 	var name;
@@ -98503,7 +98503,7 @@ void func_635(Any* panParam0, char* sParam1) // Position - 0x7F88C
 	return;
 }
 
-void func_636(Any* panParam0, char* sParam1) // Position - 0x7F8CE
+void SaveHeistEndScreenPlayerTake(Any* panParam0, char* sParam1) // Position - 0x7F8CE
 {
 	int i;
 	var name;
@@ -98521,7 +98521,7 @@ void func_636(Any* panParam0, char* sParam1) // Position - 0x7F8CE
 	return;
 }
 
-void func_637(Any* panParam0, char* sParam1) // Position - 0x7F910
+void SaveHeistDisplayGroupVisibleArray(Any* panParam0, char* sParam1) // Position - 0x7F910
 {
 	int i;
 
@@ -98557,7 +98557,7 @@ void func_637(Any* panParam0, char* sParam1) // Position - 0x7F910
 	return;
 }
 
-void func_638(Any* panParam0, char* sParam1) // Position - 0x7F9B6
+void SaveHeistCrewActiveDataArray(Any* panParam0, char* sParam1) // Position - 0x7F9B6
 {
 	int i;
 	var unk;
@@ -98585,7 +98585,7 @@ void func_639(Any* panParam0, const char* sParam1) // Position - 0x7F9FA
 	return;
 }
 
-void func_640(Any* panParam0, char* sParam1) // Position - 0x7FA34
+void SaveHeistSelectedCrewArray(Any* panParam0, char* sParam1) // Position - 0x7FA34
 {
 	int i;
 
@@ -98596,43 +98596,43 @@ void func_640(Any* panParam0, char* sParam1) // Position - 0x7FA34
 		switch (i)
 		{
 			case 0:
-				func_641(&panParam0->[i], "CREW_ARRAY_EMPTY");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_EMPTY");
 				break;
 		
 			case 1:
-				func_641(&panParam0->[i], "CREW_ARRAY_JEWEL_STEALTH");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_JEWEL_STEALTH");
 				break;
 		
 			case 2:
-				func_641(&panParam0->[i], "CREW_ARRAY_JEWEL_HIGH_IMPACT");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_JEWEL_HIGH_IMPACT");
 				break;
 		
 			case 4:
-				func_641(&panParam0->[i], "CREW_ARRAY_DOCKS_DEEP_SEA");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_DOCKS_DEEP_SEA");
 				break;
 		
 			case 3:
-				func_641(&panParam0->[i], "CREW_ARRAY_DOCKS_BLOW_UP_BOAT");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_DOCKS_BLOW_UP_BOAT");
 				break;
 		
 			case 5:
-				func_641(&panParam0->[i], "CREW_ARRAY_RURAL_NO_TANK");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_RURAL_NO_TANK");
 				break;
 		
 			case 6:
-				func_641(&panParam0->[i], "CREW_ARRAY_AGENCY_FIRETRUCK");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_AGENCY_FIRETRUCK");
 				break;
 		
 			case 7:
-				func_641(&panParam0->[i], "CREW_ARRAY_AGENCY_HELICOPTER");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_AGENCY_HELICOPTER");
 				break;
 		
 			case 8:
-				func_641(&panParam0->[i], "CREW_ARRAY_FINALE_TRAFFCONT");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_FINALE_TRAFFCONT");
 				break;
 		
 			case 9:
-				func_641(&panParam0->[i], "CREW_ARRAY_FINALE_HELI");
+				SaveCrewArrayEntry(&panParam0->[i], "CREW_ARRAY_FINALE_HELI");
 				break;
 		
 			default:
@@ -98644,7 +98644,7 @@ void func_640(Any* panParam0, char* sParam1) // Position - 0x7FA34
 	return;
 }
 
-void func_641(Any* panParam0, char* sParam1) // Position - 0x7FB57
+void SaveCrewArrayEntry(Any* panParam0, char* sParam1) // Position - 0x7FB57
 {
 	int i;
 	var name;
@@ -98662,7 +98662,7 @@ void func_641(Any* panParam0, char* sParam1) // Position - 0x7FB57
 	return;
 }
 
-void func_642(Any* panParam0, char* sParam1) // Position - 0x7FB99
+void SaveHeistCrewHelpDisplayedArray(Any* panParam0, char* sParam1) // Position - 0x7FB99
 {
 	int i;
 
@@ -98698,7 +98698,7 @@ void func_642(Any* panParam0, char* sParam1) // Position - 0x7FB99
 	return;
 }
 
-void func_643(Any* panParam0, char* sParam1) // Position - 0x7FC3F
+void SaveHeistChoiceHelpDisplayedArray(Any* panParam0, char* sParam1) // Position - 0x7FC3F
 {
 	int i;
 
@@ -98734,21 +98734,21 @@ void func_643(Any* panParam0, char* sParam1) // Position - 0x7FC3F
 	return;
 }
 
-void func_644() // Position - 0x7FCE5
+void SaveFlowCustomStruct() // Position - 0x7FCE5
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_10019), 33, "FLOW_CUSTOM_STRUCT");
-	func_650(&(Global_113810.f_10019), "MF_STRANDS_TO_OVERRIDE_ARRAY");
-	func_649(&(Global_113810.f_10019.f_4), "MF_COMMAND_POINTER_OVERRIDE_ARRAY");
-	func_648(&(Global_113810.f_10019.f_8), "MF_COMMAND_POINTER_HASH_ID_ARRAY");
-	func_647(&(Global_113810.f_10019.f_12), "MF_MISSION_TO_UNCOMPLETE");
-	func_646(&(Global_113810.f_10019.f_16), "MF_APPLY_ON_MP_SWITCH_ONLY");
+	SaveMFStrandsToOverrideArray(&(Global_113810.f_10019), "MF_STRANDS_TO_OVERRIDE_ARRAY");
+	SaveMFCommandPointerOverrideArray(&(Global_113810.f_10019.f_4), "MF_COMMAND_POINTER_OVERRIDE_ARRAY");
+	SaveMFCommandPointerHashIDArray(&(Global_113810.f_10019.f_8), "MF_COMMAND_POINTER_HASH_ID_ARRAY");
+	SaveMFMissionToUncomplete(&(Global_113810.f_10019.f_12), "MF_MISSION_TO_UNCOMPLETE");
+	SaveMFApplyOnMPSwitchOnly(&(Global_113810.f_10019.f_16), "MF_APPLY_ON_MP_SWITCH_ONLY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_20), "numberStoredOverrides");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_21), "iMissionsCompleted");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_22), "iMissionGolds");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_10019.f_23), "wasFadedOut");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_10019.f_24), "wasFadedOut_switch");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_25), "spInitBitset");
-	func_645(&(Global_113810.f_10019.f_26), "MF_MISS_FIRST_ACTIVATE_ARRAY");
+	SaveMFMissFirstActiveArray(&(Global_113810.f_10019.f_26), "MF_MISS_FIRST_ACTIVATE_ARRAY");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_30), "iFirstPersonCoverHelpCountMission");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_31), "iFirstPersonCoverHelpCountFlow");
 	MISC::REGISTER_INT_TO_SAVE(&(Global_113810.f_10019.f_32), "iVehDuckHelpCount");
@@ -98756,7 +98756,7 @@ void func_644() // Position - 0x7FCE5
 	return;
 }
 
-void func_645(Any* panParam0, char* sParam1) // Position - 0x7FE0F
+void SaveMFMissFirstActiveArray(Any* panParam0, char* sParam1) // Position - 0x7FE0F
 {
 	int i;
 	var name;
@@ -98774,7 +98774,7 @@ void func_645(Any* panParam0, char* sParam1) // Position - 0x7FE0F
 	return;
 }
 
-void func_646(Any* panParam0, char* sParam1) // Position - 0x7FE51
+void SaveMFApplyOnMPSwitchOnly(Any* panParam0, char* sParam1) // Position - 0x7FE51
 {
 	int i;
 	var name;
@@ -98792,7 +98792,7 @@ void func_646(Any* panParam0, char* sParam1) // Position - 0x7FE51
 	return;
 }
 
-void func_647(Any* panParam0, char* sParam1) // Position - 0x7FE93
+void SaveMFMissionToUncomplete(Any* panParam0, char* sParam1) // Position - 0x7FE93
 {
 	int i;
 	var name;
@@ -98810,7 +98810,7 @@ void func_647(Any* panParam0, char* sParam1) // Position - 0x7FE93
 	return;
 }
 
-void func_648(Any* panParam0, char* sParam1) // Position - 0x7FED5
+void SaveMFCommandPointerHashIDArray(Any* panParam0, char* sParam1) // Position - 0x7FED5
 {
 	int i;
 	var name;
@@ -98828,7 +98828,7 @@ void func_648(Any* panParam0, char* sParam1) // Position - 0x7FED5
 	return;
 }
 
-void func_649(Any* panParam0, char* sParam1) // Position - 0x7FF17
+void SaveMFCommandPointerOverrideArray(Any* panParam0, char* sParam1) // Position - 0x7FF17
 {
 	int i;
 	var name;
@@ -98846,7 +98846,7 @@ void func_649(Any* panParam0, char* sParam1) // Position - 0x7FF17
 	return;
 }
 
-void func_650(Any* panParam0, char* sParam1) // Position - 0x7FF59
+void SaveMFStrandsToOverrideArray(Any* panParam0, char* sParam1) // Position - 0x7FF59
 {
 	int i;
 	var name;
@@ -98864,19 +98864,19 @@ void func_650(Any* panParam0, char* sParam1) // Position - 0x7FF59
 	return;
 }
 
-void func_651() // Position - 0x7FF9B
+void SaveFlowStruct() // Position - 0x7FF9B
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(&(Global_113810.f_9088), 931, "FLOW_STRUCT");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_9088), "isGameflowActive");
 	MISC::REGISTER_BOOL_TO_SAVE(&(Global_113810.f_9088.f_1), "flowCompleted");
-	func_659(&(Global_113810.f_9088.f_2), "MF_STRANDS_ARRAY");
-	func_654(&(Global_113810.f_9088.f_99), "MF_CONTROLS_STRUCT");
-	func_652(&(Global_113810.f_9088.f_330), "MF_MISSION_ARRAY");
+	SaveMFStrandsArray(&(Global_113810.f_9088.f_2), "MF_STRANDS_ARRAY");
+	SaveMFControlsStruct(&(Global_113810.f_9088.f_99), "MF_CONTROLS_STRUCT");
+	SaveMFMissionArray(&(Global_113810.f_9088.f_330), "MF_MISSION_ARRAY");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_652(Any* panParam0, char* sParam1) // Position - 0x80016
+void SaveMFMissionArray(Any* panParam0, char* sParam1) // Position - 0x80016
 {
 	int i;
 	var unk;
@@ -98887,14 +98887,14 @@ void func_652(Any* panParam0, char* sParam1) // Position - 0x80016
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk, "MF_MISSION_STRUCT_", 64);
 		TEXT_LABEL_APPEND_INT(&unk, i, 64);
-		func_653(&panParam0->[i], &unk);
+		SaveMFMissionStructEntry(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_653(Any* panParam0, const char* sParam1) // Position - 0x8005B
+void SaveMFMissionStructEntry(Any* panParam0, const char* sParam1) // Position - 0x8005B
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 6, sParam1);
 	MISC::REGISTER_BOOL_TO_SAVE(panParam0, "completed");
@@ -98907,18 +98907,18 @@ void func_653(Any* panParam0, const char* sParam1) // Position - 0x8005B
 	return;
 }
 
-void func_654(Any* panParam0, char* sParam1) // Position - 0x800BC
+void SaveMFControlsStruct(Any* panParam0, char* sParam1) // Position - 0x800BC
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 231, sParam1);
-	func_658(panParam0, "MF_CONTROL_SYNCIDS");
-	func_657(&(panParam0->f_58), "MF_CONTROL_FLAGIDS");
-	func_656(&(panParam0->f_205), "MF_CONTROL_INTIDS");
-	func_655(&(panParam0->f_219), "MF_CONTROL_BITSETIDS");
+	SaveMFControlSyncIDSEntry(panParam0, "MF_CONTROL_SYNCIDS");
+	SaveMFControlFlagIDS(&(panParam0->f_58), "MF_CONTROL_FLAGIDS");
+	SaveMFControlIntIDS(&(panParam0->f_205), "MF_CONTROL_INTIDS");
+	SaveMFControlBitsetIDS(&(panParam0->f_219), "MF_CONTROL_BITSETIDS");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
 
-void func_655(Any* panParam0, char* sParam1) // Position - 0x80104
+void SaveMFControlBitsetIDS(Any* panParam0, char* sParam1) // Position - 0x80104
 {
 	int i;
 	var name;
@@ -98990,7 +98990,7 @@ void func_655(Any* panParam0, char* sParam1) // Position - 0x80104
 	return;
 }
 
-void func_656(Any* panParam0, char* sParam1) // Position - 0x8021F
+void SaveMFControlIntIDS(Any* panParam0, char* sParam1) // Position - 0x8021F
 {
 	int i;
 	var name;
@@ -99070,7 +99070,7 @@ void func_656(Any* panParam0, char* sParam1) // Position - 0x8021F
 	return;
 }
 
-void func_657(Any* panParam0, char* sParam1) // Position - 0x8035E
+void SaveMFControlFlagIDS(Any* panParam0, char* sParam1) // Position - 0x8035E
 {
 	int i;
 	var name;
@@ -99682,7 +99682,7 @@ void func_657(Any* panParam0, char* sParam1) // Position - 0x8035E
 	return;
 }
 
-void func_658(Any* panParam0, char* sParam1) // Position - 0x80DF7
+void SaveMFControlSyncIDSEntry(Any* panParam0, char* sParam1) // Position - 0x80DF7
 {
 	int i;
 	var name;
@@ -99938,7 +99938,7 @@ void func_658(Any* panParam0, char* sParam1) // Position - 0x80DF7
 	return;
 }
 
-void func_659(Any* panParam0, char* sParam1) // Position - 0x8124E
+void SaveMFStrandsArray(Any* panParam0, char* sParam1) // Position - 0x8124E
 {
 	int i;
 	var unk;
@@ -100087,14 +100087,14 @@ void func_659(Any* panParam0, char* sParam1) // Position - 0x8124E
 				break;
 		}
 	
-		func_660(&panParam0->[i], &unk);
+		SaveMFFlowStrand(&panParam0->[i], &unk);
 	}
 
 	MISC::STOP_SAVE_ARRAY();
 	return;
 }
 
-void func_660(Any* panParam0, const char* sParam1) // Position - 0x814E3
+void SaveMFFlowStrand(Any* panParam0, const char* sParam1) // Position - 0x814E3
 {
 	MISC::START_SAVE_STRUCT_WITH_SIZE(panParam0, 3, sParam1);
 	MISC::REGISTER_INT_TO_SAVE(panParam0, "flowStrandBitFlags");
