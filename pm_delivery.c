@@ -3106,22 +3106,22 @@ int func_74(BOOL bParam0) // Position - 0x400F
 		case 0:
 		case 3:
 			if (bParam0)
-				Global_113810.f_10052.f_100 = Global_113810.f_10052.f_100 + 1;
+				G_MissionStats.f_10052.f_100 = G_MissionStats.f_10052.f_100 + 1;
 		
-			return Global_113810.f_10052.f_100;
+			return G_MissionStats.f_10052.f_100;
 	
 		case 4:
 			if (bParam0)
-				Global_113810.f_10052.f_101 = Global_113810.f_10052.f_101 + 1;
+				G_MissionStats.f_10052.f_101 = G_MissionStats.f_10052.f_101 + 1;
 		
-			return Global_113810.f_10052.f_101;
+			return G_MissionStats.f_10052.f_101;
 	
 		case 5:
 		case 15:
 			if (bParam0)
-				Global_113810.f_10052.f_102 = Global_113810.f_10052.f_102 + 1;
+				G_MissionStats.f_10052.f_102 = G_MissionStats.f_10052.f_102 + 1;
 		
-			return Global_113810.f_10052.f_102;
+			return G_MissionStats.f_10052.f_102;
 	
 		default:
 			break;
@@ -4335,21 +4335,21 @@ void func_116(Vehicle veParam0, int iParam1) // Position - 0x59CD
 				iParam1 = 2;
 	
 		if (iParam1 != 0 && iParam1 != 1 && iParam1 != 2)
-			iParam1 = Global_113810.f_2366.f_539.f_4321;
+			iParam1 = G_MissionStats.f_2366.f_539.f_4321;
 	}
 
 	for (i = 0; i < 3; i = i + 1)
 	{
 		for (j = 0; j < 2; j = j + 1)
 		{
-			if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_113810.f_32752.f_5038[i][j].f_66)
+			if (ENTITY::GET_ENTITY_MODEL(veParam0) == G_MissionStats.f_32752.f_5038[i][j].f_66)
 			{
-				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_113810.f_32752.f_5038[i][j].f_1)))
+				if (!MISC::IS_STRING_NULL_OR_EMPTY(&(G_MissionStats.f_32752.f_5038[i][j].f_1)))
 				{
-					if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_113810.f_32752.f_5038[i][j].f_1)))
+					if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(G_MissionStats.f_32752.f_5038[i][j].f_1)))
 					{
-						Global_113810.f_32752.f_5038[i][j].f_66 = 0;
-						Global_113810.f_32752.f_5592[i] = j;
+						G_MissionStats.f_32752.f_5038[i][j].f_66 = 0;
+						G_MissionStats.f_32752.f_5592[i] = j;
 					}
 				}
 			}
@@ -4358,16 +4358,16 @@ void func_116(Vehicle veParam0, int iParam1) // Position - 0x59CD
 
 	for (i = 0; i < 3; i = i + 1)
 	{
-		if (ENTITY::GET_ENTITY_MODEL(veParam0) == Global_113810.f_32752.f_5600[i].f_66)
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(Global_113810.f_32752.f_5600[i].f_1)))
-				if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(Global_113810.f_32752.f_5600[i].f_1)))
-					Global_113810.f_32752.f_5600[i].f_66 = 0;
+		if (ENTITY::GET_ENTITY_MODEL(veParam0) == G_MissionStats.f_32752.f_5600[i].f_66)
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(&(G_MissionStats.f_32752.f_5600[i].f_1)))
+				if (MISC::ARE_STRINGS_EQUAL(VEHICLE::GET_VEHICLE_NUMBER_PLATE_TEXT(veParam0), &(G_MissionStats.f_32752.f_5600[i].f_1)))
+					G_MissionStats.f_32752.f_5600[i].f_66 = 0;
 	}
 
-	Global_113810.f_32752.f_5590 = iParam1;
+	G_MissionStats.f_32752.f_5590 = iParam1;
 	Global_78384 = veParam0;
-	Global_113810.f_32752.f_5588 = 1;
-	func_117(veParam0, &(Global_113810.f_32752.f_5510));
+	G_MissionStats.f_32752.f_5588 = 1;
+	func_117(veParam0, &(G_MissionStats.f_32752.f_5510));
 	return;
 }
 
@@ -6893,7 +6893,7 @@ BOOL func_141(Vehicle veParam0, int iParam1, BOOL bParam2) // Position - 0xBC34
 
 	for (i = 0; func_142(iParam1, i, &garageName, &num); i = i + 1)
 	{
-		if (!bParam2 || IS_BIT_SET(Global_113810.f_7232[num], 0))
+		if (!bParam2 || IS_BIT_SET(G_MissionStats.f_7232[num], 0))
 			if (VEHICLE::IS_VEHICLE_IN_GARAGE_AREA(&garageName, veParam0))
 				return true;
 	}

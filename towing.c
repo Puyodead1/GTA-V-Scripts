@@ -3244,11 +3244,11 @@ void main() // Position - 0x0
 				if (num > 0)
 					iLocal_2602 = num;
 				else
-					iLocal_2602 = func_263(100000f, iLocal_418, Global_113810.f_19976.f_9);
+					iLocal_2602 = func_263(100000f, iLocal_418, G_MissionStats.towing.lastNodeIndex);
 			}
 			else
 			{
-				if (Global_113810.f_19976.f_3 == 0)
+				if (G_MissionStats.towing.jobsCompleted == 0)
 					bLocal_2957 = true;
 			
 				if (!_IS_MISSION_REPLAY_IN_PROGRESS())
@@ -3257,8 +3257,8 @@ void main() // Position - 0x0
 				}
 				else
 				{
-					iLocal_2602 = Global_113810.f_19976.f_9;
-					iLocal_418 = Global_113810.f_19976.f_2;
+					iLocal_2602 = G_MissionStats.towing.lastNodeIndex;
+					iLocal_418 = G_MissionStats.towing.eLastNode;
 				}
 			
 				eScriptParam_3136.f_3 = iLocal_418;
@@ -3275,7 +3275,7 @@ void main() // Position - 0x0
 	{
 		bLocal_2960 = true;
 	
-		if (Global_113810.f_19976.f_6 % 2 == 0)
+		if (G_MissionStats.towing.handiCompleted % 2 == 0)
 			bLocal_2963 = true;
 	}
 	else if (iLocal_418 == 2)
@@ -3299,7 +3299,7 @@ void main() // Position - 0x0
 	func_256();
 	func_232(&eScriptParam_3136);
 
-	if (Global_113810.f_19976.f_3 >= 5)
+	if (G_MissionStats.towing.jobsCompleted >= 5)
 	{
 		bLocal_2943 = true;
 		bLocal_2943 = bLocal_2943;
@@ -3931,13 +3931,13 @@ void func_13(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 					}
 					else if (iLocal_418 == 1)
 					{
-						if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+						if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 						{
 							_CONVERSATION_INITIALIZE_ACTOR(&uParam0, 5, uParam165->[0], "TOWTRAINF", 0, 1);
 							_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_MECH", 7, 0, 0, 0);
 							sLocal_481 = "TOW_MECH";
 						}
-						else if (Global_113810.f_19976.f_5 == 2)
+						else if (G_MissionStats.towing.trainCompleted == 2)
 						{
 							_CONVERSATION_INITIALIZE_ACTOR(&uParam0, 6, uParam165->[0], "TOWILLEGALMAN2", 0, 1);
 							_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_MECH2", 7, 0, 0, 0);
@@ -3952,13 +3952,13 @@ void func_13(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 					}
 					else if (iLocal_418 == 3)
 					{
-						if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+						if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 						{
 							_CONVERSATION_INITIALIZE_ACTOR(&uParam0, 5, uParam165->[0], "TOWBREAKM", 0, 1);
 							_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_CONV", 7, 0, 0, 0);
 							sLocal_481 = "TOW_BRK_CONV";
 						}
-						else if (Global_113810.f_19976.f_7 == 2)
+						else if (G_MissionStats.towing.breakDownCompleted == 2)
 						{
 							_CONVERSATION_INITIALIZE_ACTOR(&uParam0, 6, uParam165->[0], "TOWBREAKHIPM", 0, 1);
 							_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_CON2", 7, 0, 0, 0);
@@ -4346,11 +4346,11 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x1851
 	if (func_32(14))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[0])
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[0])
 				Global_20500 = CHAR_MICHAEL;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[1])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[1])
 				Global_20500 = CHAR_FRANKLIN;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[2])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[2])
 				Global_20500 = CHAR_TREVOR;
 			else
 				Global_20500 = CHAR_MICHAEL;
@@ -4375,7 +4375,7 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x1851
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x18F3
 {
 	func_27();
-	return Global_113810.f_2366.f_539.f_4321;
+	return G_MissionStats.f_2366.f_539.f_4321;
 }
 
 void func_27() // Position - 0x190C
@@ -4384,30 +4384,30 @@ void func_27() // Position - 0x190C
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_113810.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(G_MissionStats.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
 			if (func_28(character) && !func_32(14) || Global_112760)
 			{
-				if (Global_113810.f_2366.f_539.f_4321 != character && func_28(Global_113810.f_2366.f_539.f_4321))
-					Global_113810.f_2366.f_539.f_4322 = Global_113810.f_2366.f_539.f_4321;
+				if (G_MissionStats.f_2366.f_539.f_4321 != character && func_28(G_MissionStats.f_2366.f_539.f_4321))
+					G_MissionStats.f_2366.f_539.f_4322 = G_MissionStats.f_2366.f_539.f_4321;
 			
-				Global_113810.f_2366.f_539.f_4323 = character;
-				Global_113810.f_2366.f_539.f_4321 = character;
+				G_MissionStats.f_2366.f_539.f_4323 = character;
+				G_MissionStats.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113810.f_2366.f_539.f_4321 != _CHAR_NULL)
-				Global_113810.f_2366.f_539.f_4323 = Global_113810.f_2366.f_539.f_4321;
+			if (G_MissionStats.f_2366.f_539.f_4321 != _CHAR_NULL)
+				G_MissionStats.f_2366.f_539.f_4323 = G_MissionStats.f_2366.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_113810.f_2366.f_539.f_4321 = 145;
+	G_MissionStats.f_2366.f_539.f_4321 = 145;
 	return;
 }
 
@@ -4605,7 +4605,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWTRAINF", 0, 1);
@@ -4614,7 +4614,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_SHOCKGEN", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWILLEGALMAN2", 0, 1);
@@ -4626,7 +4626,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWBREAKM", 0, 1);
@@ -4635,7 +4635,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_SHK", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWBREAKHIPM", 0, 1);
@@ -4661,7 +4661,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWTRAINF", 0, 1);
@@ -4670,7 +4670,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_DAMCAR", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWILLEGALMAN2", 0, 1);
@@ -4682,7 +4682,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWBREAKM", 0, 1);
@@ -4691,7 +4691,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_DMG", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWBREAKHIPM", 0, 1);
@@ -4717,7 +4717,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWTRAINF", 0, 1);
@@ -4726,7 +4726,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_HARMED", 7, 0, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWILLEGALMAN2", 0, 1);
@@ -4738,7 +4738,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWBREAKM", 0, 1);
@@ -4747,7 +4747,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_HRM", 7, 0, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWBREAKHIPM", 0, 1);
@@ -4773,7 +4773,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWTRAINF", 0, 1);
@@ -4782,7 +4782,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_DESERTED", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWILLEGALMAN2", 0, 1);
@@ -4794,7 +4794,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uParam165->[0], "TOWBREAKM", 0, 1);
@@ -4803,7 +4803,7 @@ void func_38(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, va
 						if (_CONVERSATION_ADD_LINE(&uParam0, "TOWAUD", "TOW_BRK_DSRT", 7, 1, 0, 0))
 							bLocal_463 = true;
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uParam165->[0], "TOWBREAKHIPM", 0, 1);
@@ -5020,7 +5020,7 @@ BOOL func_48(var uParam0, var uParam1) // Position - 0x2676
 void func_49() // Position - 0x279F
 {
 	func_53(&Global_112460, 3);
-	func_301(&(Global_113810.f_19976.f_1), 8192);
+	func_301(&(G_MissionStats.towing.bools), 8192);
 	func_50();
 	func_194();
 	return;
@@ -5493,20 +5493,20 @@ void func_62(int iParam0, int iParam1) // Position - 0x3131
 {
 	int outValue;
 
-	func_64(Global_113810.f_24907[iParam0], func_99(iParam0), iParam1, false, false);
+	func_64(G_MissionStats.f_24907[iParam0], func_99(iParam0), iParam1, false, false);
 
 	switch (iParam0)
 	{
 		case 3:
-			Global_113810.f_24907.f_69 = Global_113810.f_24907.f_69 + iParam1;
+			G_MissionStats.f_24907.f_69 = G_MissionStats.f_24907.f_69 + iParam1;
 			break;
 	
 		case 2:
-			Global_113810.f_24907.f_70 = Global_113810.f_24907.f_70 + iParam1;
+			G_MissionStats.f_24907.f_70 = G_MissionStats.f_24907.f_70 + iParam1;
 			break;
 	
 		case 0:
-			Global_113810.f_24907.f_71 = Global_113810.f_24907.f_71 + iParam1;
+			G_MissionStats.f_24907.f_71 = G_MissionStats.f_24907.f_71 + iParam1;
 			break;
 	}
 
@@ -6103,14 +6103,14 @@ int func_65(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4) //
 	}
 	else
 	{
-		Global_113810.f_20567.f_233[num3].f_2[Global_113810.f_20567.f_233[num3].f_1] = iParam1;
-		Global_113810.f_20567.f_233[num3].f_2[Global_113810.f_20567.f_233[num3].f_1].f_1 = iParam2;
-		Global_113810.f_20567.f_233[num3].f_2[Global_113810.f_20567.f_233[num3].f_1].f_2 = iParam3;
-		Global_113810.f_20567.f_233[num3] = Global_113810.f_20567.f_233[num3] + 1;
-		Global_113810.f_20567.f_233[num3].f_1 = Global_113810.f_20567.f_233[num3].f_1 + 1;
+		G_MissionStats.f_20567.f_233[num3].f_2[G_MissionStats.f_20567.f_233[num3].f_1] = iParam1;
+		G_MissionStats.f_20567.f_233[num3].f_2[G_MissionStats.f_20567.f_233[num3].f_1].f_1 = iParam2;
+		G_MissionStats.f_20567.f_233[num3].f_2[G_MissionStats.f_20567.f_233[num3].f_1].f_2 = iParam3;
+		G_MissionStats.f_20567.f_233[num3] = G_MissionStats.f_20567.f_233[num3] + 1;
+		G_MissionStats.f_20567.f_233[num3].f_1 = G_MissionStats.f_20567.f_233[num3].f_1 + 1;
 	
-		if (Global_113810.f_20567.f_233[num3].f_1 > 10)
-			Global_113810.f_20567.f_233[num3].f_1 = 0;
+		if (G_MissionStats.f_20567.f_233[num3].f_1 > 10)
+			G_MissionStats.f_20567.f_233[num3].f_1 = 0;
 	}
 
 	func_67(iParam0);
@@ -6133,35 +6133,35 @@ void func_66(BOOL bParam0) // Position - 0x3C87
 	{
 		for (j = 0; j < 11; j = j + 1)
 		{
-			Global_113810.f_20567.f_233[i].f_2[j].f_3 = Global_113810.f_20567.f_233[i].f_2[j];
-			Global_113810.f_20567.f_233[i].f_2[j].f_4 = Global_113810.f_20567.f_233[i].f_2[j].f_1;
-			Global_113810.f_20567.f_233[i].f_2[j].f_5 = Global_113810.f_20567.f_233[i].f_2[j].f_2;
+			G_MissionStats.f_20567.f_233[i].f_2[j].f_3 = G_MissionStats.f_20567.f_233[i].f_2[j];
+			G_MissionStats.f_20567.f_233[i].f_2[j].f_4 = G_MissionStats.f_20567.f_233[i].f_2[j].f_1;
+			G_MissionStats.f_20567.f_233[i].f_2[j].f_5 = G_MissionStats.f_20567.f_233[i].f_2[j].f_2;
 		}
 	}
 
 	for (i = 0; i < 10; i = i + 1)
 	{
-		Global_60667[i][0] = Global_113810.f_20567[i];
-		Global_60667.f_31[i][0] = Global_113810.f_20567.f_11[i];
-		Global_60667.f_62[i][0] = Global_113810.f_20567.f_22[i];
-		Global_60667.f_93[i][0] = Global_113810.f_20567.f_33[i];
-		Global_60667.f_124[i][0] = Global_113810.f_20567.f_44[i];
-		Global_60667.f_155[i][0] = Global_113810.f_20567.f_55[i];
-		Global_60667.f_186[i][0] = Global_113810.f_20567.f_66[i];
-		Global_60667.f_217[i][0] = Global_113810.f_20567.f_77[i];
-		Global_60667.f_248[i][0] = Global_113810.f_20567.f_88[i];
+		Global_60667[i][0] = G_MissionStats.f_20567[i];
+		Global_60667.f_31[i][0] = G_MissionStats.f_20567.f_11[i];
+		Global_60667.f_62[i][0] = G_MissionStats.f_20567.f_22[i];
+		Global_60667.f_93[i][0] = G_MissionStats.f_20567.f_33[i];
+		Global_60667.f_124[i][0] = G_MissionStats.f_20567.f_44[i];
+		Global_60667.f_155[i][0] = G_MissionStats.f_20567.f_55[i];
+		Global_60667.f_186[i][0] = G_MissionStats.f_20567.f_66[i];
+		Global_60667.f_217[i][0] = G_MissionStats.f_20567.f_77[i];
+		Global_60667.f_248[i][0] = G_MissionStats.f_20567.f_88[i];
 	
 		if (!bParam0)
 		{
-			Global_60667[i][1] = Global_113810.f_20567[i];
-			Global_60667.f_31[i][1] = Global_113810.f_20567.f_11[i];
-			Global_60667.f_62[i][1] = Global_113810.f_20567.f_22[i];
-			Global_60667.f_93[i][1] = Global_113810.f_20567.f_33[i];
-			Global_60667.f_124[i][1] = Global_113810.f_20567.f_44[i];
-			Global_60667.f_155[i][1] = Global_113810.f_20567.f_55[i];
-			Global_60667.f_186[i][1] = Global_113810.f_20567.f_66[i];
-			Global_60667.f_217[i][1] = Global_113810.f_20567.f_77[i];
-			Global_60667.f_248[i][1] = Global_113810.f_20567.f_88[i];
+			Global_60667[i][1] = G_MissionStats.f_20567[i];
+			Global_60667.f_31[i][1] = G_MissionStats.f_20567.f_11[i];
+			Global_60667.f_62[i][1] = G_MissionStats.f_20567.f_22[i];
+			Global_60667.f_93[i][1] = G_MissionStats.f_20567.f_33[i];
+			Global_60667.f_124[i][1] = G_MissionStats.f_20567.f_44[i];
+			Global_60667.f_155[i][1] = G_MissionStats.f_20567.f_55[i];
+			Global_60667.f_186[i][1] = G_MissionStats.f_20567.f_66[i];
+			Global_60667.f_217[i][1] = G_MissionStats.f_20567.f_77[i];
+			Global_60667.f_248[i][1] = G_MissionStats.f_20567.f_88[i];
 		}
 	}
 
@@ -6261,16 +6261,16 @@ void func_68(int iParam0) // Position - 0x3F63
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 	{
-		if (IS_BIT_SET(Global_113810.f_20567.f_471, iParam0))
+		if (IS_BIT_SET(G_MissionStats.f_20567.f_471, iParam0))
 		{
 			flag = true;
-			MISC::CLEAR_BIT(&(Global_113810.f_20567.f_471), iParam0);
+			MISC::CLEAR_BIT(&(G_MissionStats.f_20567.f_471), iParam0);
 		}
 	}
-	else if (IS_BIT_SET(Global_113810.f_20567.f_471, iParam0) || IS_BIT_SET(Global_2359296[func_70()].f_681.f_10, iParam0))
+	else if (IS_BIT_SET(G_MissionStats.f_20567.f_471, iParam0) || IS_BIT_SET(Global_2359296[func_70()].f_681.f_10, iParam0))
 	{
 		flag = true;
-		MISC::CLEAR_BIT(&(Global_113810.f_20567.f_471), iParam0);
+		MISC::CLEAR_BIT(&(G_MissionStats.f_20567.f_471), iParam0);
 		MISC::CLEAR_BIT(&(Global_2359296[func_70()].f_681.f_10), iParam0);
 	}
 
@@ -6517,7 +6517,7 @@ BOOL func_77(int iParam0) // Position - 0x429F
 	}
 
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		return IS_BIT_SET(Global_113810.f_20567.f_471, iParam0);
+		return IS_BIT_SET(G_MissionStats.f_20567.f_471, iParam0);
 
 	return IS_BIT_SET(Global_2359296[func_70()].f_681.f_10, iParam0);
 }
@@ -6936,29 +6936,29 @@ void func_100(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4,
 
 void func_101() // Position - 0x4AE6
 {
-	Global_113810.f_19976.f_3 = Global_113810.f_19976.f_3 + 1;
-	Global_113810.f_19976.f_2 = iLocal_418;
+	G_MissionStats.towing.jobsCompleted = G_MissionStats.towing.jobsCompleted + 1;
+	G_MissionStats.towing.eLastNode = iLocal_418;
 
 	switch (iLocal_418)
 	{
 		case 2:
-			Global_113810.f_19976.f_4 = Global_113810.f_19976.f_4 + 1;
+			G_MissionStats.towing.abandonCompleted = G_MissionStats.towing.abandonCompleted + 1;
 			break;
 	
 		case 3:
-			Global_113810.f_19976.f_7 = Global_113810.f_19976.f_7 + 1;
+			G_MissionStats.towing.breakDownCompleted = G_MissionStats.towing.breakDownCompleted + 1;
 			break;
 	
 		case 0:
-			Global_113810.f_19976.f_6 = Global_113810.f_19976.f_6 + 1;
+			G_MissionStats.towing.handiCompleted = G_MissionStats.towing.handiCompleted + 1;
 			break;
 	
 		case 1:
-			Global_113810.f_19976.f_5 = Global_113810.f_19976.f_5 + 1;
+			G_MissionStats.towing.trainCompleted = G_MissionStats.towing.trainCompleted + 1;
 			break;
 	
 		case 4:
-			Global_113810.f_19976.f_8 = Global_113810.f_19976.f_8 + 1;
+			G_MissionStats.towing.accidentCompleted = G_MissionStats.towing.accidentCompleted + 1;
 			break;
 	}
 
@@ -7008,7 +7008,7 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 				PED::SET_PED_KEEP_TASK(uLocal_2994[iLocal_3035], true);
 			}
 		
-			if (Global_113810.f_19976.f_3 == 0 || Global_113810.f_19976.f_3 == 1 || Global_113810.f_19976.f_3 == 4)
+			if (G_MissionStats.towing.jobsCompleted == 0 || G_MissionStats.towing.jobsCompleted == 1 || G_MissionStats.towing.jobsCompleted == 4)
 			{
 				if (ENTITY::DOES_ENTITY_EXIST(pedLocal_2982) && !ENTITY::IS_ENTITY_DEAD(pedLocal_2982, false))
 				{
@@ -7030,23 +7030,23 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 			if (_CONVERSATION_IS_DIALOGUE_IN_PROGRESS())
 				func_173();
 		
-			if (Global_113810.f_19976.f_3 == 0 || Global_113810.f_19976.f_3 == 1 || Global_113810.f_19976.f_3 == 4)
+			if (G_MissionStats.towing.jobsCompleted == 0 || G_MissionStats.towing.jobsCompleted == 1 || G_MissionStats.towing.jobsCompleted == 4)
 			{
-				if (Global_113810.f_19976.f_3 == 0)
+				if (G_MissionStats.towing.jobsCompleted == 0)
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_TUT_ENDA", 9, 0, 0, 0);
-				else if (Global_113810.f_19976.f_3 == 1)
+				else if (G_MissionStats.towing.jobsCompleted == 1)
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_TUT_ENDB", 9, 0, 0, 0);
-				else if (Global_113810.f_19976.f_3 == 4)
+				else if (G_MissionStats.towing.jobsCompleted == 4)
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_TUT_ENDC", 9, 0, 0, 0);
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWBREAKM", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_BRK_THNK", 9, 0, 0, 0);
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWBREAKHIPM", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_BRK_THAN", 9, 0, 0, 0);
@@ -7054,12 +7054,12 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 			}
 			else if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWTRAINF", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_THANK", 9, 0, 0, 0);
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWILLEGALMAN2", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_THANK2", 9, 0, 0, 0);
@@ -7095,7 +7095,7 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 		
 			if (iLocal_418 == 1)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWTRAINF", 0, 1);
@@ -7104,7 +7104,7 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 						if (_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_UNHOOK", 9, 1, 0, 0))
 							bLocal_2976 = true;
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWILLEGALMAN2", 0, 1);
@@ -7116,7 +7116,7 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 			}
 			else if (iLocal_418 == 3)
 			{
-				if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+				if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWBREAKM", 0, 1);
@@ -7125,7 +7125,7 @@ BOOL func_102(char* sParam0) // Position - 0x4BA7
 						if (_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_BRK_UNHK", 9, 1, 0, 0))
 							bLocal_2976 = true;
 				}
-				else if (Global_113810.f_19976.f_7 == 2)
+				else if (G_MissionStats.towing.breakDownCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWBREAKHIPM", 0, 1);
@@ -7402,7 +7402,7 @@ void func_112() // Position - 0x56C2
 {
 	int num;
 
-	if (!ENTITY::IS_ENTITY_DEAD(veLocal_3107, false) && !ENTITY::IS_ENTITY_DEAD(uLocal_2994[0].f_6, false) && VEHICLE::IS_VEHICLE_ATTACHED_TO_TOW_TRUCK(veLocal_3107, uLocal_2994[0].f_6) || Global_113810.f_19976.f_3 == 0 || Global_113810.f_19976.f_3 > 2)
+	if (!ENTITY::IS_ENTITY_DEAD(veLocal_3107, false) && !ENTITY::IS_ENTITY_DEAD(uLocal_2994[0].f_6, false) && VEHICLE::IS_VEHICLE_ATTACHED_TO_TOW_TRUCK(veLocal_3107, uLocal_2994[0].f_6) || G_MissionStats.towing.jobsCompleted == 0 || G_MissionStats.towing.jobsCompleted > 2)
 		return;
 
 	switch (iLocal_3048)
@@ -7592,13 +7592,13 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 							{
 								if (iLocal_418 == 1)
 								{
-									if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+									if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 									{
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[iParam1], "TOWTRAINF", 0, 1);
 										_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_GREET", 9, 1, 0, 0);
 									}
-									else if (Global_113810.f_19976.f_5 == 2)
+									else if (G_MissionStats.towing.trainCompleted == 2)
 									{
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[iParam1], "TOWILLEGALMAN2", 0, 1);
@@ -7609,13 +7609,13 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 								}
 								else if (iLocal_418 == 3)
 								{
-									if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+									if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 									{
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[iParam1], "TOWBREAKM", 0, 1);
 										_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_BRK_GRT", 9, 1, 0, 0);
 									}
-									else if (Global_113810.f_19976.f_7 == 2)
+									else if (G_MissionStats.towing.breakDownCompleted == 2)
 									{
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 										_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[iParam1], "TOWBREAKHIPM", 0, 1);
@@ -7645,7 +7645,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 						{
 							if (!bLocal_2975)
 							{
-								if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+								if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 								{
 									_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 									_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[iParam1], "TOWBREAKM", 0, 1);
@@ -7653,7 +7653,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 									if (_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_CALLING", 9, 1, 0, 0))
 										bLocal_2975 = true;
 								}
-								else if (Global_113810.f_19976.f_7 == 2)
+								else if (G_MissionStats.towing.breakDownCompleted == 2)
 								{
 									_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 1, PLAYER::PLAYER_PED_ID(), "FRANKLIN", 0, 1);
 									_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[iParam1], "TOWBREAKHIPM", 0, 1);
@@ -7719,7 +7719,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 			{
 				if (iLocal_418 == 1)
 				{
-					if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+					if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 					{
 						if (bLocal_2951)
 						{
@@ -7732,7 +7732,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 							_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_INTRUCK", 9, 1, 0, 0);
 						}
 					}
-					else if (Global_113810.f_19976.f_5 == 2)
+					else if (G_MissionStats.towing.trainCompleted == 2)
 					{
 						if (bLocal_2951)
 						{
@@ -7750,7 +7750,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 				}
 				else if (iLocal_418 == 3)
 				{
-					if (Global_113810.f_19976.f_7 == 0 || Global_113810.f_19976.f_7 == 1)
+					if (G_MissionStats.towing.breakDownCompleted == 0 || G_MissionStats.towing.breakDownCompleted == 1)
 					{
 						if (bLocal_2951)
 						{
@@ -7763,7 +7763,7 @@ BOOL func_115(var uParam0, int iParam1, char* sParam2) // Position - 0x5B50
 							_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_BRK_STRT", 9, 1, 0, 0);
 						}
 					}
-					else if (Global_113810.f_19976.f_7 == 2)
+					else if (G_MissionStats.towing.breakDownCompleted == 2)
 					{
 						if (bLocal_2951)
 						{
@@ -8184,9 +8184,9 @@ BOOL func_132(BOOL bParam0, BOOL bParam1) // Position - 0x69C5
 	{
 		bLocal_440 = true;
 	
-		if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+		if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 			uLocal_2994[0] = PED::CREATE_PED_INSIDE_VEHICLE(uLocal_2994[0].f_6, PED_TYPE_MISSION, joaat("A_F_M_BevHills_01"), -1, true, true);
-		else if (Global_113810.f_19976.f_5 == 2)
+		else if (G_MissionStats.towing.trainCompleted == 2)
 			uLocal_2994[0] = PED::CREATE_PED_INSIDE_VEHICLE(uLocal_2994[0].f_6, PED_TYPE_MISSION, joaat("A_M_Y_GenStreet_02"), -1, true, true);
 		else
 			uLocal_2994[0] = PED::CREATE_PED_INSIDE_VEHICLE(uLocal_2994[0].f_6, PED_TYPE_MISSION, uLocal_2987[0], -1, true, true);
@@ -8679,22 +8679,22 @@ int func_152(BOOL bParam0) // Position - 0x77F1
 		case 0:
 		case 3:
 			if (bParam0)
-				Global_113810.f_10052.f_100 = Global_113810.f_10052.f_100 + 1;
+				G_MissionStats.f_10052.f_100 = G_MissionStats.f_10052.f_100 + 1;
 		
-			return Global_113810.f_10052.f_100;
+			return G_MissionStats.f_10052.f_100;
 	
 		case 4:
 			if (bParam0)
-				Global_113810.f_10052.f_101 = Global_113810.f_10052.f_101 + 1;
+				G_MissionStats.f_10052.f_101 = G_MissionStats.f_10052.f_101 + 1;
 		
-			return Global_113810.f_10052.f_101;
+			return G_MissionStats.f_10052.f_101;
 	
 		case 5:
 		case 15:
 			if (bParam0)
-				Global_113810.f_10052.f_102 = Global_113810.f_10052.f_102 + 1;
+				G_MissionStats.f_10052.f_102 = G_MissionStats.f_10052.f_102 + 1;
 		
-			return Global_113810.f_10052.f_102;
+			return G_MissionStats.f_10052.f_102;
 	
 		default:
 			break;
@@ -9923,13 +9923,13 @@ int func_190() // Position - 0x92EF
 			{
 				if (iLocal_418 == 1)
 				{
-					if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+					if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 					{
 						_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWTRAINF", 0, 1);
 						_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_GETOUT", 8, 0, 0, 0);
 						iLocal_3118 = 2;
 					}
-					else if (Global_113810.f_19976.f_5 == 2)
+					else if (G_MissionStats.towing.trainCompleted == 2)
 					{
 						_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWILLEGALMAN2", 0, 1);
 						_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_GETOUT2", 8, 0, 0, 0);
@@ -9972,12 +9972,12 @@ int func_190() // Position - 0x92EF
 		
 			if (func_10(uLocal_2994[0].f_7, uLocal_648[iLocal_2602].f_1, true) < (float)iLocal_3039 + 15)
 			{
-				if (Global_113810.f_19976.f_5 == 0 || Global_113810.f_19976.f_5 == 1)
+				if (G_MissionStats.towing.trainCompleted == 0 || G_MissionStats.towing.trainCompleted == 1)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 5, uLocal_2994[0], "TOWTRAINF", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_GETOUT", 9, 0, 0, 0);
 				}
-				else if (Global_113810.f_19976.f_5 == 2)
+				else if (G_MissionStats.towing.trainCompleted == 2)
 				{
 					_CONVERSATION_INITIALIZE_ACTOR(&uLocal_2346, 6, uLocal_2994[0], "TOWILLEGALMAN2", 0, 1);
 					_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_GETOUT2", 9, 0, 0, 0);
@@ -10582,7 +10582,7 @@ int func_201() // Position - 0xA3DC
 				}
 				else if (bLocal_2964)
 				{
-					if (Global_113810.f_19976.f_4 % 2 == 0)
+					if (G_MissionStats.towing.abandonCompleted % 2 == 0)
 					{
 						if (!ENTITY::IS_ENTITY_DEAD(uLocal_2994[0], false))
 						{
@@ -10701,7 +10701,7 @@ int func_201() // Position - 0xA3DC
 										entityCoords = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) };
 								
 									if (SYSTEM::VDIST2(entityCoords, ENTITY::GET_ENTITY_COORDS(uLocal_2994[0], true)) < 400f)
-										if (Global_113810.f_19976.f_4 % 2 == 0)
+										if (G_MissionStats.towing.abandonCompleted % 2 == 0)
 											_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_HOM_ANG1", 9, 0, 0, 0);
 										else
 											_CONVERSATION_ADD_LINE(&uLocal_2346, "TOWAUD", "TOW_HOM_ANG2", 9, 0, 0, 0);
@@ -12667,7 +12667,7 @@ void func_256() // Position - 0xD562
 	switch (iLocal_418)
 	{
 		case 2:
-			if (Global_113810.f_19976.f_4 % 2 == 0)
+			if (G_MissionStats.towing.abandonCompleted % 2 == 0)
 				sLocal_2622 = "TOWABDBITCHM";
 			else
 				sLocal_2622 = "TOWABDATTACKM";
@@ -12732,7 +12732,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 
 void func_259() // Position - 0xD689
 {
-	iLocal_418 = func_261(Global_113810.f_19976.f_2);
+	iLocal_418 = func_261(G_MissionStats.towing.eLastNode);
 
 	if (!func_260(iLocal_418))
 		iLocal_418 = 3;
@@ -12742,20 +12742,20 @@ void func_259() // Position - 0xD689
 	}
 	else
 	{
-		iLocal_2602 = func_263(1300f, iLocal_418, Global_113810.f_19976.f_9);
-		Global_113810.f_19976.f_9 = iLocal_2602;
+		iLocal_2602 = func_263(1300f, iLocal_418, G_MissionStats.towing.lastNodeIndex);
+		G_MissionStats.towing.lastNodeIndex = iLocal_2602;
 	}
 
 	if (iLocal_2602 == 0)
 		iLocal_418 = 3;
 
-	Global_113810.f_19976.f_2 = iLocal_418;
+	G_MissionStats.towing.eLastNode = iLocal_418;
 	return;
 }
 
 BOOL func_260(int iParam0) // Position - 0xD6F8
 {
-	iLocal_2602 = func_263(1300f, iParam0, Global_113810.f_19976.f_9);
+	iLocal_2602 = func_263(1300f, iParam0, G_MissionStats.towing.lastNodeIndex);
 
 	if (iLocal_2602 == -1)
 		return false;
@@ -12773,45 +12773,45 @@ int func_261(int iParam0) // Position - 0xD726
 
 	if (iParam0 != 2)
 	{
-		if (Global_113810.f_19976.f_4 < num)
+		if (G_MissionStats.towing.abandonCompleted < num)
 		{
-			num = Global_113810.f_19976.f_4;
+			num = G_MissionStats.towing.abandonCompleted;
 			num2 = 2;
 		}
 	}
 
 	if (iParam0 != 0)
 	{
-		if (Global_113810.f_19976.f_6 < num)
+		if (G_MissionStats.towing.handiCompleted < num)
 		{
-			num = Global_113810.f_19976.f_6;
+			num = G_MissionStats.towing.handiCompleted;
 			num2 = 0;
 		}
 	}
 
 	if (iParam0 != 1)
 	{
-		if (Global_113810.f_19976.f_5 < num)
+		if (G_MissionStats.towing.trainCompleted < num)
 		{
-			num = Global_113810.f_19976.f_5;
+			num = G_MissionStats.towing.trainCompleted;
 			num2 = 1;
 		}
 	}
 
 	if (iParam0 != 3)
 	{
-		if (Global_113810.f_19976.f_7 < num)
+		if (G_MissionStats.towing.breakDownCompleted < num)
 		{
-			num = Global_113810.f_19976.f_7;
+			num = G_MissionStats.towing.breakDownCompleted;
 			num2 = 3;
 		}
 	}
 
 	if (iParam0 != 4)
 	{
-		if (Global_113810.f_19976.f_8 < num)
+		if (G_MissionStats.towing.accidentCompleted < num)
 		{
-			num = Global_113810.f_19976.f_8;
+			num = G_MissionStats.towing.accidentCompleted;
 			num2 = 4;
 		}
 	}
@@ -13570,7 +13570,7 @@ int func_273(const char* sParam0, int iParam1, int iParam2) // Position - 0xF8C6
 		{
 			if (Global_100870 >= func_280())
 				if (!IS_BIT_SET(Global_91601[iParam2].f_15, 16))
-					if (Global_113810.f_9088.f_330[iParam2].f_1 >= 2)
+					if (G_MissionStats.f_9088.f_330[iParam2].f_1 >= 2)
 						Global_94989 = 1;
 		}
 		else if (Global_100833.f_11 == 6)
@@ -13578,7 +13578,7 @@ int func_273(const char* sParam0, int iParam1, int iParam2) // Position - 0xF8C6
 			func_275(iParam2, &unk);
 		
 			if (unk.f_31 == 1)
-				if (Global_113810.f_18577[iParam2].f_4 >= 2)
+				if (G_MissionStats.f_18577[iParam2].f_4 >= 2)
 					Global_94989 = 1;
 		}
 		else
@@ -13586,7 +13586,7 @@ int func_273(const char* sParam0, int iParam1, int iParam2) // Position - 0xF8C6
 			num = func_274(SCRIPT::GET_THIS_SCRIPT_NAME());
 		
 			if (num > -1)
-				if (Global_113810.f_24989.f_4[num] >= 2)
+				if (G_MissionStats.f_24989.f_4[num] >= 2)
 					Global_94989 = 1;
 		}
 	}

@@ -188,7 +188,7 @@ BOOL func_2(int iParam0) // Position - 0x28C
 	if (iParam0 == 94 || iParam0 == -1)
 		return false;
 
-	return Global_113810.f_9088.f_330[iParam0];
+	return G_MissionStats.f_9088.f_330[iParam0];
 }
 
 BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2B8

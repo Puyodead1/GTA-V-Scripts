@@ -400,7 +400,7 @@ BOOL func_5(int iParam0) // Position - 0x195
 	if (iParam0 == 94 || iParam0 == -1)
 		return false;
 
-	return Global_113810.f_9088.f_330[iParam0];
+	return G_MissionStats.f_9088.f_330[iParam0];
 }
 
 void func_6() // Position - 0x1C1
@@ -570,7 +570,7 @@ BOOL func_13(int iParam0) // Position - 0x589
 	if (iParam0 == 146 || iParam0 == -1)
 		return false;
 
-	return Global_113810.f_9088.f_99.f_58[iParam0];
+	return G_MissionStats.f_9088.f_99.f_58[iParam0];
 }
 
 void func_14() // Position - 0x5B6

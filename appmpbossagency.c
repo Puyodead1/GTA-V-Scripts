@@ -562,9 +562,9 @@ void func_20(int iParam0) // Position - 0x607
 							{
 								for (j = 0; j < 35; j = j + 1)
 								{
-									if (Global_113810.f_14144[j].f_24 != 0)
-										if (Global_113810.f_14144[j].f_28 == 0)
-											if (Global_113810.f_14144[j].f_99[Global_20500] == 1)
+									if (G_MissionStats.f_14144[j].f_24 != 0)
+										if (G_MissionStats.f_14144[j].f_28 == 0)
+											if (G_MissionStats.f_14144[j].f_99[Global_20500] == 1)
 												Global_22913 = Global_22913 + 1;
 								}
 							

@@ -10,7 +10,7 @@ void main() // Position - 0x0
 		func_10();
 
 	STREAMING::SET_GAME_PAUSES_FOR_STREAMING(false);
-	MISC::CLEAR_BIT(&(Global_113810.f_10019.f_25), 1);
+	MISC::CLEAR_BIT(&(G_MissionStats.f_10019.f_25), 1);
 	func_7();
 	SCRIPT::SET_NO_LOADING_SCREEN(true);
 
@@ -38,7 +38,7 @@ void main() // Position - 0x0
 	{
 		func_7();
 	
-		if (!IS_BIT_SET(Global_113810.f_10019.f_25, 1))
+		if (!IS_BIT_SET(G_MissionStats.f_10019.f_25, 1))
 		{
 			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_0, 255, 255, 255, 255, 0);
 		
@@ -53,7 +53,7 @@ void main() // Position - 0x0
 			}
 			else if (MISC::GET_GAME_TIMER() > iLocal_1)
 			{
-				MISC::SET_BIT(&(Global_113810.f_10019.f_25), 1);
+				MISC::SET_BIT(&(G_MissionStats.f_10019.f_25), 1);
 			
 				if (MISC::HAS_GAME_INSTALLED_THIS_SESSION() || MISC::IS_PC_VERSION())
 				{
@@ -161,7 +161,7 @@ void func_9() // Position - 0x278
 
 void func_10() // Position - 0x286
 {
-	MISC::SET_BIT(&(Global_113810.f_10019.f_25), 1);
+	MISC::SET_BIT(&(G_MissionStats.f_10019.f_25), 1);
 
 	if (iLocal_0 != 0)
 		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_0);

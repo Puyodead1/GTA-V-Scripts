@@ -541,13 +541,13 @@ void func_20() // Position - 0x737
 
 char* func_21() // Position - 0x75B
 {
-	if (IS_BIT_SET(Global_113810.f_24989, 3))
+	if (IS_BIT_SET(G_MissionStats.f_24989, 3))
 		return "BB4_loiter";
-	else if (IS_BIT_SET(Global_113810.f_24989, 2))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 2))
 		return "BB3_loiter";
-	else if (IS_BIT_SET(Global_113810.f_24989, 1))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 1))
 		return "BB2_loiter";
-	else if (IS_BIT_SET(Global_113810.f_24989, 0))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 0))
 		return "BB1_loiter";
 
 	return "MAUDE_loiter";
@@ -1139,13 +1139,13 @@ void func_45(var uParam0, int iParam1, char* sParam2, int iParam3, int iParam4, 
 
 char* func_46() // Position - 0x1306
 {
-	if (IS_BIT_SET(Global_113810.f_24989, 3))
+	if (IS_BIT_SET(G_MissionStats.f_24989, 3))
 		return "BB4AUD";
-	else if (IS_BIT_SET(Global_113810.f_24989, 2))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 2))
 		return "BB3AUD";
-	else if (IS_BIT_SET(Global_113810.f_24989, 1))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 1))
 		return "BB2AUD";
-	else if (IS_BIT_SET(Global_113810.f_24989, 0))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 0))
 		return "BB1AUD";
 
 	return "MAUDEAU";
@@ -1208,13 +1208,13 @@ void func_48(BOOL bParam0, var uParam1) // Position - 0x1402
 
 int func_49() // Position - 0x14EF
 {
-	if (IS_BIT_SET(Global_113810.f_24989, 3))
+	if (IS_BIT_SET(G_MissionStats.f_24989, 3))
 		return 4;
-	else if (IS_BIT_SET(Global_113810.f_24989, 2))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 2))
 		return 4;
-	else if (IS_BIT_SET(Global_113810.f_24989, 1))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 1))
 		return 4;
-	else if (IS_BIT_SET(Global_113810.f_24989, 0))
+	else if (IS_BIT_SET(G_MissionStats.f_24989, 0))
 		return 3;
 
 	return 4;

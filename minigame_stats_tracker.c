@@ -255,8 +255,8 @@ void main() // Position - 0x0
 				func_12(1);
 				func_9(&uLocal_45);
 			
-				if (!func_8(Global_113810.f_19100, 4096))
-					func_6(&(Global_113810.f_19100), 4096);
+				if (!func_8(G_MissionStats.f_19100, 4096))
+					func_6(&(G_MissionStats.f_19100), 4096);
 			
 				iLocal_43 = 3;
 				break;

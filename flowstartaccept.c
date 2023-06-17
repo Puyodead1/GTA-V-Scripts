@@ -96,7 +96,7 @@ void main() // Position - 0x0
 	}
 
 	Global_78960.f_1 = 0;
-	MISC::SET_BIT(&(Global_113810.f_10019.f_25), 0);
+	MISC::SET_BIT(&(G_MissionStats.f_10019.f_25), 0);
 	func_6();
 	return;
 }

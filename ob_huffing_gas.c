@@ -1284,11 +1284,11 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x1273
 	if (func_18(14))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[0])
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[0])
 				Global_20500 = CHAR_MICHAEL;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[1])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[1])
 				Global_20500 = CHAR_FRANKLIN;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[2])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[2])
 				Global_20500 = CHAR_TREVOR;
 			else
 				Global_20500 = CHAR_MICHAEL;
@@ -1430,7 +1430,7 @@ void _CONVERSATION_INITIALIZE_ACTOR(var uParam0, int iParam1, Ped pedParam2, cha
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x14FB
 {
 	func_25();
-	return Global_113810.f_2366.f_539.f_4321;
+	return G_MissionStats.f_2366.f_539.f_4321;
 }
 
 void func_25() // Position - 0x1514
@@ -1439,30 +1439,30 @@ void func_25() // Position - 0x1514
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_113810.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(G_MissionStats.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
 			if (func_26(character) && !func_18(14) || Global_112760)
 			{
-				if (Global_113810.f_2366.f_539.f_4321 != character && func_26(Global_113810.f_2366.f_539.f_4321))
-					Global_113810.f_2366.f_539.f_4322 = Global_113810.f_2366.f_539.f_4321;
+				if (G_MissionStats.f_2366.f_539.f_4321 != character && func_26(G_MissionStats.f_2366.f_539.f_4321))
+					G_MissionStats.f_2366.f_539.f_4322 = G_MissionStats.f_2366.f_539.f_4321;
 			
-				Global_113810.f_2366.f_539.f_4323 = character;
-				Global_113810.f_2366.f_539.f_4321 = character;
+				G_MissionStats.f_2366.f_539.f_4323 = character;
+				G_MissionStats.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113810.f_2366.f_539.f_4321 != _CHAR_NULL)
-				Global_113810.f_2366.f_539.f_4323 = Global_113810.f_2366.f_539.f_4321;
+			if (G_MissionStats.f_2366.f_539.f_4321 != _CHAR_NULL)
+				G_MissionStats.f_2366.f_539.f_4323 = G_MissionStats.f_2366.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_113810.f_2366.f_539.f_4321 = 145;
+	G_MissionStats.f_2366.f_539.f_4321 = 145;
 	return;
 }
 
@@ -1564,14 +1564,14 @@ void func_33(float fParam0) // Position - 0x1749
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		if (func_39(&(Global_113810.f_18106.f_175[i].f_5)))
-			func_34(&(Global_113810.f_18106.f_175[i].f_5), fParam0 * 60f);
+		if (func_39(&(G_MissionStats.f_18106.f_175[i].f_5)))
+			func_34(&(G_MissionStats.f_18106.f_175[i].f_5), fParam0 * 60f);
 	}
 
 	for (j = 0; j < 6; j = j + 1)
 	{
-		if (func_39(&Global_113810.f_18106.f_362[j]))
-			func_34(&Global_113810.f_18106.f_362[j], fParam0 * 60f);
+		if (func_39(&G_MissionStats.f_18106.f_362[j]))
+			func_34(&G_MissionStats.f_18106.f_362[j], fParam0 * 60f);
 	}
 
 	AUDIO::SKIP_RADIO_FORWARD();
@@ -3673,7 +3673,7 @@ BOOL func_93() // Position - 0x3C8D
 			break;
 	
 		case joaat("prop_mr_raspberry_01"):
-			if (Global_113810.f_7264.f_227[145] == 1)
+			if (G_MissionStats.f_7264.f_227[145] == 1)
 				if (_GET_CURRENT_PLAYER_CHARACTER() == CHAR_TREVOR)
 					if (Global_95819[13] != 127 && Global_95819[13] != 135 && Global_95835 != 127 && Global_95835 != 135 && !func_95() && !func_97())
 						return true;
@@ -3729,7 +3729,7 @@ BOOL func_94(int iParam0) // Position - 0x3FC2
 	if (iParam0 == 146 || iParam0 == -1)
 		return false;
 
-	return Global_113810.f_9088.f_99.f_58[iParam0];
+	return G_MissionStats.f_9088.f_99.f_58[iParam0];
 }
 
 BOOL func_95() // Position - 0x3FEF
@@ -3745,7 +3745,7 @@ BOOL func_96(int iParam0) // Position - 0x400B
 	if (iParam0 == 94 || iParam0 == -1)
 		return false;
 
-	return Global_113810.f_9088.f_330[iParam0];
+	return G_MissionStats.f_9088.f_330[iParam0];
 }
 
 BOOL func_97() // Position - 0x4037

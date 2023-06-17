@@ -202,7 +202,7 @@ void main() // Position - 0x0
 		if (SYSTEM::VDIST2(func_60(), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) < 40000f)
 			if (CAM::IS_SCREEN_FADED_IN())
 				if (PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
-					Global_113810.f_25076.f_8 = 1;
+					G_MissionStats.f_25076.f_8 = 1;
 
 	MISC::SET_THIS_IS_A_TRIGGER_SCRIPT(true);
 
@@ -243,10 +243,10 @@ void func_1() // Position - 0x165
 	if (func_10())
 	{
 		func_8();
-		func_6(Global_113810.f_25076);
+		func_6(G_MissionStats.f_25076);
 	}
 
-	Global_113810.f_25076.f_8 = 1;
+	G_MissionStats.f_25076.f_8 = 1;
 	func_5(65, 0, false);
 	func_4();
 	func_2();
@@ -343,28 +343,28 @@ void func_6(int iParam0) // Position - 0x321
 	switch (iParam0)
 	{
 		case 0:
-			Global_113810.f_25076 = 1;
-			Global_113810.f_25076.f_3 = 1;
+			G_MissionStats.f_25076 = 1;
+			G_MissionStats.f_25076.f_3 = 1;
 			break;
 	
 		case 1:
-			Global_113810.f_25076 = 2;
-			Global_113810.f_25076.f_4 = 1;
+			G_MissionStats.f_25076 = 2;
+			G_MissionStats.f_25076.f_4 = 1;
 			break;
 	
 		case 2:
-			Global_113810.f_25076 = 3;
-			Global_113810.f_25076.f_5 = 1;
+			G_MissionStats.f_25076 = 3;
+			G_MissionStats.f_25076.f_5 = 1;
 			break;
 	
 		case 3:
-			Global_113810.f_25076 = 4;
-			Global_113810.f_25076.f_6 = 1;
+			G_MissionStats.f_25076 = 4;
+			G_MissionStats.f_25076.f_6 = 1;
 			break;
 	
 		case 4:
-			Global_113810.f_25076 = 0;
-			Global_113810.f_25076.f_7 = 1;
+			G_MissionStats.f_25076 = 0;
+			G_MissionStats.f_25076.f_7 = 1;
 			break;
 	}
 
@@ -390,7 +390,7 @@ void func_8() // Position - 0x3ED
 
 	HUD::CLEAR_HELP(true);
 	TEXT_LABEL_ASSIGN_STRING(&unk, "CRACEWIN", 16);
-	TEXT_LABEL_APPEND_INT(&unk, Global_113810.f_25076 + 1, 16);
+	TEXT_LABEL_APPEND_INT(&unk, G_MissionStats.f_25076 + 1, 16);
 	_DISPLAY_HELP_TEXT(&unk, -1);
 	return;
 }
@@ -860,7 +860,7 @@ struct<4> func_26() // Position - 0xB51
 	var unk;
 
 	TEXT_LABEL_ASSIGN_STRING(&unk, "CRACEHELP", 16);
-	TEXT_LABEL_APPEND_INT(&unk, Global_113810.f_25076 + 1, 16);
+	TEXT_LABEL_APPEND_INT(&unk, G_MissionStats.f_25076 + 1, 16);
 	return unk;
 }
 
@@ -1319,12 +1319,12 @@ BOOL func_42() // Position - 0x1530
 
 BOOL func_43() // Position - 0x1574
 {
-	if (!Global_113810.f_25076.f_9 && !Global_113810.f_25076.f_8 && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) < 84100f)
+	if (!G_MissionStats.f_25076.f_9 && !G_MissionStats.f_25076.f_8 && SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), func_60()) < 84100f)
 	{
-		Global_113810.f_25076.f_9 = func_54();
+		G_MissionStats.f_25076.f_9 = func_54();
 		func_51();
 	
-		if (!Global_113810.f_25076.f_9)
+		if (!G_MissionStats.f_25076.f_9)
 		{
 			if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(pedLocal_156) && _DOES_ENTITY_EXIST_AND_IS_ALIVE(veLocal_155))
 			{
@@ -1346,14 +1346,14 @@ BOOL func_43() // Position - 0x1574
 			func_15(&pedLocal_156, true);
 			func_14(&veLocal_155, true);
 		
-			if (Global_113810.f_25076.f_9)
-				Global_113810.f_25076.f_9 = 0;
+			if (G_MissionStats.f_25076.f_9)
+				G_MissionStats.f_25076.f_9 = 0;
 		
-			if (Global_113810.f_25076.f_8)
-				Global_113810.f_25076.f_8 = 0;
+			if (G_MissionStats.f_25076.f_8)
+				G_MissionStats.f_25076.f_8 = 0;
 		}
 	
-		if (Global_113810.f_25076.f_9)
+		if (G_MissionStats.f_25076.f_9)
 		{
 			func_15(&pedLocal_156, false);
 			func_14(&veLocal_155, false);
@@ -1408,7 +1408,7 @@ void func_44(BOOL bParam0) // Position - 0x1714
 			veLocal_155 = VEHICLE::CREATE_VEHICLE(func_50(), func_49(), func_48(), true, true, false);
 			VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(veLocal_155, 1084227584);
 		
-			if (Global_113810.f_25076 == 4)
+			if (G_MissionStats.f_25076 == 4)
 			{
 				VEHICLE::SET_VEHICLE_LIVERY(veLocal_155, 0);
 				VEHICLE::SET_VEHICLE_COLOURS(veLocal_155, 44, 83);
@@ -1432,7 +1432,7 @@ void func_44(BOOL bParam0) // Position - 0x1714
 
 void func_45(Ped pedParam0) // Position - 0x182A
 {
-	switch (Global_113810.f_25076)
+	switch (G_MissionStats.f_25076)
 	{
 		case 0:
 			PED::SET_PED_COMPONENT_VARIATION(pedParam0, PV_COMP_HEAD, 0, 0, 0);
@@ -1500,7 +1500,7 @@ Vector3 func_49() // Position - 0x199B
 
 Hash func_50() // Position - 0x19B2
 {
-	switch (Global_113810.f_25076)
+	switch (G_MissionStats.f_25076)
 	{
 		case 0:
 			return joaat("stalion2");
@@ -1530,7 +1530,7 @@ void func_51() // Position - 0x1A20
 			if (!func_53(pedLocal_156, SCRIPT_TASK_START_SCENARIO_IN_PLACE, true))
 				TASK::TASK_START_SCENARIO_IN_PLACE(pedLocal_156, "WORLD_HUMAN_STAND_IMPATIENT", -1, true);
 		
-			if (func_52(veLocal_155) || Global_113810.f_25076.f_9)
+			if (func_52(veLocal_155) || G_MissionStats.f_25076.f_9)
 			{
 				PED::SET_PED_SHOULD_PLAY_IMMEDIATE_SCENARIO_EXIT(pedLocal_156);
 				TASK::TASK_COMBAT_PED(pedLocal_156, PLAYER::PLAYER_PED_ID(), 0, 16);
@@ -1639,25 +1639,25 @@ void func_56() // Position - 0x1C6B
 {
 	if (!func_59(0, 19))
 	{
-		Global_113810.f_25076.f_8 = 1;
+		G_MissionStats.f_25076.f_8 = 1;
 		func_62(false);
 	}
 
 	if (func_21(9) && iLocal_153 == 0)
 	{
-		Global_113810.f_25076.f_8 = 1;
+		G_MissionStats.f_25076.f_8 = 1;
 		func_62(false);
 	}
 
 	if (func_58(13))
 	{
-		Global_113810.f_25076.f_8 = 1;
+		G_MissionStats.f_25076.f_8 = 1;
 		func_62(false);
 	}
 
 	if (!_IS_EXCLUSIVE_CONTENT_UNLOCKED())
 	{
-		Global_113810.f_25076.f_8 = 1;
+		G_MissionStats.f_25076.f_8 = 1;
 		func_62(false);
 	}
 
@@ -1741,7 +1741,7 @@ BOOL func_59(int iParam0, int iParam1) // Position - 0x1E29
 	if (iParam1 < 0 || iParam1 >= 32)
 		return false;
 
-	flag = IS_BIT_SET(Global_113810.f_9088.f_99.f_219[iParam0], iParam1);
+	flag = IS_BIT_SET(G_MissionStats.f_9088.f_99.f_219[iParam0], iParam1);
 	return flag;
 }
 

@@ -13106,7 +13106,7 @@ BOOL func_319(int iParam0, int iParam1, BOOL bParam2) // Position - 0xDE0B
 		if (func_232() == 0)
 			return IS_BIT_SET(func_222(func_320(iParam0), -1), iParam1);
 	else
-		return IS_BIT_SET(Global_113810.f_668[iParam0], iParam1);
+		return IS_BIT_SET(G_MissionStats.f_668[iParam0], iParam1);
 
 	return false;
 }

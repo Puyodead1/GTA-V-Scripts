@@ -56,7 +56,7 @@ void main() // Position - 0x0
 	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
 
-	if (Global_113810.f_10197.f_3854 == 0)
+	if (G_MissionStats.f_10197.f_3854 == 0)
 		func_10();
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
@@ -101,7 +101,7 @@ void func_1(int iParam0, int iParam1, BOOL bParam2, BOOL bParam3, int iParam4) /
 		if (Global_78689)
 			Global_42911.f_227[iParam0] = iParam1;
 		else
-			Global_113810.f_7264.f_227[iParam0] = iParam1;
+			G_MissionStats.f_7264.f_227[iParam0] = iParam1;
 	
 		Global_39917[iParam0] = bParam2;
 		Global_40116[iParam0] = 1;
@@ -194,7 +194,7 @@ BOOL func_4(int iParam0, BOOL bParam1, int iParam2, BOOL bParam3) // Position - 
 	func_8(&vector, iParam0);
 
 	if (func_5())
-		num = Global_113810.f_7264.f_227[iParam0];
+		num = G_MissionStats.f_7264.f_227[iParam0];
 	else
 		num = Global_42911.f_227[iParam0];
 

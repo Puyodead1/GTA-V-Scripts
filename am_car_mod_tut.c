@@ -578,7 +578,7 @@ void func_11(int iParam0, int iParam1, BOOL bParam2) // Position - 0x488
 	}
 	else
 	{
-		MISC::CLEAR_BIT(&Global_113810.f_668[iParam0], iParam1);
+		MISC::CLEAR_BIT(&G_MissionStats.f_668[iParam0], iParam1);
 	}
 
 	return;
@@ -869,7 +869,7 @@ void func_19(int iParam0, int iParam1, BOOL bParam2) // Position - 0x952
 	}
 	else
 	{
-		MISC::SET_BIT(&Global_113810.f_668[iParam0], iParam1);
+		MISC::SET_BIT(&G_MissionStats.f_668[iParam0], iParam1);
 	}
 
 	return;
@@ -1096,7 +1096,7 @@ BOOL func_23(int iParam0, int iParam1, BOOL bParam2) // Position - 0xD2F
 		if (func_18() == 0)
 			return IS_BIT_SET(func_16(func_17(iParam0), -1), iParam1);
 	else
-		return IS_BIT_SET(Global_113810.f_668[iParam0], iParam1);
+		return IS_BIT_SET(G_MissionStats.f_668[iParam0], iParam1);
 
 	return false;
 }

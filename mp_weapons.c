@@ -9811,7 +9811,7 @@ int _IS_EXCLUSIVE_CONTENT_UNLOCKED() // Position - 0xB364
 BOOL func_109(BOOL bParam0, BOOL bParam1) // Position - 0xB41C
 {
 	if (bParam0)
-		if (IS_BIT_SET(Global_113810.f_668.f_1320, 2))
+		if (IS_BIT_SET(G_MissionStats.f_668.f_1320, 2))
 			return true;
 
 	if (NETWORK::NETWORK_HAS_SOCIAL_CLUB_ACCOUNT())

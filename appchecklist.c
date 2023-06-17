@@ -855,7 +855,7 @@ void func_20() // Position - 0xCE1
 
 	for (i = 0; i < 63; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113810.f_18577[i], 0) && IS_BIT_SET(Global_113810.f_18577[i], 1) && !IS_BIT_SET(Global_113810.f_18577[i], 3))
+		if (IS_BIT_SET(G_MissionStats.f_18577[i], 0) && IS_BIT_SET(G_MissionStats.f_18577[i], 1) && !IS_BIT_SET(G_MissionStats.f_18577[i], 3))
 		{
 			if (Global_95814 < 52)
 			{
@@ -871,7 +871,7 @@ void func_20() // Position - 0xCE1
 
 	for (i = 0; i < 20; i = i + 1)
 	{
-		if (IS_BIT_SET(Global_113810.f_9088.f_99.f_219[0], i))
+		if (IS_BIT_SET(G_MissionStats.f_9088.f_99.f_219[0], i))
 		{
 			if (Global_95814 < 52)
 			{
@@ -1252,7 +1252,7 @@ struct<2> func_24(int iParam0) // Position - 0x13E1
 
 	if (iParam0 == 90)
 	{
-		switch (Global_113810.f_9088.f_99.f_205[7])
+		switch (G_MissionStats.f_9088.f_99.f_205[7])
 		{
 			case 1:
 				TEXT_LABEL_APPEND_STRING(&unk, "A", 8);

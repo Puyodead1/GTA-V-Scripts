@@ -940,7 +940,7 @@ void func_24() // Position - 0x18BA
 
 void func_25(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, int iParam5) // Position - 0x1A7B
 {
-	Global_113810.f_1.f_73[iParam0] = iParam1;
+	G_MissionStats.f_1.f_73[iParam0] = iParam1;
 	func_26(iParam0, 0, iParam2);
 	func_26(iParam0, 1, iParam3);
 	func_26(iParam0, 2, iParam4);
@@ -950,7 +950,7 @@ void func_25(int iParam0, int iParam1, int iParam2, int iParam3, int iParam4, in
 
 void func_26(int iParam0, int iParam1, int iParam2) // Position - 0x1AB5
 {
-	func_27(iParam1, iParam2, &(Global_113810.f_1.f_73[iParam0].f_1), &(Global_113810.f_1.f_73[iParam0].f_2));
+	func_27(iParam1, iParam2, &(G_MissionStats.f_1.f_73[iParam0].f_1), &(G_MissionStats.f_1.f_73[iParam0].f_2));
 	return;
 }
 
@@ -996,11 +996,11 @@ void func_29(int iParam0, int iParam1, int iParam2, BOOL bParam3) // Position - 
 	Global_96688[iParam0].f_1 = iParam2;
 
 	if (bParam3)
-		MISC::SET_BIT(&(Global_113810.f_1.f_116), iParam0);
+		MISC::SET_BIT(&(G_MissionStats.f_1.f_116), iParam0);
 	else
-		MISC::CLEAR_BIT(&(Global_113810.f_1.f_116), iParam0);
+		MISC::CLEAR_BIT(&(G_MissionStats.f_1.f_116), iParam0);
 
-	MISC::CLEAR_BIT(&(Global_113810.f_1.f_118), iParam0);
+	MISC::CLEAR_BIT(&(G_MissionStats.f_1.f_118), iParam0);
 	return;
 }
 
@@ -2270,7 +2270,7 @@ void func_80(int iParam0, float fParam1, float fParam2, float fParam3, char* sPa
 	num3 >= 5;
 	func_84(iParam0, fParam1, sParam4, iParam5, bParam6, iParam7, 1);
 
-	if (Global_113810.f_2355[num3] >= 1 || func_83(108) == 1 || func_82(num + num3, 0) || IS_BIT_SET(Global_113810.f_18577[num2 + num3], 3))
+	if (G_MissionStats.f_2355[num3] >= 1 || func_83(108) == 1 || func_82(num + num3, 0) || IS_BIT_SET(G_MissionStats.f_18577[num2 + num3], 3))
 		func_81(iParam0, true);
 
 	return;
@@ -2303,7 +2303,7 @@ void func_81(int iParam0, BOOL bParam1) // Position - 0x51ED
 
 BOOL func_82(int iParam0, int iParam1) // Position - 0x5273
 {
-	if (Global_113810.f_10197[iParam0].f_5 == 1)
+	if (G_MissionStats.f_10197[iParam0].f_5 == 1)
 	{
 		iParam1 == 1;
 		return true;
@@ -2317,7 +2317,7 @@ int func_83(int iParam0) // Position - 0x529A
 	if (iParam0 == 146 || iParam0 == -1)
 		return 0;
 
-	return Global_113810.f_9088.f_99.f_58[iParam0];
+	return G_MissionStats.f_9088.f_99.f_58[iParam0];
 }
 
 void func_84(int iParam0, float fParam1, float fParam2, float fParam3, char* sParam4, int iParam5, BOOL bParam6, int iParam7, int iParam8) // Position - 0x52C7

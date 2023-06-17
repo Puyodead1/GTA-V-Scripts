@@ -2061,7 +2061,7 @@ void func_40(BOOL bParam0, BOOL bParam1) // Position - 0x42A9
 		}
 	}
 
-	if (Global_113810.f_9088 || _IS_MISSION_REPEAT_ACTIVE(false))
+	if (G_MissionStats.f_9088 || _IS_MISSION_REPEAT_ACTIVE(false))
 	{
 		num = func_41();
 		num2 = Global_91565[num];
@@ -2069,7 +2069,7 @@ void func_40(BOOL bParam0, BOOL bParam1) // Position - 0x42A9
 	
 		if (num == -1)
 		{
-			Global_113810.f_9088;
+			G_MissionStats.f_9088;
 			return;
 		}
 	

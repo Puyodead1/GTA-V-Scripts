@@ -1997,7 +1997,7 @@ BOOL _IS_MISSION_REPEAT_ACTIVE(BOOL bExcludeBenchmark) // Position - 0x2199
 
 BOOL func_45() // Position - 0x21C1
 {
-	if (Global_113810.f_9088.f_330[0])
+	if (G_MissionStats.f_9088.f_330[0])
 		return true;
 
 	return false;

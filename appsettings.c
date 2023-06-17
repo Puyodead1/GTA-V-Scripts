@@ -101,8 +101,8 @@ void main() // Position - 0x0
 		fLocal_62 = 0.77f;
 	}
 
-	Global_9175[Global_20500][2].f_259 = Global_113810.f_14054[Global_20500].f_6;
-	Global_9175[Global_20500][4].f_259 = Global_113810.f_14054[Global_20500].f_9;
+	Global_9175[Global_20500][2].f_259 = G_MissionStats.f_14054[Global_20500].f_6;
+	Global_9175[Global_20500][4].f_259 = G_MissionStats.f_14054[Global_20500].f_9;
 
 	for (i = 0; i < 9; i = i + 1)
 	{
@@ -112,16 +112,16 @@ void main() // Position - 0x0
 			Global_9175[Global_20500][2].f_259 = func_45(2030, -1);
 			Global_9175[Global_20500][4].f_259 = func_45(2029, -1);
 		}
-		else if (MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14054[Global_20500].f_11), &Global_9175[Global_20500][1].f_144[i]))
+		else if (MISC::ARE_STRINGS_EQUAL(&(G_MissionStats.f_14054[Global_20500].f_11), &Global_9175[Global_20500][1].f_144[i]))
 		{
 			Global_9175[Global_20500][1].f_259 = i;
 		}
 	}
 
 	if (Global_78689)
-		Global_113810.f_14054[3].f_10 = func_45(1198, -1);
+		G_MissionStats.f_14054[3].f_10 = func_45(1198, -1);
 
-	Global_9175[Global_20500][3].f_259 = Global_113810.f_14054[Global_20500].f_10;
+	Global_9175[Global_20500][3].f_259 = G_MissionStats.f_14054[Global_20500].f_10;
 	func_44();
 
 	if (Global_78689)
@@ -183,7 +183,7 @@ void main() // Position - 0x0
 						{
 							bLocal_54 = false;
 							SYSTEM::SETTIMERB(0);
-							Global_113810.f_14054.f_82 = 1;
+							G_MissionStats.f_14054.f_82 = 1;
 							bLocal_55 = true;
 						}
 						else if (SYSTEM::TIMERB() > 7500)
@@ -261,7 +261,7 @@ void func_2() // Position - 0x48C
 	if (bLocal_54)
 		HUD::CLEAR_HELP(true);
 
-	if (Global_113810.f_14054.f_83 == 0 || Global_113810.f_14054.f_82 == 0)
+	if (G_MissionStats.f_14054.f_83 == 0 || G_MissionStats.f_14054.f_82 == 0)
 		func_3();
 
 	MISC::SET_GAME_PAUSED(false);
@@ -580,8 +580,8 @@ void func_12() // Position - 0x890
 			if (iLocal_41 == 2)
 			{
 				num = Global_9175[Global_20500][iLocal_41].f_259;
-				Global_113810.f_14054[Global_20500].f_6 = Global_9175[Global_20500][2].f_260[num];
-				func_47(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(Global_113810.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
+				G_MissionStats.f_14054[Global_20500].f_6 = Global_9175[Global_20500][2].f_260[num];
+				func_47(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(G_MissionStats.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
 			
 				if (Global_78689)
 				{
@@ -591,7 +591,7 @@ void func_12() // Position - 0x890
 				}
 				else
 				{
-					func_47(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(Global_113810.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
+					func_47(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(G_MissionStats.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
 				}
 			
 				func_19();
@@ -603,7 +603,7 @@ void func_12() // Position - 0x890
 		
 			if (iLocal_41 == 4)
 			{
-				Global_113810.f_14054[Global_20500].f_9 = Global_9175[Global_20500][iLocal_41].f_259;
+				G_MissionStats.f_14054[Global_20500].f_9 = Global_9175[Global_20500][iLocal_41].f_259;
 			
 				if (Global_78689)
 				{
@@ -649,7 +649,7 @@ void func_12() // Position - 0x890
 				}
 				else
 				{
-					func_47(Global_20481, "SET_BACKGROUND_IMAGE", SYSTEM::TO_FLOAT(Global_113810.f_14054[Global_20500].f_9), -1082130432, -1082130432, -1082130432, -1082130432);
+					func_47(Global_20481, "SET_BACKGROUND_IMAGE", SYSTEM::TO_FLOAT(G_MissionStats.f_14054[Global_20500].f_9), -1082130432, -1082130432, -1082130432, -1082130432);
 				}
 			
 				func_18(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(22), SYSTEM::TO_FLOAT(iLocal_43), SYSTEM::TO_FLOAT(23), -1f, -1f, &Global_9175[Global_20500][iLocal_41].f_7[uLocal_16[iLocal_43]], 0, 0, 0, 0);
@@ -660,7 +660,7 @@ void func_12() // Position - 0x890
 		
 			if (iLocal_41 == 1)
 			{
-				Global_113810.f_14054[Global_20500].f_11 = { Global_9175[Global_20500][1].f_144[Global_9175[Global_20500][1].f_259] };
+				G_MissionStats.f_14054[Global_20500].f_11 = { Global_9175[Global_20500][1].f_144[Global_9175[Global_20500][1].f_259] };
 			
 				if (Global_78689)
 					func_20(1199, Global_9175[3][1].f_259, -1, true);
@@ -673,12 +673,12 @@ void func_12() // Position - 0x890
 		
 			if (iLocal_41 == 3)
 			{
-				Global_113810.f_14054[Global_20500].f_10 = Global_9175[Global_20500][iLocal_41].f_259;
+				G_MissionStats.f_14054[Global_20500].f_10 = Global_9175[Global_20500][iLocal_41].f_259;
 			
 				if (Global_78689)
-					func_20(1198, Global_113810.f_14054[3].f_10, -1, true);
+					func_20(1198, G_MissionStats.f_14054[3].f_10, -1, true);
 			
-				if (Global_113810.f_14054[Global_20500].f_10 == 1)
+				if (G_MissionStats.f_14054[Global_20500].f_10 == 1)
 				{
 					bLocal_51 = true;
 					iLocal_53 = MISC::GET_GAME_TIMER();
@@ -710,7 +710,7 @@ void func_12() // Position - 0x890
 					{
 						if (Global_43377 == 15)
 						{
-							if (Global_113810.f_14054.f_82 == 0)
+							if (G_MissionStats.f_14054.f_82 == 0)
 							{
 								HUD::CLEAR_HELP(true);
 								func_16("CELL_7050" /*If you select Sleep Mode you will not receive incoming calls. This can pause game story progression. ~n~Select Normal Mode from this menu or trigger an existing mission to leave Sleep Mode.*/);
@@ -723,11 +723,11 @@ void func_12() // Position - 0x890
 								MISC::SET_BIT(&Global_8370, 25);
 								MISC::SET_BIT(&Global_8371, 11);
 							
-								if (Global_113810.f_14054.f_83 == 0)
+								if (G_MissionStats.f_14054.f_83 == 0)
 								{
 									HUD::CLEAR_HELP(true);
 									_DISPLAY_HELP_TEXT("CELL_7051" /*When Sleep Mode is active, the Sleep symbol will be displayed near the Radar.*/, -1);
-									Global_113810.f_14054.f_83 = 1;
+									G_MissionStats.f_14054.f_83 = 1;
 								}
 							}
 						}
@@ -843,7 +843,7 @@ void func_19() // Position - 0x12AC
 	{
 		if (Global_20500 == CHAR_MICHAEL)
 		{
-			switch (Global_113810.f_14054[Global_20500].f_6)
+			switch (G_MissionStats.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 0);
@@ -880,7 +880,7 @@ void func_19() // Position - 0x12AC
 	
 		if (Global_20500 == CHAR_FRANKLIN)
 		{
-			switch (Global_113810.f_14054[Global_20500].f_6)
+			switch (G_MissionStats.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 6);
@@ -917,7 +917,7 @@ void func_19() // Position - 0x12AC
 	
 		if (Global_20500 == CHAR_TREVOR)
 		{
-			switch (Global_113810.f_14054[Global_20500].f_6)
+			switch (G_MissionStats.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 5);
@@ -1108,7 +1108,7 @@ void func_27() // Position - 0x161B
 					{
 						if (Global_43377 == 15)
 						{
-							if (Global_113810.f_14054.f_82 == 0)
+							if (G_MissionStats.f_14054.f_82 == 0)
 							{
 								HUD::CLEAR_HELP(true);
 								func_16("CELL_7050" /*If you select Sleep Mode you will not receive incoming calls. This can pause game story progression. ~n~Select Normal Mode from this menu or trigger an existing mission to leave Sleep Mode.*/);
@@ -1435,13 +1435,13 @@ int func_35() // Position - 0x1E6B
 	if (Global_20500 > CHAR_MULTIPLAYER)
 		Global_20500 = CHAR_MULTIPLAYER;
 
-	return Global_113810.f_14054[Global_20500].f_7;
+	return G_MissionStats.f_14054[Global_20500].f_7;
 }
 
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x1EA1
 {
 	func_37();
-	return Global_113810.f_2366.f_539.f_4321;
+	return G_MissionStats.f_2366.f_539.f_4321;
 }
 
 void func_37() // Position - 0x1EBA
@@ -1450,30 +1450,30 @@ void func_37() // Position - 0x1EBA
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_113810.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(G_MissionStats.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
 			if (func_39(character) && !func_38(14) || Global_112760)
 			{
-				if (Global_113810.f_2366.f_539.f_4321 != character && func_39(Global_113810.f_2366.f_539.f_4321))
-					Global_113810.f_2366.f_539.f_4322 = Global_113810.f_2366.f_539.f_4321;
+				if (G_MissionStats.f_2366.f_539.f_4321 != character && func_39(G_MissionStats.f_2366.f_539.f_4321))
+					G_MissionStats.f_2366.f_539.f_4322 = G_MissionStats.f_2366.f_539.f_4321;
 			
-				Global_113810.f_2366.f_539.f_4323 = character;
-				Global_113810.f_2366.f_539.f_4321 = character;
+				G_MissionStats.f_2366.f_539.f_4323 = character;
+				G_MissionStats.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113810.f_2366.f_539.f_4321 != _CHAR_NULL)
-				Global_113810.f_2366.f_539.f_4323 = Global_113810.f_2366.f_539.f_4321;
+			if (G_MissionStats.f_2366.f_539.f_4321 != _CHAR_NULL)
+				G_MissionStats.f_2366.f_539.f_4323 = G_MissionStats.f_2366.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_113810.f_2366.f_539.f_4321 = 145;
+	G_MissionStats.f_2366.f_539.f_4321 = 145;
 	return;
 }
 
@@ -1581,11 +1581,11 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x211A
 	if (func_38(14))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[0])
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[0])
 				Global_20500 = CHAR_MICHAEL;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[1])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[1])
 				Global_20500 = CHAR_FRANKLIN;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[2])
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == G_MissionStats.f_28053[2])
 				Global_20500 = CHAR_TREVOR;
 			else
 				Global_20500 = CHAR_MICHAEL;

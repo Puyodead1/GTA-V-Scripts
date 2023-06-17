@@ -5934,9 +5934,9 @@ void func_12(int* piParam0, float fParam1) // Position - 0xE51
 
 void func_13() // Position - 0xE7C
 {
-	if (Global_113810.f_19046.f_12[4].f_4 == 1)
-		if (Global_113810.f_19046.f_6[4] > 0f)
-			if (Global_113810.f_19046.f_6[4] <= func_22(4))
+	if (G_MissionStats.f_19046.f_12[4].f_4 == 1)
+		if (G_MissionStats.f_19046.f_6[4] > 0f)
+			if (G_MissionStats.f_19046.f_6[4] <= func_22(4))
 				func_14(125, 0, 0);
 
 	return;
@@ -5958,16 +5958,16 @@ void func_14(int iParam0, int iParam1, int iParam2) // Position - 0xECD
 
 	flag = true;
 
-	if (Global_113810.f_10197[iParam0].f_5 == 1)
+	if (G_MissionStats.f_10197[iParam0].f_5 == 1)
 	{
-		if (Global_113810.f_10197[iParam0].f_6 == 11 || Global_113810.f_10197[iParam0].f_6 == 12)
+		if (G_MissionStats.f_10197[iParam0].f_6 == 11 || G_MissionStats.f_10197[iParam0].f_6 == 12)
 			flag = false;
 	}
 	else
 	{
-		Global_113810.f_10197[iParam0].f_5 = 1;
-		Global_113810.f_10197[iParam0].f_10 = iParam1;
-		Global_113810.f_10197[iParam0].f_11 = iParam2;
+		G_MissionStats.f_10197[iParam0].f_5 = 1;
+		G_MissionStats.f_10197[iParam0].f_10 = iParam1;
+		G_MissionStats.f_10197[iParam0].f_11 = iParam2;
 	
 		if (iParam0 == 287)
 			STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("NUM_HIDDEN_PACKAGES_0"), 50, 0);
@@ -6013,48 +6013,48 @@ void func_15() // Position - 0xFB3
 	num6 = 0f;
 	num7 = 0f;
 	num8 = 0f;
-	value = Global_113810.f_10197.f_3853;
-	Global_113810.f_10197.f_3853 = 0f;
+	value = G_MissionStats.f_10197.f_3853;
+	G_MissionStats.f_10197.f_3853 = 0f;
 
 	while (num < 321)
 	{
-		if (Global_113810.f_10197[num].f_5 == 1)
+		if (G_MissionStats.f_10197[num].f_5 == 1)
 		{
-			switch (Global_113810.f_10197[num].f_6)
+			switch (G_MissionStats.f_10197[num].f_6)
 			{
 				case 1:
 					Global_113546 = Global_113546 + 1;
-					num2 = num2 + Global_113810.f_10197[num].f_4;
+					num2 = num2 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				case 3:
 					Global_113547 = Global_113547 + 1;
-					num3 = num3 + Global_113810.f_10197[num].f_4;
+					num3 = num3 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				case 5:
 					Global_113548 = Global_113548 + 1;
-					num4 = num4 + Global_113810.f_10197[num].f_4;
+					num4 = num4 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				case 7:
 					Global_113549 = Global_113549 + 1;
-					num5 = num5 + Global_113810.f_10197[num].f_4;
+					num5 = num5 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				case 9:
 					Global_113550 = Global_113550 + 1;
-					num6 = num6 + (Global_113810.f_10197[num].f_4 * 4f);
+					num6 = num6 + (G_MissionStats.f_10197[num].f_4 * 4f);
 					break;
 			
 				case 11:
 					Global_113551 = Global_113551 + 1;
-					num7 = num7 + Global_113810.f_10197[num].f_4;
+					num7 = num7 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				case 13:
 					Global_113552 = Global_113552 + 1;
-					num8 = num8 + Global_113810.f_10197[num].f_4;
+					num8 = num8 + G_MissionStats.f_10197[num].f_4;
 					break;
 			
 				default:
@@ -6085,12 +6085,12 @@ void func_15() // Position - 0xFB3
 	{
 		if (Global_113550 == Global_113533 || (Global_113533 * 10) / Global_113550 < 41 || Global_113550 > Global_113536 || Global_113550 == Global_113536)
 		{
-			if (!IS_BIT_SET(Global_113810.f_10197.f_3856, 14))
+			if (!IS_BIT_SET(G_MissionStats.f_10197.f_3856, 14))
 			{
 				if (Global_113550 == Global_113533)
 				{
 					STATS::PRESENCE_EVENT_UPDATESTAT_INT(joaat("NUM_RNDEVENTS_COMPLETED"), Global_113533, 0);
-					MISC::SET_BIT(&(Global_113810.f_10197.f_3856), 14);
+					MISC::SET_BIT(&(G_MissionStats.f_10197.f_3856), 14);
 				}
 			}
 		
@@ -6106,7 +6106,7 @@ void func_15() // Position - 0xFB3
 		if (Global_113552 == Global_113535)
 			num8 = 5f;
 
-	Global_113810.f_10197.f_3853 = num2 + num3 + num4 + num5 + num6 + num7 + num8;
+	G_MissionStats.f_10197.f_3853 = num2 + num3 + num4 + num5 + num6 + num7 + num8;
 
 	if (Global_113550 > Global_113536 || Global_113550 == Global_113536)
 		value2 = Global_113536;
@@ -6129,13 +6129,13 @@ void func_15() // Position - 0xFB3
 	Global_113555 = ((Global_113548 + Global_113547) * 100) / (Global_113531 + Global_113530);
 	Global_113554 = ((Global_113549 + value2) * 100) / (Global_113532 + Global_113536);
 	Global_113556 = ((Global_113551 + Global_113552) * 100) / (Global_113534 + Global_113535);
-	STATS::STAT_SET_FLOAT(joaat("TOTAL_PROGRESS_MADE"), Global_113810.f_10197.f_3853, true);
+	STATS::STAT_SET_FLOAT(joaat("TOTAL_PROGRESS_MADE"), G_MissionStats.f_10197.f_3853, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_STORY_MISSIONS"), Global_113553, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_AMBIENT_MISSIONS"), Global_113554, true);
 	STATS::STAT_SET_INT(joaat("PERCENT_ODDJOBS"), Global_113555, true);
 
-	if (value > 0f && SYSTEM::FLOOR(value) < SYSTEM::FLOOR(Global_113810.f_10197.f_3853))
-		func_19(13, SYSTEM::FLOOR(Global_113810.f_10197.f_3853));
+	if (value > 0f && SYSTEM::FLOOR(value) < SYSTEM::FLOOR(G_MissionStats.f_10197.f_3853))
+		func_19(13, SYSTEM::FLOOR(G_MissionStats.f_10197.f_3853));
 
 	if (!DATAFILE::DATAFILE_IS_SAVE_PENDING())
 	{
@@ -6317,7 +6317,7 @@ BOOL func_24(var uParam0) // Position - 0x15F7
 					HUD::DISPLAY_HUD(true);
 					func_342(uParam0);
 				
-					if (iLocal_49.f_10 == 0 && Global_113810.f_19046.f_6[0] > iLocal_49.f_112[0] || Global_113810.f_19046.f_6[0] == 0f)
+					if (iLocal_49.f_10 == 0 && G_MissionStats.f_19046.f_6[0] > iLocal_49.f_112[0] || G_MissionStats.f_19046.f_6[0] == 0f)
 						_DISPLAY_HELP_TEXT("SPR_HELP_GATE", 10000);
 				
 					uParam0->f_26 = 7;
@@ -6594,7 +6594,7 @@ void func_32(var uParam0) // Position - 0x1C39
 
 void func_33(int iParam0, float fParam1) // Position - 0x1D0F
 {
-	Global_113810.f_19046.f_6[iParam0] = fParam1;
+	G_MissionStats.f_19046.f_6[iParam0] = fParam1;
 	return;
 }
 
@@ -6608,13 +6608,13 @@ float func_35(int iParam0) // Position - 0x1D38
 {
 	var unk;
 
-	unk = Global_113810.f_19046.f_6[iParam0];
+	unk = G_MissionStats.f_19046.f_6[iParam0];
 	return unk;
 }
 
 void func_36(int iParam0, int iParam1) // Position - 0x1D51
 {
-	Global_113810.f_19046[iParam0] = iParam1;
+	G_MissionStats.f_19046[iParam0] = iParam1;
 	return;
 }
 
@@ -6623,7 +6623,7 @@ int func_37(int iParam0) // Position - 0x1D66
 	int num;
 
 	num = 0;
-	num = Global_113810.f_19046[iParam0];
+	num = G_MissionStats.f_19046[iParam0];
 	return num;
 }
 
@@ -6996,7 +6996,7 @@ void func_42(var uParam0) // Position - 0x2615
 		else
 			num2 = 0;
 
-	num3 = SYSTEM::FLOOR(Global_113810.f_19046.f_6[iLocal_49.f_10] * 100f) * 10;
+	num3 = SYSTEM::FLOOR(G_MissionStats.f_19046.f_6[iLocal_49.f_10] * 100f) * 10;
 
 	if (num3 <= 0)
 		num3 = -1;
@@ -11891,7 +11891,7 @@ void func_177(int iParam0, BOOL bParam1) // Position - 0x85F7
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x8691
 {
 	func_179();
-	return Global_113810.f_2366.f_539.f_4321;
+	return G_MissionStats.f_2366.f_539.f_4321;
 }
 
 void func_179() // Position - 0x86AA
@@ -11900,30 +11900,30 @@ void func_179() // Position - 0x86AA
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_113810.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(G_MissionStats.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
 			if (func_181(character) && !func_180(14) || Global_112760)
 			{
-				if (Global_113810.f_2366.f_539.f_4321 != character && func_181(Global_113810.f_2366.f_539.f_4321))
-					Global_113810.f_2366.f_539.f_4322 = Global_113810.f_2366.f_539.f_4321;
+				if (G_MissionStats.f_2366.f_539.f_4321 != character && func_181(G_MissionStats.f_2366.f_539.f_4321))
+					G_MissionStats.f_2366.f_539.f_4322 = G_MissionStats.f_2366.f_539.f_4321;
 			
-				Global_113810.f_2366.f_539.f_4323 = character;
-				Global_113810.f_2366.f_539.f_4321 = character;
+				G_MissionStats.f_2366.f_539.f_4323 = character;
+				G_MissionStats.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113810.f_2366.f_539.f_4321 != _CHAR_NULL)
-				Global_113810.f_2366.f_539.f_4323 = Global_113810.f_2366.f_539.f_4321;
+			if (G_MissionStats.f_2366.f_539.f_4321 != _CHAR_NULL)
+				G_MissionStats.f_2366.f_539.f_4323 = G_MissionStats.f_2366.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_113810.f_2366.f_539.f_4321 = 145;
+	G_MissionStats.f_2366.f_539.f_4321 = 145;
 	return;
 }
 
@@ -13165,22 +13165,22 @@ int func_223(BOOL bParam0) // Position - 0xA27C
 		case 0:
 		case 3:
 			if (bParam0)
-				Global_113810.f_10052.f_100 = Global_113810.f_10052.f_100 + 1;
+				G_MissionStats.f_10052.f_100 = G_MissionStats.f_10052.f_100 + 1;
 		
-			return Global_113810.f_10052.f_100;
+			return G_MissionStats.f_10052.f_100;
 	
 		case 4:
 			if (bParam0)
-				Global_113810.f_10052.f_101 = Global_113810.f_10052.f_101 + 1;
+				G_MissionStats.f_10052.f_101 = G_MissionStats.f_10052.f_101 + 1;
 		
-			return Global_113810.f_10052.f_101;
+			return G_MissionStats.f_10052.f_101;
 	
 		case 5:
 		case 15:
 			if (bParam0)
-				Global_113810.f_10052.f_102 = Global_113810.f_10052.f_102 + 1;
+				G_MissionStats.f_10052.f_102 = G_MissionStats.f_10052.f_102 + 1;
 		
-			return Global_113810.f_10052.f_102;
+			return G_MissionStats.f_10052.f_102;
 	
 		default:
 			break;
@@ -15366,7 +15366,7 @@ void func_323(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 				character = _GET_CURRENT_PLAYER_CHARACTER();
 			
 				if (Global_78947 == 1 && Global_78945 == 62)
-					character = Global_113810.f_2366.f_539.f_4322;
+					character = G_MissionStats.f_2366.f_539.f_4322;
 			
 				switch (character)
 				{
@@ -15999,7 +15999,7 @@ struct<2> func_336(int iParam0) // Position - 0xDB00
 
 	if (iParam0 == 90)
 	{
-		switch (Global_113810.f_9088.f_99.f_205[7])
+		switch (G_MissionStats.f_9088.f_99.f_205[7])
 		{
 			case 1:
 				TEXT_LABEL_APPEND_STRING(&unk, "A", 8);
@@ -17315,8 +17315,8 @@ void func_391(var uParam0) // Position - 0xF24C
 		{
 			num5 = { uParam0->f_316[num2] };
 		
-			if (Global_113810.f_19046.f_6[i] > 0f)
-				uLocal_529[i] = SYSTEM::CEIL(Global_113810.f_19046.f_6[i]);
+			if (G_MissionStats.f_19046.f_6[i] > 0f)
+				uLocal_529[i] = SYSTEM::CEIL(G_MissionStats.f_19046.f_6[i]);
 			else
 				uLocal_529[i] = -1;
 		
@@ -17326,7 +17326,7 @@ void func_391(var uParam0) // Position - 0xF24C
 				func_417(uParam0->f_420[num], 0, 0);
 				func_413(&(uParam0->f_741.f_198));
 			
-				switch (Global_113810.f_19046.f_12[i].f_4)
+				switch (G_MissionStats.f_19046.f_12[i].f_4)
 				{
 					case 2:
 						break;
@@ -17334,7 +17334,7 @@ void func_391(var uParam0) // Position - 0xF24C
 					case 1:
 						if (i < 5)
 						{
-							if (Global_113810.f_19046.f_6[i] <= 0f)
+							if (G_MissionStats.f_19046.f_6[i] <= 0f)
 							{
 								func_288(&num4, 269f, 0f, 32f, 32f, false);
 								func_287(&num4, 255, 255, 255, 255);
@@ -17438,11 +17438,11 @@ void func_391(var uParam0) // Position - 0xF24C
 				func_422("SPRRaces", "FlightStunt_Gold_128", &uParam0->[13], 0, 0, 5, false);
 				func_416(&(uParam0->f_741.f_198));
 			
-				if (Global_113810.f_19046.f_6[Global_112840] > 0f)
+				if (G_MissionStats.f_19046.f_6[Global_112840] > 0f)
 				{
 					func_412(&(uParam0->f_741.f_198), &uParam0->f_420[17], 0.0047f, 0.0055f);
 					HUD::SET_TEXT_RIGHT_JUSTIFY(true);
-					func_400(&uParam0->f_316[9], &(uParam0->f_741.f_198), SYSTEM::FLOOR(Global_113810.f_19046.f_6[Global_112840] * 1000f), 6, "", false, true);
+					func_400(&uParam0->f_316[9], &(uParam0->f_741.f_198), SYSTEM::FLOOR(G_MissionStats.f_19046.f_6[Global_112840] * 1000f), 6, "", false, true);
 					HUD::SET_TEXT_RIGHT_JUSTIFY(false);
 					func_409(&(uParam0->f_741.f_198));
 				}
@@ -17483,7 +17483,7 @@ void func_391(var uParam0) // Position - 0xF24C
 				func_417(uParam0->f_420[num], 0, 0);
 				func_407(&uParam0->[num3], 1);
 			
-				switch (Global_113810.f_19046.f_12[i].f_4)
+				switch (G_MissionStats.f_19046.f_12[i].f_4)
 				{
 					case 0:
 						func_407(&uParam0->[num3], 1);
@@ -17498,7 +17498,7 @@ void func_391(var uParam0) // Position - 0xF24C
 						{
 							func_416(&(uParam0->f_741.f_198));
 						
-							if (Global_113810.f_19046.f_6[i] <= 0f)
+							if (G_MissionStats.f_19046.f_6[i] <= 0f)
 							{
 								func_288(&num4, 269f, 0f, 32f, 32f, false);
 								func_287(&num4, 255, 255, 255, 255);
@@ -17527,7 +17527,7 @@ void func_391(var uParam0) // Position - 0xF24C
 				func_407(&uParam0->[num3], 1);
 			}
 		
-			if (Global_113810.f_19046.f_12[i].f_4 == 0)
+			if (G_MissionStats.f_19046.f_12[i].f_4 == 0)
 			{
 				func_422("Shared", "Locked_Icon_32", &uParam0->[num3], 0, 0, 5, false);
 			}
@@ -17695,7 +17695,7 @@ void func_393(var uParam0, BOOL bParam1) // Position - 0x102F4
 BOOL func_394(eCharacter echParam0) // Position - 0x1038D
 {
 	func_179();
-	return echParam0 == Global_113810.f_2366.f_539.f_4321;
+	return echParam0 == G_MissionStats.f_2366.f_539.f_4321;
 }
 
 void func_395(var uParam0) // Position - 0x103A9
@@ -18171,7 +18171,7 @@ BOOL func_430(var uParam0, var uParam1) // Position - 0x109C6
 	{
 		num = 0;
 	
-		if (Global_113810.f_19046.f_12[Global_112840].f_4 == 0)
+		if (G_MissionStats.f_19046.f_12[Global_112840].f_4 == 0)
 		{
 			iLocal_518 = AUDIO::GET_SOUND_ID();
 			AUDIO::PLAY_SOUND(iLocal_518, "CANCEL", "HUD_MINI_GAME_SOUNDSET", false, 0, true);
@@ -18466,19 +18466,19 @@ void func_437() // Position - 0x110C3
 
 	for (i = 0; i < 5; i = i + 1)
 	{
-		Global_113810.f_19046.f_12[i] = { func_439(i) };
-		TEXT_LABEL_COPY(&iLocal_49.f_24[i], { Global_113810.f_19046.f_12[i] }, 8);
+		G_MissionStats.f_19046.f_12[i] = { func_439(i) };
+		TEXT_LABEL_COPY(&iLocal_49.f_24[i], { G_MissionStats.f_19046.f_12[i] }, 8);
 		iLocal_49.f_106[i] = func_438(i);
 		iLocal_49.f_112[i] = func_22(i);
 	
 		if (i < 5 - 1)
-			if (Global_113810.f_19046.f_6[i] > iLocal_49.f_112[i] || Global_113810.f_19046.f_6[i] <= 0f)
-				Global_113810.f_19046.f_12[i + 1].f_4 = 0;
+			if (G_MissionStats.f_19046.f_6[i] > iLocal_49.f_112[i] || G_MissionStats.f_19046.f_6[i] <= 0f)
+				G_MissionStats.f_19046.f_12[i + 1].f_4 = 0;
 			else
-				Global_113810.f_19046.f_12[i + 1].f_4 = 1;
+				G_MissionStats.f_19046.f_12[i + 1].f_4 = 1;
 	}
 
-	Global_113810.f_19046.f_12[0].f_4 = 1;
+	G_MissionStats.f_19046.f_12[0].f_4 = 1;
 	return;
 }
 
@@ -27156,7 +27156,7 @@ BOOL func_564(var uParam0) // Position - 0x1FE48
 
 void func_565(var uParam0) // Position - 0x1FE7C
 {
-	if (Global_112840 != 0 && Global_113810.f_19046.f_12[Global_112840].f_4 == 0)
+	if (Global_112840 != 0 && G_MissionStats.f_19046.f_12[Global_112840].f_4 == 0)
 	{
 		func_276(uParam0, false, false, true, true);
 		func_275(uParam0, "IB_QUIT" /*Quit*/, 2, 202, 1, 1, 0);
