@@ -11,38 +11,38 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
+	float fLocal_12 = 0f;
 	var uLocal_13 = 0;
-	float fLocal_14 = 0f;
-	var uLocal_15 = 0;
-	var uLocal_16 = 0;
-	int iLocal_17 = 0;
-	char* sLocal_18 = 0;
+	var uLocal_14 = 0;
+	int iLocal_15 = 0;
+	char* sLocal_16 = 0;
+	var uLocal_17 = 0;
+	var uLocal_18 = 0;
 	var uLocal_19 = 0;
 	var uLocal_20 = 0;
-	var uLocal_21 = 0;
-	var uLocal_22 = 0;
+	float fLocal_21 = 0f;
+	float fLocal_22 = 0f;
 	float fLocal_23 = 0f;
-	float fLocal_24 = 0f;
-	float fLocal_25 = 0f;
-	var uLocal_26 = 0;
+	var uLocal_24 = 0;
+	var uLocal_25 = 0;
+	float fLocal_26 = 0f;
 	var uLocal_27 = 0;
-	float fLocal_28 = 0f;
+	var uLocal_28 = 0;
 	var uLocal_29 = 0;
-	var uLocal_30 = 0;
-	var uLocal_31 = 0;
-	float fLocal_32 = 0f;
-	float fLocal_33 = 0f;
-	var uLocal_34 = 0;
+	float fLocal_30 = 0f;
+	float fLocal_31 = 0f;
+	var uLocal_32 = 0;
+	var uLocal_33 = 0;
+	int iLocal_34 = 0;
 	var uLocal_35 = 0;
-	int iLocal_36 = 0;
+	var uLocal_36 = 0;
 	var uLocal_37 = 0;
-	var uLocal_38 = 0;
-	var uLocal_39 = 0;
+	int iLocal_38 = 0;
+	int iLocal_39 = 0;
 	int iLocal_40 = 0;
 	int iLocal_41 = 0;
-	int iLocal_42 = 0;
-	int iLocal_43 = 0;
+	var uLocal_42 = 0;
+	var uLocal_43 = 0;
 	var uLocal_44 = 0;
 	var uLocal_45 = 0;
 	var uLocal_46 = 0;
@@ -63,8 +63,8 @@
 	var uLocal_61 = 0;
 	var uLocal_62 = 0;
 	var uLocal_63 = 0;
-	var uLocal_64 = 0;
-	float fLocal_65 = 0f;
+	float fLocal_64 = 0f;
+	var uLocal_65 = 0;
 	var uLocal_66 = 0;
 	var uLocal_67 = 0;
 	var uLocal_68 = 0;
@@ -89,8 +89,8 @@
 	var uLocal_87 = 0;
 	var uLocal_88 = 0;
 	var uLocal_89 = 0;
-	var uLocal_90 = -1;
-	var uLocal_91 = 0;
+	var uLocal_90 = 0;
+	var uLocal_91 = -1;
 	var uLocal_92 = 0;
 	var uLocal_93 = 0;
 	var uLocal_94 = 0;
@@ -113,18 +113,18 @@
 	var uLocal_111 = 0;
 	var uLocal_112 = 0;
 	var uLocal_113 = 0;
-	int iLocal_114 = 0;
-	var uLocal_115 = 0;
+	var uLocal_114 = 0;
+	int iLocal_115 = 0;
 	var uLocal_116 = 0;
-	BOOL bLocal_117 = 0;
+	var uLocal_117 = 0;
 	BOOL bLocal_118 = 0;
 	BOOL bLocal_119 = 0;
 	BOOL bLocal_120 = 0;
-	int iLocal_121 = 0;
+	BOOL bLocal_121 = 0;
 	int iLocal_122 = 0;
-	var uLocal_123 = 6;
-	var uLocal_124 = 2;
-	var uLocal_125 = 0;
+	int iLocal_123 = 0;
+	var uLocal_124 = 6;
+	var uLocal_125 = 2;
 	var uLocal_126 = 0;
 	var uLocal_127 = 0;
 	var uLocal_128 = 0;
@@ -140,8 +140,8 @@
 	var uLocal_138 = 0;
 	var uLocal_139 = 0;
 	var uLocal_140 = 0;
-	var uLocal_141 = 2;
-	var uLocal_142 = 0;
+	var uLocal_141 = 0;
+	var uLocal_142 = 2;
 	var uLocal_143 = 0;
 	var uLocal_144 = 0;
 	var uLocal_145 = 0;
@@ -157,8 +157,8 @@
 	var uLocal_155 = 0;
 	var uLocal_156 = 0;
 	var uLocal_157 = 0;
-	var uLocal_158 = 2;
-	var uLocal_159 = 0;
+	var uLocal_158 = 0;
+	var uLocal_159 = 2;
 	var uLocal_160 = 0;
 	var uLocal_161 = 0;
 	var uLocal_162 = 0;
@@ -174,8 +174,8 @@
 	var uLocal_172 = 0;
 	var uLocal_173 = 0;
 	var uLocal_174 = 0;
-	var uLocal_175 = 2;
-	var uLocal_176 = 0;
+	var uLocal_175 = 0;
+	var uLocal_176 = 2;
 	var uLocal_177 = 0;
 	var uLocal_178 = 0;
 	var uLocal_179 = 0;
@@ -191,8 +191,8 @@
 	var uLocal_189 = 0;
 	var uLocal_190 = 0;
 	var uLocal_191 = 0;
-	var uLocal_192 = 2;
-	var uLocal_193 = 0;
+	var uLocal_192 = 0;
+	var uLocal_193 = 2;
 	var uLocal_194 = 0;
 	var uLocal_195 = 0;
 	var uLocal_196 = 0;
@@ -208,8 +208,8 @@
 	var uLocal_206 = 0;
 	var uLocal_207 = 0;
 	var uLocal_208 = 0;
-	var uLocal_209 = 2;
-	var uLocal_210 = 0;
+	var uLocal_209 = 0;
+	var uLocal_210 = 2;
 	var uLocal_211 = 0;
 	var uLocal_212 = 0;
 	var uLocal_213 = 0;
@@ -225,28 +225,28 @@
 	var uLocal_223 = 0;
 	var uLocal_224 = 0;
 	var uLocal_225 = 0;
-	int iLocal_226 = 0;
+	var uLocal_226 = 0;
 	int iLocal_227 = 0;
 	int iLocal_228 = 0;
 	int iLocal_229 = 0;
-	var uLocal_230 = 0;
-	var uLocal_231 = 6;
-	var uLocal_232 = 0;
+	int iLocal_230 = 0;
+	var uLocal_231 = 0;
+	var uLocal_232 = 6;
 	var uLocal_233 = 0;
 	var uLocal_234 = 0;
 	var uLocal_235 = 0;
 	var uLocal_236 = 0;
 	var uLocal_237 = 0;
-	var uLocal_238 = 6;
-	var uLocal_239 = 0;
+	var uLocal_238 = 0;
+	var uLocal_239 = 6;
 	var uLocal_240 = 0;
 	var uLocal_241 = 0;
 	var uLocal_242 = 0;
 	var uLocal_243 = 0;
 	var uLocal_244 = 0;
 	var uLocal_245 = 0;
-	var uLocal_246 = 1;
-	var uLocal_247 = 0;
+	var uLocal_246 = 0;
+	var uLocal_247 = 1;
 	var uLocal_248 = 0;
 	var uLocal_249 = 0;
 	var uLocal_250 = 0;
@@ -258,15 +258,15 @@
 	var uLocal_256 = 0;
 	var uLocal_257 = 0;
 	var uLocal_258 = 0;
-	var uLocal_259 = 6;
-	var uLocal_260 = 0;
+	var uLocal_259 = 0;
+	var uLocal_260 = 6;
 	var uLocal_261 = 0;
 	var uLocal_262 = 0;
 	var uLocal_263 = 0;
 	var uLocal_264 = 0;
 	var uLocal_265 = 0;
-	var uLocal_266 = 6;
-	var uLocal_267 = 0;
+	var uLocal_266 = 0;
+	var uLocal_267 = 6;
 	var uLocal_268 = 0;
 	var uLocal_269 = 0;
 	var uLocal_270 = 0;
@@ -278,8 +278,8 @@
 	var uLocal_276 = 0;
 	var uLocal_277 = 0;
 	var uLocal_278 = 0;
-	var uLocal_279 = 32;
-	var uLocal_280 = 0;
+	var uLocal_279 = 0;
+	var uLocal_280 = 32;
 	var uLocal_281 = 0;
 	var uLocal_282 = 0;
 	var uLocal_283 = 0;
@@ -407,32 +407,33 @@
 	var uLocal_405 = 0;
 	var uLocal_406 = 0;
 	var uLocal_407 = 0;
-	var uLocal_408 = 4;
-	var uLocal_409 = 0;
+	var uLocal_408 = 0;
+	var uLocal_409 = 4;
 	var uLocal_410 = 0;
 	var uLocal_411 = 0;
 	var uLocal_412 = 0;
-	var uScriptParam_413 = 0;
-	var uScriptParam_414 = -1;
+	var uLocal_413 = 0;
+	var uScriptParam_414 = 0;
 	var uScriptParam_415 = -1;
-	var uScriptParam_416 = 0;
+	var uScriptParam_416 = -1;
 	var uScriptParam_417 = 0;
 	var uScriptParam_418 = 0;
 	var uScriptParam_419 = 0;
 	var uScriptParam_420 = 0;
 	var uScriptParam_421 = 0;
-	var uScriptParam_422 = -1;
-	var uScriptParam_423 = 0;
+	var uScriptParam_422 = 0;
+	var uScriptParam_423 = -1;
 	var uScriptParam_424 = 0;
 	var uScriptParam_425 = 0;
 	var uScriptParam_426 = 0;
 	var uScriptParam_427 = 0;
 	var uScriptParam_428 = 0;
-	var uScriptParam_429 = -1;
-	var uScriptParam_430 = 0;
+	var uScriptParam_429 = 0;
+	var uScriptParam_430 = -1;
 	var uScriptParam_431 = 0;
-	var uScriptParam_432 = -1;
+	var uScriptParam_432 = 0;
 	var uScriptParam_433 = -1;
+	var uScriptParam_434 = -1;
 #endregion
 
 void main() // Position - 0x0
@@ -447,115 +448,115 @@ void main() // Position - 0x0
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_14 = 0.001f;
-	iLocal_17 = -1;
-	sLocal_18 = "NULL";
-	fLocal_23 = 80f;
-	fLocal_24 = 140f;
-	fLocal_25 = 180f;
-	fLocal_28 = 0f;
-	fLocal_32 = -0.0375f;
-	fLocal_33 = 0.17f;
-	iLocal_36 = 3;
-	iLocal_40 = 1;
-	iLocal_41 = 65;
-	iLocal_42 = 49;
-	iLocal_43 = 64;
-	fLocal_65 = (0.05f + 0.275f) - 0.01f;
-	iLocal_114 = 15;
+	fLocal_12 = 0.001f;
+	iLocal_15 = -1;
+	sLocal_16 = "NULL";
+	fLocal_21 = 80f;
+	fLocal_22 = 140f;
+	fLocal_23 = 180f;
+	fLocal_26 = 0f;
+	fLocal_30 = -0.0375f;
+	fLocal_31 = 0.17f;
+	iLocal_34 = 3;
+	iLocal_38 = 1;
+	iLocal_39 = 65;
+	iLocal_40 = 49;
+	iLocal_41 = 64;
+	fLocal_64 = (0.05f + 0.275f) - 0.01f;
+	iLocal_115 = 15;
 
 	if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
-		func_70();
+		func_71();
 
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		if (!func_59(uScriptParam_413))
-			func_70();
+		if (!func_60(uScriptParam_414))
+			func_71();
 
-	iLocal_114 == 15;
-	iLocal_122 = 0;
-	func_57();
+	iLocal_115 == 15;
+	iLocal_123 = 0;
+	func_58();
 
 	while (true)
 	{
-		func_56();
+		func_57();
 	
 		if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
-			func_70();
+			func_71();
 	
 		if (NETWORK::NETWORK_IS_IN_TUTORIAL_SESSION())
 			if (NETWORK::NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(PLAYER::PLAYER_ID()) == 32)
-				if (uScriptParam_413.f_16 != 50 + PLAYER::PLAYER_ID())
-					func_55(2);
-			else if (uScriptParam_413.f_16 != NETWORK::NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(PLAYER::PLAYER_ID()))
-				func_55(2);
-		else if (uScriptParam_413.f_16 != -1)
-			func_55(2);
+				if (uScriptParam_414.f_16 != 50 + PLAYER::PLAYER_ID())
+					func_56(2);
+			else if (uScriptParam_414.f_16 != NETWORK::NETWORK_GET_PLAYER_TUTORIAL_SESSION_INSTANCE(PLAYER::PLAYER_ID()))
+				func_56(2);
+		else if (uScriptParam_414.f_16 != -1)
+			func_56(2);
 	
-		_STOPWATCH_RESET(&uLocal_115, false, false);
+		_STOPWATCH_RESET(&uLocal_116, false, false);
 	
-		switch (func_53(NETWORK::PARTICIPANT_ID_TO_INT()))
+		switch (func_54(NETWORK::PARTICIPANT_ID_TO_INT()))
 		{
 			case 0:
-				if (Global_MissionData1 == 2)
-					iLocal_121 = 98;
+				if (Global_4718592 == 2)
+					iLocal_122 = 98;
 				else
-					iLocal_121 = 99;
+					iLocal_122 = 99;
 			
-				if (!Global_38616 && func_52() != -1 && func_52() != 999)
+				if (!Global_38736 && func_53() != -1 && func_53() != 999)
 				{
-					if (!bLocal_117)
+					if (!bLocal_118)
 					{
-						if (func_51(&iLocal_122, iLocal_121))
+						if (func_52(&iLocal_123, iLocal_122))
 						{
-							bLocal_117 = true;
-							iLocal_122 = 0;
+							bLocal_118 = true;
+							iLocal_123 = 0;
 						}
 					}
-					else if (!bLocal_119)
+					else if (!bLocal_120)
 					{
-						if (!bLocal_118)
+						if (!bLocal_119)
 						{
-							if (func_49(&iLocal_122, iLocal_121))
+							if (func_50(&iLocal_123, iLocal_122))
 							{
-								iLocal_122 = 0;
-								bLocal_118 = true;
+								iLocal_123 = 0;
+								bLocal_119 = true;
 							}
 						}
-						else if (func_47(&iLocal_122, iLocal_121))
+						else if (func_48(&iLocal_123, iLocal_122))
 						{
-							iLocal_122 = 0;
-							bLocal_119 = true;
+							iLocal_123 = 0;
+							bLocal_120 = true;
 						}
 					}
-					else if (func_46() >= 2)
+					else if (func_47() >= 2)
 					{
-						func_55(1);
+						func_56(1);
 					}
 				}
 				break;
 		
 			case 1:
-				func_43();
-				Global_2793046.f_4600 = 1;
-				func_34();
+				func_44();
+				Global_2794162.f_4607 = 1;
+				func_35();
 				func_9();
 				break;
 		
 			case 2:
-				func_70();
+				func_71();
 				break;
 		}
 	
 		if (NETWORK::NETWORK_IS_HOST_OF_THIS_SCRIPT())
 		{
-			switch (func_46())
+			switch (func_47())
 			{
 				case 0:
 					func_8(2);
 					break;
 			
 				case 2:
-					if (func_53(NETWORK::PARTICIPANT_ID_TO_INT()) == 1)
+					if (func_54(NETWORK::PARTICIPANT_ID_TO_INT()) == 1)
 						func_1();
 					break;
 			
@@ -573,53 +574,53 @@ void main() // Position - 0x0
 
 void func_1() // Position - 0x24B
 {
-	iLocal_227 = 0;
+	iLocal_228 = 0;
 
-	for (iLocal_227 = 0; iLocal_227 < 6; iLocal_227 = iLocal_227 + 1)
+	for (iLocal_228 = 0; iLocal_228 < 6; iLocal_228 = iLocal_228 + 1)
 	{
-		if (_NETWORK_IS_PLAYER_VALID(PLAYER::INT_TO_PLAYERINDEX(iLocal_226), false, true))
+		if (_NETWORK_IS_PLAYER_VALID(PLAYER::INT_TO_PLAYERINDEX(iLocal_227), false, true))
 		{
-			if (IS_BIT_SET(uLocal_279[iLocal_226].f_2, iLocal_227))
-				MISC::SET_BIT(&iLocal_229.f_2[iLocal_227], iLocal_226);
+			if (IS_BIT_SET(uLocal_280[iLocal_227].f_2, iLocal_228))
+				MISC::SET_BIT(&iLocal_230.f_2[iLocal_228], iLocal_227);
 			else
-				MISC::CLEAR_BIT(&iLocal_229.f_2[iLocal_227], iLocal_226);
+				MISC::CLEAR_BIT(&iLocal_230.f_2[iLocal_228], iLocal_227);
 		}
 		else
 		{
-			MISC::CLEAR_BIT(&iLocal_229.f_9[iLocal_227], iLocal_226);
-			MISC::CLEAR_BIT(&iLocal_229.f_9[iLocal_227], iLocal_226);
+			MISC::CLEAR_BIT(&iLocal_230.f_9[iLocal_228], iLocal_227);
+			MISC::CLEAR_BIT(&iLocal_230.f_9[iLocal_228], iLocal_227);
 		}
 	
-		if (iLocal_229.f_9[iLocal_227] != 0)
+		if (iLocal_230.f_9[iLocal_228] != 0)
 		{
-			if (uLocal_123[iLocal_227][0] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][0], 5);
+			if (uLocal_124[iLocal_228][0] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][0], 5);
 		
-			if (uLocal_123[iLocal_227][1] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][1], 5);
+			if (uLocal_124[iLocal_228][1] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][1], 5);
 		}
-		else if (iLocal_229.f_2[iLocal_227] != 0)
+		else if (iLocal_230.f_2[iLocal_228] != 0)
 		{
-			if (uLocal_123[iLocal_227][0] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][0], 0);
+			if (uLocal_124[iLocal_228][0] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][0], 0);
 		
-			if (uLocal_123[iLocal_227][1] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][1], 0);
+			if (uLocal_124[iLocal_228][1] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][1], 0);
 		}
 		else
 		{
-			if (uLocal_123[iLocal_227][0] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][0], 1);
+			if (uLocal_124[iLocal_228][0] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][0], 1);
 		
-			if (uLocal_123[iLocal_227][1] != 0)
-				func_2(iLocal_227, uLocal_123[iLocal_227][1], 1);
+			if (uLocal_124[iLocal_228][1] != 0)
+				func_2(iLocal_228, uLocal_124[iLocal_228][1], 1);
 		}
 	}
 
-	iLocal_226 = iLocal_226 + 1;
+	iLocal_227 = iLocal_227 + 1;
 
-	if (iLocal_226 >= 32)
-		iLocal_226 = 0;
+	if (iLocal_227 >= 32)
+		iLocal_227 = 0;
 
 	return;
 }
@@ -633,7 +634,7 @@ void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A0
 	if (iParam2 == 0)
 		offset = 0;
 
-	if (uLocal_259[iParam0] == 0)
+	if (uLocal_260[iParam0] == 0)
 	{
 		if (OBJECT::DOOR_SYSTEM_GET_DOOR_PENDING_STATE(hParam1) == -1)
 		{
@@ -641,9 +642,9 @@ void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A0
 			{
 				if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(hParam1))
 				{
-					MISC::SET_BIT(&uLocal_259[iParam0], offset);
+					MISC::SET_BIT(&uLocal_260[iParam0], offset);
 					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(hParam1, iParam2, true, true);
-					_STOPWATCH_RESET(&uLocal_266[iParam0], true, false);
+					_STOPWATCH_RESET(&uLocal_267[iParam0], true, false);
 				}
 				else
 				{
@@ -655,9 +656,9 @@ void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A0
 		{
 			if (NETWORK::NETWORK_HAS_CONTROL_OF_DOOR(hParam1))
 			{
-				MISC::SET_BIT(&uLocal_259[iParam0], offset);
+				MISC::SET_BIT(&uLocal_260[iParam0], offset);
 				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(hParam1, iParam2, true, true);
-				_STOPWATCH_RESET(&uLocal_266[iParam0], true, false);
+				_STOPWATCH_RESET(&uLocal_267[iParam0], true, false);
 			}
 			else
 			{
@@ -666,12 +667,12 @@ void func_2(int iParam0, Hash hParam1, int iParam2) // Position - 0x3A0
 		}
 	}
 
-	if (_STOPWATCH_IS_INITIALIZED(&uLocal_266[iParam0]))
+	if (_STOPWATCH_IS_INITIALIZED(&uLocal_267[iParam0]))
 	{
-		if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_266[iParam0], 1000, true))
+		if (_STOPWATCH_HAS_TIME_PASSED(&uLocal_267[iParam0], 1000, true))
 		{
-			_STOPWATCH_DESTROY(&uLocal_266[iParam0]);
-			uLocal_259[iParam0] = 0;
+			_STOPWATCH_DESTROY(&uLocal_267[iParam0]);
+			uLocal_260[iParam0] = 0;
 		}
 	}
 
@@ -738,9 +739,9 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 					return false;
 		
 			if (bUnk)
-				if (player == Global_2672505.f_3)
-					return Global_2672505.f_2;
-				else if (Global_2657589[player] != 4)
+				if (player == Global_2672524.f_3)
+					return Global_2672524.f_2;
+				else if (Global_2657704[player] != 4)
 					return false;
 		
 			return true;
@@ -752,7 +753,7 @@ BOOL _NETWORK_IS_PLAYER_VALID(Player player, BOOL bIsPlaying, BOOL bUnk) // Posi
 
 void func_8(int iParam0) // Position - 0x59F
 {
-	iLocal_229 = iParam0;
+	iLocal_230 = iParam0;
 	return;
 }
 
@@ -761,49 +762,49 @@ void func_9() // Position - 0x5AB
 	float num;
 	Vector3 vector;
 
-	vector = Vector3(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()));
-	num = SYSTEM::VDIST(vector, uLocal_123[iLocal_228].f_3);
+	vector = { _GET_PLAYER_COORDS(PLAYER::PLAYER_ID()) };
+	num = SYSTEM::VDIST(vector, uLocal_124[iLocal_229].f_3);
 
-	if (IS_BIT_SET(Global_2802660, iLocal_228) || IS_BIT_SET(Global_2802660.f_1, iLocal_228) || IS_BIT_SET(Global_2802660.f_2, iLocal_228))
+	if (IS_BIT_SET(Global_2803781, iLocal_229) || IS_BIT_SET(Global_2803781.f_1, iLocal_229) || IS_BIT_SET(Global_2803781.f_2, iLocal_229))
 	{
-		if (IS_BIT_SET(Global_2802660, iLocal_228))
-			MISC::SET_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+		if (IS_BIT_SET(Global_2803781, iLocal_229))
+			MISC::SET_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	
-		if (IS_BIT_SET(Global_2802660.f_1, iLocal_228))
-			MISC::CLEAR_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+		if (IS_BIT_SET(Global_2803781.f_1, iLocal_229))
+			MISC::CLEAR_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	
-		if (IS_BIT_SET(Global_2802660.f_2, iLocal_228))
-			MISC::SET_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_3), iLocal_228);
+		if (IS_BIT_SET(Global_2803781.f_2, iLocal_229))
+			MISC::SET_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_3), iLocal_229);
 	}
 	else if (num <= 20f)
 	{
-		if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_123[iLocal_228].f_3, uLocal_123[iLocal_228].f_6, uLocal_123[iLocal_228].f_9, false, true))
-			if (!IS_BIT_SET(uLocal_279[PLAYER::PLAYER_ID()].f_2, iLocal_228))
-				MISC::SET_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+		if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_124[iLocal_229].f_3, uLocal_124[iLocal_229].f_6, uLocal_124[iLocal_229].f_9, false, true))
+			if (!IS_BIT_SET(uLocal_280[PLAYER::PLAYER_ID()].f_2, iLocal_229))
+				MISC::SET_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	
-		if (iLocal_228 == 0 || iLocal_228 == 1 || iLocal_228 == 5)
-			if (Global_2696083 || !func_13())
-				if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_123[iLocal_228].f_10, uLocal_123[iLocal_228].f_13, uLocal_123[iLocal_228].f_16, false, true))
-					if (!IS_BIT_SET(uLocal_279[PLAYER::PLAYER_ID()].f_2, iLocal_228))
-						MISC::SET_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+		if (iLocal_229 == 0 || iLocal_229 == 1 || iLocal_229 == 5)
+			if (Global_2696135 || !func_13())
+				if (OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_124[iLocal_229].f_10, uLocal_124[iLocal_229].f_13, uLocal_124[iLocal_229].f_16, false, true))
+					if (!IS_BIT_SET(uLocal_280[PLAYER::PLAYER_ID()].f_2, iLocal_229))
+						MISC::SET_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	
-		if (iLocal_228 == 2 || iLocal_228 == 3 || iLocal_228 == 4)
+		if (iLocal_229 == 2 || iLocal_229 == 3 || iLocal_229 == 4)
 			if (_GET_ACTIVE_PV_SLOT() >= 0)
 				if (func_10(29))
-					if (!IS_BIT_SET(uLocal_279[PLAYER::PLAYER_ID()].f_2, iLocal_228))
-						MISC::SET_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
-				else if (IS_BIT_SET(uLocal_279[PLAYER::PLAYER_ID()].f_2, iLocal_228) && !OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_123[iLocal_228].f_3, uLocal_123[iLocal_228].f_6, uLocal_123[iLocal_228].f_9, false, true))
-					MISC::CLEAR_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+					if (!IS_BIT_SET(uLocal_280[PLAYER::PLAYER_ID()].f_2, iLocal_229))
+						MISC::SET_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
+				else if (IS_BIT_SET(uLocal_280[PLAYER::PLAYER_ID()].f_2, iLocal_229) && !OBJECT::IS_POINT_IN_ANGLED_AREA(vector, uLocal_124[iLocal_229].f_3, uLocal_124[iLocal_229].f_6, uLocal_124[iLocal_229].f_9, false, true))
+					MISC::CLEAR_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	}
-	else if (IS_BIT_SET(uLocal_279[PLAYER::PLAYER_ID()].f_2, iLocal_228))
+	else if (IS_BIT_SET(uLocal_280[PLAYER::PLAYER_ID()].f_2, iLocal_229))
 	{
-		MISC::CLEAR_BIT(&(uLocal_279[PLAYER::PLAYER_ID()].f_2), iLocal_228);
+		MISC::CLEAR_BIT(&(uLocal_280[PLAYER::PLAYER_ID()].f_2), iLocal_229);
 	}
 
-	iLocal_228 = iLocal_228 + 1;
+	iLocal_229 = iLocal_229 + 1;
 
-	if (iLocal_228 >= 6)
-		iLocal_228 = 0;
+	if (iLocal_229 >= 6)
+		iLocal_229 = 0;
 
 	return;
 }
@@ -811,9 +812,9 @@ void func_9() // Position - 0x5AB
 BOOL func_10(int iParam0) // Position - 0x7F7
 {
 	if (iParam0 < 32)
-		return IS_BIT_SET(Global_2672505.f_62.f_1, iParam0);
+		return IS_BIT_SET(Global_2672524.f_62.f_1, iParam0);
 
-	return IS_BIT_SET(Global_2672505.f_62.f_2, iParam0 - 32);
+	return IS_BIT_SET(Global_2672524.f_62.f_2, iParam0 - 32);
 }
 
 int _GET_ACTIVE_PV_SLOT() // Position - 0x825
@@ -837,13 +838,13 @@ int func_12() // Position - 0x868
 
 BOOL func_13() // Position - 0x875
 {
-	if (Global_1962988)
+	if (Global_1963787)
 		return true;
 
-	if (func_28(PLAYER::PLAYER_ID(), true) && !Global_1977531)
+	if (func_29(PLAYER::PLAYER_ID(), true) && !Global_1978333)
 		return true;
 
-	if (func_26(PLAYER::PLAYER_ID()))
+	if (func_27(PLAYER::PLAYER_ID()))
 		return true;
 
 	if (func_20(PLAYER::PLAYER_ID()))
@@ -896,7 +897,7 @@ BOOL func_17(Player plParam0) // Position - 0x929
 
 BOOL func_18(Player plParam0, int iParam1) // Position - 0x947
 {
-	return IS_BIT_SET(Global_1894573[plParam0].f_10.f_4, iParam1);
+	return IS_BIT_SET(Global_1895156[plParam0].f_10.f_4, iParam1);
 }
 
 BOOL func_19(Player plParam0) // Position - 0x95F
@@ -906,7 +907,7 @@ BOOL func_19(Player plParam0) // Position - 0x95F
 	player = plParam0;
 
 	if (player != -1)
-		return IS_BIT_SET(Global_1894573[player].f_1, 0);
+		return IS_BIT_SET(Global_1895156[player].f_1, 0);
 
 	return false;
 }
@@ -936,7 +937,7 @@ BOOL func_21(int iParam0) // Position - 0x994
 
 int func_22(Player plParam0) // Position - 0x9C6
 {
-	if (func_25(plParam0) == 256)
+	if (func_26(plParam0) == 256)
 		return func_23(plParam0);
 
 	return -1;
@@ -945,36 +946,53 @@ int func_22(Player plParam0) // Position - 0x9C6
 int func_23(Player plParam0) // Position - 0x9E4
 {
 	if (func_24(plParam0, false))
-		return Global_1894573[plParam0].f_10.f_182;
+		return Global_1895156[plParam0].f_10.f_182;
 
 	return -1;
 }
 
 BOOL func_24(Player plParam0, BOOL bParam1) // Position - 0xA07
 {
-	if (Global_1894573[plParam0].f_10.f_33 != -1 || bParam1 && Global_1894573[plParam0].f_10.f_32 != -1)
-		return true;
+	if (func_25(plParam0))
+		if (Global_1895156[plParam0].f_10.f_33 != -1 || bParam1 && Global_1895156[plParam0].f_10.f_32 != -1)
+			return true;
 
 	return false;
 }
 
-int func_25(Player plParam0) // Position - 0xA42
+BOOL func_25(Player plParam0) // Position - 0xA4B
 {
-	if (func_24(plParam0, false))
-		return Global_1894573[plParam0].f_10.f_33;
+	Player player;
+
+	player = plParam0;
+
+	if (player < 0)
+		return false;
+
+	if (player >= 32)
+		return false;
+
+	return true;
+}
+
+int func_26(Player plParam0) // Position - 0xA6D
+{
+	if (func_25(plParam0))
+		if (func_24(plParam0, false))
+			return Global_1895156[plParam0].f_10.f_33;
 
 	return -1;
 }
 
-BOOL func_26(Player plParam0) // Position - 0xA65
+BOOL func_27(Player plParam0) // Position - 0xA99
 {
-	if (func_27(func_25(plParam0)))
+	if (func_28(func_26(plParam0)))
 		return true;
 
 	return false;
 }
 
-BOOL func_27(int iParam0) // Position - 0xA7F
+BOOL func_28(int iParam0) // Position - 0xAB3
 {
 	switch (iParam0)
 	{
@@ -988,52 +1006,52 @@ BOOL func_27(int iParam0) // Position - 0xA7F
 	return false;
 }
 
-BOOL func_28(Player plParam0, BOOL bParam1) // Position - 0xA99
+BOOL func_29(Player plParam0, BOOL bParam1) // Position - 0xACD
 {
-	if (func_52() != 0)
-		return func_32(plParam0) != 0;
+	if (func_53() != 0)
+		return func_33(plParam0) != 0;
 
-	return func_29(plParam0, bParam1, false);
+	return func_30(plParam0, bParam1, false);
 }
 
-BOOL func_29(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0xAC0
+BOOL func_30(Player plParam0, BOOL bParam1, BOOL bParam2) // Position - 0xAF4
 {
 	if (bParam1)
-		if (func_30(plParam0))
+		if (func_31(plParam0))
 			return 1;
 
 	!bParam2;
 
-	if (Global_1853910[plParam0] == -1)
+	if (Global_1853988[plParam0] == -1)
 		return 0;
 
 	return 1;
 }
 
-BOOL func_30(Player plParam0) // Position - 0xAF2
+BOOL func_31(Player plParam0) // Position - 0xB26
 {
-	return func_31(plParam0);
+	return func_32(plParam0);
 }
 
-BOOL func_31(Player plParam0) // Position - 0xB00
+BOOL func_32(Player plParam0) // Position - 0xB34
 {
-	return IS_BIT_SET(Global_1853910[plParam0].f_11.f_1, 0);
+	return IS_BIT_SET(Global_1853988[plParam0].f_11.f_1, 0);
 }
 
-int func_32(Player plParam0) // Position - 0xB17
+int func_33(Player plParam0) // Position - 0xB4B
 {
 	if (_NETWORK_IS_PLAYER_VALID(plParam0, false, true))
-		return Global_2657589[plParam0].f_1;
+		return Global_2657704[plParam0].f_1;
 
 	return 0;
 }
 
-Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0xB39
+Vector3 _GET_PLAYER_COORDS(Player plParam0) // Position - 0xB6D
 {
 	return ENTITY::GET_ENTITY_COORDS(PLAYER::GET_PLAYER_PED(plParam0), false);
 }
 
-void func_34() // Position - 0xB4C
+void func_35() // Position - 0xB80
 {
 	int i;
 	int j;
@@ -1045,7 +1063,7 @@ void func_34() // Position - 0xB4C
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		func_42(i, &doorHash);
+		func_43(i, &doorHash);
 	
 		if (MISC::GET_DISTANCE_BETWEEN_COORDS(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), doorHash.f_1, true) < 150f)
 		{
@@ -1057,7 +1075,7 @@ void func_34() // Position - 0xB4C
 			
 				if (_NETWORK_IS_PLAYER_VALID(player, true, true))
 				{
-					if (func_35(player) && ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::GET_PLAYER_PED(player), doorHash.f_4[0], doorHash.f_4[1], doorHash.f_11, false, true, 0))
+					if (func_36(player) && ENTITY::IS_ENTITY_IN_ANGLED_AREA(PLAYER::GET_PLAYER_PED(player), doorHash.f_4[0], doorHash.f_4[1], doorHash.f_11, false, true, 0))
 					{
 						flag = true;
 						j = 32;
@@ -1067,27 +1085,27 @@ void func_34() // Position - 0xB4C
 		
 			if (flag)
 			{
-				if (uLocal_408[i] != 1f)
+				if (uLocal_409[i] != 1f)
 				{
-					uLocal_408[i] = uLocal_408[i] + (doorHash.f_12 * SYSTEM::TIMESTEP());
+					uLocal_409[i] = uLocal_409[i] + (doorHash.f_12 * SYSTEM::TIMESTEP());
 				
-					if (uLocal_408[i] > 1f)
-						uLocal_408[i] = 1f;
+					if (uLocal_409[i] > 1f)
+						uLocal_409[i] = 1f;
 				
 					AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(doorHash, true);
-					OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(doorHash, uLocal_408[i], false, false);
+					OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(doorHash, uLocal_409[i], false, false);
 					OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(doorHash, 0, false, true);
 				}
 			}
-			else if (uLocal_408[i] != 0f)
+			else if (uLocal_409[i] != 0f)
 			{
-				uLocal_408[i] = uLocal_408[i] - (doorHash.f_12 * SYSTEM::TIMESTEP());
+				uLocal_409[i] = uLocal_409[i] - (doorHash.f_12 * SYSTEM::TIMESTEP());
 			
-				if (uLocal_408[i] < 0f)
-					uLocal_408[i] = 0f;
+				if (uLocal_409[i] < 0f)
+					uLocal_409[i] = 0f;
 			
 				AUDIO::SET_SCRIPT_UPDATE_DOOR_AUDIO(doorHash, true);
-				OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(doorHash, uLocal_408[i], false, false);
+				OBJECT::DOOR_SYSTEM_SET_OPEN_RATIO(doorHash, uLocal_409[i], false, false);
 				OBJECT::DOOR_SYSTEM_SET_DOOR_STATE(doorHash, 1, false, true);
 			}
 		}
@@ -1096,29 +1114,29 @@ void func_34() // Position - 0xB4C
 	return;
 }
 
-BOOL func_35(Player plParam0) // Position - 0xCAA
+BOOL func_36(Player plParam0) // Position - 0xCDE
 {
 	int num;
 	Player player;
 	int num2;
 
-	if (func_41(plParam0))
+	if (func_42(plParam0))
 	{
-		num = func_40(plParam0);
+		num = func_41(plParam0);
 	
 		if (num == 3 || num == 4 || num == 5)
 			return true;
 	}
 
-	if (_IS_PLAYER_IN_AN_ORGANIZATION(plParam0, true))
+	if (func_39(plParam0, true))
 	{
-		player = func_37(plParam0);
+		player = func_38(plParam0);
 	
 		if (player != _INVALID_PLAYER_INDEX())
 		{
-			if (func_41(player))
+			if (func_42(player))
 			{
-				num2 = func_40(player);
+				num2 = func_41(player);
 			
 				if (num2 == 3 || num2 == 4 || num2 == 5)
 					return true;
@@ -1129,89 +1147,92 @@ BOOL func_35(Player plParam0) // Position - 0xCAA
 	return false;
 }
 
-Player _INVALID_PLAYER_INDEX() // Position - 0xD2E
+Player _INVALID_PLAYER_INDEX() // Position - 0xD62
 {
 	return -1;
 }
 
-Player func_37(Player plParam0) // Position - 0xD37
+Player func_38(Player plParam0) // Position - 0xD6B
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1894573[plParam0].f_10;
+	if (func_25(plParam0))
+		return Global_1895156[plParam0].f_10;
 
 	return _INVALID_PLAYER_INDEX();
 }
 
-BOOL _IS_PLAYER_IN_AN_ORGANIZATION(Player plParam0, BOOL bCanBeBoss) // Position - 0xD5A
+BOOL func_39(Player plParam0, BOOL bParam1) // Position - 0xD8E
 {
-	if (!bCanBeBoss)
-		if (_IS_PLAYER_BOSS_OF_ORGANIZATION(plParam0))
+	if (!func_25(plParam0))
+		return false;
+
+	if (!bParam1)
+		if (func_40(plParam0))
 			return false;
 
-	return Global_1894573[plParam0].f_10 != _INVALID_PLAYER_INDEX();
+	return Global_1895156[plParam0].f_10 != _INVALID_PLAYER_INDEX();
 }
 
-BOOL _IS_PLAYER_BOSS_OF_ORGANIZATION(Player plParam0) // Position - 0xD85
+BOOL func_40(Player plParam0) // Position - 0xDC7
 {
-	if (plParam0 != _INVALID_PLAYER_INDEX())
-		if (Global_1894573[plParam0].f_10 != _INVALID_PLAYER_INDEX())
-			return Global_1894573[plParam0].f_10 == plParam0;
+	if (func_25(plParam0))
+		if (Global_1895156[plParam0].f_10 != _INVALID_PLAYER_INDEX())
+			return Global_1895156[plParam0].f_10 == plParam0;
 
 	return false;
 }
 
-int func_40(Player plParam0) // Position - 0xDBA
+int func_41(Player plParam0) // Position - 0xDFC
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1853910[plParam0].f_267.f_293;
+		return Global_1853988[plParam0].f_267.f_293;
 
 	return 0;
 }
 
-BOOL func_41(Player plParam0) // Position - 0xDDE
+BOOL func_42(Player plParam0) // Position - 0xE20
 {
 	if (plParam0 != _INVALID_PLAYER_INDEX())
-		return Global_1853910[plParam0].f_267.f_293 != 0;
+		return Global_1853988[plParam0].f_267.f_293 != 0;
 
 	return false;
 }
 
-void func_42(int iParam0, var uParam1) // Position - 0xE04
+void func_43(int iParam0, var uParam1) // Position - 0xE46
 {
 	switch (iParam0)
 	{
 		case 0:
 			*uParam1 = 302514014;
-			uParam1->f_1 = Vector3(-1588.27f, 2794.21f, 16.85f);
-			uParam1->f_4[0] = Vector3(-1585.3486f, 2796.7646f, 15.333453f);
-			uParam1->f_4[1] = Vector3(-1573.8737f, 2783.339f, 20.003242f);
+			uParam1->f_1 = { -1588.27f, 2794.21f, 16.85f };
+			uParam1->f_4[0] = { -1585.3486f, 2796.7646f, 15.333453f };
+			uParam1->f_4[1] = { -1573.8737f, 2783.339f, 20.003242f };
 			uParam1->f_11 = 6.75f;
 			uParam1->f_12 = 0.55f;
 			break;
 	
 		case 1:
 			*uParam1 = 374122670;
-			uParam1->f_1 = Vector3(-1589.58f, 2793.67f, 16.86f);
-			uParam1->f_4[0] = Vector3(-1592.5518f, 2791.0398f, 15.326007f);
-			uParam1->f_4[1] = Vector3(-1604.54f, 2805.5576f, 20.174604f);
+			uParam1->f_1 = { -1589.58f, 2793.67f, 16.86f };
+			uParam1->f_4[0] = { -1592.5518f, 2791.0398f, 15.326007f };
+			uParam1->f_4[1] = { -1604.54f, 2805.5576f, 20.174604f };
 			uParam1->f_11 = 6.75f;
 			uParam1->f_12 = 0.55f;
 			break;
 	
 		case 2:
 			*uParam1 = -1450927686;
-			uParam1->f_1 = Vector3(-2307.327f, 3390.4834f, 29.978f);
-			uParam1->f_4[0] = Vector3(-2309.542f, 3387.2397f, 29.722107f);
-			uParam1->f_4[1] = Vector3(-2322.4854f, 3397.3242f, 35.677418f);
+			uParam1->f_1 = { -2307.327f, 3390.4834f, 29.978f };
+			uParam1->f_4[0] = { -2309.542f, 3387.2397f, 29.722107f };
+			uParam1->f_4[1] = { -2322.4854f, 3397.3242f, 35.677418f };
 			uParam1->f_11 = 7f;
 			uParam1->f_12 = 0.55f;
 			break;
 	
 		case 3:
 			*uParam1 = -1927270846;
-			uParam1->f_1 = Vector3(-2299.742f, 3385.0378f, 30.0525f);
-			uParam1->f_4[0] = Vector3(-2297.572f, 3388.0483f, 29.79443f);
-			uParam1->f_4[1] = Vector3(-2284.746f, 3377.5898f, 36.37001f);
+			uParam1->f_1 = { -2299.742f, 3385.0378f, 30.0525f };
+			uParam1->f_4[0] = { -2297.572f, 3388.0483f, 29.79443f };
+			uParam1->f_4[1] = { -2284.746f, 3377.5898f, 36.37001f };
 			uParam1->f_11 = 6.75f;
 			uParam1->f_12 = 0.55f;
 			break;
@@ -1220,51 +1241,51 @@ void func_42(int iParam0, var uParam1) // Position - 0xE04
 	return;
 }
 
-void func_43() // Position - 0xFAF
+void func_44() // Position - 0xFF1
 {
-	if (func_44())
+	if (func_45())
 	{
-		if (!bLocal_120)
+		if (!bLocal_121)
 		{
 			OBJECT::OPEN_ALL_BARRIERS_FOR_RACE(true);
-			bLocal_120 = true;
+			bLocal_121 = true;
 		}
 	}
-	else if (bLocal_120 == true)
+	else if (bLocal_121 == true)
 	{
-		bLocal_120 = false;
+		bLocal_121 = false;
 		OBJECT::CLOSE_ALL_BARRIERS_FOR_RACE();
 	}
 
 	return;
 }
 
-BOOL func_44() // Position - 0xFDC
+BOOL func_45() // Position - 0x101E
 {
-	if (func_45())
+	if (func_46())
 		return true;
 
-	if (func_52() == 2)
-		if (Global_MissionData1 == 2)
+	if (func_53() == 2)
+		if (Global_4718592 == 2)
 			return true;
 
 	return false;
 }
 
-BOOL func_45() // Position - 0x1004
+BOOL func_46() // Position - 0x1046
 {
-	if (Global_MissionData1 == 2 || Global_MissionData1 == 8)
+	if (Global_4718592 == 2 || Global_4718592 == 8)
 		return true;
 
 	return false;
 }
 
-int func_46() // Position - 0x1027
+int func_47() // Position - 0x1069
 {
-	return iLocal_229;
+	return iLocal_230;
 }
 
-BOOL func_47(var uParam0, int iParam1) // Position - 0x1031
+BOOL func_48(var uParam0, int iParam1) // Position - 0x1073
 {
 	Hash doorHash;
 	int unk;
@@ -1273,7 +1294,7 @@ BOOL func_47(var uParam0, int iParam1) // Position - 0x1031
 	{
 		if (*uParam0 < 315)
 		{
-			doorHash = Vector3(func_48(*uParam0, iParam1));
+			doorHash = { func_49(*uParam0, iParam1) };
 		
 			if (doorHash.f_1 == 99 || doorHash.f_1 == iParam1)
 				if (!OBJECT::IS_DOOR_REGISTERED_WITH_SYSTEM(doorHash))
@@ -1289,7 +1310,7 @@ BOOL func_47(var uParam0, int iParam1) // Position - 0x1031
 	return true;
 }
 
-struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
+struct<15> func_49(int iParam0, int iParam1) // Position - 0x10E0
 {
 	int num;
 
@@ -1299,7 +1320,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -247372382;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_com_gar_door_01");
-			num.f_3 = Vector3(1204.57f, -3110.4f, 6.57f);
+			num.f_3 = { 1204.57f, -3110.4f, 6.57f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			break;
@@ -1308,7 +1329,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1198408382;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door2");
-			num.f_3 = Vector3(467.3716f, -1014.452f, 26.5362f);
+			num.f_3 = { 467.3716f, -1014.452f, 26.5362f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1318,7 +1339,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1651829484;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door2");
-			num.f_3 = Vector3(469.9679f, -1014.452f, 26.5362f);
+			num.f_3 = { 469.9679f, -1014.452f, 26.5362f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1328,7 +1349,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1209329220;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_gtdoor02");
-			num.f_3 = Vector3(464.3613f, -984.6779f, 43.8344f);
+			num.f_3 = { 464.3613f, -984.6779f, 43.8344f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1338,7 +1359,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 534621945;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ph_door01");
-			num.f_3 = Vector3(434.75f, -980.61f, 30.84f);
+			num.f_3 = { 434.75f, -980.61f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1348,7 +1369,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -457131900;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ph_door002");
-			num.f_3 = Vector3(434.75f, -983.22f, 30.84f);
+			num.f_3 = { 434.75f, -983.22f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1358,7 +1379,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 163748837;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_biolab_g_door");
-			num.f_3 = Vector3(3589.1f, 3671.5f, 35f);
+			num.f_3 = { 3589.1f, 3671.5f, 35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1368,7 +1389,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1249217678;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_biolab_g_door");
-			num.f_3 = Vector3(3587.6f, 3663.3f, 35f);
+			num.f_3 = { 3587.6f, 3663.3f, 35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1378,7 +1399,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1984929564;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_shutter2");
-			num.f_3 = Vector3(3627.71f, 3746.72f, 27.69f);
+			num.f_3 = { 3627.71f, 3746.72f, 27.69f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1388,7 +1409,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1532658745;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_shutter2");
-			num.f_3 = Vector3(3620.84f, 3751.53f, 27.69f);
+			num.f_3 = { 3620.84f, 3751.53f, 27.69f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1398,7 +1419,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1877357900;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_abbmaindoor");
-			num.f_3 = Vector3(962.1f, -2183.83f, 31.06f);
+			num.f_3 = { 962.1f, -2183.83f, 31.06f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1408,7 +1429,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -769623617;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_abbmaindoor2");
-			num.f_3 = Vector3(961.79f, -2187.08f, 31.06f);
+			num.f_3 = { 961.79f, -2187.08f, 31.06f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1417,7 +1438,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 179:
 			num = 738966015;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-1138.47f, -2730.45f, 12.95f);
+			num.f_3 = { -1138.47f, -2730.45f, 12.95f };
 		
 			if (iParam1 == 98)
 			{
@@ -1438,7 +1459,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 178:
 			num = 969004395;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-1151.2043f, -2723.1023f, 12.946f);
+			num.f_3 = { -1151.2043f, -2723.1023f, 12.946f };
 		
 			if (iParam1 == 98)
 			{
@@ -1459,7 +1480,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 118:
 			num = 1036961952;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-977.5174f, -2837.2644f, 12.9549f);
+			num.f_3 = { -977.5174f, -2837.2644f, 12.9549f };
 		
 			if (iParam1 == 98)
 			{
@@ -1480,7 +1501,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 119:
 			num = 1864280899;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-990.2963f, -2829.8872f, 12.9499f);
+			num.f_3 = { -990.2963f, -2829.8872f, 12.9499f };
 		
 			if (iParam1 == 98)
 			{
@@ -1501,7 +1522,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 120:
 			num = -355737150;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-1213.4f, -2079.3003f, 12.907f);
+			num.f_3 = { -1213.4f, -2079.3003f, 12.907f };
 		
 			if (iParam1 == 98)
 			{
@@ -1523,7 +1544,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1170618471;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-967.4473f, -2778.495f, 14.409f);
+			num.f_3 = { -967.4473f, -2778.495f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1533,7 +1554,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1300449249;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-974.5734f, -2774.3809f, 14.4099f);
+			num.f_3 = { -974.5734f, -2774.3809f, 14.4099f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1543,7 +1564,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1529668404;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-971.1018f, -2776.3855f, 14.409f);
+			num.f_3 = { -971.1018f, -2776.3855f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1553,7 +1574,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1577455399;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-970.9188f, -2776.4907f, 14.409f);
+			num.f_3 = { -970.9188f, -2776.4907f, 14.409f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1563,7 +1584,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2142655111;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-935.2114f, -2767.3967f, 14.3882f);
+			num.f_3 = { -935.2114f, -2767.3967f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1573,7 +1594,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 996723181;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-933.1581f, -2763.9546f, 14.3882f);
+			num.f_3 = { -933.1581f, -2763.9546f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1583,7 +1604,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1830923614;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-933.0535f, -2763.7793f, 14.3882f);
+			num.f_3 = { -933.0535f, -2763.7793f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1593,7 +1614,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -125385686;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-931.0002f, -2760.3372f, 14.3882f);
+			num.f_3 = { -931.0002f, -2760.3372f, 14.3882f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1603,7 +1624,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 745417724;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-773.2438f, -2842.6775f, 14.2715f);
+			num.f_3 = { -773.2438f, -2842.6775f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 0;
@@ -1613,7 +1634,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1305304906;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-769.7721f, -2844.682f, 14.2715f);
+			num.f_3 = { -769.7721f, -2844.682f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 0;
@@ -1623,7 +1644,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1543175077;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_r");
-			num.f_3 = Vector3(-769.6071f, -2844.777f, 14.2715f);
+			num.f_3 = { -769.6071f, -2844.777f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 0;
@@ -1633,7 +1654,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -811770997;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_02gate6_l");
-			num.f_3 = Vector3(-766.1354f, -2846.7815f, 14.2715f);
+			num.f_3 = { -766.1354f, -2846.7815f, 14.2715f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 0;
@@ -1643,7 +1664,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 29310942;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-828.9456f, -2964.3037f, 14.2758f);
+			num.f_3 = { -828.9456f, -2964.3037f, 14.2758f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1653,7 +1674,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -247292187;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-907.7999f, -3100.874f, 14.2808f);
+			num.f_3 = { -907.7999f, -3100.874f, 14.2808f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1663,7 +1684,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 460387137;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-833.4395f, -3186.7095f, 14.267f);
+			num.f_3 = { -833.4395f, -3186.7095f, 14.267f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1673,7 +1694,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 106875165;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-830.0544f, -3391.1628f, 14.1972f);
+			num.f_3 = { -830.0544f, -3391.1628f, 14.1972f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1683,7 +1704,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 923052648;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-913.0834f, -3534.9697f, 14.1924f);
+			num.f_3 = { -913.0834f, -3534.9697f, 14.1924f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1693,7 +1714,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1237505857;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-971.6149f, -3549.152f, 14.2727f);
+			num.f_3 = { -971.6149f, -3549.152f, 14.2727f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1703,7 +1724,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1938172615;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1017.6921f, -3563.2173f, 14.2767f);
+			num.f_3 = { -1017.6921f, -3563.2173f, 14.2767f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1713,7 +1734,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -810513079;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1146.8314f, -3546.6382f, 14.2595f);
+			num.f_3 = { -1146.8314f, -3546.6382f, 14.2595f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1723,7 +1744,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 69924413;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1260.8966f, -3480.764f, 14.1721f);
+			num.f_3 = { -1260.8966f, -3480.764f, 14.1721f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1733,7 +1754,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -152773711;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1351.1328f, -3404.1616f, 14.1721f);
+			num.f_3 = { -1351.1328f, -3404.1616f, 14.1721f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1743,7 +1764,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 681951026;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1409.5073f, -3370.4614f, 14.2068f);
+			num.f_3 = { -1409.5073f, -3370.4614f, 14.2068f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1753,7 +1774,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 877254262;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1831.804f, -3224.9663f, 14.3119f);
+			num.f_3 = { -1831.804f, -3224.9663f, 14.3119f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1763,7 +1784,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1712929328;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1942.2893f, -3161.1904f, 14.2981f);
+			num.f_3 = { -1942.2893f, -3161.1904f, 14.2981f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1773,7 +1794,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1482661565;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1927.5635f, -3076.269f, 14.4569f);
+			num.f_3 = { -1927.5635f, -3076.269f, 14.4569f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1783,7 +1804,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1782694529;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1951.6956f, -3003.8457f, 14.4418f);
+			num.f_3 = { -1951.6956f, -3003.8457f, 14.4418f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1793,7 +1814,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1714183772;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1836.875f, -2804.969f, 14.4557f);
+			num.f_3 = { -1836.875f, -2804.969f, 14.4557f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1803,7 +1824,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1953037013;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_09gate1");
-			num.f_3 = Vector3(-1802.6915f, -2745.7615f, 14.448f);
+			num.f_3 = { -1802.6915f, -2745.7615f, 14.448f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -1812,7 +1833,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 150:
 			num = -795813070;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-1099.5308f, -2020.8026f, 12.1745f);
+			num.f_3 = { -1099.5308f, -2020.8026f, 12.1745f };
 		
 			if (iParam1 == 98)
 			{
@@ -1833,7 +1854,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 151:
 			num = -580979506;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-994.4996f, -2341.6482f, 12.9448f);
+			num.f_3 = { -994.4996f, -2341.6482f, 12.9448f };
 		
 			if (iParam1 == 98)
 			{
@@ -1854,7 +1875,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 152:
 			num = -1426452475;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-984.0709f, -2348.4001f, 12.9448f);
+			num.f_3 = { -984.0709f, -2348.4001f, 12.9448f };
 		
 			if (iParam1 == 98)
 			{
@@ -1875,7 +1896,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 153:
 			num = -1178784373;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-1008.0708f, -2406.751f, 12.977f);
+			num.f_3 = { -1008.0708f, -2406.751f, 12.977f };
 		
 			if (iParam1 == 98)
 			{
@@ -1896,7 +1917,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 		case 154:
 			num = 94815597;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-1015.4854f, -2419.5828f, 12.9586f);
+			num.f_3 = { -1015.4854f, -2419.5828f, 12.9586f };
 		
 			if (iParam1 == 98)
 			{
@@ -1918,7 +1939,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 208246292;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_lester_doorfront");
-			num.f_3 = Vector3(1273.82f, -1720.7f, 54.92f);
+			num.f_3 = { 1273.82f, -1720.7f, 54.92f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -1928,7 +1949,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1357778570;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_tort_door");
-			num.f_3 = Vector3(134.4f, -2204.1f, 7.52f);
+			num.f_3 = { 134.4f, -2204.1f, 7.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1938,7 +1959,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -80542775;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_janitor_frontdoor");
-			num.f_3 = Vector3(-107.5373f, -9.0181f, 70.6708f);
+			num.f_3 = { -107.5373f, -9.0181f, 70.6708f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1948,7 +1969,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 868388666;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_deviantfrontdoor");
-			num.f_3 = Vector3(-128.33f, -1457.17f, 37.94f);
+			num.f_3 = { -128.33f, -1457.17f, 37.94f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1958,7 +1979,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2137238404;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_po_door");
-			num.f_3 = Vector3(-1910.58f, -576.01f, 19.25f);
+			num.f_3 = { -1910.58f, -576.01f, 19.25f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1968,7 +1989,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1494493065;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door3");
-			num.f_3 = Vector3(1395.92f, 1142.9f, 114.79f);
+			num.f_3 = { 1395.92f, 1142.9f, 114.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1978,7 +1999,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1388518119;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door3");
-			num.f_3 = Vector3(1395.92f, 1140.7f, 114.79f);
+			num.f_3 = { 1395.92f, 1140.7f, 114.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1988,7 +2009,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2119698256;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_l");
-			num.f_3 = Vector3(1390.52f, 1163.44f, 114.38f);
+			num.f_3 = { 1390.52f, 1163.44f, 114.38f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -1998,7 +2019,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1935563805;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_r");
-			num.f_3 = Vector3(1390.52f, 1161.24f, 114.38f);
+			num.f_3 = { 1390.52f, 1161.24f, 114.38f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2008,7 +2029,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -271559421;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_l");
-			num.f_3 = Vector3(1408.07f, 1158.97f, 114.48f);
+			num.f_3 = { 1408.07f, 1158.97f, 114.48f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2018,7 +2039,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1985574735;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_r");
-			num.f_3 = Vector3(1408.07f, 1161.17f, 114.48f);
+			num.f_3 = { 1408.07f, 1161.17f, 114.48f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2028,7 +2049,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1132368282;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_l");
-			num.f_3 = Vector3(1409.29f, 1146.25f, 114.49f);
+			num.f_3 = { 1409.29f, 1146.25f, 114.49f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2038,7 +2059,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1508687478;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ra_door1_r");
-			num.f_3 = Vector3(1409.29f, 1148.45f, 114.49f);
+			num.f_3 = { 1409.29f, 1148.45f, 114.49f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2048,7 +2069,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 689210336;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_door_l");
-			num.f_3 = Vector3(-1387.05f, -586.58f, 30.47f);
+			num.f_3 = { -1387.05f, -586.58f, 30.47f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2058,7 +2079,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 510553748;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_door_r");
-			num.f_3 = Vector3(-1389.24f, -588f, 30.47f);
+			num.f_3 = { -1389.24f, -588f, 30.47f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2068,7 +2089,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 313127870;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_gate_01c");
-			num.f_3 = Vector3(25.03f, -664.6f, 31.04f);
+			num.f_3 = { 25.03f, -664.6f, 31.04f };
 			num.f_7 = 1;
 			num.f_8 = 5;
 			num.f_11 = 1;
@@ -2078,7 +2099,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 145416128;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_gate_01d");
-			num.f_3 = Vector3(-72.75f, -682.17f, 33.27f);
+			num.f_3 = { -72.75f, -682.17f, 33.27f };
 			num.f_7 = 1;
 			num.f_8 = 5;
 			num.f_11 = 1;
@@ -2088,7 +2109,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -948170937;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bank4door02");
-			num.f_3 = Vector3(-111.48f, 6463.94f, 31.985f);
+			num.f_3 = { -111.48f, 6463.94f, 31.985f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2098,7 +2119,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -684544332;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bank4door01");
-			num.f_3 = Vector3(-109.65f, 6462.11f, 31.985f);
+			num.f_3 = { -109.65f, 6462.11f, 31.985f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2108,7 +2129,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1135190791;
 			num.f_1 = 99;
 			num.f_2 = joaat("hei_v_ilev_bk_gate_pris");
-			num.f_3 = Vector3(256.3116f, 220.6579f, 106.4296f);
+			num.f_3 = { 256.3116f, 220.6579f, 106.4296f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2118,7 +2139,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1011604710;
 			num.f_1 = 99;
 			num.f_2 = joaat("hei_v_ilev_bk_gate2_pris");
-			num.f_3 = Vector3(262.1981f, 222.5188f, 106.4296f);
+			num.f_3 = { 262.1981f, 222.5188f, 106.4296f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2128,7 +2149,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -403267826;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(-2965.821f, 481.63f, 16.048f);
+			num.f_3 = { -2965.821f, 481.63f, 16.048f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2138,7 +2159,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -171885917;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(-2965.71f, 484.219f, 16.048f);
+			num.f_3 = { -2965.71f, 484.219f, 16.048f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2148,7 +2169,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1734755709;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(1176.49f, 2703.61f, 38.44f);
+			num.f_3 = { 1176.49f, 2703.61f, 38.44f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2158,7 +2179,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1006108989;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(1173.9f, 2703.61f, 38.44f);
+			num.f_3 = { 1173.9f, 2703.61f, 38.44f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2168,7 +2189,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2012837225;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(1656.25f, 4852.24f, 42.35f);
+			num.f_3 = { 1656.25f, 4852.24f, 42.35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2178,7 +2199,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 314747645;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(1656.57f, 4849.66f, 42.35f);
+			num.f_3 = { 1656.57f, 4849.66f, 42.35f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2188,7 +2209,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 571329950;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(-1215.39f, -328.52f, 38.13f);
+			num.f_3 = { -1215.39f, -328.52f, 38.13f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2198,7 +2219,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 266021177;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(-1213.07f, -327.35f, 38.13f);
+			num.f_3 = { -1213.07f, -327.35f, 38.13f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2208,7 +2229,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -171153163;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(149.63f, -1037.23f, 29.72f);
+			num.f_3 = { 149.63f, -1037.23f, 29.72f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2218,7 +2239,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1163398483;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(152.06f, -1038.12f, 29.72f);
+			num.f_3 = { 152.06f, -1038.12f, 29.72f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2228,7 +2249,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1080982134;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(313.96f, -275.6f, 54.52f);
+			num.f_3 = { 313.96f, -275.6f, 54.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2238,7 +2259,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -775086795;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(316.39f, -276.49f, 54.52f);
+			num.f_3 = { 316.39f, -276.49f, 54.52f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2248,7 +2269,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1819100989;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor2");
-			num.f_3 = Vector3(-348.8109f, -47.2621f, 49.3876f);
+			num.f_3 = { -348.8109f, -47.2621f, 49.3876f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2258,7 +2279,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1787848387;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_genbankdoor1");
-			num.f_3 = Vector3(-351.2598f, -46.4122f, 49.3876f);
+			num.f_3 = { -351.2598f, -46.4122f, 49.3876f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2268,7 +2289,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1598253329;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fibl_door02");
-			num.f_3 = Vector3(106.38f, -742.7f, 46.18f);
+			num.f_3 = { 106.38f, -742.7f, 46.18f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2278,7 +2299,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1369034174;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fibl_door01");
-			num.f_3 = Vector3(105.76f, -746.65f, 46.18f);
+			num.f_3 = { 105.76f, -746.65f, 46.18f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2288,7 +2309,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1814497429;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch3_01_trlrdoor_l");
-			num.f_3 = Vector3(2333.23f, 2574.97f, 47.03f);
+			num.f_3 = { 2333.23f, 2574.97f, 47.03f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2298,7 +2319,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1526269356;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch3_01_trlrdoor_r");
-			num.f_3 = Vector3(2329.65f, 2576.64f, 47.03f);
+			num.f_3 = { 2329.65f, 2576.64f, 47.03f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2308,7 +2329,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 422781221;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fh_frntdoor");
-			num.f_3 = Vector3(0.2169f, -1823.3031f, 29.6391f);
+			num.f_3 = { 0.2169f, -1823.3031f, 29.6391f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2318,7 +2339,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1066241800;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_doorel_l");
-			num.f_3 = Vector3(-2053.16f, 3239.49f, 30.5f);
+			num.f_3 = { -2053.16f, 3239.49f, 30.5f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2328,7 +2349,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1959909816;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_doorel_r");
-			num.f_3 = Vector3(-2054.39f, 3237.23f, 30.5f);
+			num.f_3 = { -2054.39f, 3237.23f, 30.5f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2338,7 +2359,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1931749328;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_cs4_05_tdoor");
-			num.f_3 = Vector3(31.918f, 3666.8535f, 40.8586f);
+			num.f_3 = { 31.918f, 3666.8535f, 40.8586f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2348,7 +2369,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1624933181;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_magenta_door");
-			num.f_3 = Vector3(29.102f, 3661.4893f, 40.8547f);
+			num.f_3 = { 29.102f, 3661.4893f, 40.8547f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -2358,7 +2379,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1184370912;
 			num.f_1 = 99;
 			num.f_2 = joaat("hei_prop_heist_cutscene_doorb");
-			num.f_3 = Vector3(776.8f, 4184.64f, 41.91f);
+			num.f_3 = { 776.8f, 4184.64f, 41.91f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2368,7 +2389,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1023333176;
 			num.f_1 = 99;
 			num.f_2 = joaat("apa_prop_apa_cutscene_doora");
-			num.f_3 = Vector3(722.399f, 4187.952f, 41.231f);
+			num.f_3 = { 722.399f, 4187.952f, 41.231f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2378,7 +2399,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 651841620;
 			num.f_1 = 99;
 			num.f_2 = joaat("hei_prop_heist_cutscene_doorc_r");
-			num.f_3 = Vector3(610.594f, -421.83f, 24.979f);
+			num.f_3 = { 610.594f, -421.83f, 24.979f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2388,7 +2409,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1049460666;
 			num.f_1 = 99;
 			num.f_2 = joaat("hei_prop_heist_cutscene_doorc_l");
-			num.f_3 = Vector3(610.874f, -419.365f, 24.979f);
+			num.f_3 = { 610.874f, -419.365f, 24.979f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2398,7 +2419,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1343869835;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_docks_ld");
-			num.f_3 = Vector3(492f, -3116f, 5f);
+			num.f_3 = { 492f, -3116f, 5f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_12 = 0f;
@@ -2408,7 +2429,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 207506449;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_docks_ld");
-			num.f_3 = Vector3(476f, -3116f, 5f);
+			num.f_3 = { 476f, -3116f, 5f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_12 = 0f;
@@ -2418,7 +2439,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2110173063;
 			num.f_1 = 99;
 			num.f_2 = joaat("lr_prop_boathousedoor_l");
-			num.f_3 = Vector3(1527.7452f, 3778.1309f, 34.7106f);
+			num.f_3 = { 1527.7452f, 3778.1309f, 34.7106f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2428,7 +2449,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1032072975;
 			num.f_1 = 99;
 			num.f_2 = joaat("lr_prop_boathousedoor_r");
-			num.f_3 = Vector3(1530.7625f, 3780.244f, 34.7104f);
+			num.f_3 = { 1530.7625f, 3780.244f, 34.7104f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -2441,7 +2462,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1255781408;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate2");
-			num.f_3 = Vector3(-687.73f, -2458.82f, 12.9f);
+			num.f_3 = { -687.73f, -2458.82f, 12.9f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2450,7 +2471,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1901756713;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate2");
-			num.f_3 = Vector3(-697.82f, -1226.5f, 12.91f);
+			num.f_3 = { -697.82f, -1226.5f, 12.91f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2459,7 +2480,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1719167837;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate2");
-			num.f_3 = Vector3(-692.77f, -2455.93f, 12.9f);
+			num.f_3 = { -692.77f, -2455.93f, 12.9f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2468,7 +2489,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 389336283;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-891.93f, -2748.71f, 12.95f);
+			num.f_3 = { -891.93f, -2748.71f, 12.95f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2477,7 +2498,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 732598411;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-896.46f, -2746.42f, 12.95f);
+			num.f_3 = { -896.46f, -2746.42f, 12.95f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2486,7 +2507,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1348295152;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_airport_01");
-			num.f_3 = Vector3(-859.73f, -2683.9f, 12.76f);
+			num.f_3 = { -859.73f, -2683.9f, 12.76f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2495,7 +2516,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1547432097;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-1019.61f, -1897.02f, 13.37f);
+			num.f_3 = { -1019.61f, -1897.02f, 13.37f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2504,7 +2525,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1231145709;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-160.88f, -2636.2f, 5.03f);
+			num.f_3 = { -160.88f, -2636.2f, 5.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2513,7 +2534,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 934782873;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(-148.71f, -2636.2f, 5.03f);
+			num.f_3 = { -148.71f, -2636.2f, 5.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2522,7 +2543,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 652215786;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(237.78f, -2936.96f, 5.05f);
+			num.f_3 = { 237.78f, -2936.96f, 5.05f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2531,7 +2552,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1791270241;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_docks_ld");
-			num.f_3 = Vector3(-188.28f, -2204.61f, 9.3f);
+			num.f_3 = { -188.28f, -2204.61f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2540,7 +2561,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2108474161;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_docks_ld");
-			num.f_3 = Vector3(-127.56f, -2185.29f, 9.3f);
+			num.f_3 = { -127.56f, -2185.29f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2549,7 +2570,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -959673820;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_docks_ld");
-			num.f_3 = Vector3(-33.22f, -2141.27f, 9.3f);
+			num.f_3 = { -33.22f, -2141.27f, 9.3f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2558,7 +2579,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -653316439;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1000.68f, -2454.99f, 27.57f);
+			num.f_3 = { 1000.68f, -2454.99f, 27.57f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2567,7 +2588,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1560558973;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1012.91f, -2456.23f, 27.53f);
+			num.f_3 = { 1012.91f, -2456.23f, 27.53f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2576,7 +2597,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1221988161;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1028.08f, -2364.72f, 29.52f);
+			num.f_3 = { 1028.08f, -2364.72f, 29.52f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2585,7 +2606,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1998121926;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1033.22f, -2299.1f, 29.52f);
+			num.f_3 = { 1033.22f, -2299.1f, 29.52f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2594,7 +2615,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1778504088;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1022.4f, -2417.13f, 28.13f);
+			num.f_3 = { 1022.4f, -2417.13f, 28.13f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2603,7 +2624,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1618264918;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_military_01");
-			num.f_3 = Vector3(2485.44f, -432.71f, 91.97f);
+			num.f_3 = { 2485.44f, -432.71f, 91.97f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2612,7 +2633,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1881039529;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(2485.09f, -335.84f, 91.98f);
+			num.f_3 = { 2485.09f, -335.84f, 91.98f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2621,7 +2642,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1105298992;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(2491.97f, -303.48f, 91.99f);
+			num.f_3 = { 2491.97f, -303.48f, 91.99f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2630,7 +2651,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -734026222;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1944.86f, -957.69f, 78.15f);
+			num.f_3 = { 1944.86f, -957.69f, 78.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2639,7 +2660,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 895772842;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(1956.74f, -956.86f, 78.15f);
+			num.f_3 = { 1956.74f, -956.86f, 78.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2648,7 +2669,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 77825833;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1845f, 2604.81f, 44.64f);
+			num.f_3 = { 1845f, 2604.81f, 44.64f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2657,7 +2678,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 308880052;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1818.55f, 2604.81f, 44.6f);
+			num.f_3 = { 1818.55f, 2604.81f, 44.6f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2666,7 +2687,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -620547091;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1799.74f, 2616.98f, 44.61f);
+			num.f_3 = { 1799.74f, 2616.98f, 44.61f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2675,7 +2696,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1471033717;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1813.4f, 2488.63f, 44.47f);
+			num.f_3 = { 1813.4f, 2488.63f, 44.47f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2684,7 +2705,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1233360160;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1808.82f, 2474.88f, 44.47f);
+			num.f_3 = { 1808.82f, 2474.88f, 44.47f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2693,7 +2714,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2075785612;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1762.19f, 2426.73f, 44.44f);
+			num.f_3 = { 1762.19f, 2426.73f, 44.44f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2702,7 +2723,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1874713956;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1749.22f, 2420.28f, 44.43f);
+			num.f_3 = { 1749.22f, 2420.28f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2711,7 +2732,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2113436121;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1667.61f, 2408.11f, 44.42f);
+			num.f_3 = { 1667.61f, 2408.11f, 44.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2720,7 +2741,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1266488547;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1661.76f, 2748.32f, 44.43f);
+			num.f_3 = { 1661.76f, 2748.32f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2729,7 +2750,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2060464373;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1653.21f, 2409.71f, 44.42f);
+			num.f_3 = { 1653.21f, 2409.71f, 44.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2738,7 +2759,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1207063697;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1558.14f, 2469.87f, 44.4f);
+			num.f_3 = { 1558.14f, 2469.87f, 44.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2747,7 +2768,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -565839905;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1551.18f, 2482.58f, 44.4f);
+			num.f_3 = { 1551.18f, 2482.58f, 44.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2756,7 +2777,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1189958275;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1547.41f, 2576.6f, 44.51f);
+			num.f_3 = { 1547.41f, 2576.6f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2765,7 +2786,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1492973218;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1547.99f, 2591.08f, 44.51f);
+			num.f_3 = { 1547.99f, 2591.08f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2774,7 +2795,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 348251354;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1576.19f, 2667.23f, 44.51f);
+			num.f_3 = { 1576.19f, 2667.23f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2783,7 +2804,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 40845365;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1584.63f, 2679.02f, 44.51f);
+			num.f_3 = { 1584.63f, 2679.02f, 44.51f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2792,7 +2813,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -95047678;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1648.95f, 2741.55f, 44.45f);
+			num.f_3 = { 1648.95f, 2741.55f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2801,7 +2822,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -267871384;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1762.58f, 2751.9f, 44.45f);
+			num.f_3 = { 1762.58f, 2751.9f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2810,7 +2831,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1572566732;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1776.26f, 2747.1f, 44.43f);
+			num.f_3 = { 1776.26f, 2747.1f, 44.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2819,7 +2840,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2106931155;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1829.8f, 2702.92f, 44.45f);
+			num.f_3 = { 1829.8f, 2702.92f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2828,7 +2849,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1899079099;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_prison_01");
-			num.f_3 = Vector3(1834.92f, 2689.37f, 44.45f);
+			num.f_3 = { 1834.92f, 2689.37f, 44.45f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2837,7 +2858,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1592787256;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(222.07f, -2013.99f, 18.41f);
+			num.f_3 = { 222.07f, -2013.99f, 18.41f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2846,7 +2867,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1902159381;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(210.93f, -2022.58f, 17.65f);
+			num.f_3 = { 210.93f, -2022.58f, 17.65f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2855,7 +2876,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1605042858;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01b");
-			num.f_3 = Vector3(459.7f, -2002.94f, 22.07f);
+			num.f_3 = { 459.7f, -2002.94f, 22.07f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2864,7 +2885,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1558510878;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(451.45f, -1994.01f, 22.07f);
+			num.f_3 = { 451.45f, -1994.01f, 22.07f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2873,7 +2894,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1259755905;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01b");
-			num.f_3 = Vector3(455.74f, -1944.85f, 23.66f);
+			num.f_3 = { 455.74f, -1944.85f, 23.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2882,7 +2903,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -42223710;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(466.76f, -1939.65f, 23.66f);
+			num.f_3 = { 466.76f, -1939.65f, 23.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2891,7 +2912,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -687183168;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01b");
-			num.f_3 = Vector3(539.83f, -1901.88f, 24.22f);
+			num.f_3 = { 539.83f, -1901.88f, 24.22f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2900,7 +2921,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 435613848;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(550.87f, -1896.75f, 24.15f);
+			num.f_3 = { 550.87f, -1896.75f, 24.15f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2909,7 +2930,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1139523801;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(564.12f, -1903f, 23.71f);
+			num.f_3 = { 564.12f, -1903f, 23.71f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2918,7 +2939,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1126088511;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01b");
-			num.f_3 = Vector3(570.6271f, -1913.332f, 23.7104f);
+			num.f_3 = { 570.6271f, -1913.332f, 23.7104f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2927,7 +2948,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 827399076;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(1081.65f, -1818.42f, 36.43f);
+			num.f_3 = { 1081.65f, -1818.42f, 36.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2936,7 +2957,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1126285129;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(987.52f, -1176.82f, 24.55f);
+			num.f_3 = { 987.52f, -1176.82f, 24.55f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2945,7 +2966,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 829955062;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(705.64f, -1319.67f, 24.96f);
+			num.f_3 = { 705.64f, -1319.67f, 24.96f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2954,7 +2975,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1633749438;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(712.95f, -1329.42f, 24.99f);
+			num.f_3 = { 712.95f, -1329.42f, 24.99f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2963,7 +2984,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1934732703;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(796.46f, -921.49f, 24.4f);
+			num.f_3 = { 796.46f, -921.49f, 24.4f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2972,7 +2993,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1737951283;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(795.78f, -909.33f, 24.36f);
+			num.f_3 = { 795.78f, -909.33f, 24.36f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2981,7 +3002,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -703535835;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(795.16f, -896.64f, 24.1f);
+			num.f_3 = { 795.16f, -896.64f, 24.1f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2990,7 +3011,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -987085992;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_01");
-			num.f_3 = Vector3(794.48f, -884.48f, 24.06f);
+			num.f_3 = { 794.48f, -884.48f, 24.06f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -2999,7 +3020,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1736447128;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate2");
-			num.f_3 = Vector3(546.17f, -1869.94f, 24.53f);
+			num.f_3 = { 546.17f, -1869.94f, 24.53f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3008,7 +3029,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1725499419;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(492.33f, -1410.47f, 28.43f);
+			num.f_3 = { 492.33f, -1410.47f, 28.43f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3017,7 +3038,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2032577718;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(484.57f, -1408.5f, 28.48f);
+			num.f_3 = { 484.57f, -1408.5f, 28.48f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3026,7 +3047,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2130786415;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(469.33f, -1272.7f, 28.82f);
+			num.f_3 = { 469.33f, -1272.7f, 28.82f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3035,7 +3056,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -783852294;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(487.87f, -1272.59f, 28.86f);
+			num.f_3 = { 487.87f, -1272.59f, 28.86f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3044,7 +3065,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -493650030;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_08");
-			num.f_3 = Vector3(488.89f, -1011.67f, 27.14f);
+			num.f_3 = { 488.89f, -1011.67f, 27.14f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3053,7 +3074,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1403186394;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(527.55f, -1597.33f, 28.39f);
+			num.f_3 = { 527.55f, -1597.33f, 28.39f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3062,7 +3083,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1105283415;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(544.94f, -1649.75f, 27.49f);
+			num.f_3 = { 544.94f, -1649.75f, 27.49f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3071,7 +3092,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 132270639;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate2");
-			num.f_3 = Vector3(151.35f, -1668.64f, 28.77f);
+			num.f_3 = { 151.35f, -1668.64f, 28.77f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3080,7 +3101,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 429714852;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_fnclink_03gate1");
-			num.f_3 = Vector3(47.2f, -1448.3f, 28.44f);
+			num.f_3 = { 47.2f, -1448.3f, 28.44f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3089,7 +3110,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 712231657;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1876.37f, 194.85f, 83.33f);
+			num.f_3 = { -1876.37f, 194.85f, 83.33f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3098,7 +3119,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2136700087;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1868.31f, 183.79f, 83.34f);
+			num.f_3 = { -1868.31f, 183.79f, 83.34f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3107,7 +3128,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 218566672;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1452.43f, 37.03f, 51.75f);
+			num.f_3 = { -1452.43f, 37.03f, 51.75f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3116,7 +3137,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2061822982;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1483.1f, 46.93f, 53.26f);
+			num.f_3 = { -1483.1f, 46.93f, 53.26f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3125,7 +3146,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1617901339;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1507.47f, 39.16f, 54.41f);
+			num.f_3 = { -1507.47f, 39.16f, 54.41f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3134,7 +3155,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1859638252;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-1528.36f, 35.77f, 55.78f);
+			num.f_3 = { -1528.36f, 35.77f, 55.78f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3143,7 +3164,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1008173552;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_02_ld");
-			num.f_3 = Vector3(-1583.28f, 40.14f, 59.32f);
+			num.f_3 = { -1583.28f, 40.14f, 59.32f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3152,7 +3173,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1403985307;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_02_ld");
-			num.f_3 = Vector3(-1616.23f, 79.78f, 60.78f);
+			num.f_3 = { -1616.23f, 79.78f, 60.78f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3161,7 +3182,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1988622032;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-924.98f, -9.03f, 43.28f);
+			num.f_3 = { -924.98f, -9.03f, 43.28f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3170,7 +3191,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1716077491;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_03a");
-			num.f_3 = Vector3(-905.7f, 14.66f, 45.66f);
+			num.f_3 = { -905.7f, 14.66f, 45.66f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3179,7 +3200,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1151537699;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_02_ld");
-			num.f_3 = Vector3(-844.05f, 155.96f, 66.03f);
+			num.f_3 = { -844.05f, 155.96f, 66.03f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3188,7 +3209,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1236503176;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_lrggate_04a");
-			num.f_3 = Vector3(-914.32f, 184.54f, 68.42f);
+			num.f_3 = { -914.32f, 184.54f, 68.42f };
 			num.f_6 = 1;
 			num.f_10 = 1;
 			break;
@@ -3197,7 +3218,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1725728509;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_trev_doorfront");
-			num.f_3 = Vector3(-1149.71f, -1521.09f, 10.79f);
+			num.f_3 = { -1149.71f, -1521.09f, 10.79f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3207,7 +3228,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -854930290;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ct_door01");
-			num.f_3 = Vector3(-2343.53f, 3265.37f, 32.96f);
+			num.f_3 = { -2343.53f, 3265.37f, 32.96f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3217,7 +3238,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -86464467;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ct_door01");
-			num.f_3 = Vector3(-2342.23f, 3267.62f, 32.96f);
+			num.f_3 = { -2342.23f, 3267.62f, 32.96f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3227,7 +3248,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1066535586;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_housedoor1");
-			num.f_3 = Vector3(347.8678f, -1003.3159f, -99.0952f);
+			num.f_3 = { 347.8678f, -1003.3159f, -99.0952f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -3237,7 +3258,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -153506146;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_door");
-			num.f_3 = Vector3(257.2896f, -1001.2546f, -98.8587f);
+			num.f_3 = { 257.2896f, -1001.2546f, -98.8587f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -3247,7 +3268,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = joaat("MP_MED_APT_BATH_DOOR");
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_doorw");
-			num.f_3 = Vector3(348.2157f, -993.1122f, -99.043f);
+			num.f_3 = { 348.2157f, -993.1122f, -99.043f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -3257,7 +3278,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1022411403;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fh_bedrmdoor");
-			num.f_3 = Vector3(-789.3017f, 332.0119f, 201.5596f);
+			num.f_3 = { -789.3017f, 332.0119f, 201.5596f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			num.f_11 = 1;
@@ -3267,7 +3288,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1858596497;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ld_garaged_01");
-			num.f_3 = Vector3(-815.3282f, 185.9571f, 72.99f);
+			num.f_3 = { -815.3282f, 185.9571f, 72.99f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3277,7 +3298,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 360545155;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_windowwc");
-			num.f_3 = Vector3(-802.7333f, 167.5041f, 77.5824f);
+			num.f_3 = { -802.7333f, 167.5041f, 77.5824f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3287,7 +3308,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1846031173;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_doorm_l");
-			num.f_3 = Vector3(-816.716f, 179.098f, 72.84f);
+			num.f_3 = { -816.716f, 179.098f, 72.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3297,7 +3318,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1966183215;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_doorm_r");
-			num.f_3 = Vector3(-816.1068f, 177.5109f, 72.8274f);
+			num.f_3 = { -816.1068f, 177.5109f, 72.8274f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3307,7 +3328,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -452757037;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_bh1_48_backdoor_l");
-			num.f_3 = Vector3(-796.5657f, 177.2214f, 73.0405f);
+			num.f_3 = { -796.5657f, 177.2214f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3317,7 +3338,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 422961723;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_bh1_48_backdoor_r");
-			num.f_3 = Vector3(-794.5051f, 178.0124f, 73.0405f);
+			num.f_3 = { -794.5051f, 178.0124f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3327,7 +3348,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 113556825;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_bh1_48_backdoor_l");
-			num.f_3 = Vector3(-793.3943f, 180.5075f, 73.0405f);
+			num.f_3 = { -793.3943f, 180.5075f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3337,7 +3358,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1035119412;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_bh1_48_backdoor_r");
-			num.f_3 = Vector3(-794.1853f, 182.568f, 73.0405f);
+			num.f_3 = { -794.1853f, 182.568f, 73.0405f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3347,7 +3368,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 929216155;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_mm_door");
-			num.f_3 = Vector3(-806.2817f, 187.0246f, 72.624f);
+			num.f_3 = { -806.2817f, 187.0246f, 72.624f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3357,7 +3378,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2017851706;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_cult_01_l");
-			num.f_3 = Vector3(-1041.2676f, 4906.0967f, 209.2002f);
+			num.f_3 = { -1041.2676f, 4906.0967f, 209.2002f };
 			num.f_7 = 1;
 			num.f_8 = 4;
 			num.f_12 = -1f;
@@ -3368,7 +3389,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -90706816;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gate_cult_01_r");
-			num.f_3 = Vector3(-1044.749f, 4914.9717f, 209.1932f);
+			num.f_3 = { -1044.749f, 4914.9717f, 209.1932f };
 			num.f_7 = 1;
 			num.f_8 = 4;
 			num.f_12 = 1f;
@@ -3379,7 +3400,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1701678154;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_trevtraildr");
-			num.f_3 = Vector3(1972.7689f, 3815.366f, 33.6633f);
+			num.f_3 = { 1972.7689f, 3815.366f, 33.6633f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3389,7 +3410,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2129438429;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fa_frontdoor");
-			num.f_3 = Vector3(-14.8689f, -1441.1821f, 31.192f);
+			num.f_3 = { -14.8689f, -1441.1821f, 31.192f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3399,7 +3420,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -670056199;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_door8");
-			num.f_3 = Vector3(716.7808f, -975.4207f, 25.057f);
+			num.f_3 = { 716.7808f, -975.4207f, 25.057f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3409,7 +3430,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 917058539;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_door7");
-			num.f_3 = Vector3(719.3818f, -975.4185f, 25.0057f);
+			num.f_3 = { 719.3818f, -975.4185f, 25.0057f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3419,7 +3440,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 505794885;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_door02");
-			num.f_3 = Vector3(710f, -964f, 31f);
+			num.f_3 = { 710f, -964f, 31f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3429,7 +3450,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 998060257;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_doorel_l");
-			num.f_3 = Vector3(3539f, 3673.7f, 20f);
+			num.f_3 = { 3539f, 3673.7f, 20f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3439,7 +3460,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1685291713;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_bl_doorel_r");
-			num.f_3 = Vector3(3541.6f, 3673.2f, 20f);
+			num.f_3 = { 3541.6f, 3673.2f, 20f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3449,7 +3470,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 856811118;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_store_door");
-			num.f_3 = Vector3(708f, -962f, 31f);
+			num.f_3 = { 708f, -962f, 31f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3459,7 +3480,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1579789044;
 			num.f_1 = 99;
 			num.f_2 = joaat("p_jewel_door_l");
-			num.f_3 = Vector3(-631.9554f, -236.3333f, 38.2065f);
+			num.f_3 = { -631.9554f, -236.3333f, 38.2065f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3469,7 +3490,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -740144707;
 			num.f_1 = 99;
 			num.f_2 = joaat("p_jewel_door_r1");
-			num.f_3 = Vector3(-630.4265f, -238.4375f, 38.2065f);
+			num.f_3 = { -630.4265f, -238.4375f, 38.2065f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3479,7 +3500,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 459292593;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_door04");
-			num.f_3 = Vector3(1395.6134f, 3609.327f, 35.1308f);
+			num.f_3 = { 1395.6134f, 3609.327f, 35.1308f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3489,7 +3510,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 699522132;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_doorext");
-			num.f_3 = Vector3(1388.4987f, 3614.8276f, 39.0919f);
+			num.f_3 = { 1388.4987f, 3614.8276f, 39.0919f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3499,7 +3520,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 919402122;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ss_doorext");
-			num.f_3 = Vector3(1399.6996f, 3607.763f, 39.0919f);
+			num.f_3 = { 1399.6996f, 3607.763f, 39.0919f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3509,7 +3530,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1009094475;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_com_gar_door_01");
-			num.f_3 = Vector3(484.5642f, -1315.574f, 30.2033f);
+			num.f_3 = { 484.5642f, -1315.574f, 30.2033f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3519,7 +3540,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1304570179;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_cs_door");
-			num.f_3 = Vector3(482.8112f, -1311.953f, 29.3506f);
+			num.f_3 = { 482.8112f, -1311.953f, 29.3506f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3529,7 +3550,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1374764510;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_epsstoredoor");
-			num.f_3 = Vector3(241.3621f, 361.0471f, 105.003f);
+			num.f_3 = { 241.3621f, 361.0471f, 105.003f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3539,7 +3560,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1326670325;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fh_frontdoor");
-			num.f_3 = Vector3(7.5179f, 539.526f, 176.1781f);
+			num.f_3 = { 7.5179f, 539.526f, 176.1781f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3549,7 +3570,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -646035010;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch_025c_g_door_01");
-			num.f_3 = Vector3(18.6504f, 546.3401f, 176.3448f);
+			num.f_3 = { 18.6504f, 546.3401f, 176.3448f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3559,7 +3580,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2020886833;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_csr_door_l");
-			num.f_3 = Vector3(-59.893f, -1092.9518f, 26.8836f);
+			num.f_3 = { -59.893f, -1092.9518f, 26.8836f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3569,7 +3590,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 424893020;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_csr_door_r");
-			num.f_3 = Vector3(-60.5458f, -1094.7489f, 26.8887f);
+			num.f_3 = { -60.5458f, -1094.7489f, 26.8887f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3579,10 +3600,10 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -234058813;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_csr_door_l");
-			num.f_3 = Vector3(-38.464f, -1108.4462f, 26.7198f);
+			num.f_3 = { -38.464f, -1108.4462f, 26.7198f };
 			num.f_7 = 1;
 		
-			if (!Global_262145.f_32680)
+			if (!*Global_262145.f_32898)
 			{
 				num.f_8 = 0;
 			}
@@ -3597,10 +3618,10 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -513447307;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_csr_door_r");
-			num.f_3 = Vector3(-36.6615f, -1109.1016f, 26.7198f);
+			num.f_3 = { -36.6615f, -1109.1016f, 26.7198f };
 			num.f_7 = 1;
 		
-			if (!Global_262145.f_32680)
+			if (!*Global_262145.f_32898)
 			{
 				num.f_8 = 0;
 			}
@@ -3615,7 +3636,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 777975393;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door3_l");
-			num.f_3 = Vector3(-608.7289f, -1610.3153f, 27.1589f);
+			num.f_3 = { -608.7289f, -1610.3153f, 27.1589f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3625,7 +3646,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2134513686;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door3_r");
-			num.f_3 = Vector3(-611.32f, -1610.0886f, 27.1589f);
+			num.f_3 = { -611.32f, -1610.0886f, 27.1589f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3635,7 +3656,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1758213847;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door3_l");
-			num.f_3 = Vector3(-592.9376f, -1631.577f, 27.1593f);
+			num.f_3 = { -592.9376f, -1631.577f, 27.1593f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3645,7 +3666,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -990993250;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_rc_door3_r");
-			num.f_3 = Vector3(-592.7109f, -1628.986f, 27.1593f);
+			num.f_3 = { -592.7109f, -1628.986f, 27.1593f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3655,7 +3676,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -611431917;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_shrf2door");
-			num.f_3 = Vector3(-442.66f, 6015.2217f, 31.8663f);
+			num.f_3 = { -442.66f, 6015.2217f, 31.8663f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			break;
@@ -3664,7 +3685,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1988181627;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_shrf2door");
-			num.f_3 = Vector3(-444.4985f, 6017.06f, 31.8663f);
+			num.f_3 = { -444.4985f, 6017.06f, 31.8663f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			break;
@@ -3673,7 +3694,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1879085215;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_shrfdoor");
-			num.f_3 = Vector3(1855.6848f, 3683.9302f, 34.5928f);
+			num.f_3 = { 1855.6848f, 3683.9302f, 34.5928f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			break;
@@ -3682,7 +3703,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -100586674;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gar_door_01");
-			num.f_3 = Vector3(-1067.0024f, -1665.6091f, 4.7898f);
+			num.f_3 = { -1067.0024f, -1665.6091f, 4.7898f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3692,7 +3713,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -384071293;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gar_door_02");
-			num.f_3 = Vector3(-1064.7632f, -1668.7623f, 4.8084f);
+			num.f_3 = { -1064.7632f, -1668.7623f, 4.8084f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3702,7 +3723,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1317819491;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gar_door_03_ld");
-			num.f_3 = Vector3(-1074.6482f, -1676.1313f, 4.684f);
+			num.f_3 = { -1074.6482f, -1676.1313f, 4.684f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3712,7 +3733,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1321526845;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gar_door_05");
-			num.f_3 = Vector3(201.4f, -153.3652f, 57.8522f);
+			num.f_3 = { 201.4f, -153.3652f, 57.8522f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3722,7 +3743,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 96518847;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fb_doorshortl");
-			num.f_3 = Vector3(-1045.1199f, -232.004f, 39.4379f);
+			num.f_3 = { -1045.1199f, -232.004f, 39.4379f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3732,7 +3753,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1355864282;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fb_doorshortr");
-			num.f_3 = Vector3(-1046.5161f, -229.3581f, 39.4379f);
+			num.f_3 = { -1046.5161f, -229.3581f, 39.4379f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3742,7 +3763,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1350395200;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fb_door01");
-			num.f_3 = Vector3(-1083.6201f, -260.4167f, 38.1867f);
+			num.f_3 = { -1083.6201f, -260.4167f, 38.1867f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3752,7 +3773,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -351200663;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fb_door02");
-			num.f_3 = Vector3(-1080.9744f, -259.0204f, 38.1867f);
+			num.f_3 = { -1080.9744f, -259.0204f, 38.1867f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3762,7 +3783,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1721932052;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_gtdoor");
-			num.f_3 = Vector3(-1042.57f, -240.6f, 38.11f);
+			num.f_3 = { -1042.57f, -240.6f, 38.11f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3772,7 +3793,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1196312723;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_door_orange");
-			num.f_3 = Vector3(-1063.804f, -240.832f, 39.883f);
+			num.f_3 = { -1063.804f, -240.832f, 39.883f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3782,7 +3803,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1161120149;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_door_orangesolid");
-			num.f_3 = Vector3(-1055.958f, -236.425f, 44.171f);
+			num.f_3 = { -1055.958f, -236.425f, 44.171f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3792,7 +3813,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 659933472;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_roc_door4");
-			num.f_3 = Vector3(-565.1712f, 276.6259f, 83.2863f);
+			num.f_3 = { -565.1712f, 276.6259f, 83.2863f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3802,7 +3823,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1556853707;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_roc_door4");
-			num.f_3 = Vector3(-561.2863f, 293.5043f, 87.7771f);
+			num.f_3 = { -561.2863f, 293.5043f, 87.7771f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3812,7 +3833,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 9031593;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ron_door_01");
-			num.f_3 = Vector3(1065.2372f, -2006.0791f, 32.2329f);
+			num.f_3 = { 1065.2372f, -2006.0791f, 32.2329f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3822,7 +3843,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1114322496;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ron_door_01");
-			num.f_3 = Vector3(1083.5472f, -1975.4354f, 31.622f);
+			num.f_3 = { 1083.5472f, -1975.4354f, 31.622f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3832,7 +3853,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1353175737;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ron_door_01");
-			num.f_3 = Vector3(1085.307f, -2018.5614f, 41.6289f);
+			num.f_3 = { 1085.307f, -2018.5614f, 41.6289f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3842,7 +3863,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 44182644;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_housedoor1");
-			num.f_3 = Vector3(86.6624f, -1959.477f, 21.2152f);
+			num.f_3 = { 86.6624f, -1959.477f, 21.2152f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3852,7 +3873,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -85603376;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_abat_slide");
-			num.f_3 = Vector3(962.9084f, -2105.8137f, 34.6432f);
+			num.f_3 = { 962.9084f, -2105.8137f, 34.6432f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3862,7 +3883,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -336931144;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_gar_door_04");
-			num.f_3 = Vector3(778.31f, -1867.49f, 30.66f);
+			num.f_3 = { 778.31f, -1867.49f, 30.66f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3872,7 +3893,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1850802875;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch3_04_door_01l");
-			num.f_3 = Vector3(2514.32f, -317.34f, 93.32f);
+			num.f_3 = { 2514.32f, -317.34f, 93.32f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3882,7 +3903,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1675259342;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch3_04_door_01r");
-			num.f_3 = Vector3(2512.42f, -319.26f, 93.32f);
+			num.f_3 = { 2512.42f, -319.26f, 93.32f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3892,7 +3913,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 682572401;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sc1_12_door");
-			num.f_3 = Vector3(-58.47f, -1530.51f, 34.54f);
+			num.f_3 = { -58.47f, -1530.51f, 34.54f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3902,7 +3923,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 638173652;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch1_07_door_01l");
-			num.f_3 = Vector3(-2255.1938f, 322.2593f, 184.9264f);
+			num.f_3 = { -2255.1938f, 322.2593f, 184.9264f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3912,7 +3933,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -657938605;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch1_07_door_01r");
-			num.f_3 = Vector3(-2254.0557f, 319.7009f, 184.9264f);
+			num.f_3 = { -2254.0557f, 319.7009f, 184.9264f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3922,7 +3943,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -913405729;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch1_07_door_01l");
-			num.f_3 = Vector3(-2280.597f, 265.432f, 184.926f);
+			num.f_3 = { -2280.597f, 265.432f, 184.926f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3932,7 +3953,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -61510036;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ch1_07_door_01r");
-			num.f_3 = Vector3(-2278.039f, 266.57f, 184.926f);
+			num.f_3 = { -2278.039f, 266.57f, 184.926f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3942,7 +3963,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1741567220;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_08");
-			num.f_3 = Vector3(413.3649f, -1620.0333f, 28.3416f);
+			num.f_3 = { 413.3649f, -1620.0333f, 28.3416f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3952,7 +3973,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -2117572376;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_08");
-			num.f_3 = Vector3(418.2896f, -1651.3962f, 28.2951f);
+			num.f_3 = { 418.2896f, -1651.3962f, 28.2951f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3962,7 +3983,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1308623196;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_facgate_07b");
-			num.f_3 = Vector3(397.8846f, -1607.3838f, 28.3301f);
+			num.f_3 = { 397.8846f, -1607.3838f, 28.3301f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3972,7 +3993,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1181991670;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sc1_21_g_door_01");
-			num.f_3 = Vector3(-25.28f, -1431.06f, 30.84f);
+			num.f_3 = { -25.28f, -1431.06f, 30.84f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -3982,7 +4003,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 655256353;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ss1_14_garage_door");
-			num.f_3 = Vector3(-62.38f, 352.7173f, 113.2499f);
+			num.f_3 = { -62.38f, 352.7173f, 113.2499f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -3992,7 +4013,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1283878568;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_motel_door_09");
-			num.f_3 = Vector3(549.2567f, -1773.115f, 33.7309f);
+			num.f_3 = { 549.2567f, -1773.115f, 33.7309f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4002,7 +4023,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1442263252;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ss1_10_door_l");
-			num.f_3 = Vector3(-720.39f, 256.86f, 80.29f);
+			num.f_3 = { -720.39f, 256.86f, 80.29f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4012,7 +4033,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 945482706;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_ss1_10_door_r");
-			num.f_3 = Vector3(-718.42f, 257.79f, 80.29f);
+			num.f_3 = { -718.42f, 257.79f, 80.29f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4022,7 +4043,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1281942816;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_ph_cellgate");
-			num.f_3 = Vector3(461.8065f, -994.4086f, 25.0644f);
+			num.f_3 = { 461.8065f, -994.4086f, 25.0644f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			break;
@@ -4031,7 +4052,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 2066876030;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_cf_officedoor");
-			num.f_3 = Vector3(-70.5223f, 6254.584f, 31.2331f);
+			num.f_3 = { -70.5223f, 6254.584f, 31.2331f };
 			num.f_7 = 1;
 			num.f_8 = 0;
 			break;
@@ -4040,7 +4061,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 302514014;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_barrier_ld_01a");
-			num.f_3 = Vector3(-1588.27f, 2794.21f, 16.85f);
+			num.f_3 = { -1588.27f, 2794.21f, 16.85f };
 			num.f_6 = 1;
 			break;
 	
@@ -4048,7 +4069,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 374122670;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_barrier_ld_01a");
-			num.f_3 = Vector3(-1589.58f, 2793.67f, 16.86f);
+			num.f_3 = { -1589.58f, 2793.67f, 16.86f };
 			num.f_6 = 1;
 			break;
 	
@@ -4056,7 +4077,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1450927686;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_barrier_ld_01a");
-			num.f_3 = Vector3(-2309.107f, 3382.55f, 29.9703f);
+			num.f_3 = { -2309.107f, 3382.55f, 29.9703f };
 			num.f_6 = 1;
 			break;
 	
@@ -4064,7 +4085,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1927270846;
 			num.f_1 = 99;
 			num.f_2 = joaat("prop_sec_barrier_ld_01a");
-			num.f_3 = Vector3(-2299.539f, 3384.9495f, 31.0658f);
+			num.f_3 = { -2299.539f, 3384.9495f, 31.0658f };
 			num.f_6 = 1;
 			break;
 	
@@ -4072,7 +4093,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 181342382;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_gb_vaubar");
-			num.f_3 = Vector3(-1207.328f, -335.129f, 38.079f);
+			num.f_3 = { -1207.328f, -335.129f, 38.079f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -4082,7 +4103,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 290843807;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_gb_vaubar");
-			num.f_3 = Vector3(1175.542f, 2710.861f, 38.227f);
+			num.f_3 = { 1175.542f, 2710.861f, 38.227f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -4092,7 +4113,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 838938616;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_j2_door");
-			num.f_3 = Vector3(-629.134f, -230.152f, 38.207f);
+			num.f_3 = { -629.134f, -230.152f, 38.207f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 0;
@@ -4102,7 +4123,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 1801855141;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(116.2367f, -754.6212f, 44.8285f);
+			num.f_3 = { 116.2367f, -754.6212f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4112,7 +4133,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -173591179;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(115.9029f, -755.5384f, 44.8285f);
+			num.f_3 = { 115.9029f, -755.5384f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4122,7 +4143,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 487906950;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(115.8078f, -755.7997f, 44.8285f);
+			num.f_3 = { 115.8078f, -755.7997f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4132,7 +4153,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1571165938;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(115.474f, -756.7169f, 44.8285f);
+			num.f_3 = { 115.474f, -756.7169f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4142,7 +4163,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = 473483816;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(115.3789f, -756.9781f, 44.8285f);
+			num.f_3 = { 115.3789f, -756.9781f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4152,7 +4173,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 			num = -1852558119;
 			num.f_1 = 99;
 			num.f_2 = joaat("v_ilev_fbisecgate");
-			num.f_3 = Vector3(115.0451f, -757.8953f, 44.8285f);
+			num.f_3 = { 115.0451f, -757.8953f, 44.8285f };
 			num.f_7 = 1;
 			num.f_8 = 1;
 			num.f_11 = 1;
@@ -4162,7 +4183,7 @@ struct<15> func_48(int iParam0, int iParam1) // Position - 0x109E
 	return num;
 }
 
-BOOL func_49(var uParam0, int iParam1) // Position - 0x5A3F
+BOOL func_50(var uParam0, int iParam1) // Position - 0x5A86
 {
 	var unk;
 	int unk2;
@@ -4171,10 +4192,10 @@ BOOL func_49(var uParam0, int iParam1) // Position - 0x5A3F
 	{
 		if (*uParam0 < 315)
 		{
-			unk = Vector3(func_48(*uParam0, iParam1));
+			unk = { func_49(*uParam0, iParam1) };
 		
 			if (unk.f_1 == 99 || unk.f_1 == iParam1)
-				func_50(unk, false);
+				func_51(unk, false);
 		
 			*uParam0 = *uParam0 + 1;
 		}
@@ -4186,7 +4207,7 @@ BOOL func_49(var uParam0, int iParam1) // Position - 0x5A3F
 	return true;
 }
 
-void func_50(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, BOOL bParam15) // Position - 0x5AAB
+void func_51(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, BOOL bParam15) // Position - 0x5AF2
 {
 	if (hParam0 != 0)
 	{
@@ -4215,7 +4236,7 @@ void func_50(Hash hParam0, var uParam1, var uParam2, var uParam3, var uParam4, v
 	return;
 }
 
-BOOL func_51(var uParam0, int iParam1) // Position - 0x5B4A
+BOOL func_52(var uParam0, int iParam1) // Position - 0x5B91
 {
 	Hash doorHash;
 	int unk;
@@ -4224,7 +4245,7 @@ BOOL func_51(var uParam0, int iParam1) // Position - 0x5B4A
 	{
 		if (*uParam0 < 315)
 		{
-			doorHash = Vector3(func_48(*uParam0, iParam1));
+			doorHash = { func_49(*uParam0, iParam1) };
 		
 			if (doorHash.f_1 == 99 || doorHash.f_1 == iParam1)
 			{
@@ -4245,17 +4266,17 @@ BOOL func_51(var uParam0, int iParam1) // Position - 0x5B4A
 	return true;
 }
 
-int func_52() // Position - 0x5BBD
+int func_53() // Position - 0x5C04
 {
-	return Global_32163;
+	return Global_32283;
 }
 
-int func_53(int iParam0) // Position - 0x5BC8
+int func_54(int iParam0) // Position - 0x5C0F
 {
-	return uLocal_279[iParam0];
+	return uLocal_280[iParam0];
 }
 
-void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x5BD7
+void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) // Position - 0x5C1E
 {
 	if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS() && !useLocalTimer)
 		if (!useAccurateTime)
@@ -4269,85 +4290,85 @@ void _STOPWATCH_RESET(var pStopwatch, BOOL useLocalTimer, BOOL useAccurateTime) 
 	return;
 }
 
-void func_55(int iParam0) // Position - 0x5C14
+void func_56(int iParam0) // Position - 0x5C5B
 {
-	uLocal_279[NETWORK::PARTICIPANT_ID_TO_INT()] = iParam0;
+	uLocal_280[NETWORK::PARTICIPANT_ID_TO_INT()] = iParam0;
 	return;
 }
 
-void func_56() // Position - 0x5C27
+void func_57() // Position - 0x5C6E
 {
 	SYSTEM::WAIT(0);
 	return;
 }
 
-void func_57() // Position - 0x5C34
+void func_58() // Position - 0x5C7B
 {
 	int i;
 
 	for (i = 0; i < 6; i = i + 1)
 	{
-		func_58(i, &uLocal_123[i]);
+		func_59(i, &uLocal_124[i]);
 	}
 
 	return;
 }
 
-void func_58(int iParam0, var uParam1) // Position - 0x5C5A
+void func_59(int iParam0, var uParam1) // Position - 0x5CA1
 {
 	switch (iParam0)
 	{
 		case 0:
 			uParam1->[0] = 1036961952;
 			uParam1->[1] = 1864280899;
-			uParam1->f_3 = Vector3(-984.04065f, -2833.845f, 18.297964f);
-			uParam1->f_6 = Vector3(-990.19946f, -2844.1384f, 10.964787f);
+			uParam1->f_3 = { -984.04065f, -2833.845f, 18.297964f };
+			uParam1->f_6 = { -990.19946f, -2844.1384f, 10.964787f };
 			uParam1->f_9 = 15.25f;
-			uParam1->f_10 = Vector3(-983.7082f, -2833.1995f, 12.839787f);
-			uParam1->f_13 = Vector3(-977.91296f, -2823.2373f, 19.230995f);
+			uParam1->f_10 = { -983.7082f, -2833.1995f, 12.839787f };
+			uParam1->f_13 = { -977.91296f, -2823.2373f, 19.230995f };
 			uParam1->f_16 = 15.25f;
 			break;
 	
 		case 1:
 			uParam1->[0] = 738966015;
 			uParam1->[1] = 969004395;
-			uParam1->f_3 = Vector3(-1144.9615f, -2726.898f, 18.298054f);
-			uParam1->f_6 = Vector3(-1151.8516f, -2739.109f, 10.952897f);
+			uParam1->f_3 = { -1144.9615f, -2726.898f, 18.298054f };
+			uParam1->f_6 = { -1151.8516f, -2739.109f, 10.952897f };
 			uParam1->f_9 = 15.25f;
-			uParam1->f_10 = Vector3(-1144.6776f, -2726.4731f, 12.868383f);
-			uParam1->f_13 = Vector3(-1138.0713f, -2714.9778f, 18.428009f);
+			uParam1->f_10 = { -1144.6776f, -2726.4731f, 12.868383f };
+			uParam1->f_13 = { -1138.0713f, -2714.9778f, 18.428009f };
 			uParam1->f_16 = 15.25f;
 			break;
 	
 		case 2:
 			uParam1->[0] = 1741567220;
-			uParam1->f_3 = Vector3(415.24356f, -1621.9258f, 28.042774f);
-			uParam1->f_6 = Vector3(410.35373f, -1628.0494f, 34.042778f);
+			uParam1->f_3 = { 415.24356f, -1621.9258f, 28.042774f };
+			uParam1->f_6 = { 410.35373f, -1628.0494f, 34.042778f };
 			uParam1->f_9 = 6.5f;
 			break;
 	
 		case 3:
 			uParam1->[0] = -2117572376;
-			uParam1->f_3 = Vector3(416.417f, -1653.291f, 28.042776f);
-			uParam1->f_6 = Vector3(410.67258f, -1648.6815f, 34.042778f);
+			uParam1->f_3 = { 416.417f, -1653.291f, 28.042776f };
+			uParam1->f_6 = { 410.67258f, -1648.6815f, 34.042778f };
 			uParam1->f_9 = 6.5f;
 			break;
 	
 		case 4:
 			uParam1->[0] = 1308623196;
-			uParam1->f_3 = Vector3(400.634f, -1609.8081f, 28.042776f);
-			uParam1->f_6 = Vector3(394.49072f, -1617.1943f, 34.042778f);
+			uParam1->f_3 = { 400.634f, -1609.8081f, 28.042776f };
+			uParam1->f_6 = { 394.49072f, -1617.1943f, 34.042778f };
 			uParam1->f_9 = 8.25f;
 			break;
 	
 		case 5:
 			uParam1->[0] = -1178784373;
 			uParam1->[1] = 94815597;
-			uParam1->f_3 = Vector3(-1012.15894f, -2412.9595f, 12.694675f);
-			uParam1->f_6 = Vector3(-1026.2458f, -2405.0635f, 18.757206f);
+			uParam1->f_3 = { -1012.15894f, -2412.9595f, 12.694675f };
+			uParam1->f_6 = { -1026.2458f, -2405.0635f, 18.757206f };
 			uParam1->f_9 = 15.375f;
-			uParam1->f_10 = Vector3(-1012.15894f, -2412.9595f, 12.694675f);
-			uParam1->f_13 = Vector3(-999.97595f, -2419.571f, 18.75715f);
+			uParam1->f_10 = { -1012.15894f, -2412.9595f, 12.694675f };
+			uParam1->f_13 = { -999.97595f, -2419.571f, 18.75715f };
 			uParam1->f_16 = 15.375f;
 			break;
 	}
@@ -4355,22 +4376,22 @@ void func_58(int iParam0, var uParam1) // Position - 0x5C5A
 	return;
 }
 
-BOOL func_59(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x5EC4
+BOOL func_60(var uParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20) // Position - 0x5F0B
 {
-	func_66(func_67(uParam0), uParam0);
+	func_67(func_68(uParam0), uParam0);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
-	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_229, 30, 0);
-	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_279, 129, 0);
+	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&iLocal_230, 30, 0);
+	NETWORK::NETWORK_REGISTER_PLAYER_BROADCAST_VARIABLES(&uLocal_280, 129, 0);
 
 	if (!_NETWORK_WAIT_FOR_HOST_BROADCAST_DATA())
 		return false;
 
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
-	iLocal_121 = 1;
+	iLocal_122 = 1;
 	return true;
 }
 
-BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5F0B
+BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5F52
 {
 	int num;
 
@@ -4386,7 +4407,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5F0B
 		if (NETWORK::NETWORK_HAS_RECEIVED_HOST_BROADCAST_DATA())
 			return true;
 	
-		if (func_62())
+		if (func_63())
 			return false;
 	
 		if (_DOES_EVENT_OF_TYPE_EXIST(157))
@@ -4401,7 +4422,7 @@ BOOL _NETWORK_WAIT_FOR_HOST_BROADCAST_DATA() // Position - 0x5F0B
 	return false;
 }
 
-BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5F64
+BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5FAB
 {
 	if (SCRIPT::GET_EVENT_EXISTS(SCRIPT_EVENT_QUEUE_NETWORK, iParam0))
 		return true;
@@ -4409,12 +4430,12 @@ BOOL _DOES_EVENT_OF_TYPE_EXIST(int iParam0) // Position - 0x5F64
 	return false;
 }
 
-BOOL func_62() // Position - 0x5F7B
+BOOL func_63() // Position - 0x5FC2
 {
-	return Global_2683864.f_693;
+	return Global_2683883.f_693;
 }
 
-int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x5F8A
+int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTerminate) // Position - 0x5FD1
 {
 	int i;
 
@@ -4422,36 +4443,36 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
 			if (!bNoTerminate)
-				func_65();
+				func_66();
 			else
 				return 0;
 	
-		if (!func_64(false))
+		if (!func_65(false))
 		{
 			if (iParam0 == 0)
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					if (!bNoTerminate)
-						func_65();
+						func_66();
 					else
 						return 0;
 			
-				if (func_62())
+				if (func_63())
 					if (!bNoTerminate)
-						func_65();
+						func_66();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
 					if (!bNoTerminate)
-						func_65();
+						func_66();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
 				if (!bNoTerminate)
-					func_65();
+					func_66();
 				else
 					return 0;
 			}
@@ -4466,40 +4487,40 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			if (!bNoTerminate)
-				func_65();
+				func_66();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
 		if (!bNoTerminate)
-			func_65();
+			func_66();
 		else
 			return 0;
 
 	return 1;
 }
 
-BOOL func_64(BOOL bParam0) // Position - 0x60A0
+BOOL func_65(BOOL bParam0) // Position - 0x60E7
 {
 	bParam0;
-	return Global_1575035;
+	return Global_1575038;
 }
 
-void func_65() // Position - 0x60B1
+void func_66() // Position - 0x60F8
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_66(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x60BD
+void func_67(int iParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, var uParam6, var uParam7, var uParam8, var uParam9, var uParam10, var uParam11, var uParam12, var uParam13, var uParam14, var uParam15, var uParam16, var uParam17, var uParam18, var uParam19, var uParam20, var uParam21) // Position - 0x6104
 {
 	if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
-		func_65();
+		func_66();
 
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(iParam0, false, uParam1.f_16);
 	return;
 }
 
-int func_67(int iParam0) // Position - 0x60DC
+int func_68(int iParam0) // Position - 0x6123
 {
 	switch (iParam0)
 	{
@@ -4855,10 +4876,10 @@ int func_67(int iParam0) // Position - 0x60DC
 		case 17:
 			return 2;
 	
-		case 173:
+		case 180:
 			return 32;
 	
-		case 174:
+		case 181:
 			return 32;
 	
 		case 19:
@@ -4882,40 +4903,31 @@ int func_67(int iParam0) // Position - 0x60DC
 		case 21:
 			return 32;
 	
+		case 192:
+			return 32;
+	
+		case 193:
+			return 32;
+	
+		case 182:
+			return 32;
+	
+		case 183:
+			return 32;
+	
+		case 187:
+			return 32;
+	
 		case 185:
 			return 32;
 	
 		case 186:
 			return 32;
 	
-		case 175:
+		case 190:
 			return 32;
 	
-		case 176:
-			return 32;
-	
-		case 180:
-			return 32;
-	
-		case 178:
-			return 32;
-	
-		case 179:
-			return 32;
-	
-		case 183:
-			return 32;
-	
-		case 184:
-			return 32;
-	
-		case 181:
-			return 32;
-	
-		case 182:
-			return 32;
-	
-		case 187:
+		case 191:
 			return 32;
 	
 		case 188:
@@ -4924,81 +4936,90 @@ int func_67(int iParam0) // Position - 0x60DC
 		case 189:
 			return 32;
 	
-		case 190:
+		case 194:
 			return 32;
 	
-		case 191:
-			return 2;
+		case 195:
+			return 32;
 	
 		case 196:
-			return 1;
-	
-		case 192:
-			return 2;
-	
-		case 193:
-			return 4;
-	
-		case 194:
-			return 2;
-	
-		case 195:
-			return 2;
-	
-		case 177:
-			return 1;
+			return 32;
 	
 		case 197:
-			return 2;
+			return 32;
 	
 		case 198:
-		case 199:
-		case 200:
-		case 201:
-		case 202:
-		case 203:
-			return 0;
+			return 2;
 	
-		case 219:
+		case 203:
+			return 1;
+	
+		case 199:
+			return 2;
+	
+		case 200:
+			return 4;
+	
+		case 201:
+			return 2;
+	
+		case 202:
+			return 2;
+	
+		case 184:
 			return 1;
 	
 		case 204:
-			return 4;
+			return 2;
 	
+		case 205:
+		case 206:
 		case 207:
+		case 208:
+		case 209:
+		case 210:
+			return 0;
+	
+		case 226:
+			return 1;
+	
+		case 211:
 			return 4;
 	
-		case 208:
-			return 1;
-	
-		case 209:
-			return 1;
+		case 214:
+			return 4;
 	
 		case 215:
 			return 1;
 	
-		case 211:
-			return 2;
-	
 		case 216:
 			return 1;
 	
-		case 212:
-			return 1;
-	
-		case 210:
-			return 2;
-	
-		case 213:
-			return 8;
-	
-		case 214:
-			return 8;
-	
-		case 217:
+		case 222:
 			return 1;
 	
 		case 218:
+			return 2;
+	
+		case 223:
+			return 1;
+	
+		case 219:
+			return 1;
+	
+		case 217:
+			return 2;
+	
+		case 220:
+			return 8;
+	
+		case 221:
+			return 8;
+	
+		case 224:
+			return 1;
+	
+		case 225:
 			return 2;
 	
 		case 142:
@@ -5010,17 +5031,20 @@ int func_67(int iParam0) // Position - 0x60DC
 		case 170:
 			return 1;
 	
-		case 205:
+		case 178:
+			return 1;
+	
+		case 212:
 			return 16;
 	
-		case 206:
+		case 213:
 			return 32;
 	
 		default:
 		
 	}
 
-	switch (func_68(func_69(iParam0, true)))
+	switch (func_69(func_70(iParam0, true)))
 	{
 		case 0:
 			return 8;
@@ -5038,7 +5062,7 @@ int func_67(int iParam0) // Position - 0x60DC
 	return 0;
 }
 
-int func_68(int iParam0) // Position - 0x685D
+int func_69(int iParam0) // Position - 0x68AE
 {
 	switch (iParam0)
 	{
@@ -5174,6 +5198,27 @@ int func_68(int iParam0) // Position - 0x685D
 		case 311:
 			return 2;
 	
+		case 312:
+			return 2;
+	
+		case 320:
+			return 2;
+	
+		case 313:
+			return 2;
+	
+		case 315:
+			return 0;
+	
+		case 316:
+			return 0;
+	
+		case 317:
+			return 0;
+	
+		case 318:
+			return 0;
+	
 		default:
 		
 	}
@@ -5181,47 +5226,47 @@ int func_68(int iParam0) // Position - 0x685D
 	return -1;
 }
 
-int func_69(int iParam0, BOOL bParam1) // Position - 0x6A25
+int func_70(int iParam0, BOOL bParam1) // Position - 0x6ABC
 {
 	switch (iParam0)
 	{
-		case 191:
+		case 198:
 			return 15;
 	
-		case 198:
+		case 205:
 			return 8;
 	
-		case 192:
+		case 199:
 			return 14;
 	
-		case 196:
+		case 203:
 			return 122;
 	
-		case 199:
+		case 206:
 			return 1;
 	
-		case 197:
+		case 204:
 			return 5;
 	
-		case 200:
+		case 207:
 			return 6;
 	
-		case 193:
+		case 200:
 			return 11;
 	
-		case 201:
+		case 208:
 			return 0;
 	
-		case 202:
+		case 209:
 			return 2;
 	
-		case 194:
+		case 201:
 			return 13;
 	
-		case 203:
+		case 210:
 			return 3;
 	
-		case 195:
+		case 202:
 			return 12;
 	
 		case 49:
@@ -5572,31 +5617,52 @@ int func_69(int iParam0, BOOL bParam1) // Position - 0x6A25
 		case 172:
 			return 311;
 	
+		case 173:
+			return 312;
+	
+		case 174:
+			return 313;
+	
+		case 175:
+			return 315;
+	
+		case 176:
+			return 316;
+	
+		case 177:
+			return 317;
+	
+		case 178:
+			return 318;
+	
+		case 179:
+			return 320;
+	
 		default:
 		
 	}
 
 	bParam1;
-	return 312;
+	return 322;
 }
 
-void func_70() // Position - 0x6FE8
+void func_71() // Position - 0x70D3
 {
-	func_71(iLocal_121);
-	Global_2793046.f_1734 = 0;
-	Global_2793046.f_4600 = 0;
-	func_65();
+	func_72(iLocal_122);
+	Global_2794162.f_1741 = 0;
+	Global_2794162.f_4607 = 0;
+	func_66();
 	return;
 }
 
-void func_71(int iParam0) // Position - 0x700A
+void func_72(int iParam0) // Position - 0x70F5
 {
 	Hash doorHash;
 	int unk;
 
 	for (i = 0; i < 315; i = i + 1)
 	{
-		doorHash = Vector3(func_48(i, iParam0));
+		doorHash = { func_49(i, iParam0) };
 	
 		if (doorHash.f_1 == 99 || doorHash.f_1 == iParam0)
 			if (OBJECT::IS_DOOR_REGISTERED_WITH_SYSTEM(doorHash))
@@ -5607,23 +5673,23 @@ void func_71(int iParam0) // Position - 0x700A
 	return;
 }
 
-BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x7061
+BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x714C
 {
-	if (Global_1575035 == 0)
+	if (Global_1575038 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			return true;
 
-	if (func_62())
+	if (func_63())
 		return true;
 
-	if (Global_2696917)
+	if (Global_2696994)
 		return true;
 
-	if (func_76())
+	if (func_77())
 		return true;
 
 	if (_DOES_EVENT_OF_TYPE_EXIST(159))
-		if (!func_75())
+		if (!func_76())
 			return true;
 
 	if (_DOES_EVENT_OF_TYPE_EXIST(157))
@@ -5639,12 +5705,12 @@ BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x7061
 	return false;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x70E5
+Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x71D0
 {
-	switch (func_52())
+	switch (func_53())
 	{
 		case 0:
-			return func_74();
+			return func_75();
 	
 		case 2:
 			return joaat("creator");
@@ -5653,9 +5719,9 @@ Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x70E5
 	return 0;
 }
 
-Hash func_74() // Position - 0x7118
+Hash func_75() // Position - 0x7203
 {
-	switch (Global_2697021)
+	switch (Global_2697098)
 	{
 		case 0:
 			return joaat("freemode");
@@ -5667,13 +5733,13 @@ Hash func_74() // Position - 0x7118
 	return joaat("freemode");
 }
 
-BOOL func_75() // Position - 0x713C
+BOOL func_76() // Position - 0x7227
 {
-	return Global_2683864.f_698;
+	return Global_2683883.f_698;
 }
 
-BOOL func_76() // Position - 0x714B
+BOOL func_77() // Position - 0x7236
 {
-	return Global_2694526;
+	return Global_2694576;
 }
 

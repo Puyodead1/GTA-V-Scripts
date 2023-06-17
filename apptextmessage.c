@@ -11,14 +11,14 @@
 	int iLocal_9 = 0;
 	int iLocal_10 = 0;
 	int iLocal_11 = 0;
-	var uLocal_12 = 0;
+	float fLocal_12 = 0f;
 	var uLocal_13 = 0;
-	float fLocal_14 = 0f;
-	var uLocal_15 = 0;
+	var uLocal_14 = 0;
+	int iLocal_15 = 0;
 	var uLocal_16 = 0;
-	int iLocal_17 = 0;
+	var uLocal_17 = 35;
 	var uLocal_18 = 0;
-	var uLocal_19 = 35;
+	var uLocal_19 = 0;
 	var uLocal_20 = 0;
 	var uLocal_21 = 0;
 	var uLocal_22 = 0;
@@ -52,21 +52,21 @@
 	var uLocal_50 = 0;
 	var uLocal_51 = 0;
 	var uLocal_52 = 0;
-	var uLocal_53 = 0;
-	var uLocal_54 = 0;
+	int iLocal_53 = 0;
+	int iLocal_54 = 0;
 	int iLocal_55 = 0;
 	int iLocal_56 = 0;
 	int iLocal_57 = 0;
 	int iLocal_58 = 0;
-	int iLocal_59 = 0;
+	BOOL bLocal_59 = 0;
 	int iLocal_60 = 0;
-	BOOL bLocal_61 = 0;
+	int iLocal_61 = 0;
 	int iLocal_62 = 0;
 	int iLocal_63 = 0;
 	int iLocal_64 = 0;
 	int iLocal_65 = 0;
-	int iLocal_66 = 0;
-	int iLocal_67 = 0;
+	var uLocal_66 = 0;
+	var uLocal_67 = 0;
 	var uLocal_68 = 0;
 	var uLocal_69 = 0;
 	var uLocal_70 = 0;
@@ -81,9 +81,9 @@
 	var uLocal_79 = 0;
 	var uLocal_80 = 0;
 	var uLocal_81 = 0;
-	var uLocal_82 = 0;
+	var uLocal_82 = 165;
 	var uLocal_83 = 0;
-	var uLocal_84 = 165;
+	var uLocal_84 = 0;
 	var uLocal_85 = 0;
 	var uLocal_86 = 0;
 	var uLocal_87 = 0;
@@ -1072,9 +1072,9 @@
 	var uLocal_1070 = 0;
 	var uLocal_1071 = 0;
 	var uLocal_1072 = 0;
-	var uLocal_1073 = 0;
+	var uLocal_1073 = 165;
 	var uLocal_1074 = 0;
-	var uLocal_1075 = 165;
+	var uLocal_1075 = 0;
 	var uLocal_1076 = 0;
 	var uLocal_1077 = 0;
 	var uLocal_1078 = 0;
@@ -2063,9 +2063,9 @@
 	var uLocal_2061 = 0;
 	var uLocal_2062 = 0;
 	var uLocal_2063 = 0;
-	var uLocal_2064 = 0;
+	var uLocal_2064 = 19;
 	var uLocal_2065 = 0;
-	var uLocal_2066 = 19;
+	var uLocal_2066 = 0;
 	var uLocal_2067 = 0;
 	var uLocal_2068 = 0;
 	var uLocal_2069 = 0;
@@ -2216,9 +2216,7 @@
 	var uLocal_2214 = 0;
 	var uLocal_2215 = 0;
 	var uLocal_2216 = 0;
-	var uLocal_2217 = 0;
-	var uLocal_2218 = 0;
-	BOOL bLocal_2219 = 0;
+	BOOL bLocal_2217 = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -2233,47 +2231,47 @@ void main() // Position - 0x0
 	iLocal_9 = 1;
 	iLocal_10 = 12;
 	iLocal_11 = 12;
-	fLocal_14 = 0.001f;
-	iLocal_17 = -1;
+	fLocal_12 = 0.001f;
+	iLocal_15 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-		func_59();
+		func_61();
 
 	func_47();
-	Global_22791 = 0;
-	Global_113648.f_14053[Global_20383].f_18 = 0;
-	Global_20583 = 0;
-	func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
+	Global_22911 = 0;
+	Global_113810.f_14054[Global_20500].f_18 = 0;
+	Global_20703 = 0;
+	func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
 	func_44();
 	func_43();
 
-	if (Global_20383.f_1 > 3)
-		Global_20383.f_1 = 7;
+	if (Global_20500.f_1 > 3)
+		Global_20500.f_1 = 7;
 
-	iLocal_65 = MISC::GET_GAME_TIMER();
-	Global_20387 = 1;
+	iLocal_63 = MISC::GET_GAME_TIMER();
+	Global_20504 = 1;
 
 	while (true)
 	{
 		SYSTEM::WAIT(0);
 	
-		if (iLocal_64 == 0)
+		if (iLocal_62 == 0)
 		{
-			iLocal_66 = MISC::GET_GAME_TIMER();
+			iLocal_64 = MISC::GET_GAME_TIMER();
 		
-			if (iLocal_66 - iLocal_65 > 500)
-				iLocal_64 = 1;
+			if (iLocal_64 - iLocal_63 > 500)
+				iLocal_62 = 1;
 		}
 	
-		if (Global_20383.f_1 != 9)
+		if (Global_20500.f_1 != 9)
 		{
-			switch (Global_20383.f_1)
+			switch (Global_20500.f_1)
 			{
 				case 7:
-					if (Global_22791 == 0)
+					if (Global_22911 == 0)
 					{
-						if (Global_2803654 == 0)
+						if (Global_2804775 == 0)
 						{
 							func_38();
 							func_33();
@@ -2282,7 +2280,7 @@ void main() // Position - 0x0
 					break;
 			
 				case 8:
-					if (Global_22791 == 1)
+					if (Global_22911 == 1)
 					{
 						func_5();
 						func_38();
@@ -2293,45 +2291,45 @@ void main() // Position - 0x0
 					break;
 			}
 		
-			if (Global_22791 == 0)
+			if (Global_22911 == 0)
 			{
 				if (func_4())
-					func_59();
+					func_61();
 			}
-			else if (func_3(FRONTEND_CONTROL, Global_20351, 0) || IS_BIT_SET(G_SleepModeOffOn11, 12))
+			else if (func_3(FRONTEND_CONTROL, Global_20468, 0) || IS_BIT_SET(Global_8371, 12))
 			{
-				if (MISC::ARE_STRINGS_EQUAL(&Global_113648.f_14143[iLocal_58], "CELL_FINV"))
+				if (MISC::ARE_STRINGS_EQUAL(&Global_113810.f_14144[iLocal_56], "CELL_FINV"))
 				{
 				}
 				else
 				{
 					SYSTEM::WAIT(0);
-					MISC::CLEAR_BIT(&G_SleepModeOffOn11, 12);
+					MISC::CLEAR_BIT(&Global_8371, 12);
 					func_2();
-					Global_20361 = 1;
-					Global_22791 = 0;
+					Global_20478 = 1;
+					Global_22911 = 0;
 				
-					if (Global_20383.f_1 > 3)
-						Global_20383.f_1 = 7;
+					if (Global_20500.f_1 > 3)
+						Global_20500.f_1 = 7;
 				
 					if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-						func_59();
+						func_61();
 				
-					func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
+					func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
 					func_44();
 					func_43();
 				
-					if (Global_113648.f_14143[iLocal_58].f_29 > 0)
+					if (Global_113810.f_14144[iLocal_56].f_29 > 0)
 					{
-						if (Global_113648.f_14143[iLocal_58].f_31 == 1)
+						if (Global_113810.f_14144[iLocal_56].f_31 == 1)
 						{
-							Global_113648.f_14143[iLocal_58].f_29 = 4;
-							Global_113648.f_14143[iLocal_58].f_24 = 1;
+							Global_113810.f_14144[iLocal_56].f_29 = 4;
+							Global_113810.f_14144[iLocal_56].f_24 = 1;
 						}
 						else
 						{
-							Global_113648.f_14143[iLocal_58].f_29 = 4;
-							Global_113648.f_14143[iLocal_58].f_24 = 1;
+							Global_113810.f_14144[iLocal_56].f_29 = 4;
+							Global_113810.f_14144[iLocal_56].f_24 = 1;
 						}
 					}
 				}
@@ -2339,10 +2337,10 @@ void main() // Position - 0x0
 		}
 	
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-			func_59();
+			func_61();
 	
 		if (func_1())
-			func_59();
+			func_61();
 	}
 
 	return;
@@ -2350,9 +2348,9 @@ void main() // Position - 0x0
 
 BOOL func_1() // Position - 0x237
 {
-	if (Global_20383.f_1 == 1 || Global_20383.f_1 == 3 || Global_20383.f_1 == 0 || Global_20327 == 1)
+	if (Global_20500.f_1 == 1 || Global_20500.f_1 == 3 || Global_20500.f_1 == 0 || Global_20444 == 1)
 	{
-		Global_20370 = 1;
+		Global_20487 = 1;
 		return true;
 	}
 
@@ -2362,7 +2360,7 @@ BOOL func_1() // Position - 0x237
 void func_2() // Position - 0x27A
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_20372, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_20489, true);
 
 	return;
 }
@@ -2386,9 +2384,9 @@ BOOL func_3(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 
 BOOL func_4() // Position - 0x30D
 {
-	if (Global_8859 == 1 || Global_20383.f_1 < 7)
+	if (Global_8976 == 1 || Global_20500.f_1 < 7)
 	{
-		Global_20370 = 1;
+		Global_20487 = 1;
 		return true;
 	}
 
@@ -2403,141 +2401,141 @@ void func_5() // Position - 0x336
 
 void func_6() // Position - 0x342
 {
-	if (Global_113648.f_14143[iLocal_58].f_24 == 1)
+	if (Global_113810.f_14144[iLocal_56].f_24 == 1)
 	{
-		if (Global_20361 == 0)
+		if (Global_20478 == 0)
 		{
-			if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, Global_20354))
+			if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, Global_20471))
 			{
 				func_2();
-				Global_20361 = 1;
+				Global_20478 = 1;
 				_UPDATE_CURRENT_PLAYER_CHARACTER();
 			
-				if (Global_113648.f_14143[iLocal_58].f_27 == 1)
+				if (Global_113810.f_14144[iLocal_56].f_27 == 1)
 				{
-					Global_113648.f_14143[iLocal_58].f_99[0] = 0;
-					Global_113648.f_14143[iLocal_58].f_99[1] = 0;
-					Global_113648.f_14143[iLocal_58].f_99[2] = 0;
+					Global_113810.f_14144[iLocal_56].f_99[0] = 0;
+					Global_113810.f_14144[iLocal_56].f_99[1] = 0;
+					Global_113810.f_14144[iLocal_56].f_99[2] = 0;
 				}
 				else
 				{
-					Global_113648.f_14143[iLocal_58].f_99[Global_20383] = 0;
+					Global_113810.f_14144[iLocal_56].f_99[Global_20500] = 0;
 				}
 			
-				if (func_25(iLocal_58))
+				if (func_25(iLocal_56))
 				{
 				}
 				else
 				{
-					Global_113648.f_14143[iLocal_58].f_24 = 0;
-					Global_113648.f_14143[iLocal_58].f_28 = 0;
+					Global_113810.f_14144[iLocal_56].f_24 = 0;
+					Global_113810.f_14144[iLocal_56].f_28 = 0;
 				}
 			
-				HUD::THEFEED_REMOVE_ITEM(Global_113648.f_14143[iLocal_58].f_16);
-				func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
+				HUD::THEFEED_REMOVE_ITEM(Global_113810.f_14144[iLocal_56].f_16);
+				func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
 				func_44();
 			
-				if (iLocal_56 > 0)
-					iLocal_56 = iLocal_56 - 1;
+				if (iLocal_54 > 0)
+					iLocal_54 = iLocal_54 - 1;
 			
 				func_43();
 			
-				if (Global_20383.f_1 > 3)
+				if (Global_20500.f_1 > 3)
 				{
-					Global_20383.f_1 = 7;
-					Global_22791 = 0;
+					Global_20500.f_1 = 7;
+					Global_22911 = 0;
 				}
 			}
 		}
 	}
-	else if (Global_20361 == 0)
+	else if (Global_20478 == 0)
 	{
-		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, Global_20355))
+		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, Global_20472))
 		{
-			if (iLocal_60 == 1)
+			if (iLocal_58 == 1)
 			{
-				if (Global_20383.f_1 > 3)
+				if (Global_20500.f_1 > 3)
 				{
-					TEXT_LABEL_ASSIGN_STRING(&Global_75676, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&Global_22766), 64);
-					Global_75806 = 7;
-					MISC::SET_BIT(&G_SleepModeOffOn11, 10);
-					Global_20383.f_1 = 6;
+					TEXT_LABEL_ASSIGN_STRING(&Global_75799, HUD::GET_FILENAME_FOR_AUDIO_CONVERSATION(&Global_22886), 64);
+					Global_75929 = 7;
+					MISC::SET_BIT(&Global_8371, 10);
+					Global_20500.f_1 = 6;
 				}
 			
-				func_59();
+				func_61();
 			}
 		}
 	}
 
-	if (Global_113648.f_14143[iLocal_58].f_31 == 1)
+	if (Global_113810.f_14144[iLocal_56].f_31 == 1)
 	{
-		if (Global_20361 == 0)
+		if (Global_20478 == 0)
 		{
-			if (func_3(FRONTEND_CONTROL, Global_20355, 0))
+			if (func_3(FRONTEND_CONTROL, Global_20472, 0))
 			{
 				func_22();
-				Global_20361 = 1;
-				Global_113648.f_14143[iLocal_58].f_29 = 2;
-				Global_113648.f_14143[iLocal_58].f_24 = 1;
-				Global_113648.f_14143[iLocal_58].f_31 = 0;
-				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
-				Global_22791 = 0;
+				Global_20478 = 1;
+				Global_113810.f_14144[iLocal_56].f_29 = 2;
+				Global_113810.f_14144[iLocal_56].f_24 = 1;
+				Global_113810.f_14144[iLocal_56].f_31 = 0;
+				MISC::CLEAR_BIT(&Global_8370, 17);
+				Global_22911 = 0;
 			
-				if (Global_20383.f_1 > 3)
-					Global_20383.f_1 = 7;
+				if (Global_20500.f_1 > 3)
+					Global_20500.f_1 = 7;
 			
-				func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
 				func_44();
 				func_43();
 			}
 		}
 	}
 
-	if (Global_20361 == 0 && iLocal_64 == 1)
+	if (Global_20478 == 0 && iLocal_62 == 1)
 	{
-		if (func_3(FRONTEND_CONTROL, Global_20352, 0))
+		if (func_3(FRONTEND_CONTROL, Global_20469, 0))
 		{
-			Global_20361 = 1;
+			Global_20478 = 1;
 		
-			if (Global_113648.f_14143[iLocal_58].f_29 > 0)
+			if (Global_113810.f_14144[iLocal_56].f_29 > 0)
 			{
 				func_22();
-				Global_113648.f_14143[iLocal_58].f_29 = 3;
-				Global_113648.f_14143[iLocal_58].f_24 = 1;
-				Global_22791 = 0;
+				Global_113810.f_14144[iLocal_56].f_29 = 3;
+				Global_113810.f_14144[iLocal_56].f_24 = 1;
+				Global_22911 = 0;
 			
-				if (Global_20383.f_1 > 3)
-					Global_20383.f_1 = 7;
+				if (Global_20500.f_1 > 3)
+					Global_20500.f_1 = 7;
 			
-				func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 6f, -1082130432, -1082130432, -1082130432, -1082130432);
 				func_44();
 				func_43();
 			}
-			else if (Global_113648.f_14143[iLocal_58].f_30 == 1)
+			else if (Global_113810.f_14144[iLocal_56].f_30 == 1)
 			{
 				func_22();
-				Global_7568 = 144;
+				Global_7685 = 144;
 			
-				if (Global_20383.f_1 > 3)
+				if (Global_20500.f_1 > 3)
 				{
-					Global_20383.f_1 = 10;
+					Global_20500.f_1 = 10;
 				
 					if (func_21() == 0)
 						func_19();
 				}
 			
 				func_18("appContacts");
-				Global_20381 = SYSTEM::START_NEW_SCRIPT("appContacts", CONTACTS_APP);
+				Global_20498 = SYSTEM::START_NEW_SCRIPT("appContacts", CONTACTS_APP);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("appContacts");
-				Global_7568 = Global_113648.f_14143[iLocal_58].f_17;
+				Global_7685 = Global_113810.f_14144[iLocal_56].f_17;
 			
-				if (func_17(Global_7568, Global_20383) == 0)
-					func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_117[Global_7568].f_4), "CELL_300" /*CHAR_DEFAULT*/, "CELL_211" /*DIALING...*/, "CELL_195" /*Unknown*/, 0);
+				if (func_17(Global_7685, Global_20500) == 0)
+					func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_117[Global_7685].f_4), "CELL_300" /*CHAR_DEFAULT*/, "CELL_211" /*DIALING...*/, "CELL_195" /*Unknown*/, 0);
 				else
-					func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_2028[Global_7568].f_3), &(Global_2028[Global_7568].f_7), "CELL_211" /*DIALING...*/, &(Global_2028[Global_7568].f_3), 0);
+					func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_2058[Global_7685].f_3), &(Global_2058[Global_7685].f_7), "CELL_211" /*DIALING...*/, &(Global_2058[Global_7685].f_3), 0);
 			
 				func_7();
-				func_59();
+				func_61();
 			}
 		}
 	}
@@ -2549,78 +2547,78 @@ void func_7() // Position - 0x6A6
 {
 	var unk;
 
-	if (Global_20366 == 1)
+	if (Global_20483 == 1)
 		return;
 
-	if (Global_20383.f_1 < 4)
+	if (Global_20500.f_1 < 4)
 		return;
 
-	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20364))
+	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481))
 	{
-		if (Global_78558)
+		if (Global_78689)
 			return;
 	
 		SYSTEM::WAIT(0);
 	}
 
-	switch (Global_20383.f_1)
+	switch (Global_20500.f_1)
 	{
 		case 6:
-			func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
-			func_14(Global_8858);
+			func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_14(Global_8975);
 		
-			if (Global_8858 == 1)
+			if (Global_8975 == 1)
 			{
-				func_46(Global_20364, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20387), -1082130432, -1082130432, -1082130432);
-				Global_20363 = Global_20387;
+				func_46(Global_20481, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20504), -1082130432, -1082130432, -1082130432);
+				Global_20480 = Global_20504;
 			}
 			else
 			{
-				func_46(Global_20364, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20388), -1082130432, -1082130432, -1082130432);
-				Global_20363 = Global_20388;
+				func_46(Global_20481, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20505), -1082130432, -1082130432, -1082130432);
+				Global_20480 = Global_20505;
 			}
 		
-			if (Global_20371)
+			if (Global_20488)
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 			}
 			else
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 		
-			if (Global_20586 == 0)
+			if (Global_20706 == 0)
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+				func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+				MISC::CLEAR_BIT(&Global_8370, 17);
 			}
-			else if (Global_78558)
+			else if (Global_78689)
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-				MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+				func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+				MISC::CLEAR_BIT(&Global_8370, 17);
 			}
 			else
 			{
-				if (Global_20585 == 1)
-					if (Global_20371)
-						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 20f, -1f, -1f, "CELL_225" /*NEXT*/, 0, 0, 0, 0);
+				if (Global_20705 == 1)
+					if (Global_20488)
+						func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 20f, -1f, -1f, "CELL_225" /*NEXT*/, 0, 0, 0, 0);
 					else
-						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 20f, -1f, -1f, 0, 0, 0, 0, 0);
-				else if (Global_20371)
-					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, "CELL_225" /*NEXT*/, 0, 0, 0, 0);
+						func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 20f, -1f, -1f, 0, 0, 0, 0, 0);
+				else if (Global_20488)
+					func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, "CELL_225" /*NEXT*/, 0, 0, 0, 0);
 				else
-					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
+					func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 3f, -1f, -1f, 0, 0, 0, 0, 0);
 			
-				MISC::SET_BIT(&G_SleepModeOnOn25, 17);
+				MISC::SET_BIT(&Global_8370, 17);
 			}
 		
-			if (Global_78558)
+			if (Global_78689)
 			{
 				func_12();
-				MISC::CLEAR_BIT(&Global_8255, 9);
-				func_46(Global_20364, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20387), -1082130432, -1082130432, -1082130432);
+				MISC::CLEAR_BIT(&Global_8372, 9);
+				func_46(Global_20481, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20504), -1082130432, -1082130432, -1082130432);
 			}
 			break;
 	
@@ -2628,72 +2626,72 @@ void func_7() // Position - 0x6A6
 			break;
 	
 		case 10:
-			func_46(Global_20364, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
-			func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+			func_46(Global_20481, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_16(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			MISC::CLEAR_BIT(&Global_8370, 17);
 		
-			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
+			if (IS_BIT_SET(Global_8370, 20))
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
-			else if (Global_20371)
+			else if (Global_20488)
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
 			
-				if (Global_20326)
-					func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				if (Global_20443)
+					func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 			else
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 			break;
 	
 		case 9:
-			if (Global_20382 == 1)
+			if (Global_20499 == 1)
 			{
 				func_11();
-				func_46(Global_20364, "SET_THEME", SYSTEM::TO_FLOAT(Global_113648.f_14053[Global_20383].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(Global_113810.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
 			
-				if (Global_21738)
+				if (Global_21858)
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(4);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(2);
 					GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("CELL_CONDFON" /*~a~*/);
-					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Global_21740);
+					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Global_21860);
 					GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 					func_10("CELL_300" /*CHAR_DEFAULT*/);
 					func_10("CELL_217" /*INCOMING CALL*/);
 					func_10("CELL_217" /*INCOMING CALL*/);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				}
-				else if (func_17(Global_7568, Global_20383) == 0)
+				else if (func_17(Global_7685, Global_20500) == 0)
 				{
-					func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(2), -1f, -1f, &(Global_117[Global_7568].f_4), "CELL_300" /*CHAR_DEFAULT*/, "CELL_217" /*INCOMING CALL*/, "CELL_195" /*Unknown*/, 0);
+					func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(2), -1f, -1f, &(Global_117[Global_7685].f_4), "CELL_300" /*CHAR_DEFAULT*/, "CELL_217" /*INCOMING CALL*/, "CELL_195" /*Unknown*/, 0);
 				}
 				else
 				{
-					func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(2), -1f, -1f, &(Global_2028[Global_7568].f_3), &(Global_2028[Global_7568].f_7), "CELL_217" /*INCOMING CALL*/, &(Global_2028[Global_7568].f_3), 0);
+					func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(2), -1f, -1f, &(Global_2058[Global_7685].f_3), &(Global_2058[Global_7685].f_7), "CELL_217" /*INCOMING CALL*/, &(Global_2058[Global_7685].f_3), 0);
 				}
 			
-				func_46(Global_20364, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 			}
-			else if (Global_21725 == 4 || Global_21725 == 3)
+			else if (Global_21845 == 4 || Global_21845 == 3)
 			{
-				func_46(Global_20364, "SET_THEME", SYSTEM::TO_FLOAT(Global_113648.f_14053[Global_20383].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "SET_THEME", SYSTEM::TO_FLOAT(Global_113810.f_14054[Global_20500].f_6), -1082130432, -1082130432, -1082130432, -1082130432);
 				func_11();
 			
-				if (Global_21738)
+				if (Global_21858)
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(4);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(2);
 					GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("CELL_CONDFON" /*~a~*/);
-					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Global_21740);
+					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&Global_21860);
 					GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 					func_10("CELL_300" /*CHAR_DEFAULT*/);
 					func_10("CELL_219" /*CONNECTED*/);
@@ -2702,24 +2700,24 @@ void func_7() // Position - 0x6A6
 				}
 				else
 				{
-					if (Global_21983)
+					if (Global_22103)
 						TEXT_LABEL_ASSIGN_STRING(&unk, "CELL_219" /*CONNECTED*/, 24);
 					else
 						TEXT_LABEL_ASSIGN_STRING(&unk, "CELL_211" /*DIALING...*/, 24);
 				
-					if (func_17(Global_7568, Global_20383) == 0)
+					if (func_17(Global_7685, Global_20500) == 0)
 					{
-						func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
-						func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_117[Global_7568].f_4), "CELL_300" /*CHAR_DEFAULT*/, &unk, "CELL_195" /*Unknown*/, 0);
+						func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+						func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_117[Global_7685].f_4), "CELL_300" /*CHAR_DEFAULT*/, &unk, "CELL_195" /*Unknown*/, 0);
 					}
 					else
 					{
-						func_46(Global_20364, "SET_DATA_SLOT_EMPTY", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
-						func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_2028[Global_7568].f_3), &(Global_2028[Global_7568].f_7), &unk, &(Global_2028[Global_7568].f_3), 0);
+						func_46(Global_20481, "SET_DATA_SLOT_EMPTY", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+						func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(4), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(3), -1f, -1f, &(Global_2058[Global_7685].f_3), &(Global_2058[Global_7685].f_7), &unk, &(Global_2058[Global_7685].f_3), 0);
 					}
 				}
 			
-				func_46(Global_20364, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_46(Global_20481, "DISPLAY_VIEW", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 			}
 		
 			func_8();
@@ -2734,49 +2732,49 @@ void func_7() // Position - 0x6A6
 
 void func_8() // Position - 0xC5B
 {
-	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20364))
+	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481))
 	{
 		func_9();
 	
-		if (Global_20382 == 1)
+		if (Global_20499 == 1)
 		{
-			if (Global_20371)
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, "CELL_203" /*ANSWER*/, 0, 0, 0, 0);
+			if (Global_20488)
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, "CELL_203" /*ANSWER*/, 0, 0, 0, 0);
 			else
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, 0, 0, 0, 0, 0);
 		
-			if (Global_21772)
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
-			else if (IS_BIT_SET(G_SleepModeOnOn25, 20))
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			else if (Global_20371)
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_204" /*REJECT*/, 0, 0, 0, 0);
+			if (Global_21892)
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+			else if (IS_BIT_SET(Global_8370, 20))
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			else if (Global_20488)
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_204" /*REJECT*/, 0, 0, 0, 0);
 			else
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 		
-			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+			func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			MISC::CLEAR_BIT(&Global_8370, 17);
 		}
 		else
 		{
-			func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+			func_16(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			MISC::CLEAR_BIT(&Global_8370, 17);
 		
-			if (IS_BIT_SET(G_SleepModeOnOn25, 20))
+			if (IS_BIT_SET(Global_8370, 20))
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
-			else if (Global_20371)
+			else if (Global_20488)
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
 			
-				if (Global_20326)
-					func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				if (Global_20443)
+					func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 			else
 			{
-				func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 			}
 		}
 	}
@@ -2786,10 +2784,10 @@ void func_8() // Position - 0xC5B
 
 void func_9() // Position - 0xDD9
 {
-	if (Global_78558)
+	if (Global_78689)
 	{
-		func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+		func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
+		MISC::CLEAR_BIT(&Global_8370, 17);
 	}
 
 	return;
@@ -2806,9 +2804,9 @@ void func_11() // Position - 0xE1B
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		if (Global_20383 == CHAR_MICHAEL)
+		if (Global_20500 == CHAR_MICHAEL)
 		{
-			switch (Global_113648.f_14053[Global_20383].f_6)
+			switch (Global_113810.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 0);
@@ -2843,9 +2841,9 @@ void func_11() // Position - 0xE1B
 			}
 		}
 	
-		if (Global_20383 == CHAR_FRANKLIN)
+		if (Global_20500 == CHAR_FRANKLIN)
 		{
-			switch (Global_113648.f_14053[Global_20383].f_6)
+			switch (Global_113810.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 6);
@@ -2880,9 +2878,9 @@ void func_11() // Position - 0xE1B
 			}
 		}
 	
-		if (Global_20383 == CHAR_TREVOR)
+		if (Global_20500 == CHAR_TREVOR)
 		{
-			switch (Global_113648.f_14053[Global_20383].f_6)
+			switch (Global_113810.f_14054[Global_20500].f_6)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 5);
@@ -2917,9 +2915,9 @@ void func_11() // Position - 0xE1B
 			}
 		}
 	
-		if (Global_20383 == CHAR_MULTIPLAYER)
+		if (Global_20500 == CHAR_MULTIPLAYER)
 		{
-			switch (Global_4542573)
+			switch (Global_4542578)
 			{
 				case 1:
 					PLAYER::SET_PLAYER_PHONE_PALETTE_IDX(PLAYER::PLAYER_ID(), 0);
@@ -2960,13 +2958,13 @@ void func_11() // Position - 0xE1B
 
 void func_12() // Position - 0x1092
 {
-	if (Global_78558)
+	if (Global_78689)
 	{
 		if (func_13() == 0)
 			return;
 	
-		func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
-		MISC::SET_BIT(&G_SleepModeOnOn25, 17);
+		func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 9f, -1f, -1f, 0, 0, 0, 0, 0);
+		MISC::SET_BIT(&Global_8370, 17);
 	}
 
 	return;
@@ -2990,12 +2988,12 @@ void func_14(int iParam0) // Position - 0x10D6
 	int value5;
 	int value6;
 
-	Global_22793 = 0;
-	Global_8858 = iParam0;
+	Global_22913 = 0;
+	Global_8975 = iParam0;
 
 	for (i = 0; i < 9; i = i + 1)
 	{
-		Global_8822[i] = 0;
+		Global_8939[i] = 0;
 	}
 
 	for (i = 0; i < 9; i = i + 1)
@@ -3006,42 +3004,42 @@ void func_14(int iParam0) // Position - 0x10D6
 		{
 			while (num < 34)
 			{
-				if (iParam0 == Global_8260[num].f_11)
+				if (iParam0 == Global_8377[num].f_11)
 				{
-					if (i == Global_8260[num].f_4)
+					if (i == Global_8377[num].f_4)
 					{
-						if (Global_8822[i] == 0)
+						if (Global_8939[i] == 0)
 						{
-							Global_8786[i] = num;
+							Global_8903[i] = num;
 						
 							if (num == 3)
 							{
-								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
+								if (IS_BIT_SET(Global_8371, 3))
 								{
 									value = 42;
-									Global_20588 = 1;
+									Global_20708 = 1;
 								}
 								else
 								{
 									value = 255;
-									Global_20588 = 0;
+									Global_20708 = 0;
 								}
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
+								func_10(&Global_8377[num]);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
 						
-							if (Global_2694521)
+							if (Global_2694571)
 								if (num == 14)
-									func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(Global_22788), -1f, &Global_8260[num], 0, 0, 0, 0);
+									func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
 						
-							Global_8822[i] = 1;
+							Global_8939[i] = 1;
 						}
 					}
 				}
@@ -3053,153 +3051,153 @@ void func_14(int iParam0) // Position - 0x10D6
 		{
 			while (num < 34)
 			{
-				if (iParam0 == Global_8260[num].f_11)
+				if (iParam0 == Global_8377[num].f_11)
 				{
-					if (i == Global_8260[num].f_4)
+					if (i == Global_8377[num].f_4)
 					{
-						if (Global_8822[i] == 0)
+						if (Global_8939[i] == 0)
 						{
-							Global_8786[i] = num;
+							Global_8903[i] = num;
 						
 							if (num == 1)
 							{
 								for (j = 0; j < 35; j = j + 1)
 								{
-									if (Global_113648.f_14143[j].f_24 != 0)
-										if (Global_113648.f_14143[j].f_28 == 0)
-											if (Global_113648.f_14143[j].f_99[Global_20383] == 1)
-												Global_22793 = Global_22793 + 1;
+									if (Global_113810.f_14144[j].f_24 != 0)
+										if (Global_113810.f_14144[j].f_28 == 0)
+											if (Global_113810.f_14144[j].f_99[Global_20500] == 1)
+												Global_22913 = Global_22913 + 1;
 								}
 							
-								func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(Global_22793), -1f, &Global_8260[num], 0, 0, 0, 0);
+								func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22913), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else if (num == 7)
 							{
-								if (Global_78558)
+								if (Global_78689)
 								{
 									value2 = 0;
-									value2 = Global_4541031;
+									value2 = Global_4541036;
 								
 									for (k = 0; k < 12; k = k + 1)
 									{
-										if (Global_4541032[k].f_24 != 0)
-											if (Global_4541032[k].f_28 == 0)
-												if (Global_4541032[k].f_99[Global_20383] == 1)
+										if (Global_4541037[k].f_24 != 0)
+											if (Global_4541037[k].f_28 == 0)
+												if (Global_4541037[k].f_99[Global_20500] == 1)
 													value2 = value2 + 1;
 									}
 								
-									func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(value2), -1f, &Global_8260[num], 0, 0, 0, 0);
+									func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value2), -1f, &Global_8377[num], 0, 0, 0, 0);
 								}
 								else
 								{
-									switch (Global_20383)
+									switch (Global_20500)
 									{
 										case CHAR_MICHAEL:
-											value3 = Global_44457;
+											value3 = Global_44580;
 											break;
 									
 										case CHAR_FRANKLIN:
-											value3 = Global_44458;
+											value3 = Global_44581;
 											break;
 									
 										case CHAR_TREVOR:
-											value3 = Global_44459;
+											value3 = Global_44582;
 											break;
 									
 										default:
 											break;
 									}
 								
-									func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(value3), -1f, &Global_8260[num], 0, 0, 0, 0);
+									func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value3), -1f, &Global_8377[num], 0, 0, 0, 0);
 								}
 							}
 							else if (num == 14)
 							{
-								func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(Global_22788), -1f, &Global_8260[num], 0, 0, 0, 0);
+								func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else if (num == 20)
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8259);
+								func_10(&Global_8377[num]);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8376);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
 							else if (num == 2)
 							{
-								if (IS_BIT_SET(G_SleepModeOffOn11, 6))
+								if (IS_BIT_SET(Global_8371, 6))
 									value4 = 42;
 								else
 									value4 = 255;
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
+								func_10(&Global_8377[num]);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value4);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
 							else if (num == 3)
 							{
-								if (IS_BIT_SET(G_SleepModeOffOn11, 3))
+								if (IS_BIT_SET(Global_8371, 3))
 								{
 									value5 = 42;
-									Global_20588 = 1;
+									Global_20708 = 1;
 								}
 								else
 								{
 									value5 = 255;
-									Global_20588 = 0;
+									Global_20708 = 0;
 								}
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
+								func_10(&Global_8377[num]);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value5);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
 							else if (num == 8)
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
+								func_10(&Global_8377[num]);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8260[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(G_SleepModeOffOn11, 6))
+							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8377[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8371, 6))
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8260[num].f_10);
+								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-								func_10(&Global_8260[num]);
+								func_10(&Global_8377[num]);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(42);
 								GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 							}
-							else if (Global_8260[num].f_10 == 57 && num == 23)
+							else if (Global_8377[num].f_10 == 57 && num == 23)
 							{
 								value6 = 0;
-								value6 = Global_1890001.f_1;
-								func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(value6), -1f, &Global_8260[num], 0, 0, 0, 0);
+								value6 = Global_1890239.f_1;
+								func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value6), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else
 							{
-								func_16(Global_20364, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8260[num].f_10), SYSTEM::TO_FLOAT(0), -1f, &Global_8260[num], 0, 0, 0, 0);
+								func_16(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(0), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 						
-							Global_8822[i] = 1;
+							Global_8939[i] = 1;
 						}
 					}
 				}
@@ -3214,7 +3212,7 @@ void func_14(int iParam0) // Position - 0x10D6
 
 BOOL func_15(int iParam0) // Position - 0x1662
 {
-	return Global_43257 == iParam0;
+	return Global_43377 == iParam0;
 }
 
 void func_16(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x1670
@@ -3258,7 +3256,7 @@ int func_17(int iParam0, eCharacter echParam1) // Position - 0x1723
 	if (echParam1 < CHAR_MICHAEL || echParam1 > CHAR_ALL_PLAYERS_CONF)
 		return 0;
 
-	return Global_2028[iParam0].f_24[echParam1];
+	return Global_2058[iParam0].f_24[echParam1];
 }
 
 void func_18(char* sParam0) // Position - 0x174D
@@ -3286,21 +3284,21 @@ void func_19() // Position - 0x176D
 		if (func_20() && PED::IS_PED_IN_COVER(PLAYER::PLAYER_PED_ID(), false))
 			num2 = 1;
 
-	if (!Global_78558)
+	if (!Global_78689)
 	{
 		if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && num2 == 0)
 		{
 			pedPropIndex = PED::GET_PED_PROP_INDEX(PLAYER::PLAYER_PED_ID(), PV_COMP_HEAD, 1);
 		
-			if (Global_78558)
+			if (Global_78689)
 				if (pedPropIndex == 15 || pedPropIndex == 16 || pedPropIndex == 17 || pedPropIndex == 18 || pedPropIndex == 19 || PED::IS_PED_WEARING_HELMET(PLAYER::PLAYER_PED_ID()))
 					num = 1;
 			else if (PED::IS_PED_WEARING_HELMET(PLAYER::PLAYER_PED_ID()))
 				num = 1;
 		
-			if (!Global_20326)
+			if (!Global_20443)
 			{
-				if (Global_7568 != 128)
+				if (Global_7685 != 128)
 				{
 					if (num == 0)
 					{
@@ -3311,14 +3309,14 @@ void func_19() // Position - 0x176D
 							}
 							else
 							{
-								if (Global_78558)
+								if (Global_78689)
 								{
 									PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 244, false);
 									PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 243, false);
 									PED::SET_PED_CONFIG_FLAG(PLAYER::PLAYER_PED_ID(), 242, false);
 								}
 							
-								MISC::SET_BIT(&G_SleepModeOnOn25, 11);
+								MISC::SET_BIT(&Global_8370, 11);
 								TASK::TASK_USE_MOBILE_PHONE(PLAYER::PLAYER_PED_ID(), true, 1);
 							}
 						}
@@ -3354,11 +3352,11 @@ int func_21() // Position - 0x18B5
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-			if (Global_20326 == false)
-				if (Global_7568 != 128)
+		if (Global_20500.f_1 == 10 || Global_20500.f_1 == 9)
+			if (Global_20443 == false)
+				if (Global_7685 != 128)
 					if (!PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
-						Global_21725 != 2;
+						Global_21845 != 2;
 	
 		if (func_15(14))
 			return 0;
@@ -3371,14 +3369,14 @@ int func_21() // Position - 0x18B5
 				if (ENTITY::IS_ENTITY_IN_WATER(PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false)))
 					return 0;
 	
-		if (PED::IS_PED_SWIMMING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()) || PED::IS_PED_HANGING_ON_TO_VEHICLE(PLAYER::PLAYER_PED_ID()) && !(IS_BIT_SET(Global_MissionData1.missionGenMenubs27, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1926632))
+		if (PED::IS_PED_SWIMMING(PLAYER::PLAYER_PED_ID()) || PED::IS_PED_SWIMMING_UNDER_WATER(PLAYER::PLAYER_PED_ID()) || PLAYER::IS_PLAYER_CLIMBING(PLAYER::PLAYER_ID()) || PED::IS_PED_HANGING_ON_TO_VEHICLE(PLAYER::PLAYER_PED_ID()) && !(IS_BIT_SET(Global_4718592.f_37, 17) && NETWORK::NETWORK_IS_ACTIVITY_SESSION() || Global_1927335))
 			return 0;
 	
-		if (Global_112696)
+		if (Global_112858)
 			return 0;
 	}
 
-	if (Global_78558)
+	if (Global_78689)
 		return 0;
 
 	num = 0;
@@ -3401,8 +3399,8 @@ int func_21() // Position - 0x18B5
 		}
 	}
 
-	if (Global_4542575 || num == 1)
-		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("apptrackify")) > 0 || Global_113648.f_14053.f_89)
+	if (Global_4542580 || num == 1)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("apptrackify")) > 0 || Global_113810.f_14054.f_89)
 			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("michael2")) > 0)
 				return 1;
 			else
@@ -3417,7 +3415,7 @@ void func_22() // Position - 0x1AFE
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &Global_20372, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &Global_20489, true);
 		func_23();
 	}
 
@@ -3438,7 +3436,7 @@ BOOL func_24() // Position - 0x1B37
 	eViewMode camViewModeForContext;
 	BOOL num;
 
-	if (Global_78558)
+	if (Global_78689)
 		return false;
 
 	num = 0;
@@ -3448,7 +3446,7 @@ BOOL func_24() // Position - 0x1B37
 	if (camViewModeForContext == FIRST_PERSON)
 		num = 1;
 
-	if (Global_4542575 || num)
+	if (Global_4542580 || num)
 		return true;
 
 	return true;
@@ -3456,7 +3454,7 @@ BOOL func_24() // Position - 0x1B37
 
 BOOL func_25(int iParam0) // Position - 0x1B7E
 {
-	if (Global_113648.f_14143[iParam0].f_99[0] == 1 || Global_113648.f_14143[iParam0].f_99[1] == 1 || Global_113648.f_14143[iParam0].f_99[2] == 1)
+	if (Global_113810.f_14144[iParam0].f_99[0] == 1 || Global_113810.f_14144[iParam0].f_99[1] == 1 || Global_113810.f_14144[iParam0].f_99[2] == 1)
 		return true;
 
 	return false;
@@ -3467,27 +3465,27 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x1BD3
 	if (func_15(14))
 	{
 		if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113648.f_28052[0])
-				Global_20383 = CHAR_MICHAEL;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113648.f_28052[1])
-				Global_20383 = CHAR_FRANKLIN;
-			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113648.f_28052[2])
-				Global_20383 = CHAR_TREVOR;
+			if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[0])
+				Global_20500 = CHAR_MICHAEL;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[1])
+				Global_20500 = CHAR_FRANKLIN;
+			else if (ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()) == Global_113810.f_28053[2])
+				Global_20500 = CHAR_TREVOR;
 			else
-				Global_20383 = CHAR_MICHAEL;
+				Global_20500 = CHAR_MICHAEL;
 	}
 	else
 	{
-		Global_20383 = _GET_CURRENT_PLAYER_CHARACTER();
+		Global_20500 = _GET_CURRENT_PLAYER_CHARACTER();
 	
-		if (Global_20383 == _CHAR_NULL)
-			Global_20383 = CHAR_MULTIPLAYER;
+		if (Global_20500 == _CHAR_NULL)
+			Global_20500 = CHAR_MULTIPLAYER;
 	
-		if (Global_78558)
-			Global_20383 = CHAR_MULTIPLAYER;
+		if (Global_78689)
+			Global_20500 = CHAR_MULTIPLAYER;
 	
-		if (Global_20383 > CHAR_MULTIPLAYER)
-			Global_20383 = CHAR_MULTIPLAYER;
+		if (Global_20500 > CHAR_MULTIPLAYER)
+			Global_20500 = CHAR_MULTIPLAYER;
 	}
 
 	return;
@@ -3496,7 +3494,7 @@ void _UPDATE_CURRENT_PLAYER_CHARACTER() // Position - 0x1BD3
 eCharacter _GET_CURRENT_PLAYER_CHARACTER() // Position - 0x1C75
 {
 	func_28();
-	return Global_113648.f_2365.f_539.f_4321;
+	return Global_113810.f_2366.f_539.f_4321;
 }
 
 void func_28() // Position - 0x1C8E
@@ -3505,30 +3503,30 @@ void func_28() // Position - 0x1C8E
 
 	if (ENTITY::DOES_ENTITY_EXIST(PLAYER::PLAYER_PED_ID()))
 	{
-		if (_GET_CHARACTER_MODEL(Global_113648.f_2365.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
+		if (_GET_CHARACTER_MODEL(Global_113810.f_2366.f_539.f_4321) != ENTITY::GET_ENTITY_MODEL(PLAYER::PLAYER_PED_ID()))
 		{
 			character = _GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID());
 		
-			if (func_29(character) && !func_15(14) || Global_112599)
+			if (func_29(character) && !func_15(14) || Global_112760)
 			{
-				if (Global_113648.f_2365.f_539.f_4321 != character && func_29(Global_113648.f_2365.f_539.f_4321))
-					Global_113648.f_2365.f_539.f_4322 = Global_113648.f_2365.f_539.f_4321;
+				if (Global_113810.f_2366.f_539.f_4321 != character && func_29(Global_113810.f_2366.f_539.f_4321))
+					Global_113810.f_2366.f_539.f_4322 = Global_113810.f_2366.f_539.f_4321;
 			
-				Global_113648.f_2365.f_539.f_4323 = character;
-				Global_113648.f_2365.f_539.f_4321 = character;
+				Global_113810.f_2366.f_539.f_4323 = character;
+				Global_113810.f_2366.f_539.f_4321 = character;
 				return;
 			}
 		}
 		else
 		{
-			if (Global_113648.f_2365.f_539.f_4321 != _CHAR_NULL)
-				Global_113648.f_2365.f_539.f_4323 = Global_113648.f_2365.f_539.f_4321;
+			if (Global_113810.f_2366.f_539.f_4321 != _CHAR_NULL)
+				Global_113810.f_2366.f_539.f_4323 = Global_113810.f_2366.f_539.f_4321;
 		
 			return;
 		}
 	}
 
-	Global_113648.f_2365.f_539.f_4321 = 145;
+	Global_113810.f_2366.f_539.f_4321 = 145;
 	return;
 }
 
@@ -3568,7 +3566,7 @@ Hash _GET_CHARACTER_MODEL(eCharacter character) // Position - 0x1DD4
 
 Hash func_32(eCharacter echParam0) // Position - 0x1DF9
 {
-	return Global_2028[echParam0];
+	return Global_2058[echParam0];
 }
 
 void func_33() // Position - 0x1E08
@@ -3577,208 +3575,208 @@ void func_33() // Position - 0x1E08
 	const char* unk;
 	int unk2;
 
-	if (Global_20361 == 0)
+	if (Global_20478 == 0)
 	{
-		if (func_3(FRONTEND_CONTROL, Global_20352, 0) || Global_113648.f_14053[Global_20383].f_17 == 1 || Global_22785 == true)
+		if (func_3(FRONTEND_CONTROL, Global_20469, 0) || Global_113810.f_14054[Global_20500].f_17 == 1 || Global_22905 == true)
 		{
-			if (Global_113648.f_14053[Global_20383].f_17 == 0 && Global_22785 == false)
+			if (Global_113810.f_14054[Global_20500].f_17 == 0 && Global_22905 == false)
 				func_22();
 		
-			Global_20361 = 1;
-			iLocal_64 = 0;
-			iLocal_58 = uLocal_19[iLocal_56];
+			Global_20478 = 1;
+			iLocal_62 = 0;
+			iLocal_56 = uLocal_17[iLocal_54];
 		
-			if (Global_113648.f_14143[iLocal_58].f_24 != 0)
+			if (Global_113810.f_14144[iLocal_56].f_24 != 0)
 			{
-				if (Global_20383.f_1 > 3)
+				if (Global_20500.f_1 > 3)
 				{
-					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
-					MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
-					Global_20383.f_1 = 8;
+					func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
+					MISC::CLEAR_BIT(&Global_8370, 17);
+					Global_20500.f_1 = 8;
 				}
 			
-				if (Global_113648.f_14053[Global_20383].f_17 == 1 || Global_22785 == true)
+				if (Global_113810.f_14054[Global_20500].f_17 == 1 || Global_22905 == true)
 				{
-					iLocal_58 = uLocal_19[0];
-					iLocal_57 = 0;
-					Global_113648.f_14053[Global_20383].f_17 == 1;
-					Global_22785 = false;
+					iLocal_56 = uLocal_17[0];
+					iLocal_55 = 0;
+					Global_113810.f_14054[Global_20500].f_17 == 1;
+					Global_22905 = false;
 				}
 				else
 				{
 					SYSTEM::SETTIMERB(0);
-					iLocal_62 = 0;
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "GET_CURRENT_SELECTION");
-					iLocal_67 = GRAPHICS::END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE();
+					iLocal_60 = 0;
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "GET_CURRENT_SELECTION");
+					iLocal_65 = GRAPHICS::END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE();
 				
-					while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(iLocal_67) && iLocal_62 == 0)
+					while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(iLocal_65) && iLocal_60 == 0)
 					{
 						SYSTEM::WAIT(0);
 					
 						if (SYSTEM::TIMERB() > 2000)
-							iLocal_62 = 1;
+							iLocal_60 = 1;
 					}
 				
-					if (iLocal_62 == 1)
-						iLocal_63 = 0;
+					if (iLocal_60 == 1)
+						iLocal_61 = 0;
 					else
-						iLocal_63 = GRAPHICS::GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(iLocal_67);
+						iLocal_61 = GRAPHICS::GET_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_INT(iLocal_65);
 				
-					if (iLocal_63 < 0)
-						iLocal_63 = 0;
+					if (iLocal_61 < 0)
+						iLocal_61 = 0;
 				
-					iLocal_58 = uLocal_19[iLocal_63];
-					iLocal_57 = iLocal_63;
+					iLocal_56 = uLocal_17[iLocal_61];
+					iLocal_55 = iLocal_61;
 				}
 			
-				Global_113648.f_14143[iLocal_58].f_28 = 1;
-				iLocal_60 = 0;
-				TEXT_LABEL_ASSIGN_STRING(&Global_22766, "NO_HYPERLINK", 64);
-				gxt = Vector3(Global_113648.f_14143[iLocal_58]);
+				Global_113810.f_14144[iLocal_56].f_28 = 1;
+				iLocal_58 = 0;
+				TEXT_LABEL_ASSIGN_STRING(&Global_22886, "NO_HYPERLINK", 64);
+				gxt = { Global_113810.f_14144[iLocal_56] };
 				TEXT_LABEL_APPEND_STRING(&gxt, "_LINK", 64);
 			
 				if (HUD::DOES_TEXT_LABEL_EXIST(&gxt))
 				{
-					Global_22766 = Vector3(gxt);
-					iLocal_60 = 1;
+					Global_22886 = { gxt };
+					iLocal_58 = 1;
 				
-					if (Global_20371)
-						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 16f, -1f, -1f, "CELL_267" /*LINK*/, 0, 0, 0, 0);
+					if (Global_20488)
+						func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 16f, -1f, -1f, "CELL_267" /*LINK*/, 0, 0, 0, 0);
 					else
-						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 16f, -1f, -1f, 0, 0, 0, 0, 0);
+						func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 16f, -1f, -1f, 0, 0, 0, 0, 0);
 				
-					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
-					Global_113648.f_14143[iLocal_58].f_26 = 1;
-					Global_113648.f_14143[iLocal_58].f_24 = 2;
+					MISC::SET_BIT(&Global_8370, 17);
+					Global_113810.f_14144[iLocal_56].f_26 = 1;
+					Global_113810.f_14144[iLocal_56].f_24 = 2;
 				}
 			
-				if (Global_113648.f_14143[iLocal_58].f_26 == 0)
-					Global_113648.f_14143[iLocal_58].f_24 = 1;
+				if (Global_113810.f_14144[iLocal_56].f_26 == 0)
+					Global_113810.f_14144[iLocal_56].f_24 = 1;
 			
 				func_37();
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(7);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 			
-				if (Global_113648.f_14143[iLocal_58].f_17 == 145)
+				if (Global_113810.f_14144[iLocal_56].f_17 == 145)
 				{
 					GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("CELL_2000" /*~a~*/);
-					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_50));
+					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_50));
 					GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 				}
 				else
 				{
-					func_10(&(Global_2028[Global_113648.f_14143[iLocal_58].f_17].f_3));
+					func_10(&(Global_2058[Global_113810.f_14144[iLocal_56].f_17].f_3));
 				}
 			
-				switch (Global_113648.f_14143[iLocal_58].f_32)
+				switch (Global_113810.f_14144[iLocal_56].f_32)
 				{
 					case 0:
-						func_10(&Global_113648.f_14143[iLocal_58]);
+						func_10(&Global_113810.f_14144[iLocal_56]);
 						break;
 				
 					case 1:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[iLocal_58]);
-						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_33));
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[iLocal_56]);
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_33));
 					
-						if (Global_113648.f_14143[iLocal_58].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_67), "NULL"))
-							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_67));
+						if (Global_113810.f_14144[iLocal_56].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_67), "NULL"))
+							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_67));
 					
-						if (Global_113648.f_14143[iLocal_58].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_83), "NULL"))
+						if (Global_113810.f_14144[iLocal_56].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_83), "NULL"))
 						{
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[iLocal_58].f_67)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[iLocal_58].f_67));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[iLocal_56].f_67)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[iLocal_56].f_67));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_67));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_67));
 						
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[iLocal_58].f_83)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[iLocal_58].f_83));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[iLocal_56].f_83)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[iLocal_56].f_83));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_83));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_83));
 						}
 					
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						break;
 				
 					case 2:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[iLocal_58]);
-						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113648.f_14143[iLocal_58].f_49);
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[iLocal_56]);
+						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113810.f_14144[iLocal_56].f_49);
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						break;
 				
 					case 3:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[iLocal_58]);
-						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_33));
-						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113648.f_14143[iLocal_58].f_49);
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[iLocal_56]);
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_33));
+						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113810.f_14144[iLocal_56].f_49);
 					
-						if (Global_113648.f_14143[iLocal_58].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_67), "NULL"))
-							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_67));
+						if (Global_113810.f_14144[iLocal_56].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_67), "NULL"))
+							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_67));
 					
-						if (Global_113648.f_14143[iLocal_58].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[iLocal_58].f_83), "NULL"))
+						if (Global_113810.f_14144[iLocal_56].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[iLocal_56].f_83), "NULL"))
 						{
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[iLocal_58].f_67)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[iLocal_58].f_67));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[iLocal_56].f_67)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[iLocal_56].f_67));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_67));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_67));
 						
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[iLocal_58].f_83)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[iLocal_58].f_83));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[iLocal_56].f_83)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[iLocal_56].f_83));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[iLocal_58].f_83));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[iLocal_56].f_83));
 						}
 					
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						break;
 				
 					case 4:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 5:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 6:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 7:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 8:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 9:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 10:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 11:
-						func_36(iLocal_58);
+						func_36(iLocal_56);
 						break;
 				
 					case 12:
-						func_35(iLocal_58);
+						func_35(iLocal_56);
 						break;
 				}
 			
-				if (Global_22794[iLocal_58] == 0)
+				if (Global_22914[iLocal_56] == 0)
 				{
-					if (Global_113648.f_14143[iLocal_58].f_17 == 159)
+					if (Global_113810.f_14144[iLocal_56].f_17 == 159)
 						func_10("CELL_COMIC_P" /*CHAR_COMIC_STORE*/);
 					else
-						func_10(&(Global_2028[Global_113648.f_14143[iLocal_58].f_17].f_7));
+						func_10(&(Global_2058[Global_113810.f_14144[iLocal_56].f_17].f_7));
 				}
 				else
 				{
-					if (PED::IS_PEDHEADSHOT_VALID(Global_22794[iLocal_58]))
-						if (PED::IS_PEDHEADSHOT_READY(Global_22794[iLocal_58]))
-							pedheadshotTxdString = PED::GET_PEDHEADSHOT_TXD_STRING(Global_22794[iLocal_58]);
+					if (PED::IS_PEDHEADSHOT_VALID(Global_22914[iLocal_56]))
+						if (PED::IS_PEDHEADSHOT_READY(Global_22914[iLocal_56]))
+							pedheadshotTxdString = PED::GET_PEDHEADSHOT_TXD_STRING(Global_22914[iLocal_56]);
 						else
 							pedheadshotTxdString = "CHAR_DEFAULT";
 					else
@@ -3790,103 +3788,103 @@ void func_33() // Position - 0x1E08
 				}
 			
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-				Global_22791 = 1;
-				func_46(Global_20364, "DISPLAY_VIEW", 7f, -1082130432, -1082130432, -1082130432, -1082130432);
-				func_34(Global_20364, "SET_HEADER", "CELL_1" /*Texts*/, 0, 0, 0, 0);
-				HUD::THEFEED_REMOVE_ITEM(Global_113648.f_14143[iLocal_58].f_16);
+				Global_22911 = 1;
+				func_46(Global_20481, "DISPLAY_VIEW", 7f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_34(Global_20481, "SET_HEADER", "CELL_1" /*Texts*/, 0, 0, 0, 0);
+				HUD::THEFEED_REMOVE_ITEM(Global_113810.f_14144[iLocal_56].f_16);
 			
-				if (Global_113648.f_14143[iLocal_58].f_29 > 0)
-					if (Global_20371)
-						func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 13f, -1f, -1f, "CELL_212" /*YES*/, 0, 0, 0, 0);
+				if (Global_113810.f_14144[iLocal_56].f_29 > 0)
+					if (Global_20488)
+						func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 13f, -1f, -1f, "CELL_212" /*YES*/, 0, 0, 0, 0);
 					else
-						func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
-				else if (Global_113648.f_14143[iLocal_58].f_30 == 1)
-					if (Global_20371)
-						func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
+						func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
+				else if (Global_113810.f_14144[iLocal_56].f_30 == 1)
+					if (Global_20488)
+						func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
 					else
-						func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, 0, 0, 0, 0, 0);
+						func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 5f, -1f, -1f, 0, 0, 0, 0, 0);
 				else
-					func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+					func_16(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 			
-				if (Global_113648.f_14143[iLocal_58].f_29 > 0)
-					if (MISC::ARE_STRINGS_EQUAL(&Global_113648.f_14143[iLocal_58], "CELL_FINV"))
-						if (Global_20371)
-							func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
+				if (Global_113810.f_14144[iLocal_56].f_29 > 0)
+					if (MISC::ARE_STRINGS_EQUAL(&Global_113810.f_14144[iLocal_56], "CELL_FINV"))
+						if (Global_20488)
+							func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
 						else
-							func_16(Global_20364, "SET_SOFT_KEYS", 3f, 0f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
-					else if (Global_20371)
-						func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
+							func_16(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
+					else if (Global_20488)
+						func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
 					else
-						func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
-				else if (Global_20371)
-					func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+						func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
+				else if (Global_20488)
+					func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 				else
-					func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+					func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 			
-				if (Global_113648.f_14143[iLocal_58].f_24 == 2)
+				if (Global_113810.f_14144[iLocal_56].f_24 == 2)
 				{
-					if (Global_113648.f_14143[iLocal_58].f_31 == 1)
+					if (Global_113810.f_14144[iLocal_56].f_31 == 1)
 					{
-						iLocal_60 = 0;
+						iLocal_58 = 0;
 					
-						if (Global_20371)
-							func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, "CELL_264" /*BARTER*/, 0, 0, 0, 0);
+						if (Global_20488)
+							func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, "CELL_264" /*BARTER*/, 0, 0, 0, 0);
 						else
-							func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
+							func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
 					
-						MISC::SET_BIT(&G_SleepModeOnOn25, 17);
+						MISC::SET_BIT(&Global_8370, 17);
 					}
-					else if (iLocal_60 == 0)
+					else if (iLocal_58 == 0)
 					{
-						func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-						MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+						func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+						MISC::CLEAR_BIT(&Global_8370, 17);
 					}
 				}
-				else if (Global_20371)
+				else if (Global_20488)
 				{
-					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, "CELL_216" /*DELETE*/, 0, 0, 0, 0);
-					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
+					func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, "CELL_216" /*DELETE*/, 0, 0, 0, 0);
+					MISC::SET_BIT(&Global_8370, 17);
 				}
 				else
 				{
-					func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, 0, 0, 0, 0, 0);
-					MISC::SET_BIT(&G_SleepModeOnOn25, 17);
+					func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 12f, -1f, -1f, 0, 0, 0, 0, 0);
+					MISC::SET_BIT(&Global_8370, 17);
 				}
 			
-				Global_113648.f_14053[Global_20383].f_18 = 0;
-				Global_113648.f_14053[Global_20383].f_17 = 0;
+				Global_113810.f_14054[Global_20500].f_18 = 0;
+				Global_113810.f_14054[Global_20500].f_17 = 0;
 			}
 			else
 			{
 				num = 0;
 			
-				if (Global_113648.f_14053[Global_20383].f_17 == 1 || Global_22785 == true)
+				if (Global_113810.f_14054[Global_20500].f_17 == 1 || Global_22905 == true)
 				{
-					Global_22785;
+					Global_22905;
 					num = 1;
 				}
 			
-				Global_113648.f_14053[Global_20383].f_18 = 0;
-				Global_113648.f_14053[Global_20383].f_17 = 0;
+				Global_113810.f_14054[Global_20500].f_18 = 0;
+				Global_113810.f_14054[Global_20500].f_17 = 0;
 			
 				if (num == 1)
 				{
 					num = 0;
-					Global_20383.f_1 = 3;
+					Global_20500.f_1 = 3;
 				}
 			}
 		}
 	
-		if (Global_2803654 == 0)
+		if (Global_2804775 == 0)
 		{
-			if (Global_78558)
+			if (Global_78689)
 			{
-				PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20355);
+				PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, Global_20472);
 			
-				if (func_3(FRONTEND_CONTROL, Global_20355, 0))
+				if (func_3(FRONTEND_CONTROL, Global_20472, 0))
 				{
-					Global_20361 = 1;
-					Global_2803654 = 1;
+					Global_20478 = 1;
+					Global_2804775 = 1;
 				}
 			}
 		}
@@ -3922,7 +3920,7 @@ void func_35(int iParam0) // Position - 0x2807
 
 	num = 0;
 
-	switch (Global_113648.f_14143[iParam0].f_49)
+	switch (Global_113810.f_14144[iParam0].f_49)
 	{
 		case 1:
 			GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("TUN_CBL_L01" /*Here's the list of Exotic Exports vehicles you're looking for: ~a~.*/);
@@ -3965,12 +3963,12 @@ void func_35(int iParam0) // Position - 0x2807
 			break;
 	}
 
-	while (num < Global_113648.f_14143[iParam0].f_49)
+	while (num < Global_113810.f_14144[iParam0].f_49)
 	{
-		switch (Global_113648.f_14143[iParam0].f_32)
+		switch (Global_113810.f_14144[iParam0].f_32)
 		{
 			case 12:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935319[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1936022[num]);
 				break;
 		}
 	
@@ -3987,7 +3985,7 @@ void func_36(int iParam0) // Position - 0x2914
 
 	num = 0;
 
-	switch (Global_113648.f_14143[iParam0].f_49)
+	switch (Global_113810.f_14144[iParam0].f_49)
 	{
 		case 1:
 			GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("CELL_CL01" /*~a~ ~a~.*/);
@@ -4026,42 +4024,42 @@ void func_36(int iParam0) // Position - 0x2914
 			break;
 	}
 
-	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_113648.f_14143[iParam0]);
+	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_113810.f_14144[iParam0]);
 
-	while (num < Global_113648.f_14143[iParam0].f_49)
+	while (num < Global_113810.f_14144[iParam0].f_49)
 	{
-		switch (Global_113648.f_14143[iParam0].f_32)
+		switch (Global_113810.f_14144[iParam0].f_32)
 		{
 			case 4:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_2793046.f_1755[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_2794162.f_1762[num]);
 				break;
 		
 			case 5:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935188[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935891[num]);
 				break;
 		
 			case 6:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935229[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935932[num]);
 				break;
 		
 			case 7:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935250[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935953[num]);
 				break;
 		
 			case 8:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935267[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935970[num]);
 				break;
 		
 			case 9:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935280[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935983[num]);
 				break;
 		
 			case 10:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935293[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935996[num]);
 				break;
 		
 			case 11:
-				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1935306[num]);
+				HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&Global_1936009[num]);
 				break;
 		}
 	
@@ -4076,26 +4074,26 @@ void func_37() // Position - 0x2AB5
 {
 	int i;
 
-	if (bLocal_2219)
-		GRAPHICS::SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED(&uLocal_68);
+	if (bLocal_2217)
+		GRAPHICS::SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED(&uLocal_66);
 
-	bLocal_2219 = false;
+	bLocal_2217 = false;
 
-	if (Global_113648.f_14143[iLocal_58].f_24 != 0)
+	if (Global_113810.f_14144[iLocal_56].f_24 != 0)
 	{
 		for (i = 0; i < 165; i = i + 1)
 		{
-			if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_84[i]) && MISC::ARE_STRINGS_EQUAL(&Global_113648.f_14143[iLocal_58], &uLocal_84[i]))
+			if (!MISC::IS_STRING_NULL_OR_EMPTY(&uLocal_82[i]) && MISC::ARE_STRINGS_EQUAL(&Global_113810.f_14144[iLocal_56], &uLocal_82[i]))
 			{
 				if (i < 19)
-					TEXT_LABEL_COPY(&uLocal_68, Vector3(uLocal_2066[i]), 16);
+					TEXT_LABEL_COPY(&uLocal_66, { uLocal_2064[i] }, 16);
 				else
-					TEXT_LABEL_COPY(&uLocal_68, Vector3(uLocal_1075[i]), 16);
+					TEXT_LABEL_COPY(&uLocal_66, { uLocal_1073[i] }, 16);
 			
-				bLocal_2219 = true;
-				GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT(&uLocal_68, false);
+				bLocal_2217 = true;
+				GRAPHICS::REQUEST_STREAMED_TEXTURE_DICT(&uLocal_66, false);
 			
-				while (!GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED(&uLocal_68))
+				while (!GRAPHICS::HAS_STREAMED_TEXTURE_DICT_LOADED(&uLocal_66))
 				{
 					SYSTEM::WAIT(100);
 				}
@@ -4108,31 +4106,31 @@ void func_37() // Position - 0x2AB5
 
 void func_38() // Position - 0x2B60
 {
-	if (bLocal_61)
+	if (bLocal_59)
 		if (SYSTEM::TIMERA() > 50)
-			bLocal_61 = false;
+			bLocal_59 = false;
 
-	if (bLocal_61 == false)
+	if (bLocal_59 == false)
 	{
-		if (func_3(FRONTEND_CONTROL, Global_20359, 0) || PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_SCROLL_BACKWARD))
+		if (func_3(FRONTEND_CONTROL, Global_20476, 0) || PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_SCROLL_BACKWARD))
 		{
-			if (iLocal_56 > 0)
-				iLocal_56 = iLocal_56 - 1;
+			if (iLocal_54 > 0)
+				iLocal_54 = iLocal_54 - 1;
 		
 			func_41();
-			bLocal_61 = true;
+			bLocal_59 = true;
 			SYSTEM::SETTIMERA(0);
 		}
 	
-		if (func_3(FRONTEND_CONTROL, Global_20360, 0) || PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_SCROLL_FORWARD))
+		if (func_3(FRONTEND_CONTROL, Global_20477, 0) || PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_SCROLL_FORWARD))
 		{
-			iLocal_56 = iLocal_56 + 1;
+			iLocal_54 = iLocal_54 + 1;
 		
-			if (iLocal_56 == iLocal_55)
-				iLocal_56 = 0;
+			if (iLocal_54 == iLocal_53)
+				iLocal_54 = 0;
 		
 			func_39();
-			bLocal_61 = true;
+			bLocal_59 = true;
 			SYSTEM::SETTIMERA(0);
 		}
 	}
@@ -4142,8 +4140,8 @@ void func_38() // Position - 0x2B60
 
 void func_39() // Position - 0x2BE5
 {
-	func_46(Global_20364, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
-	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20372, true);
+	func_46(Global_20481, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
+	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20489, true);
 	func_40();
 	return;
 }
@@ -4151,7 +4149,7 @@ void func_39() // Position - 0x2BE5
 void func_40() // Position - 0x2C22
 {
 	if (func_24())
-		if (Global_20589 == 0)
+		if (Global_20709 == 0)
 			MOBILE::CELL_SET_INPUT(2);
 		else
 			MOBILE::CELL_SET_INPUT(1);
@@ -4161,8 +4159,8 @@ void func_40() // Position - 0x2C22
 
 void func_41() // Position - 0x2C45
 {
-	func_46(Global_20364, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
-	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20372, true);
+	func_46(Global_20481, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
+	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20489, true);
 	func_42();
 	return;
 }
@@ -4170,7 +4168,7 @@ void func_41() // Position - 0x2C45
 void func_42() // Position - 0x2C82
 {
 	if (func_24())
-		if (Global_20589 == 0)
+		if (Global_20709 == 0)
 			MOBILE::CELL_SET_INPUT(1);
 		else
 			MOBILE::CELL_SET_INPUT(2);
@@ -4180,47 +4178,47 @@ void func_42() // Position - 0x2C82
 
 void func_43() // Position - 0x2CA5
 {
-	if (Global_113648.f_14053[Global_20383].f_17 == 0)
+	if (Global_113810.f_14054[Global_20500].f_17 == 0)
 	{
-		if (iLocal_57 < 0)
-			iLocal_57 = 0;
+		if (iLocal_55 < 0)
+			iLocal_55 = 0;
 	
-		func_46(Global_20364, "DISPLAY_VIEW", 6f, SYSTEM::TO_FLOAT(iLocal_57), -1082130432, -1082130432, -1082130432);
-		func_34(Global_20364, "SET_HEADER", "CELL_1" /*Texts*/, 0, 0, 0, 0);
+		func_46(Global_20481, "DISPLAY_VIEW", 6f, SYSTEM::TO_FLOAT(iLocal_55), -1082130432, -1082130432, -1082130432);
+		func_34(Global_20481, "SET_HEADER", "CELL_1" /*Texts*/, 0, 0, 0, 0);
 	
-		if (Global_20371)
+		if (Global_20488)
 		{
-			if (iLocal_55 > 0)
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_214" /*OPTIONS*/, 0, 0, 0, 0);
+			if (iLocal_53 > 0)
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_214" /*OPTIONS*/, 0, 0, 0, 0);
 			else
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 		
-			func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+			func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 		}
 		else
 		{
-			if (iLocal_55 > 0)
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+			if (iLocal_53 > 0)
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 			else
-				func_16(Global_20364, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_16(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
 		
-			func_16(Global_20364, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_16(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 	
-		if (Global_78558)
+		if (Global_78689)
 		{
-			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+			func_16(Global_20481, "SET_SOFT_KEYS", 1f, 1f, 11f, -1f, -1f, 0, 0, 0, 0, 0);
+			MISC::CLEAR_BIT(&Global_8370, 17);
 		}
 		else
 		{
-			func_16(Global_20364, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
-			MISC::CLEAR_BIT(&G_SleepModeOnOn25, 17);
+			func_16(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+			MISC::CLEAR_BIT(&Global_8370, 17);
 		}
 	}
 	else
 	{
-		iLocal_57 = 0;
+		iLocal_55 = 0;
 	}
 
 	return;
@@ -4233,42 +4231,42 @@ void func_44() // Position - 0x2DE1
 	int unk3;
 	int unk4;
 
-	iLocal_55 = 0;
+	iLocal_53 = 0;
 	_UPDATE_CURRENT_PLAYER_CHARACTER();
 	unk = 35;
 
 	for (i = 0; i < 34; i = i + 1)
 	{
 		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-			func_59();
+			func_61();
 	
 		num = 0;
 		num2 = 34;
-		Global_113648.f_14143[num2].f_18 = -1;
-		Global_113648.f_14143[num2].f_18.f_1 = 0;
-		Global_113648.f_14143[num2].f_18.f_2 = 0;
-		Global_113648.f_14143[num2].f_18.f_3 = 0;
-		Global_113648.f_14143[num2].f_18.f_5 = 0;
+		Global_113810.f_14144[num2].f_18 = -1;
+		Global_113810.f_14144[num2].f_18.f_1 = 0;
+		Global_113810.f_14144[num2].f_18.f_2 = 0;
+		Global_113810.f_14144[num2].f_18.f_3 = 0;
+		Global_113810.f_14144[num2].f_18.f_5 = 0;
 	
 		while (num < 35)
 		{
 			if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-				func_59();
+				func_61();
 		
 			if (unk[num] == 0)
 			{
-				if (Global_113648.f_14143[num].f_24 != 0)
+				if (Global_113810.f_14144[num].f_24 != 0)
 				{
-					if (Global_113648.f_14143[num].f_99[Global_20383] == 1)
+					if (Global_113810.f_14144[num].f_99[Global_20500] == 1)
 					{
-						if (func_45(Global_113648.f_14143[num].f_18, Global_113648.f_14143[num2].f_18))
+						if (func_45(Global_113810.f_14144[num].f_18, Global_113810.f_14144[num2].f_18))
 						{
 							num2 = num;
 						
-							if (Global_113648.f_14143[num2].f_28 == 0)
-								iLocal_59 = 33;
+							if (Global_113810.f_14144[num2].f_28 == 0)
+								iLocal_57 = 33;
 							else
-								iLocal_59 = 34;
+								iLocal_57 = 34;
 						}
 					}
 				}
@@ -4277,85 +4275,85 @@ void func_44() // Position - 0x2DE1
 			num = num + 1;
 		}
 	
-		uLocal_19[i] = num2;
+		uLocal_17[i] = num2;
 		unk[num2] = 1;
 	
-		if (Global_113648.f_14143[num2].f_24 != 0)
+		if (Global_113810.f_14144[num2].f_24 != 0)
 		{
-			if (Global_113648.f_14143[num2].f_99[Global_20383] == 1)
+			if (Global_113810.f_14144[num2].f_99[Global_20500] == 1)
 			{
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20364, "SET_DATA_SLOT");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(6);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
-				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_113648.f_14143[num2].f_18.f_2);
-				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_113648.f_14143[num2].f_18.f_1);
-				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iLocal_59);
+				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_113810.f_14144[num2].f_18.f_2);
+				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_113810.f_14144[num2].f_18.f_1);
+				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iLocal_57);
 			
-				if (Global_113648.f_14143[num2].f_17 == 145)
+				if (Global_113810.f_14144[num2].f_17 == 145)
 				{
 					GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING("CELL_CONDFNH" /*<C>~a~</C>*/);
-					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_50));
+					HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_50));
 					GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 				}
 				else
 				{
-					func_10(&(Global_2028[Global_113648.f_14143[num2].f_17].f_3));
+					func_10(&(Global_2058[Global_113810.f_14144[num2].f_17].f_3));
 				}
 			
-				switch (Global_113648.f_14143[num2].f_32)
+				switch (Global_113810.f_14144[num2].f_32)
 				{
 					case 0:
-						func_10(&Global_113648.f_14143[num2]);
+						func_10(&Global_113810.f_14144[num2]);
 						break;
 				
 					case 1:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[num2]);
-						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_33));
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[num2]);
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_33));
 					
-						if (Global_113648.f_14143[num2].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_67), "NULL"))
-							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_67));
+						if (Global_113810.f_14144[num2].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_67), "NULL"))
+							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_67));
 					
-						if (Global_113648.f_14143[num2].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_83), "NULL"))
+						if (Global_113810.f_14144[num2].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_83), "NULL"))
 						{
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[num2].f_67)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[num2].f_67));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[num2].f_67)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[num2].f_67));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_67));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_67));
 						
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[num2].f_83)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[num2].f_83));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[num2].f_83)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[num2].f_83));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_83));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_83));
 						}
 					
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						break;
 				
 					case 2:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[num2]);
-						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113648.f_14143[num2].f_49);
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[num2]);
+						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113810.f_14144[num2].f_49);
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 						break;
 				
 					case 3:
-						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113648.f_14143[num2]);
-						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_33));
-						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113648.f_14143[num2].f_49);
+						GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(&Global_113810.f_14144[num2]);
+						HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_33));
+						HUD::ADD_TEXT_COMPONENT_INTEGER(Global_113810.f_14144[num2].f_49);
 					
-						if (Global_113648.f_14143[num2].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_67), "NULL"))
-							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_67));
+						if (Global_113810.f_14144[num2].f_66 == 1 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_67), "NULL"))
+							HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_67));
 					
-						if (Global_113648.f_14143[num2].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113648.f_14143[num2].f_83), "NULL"))
+						if (Global_113810.f_14144[num2].f_66 == 2 && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_67), "NULL") && !MISC::ARE_STRINGS_EQUAL(&(Global_113810.f_14144[num2].f_83), "NULL"))
 						{
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[num2].f_67)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[num2].f_67));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[num2].f_67)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[num2].f_67));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_67));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_67));
 						
-							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113648.f_14143[num2].f_83)))
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113648.f_14143[num2].f_83));
+							if (HUD::DOES_TEXT_LABEL_EXIST(&(Global_113810.f_14144[num2].f_83)))
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(&(Global_113810.f_14144[num2].f_83));
 							else
-								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113648.f_14143[num2].f_83));
+								HUD::ADD_TEXT_COMPONENT_SUBSTRING_PLAYER_NAME(&(Global_113810.f_14144[num2].f_83));
 						}
 					
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
@@ -4402,9 +4400,9 @@ void func_44() // Position - 0x2DE1
 			}
 		}
 	
-		if (Global_113648.f_14143[i].f_24 != 0)
-			if (Global_113648.f_14143[i].f_99[Global_20383] == 1)
-				iLocal_55 = iLocal_55 + 1;
+		if (Global_113810.f_14144[i].f_24 != 0)
+			if (Global_113810.f_14144[i].f_99[Global_20500] == 1)
+				iLocal_53 = iLocal_53 + 1;
 	}
 
 	return;
@@ -4477,672 +4475,713 @@ void func_46(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4
 
 void func_47() // Position - 0x3480
 {
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[0], "SXT_JUL_1ST" /*I can't wait until you cum again! ~nrt~ <img src='img://05_a_sext_stripperJuliet/05_a_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[0], "05_a_sext_stripperJuliet", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[1], "SXT_JUL_2ND" /*Just when I thought that it couldn't get any better! ~nrt~ <img src='img://05_b_sext_stripperJuliet/05_b_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[1], "05_b_sext_stripperJuliet", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[2], "SXT_JUL_NEED" /*Missing you badly! I want you inside me. ~nrt~ <img src='img://05_c_sext_stripperJuliet/05_c_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[2], "05_c_sext_stripperJuliet", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[3], "SXT_NIK_1ST" /*I just wanted you to know that I miss you already :-* ~nrt~ <img src='img://06_a_sext_stripperNikki/06_a_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[3], "06_a_sext_stripperNikki", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[4], "SXT_NIK_2ND" /*You're the man that I've been looking for my entire life! ~nrt~ <img src='img://06_b_sext_stripperNikki/06_b_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[4], "06_b_sext_stripperNikki", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[5], "SXT_NIK_NEED" /*Maybe this will get your attention! ~nrt~ <img src='img://06_c_sext_stripperNikki/06_c_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[5], "06_c_sext_stripperNikki", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[6], "SXT_SAP_1ST" /*That was deliciously yummy. Next time, I want to be on top. What do you think of this position? ~nrt~ <img src='img://08_a_sext_stripperSapphire/08_a_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[6], "08_a_sext_stripperSapphire", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[7], "SXT_SAP_2ND" /*Here don't show this to anyone else. ~nrt~ <img src='img://08_b_sext_stripperSapphire/08_b_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[7], "08_b_sext_stripperSapphire", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[8], "SXT_SAP_NEED" /*My body aches for you! ~nrt~ <img src='img://08_c_sext_stripperSapphire/08_c_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[8], "08_c_sext_stripperSapphire", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[9], "SXT_INF_1ST" /*This body is all yours and only yours baby! ~nrt~ <img src='img://04_a_sext_stripperInfernus/04_a_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[9], "04_a_sext_stripperInfernus", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[10], "SXT_INF_2ND" /*I can hardly walk, that was amazing! ~nrt~ <img src='img://04_b_sext_stripperInfernus/04_b_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[10], "04_b_sext_stripperInfernus", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[11], "SXT_INF_NEED" /*My loins quiver with the thought of you! ~nrt~ <img src='img://04_c_sext_stripperInfernus/04_c_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[11], "04_c_sext_stripperInfernus", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[12], "SXT_TXI_1ST" /*I can't stop thinking about the last time. ~nrt~ <img src='img://11_a_sext_taxiLiz/11_a_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[12], "11_a_sext_taxiLiz", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[13], "SXT_TXI_2ND" /*You're so amazing! I've been missing out. ~nrt~ <img src='img://11_b_sext_taxiLiz/11_b_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[13], "11_b_sext_taxiLiz", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[14], "SXT_TXI_NEED" /*Hey babe, I need a study break... ~nrt~ <img src='img://11_c_sext_taxiLiz/11_c_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[14], "11_c_sext_taxiLiz", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[15], "SXT_HCH_1ST" /*You always know how to give a good ride ;) ~nrt~ <img src='img://10_a_sext_hitcherGirl/10_a_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[15], "10_a_sext_hitcherGirl", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[16], "SXT_HCH_2ND" /*Can't wait to meet again honey. ~nrt~ <img src='img://10_b_sext_hitcherGirl/10_b_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[16], "10_b_sext_hitcherGirl", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[17], "SXT_HCH_NEED" /*I've been thinking... you should let me ride you. ~nrt~ <img src='img://10_c_sext_hitcherGirl/10_c_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[17], "10_c_sext_hitcherGirl", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[18], "SOL2_PASS" /*Michael I have put your name in the credits for the film. ~nrt~ <img src='img://ExecutiveProducer/executiveproducer' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_2066[18], "executiveproducer", 32);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[19], "LR_PIC_TXT1", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[19], "mt_phone_image_1", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[20], "LR_PIC_TXT2", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[20], "mt_phone_image_2", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[21], "LR_PIC_TXT3", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[21], "mt_phone_image_3", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[22], "LR_PIC_TXT4", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[22], "mt_phone_image_4", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[23], "LR_PIC_TXT5", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[23], "mt_phone_image_5", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[24], "SAD_SMS_0" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_01/MP_SND_TARGET_01' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[24], "MP_SND_TARGET_01", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[25], "SAD_SMS_1" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_02/MP_SND_TARGET_02' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[25], "MP_SND_TARGET_02", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[26], "SAD_SMS_2" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_03/MP_SND_TARGET_03' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[26], "MP_SND_TARGET_03", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[27], "SAD_SMS_3" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_04/MP_SND_TARGET_04' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[27], "MP_SND_TARGET_04", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[28], "SAD_SMS_4" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_05/MP_SND_TARGET_05' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[28], "MP_SND_TARGET_05", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[29], "SAD_SMS_5" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_06/MP_SND_TARGET_06' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[29], "MP_SND_TARGET_06", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[30], "SAD_SMS_6" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_07/MP_SND_TARGET_07' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[30], "MP_SND_TARGET_07", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[31], "SAD_SMS_7" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_08/MP_SND_TARGET_08' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[31], "MP_SND_TARGET_08", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[32], "SAD_SMS_8" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_09/MP_SND_TARGET_09' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[32], "MP_SND_TARGET_09", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[33], "SAD_SMS_9" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_10/MP_SND_TARGET_10' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[33], "MP_SND_TARGET_10", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[34], "SAD_SMS_10" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_11/MP_SND_TARGET_11' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[34], "MP_SND_TARGET_11", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[35], "SAD_SMS_11" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_12/MP_SND_TARGET_12' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[35], "MP_SND_TARGET_12", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[36], "SAD_SMS_12" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_13/MP_SND_TARGET_13' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[36], "MP_SND_TARGET_13", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[37], "SAD_SMS_13" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_14/MP_SND_TARGET_14' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[37], "MP_SND_TARGET_14", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[38], "SAD_SMS_14" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_15/MP_SND_TARGET_15' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[38], "MP_SND_TARGET_15", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[39], "SAD_SMS_15" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_16/MP_SND_TARGET_16' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[39], "MP_SND_TARGET_16", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[40], "SAD_SMS_16" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_17/MP_SND_TARGET_17' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[40], "MP_SND_TARGET_17", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[41], "SAD_SMS_17" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_18/MP_SND_TARGET_18' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[41], "MP_SND_TARGET_18", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[42], "SAD_SMS_18" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_19/MP_SND_TARGET_19' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[42], "MP_SND_TARGET_19", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[43], "SAD_SMS_19" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_20/MP_SND_TARGET_20' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[43], "MP_SND_TARGET_20", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "VEX_PM_PHOTO0" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Del Perro Beach ~nrt~ <img src='img://MP_EX_LOCATION_01/MP_EX_LOCATION_01' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "MP_EX_LOCATION_01", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "VEX_PM_PHOTO1" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Forest ~nrt~ <img src='img://MP_EX_LOCATION_02/MP_EX_LOCATION_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "MP_EX_LOCATION_02", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "VEX_PM_PHOTO2" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Vinewood Hills ~nrt~ <img src='img://MP_EX_LOCATION_03/MP_EX_LOCATION_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "MP_EX_LOCATION_03", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[47], "VEX_PM_PHOTO3" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Mount Gordo ~nrt~ <img src='img://MP_EX_LOCATION_04/MP_EX_LOCATION_04' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[47], "MP_EX_LOCATION_04", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[48], "VEX_PM_PHOTO4" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Los Santos International Airport ~nrt~ <img src='img://MP_EX_LOCATION_05/MP_EX_LOCATION_05' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[48], "MP_EX_LOCATION_05", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[49], "VEX_PM_PHOTO5" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Forest ~nrt~ <img src='img://MP_EX_LOCATION_06/MP_EX_LOCATION_06' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[49], "MP_EX_LOCATION_06", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[50], "VEX_PM_PHOTO6" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Bay ~nrt~ <img src='img://MP_EX_LOCATION_07/MP_EX_LOCATION_07' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[50], "MP_EX_LOCATION_07", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[51], "VEX_PM_PHOTO7" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Ron Alternates Wind Farm ~nrt~ <img src='img://MP_EX_LOCATION_08/MP_EX_LOCATION_08' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[51], "MP_EX_LOCATION_08", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[52], "VEX_PM_PHOTO8" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Grand Senora Desert ~nrt~ <img src='img://MP_EX_LOCATION_09/MP_EX_LOCATION_09' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[52], "MP_EX_LOCATION_09", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[53], "VEX_PM_PHOTO9" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Sandy Shores ~nrt~ <img src='img://MP_EX_LOCATION_10/MP_EX_LOCATION_10' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[53], "MP_EX_LOCATION_10", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[54], "VEX_PM_PHOTO10" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Legion Square ~nrt~ <img src='img://MP_EX_LOCATION_11/MP_EX_LOCATION_11' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[54], "MP_EX_LOCATION_11", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[55], "VEX_PM_PHOTO11" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: GWC and Golfing Society ~nrt~ <img src='img://MP_EX_LOCATION_12/MP_EX_LOCATION_12' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[55], "MP_EX_LOCATION_12", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[56], "VEX_PM_PHOTO12" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Vespucci Beach ~nrt~ <img src='img://MP_EX_LOCATION_13/MP_EX_LOCATION_13' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[56], "MP_EX_LOCATION_13", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[57], "VEX_PM_PHOTO13" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Tongva Hills ~nrt~ <img src='img://MP_EX_LOCATION_14/MP_EX_LOCATION_14' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[57], "MP_EX_LOCATION_14", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[58], "VEX_1_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_01/IE_TEXTVECH_01' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[58], "IE_TEXTVECH_01", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[59], "VEX_2_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_02/IE_TEXTVECH_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[59], "IE_TEXTVECH_02", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[60], "VEX_3_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_03/IE_TEXTVECH_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[60], "IE_TEXTVECH_03", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[61], "VEX_4_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_04/IE_TEXTVECH_04' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[61], "IE_TEXTVECH_04", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[62], "VEX_5_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_05/IE_TEXTVECH_05' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[62], "IE_TEXTVECH_05", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[63], "VEX_6_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_06/IE_TEXTVECH_06' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[63], "IE_TEXTVECH_06", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[64], "VEX_7_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_07/IE_TEXTVECH_07' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[64], "IE_TEXTVECH_07", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[65], "VEX_8_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_08/IE_TEXTVECH_08' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[65], "IE_TEXTVECH_08", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[66], "VEX_9_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_09/IE_TEXTVECH_09' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[66], "IE_TEXTVECH_09", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[67], "VEX_10_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_10/IE_TEXTVECH_10' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[67], "IE_TEXTVECH_10", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[68], "VEX_11_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_11/IE_TEXTVECH_11' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[68], "IE_TEXTVECH_11", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[69], "VEX_12_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_12/IE_TEXTVECH_12' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[69], "IE_TEXTVECH_12", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[70], "VEX_13_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_13/IE_TEXTVECH_13' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[70], "IE_TEXTVECH_13", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[71], "VEX_14_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_14/IE_TEXTVECH_14' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[71], "IE_TEXTVECH_14", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[72], "VEX_15_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_15/IE_TEXTVECH_15' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[72], "IE_TEXTVECH_15", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[73], "VEX_16_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_16/IE_TEXTVECH_16' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[73], "IE_TEXTVECH_16", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[74], "VEX_17_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_17/IE_TEXTVECH_17' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[74], "IE_TEXTVECH_17", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[75], "VEX_18_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_18/IE_TEXTVECH_18' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[75], "IE_TEXTVECH_18", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[76], "VEX_19_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_19/IE_TEXTVECH_19' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[76], "IE_TEXTVECH_19", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[77], "VEX_20_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_20/IE_TEXTVECH_20' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[77], "IE_TEXTVECH_20", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[78], "VEX_21_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_21/IE_TEXTVECH_21' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[78], "IE_TEXTVECH_21", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[79], "VEX_22_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_22/IE_TEXTVECH_22' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[79], "IE_TEXTVECH_22", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[80], "VEX_23_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_23/IE_TEXTVECH_23' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[80], "IE_TEXTVECH_23", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[81], "VEX_24_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_24/IE_TEXTVECH_24' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[81], "IE_TEXTVECH_24", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[82], "VEX_25_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_25/IE_TEXTVECH_25' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[82], "IE_TEXTVECH_25", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[83], "VEX_26_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_26/IE_TEXTVECH_26' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[83], "IE_TEXTVECH_26", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[84], "VEX_27_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_27/IE_TEXTVECH_27' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[84], "IE_TEXTVECH_27", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[85], "VEX_28_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_28/IE_TEXTVECH_28' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[85], "IE_TEXTVECH_28", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[86], "VEX_29_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_29/IE_TEXTVECH_29' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[86], "IE_TEXTVECH_29", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[87], "VEX_30_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_30/IE_TEXTVECH_30' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[87], "IE_TEXTVECH_30", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[88], "VEX_31_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_31/IE_TEXTVECH_31' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[88], "IE_TEXTVECH_31", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[89], "VEX_32_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_32/IE_TEXTVECH_32' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[89], "IE_TEXTVECH_32", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[90], "VEX_33_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_33/IE_TEXTVECH_33' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[90], "IE_TEXTVECH_33", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[91], "VEX_34_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_34/IE_TEXTVECH_34' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[91], "IE_TEXTVECH_34", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[92], "VEX_35_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_35/IE_TEXTVECH_35' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[92], "IE_TEXTVECH_35", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[93], "VEX_36_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_36/IE_TEXTVECH_36' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[93], "IE_TEXTVECH_36", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[94], "VEX_37_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_37/IE_TEXTVECH_37' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[94], "IE_TEXTVECH_37", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[95], "VEX_38_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_38/IE_TEXTVECH_38' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[95], "IE_TEXTVECH_38", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[96], "VEX_39_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_39/IE_TEXTVECH_39' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[96], "IE_TEXTVECH_39", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[97], "VEX_40_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_40/IE_TEXTVECH_40' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[97], "IE_TEXTVECH_40", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[98], "VEX_41_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_41/IE_TEXTVECH_41' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[98], "IE_TEXTVECH_41", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[99], "VEX_42_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_42/IE_TEXTVECH_42' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[99], "IE_TEXTVECH_42", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[100], "VEX_43_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_43/IE_TEXTVECH_43' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[100], "IE_TEXTVECH_43", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[101], "VEX_44_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_44/IE_TEXTVECH_44' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[101], "IE_TEXTVECH_44", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[102], "VEX_45_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_45/IE_TEXTVECH_45' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[102], "IE_TEXTVECH_45", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[103], "VEX_46_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_46/IE_TEXTVECH_46' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[103], "IE_TEXTVECH_46", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[104], "VEX_47_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_47/IE_TEXTVECH_47' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[104], "IE_TEXTVECH_47", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[105], "VEX_48_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_48/IE_TEXTVECH_48' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[105], "IE_TEXTVECH_48", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[106], "VEX_49_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_49/IE_TEXTVECH_49' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[106], "IE_TEXTVECH_49", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[107], "VEX_50_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_50/IE_TEXTVECH_50' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[107], "IE_TEXTVECH_50", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[108], "VEX_51_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_51/IE_TEXTVECH_51' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[108], "IE_TEXTVECH_51", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[109], "VEX_52_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_52/IE_TEXTVECH_52' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[109], "IE_TEXTVECH_52", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[110], "VEX_53_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_53/IE_TEXTVECH_53' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[110], "IE_TEXTVECH_53", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[111], "VEX_54_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_54/IE_TEXTVECH_54' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[111], "IE_TEXTVECH_54", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[112], "VEX_55_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_55/IE_TEXTVECH_55' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[112], "IE_TEXTVECH_55", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[113], "VEX_56_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_56/IE_TEXTVECH_56' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[113], "IE_TEXTVECH_56", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[114], "VEX_57_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_57/IE_TEXTVECH_57' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[114], "IE_TEXTVECH_57", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[115], "VEX_58_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_58/IE_TEXTVECH_58' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[115], "IE_TEXTVECH_58", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[116], "VEX_59_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_59/IE_TEXTVECH_59' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[116], "IE_TEXTVECH_59", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[117], "VEX_60_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_60/IE_TEXTVECH_60' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[117], "IE_TEXTVECH_60", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[118], "VEX_61_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_61/IE_TEXTVECH_61' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[118], "IE_TEXTVECH_61", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[119], "VEX_62_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_62/IE_TEXTVECH_62' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[119], "IE_TEXTVECH_62", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[120], "VEX_63_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_63/IE_TEXTVECH_63' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[120], "IE_TEXTVECH_63", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[121], "VEX_64_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_64/IE_TEXTVECH_64' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[121], "IE_TEXTVECH_64", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[122], "VEX_65_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_65/IE_TEXTVECH_65' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[122], "IE_TEXTVECH_65", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[123], "VEX_66_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_66/IE_TEXTVECH_66' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[123], "IE_TEXTVECH_66", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[124], "VEX_67_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_67/IE_TEXTVECH_67' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[124], "IE_TEXTVECH_67", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[125], "VEX_68_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_68/IE_TEXTVECH_68' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[125], "IE_TEXTVECH_68", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[126], "VEX_69_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_69/IE_TEXTVECH_69' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[126], "IE_TEXTVECH_69", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[127], "VEX_70_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_70/IE_TEXTVECH_70' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[127], "IE_TEXTVECH_70", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[128], "VEX_71_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_71/IE_TEXTVECH_71' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[128], "IE_TEXTVECH_71", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[129], "VEX_72_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_72/IE_TEXTVECH_72' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[129], "IE_TEXTVECH_72", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[130], "VEX_73_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_73/IE_TEXTVECH_73' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[130], "IE_TEXTVECH_73", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[131], "VEX_74_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_74/IE_TEXTVECH_74' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[131], "IE_TEXTVECH_74", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[132], "VEX_75_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_75/IE_TEXTVECH_75' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[132], "IE_TEXTVECH_75", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[133], "VEX_76_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_76/IE_TEXTVECH_76' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[133], "IE_TEXTVECH_76", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[134], "VEX_77_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_77/IE_TEXTVECH_77' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[134], "IE_TEXTVECH_77", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[135], "VEX_78_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_78/IE_TEXTVECH_78' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[135], "IE_TEXTVECH_78", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[136], "VEX_79_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_79/IE_TEXTVECH_79' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[136], "IE_TEXTVECH_79", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[137], "VEX_80_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_80/IE_TEXTVECH_80' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[137], "IE_TEXTVECH_80", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[138], "VEX_81_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_81/IE_TEXTVECH_81' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[138], "IE_TEXTVECH_81", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[139], "VEX_82_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_82/IE_TEXTVECH_82' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[139], "IE_TEXTVECH_82", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[140], "VEX_83_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_84/IE_TEXTVECH_84' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[140], "IE_TEXTVECH_84", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[141], "VEX_84_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_85/IE_TEXTVECH_85' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[141], "IE_TEXTVECH_85", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[142], "VEX_82_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_83/IE_TEXTVECH_83' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[142], "IE_TEXTVECH_83", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[143], "VEX_86_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_86/IE_TEXTVECH_86' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[143], "IE_TEXTVECH_86", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[144], "VEX_87_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_87/IE_TEXTVECH_87' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[144], "IE_TEXTVECH_87", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[145], "VEX_88_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_88/IE_TEXTVECH_88' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[145], "IE_TEXTVECH_88", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[146], "VEX_89_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_89/IE_TEXTVECH_89' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[146], "IE_TEXTVECH_89", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[147], "VEX_90_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_90/IE_TEXTVECH_90' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[147], "IE_TEXTVECH_90", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[148], "VEX_91_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_91/IE_TEXTVECH_91' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[148], "IE_TEXTVECH_91", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[149], "VEX_92_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_92/IE_TEXTVECH_92' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[149], "IE_TEXTVECH_92", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[150], "VEX_93_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_93/IE_TEXTVECH_93' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[150], "IE_TEXTVECH_93", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[151], "VEX_94_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_94/IE_TEXTVECH_94' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[151], "IE_TEXTVECH_94", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[152], "VEX_95_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_95/IE_TEXTVECH_95' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[152], "IE_TEXTVECH_95", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[153], "VEX_96_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_96/IE_TEXTVECH_96' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[153], "IE_TEXTVECH_96", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[154], "GO_AS_PICM" /*IMAGE ATTACHMENT ~nrt~ <img src='img://NHP_prep_autosalvage/NHP_prep_autosalvage' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[154], "NHP_prep_autosalvage", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[155], "GO_DR_PICM" /*IMAGE ATTACHMENT ~nrt~ <img src='img://nhp_prep_daylightrob/nhp_prep_daylightrob' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[155], "nhp_prep_daylightrob", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[156], "FHTXT_DDR00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://NHP_prep_deaddrop/NHP_prep_deaddrop' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[156], "NHP_prep_deaddrop", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[157], "BBTXT_CPS00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_1/BAT_carpark_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[157], "BAT_carpark_1", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[158], "BBTXT_CPS10M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_2/BAT_carpark_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[158], "BAT_carpark_2", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[159], "BBTXT_CPS20M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_3/BAT_carpark_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[159], "BAT_carpark_3", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[160], "ICEBR_EMAIL", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[160], "ib_aircon", 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_84[161], "XM22FLOW_TXT_0" /*WELCOME TO THE TROUPE ~nrt~ <img src='img://PHONE_MESSAGE_D_DUDE/PHONE_MESSAGE_D_DUDE' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-	TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[161], "PHONE_MESSAGE_D_DUDE", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[0], "SXT_JUL_1ST" /*I can't wait until you cum again! ~nrt~ <img src='img://05_a_sext_stripperJuliet/05_a_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[0], "05_a_sext_stripperJuliet", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[1], "SXT_JUL_2ND" /*Just when I thought that it couldn't get any better! ~nrt~ <img src='img://05_b_sext_stripperJuliet/05_b_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[1], "05_b_sext_stripperJuliet", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[2], "SXT_JUL_NEED" /*Missing you badly! I want you inside me. ~nrt~ <img src='img://05_c_sext_stripperJuliet/05_c_sext_stripperJuliet' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[2], "05_c_sext_stripperJuliet", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[3], "SXT_NIK_1ST" /*I just wanted you to know that I miss you already :-* ~nrt~ <img src='img://06_a_sext_stripperNikki/06_a_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[3], "06_a_sext_stripperNikki", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[4], "SXT_NIK_2ND" /*You're the man that I've been looking for my entire life! ~nrt~ <img src='img://06_b_sext_stripperNikki/06_b_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[4], "06_b_sext_stripperNikki", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[5], "SXT_NIK_NEED" /*Maybe this will get your attention! ~nrt~ <img src='img://06_c_sext_stripperNikki/06_c_sext_stripperNikki' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[5], "06_c_sext_stripperNikki", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[6], "SXT_SAP_1ST" /*That was deliciously yummy. Next time, I want to be on top. What do you think of this position? ~nrt~ <img src='img://08_a_sext_stripperSapphire/08_a_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[6], "08_a_sext_stripperSapphire", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[7], "SXT_SAP_2ND" /*Here don't show this to anyone else. ~nrt~ <img src='img://08_b_sext_stripperSapphire/08_b_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[7], "08_b_sext_stripperSapphire", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[8], "SXT_SAP_NEED" /*My body aches for you! ~nrt~ <img src='img://08_c_sext_stripperSapphire/08_c_sext_stripperSapphire' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[8], "08_c_sext_stripperSapphire", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[9], "SXT_INF_1ST" /*This body is all yours and only yours baby! ~nrt~ <img src='img://04_a_sext_stripperInfernus/04_a_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[9], "04_a_sext_stripperInfernus", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[10], "SXT_INF_2ND" /*I can hardly walk, that was amazing! ~nrt~ <img src='img://04_b_sext_stripperInfernus/04_b_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[10], "04_b_sext_stripperInfernus", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[11], "SXT_INF_NEED" /*My loins quiver with the thought of you! ~nrt~ <img src='img://04_c_sext_stripperInfernus/04_c_sext_stripperInfernus' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[11], "04_c_sext_stripperInfernus", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[12], "SXT_TXI_1ST" /*I can't stop thinking about the last time. ~nrt~ <img src='img://11_a_sext_taxiLiz/11_a_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[12], "11_a_sext_taxiLiz", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[13], "SXT_TXI_2ND" /*You're so amazing! I've been missing out. ~nrt~ <img src='img://11_b_sext_taxiLiz/11_b_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[13], "11_b_sext_taxiLiz", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[14], "SXT_TXI_NEED" /*Hey babe, I need a study break... ~nrt~ <img src='img://11_c_sext_taxiLiz/11_c_sext_taxiLiz' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[14], "11_c_sext_taxiLiz", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[15], "SXT_HCH_1ST" /*You always know how to give a good ride ;) ~nrt~ <img src='img://10_a_sext_hitcherGirl/10_a_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[15], "10_a_sext_hitcherGirl", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[16], "SXT_HCH_2ND" /*Can't wait to meet again honey. ~nrt~ <img src='img://10_b_sext_hitcherGirl/10_b_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[16], "10_b_sext_hitcherGirl", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[17], "SXT_HCH_NEED" /*I've been thinking... you should let me ride you. ~nrt~ <img src='img://10_c_sext_hitcherGirl/10_c_sext_hitcherGirl' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[17], "10_c_sext_hitcherGirl", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[18], "SOL2_PASS" /*Michael I have put your name in the credits for the film. ~nrt~ <img src='img://ExecutiveProducer/executiveproducer' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_2064[18], "executiveproducer", 32);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[19], "LR_PIC_TXT1", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[19], "mt_phone_image_1", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[20], "LR_PIC_TXT2", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[20], "mt_phone_image_2", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[21], "LR_PIC_TXT3", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[21], "mt_phone_image_3", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[22], "LR_PIC_TXT4", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[22], "mt_phone_image_4", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[23], "LR_PIC_TXT5", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[23], "mt_phone_image_5", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[24], "SAD_SMS_0" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_01/MP_SND_TARGET_01' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[24], "MP_SND_TARGET_01", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[25], "SAD_SMS_1" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_02/MP_SND_TARGET_02' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[25], "MP_SND_TARGET_02", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[26], "SAD_SMS_2" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_03/MP_SND_TARGET_03' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[26], "MP_SND_TARGET_03", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[27], "SAD_SMS_3" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_04/MP_SND_TARGET_04' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[27], "MP_SND_TARGET_04", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[28], "SAD_SMS_4" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_05/MP_SND_TARGET_05' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[28], "MP_SND_TARGET_05", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[29], "SAD_SMS_5" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_06/MP_SND_TARGET_06' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[29], "MP_SND_TARGET_06", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[30], "SAD_SMS_6" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_07/MP_SND_TARGET_07' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[30], "MP_SND_TARGET_07", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[31], "SAD_SMS_7" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_08/MP_SND_TARGET_08' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[31], "MP_SND_TARGET_08", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[32], "SAD_SMS_8" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_09/MP_SND_TARGET_09' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[32], "MP_SND_TARGET_09", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[33], "SAD_SMS_9" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_10/MP_SND_TARGET_10' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[33], "MP_SND_TARGET_10", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[34], "SAD_SMS_10" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_11/MP_SND_TARGET_11' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[34], "MP_SND_TARGET_11", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[35], "SAD_SMS_11" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_12/MP_SND_TARGET_12' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[35], "MP_SND_TARGET_12", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[36], "SAD_SMS_12" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_13/MP_SND_TARGET_13' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[36], "MP_SND_TARGET_13", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[37], "SAD_SMS_13" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_14/MP_SND_TARGET_14' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[37], "MP_SND_TARGET_14", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[38], "SAD_SMS_14" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_15/MP_SND_TARGET_15' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[38], "MP_SND_TARGET_15", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[39], "SAD_SMS_15" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_16/MP_SND_TARGET_16' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[39], "MP_SND_TARGET_16", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[40], "SAD_SMS_16" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_17/MP_SND_TARGET_17' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[40], "MP_SND_TARGET_17", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[41], "SAD_SMS_17" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_18/MP_SND_TARGET_18' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[41], "MP_SND_TARGET_18", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[42], "SAD_SMS_18" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_19/MP_SND_TARGET_19' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[42], "MP_SND_TARGET_19", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[43], "SAD_SMS_19" /*Photo of Target ~nrt~ <img src='img://MP_SND_TARGET_20/MP_SND_TARGET_20' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[43], "MP_SND_TARGET_20", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "VEX_PM_PHOTO0" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Del Perro Beach ~nrt~ <img src='img://MP_EX_LOCATION_01/MP_EX_LOCATION_01' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "MP_EX_LOCATION_01", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "VEX_PM_PHOTO1" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Forest ~nrt~ <img src='img://MP_EX_LOCATION_02/MP_EX_LOCATION_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "MP_EX_LOCATION_02", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "VEX_PM_PHOTO2" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Vinewood Hills ~nrt~ <img src='img://MP_EX_LOCATION_03/MP_EX_LOCATION_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "MP_EX_LOCATION_03", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[47], "VEX_PM_PHOTO3" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Mount Gordo ~nrt~ <img src='img://MP_EX_LOCATION_04/MP_EX_LOCATION_04' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[47], "MP_EX_LOCATION_04", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[48], "VEX_PM_PHOTO4" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Los Santos International Airport ~nrt~ <img src='img://MP_EX_LOCATION_05/MP_EX_LOCATION_05' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[48], "MP_EX_LOCATION_05", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[49], "VEX_PM_PHOTO5" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Forest ~nrt~ <img src='img://MP_EX_LOCATION_06/MP_EX_LOCATION_06' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[49], "MP_EX_LOCATION_06", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[50], "VEX_PM_PHOTO6" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Paleto Bay ~nrt~ <img src='img://MP_EX_LOCATION_07/MP_EX_LOCATION_07' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[50], "MP_EX_LOCATION_07", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[51], "VEX_PM_PHOTO7" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Ron Alternates Wind Farm ~nrt~ <img src='img://MP_EX_LOCATION_08/MP_EX_LOCATION_08' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[51], "MP_EX_LOCATION_08", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[52], "VEX_PM_PHOTO8" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Grand Senora Desert ~nrt~ <img src='img://MP_EX_LOCATION_09/MP_EX_LOCATION_09' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[52], "MP_EX_LOCATION_09", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[53], "VEX_PM_PHOTO9" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Sandy Shores ~nrt~ <img src='img://MP_EX_LOCATION_10/MP_EX_LOCATION_10' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[53], "MP_EX_LOCATION_10", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[54], "VEX_PM_PHOTO10" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Legion Square ~nrt~ <img src='img://MP_EX_LOCATION_11/MP_EX_LOCATION_11' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[54], "MP_EX_LOCATION_11", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[55], "VEX_PM_PHOTO11" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: GWC and Golfing Society ~nrt~ <img src='img://MP_EX_LOCATION_12/MP_EX_LOCATION_12' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[55], "MP_EX_LOCATION_12", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[56], "VEX_PM_PHOTO12" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Vespucci Beach ~nrt~ <img src='img://MP_EX_LOCATION_13/MP_EX_LOCATION_13' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[56], "MP_EX_LOCATION_13", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[57], "VEX_PM_PHOTO13" /*Vehicle: ~a~~n~Color: ~a~~n~Plate: ~a~~n~ Location: Tongva Hills ~nrt~ <img src='img://MP_EX_LOCATION_14/MP_EX_LOCATION_14' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[57], "MP_EX_LOCATION_14", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[58], "VEX_1_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_01/IE_TEXTVECH_01' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[58], "IE_TEXTVECH_01", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[59], "VEX_2_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_02/IE_TEXTVECH_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[59], "IE_TEXTVECH_02", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[60], "VEX_3_PROTO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_03/IE_TEXTVECH_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[60], "IE_TEXTVECH_03", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[61], "VEX_4_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_04/IE_TEXTVECH_04' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[61], "IE_TEXTVECH_04", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[62], "VEX_5_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_05/IE_TEXTVECH_05' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[62], "IE_TEXTVECH_05", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[63], "VEX_6_TYRUS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_06/IE_TEXTVECH_06' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[63], "IE_TEXTVECH_06", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[64], "VEX_7_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_07/IE_TEXTVECH_07' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[64], "IE_TEXTVECH_07", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[65], "VEX_8_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_08/IE_TEXTVECH_08' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[65], "IE_TEXTVECH_08", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[66], "VEX_9_BESTIA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_09/IE_TEXTVECH_09' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[66], "IE_TEXTVECH_09", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[67], "VEX_10_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_10/IE_TEXTVECH_10' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[67], "IE_TEXTVECH_10", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[68], "VEX_11_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_11/IE_TEXTVECH_11' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[68], "IE_TEXTVECH_11", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[69], "VEX_12_T20" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_12/IE_TEXTVECH_12' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[69], "IE_TEXTVECH_12", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[70], "VEX_13_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_13/IE_TEXTVECH_13' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[70], "IE_TEXTVECH_13", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[71], "VEX_14_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_14/IE_TEXTVECH_14' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[71], "IE_TEXTVECH_14", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[72], "VEX_15_SHEAVA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_15/IE_TEXTVECH_15' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[72], "IE_TEXTVECH_15", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[73], "VEX_16_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_16/IE_TEXTVECH_16' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[73], "IE_TEXTVECH_16", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[74], "VEX_17_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_17/IE_TEXTVECH_17' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[74], "IE_TEXTVECH_17", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[75], "VEX_18_OSIRIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_18/IE_TEXTVECH_18' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[75], "IE_TEXTVECH_18", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[76], "VEX_19_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_19/IE_TEXTVECH_19' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[76], "IE_TEXTVECH_19", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[77], "VEX_20_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_20/IE_TEXTVECH_20' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[77], "IE_TEXTVECH_20", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[78], "VEX_21_FMJ" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_21/IE_TEXTVECH_21' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[78], "IE_TEXTVECH_21", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[79], "VEX_22_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_22/IE_TEXTVECH_22' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[79], "IE_TEXTVECH_22", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[80], "VEX_23_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_23/IE_TEXTVECH_23' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[80], "IE_TEXTVECH_23", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[81], "VEX_24_REAPER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_24/IE_TEXTVECH_24' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[81], "IE_TEXTVECH_24", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[82], "VEX_25_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_25/IE_TEXTVECH_25' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[82], "IE_TEXTVECH_25", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[83], "VEX_26_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_26/IE_TEXTVECH_26' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[83], "IE_TEXTVECH_26", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[84], "VEX_27_PFISTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_27/IE_TEXTVECH_27' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[84], "IE_TEXTVECH_27", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[85], "VEX_28_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_28/IE_TEXTVECH_28' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[85], "IE_TEXTVECH_28", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[86], "VEX_29_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_29/IE_TEXTVECH_29' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[86], "IE_TEXTVECH_29", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[87], "VEX_30_ALPHA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_30/IE_TEXTVECH_30' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[87], "IE_TEXTVECH_30", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[88], "VEX_31_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_31/IE_TEXTVECH_31' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[88], "IE_TEXTVECH_31", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[89], "VEX_32_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_32/IE_TEXTVECH_32' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[89], "IE_TEXTVECH_32", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[90], "VEX_33_MAMBA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_33/IE_TEXTVECH_33' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[90], "IE_TEXTVECH_33", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[91], "VEX_34_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_34/IE_TEXTVECH_34' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[91], "IE_TEXTVECH_34", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[92], "VEX_35_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_35/IE_TEXTVECH_35' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[92], "IE_TEXTVECH_35", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[93], "VEX_36_TAMPA" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_36/IE_TEXTVECH_36' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[93], "IE_TEXTVECH_36", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[94], "VEX_37_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_37/IE_TEXTVECH_37' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[94], "IE_TEXTVECH_37", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[95], "VEX_38_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_38/IE_TEXTVECH_38' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[95], "IE_TEXTVECH_38", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[96], "VEX_39_BTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_39/IE_TEXTVECH_39' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[96], "IE_TEXTVECH_39", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[97], "VEX_40_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_40/IE_TEXTVECH_40' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[97], "IE_TEXTVECH_40", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[98], "VEX_41_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_41/IE_TEXTVECH_41' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[98], "IE_TEXTVECH_41", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[99], "VEX_42_FELTZ3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_42/IE_TEXTVECH_42' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[99], "IE_TEXTVECH_42", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[100], "VEX_43_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_43/IE_TEXTVECH_43' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[100], "IE_TEXTVECH_43", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[101], "VEX_44_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_44/IE_TEXTVECH_44' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[101], "IE_TEXTVECH_44", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[102], "VEX_45_ZTYPE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_45/IE_TEXTVECH_45' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[102], "IE_TEXTVECH_45", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[103], "VEX_46_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_46/IE_TEXTVECH_46' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[103], "IE_TEXTVECH_46", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[104], "VEX_47_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_47/IE_TEXTVECH_47' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[104], "IE_TEXTVECH_47", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[105], "VEX_48_TROPOS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_48/IE_TEXTVECH_48' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[105], "IE_TEXTVECH_48", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[106], "VEX_49_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_49/IE_TEXTVECH_49' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[106], "IE_TEXTVECH_49", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[107], "VEX_50_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_50/IE_TEXTVECH_50' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[107], "IE_TEXTVECH_50", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[108], "VEX_51_ENTITYXF" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_51/IE_TEXTVECH_51' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[108], "IE_TEXTVECH_51", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[109], "VEX_52_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_52/IE_TEXTVECH_52' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[109], "IE_TEXTVECH_52", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[110], "VEX_53_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_53/IE_TEXTVECH_53' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[110], "IE_TEXTVECH_53", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[111], "VEX_54_SULTANRS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_54/IE_TEXTVECH_54' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[111], "IE_TEXTVECH_54", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[112], "VEX_55_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_55/IE_TEXTVECH_55' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[112], "IE_TEXTVECH_55", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[113], "VEX_56_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_56/IE_TEXTVECH_56' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[113], "IE_TEXTVECH_56", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[114], "VEX_57_ZENTORNO" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_57/IE_TEXTVECH_57' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[114], "IE_TEXTVECH_57", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[115], "VEX_58_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_58/IE_TEXTVECH_58' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[115], "IE_TEXTVECH_58", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[116], "VEX_59_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_59/IE_TEXTVECH_59' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[116], "IE_TEXTVECH_59", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[117], "VEX_60_OMNIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_60/IE_TEXTVECH_60' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[117], "IE_TEXTVECH_60", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[118], "VEX_61_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_61/IE_TEXTVECH_61' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[118], "IE_TEXTVECH_61", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[119], "VEX_62_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_62/IE_TEXTVECH_62' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[119], "IE_TEXTVECH_62", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[120], "VEX_63_COQUET3" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_63/IE_TEXTVECH_63' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[120], "IE_TEXTVECH_63", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[121], "VEX_64_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_64/IE_TEXTVECH_64' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[121], "IE_TEXTVECH_64", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[122], "VEX_65_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_65/IE_TEXTVECH_65' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[122], "IE_TEXTVECH_65", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[123], "VEX_66_SEVEN70" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_66/IE_TEXTVECH_66' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[123], "IE_TEXTVECH_66", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[124], "VEX_67_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_67/IE_TEXTVECH_67' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[124], "IE_TEXTVECH_67", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[125], "VEX_68_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_68/IE_TEXTVECH_68' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[125], "IE_TEXTVECH_68", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[126], "VEX_69_VERLI" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_69/IE_TEXTVECH_69' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[126], "IE_TEXTVECH_69", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[127], "VEX_70_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_70/IE_TEXTVECH_70' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[127], "IE_TEXTVECH_70", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[128], "VEX_71_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_71/IE_TEXTVECH_71' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[128], "IE_TEXTVECH_71", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[129], "VEX_72_FELTZ2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_72/IE_TEXTVECH_72' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[129], "IE_TEXTVECH_72", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[130], "VEX_73_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_73/IE_TEXTVECH_73' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[130], "IE_TEXTVECH_73", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[131], "VEX_74_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_74/IE_TEXTVECH_74' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[131], "IE_TEXTVECH_74", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[132], "VEX_75_COQUET2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_75/IE_TEXTVECH_75' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[132], "IE_TEXTVECH_75", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[133], "VEX_76_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_76/IE_TEXTVECH_76' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[133], "IE_TEXTVECH_76", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[134], "VEX_77_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_77/IE_TEXTVECH_77' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[134], "IE_TEXTVECH_77", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[135], "VEX_78_CHEETAH" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_78/IE_TEXTVECH_78' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[135], "IE_TEXTVECH_78", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[136], "VEX_79_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_79/IE_TEXTVECH_79' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[136], "IE_TEXTVECH_79", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[137], "VEX_80_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_80/IE_TEXTVECH_80' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[137], "IE_TEXTVECH_80", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[138], "VEX_81_NSHADE" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_81/IE_TEXTVECH_81' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[138], "IE_TEXTVECH_81", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[139], "VEX_82_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_82/IE_TEXTVECH_82' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[139], "IE_TEXTVECH_82", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[140], "VEX_83_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_84/IE_TEXTVECH_84' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[140], "IE_TEXTVECH_84", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[141], "VEX_84_BANSH2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_85/IE_TEXTVECH_85' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[141], "IE_TEXTVECH_85", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[142], "VEX_82_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_83/IE_TEXTVECH_83' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[142], "IE_TEXTVECH_83", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[143], "VEX_86_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_86/IE_TEXTVECH_86' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[143], "IE_TEXTVECH_86", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[144], "VEX_87_TURIS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_87/IE_TEXTVECH_87' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[144], "IE_TEXTVECH_87", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[145], "VEX_88_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_88/IE_TEXTVECH_88' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[145], "IE_TEXTVECH_88", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[146], "VEX_89_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_89/IE_TEXTVECH_89' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[146], "IE_TEXTVECH_89", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[147], "VEX_90_MASS" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_90/IE_TEXTVECH_90' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[147], "IE_TEXTVECH_90", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[148], "VEX_91_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_91/IE_TEXTVECH_91' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[148], "IE_TEXTVECH_91", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[149], "VEX_92_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_92/IE_TEXTVECH_92' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[149], "IE_TEXTVECH_92", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[150], "VEX_93_SABRE2" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_93/IE_TEXTVECH_93' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[150], "IE_TEXTVECH_93", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[151], "VEX_94_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_94/IE_TEXTVECH_94' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[151], "IE_TEXTVECH_94", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[152], "VEX_95_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_95/IE_TEXTVECH_95' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[152], "IE_TEXTVECH_95", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[153], "VEX_96_JESTER" /*Vehicle: ~a~~n~Value: ~a~~n~Plate: ~a~ ~nrt~ <img src='img://IE_TEXTVECH_96/IE_TEXTVECH_96' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[153], "IE_TEXTVECH_96", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[154], "GO_AS_PICM" /*IMAGE ATTACHMENT ~nrt~ <img src='img://NHP_prep_autosalvage/NHP_prep_autosalvage' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[154], "NHP_prep_autosalvage", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[155], "GO_DR_PICM" /*IMAGE ATTACHMENT ~nrt~ <img src='img://nhp_prep_daylightrob/nhp_prep_daylightrob' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[155], "nhp_prep_daylightrob", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[156], "FHTXT_DDR00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://NHP_prep_deaddrop/NHP_prep_deaddrop' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[156], "NHP_prep_deaddrop", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[157], "BBTXT_CPS00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_1/BAT_carpark_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[157], "BAT_carpark_1", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[158], "BBTXT_CPS10M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_2/BAT_carpark_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[158], "BAT_carpark_2", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[159], "BBTXT_CPS20M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://BAT_carpark_3/BAT_carpark_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[159], "BAT_carpark_3", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[160], "ICEBR_EMAIL", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[160], "ib_aircon", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[161], "XM22FLOW_TXT_0" /*WELCOME TO THE TROUPE ~nrt~ <img src='img://PHONE_MESSAGE_D_DUDE/PHONE_MESSAGE_D_DUDE' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[161], "PHONE_MESSAGE_D_DUDE", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_82[162], "CHM6_PMSG_TR", 24);
+	TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[162], "UPDT1_2023_TEXT_LSA6_1", 24);
 
-	if (func_58(PLAYER::PLAYER_ID()) == 19)
+	if (func_60(PLAYER::PLAYER_ID()) == 19)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "SNP_IMG_0_0" /*~nrt~ <img src='img://SCLUB_1/DEL_PERRO_PIER_1_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "SNP_IMG_0_1" /*~nrt~ <img src='img://SCLUB_1/ORIENTAL_THEATER_1_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "SNP_IMG_0_2" /*~nrt~ <img src='img://SCLUB_1/GALILEO_OBSERVATORY_1_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[47], "SNP_IMG_0_3" /*~nrt~ <img src='img://SCLUB_1/MAZE_BANK_ARENA_1_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[47], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[48], "SNP_IMG_0_4" /*~nrt~ <img src='img://SCLUB_1/CHUMASH_PIER_1_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[48], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[49], "SNP_IMG_0_5" /*~nrt~ <img src='img://SCLUB_1/RICHMAN_HOTEL_1_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[49], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[50], "SNP_IMG_0_6" /*~nrt~ <img src='img://SCLUB_1/ROCKFORD_HILLS_CITY_HALL_1_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[50], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[51], "SNP_IMG_0_7" /*~nrt~ <img src='img://SCLUB_1/MAZE_BANK_TOWER_1_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[51], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[52], "SNP_IMG_0_8" /*~nrt~ <img src='img://SCLUB_1/PIPELINE_INN_1_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[52], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[53], "SNP_IMG_0_9" /*~nrt~ <img src='img://SCLUB_1/THE_VICEROY_HOTEL_1_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[53], "SCLUB_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[54], "SNP_IMG_1_0" /*~nrt~ <img src='img://SCLUB_2/VENETIAN_2_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[54], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[55], "SNP_IMG_1_1" /*~nrt~ <img src='img://SCLUB_2/OPIUM_NIGHTS_HOTEL_2_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[55], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[56], "SNP_IMG_1_2" /*~nrt~ <img src='img://SCLUB_2/VINEWOOD_SIGN_2_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[56], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[57], "SNP_IMG_1_3" /*~nrt~ <img src='img://SCLUB_2/LEGION_SQUARE_2_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[57], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[58], "SNP_IMG_1_4" /*~nrt~ <img src='img://SCLUB_2/VON_CRASTENBURG_HOTEL_2_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[58], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[59], "SNP_IMG_1_5" /*~nrt~ <img src='img://SCLUB_2/VON-CRASTENBURG-RICHMAN_2_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[59], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[60], "SNP_IMG_1_6" /*~nrt~ <img src='img://SCLUB_2/RANCHO_TOWERS_2_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[60], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[61], "SNP_IMG_1_7" /*~nrt~ <img src='img://SCLUB_2/MIRROR_PARK_2_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[61], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[62], "SNP_IMG_1_8" /*~nrt~ <img src='img://SCLUB_2/BJ_SMITH_REC_CENTER_2_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[62], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[64], "SNP_IMG_1_9" /*~nrt~ <img src='img://SCLUB_2/ROCKFORD_DORSET_HOTEL_2_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[64], "SCLUB_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[65], "SNP_IMG_2_0" /*~nrt~ <img src='img://SCLUB_3/KOREAN_PAVILLION_3_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[65], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[66], "SNP_IMG_2_1" /*~nrt~ <img src='img://SCLUB_3/VESPUCCI_BEACH_3_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[66], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[67], "SNP_IMG_2_2" /*~nrt~ <img src='img://SCLUB_3/VINEWOOD_RACETRACK_3_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[67], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[68], "SNP_IMG_2_3" /*~nrt~ <img src='img://SCLUB_3/SISYPHUS_THEATER_3_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[68], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[69], "SNP_IMG_2_4" /*~nrt~ <img src='img://SCLUB_3/VESPUCCI_BOULEVARD_BRIDGE_3_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[69], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[70], "SNP_IMG_2_5" /*~nrt~ <img src='img://SCLUB_3/ROCKFORD_HILLS_CHURCH_3_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[70], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[71], "SNP_IMG_2_6" /*~nrt~ <img src='img://SCLUB_3/LAST_TRAIN_DINER_3_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[71], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[72], "SNP_IMG_2_7" /*~nrt~ <img src='img://SCLUB_3/VON-CRASTENBURG-HOTEL_3_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[72], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[73], "SNP_IMG_2_8" /*~nrt~ <img src='img://SCLUB_3/METEOR_STREET_APARTMENTS_3_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[73], "SCLUB_3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[74], "SNP_IMG_2_9" /*~nrt~ <img src='img://SCLUB_3/VINEWOOD_HILLS_3_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[74], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "SNP_IMG_0_0" /*~nrt~ <img src='img://SCLUB_1/DEL_PERRO_PIER_1_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "SNP_IMG_0_1" /*~nrt~ <img src='img://SCLUB_1/ORIENTAL_THEATER_1_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "SNP_IMG_0_2" /*~nrt~ <img src='img://SCLUB_1/GALILEO_OBSERVATORY_1_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[47], "SNP_IMG_0_3" /*~nrt~ <img src='img://SCLUB_1/MAZE_BANK_ARENA_1_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[47], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[48], "SNP_IMG_0_4" /*~nrt~ <img src='img://SCLUB_1/CHUMASH_PIER_1_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[48], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[49], "SNP_IMG_0_5" /*~nrt~ <img src='img://SCLUB_1/RICHMAN_HOTEL_1_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[49], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[50], "SNP_IMG_0_6" /*~nrt~ <img src='img://SCLUB_1/ROCKFORD_HILLS_CITY_HALL_1_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[50], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[51], "SNP_IMG_0_7" /*~nrt~ <img src='img://SCLUB_1/MAZE_BANK_TOWER_1_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[51], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[52], "SNP_IMG_0_8" /*~nrt~ <img src='img://SCLUB_1/PIPELINE_INN_1_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[52], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[53], "SNP_IMG_0_9" /*~nrt~ <img src='img://SCLUB_1/THE_VICEROY_HOTEL_1_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[53], "SCLUB_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[54], "SNP_IMG_1_0" /*~nrt~ <img src='img://SCLUB_2/VENETIAN_2_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[54], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[55], "SNP_IMG_1_1" /*~nrt~ <img src='img://SCLUB_2/OPIUM_NIGHTS_HOTEL_2_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[55], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[56], "SNP_IMG_1_2" /*~nrt~ <img src='img://SCLUB_2/VINEWOOD_SIGN_2_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[56], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[57], "SNP_IMG_1_3" /*~nrt~ <img src='img://SCLUB_2/LEGION_SQUARE_2_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[57], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[58], "SNP_IMG_1_4" /*~nrt~ <img src='img://SCLUB_2/VON_CRASTENBURG_HOTEL_2_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[58], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[59], "SNP_IMG_1_5" /*~nrt~ <img src='img://SCLUB_2/VON-CRASTENBURG-RICHMAN_2_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[59], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[60], "SNP_IMG_1_6" /*~nrt~ <img src='img://SCLUB_2/RANCHO_TOWERS_2_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[60], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[61], "SNP_IMG_1_7" /*~nrt~ <img src='img://SCLUB_2/MIRROR_PARK_2_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[61], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[62], "SNP_IMG_1_8" /*~nrt~ <img src='img://SCLUB_2/BJ_SMITH_REC_CENTER_2_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[62], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[64], "SNP_IMG_1_9" /*~nrt~ <img src='img://SCLUB_2/ROCKFORD_DORSET_HOTEL_2_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[64], "SCLUB_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[65], "SNP_IMG_2_0" /*~nrt~ <img src='img://SCLUB_3/KOREAN_PAVILLION_3_1' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[65], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[66], "SNP_IMG_2_1" /*~nrt~ <img src='img://SCLUB_3/VESPUCCI_BEACH_3_6' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[66], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[67], "SNP_IMG_2_2" /*~nrt~ <img src='img://SCLUB_3/VINEWOOD_RACETRACK_3_9' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[67], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[68], "SNP_IMG_2_3" /*~nrt~ <img src='img://SCLUB_3/SISYPHUS_THEATER_3_5' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[68], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[69], "SNP_IMG_2_4" /*~nrt~ <img src='img://SCLUB_3/VESPUCCI_BOULEVARD_BRIDGE_3_7' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[69], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[70], "SNP_IMG_2_5" /*~nrt~ <img src='img://SCLUB_3/ROCKFORD_HILLS_CHURCH_3_4' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[70], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[71], "SNP_IMG_2_6" /*~nrt~ <img src='img://SCLUB_3/LAST_TRAIN_DINER_3_2' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[71], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[72], "SNP_IMG_2_7" /*~nrt~ <img src='img://SCLUB_3/VON-CRASTENBURG-HOTEL_3_10' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[72], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[73], "SNP_IMG_2_8" /*~nrt~ <img src='img://SCLUB_3/METEOR_STREET_APARTMENTS_3_3' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[73], "SCLUB_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[74], "SNP_IMG_2_9" /*~nrt~ <img src='img://SCLUB_3/VINEWOOD_HILLS_3_8' vspace='0' width='252' height='252'/> ~nrt~~a~ ~a~. ~a~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[74], "SCLUB_3", 24);
 	}
-	else if (func_57(PLAYER::PLAYER_ID()) == 14)
+	else if (func_59(PLAYER::PLAYER_ID()) == 14)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "GBC_TM_TC100" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "GBC_TM_TC101" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "GBC_TM_TC102" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[47], "GBC_TM_TC103" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[47], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[48], "GBC_TM_TC104" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[48], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[49], "GBC_TM_TC105" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[49], "VC_TC_OBSERVCCTV_0", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[50], "GBC_TM_TC110" /*This one should be easy - we have the make and model of the car. It's an orange Rhapsody. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[50], "VC_TC_VEHICLECCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[51], "GBC_TM_TC111" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[51], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[52], "GBC_TM_TC120" /*Stay sharp, this one was last seen on a yellow Vindicator. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[52], "VC_TC_VEHICLECCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[53], "GBC_TM_TC121" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[53], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[54], "GBC_TM_TC130" /*This idiot caught a cab - the owner of the cab company is a regular of ours. They dropped your target at the graveyard a few minutes ago. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[54], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[55], "GBC_TM_TC140" /*Don't have much to go on this time. They were last seen on foot, heading in this direction. Keep your eyes peeled. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[55], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[56], "GBC_TM_TC200" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[56], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[57], "GBC_TM_TC201" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[57], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[58], "GBC_TM_TC202" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[58], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[59], "GBC_TM_TC203" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[59], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[60], "GBC_TM_TC204" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[60], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[61], "GBC_TM_TC205" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[61], "VC_TC_UNIVERCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[62], "GBC_TM_TC210" /*This one should be easy - we have the make and model of the car. It's a white 9F. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[62], "VC_TC_VEHICLECCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[63], "GBC_TM_TC211" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[63], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[64], "GBC_TM_TC220" /*Stay sharp, this one was last seen on a pink Faggio. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[64], "VC_TC_VEHICLECCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[65], "GBC_TM_TC221" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[65], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[66], "GBC_TM_TC230" /*This idiot caught a cab - the owner of the cab company is a regular of ours. They dropped your target at IAA headquarters a few minutes ago. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[66], "VC_TC_CASINOCCTV", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[67], "GBC_TM_TC240" /*Don't have much to go on this time. They were last seen on foot, heading in this direction. Keep your eyes peeled. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[67], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "GBC_TM_TC100" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "GBC_TM_TC101" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "GBC_TM_TC102" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[47], "GBC_TM_TC103" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[47], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[48], "GBC_TM_TC104" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[48], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[49], "GBC_TM_TC105" /*We have the full cooperation of the observatory's in-house security. Here's some cam footage. ~nrt~ <img src='img://VC_TC_OBSERVCCTV_0/VC_TC_OBSERVCCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[49], "VC_TC_OBSERVCCTV_0", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[50], "GBC_TM_TC110" /*This one should be easy - we have the make and model of the car. It's an orange Rhapsody. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[50], "VC_TC_VEHICLECCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[51], "GBC_TM_TC111" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[51], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[52], "GBC_TM_TC120" /*Stay sharp, this one was last seen on a yellow Vindicator. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[52], "VC_TC_VEHICLECCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[53], "GBC_TM_TC121" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[53], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[54], "GBC_TM_TC130" /*This idiot caught a cab - the owner of the cab company is a regular of ours. They dropped your target at the graveyard a few minutes ago. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[54], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[55], "GBC_TM_TC140" /*Don't have much to go on this time. They were last seen on foot, heading in this direction. Keep your eyes peeled. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[55], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[56], "GBC_TM_TC200" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[56], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[57], "GBC_TM_TC201" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[57], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[58], "GBC_TM_TC202" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[58], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[59], "GBC_TM_TC203" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[59], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[60], "GBC_TM_TC204" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[60], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[61], "GBC_TM_TC205" /*Turns out ULSA leave their security feed on an unsecured connection. Pretty useful - here's an image of your target. ~nrt~ <img src='img://VC_TC_UNIVERCCTV/VC_TC_UNIVERCCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[61], "VC_TC_UNIVERCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[62], "GBC_TM_TC210" /*This one should be easy - we have the make and model of the car. It's a white 9F. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_5' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[62], "VC_TC_VEHICLECCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[63], "GBC_TM_TC211" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[63], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[64], "GBC_TM_TC220" /*Stay sharp, this one was last seen on a pink Faggio. ~nrt~ <img src='img://VC_TC_VEHICLECCTV/VC_TC_VEHICLECCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[64], "VC_TC_VEHICLECCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[65], "GBC_TM_TC221" /*Here is an image of what they look like. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_0' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[65], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[66], "GBC_TM_TC230" /*This idiot caught a cab - the owner of the cab company is a regular of ours. They dropped your target at IAA headquarters a few minutes ago. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[66], "VC_TC_CASINOCCTV", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[67], "GBC_TM_TC240" /*Don't have much to go on this time. They were last seen on foot, heading in this direction. Keep your eyes peeled. ~nrt~ <img src='img://VC_TC_CASINOCCTV/VC_TC_CASINOCCTV_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[67], "VC_TC_CASINOCCTV", 24);
 	}
-	else if (func_56(PLAYER::PLAYER_ID()) == 30)
+	else if (func_58(PLAYER::PLAYER_ID()) == 30)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "CSH_TXT_MD_01M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_prep_maid01/heist3_prep_maid01' vspace='0' width='256' height='167'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "heist3_prep_maid01", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "CSH_TXT_MD_02M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_prep_maid02/heist3_prep_maid02' vspace='0' width='256' height='167'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "heist3_prep_maid02", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "CSH_TXT_MD_01M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_prep_maid01/heist3_prep_maid01' vspace='0' width='256' height='167'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "heist3_prep_maid01", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "CSH_TXT_MD_02M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_prep_maid02/heist3_prep_maid02' vspace='0' width='256' height='167'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "heist3_prep_maid02", 24);
 	}
-	else if (func_56(PLAYER::PLAYER_ID()) == 32)
+	else if (func_58(PLAYER::PLAYER_ID()) == 32)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "CSHT_IMC_00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier1/heist3_cashier1' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "heist3_cashier1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "CSHT_IMC_10M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier2/heist3_cashier2' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "heist3_cashier2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "CSHT_IMC_20M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier3/heist3_cashier3' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "heist3_cashier3", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[47], "CSHT_IMC_30M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier4/heist3_cashier4' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[47], "heist3_cashier4", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "CSHT_IMC_00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier1/heist3_cashier1' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "heist3_cashier1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "CSHT_IMC_10M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier2/heist3_cashier2' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "heist3_cashier2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "CSHT_IMC_20M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier3/heist3_cashier3' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "heist3_cashier3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[47], "CSHT_IMC_30M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist3_cashier4/heist3_cashier4' vspace='0' width='256' height='352'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[47], "heist3_cashier4", 24);
 	}
-	else if (func_55(PLAYER::PLAYER_ID()) == 17)
+	else if (func_57(PLAYER::PLAYER_ID()) == 17)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "ILHTEXT_SFE00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist4_sec_guard/heist4_sec_guard' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "heist4_sec_guard", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "ILHTEXT_SFE00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://heist4_sec_guard/heist4_sec_guard' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "heist4_sec_guard", 24);
+	}
+	else if (func_56(PLAYER::PLAYER_ID()) == 4)
+	{
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "TR_TXT_CV1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS/TUNER_TEXT_IMG_VIRUS' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "TUNER_TEXT_IMG_VIRUS", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "TR_TXT_CV2" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS_02/TUNER_TEXT_IMG_VIRUS_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "TUNER_TEXT_IMG_VIRUS_02", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "TR_TXT_CV3" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS_03/TUNER_TEXT_IMG_VIRUS_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "TUNER_TEXT_IMG_VIRUS_03", 24);
+	}
+	else if (func_56(PLAYER::PLAYER_ID()) == 11)
+	{
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "ROBTEXT_IAA00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_IAA/TUNER_TEXT_IMG_IAA' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "TUNER_TEXT_IMG_IAA", 24);
+	}
+	else if (func_55(PLAYER::PLAYER_ID()) == 4)
+	{
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "FXR_TXT_WI1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://FXR_WAYIN/FXR_WAYIN' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "FXR_WAYIN", 24);
 	}
 	else if (func_54(PLAYER::PLAYER_ID()) == 4)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "TR_TXT_CV1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS/TUNER_TEXT_IMG_VIRUS' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "TUNER_TEXT_IMG_VIRUS", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "TR_TXT_CV2" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS_02/TUNER_TEXT_IMG_VIRUS_02' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "TUNER_TEXT_IMG_VIRUS_02", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "TR_TXT_CV3" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_VIRUS_03/TUNER_TEXT_IMG_VIRUS_03' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "TUNER_TEXT_IMG_VIRUS_03", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "DL_TXT_PHOTO1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_1/UPDT2_2022_TEXT_IMG_1' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "UPDT2_2022_TEXT_IMG_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "DL_TXT_PHOTO2" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_2/UPDT2_2022_TEXT_IMG_2' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "UPDT2_2022_TEXT_IMG_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "DL_TXT_PHOTO3" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_3/UPDT2_2022_TEXT_IMG_3' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "UPDT2_2022_TEXT_IMG_3", 24);
 	}
-	else if (func_54(PLAYER::PLAYER_ID()) == 11)
+	else if (func_48(PLAYER::PLAYER_ID()) == 1)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "ROBTEXT_IAA00M" /*IMAGE ATTACHMENT ~nrt~ <img src='img://TUNER_TEXT_IMG_IAA/TUNER_TEXT_IMG_IAA' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "TUNER_TEXT_IMG_IAA", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "S23_SOAD_TXT0" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_2023_TEXT_IMG_1/UPDT1_2023_TEXT_IMG_1' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "UPDT1_2023_TEXT_IMG_1", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[45], "S23_SOAD_TXT1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_2023_TEXT_IMG_2/UPDT1_2023_TEXT_IMG_2' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[45], "UPDT1_2023_TEXT_IMG_2", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[46], "S23_SOAD_TXT2" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_2023_TEXT_IMG_3/UPDT1_2023_TEXT_IMG_3' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[46], "UPDT1_2023_TEXT_IMG_3", 24);
 	}
-	else if (func_53(PLAYER::PLAYER_ID()) == 4)
+	else if (func_48(PLAYER::PLAYER_ID()) == 0)
 	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "FXR_TXT_WI1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://FXR_WAYIN/FXR_WAYIN' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "FXR_WAYIN", 24);
-	}
-	else if (func_48(PLAYER::PLAYER_ID()) == 4)
-	{
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[44], "DL_TXT_PHOTO1" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_1/UPDT2_2022_TEXT_IMG_1' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[44], "UPDT2_2022_TEXT_IMG_1", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[45], "DL_TXT_PHOTO2" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_2/UPDT2_2022_TEXT_IMG_2' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[45], "UPDT2_2022_TEXT_IMG_2", 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_84[46], "DL_TXT_PHOTO3" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT2_2022_TEXT_IMG_3/UPDT2_2022_TEXT_IMG_3' vspace='0' width='256' height='128'/> ~nrt~*/, 24);
-		TEXT_LABEL_ASSIGN_STRING(&uLocal_1075[46], "UPDT2_2022_TEXT_IMG_3", 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_82[44], "ACR_TXT_IMG" /*IMAGE ATTACHMENT ~nrt~ <img src='img://UPDT1_2023_TEXT_IMG_4/UPDT1_2023_TEXT_IMG_4' vspace='0' width='252' height='150'/> ~nrt~*/, 24);
+		TEXT_LABEL_ASSIGN_STRING(&uLocal_1073[44], "UPDT1_2023_TEXT_IMG_4", 24);
 	}
 
 	return;
 }
 
-int func_48(Player plParam0) // Position - 0x4B92
+int func_48(Player plParam0) // Position - 0x4C2D
 {
-	if (func_52(plParam0) == 307)
+	if (func_53(plParam0) == 317)
+		return func_49(plParam0, 317);
+
+	return -1;
+}
+
+int func_49(Player plParam0, int iParam1) // Position - 0x4C4E
+{
+	if (func_53(plParam0) == iParam1)
+		return func_50(plParam0);
+
+	return -1;
+}
+
+int func_50(Player plParam0) // Position - 0x4C6B
+{
+	if (func_51(plParam0, false))
+		return Global_1895156[plParam0].f_10.f_182;
+
+	return -1;
+}
+
+BOOL func_51(Player plParam0, BOOL bParam1) // Position - 0x4C8E
+{
+	if (func_52(plParam0))
+		if (Global_1895156[plParam0].f_10.f_33 != -1 || bParam1 && Global_1895156[plParam0].f_10.f_32 != -1)
+			return true;
+
+	return false;
+}
+
+BOOL func_52(Player plParam0) // Position - 0x4CD2
+{
+	Player player;
+
+	player = plParam0;
+
+	if (player < 0)
+		return false;
+
+	if (player >= 32)
+		return false;
+
+	return true;
+}
+
+int func_53(Player plParam0) // Position - 0x4CF4
+{
+	if (func_52(plParam0))
+		if (func_51(plParam0, false))
+			return Global_1895156[plParam0].f_10.f_33;
+
+	return -1;
+}
+
+int func_54(Player plParam0) // Position - 0x4D20
+{
+	if (func_53(plParam0) == 307)
 		return func_49(plParam0, 307);
 
 	return -1;
 }
 
-int func_49(Player plParam0, int iParam1) // Position - 0x4BB3
+int func_55(Player plParam0) // Position - 0x4D41
 {
-	if (func_52(plParam0) == iParam1)
+	if (func_53(plParam0) == 264)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_50(Player plParam0) // Position - 0x4BD0
+int func_56(Player plParam0) // Position - 0x4D5F
 {
-	if (func_51(plParam0, false))
-		return Global_1894573[plParam0].f_10.f_182;
-
-	return -1;
-}
-
-BOOL func_51(Player plParam0, BOOL bParam1) // Position - 0x4BF3
-{
-	if (Global_1894573[plParam0].f_10.f_33 != -1 || bParam1 && Global_1894573[plParam0].f_10.f_32 != -1)
-		return true;
-
-	return false;
-}
-
-int func_52(Player plParam0) // Position - 0x4C2E
-{
-	if (func_51(plParam0, false))
-		return Global_1894573[plParam0].f_10.f_33;
-
-	return -1;
-}
-
-int func_53(Player plParam0) // Position - 0x4C51
-{
-	if (func_52(plParam0) == 264)
+	if (func_53(plParam0) == 271)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_54(Player plParam0) // Position - 0x4C6F
+int func_57(Player plParam0) // Position - 0x4D7D
 {
-	if (func_52(plParam0) == 271)
+	if (func_53(plParam0) == 256)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_55(Player plParam0) // Position - 0x4C8D
+int func_58(Player plParam0) // Position - 0x4D9B
 {
-	if (func_52(plParam0) == 256)
+	if (func_53(plParam0) == 158)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_56(Player plParam0) // Position - 0x4CAB
+int func_59(Player plParam0) // Position - 0x4DB8
 {
-	if (func_52(plParam0) == 158)
+	if (func_53(plParam0) == 243)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_57(Player plParam0) // Position - 0x4CC8
+int func_60(Player plParam0) // Position - 0x4DD5
 {
-	if (func_52(plParam0) == 243)
+	if (func_53(plParam0) == 237 || func_53(plParam0) == 250)
 		return func_50(plParam0);
 
 	return -1;
 }
 
-int func_58(Player plParam0) // Position - 0x4CE5
-{
-	if (func_52(plParam0) == 237 || func_52(plParam0) == 250)
-		return func_50(plParam0);
-
-	return -1;
-}
-
-void func_59() // Position - 0x4D12
+void func_61() // Position - 0x4E02
 {
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) == 0)
-		func_60(0);
+		func_62(0);
 
-	if (bLocal_2219)
-		GRAPHICS::SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED(&uLocal_68);
+	if (bLocal_2217)
+		GRAPHICS::SET_STREAMED_TEXTURE_DICT_AS_NO_LONGER_NEEDED(&uLocal_66);
 
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_60(int iParam0) // Position - 0x4D3C
+void func_62(int iParam0) // Position - 0x4E2C
 {
-	if (func_65())
+	if (func_67())
 		return;
 
-	if (Global_20584)
-		if (func_64())
-			func_62(true, true);
+	if (Global_20704)
+		if (func_66())
+			func_64(true, true);
 		else
-			func_62(false, false);
+			func_64(false, false);
 
-	if (Global_20383.f_1 == 10 || Global_20383.f_1 == 9)
-		MISC::SET_BIT(&G_SleepModeOffOn11, 16);
+	if (Global_20500.f_1 == 10 || Global_20500.f_1 == 9)
+		MISC::SET_BIT(&Global_8371, 16);
 
 	if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 		AUDIO::STOP_SCRIPTED_CONVERSATION(false);
 
-	Global_21725 = 5;
+	Global_21845 = 5;
 
 	if (iParam0 == 1)
-		MISC::SET_BIT(&G_SleepModeOnOn25, 30);
+		MISC::SET_BIT(&Global_8370, 30);
 	else
-		MISC::CLEAR_BIT(&G_SleepModeOnOn25, 30);
+		MISC::CLEAR_BIT(&Global_8370, 30);
 
-	if (!func_61())
-		Global_20383.f_1 = 3;
+	if (!func_63())
+		Global_20500.f_1 = 3;
 
 	return;
 }
 
-BOOL func_61() // Position - 0x4DC6
+BOOL func_63() // Position - 0x4EB6
 {
-	if (Global_20383.f_1 == 1 || Global_20383.f_1 == 0)
+	if (Global_20500.f_1 == 1 || Global_20500.f_1 == 0)
 		return true;
 
 	return false;
 }
 
-void func_62(BOOL bParam0, BOOL bParam1) // Position - 0x4DED
+void func_64(BOOL bParam0, BOOL bParam1) // Position - 0x4EDD
 {
 	if (bParam0)
 	{
-		if (func_63(0))
+		if (func_65(0))
 		{
-			Global_20584 = true;
+			Global_20704 = true;
 		
 			if (bParam1)
-				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20320);
+				MOBILE::GET_MOBILE_PHONE_POSITION(&Global_20437);
 		
-			Global_20311 = Vector3(Global_20329[Global_20328]);
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
+			Global_20428 = { Global_20446[Global_20445] };
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20428);
 		}
 	}
-	else if (Global_20584 == true)
+	else if (Global_20704 == true)
 	{
-		Global_20584 = false;
-		Global_20311 = Vector3(Global_20336[Global_20328]);
+		Global_20704 = false;
+		Global_20428 = { Global_20453[Global_20445] };
 	
 		if (bParam1)
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20320);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20437);
 		else
-			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20311);
+			MOBILE::SET_MOBILE_PHONE_POSITION(Global_20428);
 	}
 
 	return;
 }
 
-BOOL func_63(int iParam0) // Position - 0x4E61
+BOOL func_65(int iParam0) // Position - 0x4F51
 {
 	if (iParam0 == 1)
-		if (Global_20383.f_1 > 3)
-			if (IS_BIT_SET(G_SleepModeOnOn25, 14))
+		if (Global_20500.f_1 > 3)
+			if (IS_BIT_SET(Global_8370, 14))
 				return true;
 			else
 				return false;
@@ -5152,19 +5191,19 @@ BOOL func_63(int iParam0) // Position - 0x4E61
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("cellphone_flashhand")) > 0)
 		return true;
 
-	if (Global_20383.f_1 > 3)
+	if (Global_20500.f_1 > 3)
 		return true;
 
 	return false;
 }
 
-BOOL func_64() // Position - 0x4EB8
+BOOL func_66() // Position - 0x4FA8
 {
-	return IS_BIT_SET(Global_1962996, 5);
+	return IS_BIT_SET(Global_1963795, 5);
 }
 
-BOOL func_65() // Position - 0x4EC6
+BOOL func_67() // Position - 0x4FB6
 {
-	return IS_BIT_SET(Global_1962996, 19);
+	return IS_BIT_SET(Global_1963795, 19);
 }
 
