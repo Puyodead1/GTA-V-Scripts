@@ -1,9 +1,9 @@
 #region Local Var
 	var uLocal_0 = 0;
 	var uLocal_1 = 0;
-	int iLocal_2 = 0;
-	int iLocal_3 = 0;
-	Object obLocal_4 = 0;
+	int state = 0;
+	int steamParticleFx = 0;
+	Object closestCraneBucketObject = 0;
 	Object obScriptParam_5 = 0;
 #endregion
 
@@ -12,7 +12,7 @@ void main() // Position - 0x0
 	Interior interiorFromEntity;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
-		func_1();
+		CleanupAndTerminate();
 
 	while (true)
 	{
@@ -22,7 +22,7 @@ void main() // Position - 0x0
 		{
 			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_5) && SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("finalec1")) == 0)
 			{
-				switch (iLocal_2)
+				switch (state)
 				{
 					case 0:
 						if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
@@ -36,7 +36,7 @@ void main() // Position - 0x0
 									if (INTERIOR::IS_INTERIOR_SCENE())
 									{
 										STREAMING::REQUEST_PTFX_ASSET();
-										iLocal_2 = 1;
+										state = 1;
 									}
 								}
 							}
@@ -48,19 +48,19 @@ void main() // Position - 0x0
 						{
 							if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(obLocal_4))
-									obLocal_4 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(1090f, -1996f, 39f, 100f, joaat("v_ilev_found_cranebucket"), true, false, true);
+								if (!ENTITY::DOES_ENTITY_EXIST(closestCraneBucketObject))
+									closestCraneBucketObject = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(1090f, -1996f, 39f, 100f, joaat("v_ilev_found_cranebucket"), true, false, true);
 							
-								if (!GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_3))
+								if (!GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(steamParticleFx))
 								{
-									if (ENTITY::DOES_ENTITY_EXIST(obLocal_4))
+									if (ENTITY::DOES_ENTITY_EXIST(closestCraneBucketObject))
 									{
 										interiorFromEntity = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
 									
 										if (INTERIOR::IS_VALID_INTERIOR(interiorFromEntity))
 											if (INTERIOR::IS_INTERIOR_READY(interiorFromEntity))
 												if (INTERIOR::IS_INTERIOR_SCENE())
-													iLocal_3 = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_obfoundry_cauldron_steam", obLocal_4, 0f, 0f, 0f, 0f, 0f, 0f, 1065353216, false, false, false);
+													steamParticleFx = GRAPHICS::START_PARTICLE_FX_LOOPED_ON_ENTITY("scr_obfoundry_cauldron_steam", closestCraneBucketObject, 0f, 0f, 0f, 0f, 0f, 0f, 1065353216, false, false, false);
 									}
 								}
 							}
@@ -73,40 +73,27 @@ void main() // Position - 0x0
 			}
 			else
 			{
-				func_1();
+				CleanupAndTerminate();
 			}
 		}
 		else
 		{
-			func_1();
+			CleanupAndTerminate();
 		}
 	}
 
 	return;
 }
 
-void func_1() // Position - 0x135
+void CleanupAndTerminate() // Position - 0x135
 {
-	if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(iLocal_3))
-		GRAPHICS::STOP_PARTICLE_FX_LOOPED(iLocal_3, false);
+	if (GRAPHICS::DOES_PARTICLE_FX_LOOPED_EXIST(steamParticleFx))
+		GRAPHICS::STOP_PARTICLE_FX_LOOPED(steamParticleFx, false);
 
-	if (ENTITY::DOES_ENTITY_EXIST(obLocal_4))
-		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&obLocal_4);
+	if (ENTITY::DOES_ENTITY_EXIST(closestCraneBucketObject))
+		ENTITY::SET_OBJECT_AS_NO_LONGER_NEEDED(&closestCraneBucketObject);
 
-	func_2("ob_foundry_cauldron Terminated >>>>>>>>>>>>>>>>>\\n");
+	Print("ob_foundry_cauldron Terminated >>>>>>>>>>>>>>>>>\\n");
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
-
-void func_2(char* sParam0) // Position - 0x167
-{
-	func_3(sParam0);
-	return;
-}
-
-void func_3(char* sParam0) // Position - 0x175
-{
-	MISC::ARE_STRINGS_EQUAL(sParam0, sParam0);
-	return;
-}
-
