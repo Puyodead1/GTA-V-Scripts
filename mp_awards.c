@@ -7945,7 +7945,7 @@ int func_72(int iParam0) // Position - 0x8AED
 	Hash statHash;
 	int outValue;
 
-	hash = MPStatHashes1[iParam0];
+	hash = G_MPStatHashes1[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_INT(statHash, &outValue, -1))
@@ -9412,7 +9412,7 @@ BOOL func_90(int iParam0) // Position - 0xA46E
 	Hash statHash;
 	BOOL outValue;
 
-	hash = MPStatHashes3[iParam0];
+	hash = G_MPStatHashes3[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_BOOL(statHash, &outValue, -1))

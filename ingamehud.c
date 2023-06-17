@@ -4874,7 +4874,7 @@ BOOL func_170(int iParam0) // Position - 0x51D9
 	Hash statHash;
 	BOOL outValue;
 
-	hash = MPStatHashes3[iParam0];
+	hash = G_MPStatHashes3[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_BOOL(statHash, &outValue, -1))

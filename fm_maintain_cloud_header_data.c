@@ -36420,7 +36420,7 @@ void func_292(int iParam0, int iParam1) // Position - 0x2539F
 	Hash hash;
 	Hash statName;
 
-	hash = MPStatHashes1[iParam0];
+	hash = G_MPStatHashes1[iParam0];
 	statName = hash;
 	STATS::STAT_SET_INT(statName, iParam1, true);
 	return;

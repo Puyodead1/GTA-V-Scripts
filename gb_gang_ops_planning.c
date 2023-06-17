@@ -10168,7 +10168,7 @@ BOOL func_319(int iParam0) // Position - 0xC458
 	Hash statHash;
 	BOOL outValue;
 
-	hash = MPStatHashes3[iParam0];
+	hash = G_MPStatHashes3[iParam0];
 	statHash = hash;
 
 	if (STATS::STAT_GET_BOOL(statHash, &outValue, -1))
