@@ -20,7 +20,7 @@
 void main() // Position - 0x0
 {
 	int gameTimer;
-	BOOL flag;
+	BOOL isPlaying;
 
 	iLocal_2 = 1;
 	iLocal_3 = 134;
@@ -35,14 +35,14 @@ void main() // Position - 0x0
 	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
 	gameTimer = -1;
-	flag = false;
+	isPlaying = false;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_5();
+		CleanupAndTerminate();
 
 	while (true)
 	{
-		if (!flag)
+		if (!isPlaying)
 		{
 			switch (_GET_PLAYER_CHARACTER_FROM_PED(PLAYER::PLAYER_PED_ID()))
 			{
@@ -50,7 +50,7 @@ void main() // Position - 0x0
 					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_FRANKLIN_SMALL", 0))
 					{
 						AUDIO::PLAY_STREAM_FRONTEND();
-						flag = true;
+						isPlaying = true;
 					}
 					break;
 			
@@ -58,7 +58,7 @@ void main() // Position - 0x0
 					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_TREVOR_SMALL", 0))
 					{
 						AUDIO::PLAY_STREAM_FRONTEND();
-						flag = true;
+						isPlaying = true;
 					}
 					break;
 			
@@ -66,7 +66,7 @@ void main() // Position - 0x0
 					if (AUDIO::LOAD_STREAM("MISSION_COMPLETE_MICHAEL_SMALL", 0))
 					{
 						AUDIO::PLAY_STREAM_FRONTEND();
-						flag = true;
+						isPlaying = true;
 					}
 					break;
 			}
@@ -77,7 +77,7 @@ void main() // Position - 0x0
 		}
 		else if (MISC::GET_GAME_TIMER() > gameTimer + 8000)
 		{
-			func_5();
+			CleanupAndTerminate();
 		}
 	
 		SYSTEM::WAIT(0);
@@ -86,14 +86,14 @@ void main() // Position - 0x0
 	return;
 }
 
-eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped pedParam0) // Position - 0xD2
+eCharacter _GET_PLAYER_CHARACTER_FROM_PED(Ped ped) // Position - 0xD2
 {
 	eCharacter i;
 	Hash entityModel;
 
-	if (ENTITY::DOES_ENTITY_EXIST(pedParam0))
+	if (ENTITY::DOES_ENTITY_EXIST(ped))
 	{
-		entityModel = ENTITY::GET_ENTITY_MODEL(pedParam0);
+		entityModel = ENTITY::GET_ENTITY_MODEL(ped);
 	
 		for (i = CHAR_MICHAEL; i <= CHAR_TREVOR; i = i + 1)
 		{
@@ -125,7 +125,7 @@ BOOL func_4(eCharacter echParam0) // Position - 0x143
 	return echParam0 < CHAR_MULTIPLAYER;
 }
 
-void func_5() // Position - 0x14F
+void CleanupAndTerminate() // Position - 0x14F
 {
 	AUDIO::STOP_STREAM();
 	SCRIPT::TERMINATE_THIS_THREAD();

@@ -51,7 +51,7 @@ void main() // Position - 0x0
 		if (PLAYER::GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP() != 2)
 			func_4(19);
 	
-		func_3();
+		CleanupAndTerminate();
 	}
 
 	func_2(19);
@@ -70,7 +70,7 @@ void main() // Position - 0x0
 	}
 
 	func_4(19);
-	func_3();
+	CleanupAndTerminate();
 	return;
 }
 
@@ -105,7 +105,7 @@ int func_2(int iParam0) // Position - 0xE3
 	return 1;
 }
 
-void func_3() // Position - 0x13A
+void CleanupAndTerminate() // Position - 0x13A
 {
 	AUDIO::STOP_STREAM();
 	AUDIO::UNREGISTER_SCRIPT_WITH_AUDIO();

@@ -15,15 +15,15 @@
 	var uLocal_13 = 0;
 	var uLocal_14 = 0;
 	int iLocal_15 = 0;
-	Vehicle veLocal_16 = 0;
-	var uLocal_17 = 2;
+	Vehicle vehicle = 0;
+	var vehicleLocation = 0;
 	var uLocal_18 = 0;
 	var uLocal_19 = 0;
 	var uLocal_20 = 0;
 	var uLocal_21 = 0;
 	var uLocal_22 = 0;
 	var uLocal_23 = 0;
-	var uLocal_24 = 2;
+	var heading = 0;
 	var uLocal_25 = 0;
 	var uLocal_26 = 0;
 #endregion
@@ -44,7 +44,7 @@ void main() // Position - 0x0
 	iLocal_15 = -1;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_1();
+		CleanupAndTerminate();
 
 	MISC::SET_MISSION_FLAG(true);
 	STREAMING::REQUEST_MODEL(joaat("cuban800"));
@@ -54,38 +54,40 @@ void main() // Position - 0x0
 		SYSTEM::WAIT(0);
 	}
 
-	uLocal_17[0] = { 1169.9758f, 3592.5715f, 32.6481f };
-	uLocal_17[1] = { 1215.738f, 3586.6077f, 33.5131f };
-	uLocal_24[0] = 277.7043f;
-	uLocal_24[1] = 77.1113f;
+	vehicleLocation = { 1169.9758f, 3592.5715f, 32.6481f };
+	//vehicleLocation[0] = { 1169.9758f, 3592.5715f, 32.6481f };
+	//vehicleLocation[1] = { 1215.738f, 3586.6077f, 33.5131f }; // not even used?
+	heading = 277.7043f;
+	//heading[0] = 277.7043f;
+	//heading[1] = 77.1113f; // not even used?
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), 1220.2024f, 3596.2805f, 33.259f, true, false, false, true);
 
 	STREAMING::LOAD_SCENE(1220.2024f, 3596.2805f, 33.259f);
-	veLocal_16 = VEHICLE::CREATE_VEHICLE(joaat("cuban800"), uLocal_17[0], uLocal_24[0], true, true, false);
-	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(veLocal_16, 1084227584);
+	vehicle = VEHICLE::CREATE_VEHICLE(joaat("cuban800"), vehicleLocation, heading, true, true, false);
+	VEHICLE::SET_VEHICLE_ON_GROUND_PROPERLY(vehicle, 1084227584);
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cuban800"));
 
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		PED::SET_PED_INTO_VEHICLE(PLAYER::PLAYER_PED_ID(), veLocal_16, -1);
+		PED::SET_PED_INTO_VEHICLE(PLAYER::PLAYER_PED_ID(), vehicle, -1);
 
 	while (true)
 	{
-		func_1();
+		CleanupAndTerminate();
 		SYSTEM::WAIT(0);
 	}
 
 	return;
 }
 
-void func_1() // Position - 0x136
+void CleanupAndTerminate() // Position - 0x136
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		TASK::CLEAR_PED_TASKS_IMMEDIATELY(PLAYER::PLAYER_PED_ID());
 
-	if (ENTITY::DOES_ENTITY_EXIST(veLocal_16))
-		VEHICLE::DELETE_VEHICLE(&veLocal_16);
+	if (ENTITY::DOES_ENTITY_EXIST(vehicle))
+		VEHICLE::DELETE_VEHICLE(&vehicle);
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("cuban800"));
 	SCRIPT::TERMINATE_THIS_THREAD();

@@ -48,7 +48,7 @@ void DisplayDataSlot(int iParam0) // Position - 0x8A
 	return;
 }
 
-void SetDataSlot(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* scaleformCommandString) // Position - 0xA6
+void SetDataSlot(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam4, char* componentType) // Position - 0xA6
 {
 	if (GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD_ON_FRONTEND("SET_DATA_SLOT"))
 	{
@@ -64,7 +64,7 @@ void SetDataSlot(int iParam0, int iParam1, int iParam2, int iParam3, BOOL bParam
 		else
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 	
-		DisplayScaleformCommandString(scaleformCommandString);
+		DisplayScaleformCommandString(componentType);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	}
 
