@@ -25,9 +25,9 @@
 	float fLocal_23 = 0f;
 	float fLocal_24 = 0f;
 	var uLocal_25 = 0;
-	Vehicle veLocal_26 = 0;
-	Object obLocal_27 = 0;
-	int iLocal_28 = 0;
+	Vehicle playerVehicle = 0;
+	Object closestContainerProp = 0;
+	int gameTimer = 0;
 	int iLocal_29 = 0;
 	int iLocal_30 = 0;
 #endregion
@@ -57,7 +57,7 @@ void main() // Position - 0x0
 		if (PLAYER::GET_CAUSE_OF_MOST_RECENT_FORCE_CLEANUP() == 16)
 			func_3(21);
 	
-		func_2();
+		Terminate();
 	}
 
 	while (true)
@@ -68,34 +68,34 @@ void main() // Position - 0x0
 		{
 			if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 				if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
-					veLocal_26 = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
+					playerVehicle = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 				else
-					veLocal_26 = 0;
+					playerVehicle = 0;
 		
-			if (ENTITY::DOES_ENTITY_EXIST(veLocal_26))
+			if (ENTITY::DOES_ENTITY_EXIST(playerVehicle))
 			{
-				if (VEHICLE::IS_VEHICLE_DRIVEABLE(veLocal_26, false))
+				if (VEHICLE::IS_VEHICLE_DRIVEABLE(playerVehicle, false))
 				{
-					if (VEHICLE::IS_VEHICLE_MODEL(veLocal_26, joaat("handler")))
+					if (VEHICLE::IS_VEHICLE_MODEL(playerVehicle, joaat("handler")))
 					{
 						PAD::SET_INPUT_EXCLUSIVE(PLAYER_CONTROL, INPUT_CONTEXT);
 					
-						if (!VEHICLE::IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME(veLocal_26))
+						if (!VEHICLE::IS_ANY_ENTITY_ATTACHED_TO_HANDLER_FRAME(playerVehicle))
 						{
 							if (iLocal_30 == 0)
 							{
-								if (!ENTITY::DOES_ENTITY_EXIST(obLocal_27) || ENTITY::DOES_ENTITY_EXIST(obLocal_27) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, joaat("prop_contr_03b_ld"), true, false, true) != obLocal_27)
-									obLocal_27 = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(veLocal_26, true), 15f, joaat("prop_contr_03b_ld"), true, false, true);
+								if (!ENTITY::DOES_ENTITY_EXIST(closestContainerProp) || ENTITY::DOES_ENTITY_EXIST(closestContainerProp) && OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(playerVehicle, true), 15f, joaat("prop_contr_03b_ld"), true, false, true) != closestContainerProp)
+									closestContainerProp = OBJECT::GET_CLOSEST_OBJECT_OF_TYPE(ENTITY::GET_ENTITY_COORDS(playerVehicle, true), 15f, joaat("prop_contr_03b_ld"), true, false, true);
 							
-								if (ENTITY::DOES_ENTITY_EXIST(obLocal_27))
+								if (ENTITY::DOES_ENTITY_EXIST(closestContainerProp))
 								{
-									if (func_1(&iLocal_28, 1000))
+									if (HasTimePassed(&gameTimer, 1000))
 									{
-										if (VEHICLE::IS_HANDLER_FRAME_LINED_UP_WITH_CONTAINER(veLocal_26, obLocal_27))
+										if (VEHICLE::IS_HANDLER_FRAME_LINED_UP_WITH_CONTAINER(playerVehicle, closestContainerProp))
 										{
 											if (PAD::IS_CONTROL_JUST_PRESSED(PLAYER_CONTROL, INPUT_CONTEXT))
 											{
-												VEHICLE::ATTACH_CONTAINER_TO_HANDLER_FRAME_WHEN_LINED_UP(veLocal_26, obLocal_27);
+												VEHICLE::ATTACH_CONTAINER_TO_HANDLER_FRAME_WHEN_LINED_UP(playerVehicle, closestContainerProp);
 												iLocal_29 = 1;
 												iLocal_30 = 1;
 											}
@@ -108,7 +108,7 @@ void main() // Position - 0x0
 						{
 							if (iLocal_29 == 1)
 							{
-								iLocal_28 = MISC::GET_GAME_TIMER();
+								gameTimer = MISC::GET_GAME_TIMER();
 								iLocal_29 = 0;
 								iLocal_30 = 0;
 							}
@@ -124,19 +124,19 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1(var uParam0, int iParam1) // Position - 0x18E
+BOOL HasTimePassed(var prevTime, int time) // Position - 0x18E
 {
-	int gameTimer;
+	int currentGameTime;
 
-	gameTimer = MISC::GET_GAME_TIMER();
+	currentGameTime = MISC::GET_GAME_TIMER();
 
-	if (gameTimer - *uParam0 > iParam1)
+	if (currentGameTime - *prevTime > time)
 		return true;
 
 	return false;
 }
 
-void func_2() // Position - 0x1AC
+void Terminate() // Position - 0x1AC
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

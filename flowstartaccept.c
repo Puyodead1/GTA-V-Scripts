@@ -17,9 +17,9 @@
 	int iLocal_15 = 0;
 	var uLocal_16 = 0;
 	var uLocal_17 = 0;
-	int iLocal_18 = 0;
-	int iLocal_19 = 0;
-	BOOL bLocal_20 = 0;
+	int scaleformMovieMPBigMessageFreemode = 0;
+	int scaleformMovieInstructionalButtons = 0;
+	BOOL shouldContinue = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -38,7 +38,7 @@ void main() // Position - 0x0
 	iLocal_15 = -1;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(83))
-		func_6();
+		CleanupAndTerminate();
 
 	if (!Global_1 && !MISC::IS_PC_VERSION() && MISC::HAS_GAME_INSTALLED_THIS_SESSION())
 	{
@@ -48,25 +48,25 @@ void main() // Position - 0x0
 			if (!CAM::IS_SCREEN_FADING_OUT())
 				CAM::DO_SCREEN_FADE_OUT(800);
 	
-		iLocal_18 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("MP_BIG_MESSAGE_FREEMODE");
-		iLocal_19 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("INSTRUCTIONAL_BUTTONS");
+		scaleformMovieMPBigMessageFreemode = GRAPHICS::REQUEST_SCALEFORM_MOVIE("MP_BIG_MESSAGE_FREEMODE");
+		scaleformMovieInstructionalButtons = GRAPHICS::REQUEST_SCALEFORM_MOVIE("INSTRUCTIONAL_BUTTONS");
 	
-		while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_18) || !GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_19))
+		while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleformMovieMPBigMessageFreemode) || !GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleformMovieInstructionalButtons))
 		{
 			SYSTEM::WAIT(0);
 		}
 	
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_18, "SHOW_CENTERED_MP_MESSAGE");
-		func_5("INSTALL_COMP" /*Install Complete*/);
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleformMovieMPBigMessageFreemode, "SHOW_CENTERED_MP_MESSAGE");
+		DisplayScaleformText("INSTALL_COMP" /*Install Complete*/);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_19, "SET_DATA_SLOT_EMPTY");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleformMovieInstructionalButtons, "SET_DATA_SLOT_EMPTY");
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_19, "SET_DATA_SLOT");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleformMovieInstructionalButtons, "SET_DATA_SLOT");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
-		func_4(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT, true));
-		func_5("HUD_CONTINUE" /*Continue*/);
+		ScaleformAddPlayerNameString(PAD::GET_CONTROL_INSTRUCTIONAL_BUTTONS_STRING(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT, true));
+		DisplayScaleformText("HUD_CONTINUE" /*Continue*/);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_19, "DRAW_INSTRUCTIONAL_BUTTONS");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleformMovieInstructionalButtons, "DRAW_INSTRUCTIONAL_BUTTONS");
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	
@@ -77,15 +77,15 @@ void main() // Position - 0x0
 	
 		SCRIPT::SHUTDOWN_LOADING_SCREEN();
 	
-		while (!bLocal_20)
+		while (!shouldContinue)
 		{
 			HUD::HIDE_LOADING_ON_FADE_THIS_FRAME();
 			GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(7);
-			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_18, 255, 255, 255, 0, 0);
-			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(iLocal_19, 255, 255, 255, 0, 0);
+			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(scaleformMovieMPBigMessageFreemode, 255, 255, 255, 0, 0);
+			GRAPHICS::DRAW_SCALEFORM_MOVIE_FULLSCREEN(scaleformMovieInstructionalButtons, 255, 255, 255, 0, 0);
 		
 			if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
-				bLocal_20 = true;
+				shouldContinue = true;
 		
 			SYSTEM::WAIT(0);
 		}
@@ -97,7 +97,7 @@ void main() // Position - 0x0
 
 	Global_78960.f_1 = 0;
 	MISC::SET_BIT(&(G_MissionStats.f_10019.f_25), 0);
-	func_6();
+	CleanupAndTerminate();
 	return;
 }
 
@@ -131,26 +131,26 @@ void func_3(int iParam0, int iParam1) // Position - 0x1F0
 	return;
 }
 
-void func_4(const char* sParam0) // Position - 0x208
+void ScaleformAddPlayerNameString(const char* str) // Position - 0x208
 {
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(sParam0);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_PLAYER_NAME_STRING(str);
 	return;
 }
 
-void func_5(char* sParam0) // Position - 0x216
+void DisplayScaleformText(char* componentType) // Position - 0x216
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(componentType);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_6() // Position - 0x228
+void CleanupAndTerminate() // Position - 0x228
 {
-	if (iLocal_18 != 0)
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_18);
+	if (scaleformMovieMPBigMessageFreemode != 0)
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&scaleformMovieMPBigMessageFreemode);
 
-	if (iLocal_19 != 0)
-		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_19);
+	if (scaleformMovieInstructionalButtons != 0)
+		GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&scaleformMovieInstructionalButtons);
 
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(4);
 	SCRIPT::SET_NO_LOADING_SCREEN(false);

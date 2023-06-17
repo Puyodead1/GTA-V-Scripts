@@ -1,12 +1,12 @@
 #region Local Var
 	var uLocal_0 = 0;
 	var uLocal_1 = 0;
-	int iLocal_2 = 0;
+	int state = 0;
 	Object obLocal_3 = 0;
-	var uLocal_4 = 0;
+	var entityCoords = 0;
 	var uLocal_5 = 0;
 	var uLocal_6 = 0;
-	var uLocal_7 = 0;
+	var entityRotation = 0;
 	var uLocal_8 = 0;
 	var uLocal_9 = 0;
 	Object obScriptParam_10 = 0;
@@ -14,19 +14,19 @@
 
 void main() // Position - 0x0
 {
-	var unk;
+	var entityCoordsWithOffset;
 	var unk2;
 	var unk3;
 	float entityCoords;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
-		func_4();
+		CleanupAndTerminate();
 
 	if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_10))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(obScriptParam_10, true);
-		uLocal_4 = { ENTITY::GET_ENTITY_COORDS(obScriptParam_10, true) };
-		uLocal_7 = { ENTITY::GET_ENTITY_ROTATION(obScriptParam_10, 2) };
+		entityCoords = { ENTITY::GET_ENTITY_COORDS(obScriptParam_10, true) };
+		entityRotation = { ENTITY::GET_ENTITY_ROTATION(obScriptParam_10, 2) };
 	}
 
 	while (true)
@@ -37,7 +37,7 @@ void main() // Position - 0x0
 		{
 			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_10))
 			{
-				switch (iLocal_2)
+				switch (state)
 				{
 					case 0:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_10))
@@ -46,11 +46,11 @@ void main() // Position - 0x0
 						
 							if (STREAMING::HAS_MODEL_LOADED(joaat("p_abat_roller_1_col")))
 							{
-								if (!func_3(uLocal_4, 0f, 0f, 0f, false))
+								if (!DoCoordsMatch(entityCoords, 0f, 0f, 0f, false))
 								{
-									obLocal_3 = OBJECT::CREATE_OBJECT(joaat("p_abat_roller_1_col"), uLocal_4, true, true, false);
-									ENTITY::SET_ENTITY_ROTATION(obLocal_3, uLocal_7, 2, true);
-									iLocal_2 = 1;
+									obLocal_3 = OBJECT::CREATE_OBJECT(joaat("p_abat_roller_1_col"), entityCoords, true, true, false);
+									ENTITY::SET_ENTITY_ROTATION(obLocal_3, entityRotation, 2, true);
+									state = 1;
 								}
 							}
 						}
@@ -64,7 +64,7 @@ void main() // Position - 0x0
 								STREAMING::REQUEST_ANIM_DICT("map_objects");
 							
 								if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
-									iLocal_2 = 2;
+									state = 2;
 							}
 						}
 						break;
@@ -79,7 +79,7 @@ void main() // Position - 0x0
 									if (STREAMING::HAS_ANIM_DICT_LOADED("map_objects"))
 									{
 										ENTITY::PLAY_ENTITY_ANIM(obScriptParam_10, "P_Abat_roller_1_open", "map_objects", 1f, false, true, false, 0, 0);
-										iLocal_2 = 3;
+										state = 3;
 									}
 								}
 							}
@@ -88,21 +88,21 @@ void main() // Position - 0x0
 				
 					case 3:
 						num = 0.35f;
-						unk = { uLocal_4 + { 3.45f, 0f, 0f } };
+						entityCoordsWithOffset = { entityCoords + { 3.45f, 0f, 0f } };
 					
 						if (ENTITY::DOES_ENTITY_EXIST(obLocal_3))
 						{
 							entityCoords = { ENTITY::GET_ENTITY_COORDS(obLocal_3, true) };
 						
-							if (!func_2(entityCoords, unk, 0.1f, false))
+							if (!func_2(entityCoords, entityCoordsWithOffset, 0.1f, false))
 							{
-								unk6 = { unk - entityCoords };
+								unk6 = { entityCoordsWithOffset - entityCoords };
 								ENTITY::SET_ENTITY_COORDS(obLocal_3, entityCoords + (func_1(unk6) * F2V(MISC::GET_FRAME_TIME()) * { num, num, num }), true, false, false, true);
 							}
 							else
 							{
 								Global_97245 = 1;
-								iLocal_2 = 4;
+								state = 4;
 							}
 						}
 						break;
@@ -113,12 +113,12 @@ void main() // Position - 0x0
 			}
 			else
 			{
-				func_4();
+				CleanupAndTerminate();
 			}
 		}
 		else
 		{
-			func_4();
+			CleanupAndTerminate();
 		}
 	}
 
@@ -147,51 +147,38 @@ Vector3 func_1(float fParam0, var uParam1, var uParam2) // Position - 0x1C6
 	return fParam0;
 }
 
-BOOL func_2(float fParam0, var uParam1, var uParam2, var uParam3, var uParam4, var uParam5, float fParam6, BOOL bParam7) // Position - 0x205
+BOOL func_2(float x, var y, var z, var x1, var y1, var z1, float fParam6, BOOL ignoreZ) // Position - 0x205
 {
 	if (fParam6 < 0f)
 		fParam6 = 0f;
 
-	if (!bParam7)
-		if (MISC::ABSF(fParam0 - uParam3) <= fParam6)
-			if (MISC::ABSF(fParam0.f_1 - uParam3.f_1) <= fParam6)
-				if (MISC::ABSF(fParam0.f_2 - uParam3.f_2) <= fParam6)
+	if (!ignoreZ)
+		if (MISC::ABSF(x - x1) <= fParam6)
+			if (MISC::ABSF(y - y1) <= fParam6)
+				if (MISC::ABSF(z - z1) <= fParam6)
 					return true;
-	else if (MISC::ABSF(fParam0 - uParam3) <= fParam6)
-		if (MISC::ABSF(fParam0.f_1 - uParam3.f_1) <= fParam6)
+	else if (MISC::ABSF(x - x1) <= fParam6)
+		if (MISC::ABSF(y - y1) <= fParam6)
 			return true;
 
 	return false;
 }
 
-BOOL func_3(float fParam0, var uParam1, var uParam2, float fParam3, float fParam4, float fParam5, BOOL bParam6) // Position - 0x280
+BOOL DoCoordsMatch(float x, var y, var z, float x1, float y1, float z1, BOOL ignoreZ) // Position - 0x280
 {
-	if (bParam6)
-		return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1;
+	if (ignoreZ)
+		return x == x1 && y == y1;
 
-	return fParam0 == fParam3 && fParam0.f_1 == fParam3.f_1 && fParam0.f_2 == fParam3.f_2;
+	return x == x1 && y == y1 && z == z1;
 }
 
-void func_4() // Position - 0x2C7
+void CleanupAndTerminate() // Position - 0x2C7
 {
 	if (ENTITY::DOES_ENTITY_EXIST(obLocal_3))
 		OBJECT::DELETE_OBJECT(&obLocal_3);
 
 	STREAMING::SET_MODEL_AS_NO_LONGER_NEEDED(joaat("p_abat_roller_1_col"));
-	func_5("ob_abatdoor Terminated >>>>>>>>>>>>>>>>>\\n");
+	Print("ob_abatdoor Terminated >>>>>>>>>>>>>>>>>\\n");
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
-
-void func_5(char* sParam0) // Position - 0x2F2
-{
-	func_6(sParam0);
-	return;
-}
-
-void func_6(char* sParam0) // Position - 0x300
-{
-	MISC::ARE_STRINGS_EQUAL(sParam0, sParam0);
-	return;
-}
-

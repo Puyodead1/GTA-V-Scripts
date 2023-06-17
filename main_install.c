@@ -1,13 +1,13 @@
 #region Local Var
-	int iLocal_0 = 0;
+	int randInt05 = 0;
 	int iLocal_1 = 0;
 #endregion
 
 void main() // Position - 0x0
 {
-	int num;
+	int sceneLoadTimeout;
 
-	iLocal_0 = -1;
+	randInt05 = -1;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	STREAMING::REQUEST_IPL("prologue06_int");
 	STREAMING::REQUEST_IPL("prologue01");
@@ -58,9 +58,9 @@ void main() // Position - 0x0
 	HUD::DISPLAY_RADAR(false);
 	PLAYER::SET_PLAYER_CONTROL(PLAYER::PLAYER_ID(), false, 0);
 	STREAMING::NEW_LOAD_SCENE_START_SPHERE(5312.9956f, -5208.671f, 83.90526f, 10f, 0);
-	num = MISC::GET_GAME_TIMER() + 10000;
+	sceneLoadTimeout = MISC::GET_GAME_TIMER() + 10000;
 
-	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() && MISC::GET_GAME_TIMER() < num)
+	while (!STREAMING::IS_NEW_LOAD_SCENE_LOADED() && MISC::GET_GAME_TIMER() < sceneLoadTimeout)
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -83,36 +83,36 @@ void main() // Position - 0x0
 	
 		if (SYSTEM::TIMERA() > 10000 && HUD::HAS_ADDITIONAL_TEXT_LOADED(0))
 		{
-			iLocal_0 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
+			randInt05 = MISC::GET_RANDOM_INT_IN_RANGE(0, 5);
 		
-			if (iLocal_0 - iLocal_1 != 0)
+			if (randInt05 - iLocal_1 != 0)
 			{
-				iLocal_1 = iLocal_0;
+				iLocal_1 = randInt05;
 				SYSTEM::SETTIMERA(0);
 			}
 		}
 		else
 		{
-			switch (iLocal_0)
+			switch (randInt05)
 			{
 				case 0:
-					func_1(0.5f, 0.4f, "NG_INST_TT_1", 0);
+					DisplayHelpTextNoSound(0.5f, 0.4f, "NG_INST_TT_1", 0);
 					break;
 			
 				case 1:
-					func_1(0.5f, 0.4f, "NG_INST_TT_2", 0);
+					DisplayHelpTextNoSound(0.5f, 0.4f, "NG_INST_TT_2", 0);
 					break;
 			
 				case 2:
-					func_1(0.5f, 0.4f, "NG_INST_TT_3", 0);
+					DisplayHelpTextNoSound(0.5f, 0.4f, "NG_INST_TT_3", 0);
 					break;
 			
 				case 3:
-					func_1(0.5f, 0.4f, "NG_INST_TT_4", 0);
+					DisplayHelpTextNoSound(0.5f, 0.4f, "NG_INST_TT_4", 0);
 					break;
 			
 				case 4:
-					func_1(0.5f, 0.4f, "NG_INST_TT_5", 0);
+					DisplayHelpTextNoSound(0.5f, 0.4f, "NG_INST_TT_5", 0);
 					break;
 			}
 		}
@@ -131,10 +131,10 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1(float fParam0, float fParam1, char* sParam2, int iParam3) // Position - 0x2F8
+void DisplayHelpTextNoSound(float x, float y, char* text, int iParam3) // Position - 0x2F8
 {
-	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(sParam2);
-	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(fParam0, fParam1, iParam3);
+	HUD::BEGIN_TEXT_COMMAND_DISPLAY_TEXT(text);
+	HUD::END_TEXT_COMMAND_DISPLAY_TEXT(x, y, iParam3);
 	return;
 }
 

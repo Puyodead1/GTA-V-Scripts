@@ -1,28 +1,28 @@
 #region Local Var
-	int iLocal_0 = 0;
-	Ped pedLocal_1 = 0;
-	float fLocal_2 = 0f;
+	int state = 0;
+	Ped ped = 0;
+	float entityWorldOffset = 0f;
 	var uLocal_3 = 0;
 	var uLocal_4 = 0;
-	float fLocal_5 = 0f;
-	char* sLocal_6 = 0;
-	Hash hLocal_7 = 0;
-	char* sLocal_8 = 0;
-	BOOL bLocal_9 = 0;
+	float entityWorldHeading = 0f;
+	char* animName = 0;
+	Hash pedModelHash = 0;
+	char* animDict = 0;
+	BOOL isAnimPlaying = 0;
 	Object obScriptParam_10 = 0;
 #endregion
 
 void main() // Position - 0x0
 {
-	sLocal_6 = "Poledance_01";
-	hLocal_7 = joaat("A_F_Y_Beach_01");
-	sLocal_8 = "MISSSTRIP_CLUB";
+	animName = "Poledance_01";
+	pedModelHash = joaat("A_F_Y_Beach_01");
+	animDict = "MISSSTRIP_CLUB";
 
 	if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_10))
 	{
 		ENTITY::FREEZE_ENTITY_POSITION(obScriptParam_10, true);
-		fLocal_2 = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_10, 0f, 0f, 0f) };
-		fLocal_5 = ENTITY::GET_ENTITY_HEADING(obScriptParam_10);
+		entityWorldOffset = { ENTITY::GET_OFFSET_FROM_ENTITY_IN_WORLD_COORDS(obScriptParam_10, 0f, 0f, 0f) };
+		entityWorldHeading = ENTITY::GET_ENTITY_HEADING(obScriptParam_10);
 		ENTITY::SET_ENTITY_COLLISION(obScriptParam_10, false, false);
 	}
 
@@ -34,32 +34,32 @@ void main() // Position - 0x0
 		{
 			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_10))
 			{
-				switch (iLocal_0)
+				switch (state)
 				{
 					case 0:
-						if (func_5())
+						if (LoadModelAndAnimDict())
 						{
-							func_4();
-							iLocal_0 = 2;
+							CreatePed();
+							state = 2;
 						}
 						break;
 				
 					case 2:
-						func_3();
+						PlayAnimation();
 					
 						if (func_2())
 						{
 							ENTITY::SET_ENTITY_COLLISION(obScriptParam_10, true, false);
-							iLocal_0 = 3;
+							state = 3;
 						}
 						break;
 				
 					case 3:
-						if (!PED::IS_PED_INJURED(pedLocal_1))
+						if (!PED::IS_PED_INJURED(ped))
 						{
-							TASK::TASK_COWER(pedLocal_1, -1);
+							TASK::TASK_COWER(ped, -1);
 							PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), true);
-							PED::SET_PED_KEEP_TASK(pedLocal_1, true);
+							PED::SET_PED_KEEP_TASK(ped, true);
 							SCRIPT::TERMINATE_THIS_THREAD();
 						}
 						break;
@@ -67,25 +67,25 @@ void main() // Position - 0x0
 			}
 			else
 			{
-				func_1();
+				CleanupAndTerminate();
 			}
 		}
 		else
 		{
-			func_1();
+			CleanupAndTerminate();
 		}
 	}
 
 	return;
 }
 
-void func_1() // Position - 0xDC
+void CleanupAndTerminate() // Position - 0xDC
 {
-	if (!ENTITY::IS_ENTITY_DEAD(pedLocal_1, false))
-		if (!ENTITY::IS_ENTITY_ON_SCREEN(pedLocal_1))
-			PED::DELETE_PED(&pedLocal_1);
+	if (!ENTITY::IS_ENTITY_DEAD(ped, false))
+		if (!ENTITY::IS_ENTITY_ON_SCREEN(ped))
+			PED::DELETE_PED(&ped);
 		else
-			PED::SET_PED_KEEP_TASK(pedLocal_1, true);
+			PED::SET_PED_KEEP_TASK(ped, true);
 
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
@@ -99,15 +99,15 @@ BOOL func_2() // Position - 0x10D
 
 	if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
 	{
-		if (!PED::IS_PED_INJURED(pedLocal_1))
+		if (!PED::IS_PED_INJURED(ped))
 		{
-			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_1, vector, false, true, 0))
+			if (ENTITY::IS_ENTITY_AT_ENTITY(PLAYER::PLAYER_PED_ID(), ped, vector, false, true, 0))
 				return true;
 		
-			if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(pedLocal_1, PLAYER::PLAYER_PED_ID(), true))
+			if (ENTITY::HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(ped, PLAYER::PLAYER_PED_ID(), true))
 				return true;
 		
-			if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), pedLocal_1))
+			if (ENTITY::IS_ENTITY_TOUCHING_ENTITY(PLAYER::PLAYER_PED_ID(), ped))
 				return true;
 		}
 	
@@ -118,24 +118,24 @@ BOOL func_2() // Position - 0x10D
 	return false;
 }
 
-void func_3() // Position - 0x181
+void PlayAnimation() // Position - 0x181
 {
-	if (!PED::IS_PED_INJURED(pedLocal_1))
+	if (!PED::IS_PED_INJURED(ped))
 	{
-		if (TASK::GET_SCRIPT_TASK_STATUS(pedLocal_1, SCRIPT_TASK_PLAY_ANIM) == 7)
+		if (TASK::GET_SCRIPT_TASK_STATUS(ped, SCRIPT_TASK_PLAY_ANIM) == 7)
 		{
-			TASK::TASK_PLAY_ANIM(pedLocal_1, sLocal_8, sLocal_6, 1090519040, -1056964608, -1, 0, 0, false, false, false);
+			TASK::TASK_PLAY_ANIM(ped, animDict, animName, 1090519040, -1056964608, -1, 0, 0, false, false, false);
 		}
-		else if (ENTITY::HAS_ENTITY_ANIM_FINISHED(pedLocal_1, sLocal_8, sLocal_6, 3))
+		else if (ENTITY::HAS_ENTITY_ANIM_FINISHED(ped, animDict, animName, 3))
 		{
-			TASK::TASK_PLAY_ANIM(pedLocal_1, sLocal_8, sLocal_6, 1090519040, -1056964608, -1, 0, 0, false, false, false);
+			TASK::TASK_PLAY_ANIM(ped, animDict, animName, 1090519040, -1056964608, -1, 0, 0, false, false, false);
 		}
-		else if (!bLocal_9)
+		else if (!isAnimPlaying)
 		{
-			if (ENTITY::IS_ENTITY_PLAYING_ANIM(pedLocal_1, sLocal_8, sLocal_6, 3))
+			if (ENTITY::IS_ENTITY_PLAYING_ANIM(ped, animDict, animName, 3))
 			{
-				ENTITY::SET_ENTITY_ANIM_CURRENT_TIME(pedLocal_1, sLocal_8, sLocal_6, MISC::GET_RANDOM_FLOAT_IN_RANGE(0, 1065353216));
-				bLocal_9 = true;
+				ENTITY::SET_ENTITY_ANIM_CURRENT_TIME(ped, animDict, animName, MISC::GET_RANDOM_FLOAT_IN_RANGE(0, 1065353216));
+				isAnimPlaying = true;
 			}
 		}
 	}
@@ -143,32 +143,32 @@ void func_3() // Position - 0x181
 	return;
 }
 
-void func_4() // Position - 0x215
+void CreatePed() // Position - 0x215
 {
-	if (ENTITY::IS_ENTITY_DEAD(pedLocal_1, false))
+	if (ENTITY::IS_ENTITY_DEAD(ped, false))
 	{
-		pedLocal_1 = PED::CREATE_PED(PED_TYPE_CIVFEMALE, hLocal_7, fLocal_2, fLocal_2.f_1, fLocal_2.f_2, fLocal_5, true, true);
-		PED::SET_PED_RANDOM_COMPONENT_VARIATION(pedLocal_1, 0);
-		PED::SET_PED_CAN_BE_TARGETTED(pedLocal_1, false);
-		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(pedLocal_1, true);
+		ped = PED::CREATE_PED(PED_TYPE_CIVFEMALE, pedModelHash, entityWorldOffset.X, entityWorldOffset.Y, entityWorldOffset.Z, entityWorldHeading, true, true);
+		PED::SET_PED_RANDOM_COMPONENT_VARIATION(ped, 0);
+		PED::SET_PED_CAN_BE_TARGETTED(ped, false);
+		PED::SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(ped, true);
 	}
 
 	return;
 }
 
-BOOL func_5() // Position - 0x253
+BOOL LoadModelAndAnimDict() // Position - 0x253
 {
-	STREAMING::REQUEST_MODEL(hLocal_7);
-	STREAMING::REQUEST_ANIM_DICT(sLocal_8);
+	STREAMING::REQUEST_MODEL(pedModelHash);
+	STREAMING::REQUEST_ANIM_DICT(animDict);
 
-	if (STREAMING::HAS_MODEL_LOADED(hLocal_7) && STREAMING::HAS_ANIM_DICT_LOADED(sLocal_8))
+	if (STREAMING::HAS_MODEL_LOADED(pedModelHash) && STREAMING::HAS_ANIM_DICT_LOADED(animDict))
 	{
 		return true;
 	}
 	else
 	{
-		STREAMING::REQUEST_MODEL(hLocal_7);
-		STREAMING::REQUEST_ANIM_DICT(sLocal_8);
+		STREAMING::REQUEST_MODEL(pedModelHash);
+		STREAMING::REQUEST_ANIM_DICT(animDict);
 	}
 
 	return false;
