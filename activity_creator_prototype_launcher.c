@@ -143,7 +143,7 @@ void main() // Position - 0x0
 	iLocal_39 = 49;
 	iLocal_40 = 64;
 	fLocal_64 = (0.05f + 0.275f) - 0.01f;
-	func_2();
+	EnsureNetworked();
 
 	while (true)
 	{
@@ -159,7 +159,7 @@ void func_1() // Position - 0x98
 	return;
 }
 
-void func_2() // Position - 0xA0
+void EnsureNetworked() // Position - 0xA0
 {
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
@@ -174,7 +174,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
 			if (!bNoTerminate)
-				func_7();
+				Terminate();
 			else
 				return 0;
 	
@@ -184,26 +184,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					if (!bNoTerminate)
-						func_7();
+						Terminate();
 					else
 						return 0;
 			
 				if (func_5())
 					if (!bNoTerminate)
-						func_7();
+						Terminate();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
 					if (!bNoTerminate)
-						func_7();
+						Terminate();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
 				if (!bNoTerminate)
-					func_7();
+					Terminate();
 				else
 					return 0;
 			}
@@ -218,12 +218,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			if (!bNoTerminate)
-				func_7();
+				Terminate();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
 		if (!bNoTerminate)
-			func_7();
+			Terminate();
 		else
 			return 0;
 
@@ -249,7 +249,7 @@ BOOL func_6(BOOL bParam0) // Position - 0x1F4
 	return Global_1575038;
 }
 
-void func_7() // Position - 0x205
+void Terminate() // Position - 0x205
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

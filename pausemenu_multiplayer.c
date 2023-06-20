@@ -36260,9 +36260,9 @@ void func_786(int* piParam0) // Position - 0x362D0
 
 void func_787(var uParam0) // Position - 0x362F4
 {
-	*uParam0 = Global_1925194;
-	uParam0->f_1 = Global_1925195;
-	uParam0->f_2 = Global_1925196;
+	*uParam0 = G_PedModelHash;
+	uParam0->f_1 = G_VehicleHash;
+	uParam0->f_2 = G_PedWeaponHash;
 	uParam0->f_3 = 0;
 	uParam0->f_4 = 0;
 	uParam0->f_5 = 1;
@@ -71158,11 +71158,11 @@ void func_1142(int iParam0) // Position - 0x7FDEF
 	{
 		TEXT_LABEL_ASSIGN_STRING(&unk2, "gcucpm", 32);
 		TEXT_LABEL_APPEND_INT(&unk2, i, 32);
-		func_1070(&unk2, &unk, &iParam0, Global_1925194, -2340845);
+		func_1070(&unk2, &unk, &iParam0, G_PedModelHash, -2340845);
 		Global_4718592.f_181152[i] = unk;
 		TEXT_LABEL_ASSIGN_STRING(&unk2, "gcucvm", 32);
 		TEXT_LABEL_APPEND_INT(&unk2, i, 32);
-		func_1070(&unk2, &unk, &iParam0, Global_1925195, -2340845);
+		func_1070(&unk2, &unk, &iParam0, G_VehicleHash, -2340845);
 		Global_4718592.f_181152[i].f_1 = unk;
 		TEXT_LABEL_ASSIGN_STRING(&unk2, "gcucovcl", 32);
 		TEXT_LABEL_APPEND_INT(&unk2, i, 32);
@@ -71178,7 +71178,7 @@ void func_1142(int iParam0) // Position - 0x7FDEF
 		func_1070(&unk2, &(Global_4718592.f_181152[i].f_12), &iParam0, -1, -2340845);
 		TEXT_LABEL_ASSIGN_STRING(&unk2, "gcucdw", 32);
 		TEXT_LABEL_APPEND_INT(&unk2, i, 32);
-		func_1070(&unk2, &unk, &iParam0, Global_1925196, -2340845);
+		func_1070(&unk2, &unk, &iParam0, G_PedWeaponHash, -2340845);
 		Global_4718592.f_181152[i].f_2 = unk;
 		TEXT_LABEL_ASSIGN_STRING(&unk2, "gcucrw1", 32);
 		TEXT_LABEL_APPEND_INT(&unk2, i, 32);

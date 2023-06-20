@@ -45,9 +45,9 @@ void main() // Position - 0x0
 	Global_1890712 = 1;
 	Global_1925190 = 1;
 	Global_1925191 = -1;
-	Global_1925194 = joaat("S_M_Y_BlackOps_01");
-	Global_1925195 = joaat("patriot");
-	Global_1925196 = joaat("WEAPON_MICROSMG");
+	G_PedModelHash = joaat("S_M_Y_BlackOps_01");
+	G_VehicleHash = joaat("patriot");
+	G_PedWeaponHash = joaat("WEAPON_MICROSMG");
 	Global_1926445 = 1f;
 	Global_1926485 = -1;
 	Global_1926494 = -1;
@@ -59,7 +59,7 @@ void main() // Position - 0x0
 	Global_1935840 = { 1204.2096f, -3107.2524f, 4.5502f };
 	Global_1935844 = { 718.0308f, -976.4414f, 23.9148f };
 	Global_1945119 = 1;
-	Global_1946105 = joaat("WEAPON_VEHICLE_ROCKET");
+	G_VehicleWeaponHash = joaat("WEAPON_VEHICLE_ROCKET");
 	Global_1950502 = -1;
 	Global_1950503 = -3;
 	Global_1950509 = -1;

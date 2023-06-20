@@ -122,7 +122,7 @@ BOOL func_3() // Position - 0x134
 void func_4() // Position - 0x15D
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &G_AudioRef, true);
 
 	return;
 }
@@ -152,8 +152,8 @@ void func_6() // Position - 0x1EF
 
 void func_7() // Position - 0x1FB
 {
-	func_9(Global_20481, "SET_DATA_SLOT_EMPTY", 24f, -1082130432, -1082130432, -1082130432, -1082130432);
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+	func_9(G_Scaleform, "SET_DATA_SLOT_EMPTY", 24f, -1082130432, -1082130432, -1082130432, -1082130432);
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(24);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 
@@ -195,7 +195,7 @@ void func_7() // Position - 0x1FB
 	}
 
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-	func_9(Global_20481, "DISPLAY_VIEW", 24f, SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432);
+	func_9(G_Scaleform, "DISPLAY_VIEW", 24f, SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432);
 	return;
 }
 
@@ -237,16 +237,16 @@ void func_11() // Position - 0x417
 {
 	if (Global_20488)
 	{
-		func_12(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
-		func_12(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
+		func_12(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
+		func_12(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
 	}
 	else
 	{
-		func_12(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
-		func_12(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
+		func_12(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
+		func_12(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 
-	func_12(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+	func_12(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 	MISC::CLEAR_BIT(&Global_8370, 17);
 	return;
 }

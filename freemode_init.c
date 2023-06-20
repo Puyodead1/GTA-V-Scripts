@@ -3520,9 +3520,9 @@ void func_117() // Position - 0x3B3B
 	{
 		if (Global_20500.f_1 == 6)
 		{
-			func_122(Global_20481, "SET_DATA_SLOT_EMPTY", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
+			func_122(G_Scaleform, "SET_DATA_SLOT_EMPTY", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
 			func_118(1);
-			func_122(Global_20481, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20480), -1082130432, -1082130432, -1082130432);
+			func_122(G_Scaleform, "DISPLAY_VIEW", 1f, SYSTEM::TO_FLOAT(Global_20480), -1082130432, -1082130432, -1082130432);
 		}
 	}
 
@@ -3579,7 +3579,7 @@ void func_118(int iParam0) // Position - 0x3B98
 									Global_20708 = 0;
 								}
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3591,7 +3591,7 @@ void func_118(int iParam0) // Position - 0x3B98
 						
 							if (Global_2694571)
 								if (num == 14)
-									func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
+									func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
 						
 							Global_8939[i] = 1;
 						}
@@ -3623,7 +3623,7 @@ void func_118(int iParam0) // Position - 0x3B98
 												Global_22913 = Global_22913 + 1;
 								}
 							
-								func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22913), -1f, &Global_8377[num], 0, 0, 0, 0);
+								func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22913), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else if (num == 7)
 							{
@@ -3640,7 +3640,7 @@ void func_118(int iParam0) // Position - 0x3B98
 													value2 = value2 + 1;
 									}
 								
-									func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value2), -1f, &Global_8377[num], 0, 0, 0, 0);
+									func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value2), -1f, &Global_8377[num], 0, 0, 0, 0);
 								}
 								else
 								{
@@ -3662,16 +3662,16 @@ void func_118(int iParam0) // Position - 0x3B98
 											break;
 									}
 								
-									func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value3), -1f, &Global_8377[num], 0, 0, 0, 0);
+									func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value3), -1f, &Global_8377[num], 0, 0, 0, 0);
 								}
 							}
 							else if (num == 14)
 							{
-								func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
+								func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(Global_22908), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else if (num == 20)
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3687,7 +3687,7 @@ void func_118(int iParam0) // Position - 0x3B98
 								else
 									value4 = 255;
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3709,7 +3709,7 @@ void func_118(int iParam0) // Position - 0x3B98
 									Global_20708 = 0;
 								}
 							
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3720,7 +3720,7 @@ void func_118(int iParam0) // Position - 0x3B98
 							}
 							else if (num == 8)
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3731,7 +3731,7 @@ void func_118(int iParam0) // Position - 0x3B98
 							}
 							else if (num == 23 && MISC::ARE_STRINGS_EQUAL(&Global_8377[num], "CELL_BENWEB" /*Benny's*/) && IS_BIT_SET(Global_8371, 6))
 							{
-								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+								GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(1);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(i);
 								GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_8377[num].f_10);
@@ -3744,11 +3744,11 @@ void func_118(int iParam0) // Position - 0x3B98
 							{
 								value6 = 0;
 								value6 = Global_1890239.f_1;
-								func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value6), -1f, &Global_8377[num], 0, 0, 0, 0);
+								func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(value6), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 							else
 							{
-								func_119(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(0), -1f, &Global_8377[num], 0, 0, 0, 0);
+								func_119(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(1), SYSTEM::TO_FLOAT(i), SYSTEM::TO_FLOAT(Global_8377[num].f_10), SYSTEM::TO_FLOAT(0), -1f, &Global_8377[num], 0, 0, 0, 0);
 							}
 						
 							Global_8939[i] = 1;

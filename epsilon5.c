@@ -33838,7 +33838,7 @@ void func_206(eCharacter echParam0, int iParam1, int iParam2, const char* sParam
 		switch (Global_20500)
 		{
 			case CHAR_MICHAEL:
-				TEXT_LABEL_ASSIGN_STRING(&Global_20489, "Phone_SoundSet_Michael", 24);
+				TEXT_LABEL_ASSIGN_STRING(&G_AudioRef, "Phone_SoundSet_Michael", 24);
 				Global_44580 = Global_44580 + 1;
 			
 				if (Global_44580 > 16)
@@ -33846,7 +33846,7 @@ void func_206(eCharacter echParam0, int iParam1, int iParam2, const char* sParam
 				break;
 		
 			case CHAR_TREVOR:
-				TEXT_LABEL_ASSIGN_STRING(&Global_20489, "Phone_SoundSet_Trevor", 24);
+				TEXT_LABEL_ASSIGN_STRING(&G_AudioRef, "Phone_SoundSet_Trevor", 24);
 				Global_44582 = Global_44582 + 1;
 			
 				if (Global_44582 > 16)
@@ -33854,7 +33854,7 @@ void func_206(eCharacter echParam0, int iParam1, int iParam2, const char* sParam
 				break;
 		
 			case CHAR_FRANKLIN:
-				TEXT_LABEL_ASSIGN_STRING(&Global_20489, "Phone_SoundSet_Franklin", 24);
+				TEXT_LABEL_ASSIGN_STRING(&G_AudioRef, "Phone_SoundSet_Franklin", 24);
 				Global_44581 = Global_44581 + 1;
 			
 				if (Global_44581 > 16)
@@ -33862,11 +33862,11 @@ void func_206(eCharacter echParam0, int iParam1, int iParam2, const char* sParam
 				break;
 		
 			default:
-				TEXT_LABEL_ASSIGN_STRING(&Global_20489, "Phone_SoundSet_Default", 24);
+				TEXT_LABEL_ASSIGN_STRING(&G_AudioRef, "Phone_SoundSet_Default", 24);
 				break;
 		}
 	
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Notification", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Notification", &G_AudioRef, true);
 	}
 
 	return;

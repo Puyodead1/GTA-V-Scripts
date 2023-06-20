@@ -105865,9 +105865,9 @@ void func_625(var uParam0) // Position - 0x789B8
 
 void func_626(var uParam0) // Position - 0x789DC
 {
-	*uParam0 = Global_1925194;
-	uParam0->f_1 = Global_1925195;
-	uParam0->f_2 = Global_1925196;
+	*uParam0 = G_PedModelHash;
+	uParam0->f_1 = G_VehicleHash;
+	uParam0->f_2 = G_PedWeaponHash;
 	uParam0->f_3 = 0;
 	uParam0->f_4 = 0;
 	uParam0->f_5 = 1;

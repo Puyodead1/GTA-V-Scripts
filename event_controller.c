@@ -3534,7 +3534,7 @@ void func_127(int iParam0) // Position - 0x38A3
 	if (Global_78689)
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Hang_Up", "Phone_SoundSet_Michael", true);
 	else
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Hang_Up", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Hang_Up", &G_AudioRef, true);
 
 	if (SCRIPT::GET_EVENT_DATA(SCRIPT_EVENT_QUEUE_NETWORK, iParam0, &eventData, 21))
 		func_129();
@@ -3955,18 +3955,18 @@ void func_146() // Position - 0x4007
 	Global_2801145.f_33 = -1;
 	Global_2801145.f_34 = -1;
 
-	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481) == true)
+	if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(G_Scaleform) == true)
 	{
 		if (Global_20488)
 		{
-			func_147(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
+			func_147(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, "CELL_202" /*END CALL*/, 0, 0, 0, 0);
 		
 			if (Global_20443)
-				func_147(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+				func_147(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 		else
 		{
-			func_147(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_147(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 6f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 	}
 

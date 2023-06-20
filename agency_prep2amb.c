@@ -1674,18 +1674,18 @@ int func_8() // Position - 0x35B
 	{
 		num2 = 145;
 	}
-	else if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481) == true)
+	else if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(G_Scaleform) == true)
 	{
 		if (func_11())
 		{
 			if (func_10())
 			{
 				num3 = 0;
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "GET_CURRENT_SELECTION");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "GET_CURRENT_SELECTION");
 				methodReturn = GRAPHICS::END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE();
 				gameTimer = MISC::GET_GAME_TIMER();
 			
-				while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(methodReturn) && num3 == 0 && GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481) == true)
+				while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(methodReturn) && num3 == 0 && GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(G_Scaleform) == true)
 				{
 					SYSTEM::WAIT(0);
 					gameTimer2 = MISC::GET_GAME_TIMER();
@@ -1702,7 +1702,7 @@ int func_8() // Position - 0x35B
 				num = Global_20506[scaleformMovieMethodReturnValueInt];
 				num2 = num;
 			
-				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(Global_20481) == false)
+				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(G_Scaleform) == false)
 					num2 = 145;
 			
 				if (num3 == 1)

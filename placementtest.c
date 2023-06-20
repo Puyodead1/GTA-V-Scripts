@@ -42,8 +42,8 @@
 	int iLocal_40 = 0;
 	var uLocal_41 = 0;
 	var uLocal_42 = 0;
-	int iLocal_43 = 0;
-	int iLocal_44 = 0;
+	int state = 0;
+	int gameTimer = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -74,7 +74,7 @@ void main() // Position - 0x0
 	iLocal_38 = 65;
 	iLocal_39 = 49;
 	iLocal_40 = 64;
-	scaleformHandle = func_13();
+	scaleformHandle = LoadScaleformMovie();
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -83,20 +83,20 @@ void main() // Position - 0x0
 	{
 		if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleformHandle))
 		{
-			switch (iLocal_43)
+			switch (state)
 			{
 				case 0:
-					func_11(&scaleformHandle, "OFFR_BLIP_R5", 255, 0, 255, 255, false);
-					func_10(&scaleformHandle);
-					iLocal_44 = MISC::GET_GAME_TIMER();
-					iLocal_43 = 1;
+					SetSplashTextLabel(&scaleformHandle, "OFFR_BLIP_R5", 255, 0, 255, 255, false);
+					TransitionIn(&scaleformHandle);
+					gameTimer = MISC::GET_GAME_TIMER();
+					state = 1;
 					break;
 			
 				case 1:
-					if (MISC::GET_GAME_TIMER() - iLocal_44 > 3000)
+					if (MISC::GET_GAME_TIMER() - gameTimer > 3000)
 					{
-						func_9(&scaleformHandle);
-						iLocal_43 = 2;
+						TransitionOut(&scaleformHandle);
+						state = 2;
 					}
 					break;
 			}
@@ -110,25 +110,25 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1(var uParam0, BOOL bParam1) // Position - 0xEF
+BOOL func_1(var scaleform, BOOL bParam1) // Position - 0xEF
 {
-	if (!func_8(&(uParam0->f_2)))
-		func_6(&(uParam0->f_2));
+	if (!func_8(&(scaleform->f_2)))
+		func_6(&(scaleform->f_2));
 
 	HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_RETICLE);
 	GRAPHICS::SET_SCRIPT_GFX_DRAW_ORDER(1);
-	GRAPHICS::DRAW_SCALEFORM_MOVIE(*uParam0, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
+	GRAPHICS::DRAW_SCALEFORM_MOVIE(*scaleform, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
 
 	if (bParam1)
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 			return false;
 
-	if (uParam0->f_1 == -1)
+	if (scaleform->f_1 == -1)
 		return true;
 
-	if (func_3(&(uParam0->f_2)) * 1000f > SYSTEM::TO_FLOAT(uParam0->f_1))
+	if (func_3(&(scaleform->f_2)) * 1000f > SYSTEM::TO_FLOAT(scaleform->f_1))
 	{
-		func_2(&(uParam0->f_2));
+		func_2(&(scaleform->f_2));
 		return false;
 	}
 
@@ -205,51 +205,51 @@ BOOL func_8(var uParam0) // Position - 0x266
 	return IS_BIT_SET(*uParam0, 1);
 }
 
-void func_9(var uParam0) // Position - 0x273
+void TransitionOut(var scaleform) // Position - 0x273
 {
-	uParam0->f_1 = 300;
-	func_6(&(uParam0->f_2));
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_OUT");
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(300);
+	scaleform->f_1 = 300;
+	func_6(&(scaleform->f_2));
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*scaleform, "SPLASH_TEXT_TRANSITION_OUT");
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(300); // duration
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;
 }
 
-void func_10(var uParam0) // Position - 0x2A0
+void TransitionIn(var scaleform) // Position - 0x2A0
 {
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*scaleform, "SPLASH_TEXT_TRANSITION_IN");
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;
 }
 
-void func_11(var uParam0, char* sParam1, int iParam2, int iParam3, int iParam4, int iParam5, BOOL bParam6) // Position - 0x2B7
+void SetSplashTextLabel(var scaleform, char* text, int r, int g, int b, int a, BOOL bTransitionIn) // Position - 0x2B7
 {
-	uParam0->f_1 = -1;
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_LABEL");
-	func_12(sParam1);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam2);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam3);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam4);
-	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(iParam5);
+	scaleform->f_1 = -1;
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*scaleform, "SPLASH_TEXT_LABEL");
+	DisplayScaleformText(text);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(r);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(g);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(b);
+	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(a);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 
-	if (bParam6)
+	if (bTransitionIn)
 	{
-		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*uParam0, "SPLASH_TEXT_TRANSITION_IN");
+		GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(*scaleform, "SPLASH_TEXT_TRANSITION_IN");
 		GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	}
 
 	return;
 }
 
-void func_12(char* sParam0) // Position - 0x305
+void DisplayScaleformText(char* componentType) // Position - 0x305
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(componentType);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-int func_13() // Position - 0x317
+int LoadScaleformMovie() // Position - 0x317
 {
 	return GRAPHICS::REQUEST_SCALEFORM_MOVIE("SPLASH_TEXT");
 }

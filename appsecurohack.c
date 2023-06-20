@@ -38,7 +38,7 @@ void main() // Position - 0x0
 
 	if (iLocal_18 == 0)
 	{
-		func_10();
+		SetDataSlotAndSoftKeys();
 		iLocal_18 = 1;
 	}
 
@@ -52,13 +52,13 @@ void main() // Position - 0x0
 			{
 				case 7:
 					if (iLocal_18 == 1)
-						func_6();
+						SetDataSlotAndDisableControlAction();
 					break;
 			
 				case 8:
 					if (func_5(FRONTEND_CONTROL, Global_20468, 0))
 					{
-						func_4();
+						PlayMenuBackSound();
 						Global_20478 = 1;
 					
 						if (Global_20500.f_1 > 3)
@@ -71,16 +71,16 @@ void main() // Position - 0x0
 			}
 		
 			if (func_3())
-				func_2();
+				Terminate();
 		}
 		else
 		{
 			Global_20502 = 6;
-			func_2();
+			Terminate();
 		}
 	
 		if (func_1())
-			func_2();
+			Terminate();
 	}
 
 	return;
@@ -97,7 +97,7 @@ BOOL func_1() // Position - 0xC9
 	return false;
 }
 
-void func_2() // Position - 0x10C
+void Terminate() // Position - 0x10C
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
@@ -114,10 +114,10 @@ BOOL func_3() // Position - 0x118
 	return false;
 }
 
-void func_4() // Position - 0x141
+void PlayMenuBackSound() // Position - 0x141
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &G_AudioRef, true);
 
 	return;
 }
@@ -139,36 +139,36 @@ BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_6() // Position - 0x1D3
+void SetDataSlotAndDisableControlAction() // Position - 0x1D3
 {
-	func_7();
+	SetDataSlot();
 	PAD::DISABLE_CONTROL_ACTION(PLAYER_CONTROL, INPUT_VEH_CIN_CAM, true);
 	return;
 }
 
-void func_7() // Position - 0x1E7
+void SetDataSlot() // Position - 0x1E7
 {
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "SET_DATA_SLOT");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542590);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542589);
-	func_9("");
-	func_9(&Global_4542591);
+	DrawScaleformTextComponent("");
+	DrawScaleformTextComponent(&Global_4542591);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "DISPLAY_VIEW");
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "DISPLAY_VIEW");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(27);
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 
 	if (!IS_BIT_SET(Global_4718592.f_21, 30))
-		func_8(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
+		SetScaleformParams(G_Scaleform, "SET_SOFT_KEYS", 3f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
 
 	return;
 }
 
-void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x262
+void SetScaleformParams(int scaleform, char* methodName, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, const char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x262
 {
-	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
+	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, methodName);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
 
 	if (fParam3 != -1f)
@@ -184,35 +184,35 @@ void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fPar
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam6));
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam7))
-		func_9(sParam7);
+		DrawScaleformTextComponent(sParam7);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam8))
-		func_9(sParam8);
+		DrawScaleformTextComponent(sParam8);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam9))
-		func_9(sParam9);
+		DrawScaleformTextComponent(sParam9);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam10))
-		func_9(sParam10);
+		DrawScaleformTextComponent(sParam10);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam11))
-		func_9(sParam11);
+		DrawScaleformTextComponent(sParam11);
 
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;
 }
 
-void func_9(const char* sParam0) // Position - 0x315
+void DrawScaleformTextComponent(const char* componentType) // Position - 0x315
 {
-	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
+	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(componentType);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_10() // Position - 0x327
+void SetDataSlotAndSoftKeys() // Position - 0x327
 {
-	func_7();
-	func_8(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
+	SetDataSlot();
+	SetScaleformParams(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 27f, -1f, -1f, 0, 0, 0, 0, 0);
 	return;
 }
 

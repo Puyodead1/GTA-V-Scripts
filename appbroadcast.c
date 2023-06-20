@@ -532,7 +532,7 @@ void func_32() // Position - 0x6ED
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &G_AudioRef, true);
 		func_33();
 	}
 
@@ -614,17 +614,17 @@ void func_38() // Position - 0x805
 	if (!(Global_20500.f_1 == 7))
 		Global_20500.f_1 = 7;
 
-	func_46(Global_20481, "SET_DATA_SLOT_EMPTY", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
+	func_46(G_Scaleform, "SET_DATA_SLOT_EMPTY", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
 
 	if (func_17())
 		if (Global_2694515)
-			func_45(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_44, 0, 0, 0, 0);
+			func_45(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_44, 0, 0, 0, 0);
 		else
-			func_45(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_40, 0, 0, 0, 0);
+			func_45(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_40, 0, 0, 0, 0);
 	else
-		func_45(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_48, 0, 0, 0, 0);
+		func_45(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(13), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(12), -1f, -1f, &uLocal_48, 0, 0, 0, 0);
 
-	func_46(Global_20481, "DISPLAY_VIEW", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
+	func_46(G_Scaleform, "DISPLAY_VIEW", SYSTEM::TO_FLOAT(13), -1082130432, -1082130432, -1082130432, -1082130432);
 	func_42(&uLocal_36);
 
 	if (func_17())
@@ -647,7 +647,7 @@ void func_40(int iParam0, int iParam1, char* sParam2, int iParam3, int* piParam4
 {
 	if (iParam1 == 1)
 	{
-		func_45(Global_20481, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 0f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
+		func_45(G_Scaleform, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 0f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
 		MISC::CLEAR_BIT(piParam4, iParam3);
 		func_41(iParam5, false);
 		return;
@@ -655,13 +655,13 @@ void func_40(int iParam0, int iParam1, char* sParam2, int iParam3, int* piParam4
 
 	if (Global_20488)
 	{
-		func_45(Global_20481, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 1f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, sParam2, 0, 0, 0, 0);
+		func_45(G_Scaleform, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 1f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, sParam2, 0, 0, 0, 0);
 		MISC::SET_BIT(piParam4, iParam3);
 		func_41(iParam5, true);
 		return;
 	}
 
-	func_45(Global_20481, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 1f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
+	func_45(G_Scaleform, "SET_SOFT_KEYS", SYSTEM::TO_FLOAT(iParam0), 1f, SYSTEM::TO_FLOAT(iParam1), -1f, -1f, 0, 0, 0, 0, 0);
 	MISC::SET_BIT(piParam4, iParam3);
 	func_41(iParam5, true);
 	return;
@@ -684,7 +684,7 @@ void func_41(int iParam0, BOOL bParam1) // Position - 0x9E7
 
 void func_42(const char* sParam0) // Position - 0xA12
 {
-	func_43(Global_20481, "SET_HEADER", sParam0, 0, 0, 0, 0);
+	func_43(G_Scaleform, "SET_HEADER", sParam0, 0, 0, 0, 0);
 	return;
 }
 

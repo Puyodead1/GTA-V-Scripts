@@ -54,8 +54,8 @@ void main() // Position - 0x0
 	Global_20703 = 0;
 	func_18();
 	Global_20500.f_1 = 7;
-	func_17(Global_20481, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
-	func_16(Global_20481, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+	func_17(G_Scaleform, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
+	func_16(G_Scaleform, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
 
 	while (true)
 	{
@@ -98,8 +98,8 @@ void main() // Position - 0x0
 				Global_22911 = 0;
 				Global_20500.f_1 = 7;
 				func_18();
-				func_17(Global_20481, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
-				func_16(Global_20481, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+				func_17(G_Scaleform, "DISPLAY_VIEW", 14f, -1082130432, -1082130432, -1082130432, -1082130432);
+				func_16(G_Scaleform, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
 			}
 		}
 	
@@ -248,9 +248,9 @@ void func_11() // Position - 0x4FC
 	{
 		iLocal_23 = uLocal_16[iLocal_22];
 		Global_22911 = 1;
-		func_12(Global_20481, "SET_DATA_SLOT", 15f, 0f, -1f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, "CELL_285" /*Move*/, "CELL_284" /*Zoom*/, 0);
-		func_17(Global_20481, "DISPLAY_VIEW", 15f, -1082130432, -1082130432, -1082130432, -1082130432);
-		func_16(Global_20481, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
+		func_12(G_Scaleform, "SET_DATA_SLOT", 15f, 0f, -1f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, "CELL_285" /*Move*/, "CELL_284" /*Zoom*/, 0);
+		func_17(G_Scaleform, "DISPLAY_VIEW", 15f, -1082130432, -1082130432, -1082130432, -1082130432);
+		func_16(G_Scaleform, "SET_HEADER", "CELL_4" /*Sidetasks*/, 0, 0, 0, 0);
 		Global_20500.f_1 = 8;
 		Global_22911 = 1;
 	}
@@ -471,7 +471,7 @@ void func_18() // Position - 0x8FD
 			iLocal_21 = iLocal_21 + 1;
 	}
 
-	func_12(Global_20481, "SET_DATA_SLOT", 14f, 0f, 25f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, 0, 0, 0);
+	func_12(G_Scaleform, "SET_DATA_SLOT", 14f, 0f, 25f, -1f, -1f, "CELL_287" /*Send Photo(s)*/, "CELL_280" /*Take Photo*/, 0, 0, 0);
 	return;
 }
 

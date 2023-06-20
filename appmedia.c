@@ -336,7 +336,7 @@ void func_3() // Position - 0x199
 {
 	int value;
 
-	func_7(Global_20481, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+	func_7(G_Scaleform, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
 	iLocal_19 = GRAPHICS::GET_MAXIMUM_NUMBER_OF_PHOTOS();
 	iLocal_20 = 0;
 	value = 0;
@@ -345,7 +345,7 @@ void func_3() // Position - 0x199
 	{
 		if (GRAPHICS::DOES_THIS_PHOTO_SLOT_CONTAIN_A_VALID_PHOTO(iLocal_20))
 		{
-			func_6(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(value), SYSTEM::TO_FLOAT(0), -1f, -1f, &uLocal_50[iLocal_20], 0, 0, 0, 0);
+			func_6(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(value), SYSTEM::TO_FLOAT(0), -1f, -1f, &uLocal_50[iLocal_20], 0, 0, 0, 0);
 			uLocal_24[value] = iLocal_20;
 			value = value + 1;
 		}
@@ -353,21 +353,21 @@ void func_3() // Position - 0x199
 		iLocal_20 = iLocal_20 + 1;
 	}
 
-	func_7(Global_20481, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-	func_4(Global_20481, "SET_HEADER", "CELL_MSMENU_1", 0, 0, 0, 0);
+	func_7(G_Scaleform, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+	func_4(G_Scaleform, "SET_HEADER", "CELL_MSMENU_1", 0, 0, 0, 0);
 
 	if (Global_20488)
 	{
-		func_6(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
-		func_6(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+		func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
+		func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 	}
 	else
 	{
-		func_6(Global_20481, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-		func_6(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+		func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 1f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+		func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 
-	func_6(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+	func_6(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 	MISC::CLEAR_BIT(&Global_8370, 17);
 	return;
 }
@@ -551,24 +551,24 @@ void func_9() // Position - 0x536
 	{
 		bLocal_208 = false;
 		bLocal_209 = false;
-		func_7(Global_20481, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-		func_6(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_3", 0, 0, 0, 0);
+		func_7(G_Scaleform, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+		func_6(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_3", 0, 0, 0, 0);
 	
 		if (Global_20488)
 		{
-			func_6(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
-			func_6(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+			func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
+			func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 		}
 		else
 		{
-			func_6(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-			func_6(Global_20481, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+			func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 		}
 	
-		func_6(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+		func_6(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 		MISC::CLEAR_BIT(&Global_8370, 17);
-		func_7(Global_20481, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-		func_4(Global_20481, "SET_HEADER", &uLocal_50[iLocal_21], 0, 0, 0, 0);
+		func_7(G_Scaleform, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+		func_4(G_Scaleform, "SET_HEADER", &uLocal_50[iLocal_21], 0, 0, 0, 0);
 	}
 
 	return;
@@ -618,7 +618,7 @@ void func_13() // Position - 0x770
 void func_14() // Position - 0x79A
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &G_AudioRef, true);
 
 	return;
 }
@@ -677,8 +677,8 @@ void func_16() // Position - 0x82D
 
 void func_17() // Position - 0x8A2
 {
-	func_7(Global_20481, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
-	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20489, true);
+	func_7(G_Scaleform, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(3), -1082130432, -1082130432, -1082130432, -1082130432);
+	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &G_AudioRef, true);
 	func_18();
 	return;
 }
@@ -718,8 +718,8 @@ BOOL func_19() // Position - 0x900
 
 void func_20() // Position - 0x947
 {
-	func_7(Global_20481, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
-	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &Global_20489, true);
+	func_7(G_Scaleform, "SET_INPUT_EVENT", SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432, -1082130432);
+	AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Navigate", &G_AudioRef, true);
 	func_21();
 	return;
 }
@@ -746,7 +746,7 @@ void func_22() // Position - 0x9A5
 			MISC::CLEAR_BIT(&Global_8371, 15);
 			func_24();
 			Global_20478 = 1;
-			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(Global_20481, "GET_CURRENT_SELECTION");
+			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "GET_CURRENT_SELECTION");
 			iLocal_18 = GRAPHICS::END_SCALEFORM_MOVIE_METHOD_RETURN_VALUE();
 		
 			while (!GRAPHICS::IS_SCALEFORM_MOVIE_METHOD_RETURN_VALUE_READY(iLocal_18))
@@ -764,23 +764,23 @@ void func_22() // Position - 0x9A5
 				{
 					if (Global_22880 == 0)
 					{
-						func_7(Global_20481, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-						func_6(Global_20481, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_2", 0, 0, 0, 0);
-						func_7(Global_20481, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
-						func_4(Global_20481, "SET_HEADER", &uLocal_50[iLocal_21], 0, 0, 0, 0);
+						func_7(G_Scaleform, "SET_DATA_SLOT_EMPTY", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+						func_6(G_Scaleform, "SET_DATA_SLOT", SYSTEM::TO_FLOAT(18), SYSTEM::TO_FLOAT(0), SYSTEM::TO_FLOAT(0), -1f, -1f, "CELL_MSMENU_2", 0, 0, 0, 0);
+						func_7(G_Scaleform, "DISPLAY_VIEW", 18f, -1082130432, -1082130432, -1082130432, -1082130432);
+						func_4(G_Scaleform, "SET_HEADER", &uLocal_50[iLocal_21], 0, 0, 0, 0);
 					
 						if (Global_20488)
 						{
-							func_6(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
-							func_6(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
+							func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, "CELL_205" /*SELECT*/, 0, 0, 0, 0);
+							func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, "CELL_206" /*BACK*/, 0, 0, 0, 0);
 						}
 						else
 						{
-							func_6(Global_20481, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
-							func_6(Global_20481, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
+							func_6(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 2f, -1f, -1f, 0, 0, 0, 0, 0);
+							func_6(G_Scaleform, "SET_SOFT_KEYS", 3f, 0f, 4f, -1f, -1f, 0, 0, 0, 0, 0);
 						}
 					
-						func_6(Global_20481, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+						func_6(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 						MISC::CLEAR_BIT(&Global_8370, 17);
 						Global_22884 = iLocal_21;
 						Global_22880 = 12;
@@ -814,7 +814,7 @@ void func_24() // Position - 0xB59
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 	{
-		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &Global_20489, true);
+		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Accept", &G_AudioRef, true);
 		func_25();
 	}
 
