@@ -51,7 +51,7 @@ void main() // Position - 0x0
 	fLocal_28 = 0f;
 	MISC::NETWORK_SET_SCRIPT_IS_SAFE_FOR_NETWORK_GAME();
 	func_10();
-	func_7();
+	SetSoftKeys();
 	SYSTEM::SETTIMERA(0);
 	SYSTEM::SETTIMERB(0);
 
@@ -90,10 +90,10 @@ void main() // Position - 0x0
 				case 8:
 					if (func_6(FRONTEND_CONTROL, Global_20468, 0))
 					{
-						func_5();
+						PlayMenuBackSound();
 						Global_20478 = 1;
 						func_10();
-						func_7();
+						SetSoftKeys();
 					
 						if (Global_20500.f_1 > 3)
 							Global_20500.f_1 = 7;
@@ -105,16 +105,16 @@ void main() // Position - 0x0
 			}
 		
 			if (func_4())
-				func_2();
+				CleanupAndTerminate();
 		}
 		else
 		{
 			Global_20502 = 6;
-			func_2();
+			CleanupAndTerminate();
 		}
 	
 		if (func_1())
-			func_2();
+			CleanupAndTerminate();
 	}
 
 	return;
@@ -131,7 +131,7 @@ BOOL func_1() // Position - 0x144
 	return false;
 }
 
-void func_2() // Position - 0x187
+void CleanupAndTerminate() // Position - 0x187
 {
 	func_3(0, 0);
 	func_3(1, 0);
@@ -160,7 +160,7 @@ BOOL func_4() // Position - 0x1CC
 	return false;
 }
 
-void func_5() // Position - 0x1F5
+void PlayMenuBackSound() // Position - 0x1F5
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &G_AudioRef, true);
@@ -185,25 +185,25 @@ BOOL func_6(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_7() // Position - 0x288
+void SetSoftKeys() // Position - 0x288
 {
 	if (Global_20488)
 	{
-		func_8(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
-		func_8(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
 	}
 	else
 	{
-		func_8(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
-		func_8(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 
-	func_8(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+	SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 	MISC::CLEAR_BIT(&Global_8370, 17);
 	return;
 }
 
-void func_8(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x31A
+void SetScaleformSoftKeys(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x31A
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));

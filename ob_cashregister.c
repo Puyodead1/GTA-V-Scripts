@@ -15,7 +15,7 @@
 	var uLocal_13 = 0;
 	var uLocal_14 = 0;
 	int iLocal_15 = 0;
-	int iLocal_16 = 0;
+	int state = 0;
 	var uLocal_17 = 0;
 	var uLocal_18 = 0;
 	var uLocal_19 = 0;
@@ -42,7 +42,7 @@ void main() // Position - 0x0
 	{
 		if (IS_BIT_SET(Global_1666708, 1))
 		{
-			func_25();
+			Terminate();
 		}
 		else
 		{
@@ -54,7 +54,7 @@ void main() // Position - 0x0
 	}
 	else if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
 	{
-		func_25();
+		Terminate();
 	}
 
 	while (true)
@@ -63,27 +63,27 @@ void main() // Position - 0x0
 	
 		if (iLocal_20 == 1)
 			if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
-				func_25();
+				Terminate();
 	
 		if (ENTITY::DOES_ENTITY_EXIST(obScriptParam_21))
 		{
 			if (BRAIN::IS_OBJECT_WITHIN_BRAIN_ACTIVATION_RANGE(obScriptParam_21))
 			{
-				switch (iLocal_16)
+				switch (state)
 				{
 					case 0:
 						if (ENTITY::DOES_ENTITY_HAVE_DRAWABLE(obScriptParam_21))
 						{
 							uLocal_17 = { ENTITY::GET_ENTITY_COORDS(obScriptParam_21, true) };
-							iLocal_16 = 1;
+							state = 1;
 						}
 						break;
 				
 					case 1:
 						if (OBJECT::HAS_OBJECT_BEEN_BROKEN(obScriptParam_21, 0) && ENTITY::IS_ENTITY_VISIBLE(obScriptParam_21) && !ENTITY::IS_ENTITY_A_MISSION_ENTITY(obScriptParam_21))
 						{
-							func_1();
-							iLocal_16 = 2;
+							SpawnMoneyBag();
+							state = 2;
 						}
 						break;
 				
@@ -93,19 +93,19 @@ void main() // Position - 0x0
 			}
 			else
 			{
-				func_25();
+				Terminate();
 			}
 		}
 		else
 		{
-			func_25();
+			Terminate();
 		}
 	}
 
 	return;
 }
 
-void func_1() // Position - 0x111
+void SpawnMoneyBag() // Position - 0x111
 {
 	Hash model;
 	Hash pickupHash;
@@ -371,14 +371,14 @@ BOOL _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x5DA
 	if (!NETWORK::NETWORK_IS_SIGNED_ONLINE())
 		return true;
 
-	if (_GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() != 0)
-		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(_GET_CURRENT_SESSION_TYPE_SCRIPT_HASH()) == 0)
+	if (func_15() != 0)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(func_15()) == 0)
 			return true;
 
 	return false;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x65E
+Hash func_15() // Position - 0x65E
 {
 	switch (func_17())
 	{
@@ -442,7 +442,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
 			if (!bNoTerminate)
-				func_24();
+				Terminate();
 			else
 				return 0;
 	
@@ -452,26 +452,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					if (!bNoTerminate)
-						func_24();
+						Terminate();
 					else
 						return 0;
 			
 				if (func_21())
 					if (!bNoTerminate)
-						func_24();
+						Terminate();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
 					if (!bNoTerminate)
-						func_24();
+						Terminate();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
 				if (!bNoTerminate)
-					func_24();
+					Terminate();
 				else
 					return 0;
 			}
@@ -486,12 +486,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			if (!bNoTerminate)
-				func_24();
+				Terminate();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
 		if (!bNoTerminate)
-			func_24();
+			Terminate();
 		else
 			return 0;
 
@@ -504,13 +504,7 @@ BOOL func_23(BOOL bParam0) // Position - 0x817
 	return Global_1575038;
 }
 
-void func_24() // Position - 0x828
-{
-	SCRIPT::TERMINATE_THIS_THREAD();
-	return;
-}
-
-void func_25() // Position - 0x834
+void Terminate() // Position - 0x834
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

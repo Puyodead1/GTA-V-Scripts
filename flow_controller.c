@@ -121966,12 +121966,12 @@ void func_947() // Position - 0x9CABB
 
 	if (!Global_97899)
 	{
-		Global_98083 = CLOCK::GET_CLOCK_MONTH();
-		Global_98082 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-		Global_98081 = CLOCK::GET_CLOCK_HOURS();
+		G_ClockMonth = CLOCK::GET_CLOCK_MONTH();
+		G_ClockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+		G_ClockHours2 = CLOCK::GET_CLOCK_HOURS();
 		Global_97899 = true;
-		Global_97904 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-		Global_97903 = CLOCK::GET_CLOCK_HOURS();
+		G_ClockDayOfWeek = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+		G_ClockHours1 = CLOCK::GET_CLOCK_HOURS();
 		func_951();
 		return;
 	}
@@ -121979,9 +121979,9 @@ void func_947() // Position - 0x9CABB
 	clockMonth = CLOCK::GET_CLOCK_MONTH();
 	clockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
 	clockHours = CLOCK::GET_CLOCK_HOURS();
-	num = Global_98083;
-	num2 = Global_98082;
-	num3 = Global_98081;
+	num = G_ClockMonth;
+	num2 = G_ClockDayOfMonth;
+	num3 = G_ClockHours2;
 	num4 = 0;
 	num5 = 0;
 	i = 0;
@@ -122020,8 +122020,8 @@ void func_947() // Position - 0x9CABB
 		num6 = num6 + (24 - num3);
 		num6 = num6 + (24 - 24 - clockHours);
 		i = 0;
-		num5 = Global_97903;
-		num4 = Global_97904;
+		num5 = G_ClockHours1;
+		num4 = G_ClockDayOfWeek;
 	
 		for (i = 0; i < num6; i = i + 1)
 		{
@@ -122044,18 +122044,18 @@ void func_947() // Position - 0x9CABB
 			num5 = num5 + 1;
 		}
 	
-		Global_97903 = num5 - 1;
-		Global_97904 = num4;
+		G_ClockHours1 = num5 - 1;
+		G_ClockDayOfWeek = num4;
 	}
 	else
 	{
 		if (num3 > clockHours)
 		{
-			Global_98083 = clockMonth;
-			Global_98082 = clockDayOfMonth;
-			Global_98081 = clockHours;
-			Global_97904 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-			Global_97903 = CLOCK::GET_CLOCK_HOURS();
+			G_ClockMonth = clockMonth;
+			G_ClockDayOfMonth = clockDayOfMonth;
+			G_ClockHours2 = clockHours;
+			G_ClockDayOfWeek = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+			G_ClockHours1 = CLOCK::GET_CLOCK_HOURS();
 			return;
 		}
 	
@@ -122067,8 +122067,8 @@ void func_947() // Position - 0x9CABB
 		{
 			num6 = clockHours - num3;
 			i = 0;
-			num5 = Global_97903;
-			num4 = Global_97904;
+			num5 = G_ClockHours1;
+			num4 = G_ClockDayOfWeek;
 		
 			for (i = 0; i < num6; i = i + 1)
 			{
@@ -122091,8 +122091,8 @@ void func_947() // Position - 0x9CABB
 					num4 = 0;
 			}
 		
-			Global_97903 = num5;
-			Global_97904 = num4;
+			G_ClockHours1 = num5;
+			G_ClockDayOfWeek = num4;
 		}
 	}
 
@@ -122103,9 +122103,9 @@ void func_947() // Position - 0x9CABB
 	}
 	else
 	{
-		Global_98083 = clockMonth;
-		Global_98082 = clockDayOfMonth;
-		Global_98081 = clockHours;
+		G_ClockMonth = clockMonth;
+		G_ClockDayOfMonth = clockDayOfMonth;
+		G_ClockHours2 = clockHours;
 	}
 
 	return;
@@ -122201,8 +122201,8 @@ void func_951() // Position - 0x9CE65
 	int i;
 	int j;
 
-	Global_97903 = 0;
-	Global_97904 = 0;
+	G_ClockHours1 = 0;
+	G_ClockDayOfWeek = 0;
 	i = 0;
 	j = 0;
 
@@ -122220,11 +122220,11 @@ void func_951() // Position - 0x9CE65
 
 void func_952() // Position - 0x9CEB3
 {
-	Global_97903 = 0;
-	Global_97904 = 0;
-	Global_98081 = CLOCK::GET_CLOCK_HOURS();
-	Global_98082 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-	Global_98083 = CLOCK::GET_CLOCK_MONTH();
+	G_ClockHours1 = 0;
+	G_ClockDayOfWeek = 0;
+	G_ClockHours2 = CLOCK::GET_CLOCK_HOURS();
+	G_ClockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+	G_ClockMonth = CLOCK::GET_CLOCK_MONTH();
 	return;
 }
 

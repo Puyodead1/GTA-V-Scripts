@@ -75,7 +75,7 @@
 	int iLocal_73 = 0;
 	int iLocal_74 = 0;
 	int iLocal_75 = 0;
-	int iLocal_76 = 0;
+	int state = 0;
 	int iLocal_77 = 2;
 	var uLocal_78 = 0;
 	var uLocal_79 = 0;
@@ -90,17 +90,17 @@
 	float fLocal_88 = 0f;
 	float fLocal_89 = 0f;
 	int iLocal_90 = 0;
-	int iLocal_91 = 0;
-	int iLocal_92 = 0;
-	int iLocal_93 = 0;
-	int iLocal_94 = 0;
-	int iLocal_95 = 0;
+	int ufoEvilSoundID = 0;
+	int gameTimer = 0;
+	int ufoEvilSoundPlaytime = 0;
+	int soundStunPlaytime = 0;
+	int soundElecCracklePlaytime = 0;
 	int iLocal_96 = 0;
 	int iLocal_97 = 0;
-	int iLocal_98 = 0;
-	int iLocal_99 = 0;
-	int iLocal_100 = 0;
-	int iLocal_101 = 0;
+	int timeoutSoundElecCrackle = 0;
+	int timeoutSoundStun = 0;
+	int elecCrackleSoundID = 0;
+	int stunSoundID = 0;
 	BOOL bLocal_102 = 0;
 	BOOL bLocal_103 = 0;
 #endregion
@@ -146,19 +146,19 @@ void main() // Position - 0x0
 	fLocal_88 = 60f;
 	fLocal_89 = 275f;
 	iLocal_90 = 1500;
-	iLocal_91 = -1;
-	iLocal_93 = 3000;
-	iLocal_94 = 708;
-	iLocal_95 = 377;
+	ufoEvilSoundID = -1;
+	ufoEvilSoundPlaytime = 3000;
+	soundStunPlaytime = 708;
+	soundElecCracklePlaytime = 377;
 	iLocal_96 = 1000;
 	iLocal_97 = 2093;
-	iLocal_100 = -1;
-	iLocal_101 = -1;
+	elecCrackleSoundID = -1;
+	stunSoundID = -1;
 	bLocal_102 = true;
 	bLocal_103 = true;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_12();
+		CleanupAndTerminate();
 
 	while (CAM::IS_SCREEN_FADED_OUT())
 	{
@@ -173,45 +173,45 @@ void main() // Position - 0x0
 
 	while (true)
 	{
-		func_11(PLAYER::PLAYER_PED_ID());
+		DoesEntityExistAndNotDead(PLAYER::PLAYER_PED_ID());
 	
 		if (Global_32288 == 1)
-			func_12();
+			CleanupAndTerminate();
 	
 		if (bLocal_84)
 		{
-			if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[0], 290f + 50f, true))
-				if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[1], 290f + 50f, true))
-					func_12();
+			if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[0], 290f + 50f, true))
+				if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[1], 290f + 50f, true))
+					CleanupAndTerminate();
 		
-			if (iLocal_76 != 0)
+			if (state != 0)
 			{
-				if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[0], fLocal_89 + 50f, true))
+				if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[0], fLocal_89 + 50f, true))
 				{
-					if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[1], fLocal_89 + 50f, true))
+					if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[1], fLocal_89 + 50f, true))
 					{
 						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", false, true);
 						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", false, true);
-						iLocal_76 = 0;
+						state = 0;
 						iLocal_75 = -1;
 					}
 				}
 			}
 		}
 	
-		func_8();
+		ApplyVehicleForce2();
 	
-		switch (iLocal_76)
+		switch (state)
 		{
 			case 0:
 				i = 0;
 			
 				for (i = 0; i < iLocal_77; i = i + 1)
 				{
-					if (func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[i], fLocal_89, true))
+					if (CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[i], fLocal_89, true))
 					{
 						iLocal_75 = i;
-						iLocal_76 = 1;
+						state = 1;
 						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", true, true);
 						AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", true, true);
 					}
@@ -223,10 +223,10 @@ void main() // Position - 0x0
 			
 				for (i = 0; i < iLocal_77; i = i + 1)
 				{
-					if (func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[i], fLocal_86, true))
+					if (CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[i], fLocal_86, true))
 					{
 						iLocal_75 = i;
-						iLocal_76 = 2;
+						state = 2;
 					}
 				}
 				break;
@@ -234,57 +234,57 @@ void main() // Position - 0x0
 			case 2:
 				if (iLocal_75 == -1)
 				{
-					iLocal_76 = 1;
+					state = 1;
 				}
 				else
 				{
 					iLocal_73 = MISC::GET_GAME_TIMER();
 					iLocal_74 = 0;
-					iLocal_76 = 3;
+					state = 3;
 				}
 				break;
 		
 			case 3:
-				if (func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_86, true))
+				if (CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_86, true))
 				{
 					iLocal_74 = MISC::GET_GAME_TIMER() - iLocal_73;
 				
 					if (iLocal_74 >= iLocal_90)
 					{
-						iLocal_76 = 4;
-						iLocal_91 = AUDIO::GET_SOUND_ID();
-						iLocal_92 = MISC::GET_GAME_TIMER();
+						state = 4;
+						ufoEvilSoundID = AUDIO::GET_SOUND_ID();
+						gameTimer = MISC::GET_GAME_TIMER();
 					
 						if (iLocal_75 == 0)
-							AUDIO::PLAY_SOUND_FROM_COORD(iLocal_91, "SPECIAL_EVIL_UFO_DEATH_RAY", iLocal_77[iLocal_75], 0, false, 0, false);
+							AUDIO::PLAY_SOUND_FROM_COORD(ufoEvilSoundID, "SPECIAL_EVIL_UFO_DEATH_RAY", iLocal_77[iLocal_75], 0, false, 0, false);
 						else
-							AUDIO::PLAY_SOUND_FROM_COORD(iLocal_91, "SPECIAL_EVIL_UFO_DEATH_RAY_3", iLocal_77[iLocal_75], 0, false, 0, false);
+							AUDIO::PLAY_SOUND_FROM_COORD(ufoEvilSoundID, "SPECIAL_EVIL_UFO_DEATH_RAY_3", iLocal_77[iLocal_75], 0, false, 0, false);
 					
-						func_7();
-						func_6();
+						PlayStunSoundIfTimePassed();
+						PlayElecCrackleSoundIfTimePassed();
 					}
 				}
 				else
 				{
-					iLocal_76 = 1;
+					state = 1;
 				}
 				break;
 		
 			case 4:
-				func_5();
-				func_7();
-				func_6();
+				ApplyVehicleForce();
+				PlayStunSoundIfTimePassed();
+				PlayElecCrackleSoundIfTimePassed();
 			
-				if (MISC::GET_GAME_TIMER() > iLocal_92 + iLocal_93)
-					func_4(&iLocal_91);
+				if (MISC::GET_GAME_TIMER() > gameTimer + ufoEvilSoundPlaytime)
+					StopAndReleaseSound(&ufoEvilSoundID);
 			
-				if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_89, true))
+				if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_89, true))
 				{
-					func_1();
+					StartVehicleEngine();
 					iLocal_75 = -1;
-					iLocal_76 = 0;
-					func_4(&iLocal_101);
-					func_4(&iLocal_100);
+					state = 0;
+					StopAndReleaseSound(&stunSoundID);
+					StopAndReleaseSound(&elecCrackleSoundID);
 					AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", false, true);
 					AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", false, true);
 				}
@@ -297,17 +297,17 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x3A3
+void StartVehicleEngine() // Position - 0x3A3
 {
 	Vehicle vehiclePedIsIn;
 
-	if (func_11(PLAYER::PLAYER_PED_ID()))
+	if (DoesEntityExistAndNotDead(PLAYER::PLAYER_PED_ID()))
 	{
 		if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		{
 			vehiclePedIsIn = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 		
-			if (func_2(vehiclePedIsIn))
+			if (DoesVehicleExistAndDrivable(vehiclePedIsIn))
 				VEHICLE::SET_VEHICLE_ENGINE_ON(vehiclePedIsIn, true, false, false);
 		}
 	}
@@ -315,7 +315,7 @@ void func_1() // Position - 0x3A3
 	return;
 }
 
-BOOL func_2(Vehicle veParam0) // Position - 0x3DF
+BOOL DoesVehicleExistAndDrivable(Vehicle veParam0) // Position - 0x3DF
 {
 	if (_DOES_ENTITY_EXIST_AND_IS_ALIVE(veParam0))
 		if (VEHICLE::IS_VEHICLE_DRIVEABLE(veParam0, false))
@@ -334,7 +334,7 @@ BOOL _DOES_ENTITY_EXIST_AND_IS_ALIVE(Vehicle veParam0) // Position - 0x409
 	return false;
 }
 
-void func_4(var uParam0) // Position - 0x42A
+void StopAndReleaseSound(var uParam0) // Position - 0x42A
 {
 	if (*uParam0 != -1)
 	{
@@ -346,7 +346,7 @@ void func_4(var uParam0) // Position - 0x42A
 	return;
 }
 
-void func_5() // Position - 0x44B
+void ApplyVehicleForce() // Position - 0x44B
 {
 	Vehicle vehiclePedIsIn;
 
@@ -354,7 +354,7 @@ void func_5() // Position - 0x44B
 	{
 		vehiclePedIsIn = PED::GET_VEHICLE_PED_IS_IN(PLAYER::PLAYER_PED_ID(), false);
 	
-		if (func_2(vehiclePedIsIn))
+		if (DoesVehicleExistAndDrivable(vehiclePedIsIn))
 		{
 			VEHICLE::SET_VEHICLE_ENGINE_ON(vehiclePedIsIn, false, false, false);
 			ENTITY::APPLY_FORCE_TO_ENTITY(vehiclePedIsIn, 2, 0f, 0f, -fLocal_85, 0f, 1f, 0f, 0, false, true, true, false, true);
@@ -364,22 +364,22 @@ void func_5() // Position - 0x44B
 	return;
 }
 
-void func_6() // Position - 0x491
+void PlayElecCrackleSoundIfTimePassed() // Position - 0x491
 {
 	if (bLocal_103)
 	{
-		if (MISC::GET_GAME_TIMER() > iLocal_98)
+		if (MISC::GET_GAME_TIMER() > timeoutSoundElecCrackle)
 		{
-			if (iLocal_100 != -1)
+			if (elecCrackleSoundID != -1)
 			{
-				func_4(&iLocal_100);
-				iLocal_98 = MISC::GET_GAME_TIMER() + iLocal_97;
+				StopAndReleaseSound(&elecCrackleSoundID);
+				timeoutSoundElecCrackle = MISC::GET_GAME_TIMER() + iLocal_97;
 			}
 			else
 			{
-				iLocal_100 = AUDIO::GET_SOUND_ID();
-				AUDIO::PLAY_SOUND(iLocal_100, "ent_amb_elec_crackle", 0, false, 0, true);
-				iLocal_98 = MISC::GET_GAME_TIMER() + iLocal_95;
+				elecCrackleSoundID = AUDIO::GET_SOUND_ID();
+				AUDIO::PLAY_SOUND(elecCrackleSoundID, "ent_amb_elec_crackle", 0, false, 0, true);
+				timeoutSoundElecCrackle = MISC::GET_GAME_TIMER() + soundElecCracklePlaytime;
 			}
 		}
 	}
@@ -387,22 +387,22 @@ void func_6() // Position - 0x491
 	return;
 }
 
-void func_7() // Position - 0x4DB
+void PlayStunSoundIfTimePassed() // Position - 0x4DB
 {
 	if (bLocal_102)
 	{
-		if (MISC::GET_GAME_TIMER() > iLocal_99)
+		if (MISC::GET_GAME_TIMER() > timeoutSoundStun)
 		{
-			if (iLocal_101 != -1)
+			if (stunSoundID != -1)
 			{
-				func_4(&iLocal_101);
-				iLocal_99 = MISC::GET_GAME_TIMER() + iLocal_96;
+				StopAndReleaseSound(&stunSoundID);
+				timeoutSoundStun = MISC::GET_GAME_TIMER() + iLocal_96;
 			}
 			else
 			{
-				iLocal_101 = AUDIO::GET_SOUND_ID();
-				AUDIO::PLAY_SOUND(iLocal_101, "spl_stun_npc_master", 0, false, 0, true);
-				iLocal_99 = MISC::GET_GAME_TIMER() + iLocal_94;
+				stunSoundID = AUDIO::GET_SOUND_ID();
+				AUDIO::PLAY_SOUND(stunSoundID, "spl_stun_npc_master", 0, false, 0, true);
+				timeoutSoundStun = MISC::GET_GAME_TIMER() + soundStunPlaytime;
 			}
 		}
 	}
@@ -410,7 +410,7 @@ void func_7() // Position - 0x4DB
 	return;
 }
 
-void func_8() // Position - 0x525
+void ApplyVehicleForce2() // Position - 0x525
 {
 	Vector3 vector;
 
@@ -420,7 +420,7 @@ void func_8() // Position - 0x525
 	if (PED::IS_PED_IN_ANY_VEHICLE(PLAYER::PLAYER_PED_ID(), false))
 		return;
 
-	if (!func_10(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_87, true))
+	if (!CompareVectorDistance(PLAYER::PLAYER_PED_ID(), iLocal_77[iLocal_75], fLocal_87, true))
 		return;
 
 	vector = { func_9(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - iLocal_77[iLocal_75]) * { fLocal_88, fLocal_88, fLocal_88 } };
@@ -450,12 +450,12 @@ Vector3 func_9(float fParam0, var uParam1, var uParam2) // Position - 0x593
 	return fParam0;
 }
 
-BOOL func_10(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x5D2
+BOOL CompareVectorDistance(Ped pedParam0, Vector3 vParam1, var uParam2, var uParam3, float fParam4, BOOL bParam5) // Position - 0x5D2
 {
 	return SYSTEM::VDIST2(ENTITY::GET_ENTITY_COORDS(pedParam0, bParam5), vParam1) <= fParam4 * fParam4;
 }
 
-BOOL func_11(Ped pedParam0) // Position - 0x5F0
+BOOL DoesEntityExistAndNotDead(Ped pedParam0) // Position - 0x5F0
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(pedParam0))
 		return false;
@@ -463,17 +463,17 @@ BOOL func_11(Ped pedParam0) // Position - 0x5F0
 	return !ENTITY::IS_ENTITY_DEAD(pedParam0, false);
 }
 
-void func_12() // Position - 0x60E
+void CleanupAndTerminate() // Position - 0x60E
 {
 	if (STREAMING::IS_IPL_ACTIVE("ufo"))
 		STREAMING::REMOVE_IPL("ufo");
 
-	func_4(&iLocal_101);
-	func_4(&iLocal_100);
-	func_4(&iLocal_91);
+	StopAndReleaseSound(&stunSoundID);
+	StopAndReleaseSound(&elecCrackleSoundID);
+	StopAndReleaseSound(&ufoEvilSoundID);
 	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_01", false, true);
 	AUDIO::SET_AMBIENT_ZONE_STATE_PERSISTENT("AZ_SPECIAL_UFO_02", false, true);
-	func_1();
+	StartVehicleEngine();
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

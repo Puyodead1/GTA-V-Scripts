@@ -17,10 +17,10 @@
 	int iLocal_15 = 0;
 	BOOL bLocal_16 = 0;
 	BOOL bLocal_17 = 0;
-	BOOL bLocal_18 = 0;
-	BOOL bLocal_19 = 0;
-	BOOL bLocal_20 = 0;
-	BOOL bLocal_21 = 0;
+	BOOL bIsCellphoneUpPressed = 0;
+	BOOL bIsCellphoneDownPressed = 0;
+	BOOL bIsCellphoneLeftPressed = 0;
+	BOOL bIsCellphoneRightPressed = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -40,11 +40,10 @@ void main() // Position - 0x0
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
 	{
-		func_14();
-		SCRIPT::TERMINATE_THIS_THREAD();
+		Terminate();
 	}
 
-	func_8();
+	SetGlobalClockVariables();
 
 	while (true)
 	{
@@ -61,22 +60,22 @@ void main() // Position - 0x0
 				if (!bLocal_17)
 				{
 					bLocal_17 = true;
-					func_7(G_Scaleform, "SET_DATA_SLOT_EMPTY", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
+					CallScaleformMethod(G_Scaleform, "SET_DATA_SLOT_EMPTY", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
 					func_4(G_Scaleform, true);
-					func_7(G_Scaleform, "DISPLAY_VIEW", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
+					CallScaleformMethod(G_Scaleform, "DISPLAY_VIEW", 5f, -1082130432, -1082130432, -1082130432, -1082130432);
 				}
 				else
 				{
-					func_3();
+					HandleInputEvents();
 				}
 			}
 		
 			if (func_2())
-				func_14();
+				Terminate();
 		}
 	
 		if (func_1())
-			func_14();
+			Terminate();
 	}
 
 	return;
@@ -104,64 +103,64 @@ BOOL func_2() // Position - 0x11F
 	return false;
 }
 
-void func_3() // Position - 0x148
+void HandleInputEvents() // Position - 0x148
 {
-	if (!bLocal_18)
+	if (!bIsCellphoneUpPressed)
 	{
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_UP))
 		{
-			bLocal_18 = true;
-			func_7(G_Scaleform, "SET_INPUT_EVENT", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
+			bIsCellphoneUpPressed = true;
+			CallScaleformMethod(G_Scaleform, "SET_INPUT_EVENT", 1f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_UP))
 	{
-		bLocal_18 = false;
+		bIsCellphoneUpPressed = false;
 	}
 
-	if (!bLocal_19)
+	if (!bIsCellphoneDownPressed)
 	{
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_DOWN))
 		{
-			bLocal_19 = true;
-			func_7(G_Scaleform, "SET_INPUT_EVENT", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
+			bIsCellphoneDownPressed = true;
+			CallScaleformMethod(G_Scaleform, "SET_INPUT_EVENT", 3f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_DOWN))
 	{
-		bLocal_19 = false;
+		bIsCellphoneDownPressed = false;
 	}
 
-	if (!bLocal_20)
+	if (!bIsCellphoneLeftPressed)
 	{
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_LEFT))
 		{
-			bLocal_20 = true;
-			func_7(G_Scaleform, "SET_INPUT_EVENT", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
+			bIsCellphoneLeftPressed = true;
+			CallScaleformMethod(G_Scaleform, "SET_INPUT_EVENT", 4f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_LEFT))
 	{
-		bLocal_20 = false;
+		bIsCellphoneLeftPressed = false;
 	}
 
-	if (!bLocal_21)
+	if (!bIsCellphoneRightPressed)
 	{
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_RIGHT))
 		{
-			bLocal_21 = true;
-			func_7(G_Scaleform, "SET_INPUT_EVENT", 2f, -1082130432, -1082130432, -1082130432, -1082130432);
+			bIsCellphoneRightPressed = true;
+			CallScaleformMethod(G_Scaleform, "SET_INPUT_EVENT", 2f, -1082130432, -1082130432, -1082130432, -1082130432);
 		}
 	}
 	else if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_CELLPHONE_RIGHT))
 	{
-		bLocal_21 = false;
+		bIsCellphoneRightPressed = false;
 	}
 
 	return;
 }
 
-void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
+void func_4(int scaleform, BOOL bParam1) // Position - 0x25C
 {
 	int num;
 	int value;
@@ -175,15 +174,15 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 		if (!bParam1)
 			return;
 
-	if (iParam0 == 0)
+	if (scaleform == 0)
 		return;
 
-	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iParam0))
+	if (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleform))
 		return;
 
-	func_8();
-	num = Global_97904;
-	value = Global_97903;
+	SetGlobalClockVariables();
+	num = G_ClockDayOfWeek;
+	value = G_ClockHours1;
 	flag = true;
 	num2 = 0;
 	num3 = 0;
@@ -229,17 +228,17 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 						break;
 				}
 			
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT_EMPTY");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SET_DATA_SLOT_EMPTY");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value2);
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_DATA_SLOT");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SET_DATA_SLOT");
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(5);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value2);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(value);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(0f);
 				GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(-1f);
-				func_6(str);
-				func_6(func_5(num2));
+				ScaleformAddText(str);
+				ScaleformAddText(func_5(num2));
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				value2 = value2 + 1;
 			}
@@ -256,7 +255,7 @@ void func_4(int iParam0, BOOL bParam1) // Position - 0x25C
 		if (num > 6)
 			num = 0;
 	
-		if (num == Global_97904 && value == Global_97903)
+		if (num == G_ClockDayOfWeek && value == G_ClockHours1)
 			flag = false;
 	}
 
@@ -278,14 +277,14 @@ char* func_5(int iParam0) // Position - 0x3D0
 	return "ORG_EV_0" /*NOT SET!*/;
 }
 
-void func_6(char* sParam0) // Position - 0x400
+void ScaleformAddText(char* sParam0) // Position - 0x400
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_7(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x412
+void CallScaleformMethod(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x412
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -306,7 +305,7 @@ void func_7(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4,
 	return;
 }
 
-void func_8() // Position - 0x475
+void SetGlobalClockVariables() // Position - 0x475
 {
 	int clockMonth;
 	int clockDayOfMonth;
@@ -323,12 +322,12 @@ void func_8() // Position - 0x475
 
 	if (!Global_97899)
 	{
-		Global_98083 = CLOCK::GET_CLOCK_MONTH();
-		Global_98082 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-		Global_98081 = CLOCK::GET_CLOCK_HOURS();
+		G_ClockMonth = CLOCK::GET_CLOCK_MONTH();
+		G_ClockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+		G_ClockHours2 = CLOCK::GET_CLOCK_HOURS();
 		Global_97899 = true;
-		Global_97904 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-		Global_97903 = CLOCK::GET_CLOCK_HOURS();
+		G_ClockDayOfWeek = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+		G_ClockHours1 = CLOCK::GET_CLOCK_HOURS();
 		func_12();
 		return;
 	}
@@ -336,9 +335,9 @@ void func_8() // Position - 0x475
 	clockMonth = CLOCK::GET_CLOCK_MONTH();
 	clockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
 	clockHours = CLOCK::GET_CLOCK_HOURS();
-	num = Global_98083;
-	num2 = Global_98082;
-	num3 = Global_98081;
+	num = G_ClockMonth;
+	num2 = G_ClockDayOfMonth;
+	num3 = G_ClockHours2;
 	num4 = 0;
 	num5 = 0;
 	i = 0;
@@ -377,8 +376,8 @@ void func_8() // Position - 0x475
 		num6 = num6 + (24 - num3);
 		num6 = num6 + (24 - 24 - clockHours);
 		i = 0;
-		num5 = Global_97903;
-		num4 = Global_97904;
+		num5 = G_ClockHours1;
+		num4 = G_ClockDayOfWeek;
 	
 		for (i = 0; i < num6; i = i + 1)
 		{
@@ -401,18 +400,18 @@ void func_8() // Position - 0x475
 			num5 = num5 + 1;
 		}
 	
-		Global_97903 = num5 - 1;
-		Global_97904 = num4;
+		G_ClockHours1 = num5 - 1;
+		G_ClockDayOfWeek = num4;
 	}
 	else
 	{
 		if (num3 > clockHours)
 		{
-			Global_98083 = clockMonth;
-			Global_98082 = clockDayOfMonth;
-			Global_98081 = clockHours;
-			Global_97904 = CLOCK::GET_CLOCK_DAY_OF_WEEK();
-			Global_97903 = CLOCK::GET_CLOCK_HOURS();
+			G_ClockMonth = clockMonth;
+			G_ClockDayOfMonth = clockDayOfMonth;
+			G_ClockHours2 = clockHours;
+			G_ClockDayOfWeek = CLOCK::GET_CLOCK_DAY_OF_WEEK();
+			G_ClockHours1 = CLOCK::GET_CLOCK_HOURS();
 			return;
 		}
 	
@@ -424,8 +423,8 @@ void func_8() // Position - 0x475
 		{
 			num6 = clockHours - num3;
 			i = 0;
-			num5 = Global_97903;
-			num4 = Global_97904;
+			num5 = G_ClockHours1;
+			num4 = G_ClockDayOfWeek;
 		
 			for (i = 0; i < num6; i = i + 1)
 			{
@@ -448,8 +447,8 @@ void func_8() // Position - 0x475
 					num4 = 0;
 			}
 		
-			Global_97903 = num5;
-			Global_97904 = num4;
+			G_ClockHours1 = num5;
+			G_ClockDayOfWeek = num4;
 		}
 	}
 
@@ -460,9 +459,9 @@ void func_8() // Position - 0x475
 	}
 	else
 	{
-		Global_98083 = clockMonth;
-		Global_98082 = clockDayOfMonth;
-		Global_98081 = clockHours;
+		G_ClockMonth = clockMonth;
+		G_ClockDayOfMonth = clockDayOfMonth;
+		G_ClockHours2 = clockHours;
 	}
 
 	return;
@@ -558,8 +557,8 @@ void func_12() // Position - 0x81F
 	int i;
 	int j;
 
-	Global_97903 = 0;
-	Global_97904 = 0;
+	G_ClockHours1 = 0;
+	G_ClockDayOfWeek = 0;
 	i = 0;
 	j = 0;
 
@@ -571,23 +570,22 @@ void func_12() // Position - 0x81F
 		}
 	}
 
-	func_13();
+	SetGlobalClockVariables();
 	return;
 }
 
-void func_13() // Position - 0x86D
+void SetGlobalClockVariables() // Position - 0x86D
 {
-	Global_97903 = 0;
-	Global_97904 = 0;
-	Global_98081 = CLOCK::GET_CLOCK_HOURS();
-	Global_98082 = CLOCK::GET_CLOCK_DAY_OF_MONTH();
-	Global_98083 = CLOCK::GET_CLOCK_MONTH();
+	G_ClockHours1 = 0;
+	G_ClockDayOfWeek = 0;
+	G_ClockHours2 = CLOCK::GET_CLOCK_HOURS();
+	G_ClockDayOfMonth = CLOCK::GET_CLOCK_DAY_OF_MONTH();
+	G_ClockMonth = CLOCK::GET_CLOCK_MONTH();
 	return;
 }
 
-void func_14() // Position - 0x897
+void Terminate()
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
-

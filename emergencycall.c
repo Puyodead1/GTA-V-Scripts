@@ -40,13 +40,13 @@
 	int iLocal_38 = 0;
 	int iLocal_39 = 0;
 	int iLocal_40 = 0;
-	int iLocal_41 = 0;
+	int state = 0;
 	int iLocal_42 = 0;
-	var uLocal_43 = 0;
+	var incidentLocation = 0;
 	var uLocal_44 = 0;
 	var uLocal_45 = 0;
-	int iLocal_46 = 0;
-	int iLocal_47 = 0;
+	int gameTimer = 0;
+	int incidentID = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -77,7 +77,7 @@ void main() // Position - 0x0
 	iLocal_40 = 64;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(11))
-		iLocal_41 = 5;
+		state = 5;
 
 	while (true)
 	{
@@ -85,7 +85,7 @@ void main() // Position - 0x0
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
-			switch (iLocal_41)
+			switch (state)
 			{
 				case 0:
 					func_10();
@@ -95,25 +95,25 @@ void main() // Position - 0x0
 					break;
 			
 				case 2:
-					func_9();
+					HasTimePassed1();
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_PoliceVehicleRequest, PLAYER::PLAYER_PED_ID(), 2, 3f, &iLocal_47, 0, 0))
+						if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_PoliceVehicleRequest, PLAYER::PLAYER_PED_ID(), 2, 3f, &incidentID, 0, 0))
 						{
-							iLocal_46 = MISC::GET_GAME_TIMER();
-							iLocal_41 = 5;
+							gameTimer = MISC::GET_GAME_TIMER();
+							state = 5;
 						}
 					}
-					else if (MISC::CREATE_INCIDENT(DT_PoliceVehicleRequest, uLocal_43, 2, 3f, &iLocal_47, 0, 0))
+					else if (MISC::CREATE_INCIDENT(DT_PoliceVehicleRequest, incidentLocation, 2, 3f, &incidentID, 0, 0))
 					{
-						iLocal_46 = MISC::GET_GAME_TIMER();
-						iLocal_41 = 5;
+						gameTimer = MISC::GET_GAME_TIMER();
+						state = 5;
 					}
 					break;
 			
 				case 3:
-					func_9();
+					HasTimePassed1();
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
@@ -122,51 +122,51 @@ void main() // Position - 0x0
 							if (Global_1969077 == 0)
 								Global_1969077 = 1;
 						
-							iLocal_41 = 5;
+							state = 5;
 						}
-						else if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_AmbulanceDepartment, PLAYER::PLAYER_PED_ID(), 2, 3f, &iLocal_47, 0, 0))
+						else if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_AmbulanceDepartment, PLAYER::PLAYER_PED_ID(), 2, 3f, &incidentID, 0, 0))
 						{
-							iLocal_46 = MISC::GET_GAME_TIMER();
-							iLocal_41 = 5;
+							gameTimer = MISC::GET_GAME_TIMER();
+							state = 5;
 						}
 					}
-					else if (MISC::CREATE_INCIDENT(DT_AmbulanceDepartment, uLocal_43, 2, 3f, &iLocal_47, 0, 0))
+					else if (MISC::CREATE_INCIDENT(DT_AmbulanceDepartment, incidentLocation, 2, 3f, &incidentID, 0, 0))
 					{
-						iLocal_46 = MISC::GET_GAME_TIMER();
-						iLocal_41 = 5;
+						gameTimer = MISC::GET_GAME_TIMER();
+						state = 5;
 					}
 					break;
 			
 				case 4:
-					func_9();
+					HasTimePassed1();
 				
 					if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					{
-						if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_FireDepartment, PLAYER::PLAYER_PED_ID(), 4, 3f, &iLocal_47, 0, 0))
+						if (MISC::CREATE_INCIDENT_WITH_ENTITY(DT_FireDepartment, PLAYER::PLAYER_PED_ID(), 4, 3f, &incidentID, 0, 0))
 						{
-							iLocal_46 = MISC::GET_GAME_TIMER();
-							iLocal_41 = 5;
+							gameTimer = MISC::GET_GAME_TIMER();
+							state = 5;
 						}
 					}
-					else if (MISC::CREATE_INCIDENT(DT_FireDepartment, uLocal_43, 4, 3f, &iLocal_47, 0, 0))
+					else if (MISC::CREATE_INCIDENT(DT_FireDepartment, incidentLocation, 4, 3f, &incidentID, 0, 0))
 					{
 						if (Global_97310.f_358 == MISC::GET_HASH_KEY("AGENCY_PREP_1") || SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(MISC::GET_HASH_KEY("agency_prep1")) > 0 && _IS_MISSION_REPEAT_ACTIVE(false))
 							Global_97310.f_358 = MISC::GET_HASH_KEY("AHP1_TRUCKCALLED");
 						else if (func_2(67) && !func_2(68))
 							Global_97240 = 1;
 					
-						iLocal_46 = MISC::GET_GAME_TIMER();
-						iLocal_41 = 5;
+						gameTimer = MISC::GET_GAME_TIMER();
+						state = 5;
 					}
 					break;
 			
 				case 5:
-					if (MISC::GET_GAME_TIMER() > iLocal_46 + 60000 || !MISC::IS_INCIDENT_VALID(iLocal_47))
-						func_1();
+					if (MISC::GET_GAME_TIMER() > gameTimer + 60000 || !MISC::IS_INCIDENT_VALID(incidentID))
+						CleanupAndTerminate();
 					else if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 						if (!PLAYER::IS_PLAYER_CONTROL_ON(PLAYER::PLAYER_ID()))
-							if (MISC::IS_INCIDENT_VALID(iLocal_47))
-								MISC::DELETE_INCIDENT(iLocal_47);
+							if (MISC::IS_INCIDENT_VALID(incidentID))
+								MISC::DELETE_INCIDENT(incidentID);
 					break;
 			}
 		}
@@ -175,9 +175,9 @@ void main() // Position - 0x0
 	return;
 }
 
-void func_1() // Position - 0x27A
+void CleanupAndTerminate() // Position - 0x27A
 {
-	iLocal_41 = 0;
+	state = 0;
 	iLocal_42 = 0;
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
@@ -248,23 +248,23 @@ BOOL func_8(Player plParam0, BOOL bParam1) // Position - 0x36E
 	return false;
 }
 
-void func_9() // Position - 0x3B2
+void HasTimePassed1() // Position - 0x3B2
 {
-	if (MISC::GET_GAME_TIMER() > iLocal_46 + 30000)
-		iLocal_41 = 5;
+	if (MISC::GET_GAME_TIMER() > gameTimer + 30000)
+		state = 5;
 
 	return;
 }
 
 void func_10() // Position - 0x3C9
 {
-	var unk;
+	var heading;
 
 	switch (iLocal_42)
 	{
 		case 0:
 			iLocal_42 = 1;
-			iLocal_46 = MISC::GET_GAME_TIMER();
+			gameTimer = MISC::GET_GAME_TIMER();
 			break;
 	
 		case 1:
@@ -272,36 +272,36 @@ void func_10() // Position - 0x3C9
 			{
 				SYSTEM::WAIT(0);
 			
-				if (func_19() == 3)
-					iLocal_41 = 3;
+				if (Global_22862 == 3)
+					state = 3;
 			
-				if (func_19() == 4)
-					iLocal_41 = 4;
+				if (Global_22862 == 4)
+					state = 4;
 			
-				if (func_19() == 5)
-					iLocal_41 = 2;
+				if (Global_22862 == 5)
+					state = 2;
 			
-				if (MISC::GET_GAME_TIMER() > iLocal_46 + 30000)
+				if (MISC::GET_GAME_TIMER() > gameTimer + 30000)
 				{
-					iLocal_46 = MISC::GET_GAME_TIMER();
+					gameTimer = MISC::GET_GAME_TIMER();
 					func_13(0);
 				}
 			}
 		
-			if (iLocal_41 == 0)
-				iLocal_41 = 5;
+			if (state == 0)
+				state = 5;
 		
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()))
-				func_11(PLAYER::PLAYER_PED_ID(), &uLocal_43, &unk);
+				GetLocationForIncident(PLAYER::PLAYER_PED_ID(), &incidentLocation, &heading);
 		
-			iLocal_46 = MISC::GET_GAME_TIMER();
+			gameTimer = MISC::GET_GAME_TIMER();
 			break;
 	}
 
 	return;
 }
 
-void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462
+void GetLocationForIncident(Ped pedParam0, Vector3* incidentLocationOut, var heading) // Position - 0x462
 {
 	int nthClosest;
 	int outNumLanes;
@@ -332,11 +332,11 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462
 		switch (num4)
 		{
 			case 0:
-				PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE_WITH_HEADING(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), nthClosest, pvParam1, &outHeading, &outNumLanes, 5, 1077936128, 0);
-				PATHFIND::GET_CLOSEST_ROAD(*pvParam1, 1f, 1, &unk3, &unk6, &unk, &unk2, &num, false);
+				PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE_WITH_HEADING(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true), nthClosest, incidentLocationOut, &outHeading, &outNumLanes, 5, 1077936128, 0);
+				PATHFIND::GET_CLOSEST_ROAD(*incidentLocationOut, 1f, 1, &unk3, &unk6, &unk, &unk2, &num, false);
 			
 				if (MISC::GET_DISTANCE_BETWEEN_COORDS(ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), false), -3044.66f, 596.43f, 6.58f, true) < 25f)
-					*pvParam1 = { -3031.38f, 605.32f, 6.86f };
+					*incidentLocationOut = { -3031.38f, 605.32f, 6.86f };
 			
 				dx = { ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true) - ENTITY::GET_ENTITY_COORDS(pedParam0, true) };
 				headingFromVector2d = MISC::GET_HEADING_FROM_VECTOR_2D(dx, dx.f_1);
@@ -346,15 +346,15 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462
 					num2 = num2 - 360f;
 			
 				if (func_12(headingFromVector2d, outHeading, 90f))
-					*uParam2 = outHeading;
+					*heading = outHeading;
 				else
-					*uParam2 = num2;
+					*heading = num2;
 			
 				if (num < 0f)
 				{
 					xOffset = 0f;
 				}
-				else if (PATHFIND::GET_VEHICLE_NODE_IS_SWITCHED_OFF(PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE_ID(*pvParam1, 1, 1, 1077936128, 0)))
+				else if (PATHFIND::GET_VEHICLE_NODE_IS_SWITCHED_OFF(PATHFIND::GET_NTH_CLOSEST_VEHICLE_NODE_ID(*incidentLocationOut, 1, 1, 1077936128, 0)))
 				{
 					xOffset = 0f;
 				}
@@ -376,11 +376,11 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462
 					xOffset = xOffset + (num / 2f);
 				}
 			
-				if (SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, -xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
+				if (SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*incidentLocationOut, *heading, xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)) > SYSTEM::VDIST(OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*incidentLocationOut, *heading, -xOffset, 0f, 0f), ENTITY::GET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), true)))
 					xOffset = -xOffset;
 			
-				*pvParam1 = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*pvParam1, *uParam2, xOffset, 0f, 0f) };
-				shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(*pvParam1 + { pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f, pvParam1->f_2 + 4.5f }, *pvParam1 + { 4.5f, 0.5f, 0.5f }, 2.5f, 1, 0, 4);
+				*incidentLocationOut = { OBJECT::GET_OFFSET_FROM_COORD_AND_HEADING_IN_WORLD_COORDS(*incidentLocationOut, *heading, xOffset, 0f, 0f) };
+				shapeTestHandle = SHAPETEST::START_SHAPE_TEST_CAPSULE(*incidentLocationOut + { incidentLocationOut->f_2 + 4.5f, incidentLocationOut->f_2 + 4.5f, incidentLocationOut->f_2 + 4.5f }, *incidentLocationOut + { 4.5f, 0.5f, 0.5f }, 2.5f, 1, 0, 4);
 				num4 = num4 + 1;
 				break;
 		
@@ -391,7 +391,7 @@ void func_11(Ped pedParam0, Vector3* pvParam1, var uParam2) // Position - 0x462
 					{
 						if (hit != 0)
 						{
-							if (endCoords.f_2 > pvParam1->f_2 + 8.5f)
+							if (endCoords.f_2 > incidentLocationOut->f_2 + 8.5f)
 							{
 								num4 = num4 + 1;
 							}
@@ -540,11 +540,6 @@ BOOL func_17() // Position - 0x8F9
 BOOL func_18() // Position - 0x907
 {
 	return IS_BIT_SET(Global_1963795, 19);
-}
-
-int func_19() // Position - 0x916
-{
-	return Global_22862;
 }
 
 BOOL func_20() // Position - 0x921

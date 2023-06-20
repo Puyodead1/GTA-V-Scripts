@@ -42,8 +42,8 @@
 	int iLocal_40 = 0;
 	var uLocal_41 = 0;
 	var uLocal_42 = 0;
-	int iLocal_43 = 0;
-	int iLocal_44 = 0;
+	int state = 0;
+	int scaleform = 0;
 	var uLocal_45 = 0;
 	var uLocal_46 = 0;
 	var uLocal_47 = 0;
@@ -147,35 +147,35 @@ void main() // Position - 0x0
 	iLocal_40 = 64;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_19();
+		CleanupAndTerminate();
 
 	while (true)
 	{
-		switch (iLocal_43)
+		switch (state)
 		{
 			case 0:
-				iLocal_44 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("mission_complete");
-				iLocal_43 = 1;
+				scaleform = GRAPHICS::REQUEST_SCALEFORM_MOVIE("mission_complete");
+				state = 1;
 				break;
 		
 			case 1:
-				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_44))
-					iLocal_43 = 2;
+				if (GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleform))
+					state = 2;
 				break;
 		
 			case 2:
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_STRING(iLocal_44, "SET_MISSION_TITLE", sScriptParam_48, sScriptParam_48.f_1, 0, 0, 0);
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_MISSION_TITLE_COLOUR", sScriptParam_48.f_2, sScriptParam_48.f_2, sScriptParam_48.f_2, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_STRING(scaleform, "SET_MISSION_TITLE", sScriptParam_48 /* title */, sScriptParam_48.description, 0, 0, 0);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(scaleform, "SET_MISSION_TITLE_COLOUR", sScriptParam_48.r, sScriptParam_48.r, sScriptParam_48.r, -1082130432, -1082130432);
 			
-				if (sScriptParam_48.f_5.f_1 != -1f && !MISC::IS_STRING_NULL(sScriptParam_48.f_5.f_2))
-					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(iLocal_44, "SET_TOTAL", SYSTEM::TO_FLOAT(sScriptParam_48.f_5), sScriptParam_48.f_5.f_1, -1f, -1f, -1f, sScriptParam_48.f_5.f_2, 0, 0, 0, 0);
+				if (sScriptParam_48.medalId.f_1 != -1f && !MISC::IS_STRING_NULL(sScriptParam_48.medalId.f_2))
+					GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER_AND_STRING(scaleform, "SET_TOTAL", SYSTEM::TO_FLOAT(sScriptParam_48.medalId), sScriptParam_48.medalId.f_1, -1f, -1f, -1f, sScriptParam_48.medalId.f_2, 0, 0, 0, 0);
 			
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_MEDAL", SYSTEM::TO_FLOAT(sScriptParam_48.f_5), -1082130432, -1082130432, -1082130432, -1082130432);
-				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(iLocal_44, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(scaleform, "SET_MEDAL", SYSTEM::TO_FLOAT(sScriptParam_48.medalId), -1082130432, -1082130432, -1082130432, -1082130432);
+				GRAPHICS::CALL_SCALEFORM_MOVIE_METHOD_WITH_NUMBER(scaleform, "SET_SOCIAL_CLUB_INFO", 0f, -1082130432, -1082130432, -1082130432, -1082130432);
 			
 				for (i = 0; i < sScriptParam_48.f_66 + 1; i = i + 1)
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_44, "SET_DATA_SLOT");
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SET_DATA_SLOT");
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(sScriptParam_48.f_9[i]);
 					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(sScriptParam_48.f_9[i].f_1);
 				
@@ -189,7 +189,7 @@ void main() // Position - 0x0
 						GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 					
 						if (!MISC::IS_STRING_NULL(sScriptParam_48.f_9[i].f_5))
-							func_18(sScriptParam_48.f_9[i].f_5);
+							ScaleformDisplayText(sScriptParam_48.f_9[i].f_5);
 					}
 					else if (sScriptParam_48.f_9[i].f_2 == 8)
 					{
@@ -227,30 +227,30 @@ void main() // Position - 0x0
 						}
 					
 						if (!MISC::IS_STRING_NULL(sScriptParam_48.f_9[i].f_5))
-							func_18(sScriptParam_48.f_9[i].f_5);
+							ScaleformDisplayText(sScriptParam_48.f_9[i].f_5);
 					
 						if (!MISC::IS_STRING_NULL(sScriptParam_48.f_9[i].f_6))
-							func_18(sScriptParam_48.f_9[i].f_6);
+							ScaleformDisplayText(sScriptParam_48.f_9[i].f_6);
 					}
 				
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				}
 			
-				if (sScriptParam_48.f_5 != 0 && !MISC::IS_STRING_NULL(sScriptParam_48.f_5.f_2))
+				if (sScriptParam_48.medalId != 0 && !MISC::IS_STRING_NULL(sScriptParam_48.medalId.f_2))
 				{
-					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_44, "SET_TOTAL");
-					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(sScriptParam_48.f_5);
+					GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "SET_TOTAL");
+					GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(sScriptParam_48.medalId);
 				
-					if (!MISC::IS_STRING_NULL(sScriptParam_48.f_5.f_3))
-						func_18(sScriptParam_48.f_5.f_3);
+					if (!MISC::IS_STRING_NULL(sScriptParam_48.medalId.f_3))
+						ScaleformDisplayText(sScriptParam_48.medalId.f_3);
 					else
-						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(sScriptParam_48.f_5.f_1);
+						GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(sScriptParam_48.medalId.f_1);
 				
-					func_18(sScriptParam_48.f_5.f_2);
+					ScaleformDisplayText(sScriptParam_48.medalId.f_2);
 					GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				}
 			
-				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iLocal_44, "DRAW_MENU_LIST");
+				GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(scaleform, "DRAW_MENU_LIST");
 				GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 				func_12(1);
 				func_9(&uLocal_45);
@@ -258,18 +258,18 @@ void main() // Position - 0x0
 				if (!func_8(G_MissionStats.f_19100, 4096))
 					func_6(&(G_MissionStats.f_19100), 4096);
 			
-				iLocal_43 = 3;
+				state = 3;
 				break;
 		
 			case 3:
 				if (func_2(&uLocal_45) > sScriptParam_48.f_67 && sScriptParam_48.f_67 != -1f || CAM::IS_SCREEN_FADED_OUT() || Global_32428)
 				{
-					func_19();
+					CleanupAndTerminate();
 				}
 				else
 				{
 					func_1(1);
-					GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_44, 0.1495f, 0.3159f, 0.2021f, 0.5111f, 255, 255, 255, 0, 0);
+					GRAPHICS::DRAW_SCALEFORM_MOVIE(scaleform, 0.1495f, 0.3159f, 0.2021f, 0.5111f, 255, 255, 255, 0, 0);
 				
 					if (HUD::IS_HUD_COMPONENT_ACTIVE(HUD_HELP_TEXT))
 						HUD::HIDE_HUD_COMPONENT_THIS_FRAME(HUD_HELP_TEXT);
@@ -280,7 +280,7 @@ void main() // Position - 0x0
 		SYSTEM::WAIT(0);
 	}
 
-	func_19();
+	CleanupAndTerminate();
 	return;
 }
 
@@ -475,16 +475,16 @@ BOOL func_17() // Position - 0x715
 	return IS_BIT_SET(Global_1963795, 19);
 }
 
-void func_18(const char* sParam0) // Position - 0x724
+void ScaleformDisplayText(const char* sParam0) // Position - 0x724
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_19() // Position - 0x736
+void CleanupAndTerminate() // Position - 0x736
 {
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_44);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&scaleform);
 	Global_32428 = false;
 	func_1(0);
 	SCRIPT::TERMINATE_THIS_THREAD();

@@ -15,35 +15,35 @@
 	var uLocal_13 = 0;
 	var uLocal_14 = 0;
 	int iLocal_15 = 0;
-	int iLocal_16 = 0;
-	Cam caLocal_17 = 0;
-	Blip blLocal_18 = 0;
+	int scaleform = 0;
+	Cam defaultScriptedCamera = 0;
+	Blip blip = 0;
 	int iLocal_19 = 0;
 	int iLocal_20 = 0;
-	BOOL bLocal_21 = 0;
+	BOOL bLeftPressed = 0;
 	BOOL bLocal_22 = 0;
-	float fLocal_23 = 0f;
-	BOOL bLocal_24 = 0;
+	float fLeft = 0f;
+	BOOL bRightPressed = 0;
 	BOOL bLocal_25 = 0;
-	float fLocal_26 = 0f;
-	BOOL bLocal_27 = 0;
+	float fRight = 0f;
+	BOOL bUpPressed = 0;
 	BOOL bLocal_28 = 0;
-	float fLocal_29 = 0f;
-	BOOL bLocal_30 = 0;
+	float fUp = 0f;
+	BOOL bDownPressed = 0;
 	BOOL bLocal_31 = 0;
-	float fLocal_32 = 0f;
-	BOOL bLocal_33 = 0;
+	float fDown = 0f;
+	BOOL bCancelPressed = 0;
 	BOOL bLocal_34 = 0;
-	float fLocal_35 = 0f;
-	BOOL bLocal_36 = 0;
+	float fCancel = 0f;
+	BOOL bYPressed = 0;
 	BOOL bLocal_37 = 0;
-	float fLocal_38 = 0f;
-	BOOL bLocal_39 = 0;
+	float fY = 0f;
+	BOOL bAcceptPressed = 0;
 	BOOL bLocal_40 = 0;
-	float fLocal_41 = 0f;
-	BOOL bLocal_42 = 0;
+	float fAccept = 0f;
+	BOOL bXPressed = 0;
 	BOOL bLocal_43 = 0;
-	float fLocal_44 = 0f;
+	float fX = 0f;
 #endregion
 
 void main() // Position - 0x0
@@ -60,26 +60,26 @@ void main() // Position - 0x0
 	iLocal_11 = 12;
 	fLocal_12 = 0.001f;
 	iLocal_15 = -1;
-	blLocal_18 = HUD::ADD_BLIP_FOR_COORD(100f, 100f, 30f);
+	blip = HUD::ADD_BLIP_FOR_COORD(100f, 100f, 30f);
 	iLocal_20 = 1;
-	fLocal_23 = 0f;
-	fLocal_26 = 0f;
-	fLocal_29 = 0f;
-	fLocal_32 = 0f;
-	fLocal_35 = 0f;
-	fLocal_38 = 0f;
-	fLocal_41 = 0f;
-	fLocal_44 = 0f;
+	fLeft = 0f;
+	fRight = 0f;
+	fUp = 0f;
+	fDown = 0f;
+	fCancel = 0f;
+	fY = 0f;
+	fAccept = 0f;
+	fX = 0f;
 
 	if (CAM::IS_SCREEN_FADED_OUT())
 		CAM::DO_SCREEN_FADE_IN(500);
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(3))
-		func_2();
+		CleanupAndTerminate();
 
-	iLocal_16 = GRAPHICS::REQUEST_SCALEFORM_MOVIE("p_bubblegum");
+	scaleform = GRAPHICS::REQUEST_SCALEFORM_MOVIE("p_bubblegum");
 
-	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(iLocal_16))
+	while (!GRAPHICS::HAS_SCALEFORM_MOVIE_LOADED(scaleform))
 	{
 		SYSTEM::WAIT(0);
 	}
@@ -91,29 +91,29 @@ void main() // Position - 0x0
 		if (iLocal_20 == 1)
 		{
 			iLocal_20 = 0;
-			caLocal_17 = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
+			defaultScriptedCamera = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", true);
 		
-			if (CAM::DOES_CAM_EXIST(caLocal_17))
+			if (CAM::DOES_CAM_EXIST(defaultScriptedCamera))
 			{
-				CAM::SET_CAM_PARAMS(caLocal_17, -160.6632f, -1072.1438f, -1615.471f, -89.4999f, -0.2863f, 58.1189f, 45f, 0, 1, 1, 2);
-				CAM::SET_CAM_NEAR_CLIP(caLocal_17, 0.01f);
-				CAM::SET_CAM_FAR_CLIP(caLocal_17, 0.02f);
+				CAM::SET_CAM_PARAMS(defaultScriptedCamera, -160.6632f, -1072.1438f, -1615.471f, -89.4999f, -0.2863f, 58.1189f, 45f, 0, 1, 1, 2);
+				CAM::SET_CAM_NEAR_CLIP(defaultScriptedCamera, 0.01f);
+				CAM::SET_CAM_FAR_CLIP(defaultScriptedCamera, 0.02f);
 				CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 			}
 		
-			HUD::SET_BLIP_SPRITE(blLocal_18, BLIP_RANDOM_CHARACTER);
+			HUD::SET_BLIP_SPRITE(blip, BLIP_RANDOM_CHARACTER);
 		}
 	
 		iLocal_19 = 1;
-		GRAPHICS::DRAW_SCALEFORM_MOVIE(iLocal_16, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
-		func_1(iLocal_16);
+		GRAPHICS::DRAW_SCALEFORM_MOVIE(scaleform, 0.5f, 0.5f, 1f, 1f, 255, 255, 255, 0, 0);
+		HandleInput(scaleform);
 		SYSTEM::WAIT(0);
 	}
 
 	return;
 }
 
-void func_1(int iParam0) // Position - 0x13F
+void HandleInput(int iParam0) // Position - 0x13F
 {
 	if (Global_20479 == 0)
 	{
@@ -132,217 +132,217 @@ void func_1(int iParam0) // Position - 0x13F
 	{
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_LEFT))
 		{
-			bLocal_21 = true;
-			fLocal_23 = 1f;
+			bLeftPressed = true;
+			fLeft = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_LEFT))
 		{
-			bLocal_21 = true;
-			fLocal_23 = 1f;
+			bLeftPressed = true;
+			fLeft = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_LEFT))
 		{
-			bLocal_21 = false;
-			fLocal_23 = 0f;
+			bLeftPressed = false;
+			fLeft = 0f;
 		}
 	
-		if (!bLocal_21 == bLocal_22)
+		if (!bLeftPressed == bLocal_22)
 		{
-			bLocal_22 = bLocal_21;
+			bLocal_22 = bLeftPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(10);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_23);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLeft);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_RIGHT))
 		{
-			bLocal_24 = true;
-			fLocal_26 = 1f;
+			bRightPressed = true;
+			fRight = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_RIGHT))
 		{
-			bLocal_24 = true;
-			fLocal_26 = 1f;
+			bRightPressed = true;
+			fRight = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_RIGHT))
 		{
-			bLocal_24 = false;
-			fLocal_26 = 0f;
+			bRightPressed = false;
+			fRight = 0f;
 		}
 	
-		if (!bLocal_24 == bLocal_25)
+		if (!bRightPressed == bLocal_25)
 		{
-			bLocal_25 = bLocal_24;
+			bLocal_25 = bRightPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(11);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_26);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fRight);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_UP))
 		{
-			bLocal_27 = true;
-			fLocal_29 = 1f;
+			bUpPressed = true;
+			fUp = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_UP))
 		{
-			bLocal_27 = true;
-			fLocal_29 = 1f;
+			bUpPressed = true;
+			fUp = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_UP))
 		{
-			bLocal_27 = false;
-			fLocal_29 = 0f;
+			bUpPressed = false;
+			fUp = 0f;
 		}
 	
-		if (!bLocal_27 == bLocal_28)
+		if (!bUpPressed == bLocal_28)
 		{
-			bLocal_28 = bLocal_27;
+			bLocal_28 = bUpPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(8);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_29);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fUp);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_DOWN))
 		{
-			bLocal_30 = true;
-			fLocal_32 = 1f;
+			bDownPressed = true;
+			fDown = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_DOWN))
 		{
-			bLocal_30 = true;
-			fLocal_32 = 1f;
+			bDownPressed = true;
+			fDown = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_DOWN))
 		{
-			bLocal_30 = false;
-			fLocal_32 = 0f;
+			bDownPressed = false;
+			fDown = 0f;
 		}
 	
-		if (!bLocal_30 == bLocal_31)
+		if (!bDownPressed == bLocal_31)
 		{
-			bLocal_31 = bLocal_30;
+			bLocal_31 = bDownPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(9);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_32);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fDown);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_CANCEL))
 		{
-			bLocal_33 = true;
-			fLocal_35 = 1f;
+			bCancelPressed = true;
+			fCancel = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_CANCEL))
 		{
-			bLocal_33 = true;
-			fLocal_35 = 1f;
+			bCancelPressed = true;
+			fCancel = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_CANCEL))
 		{
-			bLocal_33 = false;
-			fLocal_35 = 0f;
+			bCancelPressed = false;
+			fCancel = 0f;
 		}
 	
-		if (!bLocal_33 == bLocal_34)
+		if (!bCancelPressed == bLocal_34)
 		{
-			bLocal_34 = bLocal_33;
+			bLocal_34 = bCancelPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(17);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_35);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fCancel);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_Y))
 		{
-			bLocal_36 = true;
-			fLocal_38 = 1f;
+			bYPressed = true;
+			fY = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_Y))
 		{
-			bLocal_36 = true;
-			fLocal_38 = 1f;
+			bYPressed = true;
+			fY = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_Y))
 		{
-			bLocal_36 = false;
-			fLocal_38 = 0f;
+			bYPressed = false;
+			fY = 0f;
 		}
 	
-		if (!bLocal_36 == bLocal_37)
+		if (!bYPressed == bLocal_37)
 		{
-			bLocal_37 = bLocal_36;
+			bLocal_37 = bYPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(15);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_38);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fY);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 		{
-			bLocal_39 = true;
-			fLocal_41 = 1f;
+			bAcceptPressed = true;
+			fAccept = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 		{
-			bLocal_39 = true;
-			fLocal_41 = 1f;
+			bAcceptPressed = true;
+			fAccept = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_ACCEPT))
 		{
-			bLocal_39 = false;
-			fLocal_41 = 0f;
+			bAcceptPressed = false;
+			fAccept = 0f;
 		}
 	
-		if (!bLocal_39 == bLocal_40)
+		if (!bAcceptPressed == bLocal_40)
 		{
-			bLocal_40 = bLocal_39;
+			bLocal_40 = bAcceptPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(16);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_41);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fAccept);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	
 		if (PAD::IS_CONTROL_JUST_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_X))
 		{
-			bLocal_42 = true;
-			fLocal_44 = 1f;
+			bXPressed = true;
+			fX = 1f;
 		}
 	
 		if (PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_X))
 		{
-			bLocal_42 = true;
-			fLocal_44 = 1f;
+			bXPressed = true;
+			fX = 1f;
 		}
 	
 		if (!PAD::IS_CONTROL_PRESSED(FRONTEND_CONTROL, INPUT_FRONTEND_X))
 		{
-			bLocal_42 = false;
-			fLocal_44 = 0f;
+			bXPressed = false;
+			fX = 0f;
 		}
 	
-		if (!bLocal_42 == bLocal_43)
+		if (!bXPressed == bLocal_43)
 		{
-			bLocal_43 = bLocal_42;
+			bLocal_43 = bXPressed;
 			GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, "SET_INPUT_EVENT");
 			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(14);
-			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fLocal_44);
+			GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_FLOAT(fX);
 			GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 		}
 	}
@@ -350,16 +350,16 @@ void func_1(int iParam0) // Position - 0x13F
 	return;
 }
 
-void func_2() // Position - 0x43D
+void CleanupAndTerminate() // Position - 0x43D
 {
-	if (CAM::DOES_CAM_EXIST(caLocal_17))
-		CAM::DESTROY_CAM(caLocal_17, false);
+	if (CAM::DOES_CAM_EXIST(defaultScriptedCamera))
+		CAM::DESTROY_CAM(defaultScriptedCamera, false);
 
 	CAM::RENDER_SCRIPT_CAMS(false, false, 3000, true, false, 0);
 	func_3(false);
 	MISC::SET_GAME_PAUSED(false);
 	HUD::CLEAR_HELP(true);
-	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&iLocal_16);
+	GRAPHICS::SET_SCALEFORM_MOVIE_AS_NO_LONGER_NEEDED(&scaleform);
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

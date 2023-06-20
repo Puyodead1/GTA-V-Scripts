@@ -43,7 +43,7 @@ void main() // Position - 0x0
 	iLocal_15 = -1;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
-		func_18();
+		CleanupAndTerminate();
 
 	num = Global_43338;
 	num2 = 15;
@@ -534,7 +534,7 @@ void func_17(int iParam0) // Position - 0xA1E
 	return;
 }
 
-void func_18() // Position - 0xA5B
+void CleanupAndTerminate() // Position - 0xA5B
 {
 	func_17(&Global_43339);
 	Global_43343 = 0;
