@@ -24,7 +24,7 @@
 	var uLocal_22 = 0;
 	var uLocal_23 = 0;
 	var uLocal_24 = 0;
-	int iLocal_25 = 0;
+	int state = 0;
 	int iLocal_26 = 0;
 #endregion
 
@@ -44,13 +44,13 @@ void main() // Position - 0x0
 	iLocal_15 = -1;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(2))
-		func_11();
+		Terminate();
 
 	while (true)
 	{
 		SYSTEM::WAIT(250);
 	
-		switch (iLocal_25)
+		switch (state)
 		{
 			case 0:
 				if (uLocal_16[0])
@@ -75,8 +75,8 @@ void main() // Position - 0x0
 					}
 				
 					func_4(1, 1, true, 1);
-					func_3("CL_ADDED" /*Job ~a~ added to phone checklist*/, "CL_C1A" /*Killer photo*/, 3000, 1);
-					iLocal_25 = 1;
+					TextCommandPrintWithStringArg("CL_ADDED" /*Job ~a~ added to phone checklist*/, "CL_C1A" /*Killer photo*/, 3000, 1);
+					state = 1;
 				}
 				break;
 		
@@ -94,7 +94,7 @@ void main() // Position - 0x0
 									if (!Global_32334[iLocal_20])
 									{
 										Global_22964[1].f_27[1] = Global_22964[1].f_27[1] + 1;
-										func_2("CL_C1A_J1" /*Gang members killed ~1~/~1~*/, Global_22964[1].f_27[1], Global_22964[1].f_32[1], 2000, 1);
+										TextCommandPrintWithIntArgs("CL_C1A_J1" /*Gang members killed ~1~/~1~*/, Global_22964[1].f_27[1], Global_22964[1].f_32[1], 2000, 1);
 										Global_32334[iLocal_20] = true;
 									}
 								
@@ -105,7 +105,7 @@ void main() // Position - 0x0
 											if (MOBILE::CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK(uLocal_21[iLocal_20]) && func_1())
 											{
 												Global_22964[1].f_27[2] = Global_22964[1].f_27[2] + 1;
-												func_2("CL_C1A_J2" /*Photos taken of dead gang members ~1~/~1~*/, Global_22964[1].f_27[2], Global_22964[1].f_32[2], 2000, 1);
+												TextCommandPrintWithIntArgs("CL_C1A_J2" /*Photos taken of dead gang members ~1~/~1~*/, Global_22964[1].f_27[2], Global_22964[1].f_32[2], 2000, 1);
 												Global_32338[iLocal_20] = true;
 											}
 										}
@@ -113,9 +113,9 @@ void main() // Position - 0x0
 								
 									if (Global_22964[1].f_27[1] >= Global_22964[1].f_32[1] && Global_22964[1].f_27[2] >= Global_22964[1].f_32[2])
 									{
-										func_3("CL_COMPLETE" /*~a~ job complete.*/, "CL_C1A" /*Killer photo*/, 3000, 1);
+										TextCommandPrintWithStringArg("CL_COMPLETE" /*~a~ job complete.*/, "CL_C1A" /*Killer photo*/, 3000, 1);
 										Global_22964[1].f_8 = 1;
-										iLocal_25 = 2;
+										state = 2;
 									}
 								}
 							}
@@ -152,7 +152,7 @@ void main() // Position - 0x0
 					Global_22964[2].f_32[3] = -1;
 					Global_22964[2].f_27[3] = -1;
 					func_4(136, 2, true, 1);
-					func_3("CL_ADDED" /*Job ~a~ added to phone checklist*/, "CL_C1B" /*Bike Pro*/, 3000, 1);
+					TextCommandPrintWithStringArg("CL_ADDED" /*Job ~a~ added to phone checklist*/, "CL_C1B" /*Bike Pro*/, 3000, 1);
 					iLocal_26 = 1;
 				}
 				break;
@@ -164,7 +164,7 @@ void main() // Position - 0x0
 			
 				if (Global_22964[2].f_37[1] == true && Global_22964[2].f_37[2] == true && Global_22964[2].f_37[3] == true)
 				{
-					func_3("CL_COMPLETE" /*~a~ job complete.*/, "CL_C1B" /*Bike Pro*/, 3000, 1);
+					TextCommandPrintWithStringArg("CL_COMPLETE" /*~a~ job complete.*/, "CL_C1B" /*Bike Pro*/, 3000, 1);
 					Global_22964[2].f_8 = 1;
 					iLocal_26 = 2;
 				}
@@ -186,20 +186,20 @@ BOOL func_1() // Position - 0x438
 	return false;
 }
 
-void func_2(char* sParam0, int iParam1, int iParam2, int iParam3, int iParam4) // Position - 0x44E
+void TextCommandPrintWithIntArgs(char* gxtEntry, int iParam1, int iParam2, int iParam3, int iParam4) // Position - 0x44E
 {
 	iParam4 = iParam4;
-	HUD::BEGIN_TEXT_COMMAND_PRINT(sParam0);
+	HUD::BEGIN_TEXT_COMMAND_PRINT(gxtEntry);
 	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam1);
 	HUD::ADD_TEXT_COMPONENT_INTEGER(iParam2);
 	HUD::END_TEXT_COMMAND_PRINT(iParam3, false);
 	return;
 }
 
-void func_3(char* sParam0, char* sParam1, int iParam2, int iParam3) // Position - 0x473
+void TextCommandPrintWithStringArg(char* gxtEntry, char* sParam1, int iParam2, int iParam3) // Position - 0x473
 {
 	iParam3 = iParam3;
-	HUD::BEGIN_TEXT_COMMAND_PRINT(sParam0);
+	HUD::BEGIN_TEXT_COMMAND_PRINT(gxtEntry);
 	HUD::ADD_TEXT_COMPONENT_SUBSTRING_TEXT_LABEL(sParam1);
 	HUD::END_TEXT_COMMAND_PRINT(iParam2, false);
 	return;
@@ -227,7 +227,7 @@ int func_5(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 0x
 		return 0;
 	}
 
-	func_6(Global_22963);
+	SetGlobalClockVariables(Global_22963);
 	Global_23133[Global_22963].f_1 = iParam1;
 	Global_23133[Global_22963] = iParam0;
 
@@ -243,7 +243,7 @@ int func_5(int iParam0, int iParam1, BOOL bParam2, int iParam3) // Position - 0x
 	return 1;
 }
 
-void func_6(int iParam0) // Position - 0x521
+void SetGlobalClockVariables(int iParam0) // Position - 0x521
 {
 	int clockSeconds;
 	int clockMinutes;
@@ -360,7 +360,7 @@ BOOL func_10() // Position - 0x768
 	return false;
 }
 
-void func_11() // Position - 0x78F
+void Terminate() // Position - 0x78F
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

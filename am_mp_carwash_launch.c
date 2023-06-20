@@ -138,7 +138,7 @@ void main() // Position - 0x0
 		SCRIPT::TERMINATE_THIS_THREAD();
 	}
 
-	func_12(PLAYER::PLAYER_PED_ID());
+	DoesEntityExistAndIsAlive(PLAYER::PLAYER_PED_ID());
 	num = 0;
 
 	while (num == 0)
@@ -264,7 +264,7 @@ BOOL func_11(Player plParam0) // Position - 0x336
 	return IS_BIT_SET(Global_1853988[plParam0].f_11.f_1, 0);
 }
 
-BOOL func_12(Ped pedParam0) // Position - 0x34D
+BOOL DoesEntityExistAndIsAlive(Ped pedParam0) // Position - 0x34D
 {
 	if (!ENTITY::DOES_ENTITY_EXIST(pedParam0))
 		return false;

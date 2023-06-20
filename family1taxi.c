@@ -45,7 +45,7 @@
 	var uLocal_43 = 0;
 	int iLocal_44 = 0;
 	int iLocal_45 = 0;
-	int iLocal_46 = 0;
+	int state = 0;
 #endregion
 
 void main() // Position - 0x0
@@ -78,27 +78,27 @@ void main() // Position - 0x0
 	iLocal_45 = HUD::GET_WAYPOINT_BLIP_ENUM_ID();
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(18))
-		func_10();
+		CleanupAndTerminate();
 
 	while (!func_9(18))
 	{
-		func_1();
+		GameLoop();
 		SYSTEM::WAIT(0);
 	}
 
-	func_10();
+	CleanupAndTerminate();
 	return;
 }
 
-void func_1() // Position - 0xA4
+void GameLoop() // Position - 0xA4
 {
-	switch (iLocal_46)
+	switch (state)
 	{
 		case 0:
 			if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false) && !MISC::IS_AUTO_SAVE_IN_PROGRESS() && !func_8() && !func_7())
 			{
 				SCRIPT::REQUEST_SCRIPT("taxiService");
-				iLocal_46 = 1;
+				state = 1;
 			}
 			break;
 	
@@ -107,7 +107,7 @@ void func_1() // Position - 0xA4
 			{
 				SYSTEM::START_NEW_SCRIPT("taxiService", SPECIAL_ABILITY);
 				SCRIPT::SET_SCRIPT_AS_NO_LONGER_NEEDED("taxiService");
-				iLocal_46 = 2;
+				state = 2;
 			}
 			break;
 	
@@ -119,7 +119,7 @@ void func_1() // Position - 0xA4
 					break;
 			
 				case 1:
-					iLocal_46 = 3;
+					state = 3;
 					break;
 			}
 			break;
@@ -132,13 +132,13 @@ void func_1() // Position - 0xA4
 					break;
 			
 				case 1:
-					iLocal_46 = 4;
+					state = 4;
 					break;
 			}
 			break;
 	
 		case 4:
-			func_10();
+			CleanupAndTerminate();
 			break;
 	}
 
@@ -280,7 +280,7 @@ BOOL func_9(int iParam0) // Position - 0x541
 	return G_MissionStats.f_9088.f_330[iParam0];
 }
 
-void func_10() // Position - 0x56D
+void CleanupAndTerminate() // Position - 0x56D
 {
 	if (func_6("AM_H_TAXI1" /*Use ~INPUT_CONTEXT~ to flag down passing taxis.*/))
 		func_11("AM_H_TAXI1" /*Use ~INPUT_CONTEXT~ to flag down passing taxis.*/, 1);

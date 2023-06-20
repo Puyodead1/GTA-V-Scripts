@@ -38,8 +38,8 @@ void main() // Position - 0x0
 
 	if (iLocal_18 == 0)
 	{
-		func_11();
-		func_10();
+		SetSoftKeys();
+		RenderScaleformText();
 		iLocal_18 = 1;
 		SYSTEM::SETTIMERA(0);
 	}
@@ -55,7 +55,7 @@ void main() // Position - 0x0
 				case 7:
 					if (iLocal_18 == 1 && SYSTEM::TIMERA() > 1500)
 					{
-						func_6();
+						RenderScaleformText();
 						SYSTEM::SETTIMERA(0);
 					}
 					break;
@@ -63,7 +63,7 @@ void main() // Position - 0x0
 				case 8:
 					if (func_5(FRONTEND_CONTROL, Global_20468, 0))
 					{
-						func_4();
+						PlayBackSound();
 						Global_20478 = 1;
 					
 						if (Global_20500.f_1 > 3)
@@ -76,16 +76,16 @@ void main() // Position - 0x0
 			}
 		
 			if (func_3())
-				func_2();
+				Terminate();
 		}
 		else
 		{
 			Global_20502 = 6;
-			func_2();
+			Terminate();
 		}
 	
 		if (func_1())
-			func_2();
+			Terminate();
 	}
 
 	return;
@@ -102,7 +102,7 @@ BOOL func_1() // Position - 0xE5
 	return false;
 }
 
-void func_2() // Position - 0x128
+void Terminate() // Position - 0x128
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
@@ -119,7 +119,7 @@ BOOL func_3() // Position - 0x134
 	return false;
 }
 
-void func_4() // Position - 0x15D
+void PlayBackSound() // Position - 0x15D
 {
 	if (!ENTITY::IS_ENTITY_DEAD(PLAYER::PLAYER_PED_ID(), false))
 		AUDIO::PLAY_SOUND_FRONTEND(-1, "Menu_Back", &G_AudioRef, true);
@@ -144,15 +144,9 @@ BOOL func_5(eControlType ectParam0, eControlAction ecaParam1, int iParam2) // Po
 	return false;
 }
 
-void func_6() // Position - 0x1EF
+void RenderScaleformText() // Position - 0x1FB
 {
-	func_7();
-	return;
-}
-
-void func_7() // Position - 0x1FB
-{
-	func_9(G_Scaleform, "SET_DATA_SLOT_EMPTY", 24f, -1082130432, -1082130432, -1082130432, -1082130432);
+	SetScaleformDisplayView(G_Scaleform, "SET_DATA_SLOT_EMPTY", 24f, -1082130432, -1082130432, -1082130432, -1082130432);
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(G_Scaleform, "SET_DATA_SLOT");
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(24);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(0);
@@ -160,14 +154,14 @@ void func_7() // Position - 0x1FB
 	if (IS_BIT_SET(Global_4542302, 23))
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
-		func_8("CELL_EXTBYOU" /*You*/);
+		ScaleformDisplayText("CELL_EXTBYOU" /*You*/);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542303);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542583));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542304);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542583.f_1));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542305);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542583.f_2));
-		func_8("CELL_BODYG" /*Guard*/);
+		ScaleformDisplayText("CELL_BODYG" /*Guard*/);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542306);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542586));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542307);
@@ -178,14 +172,14 @@ void func_7() // Position - 0x1FB
 	else
 	{
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_BOOL(false);
-		func_8("CELL_EXTBYOU" /*You*/);
+		ScaleformDisplayText("CELL_EXTBYOU" /*You*/);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542306);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542586));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542307);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542586.f_1));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542308);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542586.f_2));
-		func_8("CELL_EXTBTARG" /*Target*/);
+		ScaleformDisplayText("CELL_EXTBTARG" /*Target*/);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542303);
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::FLOOR(Global_4542583));
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(Global_4542304);
@@ -195,18 +189,18 @@ void func_7() // Position - 0x1FB
 	}
 
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
-	func_9(G_Scaleform, "DISPLAY_VIEW", 24f, SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432);
+	SetScaleformDisplayView(G_Scaleform, "DISPLAY_VIEW", 24f, SYSTEM::TO_FLOAT(1), -1082130432, -1082130432, -1082130432);
 	return;
 }
 
-void func_8(const char* sParam0) // Position - 0x396
+void ScaleformDisplayText(const char* sParam0) // Position - 0x396
 {
 	GRAPHICS::BEGIN_TEXT_COMMAND_SCALEFORM_STRING(sParam0);
 	GRAPHICS::END_TEXT_COMMAND_SCALEFORM_STRING();
 	return;
 }
 
-void func_9(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x3A8
+void SetScaleformDisplayView(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4, int iParam5, int iParam6) // Position - 0x3A8
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -227,31 +221,25 @@ void func_9(int iParam0, char* sParam1, float fParam2, int iParam3, int iParam4,
 	return;
 }
 
-void func_10() // Position - 0x40B
-{
-	func_7();
-	return;
-}
-
-void func_11() // Position - 0x417
+void SetSoftKeys() // Position - 0x417
 {
 	if (Global_20488)
 	{
-		func_12(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
-		func_12(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, "CELL_201" /*CALL*/, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, "CELL_213" /*NO*/, 0, 0, 0, 0);
 	}
 	else
 	{
-		func_12(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
-		func_12(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 2f, 0f, 13f, -1f, -1f, 0, 0, 0, 0, 0);
+		SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 3f, 1f, 14f, -1f, -1f, 0, 0, 0, 0, 0);
 	}
 
-	func_12(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
+	SetScaleformSoftKeys(G_Scaleform, "SET_SOFT_KEYS", 1f, 0f, 1f, -1f, -1f, 0, 0, 0, 0, 0);
 	MISC::CLEAR_BIT(&Global_8370, 17);
 	return;
 }
 
-void func_12(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x4A9
+void SetScaleformSoftKeys(int iParam0, char* sParam1, float fParam2, float fParam3, float fParam4, float fParam5, float fParam6, char* sParam7, const char* sParam8, const char* sParam9, const char* sParam10, const char* sParam11) // Position - 0x4A9
 {
 	GRAPHICS::BEGIN_SCALEFORM_MOVIE_METHOD(iParam0, sParam1);
 	GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam2));
@@ -269,19 +257,19 @@ void func_12(int iParam0, char* sParam1, float fParam2, float fParam3, float fPa
 		GRAPHICS::SCALEFORM_MOVIE_METHOD_ADD_PARAM_INT(SYSTEM::ROUND(fParam6));
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam7))
-		func_8(sParam7);
+		ScaleformDisplayText(sParam7);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam8))
-		func_8(sParam8);
+		ScaleformDisplayText(sParam8);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam9))
-		func_8(sParam9);
+		ScaleformDisplayText(sParam9);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam10))
-		func_8(sParam10);
+		ScaleformDisplayText(sParam10);
 
 	if (!MISC::IS_STRING_NULL_OR_EMPTY(sParam11))
-		func_8(sParam11);
+		ScaleformDisplayText(sParam11);
 
 	GRAPHICS::END_SCALEFORM_MOVIE_METHOD();
 	return;

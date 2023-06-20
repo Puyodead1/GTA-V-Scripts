@@ -61,7 +61,7 @@ void main() // Position - 0x0
 	fLocal_31 = 0.17f;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(98))
-		func_15();
+		Terminate();
 
 	func_14();
 	num = 0;
@@ -434,7 +434,7 @@ void func_14() // Position - 0x60E
 	return;
 }
 
-void func_15() // Position - 0x74E
+void Terminate() // Position - 0x74E
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

@@ -54,14 +54,14 @@
 	var uLocal_52 = 0;
 	var uLocal_53 = 0;
 	int iLocal_54 = 0;
-	BOOL bLocal_55 = 0;
-	BOOL bLocal_56 = 0;
+	BOOL hasStarted = 0;
+	BOOL isFadedIn = 0;
 	BOOL bLocal_57 = 0;
-	BOOL bLocal_58 = 0;
+	BOOL isInteriorPinned = 0;
 	BOOL bLocal_59 = 0;
 	int iLocal_60 = 0;
 	float fLocal_61 = 0f;
-	Interior inLocal_62 = 0;
+	Interior interior = 0;
 	var uLocal_63 = 0;
 	var uLocal_64 = 0;
 	var uLocal_65 = 0;
@@ -92,40 +92,40 @@ void main() // Position - 0x0
 	fLocal_61 = 277.7314f;
 	uLocal_63 = { -196.045f, -580.13f, 135.0004f };
 	CAM::DO_SCREEN_FADE_OUT(800);
-	func_16();
+	EnsureNetworkedAndRequestGarageIPL();
 
 	while (true)
 	{
 		GRAPHICS::DISABLE_OCCLUSION_THIS_FRAME();
-		func_15();
+		Wait();
 	
 		if (_SHOULD_NETWORK_SCRIPT_TERMINATE() || iLocal_60)
-			func_3();
+			ClearEntities();
 	
-		if (!bLocal_56)
+		if (!isFadedIn)
 		{
-			if (!bLocal_55 && CAM::IS_SCREEN_FADED_OUT())
+			if (!hasStarted && CAM::IS_SCREEN_FADED_OUT())
 			{
 				ENTITY::SET_ENTITY_COORDS(PLAYER::PLAYER_PED_ID(), uLocal_63, true, false, false, true);
 				ENTITY::SET_ENTITY_HEADING(PLAYER::PLAYER_PED_ID(), fLocal_61);
 				STREAMING::NEW_LOAD_SCENE_START_SPHERE(uLocal_63, 2500f, 0);
 				CAM::SET_GAMEPLAY_CAM_RELATIVE_HEADING(0);
-				bLocal_55 = true;
+				hasStarted = true;
 			}
 			else if (STREAMING::IS_NEW_LOAD_SCENE_ACTIVE())
 			{
 				if (!bLocal_59)
 				{
-					bLocal_59 = func_2();
+					bLocal_59 = PinUnpinInterior();
 				}
 				else if (!bLocal_57)
 				{
-					bLocal_57 = func_1();
+					bLocal_57 = ActivateOrRefreshInterior();
 				}
 				else
 				{
 					CAM::DO_SCREEN_FADE_IN(800);
-					bLocal_56 = true;
+					isFadedIn = true;
 				}
 			}
 		}
@@ -134,35 +134,35 @@ void main() // Position - 0x0
 	return;
 }
 
-BOOL func_1() // Position - 0x121
+BOOL ActivateOrRefreshInterior() // Position - 0x121
 {
-	if (!INTERIOR::IS_INTERIOR_ENTITY_SET_ACTIVE(inLocal_62, "garage_decor_01"))
+	if (!INTERIOR::IS_INTERIOR_ENTITY_SET_ACTIVE(interior, "garage_decor_01"))
 	{
-		INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(inLocal_62, "garage_decor_01");
+		INTERIOR::ACTIVATE_INTERIOR_ENTITY_SET(interior, "garage_decor_01");
 	}
 	else
 	{
-		INTERIOR::REFRESH_INTERIOR(inLocal_62);
+		INTERIOR::REFRESH_INTERIOR(interior);
 		return 1;
 	}
 
 	return 0;
 }
 
-BOOL func_2() // Position - 0x14B
+BOOL PinUnpinInterior() // Position - 0x14B
 {
-	inLocal_62 = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
+	interior = INTERIOR::GET_INTERIOR_FROM_ENTITY(PLAYER::PLAYER_PED_ID());
 
-	if (INTERIOR::IS_VALID_INTERIOR(inLocal_62))
+	if (INTERIOR::IS_VALID_INTERIOR(interior))
 	{
-		if (!bLocal_58)
+		if (!isInteriorPinned)
 		{
-			INTERIOR::PIN_INTERIOR_IN_MEMORY(inLocal_62);
-			bLocal_58 = true;
+			INTERIOR::PIN_INTERIOR_IN_MEMORY(interior);
+			isInteriorPinned = true;
 		}
-		else if (INTERIOR::IS_INTERIOR_READY(inLocal_62))
+		else if (INTERIOR::IS_INTERIOR_READY(interior))
 		{
-			INTERIOR::UNPIN_INTERIOR(inLocal_62);
+			INTERIOR::UNPIN_INTERIOR(interior);
 			return 1;
 		}
 	}
@@ -170,42 +170,42 @@ BOOL func_2() // Position - 0x14B
 	return 0;
 }
 
-void func_3() // Position - 0x18C
+void ClearEntities() // Position - 0x18C
 {
 	int i;
 
 	for (i = 0; i < iLocal_54; i = i + 1)
 	{
-		func_5(i);
+		RemoveEntityWithId(i);
 	}
 
-	func_4();
+	Terminate();
 	return;
 }
 
-void func_4() // Position - 0x1B1
+void Terminate() // Position - 0x1B1
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }
 
-void func_5(int iParam0) // Position - 0x1BD
+void RemoveEntityWithId(int idx) // Position - 0x1BD
 {
-	func_6(&uLocal_33[iParam0]);
+	ClearEntity(&uLocal_33[idx]);
 	NETWORK::RESERVE_NETWORK_MISSION_VEHICLES(NETWORK::GET_NUM_RESERVED_MISSION_VEHICLES(false, 0) - 1);
 	return;
 }
 
-void func_6(var uParam0) // Position - 0x1DB
+void ClearEntity(var idx) // Position - 0x1DB
 {
 	Entity entity;
 
-	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*uParam0))
-		!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(*uParam0);
+	if (NETWORK::NETWORK_DOES_NETWORK_ID_EXIST(*idx))
+		!NETWORK::NETWORK_HAS_CONTROL_OF_NETWORK_ID(*idx);
 
-	if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(*uParam0))
+	if (NETWORK::NETWORK_DOES_ENTITY_EXIST_WITH_NETWORK_ID(*idx))
 	{
-		entity = NETWORK::NET_TO_ENT(*uParam0);
+		entity = NETWORK::NET_TO_ENT(*idx);
 		ENTITY::DELETE_ENTITY(&entity);
 	}
 
@@ -237,16 +237,16 @@ int _SHOULD_NETWORK_SCRIPT_TERMINATE() // Position - 0x214
 	if (!NETWORK::NETWORK_IS_SIGNED_ONLINE())
 		return 1;
 
-	if (_GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() != 0)
-		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(_GET_CURRENT_SESSION_TYPE_SCRIPT_HASH()) == 0)
+	if (func_10() != 0)
+		if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(func_10()) == 0)
 			return 1;
 
 	return 0;
 }
 
-Hash _GET_CURRENT_SESSION_TYPE_SCRIPT_HASH() // Position - 0x298
+Hash func_10() // Position - 0x298
 {
-	switch (func_10())
+	switch (Global_32283)
 	{
 		case 0:
 			return func_9();
@@ -272,11 +272,6 @@ Hash func_9() // Position - 0x2CB
 	return joaat("freemode");
 }
 
-int func_10() // Position - 0x2EF
-{
-	return Global_32283;
-}
-
 BOOL func_11() // Position - 0x2FA
 {
 	return Global_2683883.f_698;
@@ -300,20 +295,20 @@ BOOL func_14() // Position - 0x32C
 	return Global_2683883.f_693;
 }
 
-void func_15() // Position - 0x33B
+void Wait() // Position - 0x33B
 {
 	SYSTEM::WAIT(0);
 	return;
 }
 
-void func_16() // Position - 0x348
+void EnsureNetworkedAndRequestGarageIPL() // Position - 0x348
 {
 	NETWORK::NETWORK_SET_THIS_SCRIPT_IS_NETWORK_SCRIPT(32, false, -1);
 	_NETWORK_ENSURE_SCRIPT_IS_NETWORKED(0, -1, false);
 	NETWORK::NETWORK_REGISTER_HOST_BROADCAST_VARIABLES(&uLocal_33, 21, 0);
 
 	if (!_NETWORK_WAIT_FOR_HOST_BROADCAST_DATA())
-		func_3();
+		ClearEntities();
 
 	MISC::SET_THIS_SCRIPT_CAN_BE_PAUSED(false);
 
@@ -362,7 +357,7 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	{
 		if (i == 3 || i == 4 || i == 5 || i == 6)
 			if (!bNoTerminate)
-				func_4();
+				Terminate();
 			else
 				return 0;
 	
@@ -372,26 +367,26 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 			{
 				if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 					if (!bNoTerminate)
-						func_4();
+						Terminate();
 					else
 						return 0;
 			
 				if (func_14())
 					if (!bNoTerminate)
-						func_4();
+						Terminate();
 					else
 						return 0;
 			
 				if (_DOES_EVENT_OF_TYPE_EXIST(157))
 					if (!bNoTerminate)
-						func_4();
+						Terminate();
 					else
 						return 0;
 			}
 			else if (!NETWORK::NETWORK_IS_IN_SESSION())
 			{
 				if (!bNoTerminate)
-					func_4();
+					Terminate();
 				else
 					return 0;
 			}
@@ -406,12 +401,12 @@ int _NETWORK_ENSURE_SCRIPT_IS_NETWORKED(int iParam0, int iParam1, BOOL bNoTermin
 	if (iParam0 == 0)
 		if (!NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			if (!bNoTerminate)
-				func_4();
+				Terminate();
 			else
 				return 0;
 	else if (!NETWORK::NETWORK_IS_IN_SESSION())
 		if (!bNoTerminate)
-			func_4();
+			Terminate();
 		else
 			return 0;
 
