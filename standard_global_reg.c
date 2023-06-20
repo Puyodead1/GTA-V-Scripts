@@ -92577,10 +92577,10 @@ void SaveCountryRaceStruct() // Position - 0x76146
 
 void SaveSeaRaceStruct() // Position - 0x76228
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.f_24979), 3, "SEA_RACE_SAVED_STRUCT");
-	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.f_24979), "bSeaRaceFirstBlip");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24979.f_1), "iSeaRaceWon");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24979.f_2), "iSeaRaceLeaveArea");
+	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.seaRace.firstBlip), 3, "SEA_RACE_SAVED_STRUCT");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.seaRace.firstBlip), "bSeaRaceFirstBlip");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.seaRace.iSeaRaceWon), "iSeaRaceWon");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), "iSeaRaceLeaveArea");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }
@@ -92987,14 +92987,14 @@ void func_452(Any* panParam0, var uParam1, var uParam2, var uParam3, var uParam4
 
 void SaveStreetRaceStruct() // Position - 0x76DE3
 {
-	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.f_24982), 7, "STREET_RACE_SAVED_STRUCT");
-	MISC::REGISTER_ENUM_TO_SAVE(&(G_MissionStats.f_24982), "eStreetRaceToUnlock");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24982.f_1), "iStreetRaceUnlocked");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24982.f_2), "iStreetRaceWon");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24982.f_3), "iStreetRaceLeaveArea");
-	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.f_24982.f_4), "bPhonecallDone");
-	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.f_24982.f_5), "iSlipstreamHelpCount");
-	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.f_24982.f_6), "bSpecialAbilityHelp");
+	MISC::START_SAVE_STRUCT_WITH_SIZE(&(G_MissionStats.streetRace.eStreetRaceToUnlock), 7, "STREET_RACE_SAVED_STRUCT");
+	MISC::REGISTER_ENUM_TO_SAVE(&(G_MissionStats.streetRace.eStreetRaceToUnlock), "eStreetRaceToUnlock");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.streetRace.iStreetRaceUnlocked), "iStreetRaceUnlocked");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.streetRace.iStreetRaceWon), "iStreetRaceWon");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), "iStreetRaceLeaveArea");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.streetRace.bPhonecallDone), "bPhonecallDone");
+	MISC::REGISTER_INT_TO_SAVE(&(G_MissionStats.streetRace.iSlipstreamHelpCount), "iSlipstreamHelpCount");
+	MISC::REGISTER_BOOL_TO_SAVE(&(G_MissionStats.streetRace.bSpecialAbilityHelp), "bSpecialAbilityHelp");
 	MISC::STOP_SAVE_STRUCT();
 	return;
 }

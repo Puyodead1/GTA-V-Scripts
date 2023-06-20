@@ -76,9 +76,9 @@ void main() // Position - 0x0
 
 	while (true)
 	{
-		func_43();
+		Wait();
 	
-		if (func_34())
+		if (ShouldNetworkScriptTerminate())
 			break;
 	
 		func_15();
@@ -107,15 +107,15 @@ void func_3(var uParam0) // Position - 0xA3
 
 	func_4(false, true, true, false, false, false, false);
 
-	if (CAM::DOES_CAM_EXIST(uParam0->f_6))
-		CAM::DESTROY_CAM(uParam0->f_6, false);
+	if (CAM::DOES_CAM_EXIST(uParam0->defaultAnimatedCamera))
+		CAM::DESTROY_CAM(uParam0->defaultAnimatedCamera, false);
 
 	PED::CLEAR_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID());
 	*uParam0 = { unk };
 	return;
 }
 
-void func_4(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bParam6) // Position - 0xDA
+void func_4(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4, BOOL bParam5, BOOL bAllowCalls) // Position - 0xDA
 {
 	if (bParam0)
 	{
@@ -126,7 +126,7 @@ void func_4(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 		HUD::THEFEED_FLUSH_QUEUE();
 		HUD::THEFEED_PAUSE();
 	
-		if (Global_20500.f_1 > 3 && !bParam6)
+		if (Global_20500.f_1 > 3 && !bAllowCalls)
 		{
 			if (AUDIO::IS_MOBILE_PHONE_CALL_ONGOING())
 				AUDIO::STOP_SCRIPTED_CONVERSATION(false);
@@ -137,7 +137,7 @@ void func_4(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 			Global_21845 = 5;
 		}
 	
-		func_12(true, bParam3, bParam2, false);
+		SetCutsceneMultiheadFade(true, bParam3, bParam2, false);
 		Global_63491 = 1;
 		Global_75819 = 1;
 		Global_78687 = 1;
@@ -153,7 +153,7 @@ void func_4(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3, BOOL bParam4
 	
 		PLAYER::SET_ALL_RANDOM_PEDS_FLEE(PLAYER::PLAYER_ID(), false);
 		PLAYER::SET_POLICE_IGNORE_PLAYER(PLAYER::PLAYER_ID(), false);
-		func_12(false, bParam3, bParam2, false);
+		SetCutsceneMultiheadFade(false, bParam3, bParam2, false);
 	
 		if (NETWORK::NETWORK_IS_GAME_IN_PROGRESS())
 			if (!PED::IS_PED_INJURED(PLAYER::PLAYER_PED_ID()) && !func_10(PLAYER::PLAYER_ID()) && !func_6(PLAYER::PLAYER_ID(), 0) && !func_5() && !bParam4 && !bParam5 && !NETWORK::NETWORK_IS_IN_SPECTATOR_MODE())
@@ -255,7 +255,7 @@ BOOL func_11() // Position - 0x348
 	return IS_BIT_SET(Global_2621446, 3);
 }
 
-int func_12(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x356
+int SetCutsceneMultiheadFade(BOOL bParam0, BOOL bParam1, BOOL bParam2, BOOL bParam3) // Position - 0x356
 {
 	int num;
 
@@ -313,11 +313,11 @@ BOOL func_16(var uParam0) // Position - 0x3E8
 	switch (func_24(uParam0))
 	{
 		case 0:
-			func_19(uParam0);
+			LoadAnimDictAndStartScene(uParam0);
 			break;
 	
 		case 1:
-			func_17(uParam0);
+			StopScene(uParam0);
 			break;
 	
 		case 2:
@@ -327,15 +327,15 @@ BOOL func_16(var uParam0) // Position - 0x3E8
 	return false;
 }
 
-void func_17(var uParam0) // Position - 0x446
+void StopScene(var uParam0) // Position - 0x446
 {
 	int localSceneFromNetworkId;
 
-	localSceneFromNetworkId = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->f_5);
+	localSceneFromNetworkId = NETWORK::NETWORK_GET_LOCAL_SCENE_FROM_NETWORK_ID(uParam0->scene);
 
 	if (PED::GET_SYNCHRONIZED_SCENE_PHASE(localSceneFromNetworkId) >= 0.9f)
 	{
-		NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(uParam0->f_5);
+		NETWORK::NETWORK_STOP_SYNCHRONISED_SCENE(uParam0->scene);
 		CAM::RENDER_SCRIPT_CAMS(false, true, 3000, true, false, 0);
 		PLAYER::SIMULATE_PLAYER_INPUT_GAIT(PLAYER::PLAYER_ID(), 1f, 2000, 0, true, false, 0);
 		func_18(uParam0, 2);
@@ -350,11 +350,11 @@ void func_18(var uParam0, int iParam1) // Position - 0x492
 	return;
 }
 
-void func_19(var uParam0) // Position - 0x49F
+void LoadAnimDictAndStartScene(var uParam0) // Position - 0x49F
 {
 	char* animDict;
 
-	animDict = func_21();
+	animDict = GetAnimDictName();
 	STREAMING::REQUEST_ANIM_DICT(animDict);
 
 	if (!STREAMING::HAS_ANIM_DICT_LOADED(animDict))
@@ -362,41 +362,41 @@ void func_19(var uParam0) // Position - 0x49F
 
 	CAM::DO_SCREEN_FADE_IN(800);
 	func_18(uParam0, 1);
-	func_20(uParam0);
+	CreateScene(uParam0);
 	return;
 }
 
-void func_20(var uParam0) // Position - 0x4D4
+void CreateScene(var uParam0) // Position - 0x4D4
 {
 	char* animDict;
 
-	animDict = func_21();
-	uParam0->f_5 = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(uParam0->f_1, 0f, 0f, uParam0->f_4, 2, false, false, 1065353216, 0, 1065353216);
-	NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->f_5, animDict, "action", 1000f, -1.5f, 0, 0, 1148846080, 0);
-	NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->f_5);
+	animDict = GetAnimDictName();
+	uParam0->scene = NETWORK::NETWORK_CREATE_SYNCHRONISED_SCENE(uParam0->f_1, 0f, 0f, uParam0->f_4, 2, false, false, 1065353216, 0, 1065353216);
+	NETWORK::NETWORK_ADD_PED_TO_SYNCHRONISED_SCENE(PLAYER::PLAYER_PED_ID(), uParam0->scene, animDict, "action", 1000f, -1.5f, 0, 0, 1148846080, 0);
+	NETWORK::NETWORK_START_SYNCHRONISED_SCENE(uParam0->scene);
 	PED::SET_FACIAL_IDLE_ANIM_OVERRIDE(PLAYER::PLAYER_PED_ID(), "HS4F_IG25_BEACH", 0);
 	PED::FORCE_PED_AI_AND_ANIMATION_UPDATE(PLAYER::PLAYER_PED_ID(), false, false);
-	uParam0->f_6 = CAM::CREATE_CAMERA(joaat("DEFAULT_ANIMATED_CAMERA"), true);
-	CAM::PLAY_CAM_ANIM(uParam0->f_6, "action_camera", animDict, uParam0->f_1, 0f, 0f, uParam0->f_4, false, 2);
+	uParam0->defaultAnimatedCamera = CAM::CREATE_CAMERA(joaat("DEFAULT_ANIMATED_CAMERA"), true);
+	CAM::PLAY_CAM_ANIM(uParam0->defaultAnimatedCamera, "action_camera", animDict, uParam0->f_1, 0f, 0f, uParam0->f_4, false, 2);
 	CAM::RENDER_SCRIPT_CAMS(true, false, 3000, true, false, 0);
 	STREAMING::REMOVE_ANIM_DICT(animDict);
 	return;
 }
 
-char* func_21() // Position - 0x580
+char* GetAnimDictName() // Position - 0x580
 {
-	if (func_22())
+	if (IsPlayerPedModelFreemode())
 		return "ANIM@SCRIPTED@HEIST@IG25_BEACH@HEELED@";
 
 	return "ANIM@SCRIPTED@HEIST@IG25_BEACH@MALE@";
 }
 
-BOOL func_22() // Position - 0x598
+BOOL IsPlayerPedModelFreemode() // Position - 0x598
 {
-	return func_23(PLAYER::PLAYER_ID());
+	return IsPedModelFreemode(PLAYER::PLAYER_ID());
 }
 
-BOOL func_23(Player plParam0) // Position - 0x5A8
+BOOL IsPedModelFreemode(Player plParam0) // Position - 0x5A8
 {
 	if (ENTITY::GET_ENTITY_MODEL(PLAYER::GET_PLAYER_PED(plParam0)) == joaat("MP_F_Freemode_01"))
 		return 1;
@@ -553,7 +553,7 @@ void func_33() // Position - 0x7FE
 	return;
 }
 
-BOOL func_34() // Position - 0x80E
+BOOL ShouldNetworkScriptTerminate() // Position - 0x80E
 {
 	if (_SHOULD_NETWORK_SCRIPT_TERMINATE())
 		return true;
@@ -649,7 +649,7 @@ BOOL func_42() // Position - 0x93A
 	return Global_2683883.f_693;
 }
 
-void func_43() // Position - 0x949
+void Wait() // Position - 0x949
 {
 	SYSTEM::WAIT(0);
 	return;

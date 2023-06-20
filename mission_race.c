@@ -25634,10 +25634,10 @@ void func_429() // Position - 0x2658A
 			uLocal_1123 = uLocal_585.f_11;
 			iLocal_1124 = MISC::GET_GAME_TIMER() + 7500;
 		
-			if (bLocal_579.f_1 != 3 && G_MissionStats.f_24982.f_5 < 3)
+			if (bLocal_579.f_1 != 3 && G_MissionStats.streetRace.iSlipstreamHelpCount < 3)
 			{
 				_DISPLAY_HELP_TEXT("FM_IHELP_SLP" /*You can slipstream by driving close behind another racer. This will give you a speed boost.*/, -1);
-				G_MissionStats.f_24982.f_5 = G_MissionStats.f_24982.f_5 + 1;
+				G_MissionStats.streetRace.iSlipstreamHelpCount = G_MissionStats.streetRace.iSlipstreamHelpCount + 1;
 			}
 		
 			iLocal_574 = 1;
@@ -32419,10 +32419,10 @@ void func_593(int iParam0) // Position - 0x315BB
 				break;
 		}
 	
-		if (uLocal_585.f_11 == 1 && !G_MissionStats.f_24982.f_4)
-			if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 0) || bLocal_579 == 0 && IS_BIT_SET(G_MissionStats.f_24982.f_2, 1) || bLocal_579 == 1 && IS_BIT_SET(G_MissionStats.f_24982.f_2, 2) || bLocal_579 == 2 && IS_BIT_SET(G_MissionStats.f_24982.f_2, 3) || bLocal_579 == 3 && IS_BIT_SET(G_MissionStats.f_24982.f_2, 4) || bLocal_579 == 4)
+		if (uLocal_585.f_11 == 1 && !G_MissionStats.streetRace.bPhonecallDone)
+			if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 0) || bLocal_579 == 0 && IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 1) || bLocal_579 == 1 && IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 2) || bLocal_579 == 2 && IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 3) || bLocal_579 == 3 && IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 4) || bLocal_579 == 4)
 				if (func_606(-974942855, 6, 2, 53, 3, 10000, 10000, -1, -1, 0, -1, 0))
-					G_MissionStats.f_24982.f_4 = 1;
+					G_MissionStats.streetRace.bPhonecallDone = 1;
 	}
 
 	func_558(1, true);
@@ -32451,47 +32451,47 @@ void func_593(int iParam0) // Position - 0x315BB
 	{
 		case 5:
 			func_595(82, 0, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 0);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 0);
 			break;
 	
 		case 6:
 			func_595(83, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 1);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 1);
 			break;
 	
 		case 7:
 			func_595(84, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 2);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 2);
 			break;
 	
 		case 8:
 			func_595(85, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 3);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 3);
 			break;
 	
 		case 0:
 			func_595(86, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 0);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 0);
 			break;
 	
 		case 1:
 			func_595(87, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 1);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 1);
 			break;
 	
 		case 2:
 			func_595(88, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 2);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 2);
 			break;
 	
 		case 3:
 			func_595(89, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 3);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 3);
 			break;
 	
 		case 4:
 			func_595(90, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 4);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 4);
 			break;
 	}
 
@@ -32652,82 +32652,82 @@ void func_597() // Position - 0x31C10
 	switch (bLocal_579)
 	{
 		case 5:
-			if (!IS_BIT_SET(G_MissionStats.f_24979.f_1, 0))
+			if (!IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 0))
 			{
 				func_599(82, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24979.f_1), 0);
+				MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceWon), 0);
 				func_598();
 			}
 			break;
 	
 		case 6:
-			if (!IS_BIT_SET(G_MissionStats.f_24979.f_1, 1))
+			if (!IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 1))
 			{
 				func_599(83, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24979.f_1), 1);
+				MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceWon), 1);
 				func_598();
 			}
 			break;
 	
 		case 7:
-			if (!IS_BIT_SET(G_MissionStats.f_24979.f_1, 2))
+			if (!IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 2))
 			{
 				func_599(84, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24979.f_1), 2);
+				MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceWon), 2);
 				func_598();
 			}
 			break;
 	
 		case 8:
-			if (!IS_BIT_SET(G_MissionStats.f_24979.f_1, 3))
+			if (!IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 3))
 			{
 				func_599(85, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24979.f_1), 3);
+				MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceWon), 3);
 				func_598();
 			}
 			break;
 	
 		case 0:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_2, 0))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 0))
 			{
 				func_599(86, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_2), 0);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceWon), 0);
 				func_598();
 			}
 			break;
 	
 		case 1:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_2, 1))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 1))
 			{
 				func_599(87, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_2), 1);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceWon), 1);
 				func_598();
 			}
 			break;
 	
 		case 2:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_2, 2))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 2))
 			{
 				func_599(88, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_2), 2);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceWon), 2);
 				func_598();
 			}
 			break;
 	
 		case 3:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_2, 3))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 3))
 			{
 				func_599(89, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_2), 3);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceWon), 3);
 				func_598();
 			}
 			break;
 	
 		case 4:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_2, 4))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 4))
 			{
 				func_599(90, true);
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_2), 4);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceWon), 4);
 				func_598();
 			}
 			break;
@@ -32787,35 +32787,35 @@ void func_600() // Position - 0x31EB3
 	switch (bLocal_579)
 	{
 		case 0:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_1, 1))
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 1))
 			{
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 1);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 1);
 				flag = true;
 			}
 			break;
 	
 		case 1:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_1, 2) && G_MissionStats.f_24982 != 2)
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 2) && G_MissionStats.streetRace.eStreetRaceToUnlock != 2)
 			{
-				G_MissionStats.f_24982 = 2;
+				G_MissionStats.streetRace.eStreetRaceToUnlock = 2;
 				num = -527573502;
 				flag = true;
 			}
 			break;
 	
 		case 2:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_1, 3) && G_MissionStats.f_24982 != 3)
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 3) && G_MissionStats.streetRace.eStreetRaceToUnlock != 3)
 			{
-				G_MissionStats.f_24982 = 3;
+				G_MissionStats.streetRace.eStreetRaceToUnlock = 3;
 				num = 277048894;
 				flag = true;
 			}
 			break;
 	
 		case 3:
-			if (!IS_BIT_SET(G_MissionStats.f_24982.f_1, 4) && G_MissionStats.f_24982 != 4)
+			if (!IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 4) && G_MissionStats.streetRace.eStreetRaceToUnlock != 4)
 			{
-				G_MissionStats.f_24982 = 4;
+				G_MissionStats.streetRace.eStreetRaceToUnlock = 4;
 				num = 477030223;
 				flag = true;
 			}

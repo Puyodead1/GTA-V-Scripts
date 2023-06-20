@@ -461,25 +461,25 @@ int func_18() // Position - 0x8A1
 
 void func_19() // Position - 0x8AA
 {
-	func_10(86, IS_BIT_SET(G_MissionStats.f_24982.f_1, 0), false);
-	func_10(87, IS_BIT_SET(G_MissionStats.f_24982.f_1, 1), false);
-	func_10(88, IS_BIT_SET(G_MissionStats.f_24982.f_1, 2), false);
-	func_10(89, IS_BIT_SET(G_MissionStats.f_24982.f_1, 3), false);
-	func_10(90, IS_BIT_SET(G_MissionStats.f_24982.f_1, 4), false);
+	func_10(86, IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 0), false);
+	func_10(87, IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 1), false);
+	func_10(88, IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 2), false);
+	func_10(89, IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 3), false);
+	func_10(90, IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 4), false);
 
-	if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 0))
+	if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 0))
 		func_13(86, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 1))
+	if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 1))
 		func_13(87, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 2))
+	if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 2))
 		func_13(88, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 3))
+	if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 3))
 		func_13(89, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24982.f_2, 4))
+	if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 4))
 		func_13(90, true);
 
 	return;
@@ -492,16 +492,16 @@ void func_20() // Position - 0x975
 	func_10(84, func_9(7), false);
 	func_10(85, func_9(7), false);
 
-	if (IS_BIT_SET(G_MissionStats.f_24979.f_1, 0))
+	if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 0))
 		func_13(82, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24979.f_1, 1))
+	if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 1))
 		func_13(83, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24979.f_1, 2))
+	if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 2))
 		func_13(84, true);
 
-	if (IS_BIT_SET(G_MissionStats.f_24979.f_1, 3))
+	if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, 3))
 		func_13(85, true);
 
 	return;

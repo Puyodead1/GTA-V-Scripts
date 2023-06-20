@@ -8696,31 +8696,31 @@ BOOL func_207() // Position - 0xB9E2
 	switch (iLocal_81)
 	{
 		case 5:
-			return IS_BIT_SET(G_MissionStats.f_24979.f_2, 0);
+			return IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceLeaveArea, 0);
 	
 		case 6:
-			return IS_BIT_SET(G_MissionStats.f_24979.f_2, 1);
+			return IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceLeaveArea, 1);
 	
 		case 7:
-			return IS_BIT_SET(G_MissionStats.f_24979.f_2, 2);
+			return IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceLeaveArea, 2);
 	
 		case 8:
-			return IS_BIT_SET(G_MissionStats.f_24979.f_2, 3);
+			return IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceLeaveArea, 3);
 	
 		case 0:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_3, 0);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, 0);
 	
 		case 1:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_3, 1);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, 1);
 	
 		case 2:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_3, 2);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, 2);
 	
 		case 3:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_3, 3);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, 3);
 	
 		case 4:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_3, 4);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, 4);
 	}
 
 	return false;
@@ -8874,19 +8874,19 @@ BOOL func_214(int iParam0) // Position - 0xBD2F
 	switch (iParam0)
 	{
 		case 0:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_1, 0);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 0);
 	
 		case 1:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_1, 1);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 1);
 	
 		case 2:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_1, 2);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 2);
 	
 		case 3:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_1, 3);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 3);
 	
 		case 4:
-			return IS_BIT_SET(G_MissionStats.f_24982.f_1, 4);
+			return IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, 4);
 	}
 
 	return false;
@@ -9077,47 +9077,47 @@ void func_219(BOOL bParam0) // Position - 0xC050
 	{
 		case 5:
 			func_222(82, 0, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 0);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 0);
 			break;
 	
 		case 6:
 			func_222(83, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 1);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 1);
 			break;
 	
 		case 7:
 			func_222(84, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 2);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 2);
 			break;
 	
 		case 8:
 			func_222(85, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 3);
+			MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 3);
 			break;
 	
 		case 0:
 			func_222(86, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 0);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 0);
 			break;
 	
 		case 1:
 			func_222(87, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 1);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 1);
 			break;
 	
 		case 2:
 			func_222(88, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 2);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 2);
 			break;
 	
 		case 3:
 			func_222(89, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 3);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 3);
 			break;
 	
 		case 4:
 			func_222(90, false, false);
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 4);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 4);
 			break;
 	}
 

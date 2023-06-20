@@ -29313,27 +29313,27 @@ void func_184() // Position - 0x1EAC6
 {
 	PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID());
 
-	switch (G_MissionStats.f_24982)
+	switch (G_MissionStats.streetRace.eStreetRaceToUnlock)
 	{
 		case 2:
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 2);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 2);
 		
 			if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_186(88, 0)) < 43681f)
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 2);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 2);
 			break;
 	
 		case 3:
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 3);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 3);
 		
 			if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_186(89, 0)) < 43681f)
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 3);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 3);
 			break;
 	
 		case 4:
-			MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 4);
+			MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 4);
 		
 			if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_186(90, 0)) < 43681f)
-				MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 4);
+				MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 4);
 			break;
 	}
 
@@ -58522,14 +58522,14 @@ void func_579() // Position - 0x4F3FC
 void func_580() // Position - 0x4F418
 {
 	func_506(0, 8, true);
-	MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 0);
-	MISC::SET_BIT(&(G_MissionStats.f_24982.f_1), 1);
+	MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 0);
+	MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceUnlocked), 1);
 
 	if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_186(87, 0)) < 43681f)
-		MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 1);
+		MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 1);
 
 	if (SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_186(86, 0)) < 43681f)
-		MISC::SET_BIT(&(G_MissionStats.f_24982.f_3), 0);
+		MISC::SET_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), 0);
 
 	return;
 }
@@ -58537,11 +58537,11 @@ void func_580() // Position - 0x4F418
 void func_581() // Position - 0x4F498
 {
 	func_506(0, 7, true);
-	G_MissionStats.f_24979 = 0;
-	MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 0);
-	MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 1);
-	MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 2);
-	MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 3);
+	G_MissionStats.seaRace.firstBlip = 0;
+	MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 0);
+	MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 1);
+	MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 2);
+	MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 3);
 	return;
 }
 

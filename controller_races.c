@@ -48,7 +48,7 @@ void main() // Position - 0x0
 	fLocal_24 = 0.17f;
 
 	if (PLAYER::HAS_FORCE_CLEANUP_OCCURRED(82))
-		func_31();
+		Terminate();
 
 	if (SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(joaat("controller_races")) > 1)
 		SCRIPT::TERMINATE_THIS_THREAD();
@@ -63,7 +63,7 @@ void main() // Position - 0x0
 	while (true)
 	{
 		if (func_27(9) || Global_97733)
-			func_31();
+			Terminate();
 	
 		if (PLAYER::IS_PLAYER_PLAYING(PLAYER::PLAYER_ID()))
 		{
@@ -105,9 +105,9 @@ void func_1() // Position - 0xE5
 		{
 			num = func_10(i);
 		
-			if (IS_BIT_SET(G_MissionStats.f_24982.f_1, i))
+			if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceUnlocked, i))
 			{
-				if (IS_BIT_SET(G_MissionStats.f_24982.f_3, i))
+				if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceLeaveArea, i))
 				{
 					num2 = SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_8(num, 0));
 				
@@ -119,7 +119,7 @@ void func_1() // Position - 0xE5
 							{
 								func_3(num);
 								func_2(num, true, true);
-								MISC::CLEAR_BIT(&(G_MissionStats.f_24982.f_3), i);
+								MISC::CLEAR_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), i);
 							}
 							else if (MISC::GET_GAME_TIMER() - Global_113790[i] > 60000)
 							{
@@ -127,12 +127,12 @@ void func_1() // Position - 0xE5
 								Global_113790[i] = MISC::GET_GAME_TIMER();
 								func_3(num);
 								func_2(num, true, true);
-								MISC::CLEAR_BIT(&(G_MissionStats.f_24982.f_3), i);
+								MISC::CLEAR_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), i);
 							}
 						}
 						else
 						{
-							MISC::CLEAR_BIT(&(G_MissionStats.f_24982.f_3), i);
+							MISC::CLEAR_BIT(&(G_MissionStats.streetRace.iStreetRaceLeaveArea), i);
 						}
 					}
 					else if (func_7(num))
@@ -455,7 +455,7 @@ void func_19() // Position - 0x7BE
 		{
 			num = func_22(i);
 		
-			if (IS_BIT_SET(G_MissionStats.f_24979.f_2, i))
+			if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceLeaveArea, i))
 			{
 				num2 = SYSTEM::VDIST2(_GET_PLAYER_COORDS(PLAYER::PLAYER_ID()), func_8(num, 0));
 			
@@ -467,7 +467,7 @@ void func_19() // Position - 0x7BE
 						{
 							func_3(num);
 							func_2(num, true, true);
-							MISC::CLEAR_BIT(&(G_MissionStats.f_24979.f_2), i);
+							MISC::CLEAR_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), i);
 						}
 						else if (MISC::GET_GAME_TIMER() - Global_113779[i] > 60000)
 						{
@@ -475,7 +475,7 @@ void func_19() // Position - 0x7BE
 							Global_113779[i] = MISC::GET_GAME_TIMER();
 							func_3(num);
 							func_2(num, true, true);
-							MISC::CLEAR_BIT(&(G_MissionStats.f_24979.f_2), i);
+							MISC::CLEAR_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), i);
 						}
 					}
 				}
@@ -499,13 +499,13 @@ void func_19() // Position - 0x7BE
 					func_2(num, true, true);
 				}
 			}
-			else if (!G_MissionStats.f_24979)
+			else if (!G_MissionStats.seaRace.firstBlip)
 			{
 				if (num == 82)
 				{
 					func_21(82);
 					func_20(65, 1000);
-					G_MissionStats.f_24979 = 1;
+					G_MissionStats.seaRace.firstBlip = 1;
 				}
 			}
 		}
@@ -780,7 +780,7 @@ void func_30() // Position - 0xCED
 	return;
 }
 
-void func_31() // Position - 0xD3B
+void Terminate() // Position - 0xD3B
 {
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;

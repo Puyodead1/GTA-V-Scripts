@@ -107362,7 +107362,7 @@ void func_863() // Position - 0x8B77F
 		func_834(0, 1);
 
 	func_844(&uLocal_92, 0, false, false);
-	MISC::SET_BIT(&(G_MissionStats.f_24979.f_2), 2);
+	MISC::SET_BIT(&(G_MissionStats.seaRace.iSeaRaceLeaveArea), 2);
 	SCRIPT::TERMINATE_THIS_THREAD();
 	return;
 }

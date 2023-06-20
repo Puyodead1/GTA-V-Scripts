@@ -14858,7 +14858,7 @@ int func_139() // Position - 0x118DE
 
 	for (i = 0; i < 4; i = i + 1)
 	{
-		if (IS_BIT_SET(G_MissionStats.f_24979.f_1, i))
+		if (IS_BIT_SET(G_MissionStats.seaRace.iSeaRaceWon, i))
 			return 1;
 	}
 
@@ -14873,7 +14873,7 @@ int func_140() // Position - 0x1190F
 
 	for (i = 0; i < 5; i = i + 1)
 	{
-		if (IS_BIT_SET(G_MissionStats.f_24982.f_2, i))
+		if (IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, i))
 			return 1;
 	}
 

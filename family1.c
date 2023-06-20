@@ -9220,11 +9220,11 @@ void func_102() // Position - 0x3ED2
 		
 			if (iLocal_2996 == 4 && !func_261(&blLocal_2951, 1) && !CAM::IS_GAMEPLAY_CAM_RENDERING())
 			{
-				if (G_MissionStats.f_18577.f_389 == 1 && !IS_BIT_SET(G_MissionStats.f_24982.f_2, 0))
+				if (G_MissionStats.f_18577.f_389 == 1 && !IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 0))
 					if (_CONVERSATION_ADD_LINE(&uLocal_3323, "FAM1AUD", "FAM1_HAO_SRL", 9, 0, 0, 0))
 						iLocal_2996 = 5;
 			
-				if (G_MissionStats.f_18577.f_389 == 1 && IS_BIT_SET(G_MissionStats.f_24982.f_2, 0))
+				if (G_MissionStats.f_18577.f_389 == 1 && IS_BIT_SET(G_MissionStats.streetRace.iStreetRaceWon, 0))
 					if (_CONVERSATION_ADD_LINE(&uLocal_3323, "FAM1AUD", "FAM1_HAO_SRW", 9, 0, 0, 0))
 						iLocal_2996 = 5;
 			
